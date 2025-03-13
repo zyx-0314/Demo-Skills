@@ -10,6 +10,12 @@ export async function GET(req: NextRequest) {
   try {
     // TODO: fetch data here from database
 
+    return NextResponse.json({
+      data: "Response Data Here",
+    }, {
+      status: 200
+    });
+
   } catch (error) {
     let message = 'Unknown Error Occurred';
     if (error instanceof Error) {
@@ -30,6 +36,12 @@ export async function POST(req: NextRequest) {
 
   try {
     // TODO: create post in database
+
+    return NextResponse.json({
+      data: "Response Data Here",
+    }, {
+      status: 200
+    });
 
   } catch (error) {
     let message = 'Unknown Error Occurred';
