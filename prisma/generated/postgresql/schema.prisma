@@ -1,0 +1,59 @@
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../generated/postgresql"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource neon {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  password  String?
+  provider  String
+  image     String?
+  createdAt DateTime @default(now())
+
+  posts     Post[]
+  reviews   Review[]
+  bookmarks Bookmark[]
+}
+
+model Post {
+  id        String   @id @default(uuid())
+  title     String
+  content   String
+  category  String
+  userId    String
+  createdAt DateTime @default(now())
+
+  user      User       @relation(fields: [userId], references: [id])
+  reviews   Review[]
+  bookmarks Bookmark[]
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  postId    String
+  userId    String
+  rating    Int
+  comment   String
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+  post Post @relation(fields: [postId], references: [id])
+}
+
+model Bookmark {
+  id        String   @id @default(uuid())
+  postId    String
+  userId    String
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+  post Post @relation(fields: [postId], references: [id])
+}

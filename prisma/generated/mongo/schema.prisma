@@ -1,0 +1,29 @@
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../generated/mongo"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource mongodb {
+  provider = "mongodb"
+  url      = env("MONGODB_URL")
+}
+
+model Discussion {
+  id        String   @id @default(auto()) @map("_id") @mongodb.ObjectId
+  postId    String
+  userId    String
+  message   String
+  createdAt DateTime @default(now())
+
+  replies Reply[]
+}
+
+model Reply {
+  id           String     @id @default(auto()) @map("_id") @mongodb.ObjectId
+  discussionId String     @mongodb.ObjectId
+  userId       String
+  message      String
+  createdAt    DateTime   @default(now())
+  Discussion   Discussion @relation(fields: [discussionId], references: [id])
+}
