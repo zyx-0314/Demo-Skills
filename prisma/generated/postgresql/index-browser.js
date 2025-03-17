@@ -144,6 +144,13 @@ exports.Prisma.ReviewScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.LikeScalarFieldEnum = {
+  id: 'id',
+  postId: 'postId',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.BookmarkScalarFieldEnum = {
   id: 'id',
   postId: 'postId',
@@ -166,6 +173,7 @@ exports.Prisma.ModelName = {
   User: 'User',
   Post: 'Post',
   Review: 'Review',
+  Like: 'Like',
   Bookmark: 'Bookmark'
 };
 
