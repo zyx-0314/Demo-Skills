@@ -1,18 +1,18 @@
-import admin, { ServiceAccount } from "firebase-admin";
-import { getApps, getApp, initializeApp, App } from "firebase-admin/app";
+import { NextRequest, NextResponse } from "next/server";
+import { auth } from "@/lib/firebaseAdmin";
 
-// Ensure Firebase Admin is initialized only once
-let FirebaseAdminApp: App;
+export async function POST(req: NextRequest) {
+  try {
+    const { idToken } = await req.json();
+    if (!idToken) {
+      return NextResponse.json({ error: "ID token is required" }, { status: 400 });
+    }
 
-if (!getApps().length) {
-  FirebaseAdminApp = initializeApp({
-    credential: admin.credential.cert(
-      JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT as string) as ServiceAccount
-    ),
-  });
-} else {
-  FirebaseAdminApp = getApp();
+    // Verify Firebase ID token
+    const decodedToken = await auth.verifyIdToken(idToken);
+    return NextResponse.json({ uid: decodedToken.uid, email: decodedToken.email }, { status: 200 });
+  } catch (error) {
+    console.error("Error verifying ID token:", error);
+    return NextResponse.json({ error: "Invalid token" }, { status: 401 });
+  }
 }
-
-export const auth = admin.auth(FirebaseAdminApp);
-export default FirebaseAdminApp;
