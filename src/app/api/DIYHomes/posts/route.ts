@@ -1,58 +1,31 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
+import prisma from "@/lib/prisma";
 
-const logTag = 'DIYHomes Posts API: ';
-
-export async function GET(req: NextRequest) {
-  const searchParams = req.nextUrl.searchParams;
-  const limit = searchParams.get('limit');
-  const page = searchParams.get('page');
-
+// ✅ Get all posts
+export async function GET() {
   try {
-    // TODO: fetch data here from database
-
-    return NextResponse.json({
-      data: "Response Data Here",
-    }, {
-      status: 200
+    const posts = await prisma.post.findMany({
+      include: { user: true },
     });
-
+    return NextResponse.json(posts, { status: 200 });
   } catch (error) {
-    let message = 'Unknown Error Occurred';
-    if (error instanceof Error) {
-      message = `message: ${error.message}, cause: ${error.cause || "unknown"}`;
-    }
-
-    return NextResponse.json({
-      message: `${logTag} ${message}`,
-    }, {
-      status: 400
-    })
+    return NextResponse.json({ error: "Failed to fetch posts" }, { status: 500 });
   }
-
 }
 
+// ✅ Create a new post
 export async function POST(req: NextRequest) {
-  const body = req.body;
-
   try {
-    // TODO: create post in database
+    const { title, content, category, userId } = await req.json();
+    if (!title || !content || !category || !userId)
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
 
-    return NextResponse.json({
-      data: "Response Data Here",
-    }, {
-      status: 200
+    const post = await prisma.post.create({
+      data: { title, content, category, userId },
     });
 
+    return NextResponse.json(post, { status: 201 });
   } catch (error) {
-    let message = 'Unknown Error Occurred';
-    if (error instanceof Error) {
-      message = `message: ${error.message}, cause: ${error.cause || "unknown"}`;
-    }
-
-    return NextResponse.json({
-      message: `${logTag} ${message}`,
-    }, {
-      status: 400
-    })
+    return NextResponse.json({ error: "Failed to create post" }, { status: 500 });
   }
 }

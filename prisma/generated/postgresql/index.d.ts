@@ -6051,6 +6051,7 @@ export namespace Prisma {
 
   export type BookmarkWhereUniqueInput = Prisma.AtLeast<{
     id?: string
+    postId_userId?: BookmarkPostIdUserIdCompoundUniqueInput
     AND?: BookmarkWhereInput | BookmarkWhereInput[]
     OR?: BookmarkWhereInput[]
     NOT?: BookmarkWhereInput | BookmarkWhereInput[]
@@ -6059,7 +6060,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"Bookmark"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
     post?: XOR<PostScalarRelationFilter, PostWhereInput>
-  }, "id">
+  }, "id" | "postId_userId">
 
   export type BookmarkOrderByWithAggregationInput = {
     id?: SortOrder
@@ -6594,6 +6595,11 @@ export namespace Prisma {
     _sum?: NestedIntFilter<$PrismaModel>
     _min?: NestedIntFilter<$PrismaModel>
     _max?: NestedIntFilter<$PrismaModel>
+  }
+
+  export type BookmarkPostIdUserIdCompoundUniqueInput = {
+    postId: string
+    userId: string
   }
 
   export type BookmarkCountOrderByAggregateInput = {

@@ -18,9 +18,9 @@ model User {
   image     String?
   createdAt DateTime @default(now())
 
-  posts      Post[]
-  reviews    Review[]
-  bookmarks  Bookmark[]
+  posts     Post[]
+  reviews   Review[]
+  bookmarks Bookmark[]
 }
 
 model Post {
@@ -31,7 +31,7 @@ model Post {
   userId    String
   createdAt DateTime @default(now())
 
-  user      User   @relation(fields: [userId], references: [id])
+  user      User       @relation(fields: [userId], references: [id])
   reviews   Review[]
   bookmarks Bookmark[]
 }
@@ -44,8 +44,8 @@ model Review {
   comment   String
   createdAt DateTime @default(now())
 
-  user      User @relation(fields: [userId], references: [id])
-  post      Post @relation(fields: [postId], references: [id])
+  user User @relation(fields: [userId], references: [id])
+  post Post @relation(fields: [postId], references: [id])
 }
 
 model Bookmark {
@@ -54,6 +54,8 @@ model Bookmark {
   userId    String
   createdAt DateTime @default(now())
 
-  user      User @relation(fields: [userId], references: [id])
-  post      Post @relation(fields: [postId], references: [id])
+  user User @relation(fields: [userId], references: [id])
+  post Post @relation(fields: [postId], references: [id])
+
+  @@unique([postId, userId])
 }

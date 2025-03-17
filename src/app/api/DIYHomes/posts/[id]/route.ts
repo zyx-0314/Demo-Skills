@@ -1,77 +1,44 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
+import prisma from "@/lib/prisma";
 
-const logTag = 'DIYHomes Specific Posts API: ';
-
-export async function GET(
-  req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
-  const id = (await params).id;
-  const searchParams = req.nextUrl.searchParams;
-  const limit = searchParams.get('limit');
-  const page = searchParams.get('page');
-
+// ✅ Get post by ID
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    // TODO: fetch specific data here from database
+    const post = await prisma.post.findUnique({
+      where: { id: params.id },
+      include: { user: true, reviews: true },
+    });
 
+    if (!post) return NextResponse.json({ error: "Post not found" }, { status: 404 });
+
+    return NextResponse.json(post, { status: 200 });
   } catch (error) {
-    let message = 'Unknown Error Occurred';
-    if (error instanceof Error) {
-      message = `message: ${error.message}, cause: ${error.cause || "unknown"}`;
-    }
-
-    return NextResponse.json({
-      message: `${logTag} ${message}`,
-    }, {
-      status: 400
-    })
-  }
-
-}
-
-export async function PUT(
-  req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
-  const id = (await params).id;
-  const body = req.body;
-
-  try {
-    // TODO: update specific post in database
-
-  } catch (error) {
-    let message = 'Unknown Error Occurred';
-    if (error instanceof Error) {
-      message = `message: ${error.message}, cause: ${error.cause || "unknown"}`;
-    }
-
-    return NextResponse.json({
-      message: `${logTag} ${message}`,
-    }, {
-      status: 400
-    })
+    return NextResponse.json({ error: "Failed to fetch post" }, { status: 500 });
   }
 }
 
-export async function DELETE(
-  req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
-  const id = (await params).id;
-
+// ✅ Update post
+export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    // TODO: delete specific post in database
+    const { title, content, category } = await req.json();
+    const updatedPost = await prisma.post.update({
+      where: { id: params.id },
+      data: { title, content, category },
+    });
 
+    return NextResponse.json(updatedPost, { status: 200 });
   } catch (error) {
-    let message = 'Unknown Error Occurred';
-    if (error instanceof Error) {
-      message = `message: ${error.message}, cause: ${error.cause || "unknown"}`;
-    }
+    return NextResponse.json({ error: "Failed to update post" }, { status: 500 });
+  }
+}
 
-    return NextResponse.json({
-      message: `${logTag} ${message}`,
-    }, {
-      status: 400
-    })
+// ✅ Delete post
+export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+  try {
+    await prisma.post.delete({ where: { id: params.id } });
+
+    return NextResponse.json({ message: "Post deleted successfully" }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ error: "Failed to delete post" }, { status: 500 });
   }
 }
