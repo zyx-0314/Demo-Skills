@@ -158,6 +158,15 @@ exports.Prisma.BookmarkScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.ReportScalarFieldEnum = {
+  id: 'id',
+  postId: 'postId',
+  reviewId: 'reviewId',
+  userId: 'userId',
+  reason: 'reason',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -168,13 +177,19 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
   User: 'User',
   Post: 'Post',
   Review: 'Review',
   Like: 'Like',
-  Bookmark: 'Bookmark'
+  Bookmark: 'Bookmark',
+  Report: 'Report'
 };
 
 /**

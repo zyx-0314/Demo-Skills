@@ -21,6 +21,7 @@ model User {
   reviews   Review[]
   bookmarks Bookmark[]
   Like      Like[]
+  Report    Report[]
 }
 
 model Post {
@@ -35,6 +36,7 @@ model Post {
   reviews   Review[]
   bookmarks Bookmark[]
   Like      Like[]
+  Report    Report[]
 }
 
 model Review {
@@ -45,8 +47,9 @@ model Review {
   comment   String
   createdAt DateTime @default(now())
 
-  user User @relation(fields: [userId], references: [id])
-  post Post @relation(fields: [postId], references: [id])
+  user   User     @relation(fields: [userId], references: [id])
+  post   Post     @relation(fields: [postId], references: [id])
+  Report Report[]
 }
 
 model Like {
@@ -71,4 +74,17 @@ model Bookmark {
   post Post @relation(fields: [postId], references: [id])
 
   @@unique([postId, userId])
+}
+
+model Report {
+  id        String   @id @default(uuid())
+  postId    String?
+  reviewId  String?
+  userId    String
+  reason    String
+  createdAt DateTime @default(now())
+
+  user   User    @relation(fields: [userId], references: [id])
+  post   Post?   @relation(fields: [postId], references: [id])
+  review Review? @relation(fields: [reviewId], references: [id])
 }
