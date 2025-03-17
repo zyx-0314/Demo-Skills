@@ -15,17 +15,23 @@ export async function GET() {
 
 // ✅ Create a new post
 export async function POST(req: NextRequest) {
+  console.log("Start");
+
   try {
-    const { title, content, category, userId } = await req.json();
-    if (!title || !content || !category || !userId)
+    const body = await req.json();
+    console.log(body.title);
+    if (!body.title || !body.content || !body.category || !body.userId)
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
 
     const post = await prisma.post.create({
-      data: { title, content, category, userId },
+      data: { title: body.title, content: body.content, category: body.category, userId: body.userId },
     });
 
     return NextResponse.json(post, { status: 201 });
   } catch (error) {
+    let message = "Failed to create post";
+    if (error instanceof Error) message = error.message;
+    console.log(message);
     return NextResponse.json({ error: "Failed to create post" }, { status: 500 });
   }
 }
