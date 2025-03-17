@@ -1,14 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/prisma";
+import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
+
+const prisma = new PostgresqlClient();
 
 // ✅ Get all posts
 export async function GET() {
   try {
+    console.log("Fetching all posts..."); // Debugging log
     const posts = await prisma.post.findMany({
-      include: { user: true },
+      include: { user: true }, // ✅ Ensure this relation exists
     });
+    console.log("Fetched posts:", posts); // Debugging log
+
     return NextResponse.json(posts, { status: 200 });
   } catch (error) {
+    console.error("Error fetching posts:", error);
     return NextResponse.json({ error: "Failed to fetch posts" }, { status: 500 });
   }
 }

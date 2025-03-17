@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
 import bcrypt from "bcryptjs";
+import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
 
 const prisma = new PostgresqlClient();
 

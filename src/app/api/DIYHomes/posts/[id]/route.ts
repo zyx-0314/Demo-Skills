@@ -1,18 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/prisma";
+import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
+
+const prisma = new PostgresqlClient();
 
 // ✅ Get post by ID
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
+    console.log(`Fetching post with ID: ${params.id}`); // Debugging log
     const post = await prisma.post.findUnique({
       where: { id: params.id },
-      include: { user: true, reviews: true },
+      include: { user: true },
     });
+    console.log("Fetched post:", post); // Debugging log
 
     if (!post) return NextResponse.json({ error: "Post not found" }, { status: 404 });
 
     return NextResponse.json(post, { status: 200 });
   } catch (error) {
+    console.error("Error fetching post by ID:", error);
     return NextResponse.json({ error: "Failed to fetch post" }, { status: 500 });
   }
 }
