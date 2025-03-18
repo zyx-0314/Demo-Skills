@@ -26,15 +26,10 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
   try {
     const { name, password } = await req.json();
 
-    // Hash new password if provided
-    let hashedPassword;
-    if (password) {
-      hashedPassword = await bcrypt.hash(password, 10);
-    }
 
     const updatedUser = await prisma.user.update({
       where: { id: params.id },
-      data: { name, password: hashedPassword },
+      data: { name, password },
     });
 
     return NextResponse.json(updatedUser, { status: 200 });

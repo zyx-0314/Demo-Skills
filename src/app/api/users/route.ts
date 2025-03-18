@@ -30,12 +30,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: `Group '${group}' has reached the maximum limit of 50 users` }, { status: 403 });
     }
 
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 10);
-
     // Create new user
     const user = await prisma.user.create({
-      data: { email, name, password: hashedPassword, group },
+      data: { email, name, password, group },
     });
 
     return NextResponse.json(user, { status: 201 });
