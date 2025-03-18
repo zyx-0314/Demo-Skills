@@ -207,7 +207,6 @@ const config = {
     "neon"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "neon": {
       "url": {
