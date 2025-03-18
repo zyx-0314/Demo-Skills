@@ -17,22 +17,24 @@ model User {
   group     String
   createdAt DateTime @default(now())
 
-  posts                 PostDIYHomes[]
-  reviews               ReviewDIYHomes[]
-  bookmarks             BookmarkDIYHomes[]
-  Like                  LikeDIYHomes[]
-  Report                ReportDIYHomes[]
-  PlaceUrbanExplorer    PlaceUrbanExplorer[]
-  ReviewUrbanExplorer   ReviewUrbanExplorer[]
-  LikeUrbanExplorer     LikeUrbanExplorer[]
-  BookmarkUrbanExplorer BookmarkUrbanExplorer[]
-  ReportUrbanExplorer   ReportUrbanExplorer[]
-  FoodieFood            FoodieFood[]
-  FoodieLocation        FoodieLocation[]
-  FoodieReview          FoodieReview[]
-  FoodieLike            FoodieLike[]
-  PetPetLover           PetPetLover[]
-  AppointmentPetLover   AppointmentPetLover[]
+  posts                           PostDIYHomes[]
+  reviews                         ReviewDIYHomes[]
+  bookmarks                       BookmarkDIYHomes[]
+  Like                            LikeDIYHomes[]
+  Report                          ReportDIYHomes[]
+  PlaceUrbanExplorer              PlaceUrbanExplorer[]
+  ReviewUrbanExplorer             ReviewUrbanExplorer[]
+  LikeUrbanExplorer               LikeUrbanExplorer[]
+  BookmarkUrbanExplorer           BookmarkUrbanExplorer[]
+  ReportUrbanExplorer             ReportUrbanExplorer[]
+  FoodieFood                      FoodieFood[]
+  FoodieLocation                  FoodieLocation[]
+  FoodieReview                    FoodieReview[]
+  FoodieLike                      FoodieLike[]
+  PetPetLover                     PetPetLover[]
+  AppointmentPetLover             AppointmentPetLover[]
+  ElderlyCareCompanionAppointment ElderlyCareCompanionAppointment[]
+  ElderlyCareCompanionRecord      ElderlyCareCompanionRecord[]
 }
 
 model PostDIYHomes {
@@ -273,4 +275,44 @@ model StorePetLover {
   address   String
   phone     String
   createdAt DateTime @default(now())
+}
+
+model ElderlyCareCompanionAppointment {
+  id                String   @id @default(uuid())
+  userId            String
+  type              String // "appointment" or "medication"
+  title             String
+  dateTime          DateTime
+  location          String? // Only for appointments
+  medicationDetails String? // Only for medications
+  createdAt         DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model ElderlyCareCompanionClinic {
+  id        String   @id @default(uuid())
+  name      String
+  address   String
+  phone     String
+  createdAt DateTime @default(now())
+}
+
+model ElderlyCareCompanionStore {
+  id        String   @id @default(uuid())
+  name      String
+  address   String
+  phone     String
+  createdAt DateTime @default(now())
+}
+
+model ElderlyCareCompanionRecord {
+  id         String   @id @default(uuid())
+  userId     String
+  recordType String // "medicalHistory", "prescriptions", "labResults"
+  details    String
+  date       DateTime
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
 }

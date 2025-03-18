@@ -293,6 +293,42 @@ exports.Prisma.StorePetLoverScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.ElderlyCareCompanionAppointmentScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  type: 'type',
+  title: 'title',
+  dateTime: 'dateTime',
+  location: 'location',
+  medicationDetails: 'medicationDetails',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ElderlyCareCompanionClinicScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  address: 'address',
+  phone: 'phone',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ElderlyCareCompanionStoreScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  address: 'address',
+  phone: 'phone',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ElderlyCareCompanionRecordScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  recordType: 'recordType',
+  details: 'details',
+  date: 'date',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -329,7 +365,11 @@ exports.Prisma.ModelName = {
   AppointmentPetLover: 'AppointmentPetLover',
   VaccinationPetLover: 'VaccinationPetLover',
   ClinicPetLover: 'ClinicPetLover',
-  StorePetLover: 'StorePetLover'
+  StorePetLover: 'StorePetLover',
+  ElderlyCareCompanionAppointment: 'ElderlyCareCompanionAppointment',
+  ElderlyCareCompanionClinic: 'ElderlyCareCompanionClinic',
+  ElderlyCareCompanionStore: 'ElderlyCareCompanionStore',
+  ElderlyCareCompanionRecord: 'ElderlyCareCompanionRecord'
 };
 
 /**
