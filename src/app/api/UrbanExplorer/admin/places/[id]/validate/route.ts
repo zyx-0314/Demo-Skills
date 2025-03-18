@@ -5,11 +5,12 @@ const prisma = new PostgresqlClient();
 
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    console.log(`Validating place with ID: ${params.id}`);
+    const body = await req.json();
+    console.log(`Validating place with ID: ${body.id}`);
 
     // ✅ Check if the place exists before updating
     const existingPlace = await prisma.placeUrbanExplorer.findUnique({
-      where: { id: params.id },
+      where: { id: body.id },
     });
 
     if (!existingPlace) {
@@ -18,7 +19,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
 
     // ✅ Update the place validation status
     const updatedPlace = await prisma.placeUrbanExplorer.update({
-      where: { id: params.id },
+      where: { id: body.id },
       data: { validated: true },
     });
 
