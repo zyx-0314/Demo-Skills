@@ -360,6 +360,54 @@ exports.Prisma.ElderlyCareCompanionRecordScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.EventOrganizerUserScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.EventOrganizerTaskScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  description: 'description',
+  dueDate: 'dueDate',
+  status: 'status',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.EventOrganizerGuestScalarFieldEnum = {
+  id: 'id',
+  eventId: 'eventId',
+  name: 'name',
+  email: 'email',
+  phone: 'phone',
+  status: 'status',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.EventOrganizerVenueScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  location: 'location',
+  capacity: 'capacity',
+  amenities: 'amenities',
+  submittedBy: 'submittedBy',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.EventOrganizerServiceProviderScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  serviceType: 'serviceType',
+  contactInfo: 'contactInfo',
+  submittedBy: 'submittedBy',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -404,7 +452,12 @@ exports.Prisma.ModelName = {
   ElderlyCareCompanionAppointment: 'ElderlyCareCompanionAppointment',
   ElderlyCareCompanionClinic: 'ElderlyCareCompanionClinic',
   ElderlyCareCompanionStore: 'ElderlyCareCompanionStore',
-  ElderlyCareCompanionRecord: 'ElderlyCareCompanionRecord'
+  ElderlyCareCompanionRecord: 'ElderlyCareCompanionRecord',
+  EventOrganizerUser: 'EventOrganizerUser',
+  EventOrganizerTask: 'EventOrganizerTask',
+  EventOrganizerGuest: 'EventOrganizerGuest',
+  EventOrganizerVenue: 'EventOrganizerVenue',
+  EventOrganizerServiceProvider: 'EventOrganizerServiceProvider'
 };
 
 /**
