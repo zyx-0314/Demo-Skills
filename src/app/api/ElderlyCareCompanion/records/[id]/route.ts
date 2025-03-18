@@ -4,7 +4,7 @@ import { PrismaClient } from "@/../prisma/generated/postgresql";
 const prisma = new PrismaClient();
 
 // ✅ Get Single Health Record (GET by ID)
-export async function GET_RECORD(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const record = await prisma.elderlyCareCompanionRecord.findUnique({
       where: { id: params.id },

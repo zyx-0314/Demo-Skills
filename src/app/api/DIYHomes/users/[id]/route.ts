@@ -4,7 +4,7 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 const prisma = new PostgresqlClient();
 
 // ✅ Get Single User (GET)
-export async function getUser(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const user = await prisma.userDIYHomes.findUnique({ where: { id: params.id }, select: { id: true, email: true, name: true } });
     if (!user) {
