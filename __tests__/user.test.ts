@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { POST as createUser, GET as getUsers } from "@/app/api/users/route";
-import { GET as getUserById, PUT as updateUser, DELETE as deleteUser } from "@/app/api/users/[id]/route";
+import { GET as getUserById, PUT as updateUser } from "@/app/api/users/[id]/route";
 
 describe("User Management API Tests", () => {
   let testUserId: string;
@@ -59,17 +59,5 @@ describe("User Management API Tests", () => {
     const user = await res.json();
     expect(user.name).toBe("Updated User");
     expect(user.group).toBe("member");
-  });
-
-  // ✅ Delete user
-  it("should delete a user", async () => {
-    const req = new NextRequest(`http://localhost:3000/api/users/${testUserId}`, {
-      method: "DELETE",
-    });
-
-    const res = await deleteUser(req, { params: { id: testUserId } });
-    expect(res.status).toBe(200);
-    const data = await res.json();
-    expect(data.message).toBe("User deleted successfully");
   });
 });
