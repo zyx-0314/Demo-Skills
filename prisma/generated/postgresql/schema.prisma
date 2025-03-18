@@ -27,6 +27,10 @@ model User {
   LikeUrbanExplorer     LikeUrbanExplorer[]
   BookmarkUrbanExplorer BookmarkUrbanExplorer[]
   ReportUrbanExplorer   ReportUrbanExplorer[]
+  FoodieFood            FoodieFood[]
+  FoodieLocation        FoodieLocation[]
+  FoodieReview          FoodieReview[]
+  FoodieLike            FoodieLike[]
 }
 
 model PostDIYHomes {
@@ -159,4 +163,57 @@ model ReportUrbanExplorer {
   user   User                 @relation(fields: [userId], references: [id])
   place  PlaceUrbanExplorer?  @relation(fields: [placeId], references: [id])
   review ReviewUrbanExplorer? @relation(fields: [reviewId], references: [id])
+}
+
+model FoodieFood {
+  id          String   @id @default(uuid())
+  name        String
+  cuisine     String
+  origin      String
+  description String
+  submittedBy String
+  validated   Boolean  @default(false) // ✅ Added field for admin validation
+  createdAt   DateTime @default(now())
+
+  user      User             @relation(fields: [submittedBy], references: [id])
+  locations FoodieLocation[]
+  reviews   FoodieReview[]
+  likes     FoodieLike[]
+}
+
+model FoodieLocation {
+  id           String   @id @default(uuid())
+  foodId       String
+  locationName String
+  address      String
+  submittedBy  String
+  createdAt    DateTime @default(now())
+
+  user User       @relation(fields: [submittedBy], references: [id])
+  food FoodieFood @relation(fields: [foodId], references: [id])
+}
+
+model FoodieReview {
+  id        String   @id @default(uuid())
+  foodId    String
+  userId    String
+  rating    Int
+  comment   String
+  validated Boolean  @default(false) // ✅ Added field for admin validation
+  createdAt DateTime @default(now())
+
+  user User       @relation(fields: [userId], references: [id])
+  food FoodieFood @relation(fields: [foodId], references: [id])
+}
+
+model FoodieLike {
+  id        String   @id @default(uuid())
+  foodId    String
+  userId    String
+  createdAt DateTime @default(now())
+
+  user User       @relation(fields: [userId], references: [id])
+  food FoodieFood @relation(fields: [foodId], references: [id])
+
+  @@unique([foodId, userId])
 }
