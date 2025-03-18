@@ -1,8 +1,8 @@
-import { POST as createPlace, GET as getPlaces } from "@/app/api/UrbanExplorer/places/route";
-import { GET as getPlaceById, PUT as updatePlace, DELETE as deletePlace } from "@/app/api/UrbanExplorer/places/[id]/route";
+import { POST as createPlace, GET as getPlaces } from "@/app/api/old/UrbanExplorer/places/route";
+import { GET as getPlaceById, PUT as updatePlace, DELETE as deletePlace } from "@/app/api/old/UrbanExplorer/places/[id]/route";
 import { NextRequest } from "next/server";
 import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
-import { POST as createUser } from "@/app/api/UrbanExplorer/users/route"; // ✅ Import User API
+import { POST as createUser } from "@/app/api/old/UrbanExplorer/users/route"; // ✅ Import User API
 
 const prisma = new PostgresqlClient();
 

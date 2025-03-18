@@ -1,10 +1,10 @@
 import { NextRequest } from "next/server";
-import { GET as getUsers, DELETE as banUser } from "@/app/api/DIYHomes/admin/users/route";
-import { GET as getPosts, DELETE as deletePost } from "@/app/api/DIYHomes/admin/posts/route";
-import { GET as getReports, DELETE as deleteReport } from "@/app/api/DIYHomes/admin/reports/route";
-import { POST as createUser } from "@/app/api/DIYHomes/users/route";
-import { POST as createPost } from "@/app/api/DIYHomes/posts/route";
-import { POST as createReport } from "@/app/api/DIYHomes/reports/route";
+import { GET as getUsers, DELETE as banUser } from "@/app/api/old/DIYHomes/admin/users/route";
+import { GET as getPosts, DELETE as deletePost } from "@/app/api/old/DIYHomes/admin/posts/route";
+import { GET as getReports, DELETE as deleteReport } from "@/app/api/old/DIYHomes/admin/reports/route";
+import { POST as createUser } from "@/app/api/old/DIYHomes/users/route";
+import { POST as createPost } from "@/app/api/old/DIYHomes/posts/route";
+import { POST as createReport } from "@/app/api/old/DIYHomes/reports/route";
 
 import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
 

@@ -1,7 +1,7 @@
-import { POST as createReview, GET as getReviews } from "@/app/api/UrbanExplorer/reviews/route";
-import { PUT as updateReview, DELETE as deleteReview } from "@/app/api/UrbanExplorer/reviews/[id]/route";
-import { POST as createUser } from "@/app/api/UrbanExplorer/users/route"; // ✅ Import User API
-import { POST as createPlace } from "@/app/api/UrbanExplorer/places/route";
+import { POST as createReview, GET as getReviews } from "@/app/api/old/UrbanExplorer/reviews/route";
+import { PUT as updateReview, DELETE as deleteReview } from "@/app/api/old/UrbanExplorer/reviews/[id]/route";
+import { POST as createUser } from "@/app/api/old/UrbanExplorer/users/route"; // ✅ Import User API
+import { POST as createPlace } from "@/app/api/old/UrbanExplorer/places/route";
 import { NextRequest } from "next/server";
 
 describe("UrbanExplorer - Reviews API Tests", () => {

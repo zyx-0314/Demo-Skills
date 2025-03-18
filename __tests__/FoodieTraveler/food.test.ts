@@ -1,9 +1,9 @@
 import { NextRequest } from "next/server";
-import { POST as createFood, GET as getFoods } from "@/app/api/FoodieTraveler/foods/route";
-import { GET as getFoodById } from "@/app/api/FoodieTraveler/foods/[id]/route";
-import { PUT as updateFood, DELETE as deleteFood } from "@/app/api/FoodieTraveler/admin/foods/[id]/route";
-import { POST as submitLocation } from "@/app/api/FoodieTraveler/foods/[id]/locations/route";
-import { POST as createUser } from "@/app/api/FoodieTraveler/users/route"; // ✅ Import User API
+import { POST as createFood, GET as getFoods } from "@/app/api/old/FoodieTraveler/foods/route";
+import { GET as getFoodById } from "@/app/api/old/FoodieTraveler/foods/[id]/route";
+import { PUT as updateFood, DELETE as deleteFood } from "@/app/api/old/FoodieTraveler/admin/foods/[id]/route";
+import { POST as submitLocation } from "@/app/api/old/FoodieTraveler/foods/[id]/locations/route";
+import { POST as createUser } from "@/app/api/old/FoodieTraveler/users/route"; // ✅ Import User API
 
 describe("FoodieTraveler API Tests", () => {
   let testFoodId: string;

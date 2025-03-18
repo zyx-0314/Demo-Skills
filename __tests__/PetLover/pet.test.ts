@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
-import { GET as getPetById, PUT as updatePet, DELETE as deletePet } from "@/app/api/PetLover/pets/[id]/route";
-import { POST as createPet, GET as getPets } from "@/app/api/PetLover/pets/route";
-import { POST as createUser } from "@/app/api/PetLover/users/route"; // ✅ Import User API
+import { GET as getPetById, PUT as updatePet, DELETE as deletePet } from "@/app/api/old/PetLover/pets/[id]/route";
+import { POST as createPet, GET as getPets } from "@/app/api/old/PetLover/pets/route";
+import { POST as createUser } from "@/app/api/old/PetLover/users/route"; // ✅ Import User API
 
 describe("PetLover Pet API Tests", () => {
   let testPetId: string;

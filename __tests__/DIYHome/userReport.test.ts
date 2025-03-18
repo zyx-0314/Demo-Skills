@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
-import { POST as createUser } from "@/app/api/DIYHomes/users/route";
-import { POST as createPost } from "@/app/api/DIYHomes/posts/route";
-import { POST as createReport } from "@/app/api/DIYHomes/reports/route";
+import { POST as createUser } from "@/app/api/old/DIYHomes/users/route";
+import { POST as createPost } from "@/app/api/old/DIYHomes/posts/route";
+import { POST as createReport } from "@/app/api/old/DIYHomes/reports/route";
 
 describe("User Report API Tests", () => {
   let testReportId: string;

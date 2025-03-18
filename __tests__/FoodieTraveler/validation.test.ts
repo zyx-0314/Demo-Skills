@@ -1,9 +1,9 @@
 import { NextRequest } from "next/server";
-import { POST as validateFood } from "@/app/api/FoodieTraveler/admin/foods/[id]/validate/route";
-import { POST as validateReview } from "@/app/api/FoodieTraveler/admin/reviews/[id]/validate/route";
-import { POST as createFood } from "@/app/api/FoodieTraveler/foods/route";
-import { POST as createReview } from "@/app/api/FoodieTraveler/reviews/route";
-import { POST as createUser } from "@/app/api/FoodieTraveler/users/route"; // ✅ Import User API
+import { POST as validateFood } from "@/app/api/old/FoodieTraveler/admin/foods/[id]/validate/route";
+import { POST as validateReview } from "@/app/api/old/FoodieTraveler/admin/reviews/[id]/validate/route";
+import { POST as createFood } from "@/app/api/old/FoodieTraveler/foods/route";
+import { POST as createReview } from "@/app/api/old/FoodieTraveler/reviews/route";
+import { POST as createUser } from "@/app/api/old/FoodieTraveler/users/route"; // ✅ Import User API
 
 describe("Admin Validation API Tests", () => {
   let testFoodId: string;

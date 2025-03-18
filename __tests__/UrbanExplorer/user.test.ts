@@ -1,5 +1,5 @@
-import { POST as createUser, GET as getUsers } from "@/app/api/DIYHomes/users/route";
-import { GET as getUserById, PUT as updateUser } from "@/app/api/UrbanExplorer/users/[id]/route";
+import { POST as createUser, GET as getUsers } from "@/app/api/old/DIYHomes/users/route";
+import { GET as getUserById, PUT as updateUser } from "@/app/api/old/UrbanExplorer/users/[id]/route";
 import { NextRequest } from "next/server";
 import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
 

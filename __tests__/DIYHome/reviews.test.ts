@@ -1,8 +1,8 @@
 import { NextRequest } from "next/server";
-import { POST as createReview, GET as getReviews } from "@/app/api/DIYHomes/reviews/route";
-import { PUT as updateReview, DELETE as deleteReview } from "@/app/api/DIYHomes/reviews/[id]/route";
-import { POST as createUser } from "@/app/api/DIYHomes/users/route";
-import { POST as createPost } from "@/app/api/DIYHomes/posts/route";
+import { POST as createReview, GET as getReviews } from "@/app/api/old/DIYHomes/reviews/route";
+import { PUT as updateReview, DELETE as deleteReview } from "@/app/api/old/DIYHomes/reviews/[id]/route";
+import { POST as createUser } from "@/app/api/old/DIYHomes/users/route";
+import { POST as createPost } from "@/app/api/old/DIYHomes/posts/route";
 
 describe("DIYHome Reviews API Tests", () => {
   let testUserId: string;

@@ -1,8 +1,8 @@
 import { NextRequest } from "next/server";
-import { POST as createAppointment, GET as getAppointments } from "@/app/api/PetLover/appointments/route";
-import { DELETE as deleteAppointment } from "@/app/api/PetLover/appointments/[id]/route";
-import { POST as createUser } from "@/app/api/PetLover/users/route"; // ✅ Import User API
-import { POST as createPet } from "@/app/api/PetLover/pets/route";
+import { POST as createAppointment, GET as getAppointments } from "@/app/api/old/PetLover/appointments/route";
+import { DELETE as deleteAppointment } from "@/app/api/old/PetLover/appointments/[id]/route";
+import { POST as createUser } from "@/app/api/old/PetLover/users/route"; // ✅ Import User API
+import { POST as createPet } from "@/app/api/old/PetLover/pets/route";
 
 describe("PetLover Appointment API Tests", () => {
   let testAppointmentId: string;

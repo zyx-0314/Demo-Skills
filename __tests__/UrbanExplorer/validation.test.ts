@@ -1,7 +1,7 @@
-import { POST as validatePlace } from "@/app/api/UrbanExplorer/admin/places/[id]/validate/route";
-import { POST as reportPlace, GET as getReports } from "@/app/api/UrbanExplorer/reports/route";
-import { POST as createUser } from "@/app/api/UrbanExplorer/users/route"; // ✅ Import User API\
-import { POST as createPlace } from "@/app/api/UrbanExplorer/places/route";
+import { POST as validatePlace } from "@/app/api/old/UrbanExplorer/admin/places/[id]/validate/route";
+import { POST as reportPlace, GET as getReports } from "@/app/api/old/UrbanExplorer/reports/route";
+import { POST as createUser } from "@/app/api/old/UrbanExplorer/users/route"; // ✅ Import User API\
+import { POST as createPlace } from "@/app/api/old/UrbanExplorer/places/route";
 import { NextRequest } from "next/server";
 
 describe("UrbanExplorer - Place & User Validation API Tests", () => {

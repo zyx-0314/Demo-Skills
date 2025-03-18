@@ -3,7 +3,7 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient();
 
-// ✅ Report a post
+// ✅ Report a Post or Review (POST)
 export async function POST(req: NextRequest) {
   try {
     const { postId, reviewId, userId, reason } = await req.json();
@@ -11,17 +11,24 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    console.log(`Creating report for postId: ${postId}, reviewId: ${reviewId}`);
-
     const report = await prisma.reportDIYHomes.create({
       data: { postId, reviewId, userId, reason },
     });
 
     return NextResponse.json(report, { status: 201 });
   } catch (error) {
-    let message = "Failed to submit report";
-    if (error instanceof Error) message = error.message;
-    console.error("Error reporting post/review:", error);
-    return NextResponse.json({ error: message }, { status: 500 });
+    console.error("Error reporting content:", error);
+    return NextResponse.json({ error: "Failed to report content" }, { status: 500 });
+  }
+}
+
+// ✅ Fetch All Reports (GET - Admin Only)
+export async function GET(req: NextRequest) {
+  try {
+    const reports = await prisma.reportDIYHomes.findMany();
+    return NextResponse.json(reports, { status: 200 });
+  } catch (error) {
+    console.error("Error fetching reports:", error);
+    return NextResponse.json({ error: "Failed to fetch reports" }, { status: 500 });
   }
 }

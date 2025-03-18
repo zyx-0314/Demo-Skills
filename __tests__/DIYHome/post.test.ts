@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
-import { POST as createPost, GET as getPosts } from "@/app/api/DIYHomes/posts/route";
-import { GET as getPostById, PUT as updatePost, DELETE as deletePost } from "@/app/api/DIYHomes/posts/[id]/route";
-import { POST as createUser } from "@/app/api/DIYHomes/users/route"; // ✅ Import User API
+import { POST as createPost, GET as getPosts } from "@/app/api/old/DIYHomes/posts/route";
+import { GET as getPostById, PUT as updatePost, DELETE as deletePost } from "@/app/api/old/DIYHomes/posts/[id]/route";
+import { POST as createUser } from "@/app/api/old/DIYHomes/users/route"; // ✅ Import User API
 
 describe("DIYHome Post API Tests", () => {
   let testPostId: string;
