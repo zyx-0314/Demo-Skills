@@ -39,3 +39,25 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Failed to submit review" }, { status: 500 });
   }
 }
+
+// ✅ Get all reviews for a specific food item
+export async function GET(req: NextRequest) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const foodId = searchParams.get("foodId");
+
+    if (!foodId) {
+      return NextResponse.json({ error: "Missing required foodId" }, { status: 400 });
+    }
+
+    const reviews = await prisma.foodieReview.findMany({
+      where: { foodId },
+    });
+
+    return NextResponse.json(reviews, { status: 200 });
+  } catch (error) {
+    console.error("Error fetching reviews:", error);
+    return NextResponse.json({ error: "Failed to fetch reviews" }, { status: 500 });
+  }
+}
+
