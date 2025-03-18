@@ -1,12 +1,18 @@
-import prisma from "@/lib/prisma";
+import { PrismaClient as PostgresClient } from '@/../prisma/generated/postgresql';
+import { PrismaClient as MongoClient } from '@/../prisma/generated/mongo';
 
-// Before running tests, clean up the test database
+const prismaPostgres = new PostgresClient();
+const prismaMongo = new MongoClient();
+
+global.prismaPostgres = prismaPostgres;
+global.prismaMongo = prismaMongo;
+
 beforeAll(async () => {
-  await prisma.user.deleteMany();
-  await prisma.post.deleteMany();
-  await prisma.review.deleteMany();
+  await prismaPostgres.$connect();
+  await prismaMongo.$connect();
 });
 
 afterAll(async () => {
-  await prisma.$disconnect();
+  await prismaPostgres.$disconnect();
+  await prismaMongo.$disconnect();
 });
