@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Ensure user can only bookmark once
-    const bookmark = await prisma.bookmark.upsert({
+    const bookmark = await prisma.bookmarkDIYHomes.upsert({
       where: { postId_userId: { postId, userId } },
       update: {}, // No changes needed if already exists
       create: { postId, userId },
@@ -33,7 +33,7 @@ export async function DELETE(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    await prisma.bookmark.deleteMany({
+    await prisma.bookmarkDIYHomes.deleteMany({
       where: { postId, userId },
     });
 

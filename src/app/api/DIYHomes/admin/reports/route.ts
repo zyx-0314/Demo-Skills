@@ -6,7 +6,7 @@ const prisma = new PostgresqlClient();
 // ✅ Get all reports (Admin only)
 export async function GET() {
   try {
-    const reports = await prisma.report.findMany({
+    const reports = await prisma.reportDIYHomes.findMany({
       include: { user: true, post: true, review: true },
     });
 
@@ -27,13 +27,13 @@ export async function DELETE(req: NextRequest) {
 
     console.log(`Deleting report: ${reportId}`);
 
-    const report = await prisma.report.findUnique({ where: { id: reportId } });
+    const report = await prisma.reportDIYHomes.findUnique({ where: { id: reportId } });
     if (!report) {
       console.error("Report not found");
       return NextResponse.json({ error: "Report not found" }, { status: 404 });
     }
 
-    await prisma.report.delete({ where: { id: reportId } });
+    await prisma.reportDIYHomes.delete({ where: { id: reportId } });
 
     console.log(`Report ${reportId} deleted successfully`);
     return NextResponse.json({ message: "Report deleted successfully" }, { status: 200 });
