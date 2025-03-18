@@ -28,22 +28,36 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(user, { status: 201 });
   } catch (error) {
-    let message = "Failed to create post";
+    let message = "Failed to create user";
     if (error instanceof Error) message = error.message;
     console.log(message);
-    return NextResponse.json({ error: "Failed to create user" }, { status: 500 });
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
 
 // ✅ Get All Users (GET)
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
-    const users = await prisma.user.findMany();
+    const { searchParams } = new URL(req.url);
+    const group = searchParams.get("group");
+
+    // Validate input manually
+    if (group !== null && group.trim() === "") {
+      return NextResponse.json({ error: "Invalid or missing group query" }, { status: 400 });
+    }
+
+    // Fetch users filtered by group if the query is provided
+    const users = await prisma.user.findMany({
+      where: group ? { group } : undefined,
+    });
+
     return NextResponse.json(users, { status: 200 });
+
   } catch (error) {
-    let message = "Failed to create post";
+    let message = "Failed to fetch users list";
     if (error instanceof Error) message = error.message;
     console.log(message);
-    return NextResponse.json({ error: "Failed to fetch users list" }, { status: 500 });
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
+

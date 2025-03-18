@@ -14,17 +14,17 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     }
     return NextResponse.json(user, { status: 200 });
   } catch (error) {
-    let message = "Failed to create post";
+    let message = "Failed to fetch user";
     if (error instanceof Error) message = error.message;
     console.log(message);
-    return NextResponse.json({ error: "Failed to fetch user" }, { status: 500 });
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
 
 // ✅ Update User Details (PUT)
 export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const { name, password, group } = await req.json();
+    const { name, password } = await req.json();
 
     // Hash new password if provided
     let hashedPassword;
@@ -34,14 +34,14 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
 
     const updatedUser = await prisma.user.update({
       where: { id: params.id },
-      data: { name, password: hashedPassword, group },
+      data: { name, password: hashedPassword },
     });
 
     return NextResponse.json(updatedUser, { status: 200 });
   } catch (error) {
-    let message = "Failed to create post";
+    let message = "Failed to update user";
     if (error instanceof Error) message = error.message;
     console.log(message);
-    return NextResponse.json({ error: "Failed to update user" }, { status: 500 });
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
