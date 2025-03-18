@@ -37,6 +37,7 @@ describe("UrbanExplorer - Reviews API Tests", () => {
     });
 
     const res = await createReview(req);
+    console.info("Review created:", res);
     expect(res.status).toBe(201);
     const review = await res.json();
     testReviewId = review.id;

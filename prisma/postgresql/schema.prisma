@@ -31,6 +31,8 @@ model User {
   FoodieLocation        FoodieLocation[]
   FoodieReview          FoodieReview[]
   FoodieLike            FoodieLike[]
+  PetPetLover           PetPetLover[]
+  AppointmentPetLover   AppointmentPetLover[]
 }
 
 model PostDIYHomes {
@@ -216,4 +218,59 @@ model FoodieLike {
   food FoodieFood @relation(fields: [foodId], references: [id])
 
   @@unique([foodId, userId])
+}
+
+model PetPetLover {
+  id             String   @id @default(uuid())
+  userId         String
+  petName        String
+  species        String
+  breed          String
+  age            Int
+  medicalHistory String?
+  createdAt      DateTime @default(now())
+
+  user         User                  @relation(fields: [userId], references: [id])
+  vaccinations VaccinationPetLover[]
+  appointments AppointmentPetLover[]
+}
+
+model AppointmentPetLover {
+  id              String   @id @default(uuid())
+  userId          String
+  petId           String
+  appointmentType String
+  dateTime        DateTime
+  location        String
+  createdAt       DateTime @default(now())
+
+  user User        @relation(fields: [userId], references: [id])
+  pet  PetPetLover @relation(fields: [petId], references: [id])
+}
+
+model VaccinationPetLover {
+  id               String    @id @default(uuid())
+  petId            String
+  vaccineName      String
+  dateAdministered DateTime
+  nextDueDate      DateTime?
+  createdAt        DateTime  @default(now())
+
+  pet PetPetLover @relation(fields: [petId], references: [id])
+}
+
+model ClinicPetLover {
+  id        String   @id @default(uuid())
+  name      String
+  address   String
+  phone     String
+  createdAt DateTime @default(now())
+}
+
+model StorePetLover {
+  id        String   @id @default(uuid())
+  name      String
+  address   String
+  phone     String
+  createdAt DateTime @default(now())
 }
