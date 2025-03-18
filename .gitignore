@@ -42,3 +42,6 @@ package-lock.json
 
 # env
 .env
+
+# prisma
+./prisma/generated
