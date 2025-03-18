@@ -43,6 +43,31 @@ export type BookmarkDIYHomes = $Result.DefaultSelection<Prisma.$BookmarkDIYHomes
  * 
  */
 export type ReportDIYHomes = $Result.DefaultSelection<Prisma.$ReportDIYHomesPayload>
+/**
+ * Model PlaceUrbanExplorer
+ * 
+ */
+export type PlaceUrbanExplorer = $Result.DefaultSelection<Prisma.$PlaceUrbanExplorerPayload>
+/**
+ * Model ReviewUrbanExplorer
+ * 
+ */
+export type ReviewUrbanExplorer = $Result.DefaultSelection<Prisma.$ReviewUrbanExplorerPayload>
+/**
+ * Model LikeUrbanExplorer
+ * 
+ */
+export type LikeUrbanExplorer = $Result.DefaultSelection<Prisma.$LikeUrbanExplorerPayload>
+/**
+ * Model BookmarkUrbanExplorer
+ * 
+ */
+export type BookmarkUrbanExplorer = $Result.DefaultSelection<Prisma.$BookmarkUrbanExplorerPayload>
+/**
+ * Model ReportUrbanExplorer
+ * 
+ */
+export type ReportUrbanExplorer = $Result.DefaultSelection<Prisma.$ReportUrbanExplorerPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -228,6 +253,56 @@ export class PrismaClient<
     * ```
     */
   get reportDIYHomes(): Prisma.ReportDIYHomesDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.placeUrbanExplorer`: Exposes CRUD operations for the **PlaceUrbanExplorer** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more PlaceUrbanExplorers
+    * const placeUrbanExplorers = await prisma.placeUrbanExplorer.findMany()
+    * ```
+    */
+  get placeUrbanExplorer(): Prisma.PlaceUrbanExplorerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.reviewUrbanExplorer`: Exposes CRUD operations for the **ReviewUrbanExplorer** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ReviewUrbanExplorers
+    * const reviewUrbanExplorers = await prisma.reviewUrbanExplorer.findMany()
+    * ```
+    */
+  get reviewUrbanExplorer(): Prisma.ReviewUrbanExplorerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.likeUrbanExplorer`: Exposes CRUD operations for the **LikeUrbanExplorer** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more LikeUrbanExplorers
+    * const likeUrbanExplorers = await prisma.likeUrbanExplorer.findMany()
+    * ```
+    */
+  get likeUrbanExplorer(): Prisma.LikeUrbanExplorerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.bookmarkUrbanExplorer`: Exposes CRUD operations for the **BookmarkUrbanExplorer** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more BookmarkUrbanExplorers
+    * const bookmarkUrbanExplorers = await prisma.bookmarkUrbanExplorer.findMany()
+    * ```
+    */
+  get bookmarkUrbanExplorer(): Prisma.BookmarkUrbanExplorerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.reportUrbanExplorer`: Exposes CRUD operations for the **ReportUrbanExplorer** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ReportUrbanExplorers
+    * const reportUrbanExplorers = await prisma.reportUrbanExplorer.findMany()
+    * ```
+    */
+  get reportUrbanExplorer(): Prisma.ReportUrbanExplorerDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -673,7 +748,12 @@ export namespace Prisma {
     ReviewDIYHomes: 'ReviewDIYHomes',
     LikeDIYHomes: 'LikeDIYHomes',
     BookmarkDIYHomes: 'BookmarkDIYHomes',
-    ReportDIYHomes: 'ReportDIYHomes'
+    ReportDIYHomes: 'ReportDIYHomes',
+    PlaceUrbanExplorer: 'PlaceUrbanExplorer',
+    ReviewUrbanExplorer: 'ReviewUrbanExplorer',
+    LikeUrbanExplorer: 'LikeUrbanExplorer',
+    BookmarkUrbanExplorer: 'BookmarkUrbanExplorer',
+    ReportUrbanExplorer: 'ReportUrbanExplorer'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -692,7 +772,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes"
+      modelProps: "user" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1140,6 +1220,376 @@ export namespace Prisma {
           }
         }
       }
+      PlaceUrbanExplorer: {
+        payload: Prisma.$PlaceUrbanExplorerPayload<ExtArgs>
+        fields: Prisma.PlaceUrbanExplorerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.PlaceUrbanExplorerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.PlaceUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload>
+          }
+          findFirst: {
+            args: Prisma.PlaceUrbanExplorerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.PlaceUrbanExplorerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload>
+          }
+          findMany: {
+            args: Prisma.PlaceUrbanExplorerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload>[]
+          }
+          create: {
+            args: Prisma.PlaceUrbanExplorerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload>
+          }
+          createMany: {
+            args: Prisma.PlaceUrbanExplorerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.PlaceUrbanExplorerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload>[]
+          }
+          delete: {
+            args: Prisma.PlaceUrbanExplorerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload>
+          }
+          update: {
+            args: Prisma.PlaceUrbanExplorerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload>
+          }
+          deleteMany: {
+            args: Prisma.PlaceUrbanExplorerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.PlaceUrbanExplorerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.PlaceUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload>[]
+          }
+          upsert: {
+            args: Prisma.PlaceUrbanExplorerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaceUrbanExplorerPayload>
+          }
+          aggregate: {
+            args: Prisma.PlaceUrbanExplorerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregatePlaceUrbanExplorer>
+          }
+          groupBy: {
+            args: Prisma.PlaceUrbanExplorerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<PlaceUrbanExplorerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.PlaceUrbanExplorerCountArgs<ExtArgs>
+            result: $Utils.Optional<PlaceUrbanExplorerCountAggregateOutputType> | number
+          }
+        }
+      }
+      ReviewUrbanExplorer: {
+        payload: Prisma.$ReviewUrbanExplorerPayload<ExtArgs>
+        fields: Prisma.ReviewUrbanExplorerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ReviewUrbanExplorerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ReviewUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload>
+          }
+          findFirst: {
+            args: Prisma.ReviewUrbanExplorerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ReviewUrbanExplorerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload>
+          }
+          findMany: {
+            args: Prisma.ReviewUrbanExplorerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload>[]
+          }
+          create: {
+            args: Prisma.ReviewUrbanExplorerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload>
+          }
+          createMany: {
+            args: Prisma.ReviewUrbanExplorerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ReviewUrbanExplorerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload>[]
+          }
+          delete: {
+            args: Prisma.ReviewUrbanExplorerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload>
+          }
+          update: {
+            args: Prisma.ReviewUrbanExplorerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload>
+          }
+          deleteMany: {
+            args: Prisma.ReviewUrbanExplorerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ReviewUrbanExplorerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ReviewUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload>[]
+          }
+          upsert: {
+            args: Prisma.ReviewUrbanExplorerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewUrbanExplorerPayload>
+          }
+          aggregate: {
+            args: Prisma.ReviewUrbanExplorerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateReviewUrbanExplorer>
+          }
+          groupBy: {
+            args: Prisma.ReviewUrbanExplorerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ReviewUrbanExplorerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ReviewUrbanExplorerCountArgs<ExtArgs>
+            result: $Utils.Optional<ReviewUrbanExplorerCountAggregateOutputType> | number
+          }
+        }
+      }
+      LikeUrbanExplorer: {
+        payload: Prisma.$LikeUrbanExplorerPayload<ExtArgs>
+        fields: Prisma.LikeUrbanExplorerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.LikeUrbanExplorerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.LikeUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload>
+          }
+          findFirst: {
+            args: Prisma.LikeUrbanExplorerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.LikeUrbanExplorerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload>
+          }
+          findMany: {
+            args: Prisma.LikeUrbanExplorerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload>[]
+          }
+          create: {
+            args: Prisma.LikeUrbanExplorerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload>
+          }
+          createMany: {
+            args: Prisma.LikeUrbanExplorerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.LikeUrbanExplorerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload>[]
+          }
+          delete: {
+            args: Prisma.LikeUrbanExplorerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload>
+          }
+          update: {
+            args: Prisma.LikeUrbanExplorerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload>
+          }
+          deleteMany: {
+            args: Prisma.LikeUrbanExplorerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.LikeUrbanExplorerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.LikeUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload>[]
+          }
+          upsert: {
+            args: Prisma.LikeUrbanExplorerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeUrbanExplorerPayload>
+          }
+          aggregate: {
+            args: Prisma.LikeUrbanExplorerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLikeUrbanExplorer>
+          }
+          groupBy: {
+            args: Prisma.LikeUrbanExplorerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LikeUrbanExplorerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.LikeUrbanExplorerCountArgs<ExtArgs>
+            result: $Utils.Optional<LikeUrbanExplorerCountAggregateOutputType> | number
+          }
+        }
+      }
+      BookmarkUrbanExplorer: {
+        payload: Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>
+        fields: Prisma.BookmarkUrbanExplorerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.BookmarkUrbanExplorerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.BookmarkUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload>
+          }
+          findFirst: {
+            args: Prisma.BookmarkUrbanExplorerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.BookmarkUrbanExplorerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload>
+          }
+          findMany: {
+            args: Prisma.BookmarkUrbanExplorerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload>[]
+          }
+          create: {
+            args: Prisma.BookmarkUrbanExplorerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload>
+          }
+          createMany: {
+            args: Prisma.BookmarkUrbanExplorerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.BookmarkUrbanExplorerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload>[]
+          }
+          delete: {
+            args: Prisma.BookmarkUrbanExplorerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload>
+          }
+          update: {
+            args: Prisma.BookmarkUrbanExplorerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload>
+          }
+          deleteMany: {
+            args: Prisma.BookmarkUrbanExplorerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.BookmarkUrbanExplorerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.BookmarkUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload>[]
+          }
+          upsert: {
+            args: Prisma.BookmarkUrbanExplorerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkUrbanExplorerPayload>
+          }
+          aggregate: {
+            args: Prisma.BookmarkUrbanExplorerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateBookmarkUrbanExplorer>
+          }
+          groupBy: {
+            args: Prisma.BookmarkUrbanExplorerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<BookmarkUrbanExplorerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.BookmarkUrbanExplorerCountArgs<ExtArgs>
+            result: $Utils.Optional<BookmarkUrbanExplorerCountAggregateOutputType> | number
+          }
+        }
+      }
+      ReportUrbanExplorer: {
+        payload: Prisma.$ReportUrbanExplorerPayload<ExtArgs>
+        fields: Prisma.ReportUrbanExplorerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ReportUrbanExplorerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ReportUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload>
+          }
+          findFirst: {
+            args: Prisma.ReportUrbanExplorerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ReportUrbanExplorerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload>
+          }
+          findMany: {
+            args: Prisma.ReportUrbanExplorerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload>[]
+          }
+          create: {
+            args: Prisma.ReportUrbanExplorerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload>
+          }
+          createMany: {
+            args: Prisma.ReportUrbanExplorerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ReportUrbanExplorerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload>[]
+          }
+          delete: {
+            args: Prisma.ReportUrbanExplorerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload>
+          }
+          update: {
+            args: Prisma.ReportUrbanExplorerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload>
+          }
+          deleteMany: {
+            args: Prisma.ReportUrbanExplorerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ReportUrbanExplorerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ReportUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload>[]
+          }
+          upsert: {
+            args: Prisma.ReportUrbanExplorerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportUrbanExplorerPayload>
+          }
+          aggregate: {
+            args: Prisma.ReportUrbanExplorerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateReportUrbanExplorer>
+          }
+          groupBy: {
+            args: Prisma.ReportUrbanExplorerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ReportUrbanExplorerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ReportUrbanExplorerCountArgs<ExtArgs>
+            result: $Utils.Optional<ReportUrbanExplorerCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -1230,6 +1680,11 @@ export namespace Prisma {
     likeDIYHomes?: LikeDIYHomesOmit
     bookmarkDIYHomes?: BookmarkDIYHomesOmit
     reportDIYHomes?: ReportDIYHomesOmit
+    placeUrbanExplorer?: PlaceUrbanExplorerOmit
+    reviewUrbanExplorer?: ReviewUrbanExplorerOmit
+    likeUrbanExplorer?: LikeUrbanExplorerOmit
+    bookmarkUrbanExplorer?: BookmarkUrbanExplorerOmit
+    reportUrbanExplorer?: ReportUrbanExplorerOmit
   }
 
   /* Types for Logging */
@@ -1329,6 +1784,11 @@ export namespace Prisma {
     bookmarks: number
     Like: number
     Report: number
+    PlaceUrbanExplorer: number
+    ReviewUrbanExplorer: number
+    LikeUrbanExplorer: number
+    BookmarkUrbanExplorer: number
+    ReportUrbanExplorer: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -1337,6 +1797,11 @@ export namespace Prisma {
     bookmarks?: boolean | UserCountOutputTypeCountBookmarksArgs
     Like?: boolean | UserCountOutputTypeCountLikeArgs
     Report?: boolean | UserCountOutputTypeCountReportArgs
+    PlaceUrbanExplorer?: boolean | UserCountOutputTypeCountPlaceUrbanExplorerArgs
+    ReviewUrbanExplorer?: boolean | UserCountOutputTypeCountReviewUrbanExplorerArgs
+    LikeUrbanExplorer?: boolean | UserCountOutputTypeCountLikeUrbanExplorerArgs
+    BookmarkUrbanExplorer?: boolean | UserCountOutputTypeCountBookmarkUrbanExplorerArgs
+    ReportUrbanExplorer?: boolean | UserCountOutputTypeCountReportUrbanExplorerArgs
   }
 
   // Custom InputTypes
@@ -1383,6 +1848,41 @@ export namespace Prisma {
    */
   export type UserCountOutputTypeCountReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ReportDIYHomesWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountPlaceUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PlaceUrbanExplorerWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountReviewUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewUrbanExplorerWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountLikeUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LikeUrbanExplorerWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountBookmarkUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: BookmarkUrbanExplorerWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountReportUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportUrbanExplorerWhereInput
   }
 
 
@@ -1472,6 +1972,95 @@ export namespace Prisma {
    */
   export type ReviewDIYHomesCountOutputTypeCountReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ReportDIYHomesWhereInput
+  }
+
+
+  /**
+   * Count Type PlaceUrbanExplorerCountOutputType
+   */
+
+  export type PlaceUrbanExplorerCountOutputType = {
+    reviews: number
+    bookmarks: number
+    likes: number
+    reports: number
+  }
+
+  export type PlaceUrbanExplorerCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reviews?: boolean | PlaceUrbanExplorerCountOutputTypeCountReviewsArgs
+    bookmarks?: boolean | PlaceUrbanExplorerCountOutputTypeCountBookmarksArgs
+    likes?: boolean | PlaceUrbanExplorerCountOutputTypeCountLikesArgs
+    reports?: boolean | PlaceUrbanExplorerCountOutputTypeCountReportsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * PlaceUrbanExplorerCountOutputType without action
+   */
+  export type PlaceUrbanExplorerCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorerCountOutputType
+     */
+    select?: PlaceUrbanExplorerCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * PlaceUrbanExplorerCountOutputType without action
+   */
+  export type PlaceUrbanExplorerCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewUrbanExplorerWhereInput
+  }
+
+  /**
+   * PlaceUrbanExplorerCountOutputType without action
+   */
+  export type PlaceUrbanExplorerCountOutputTypeCountBookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: BookmarkUrbanExplorerWhereInput
+  }
+
+  /**
+   * PlaceUrbanExplorerCountOutputType without action
+   */
+  export type PlaceUrbanExplorerCountOutputTypeCountLikesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LikeUrbanExplorerWhereInput
+  }
+
+  /**
+   * PlaceUrbanExplorerCountOutputType without action
+   */
+  export type PlaceUrbanExplorerCountOutputTypeCountReportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportUrbanExplorerWhereInput
+  }
+
+
+  /**
+   * Count Type ReviewUrbanExplorerCountOutputType
+   */
+
+  export type ReviewUrbanExplorerCountOutputType = {
+    reports: number
+  }
+
+  export type ReviewUrbanExplorerCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reports?: boolean | ReviewUrbanExplorerCountOutputTypeCountReportsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * ReviewUrbanExplorerCountOutputType without action
+   */
+  export type ReviewUrbanExplorerCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorerCountOutputType
+     */
+    select?: ReviewUrbanExplorerCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * ReviewUrbanExplorerCountOutputType without action
+   */
+  export type ReviewUrbanExplorerCountOutputTypeCountReportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportUrbanExplorerWhereInput
   }
 
 
@@ -1656,6 +2245,11 @@ export namespace Prisma {
     bookmarks?: boolean | User$bookmarksArgs<ExtArgs>
     Like?: boolean | User$LikeArgs<ExtArgs>
     Report?: boolean | User$ReportArgs<ExtArgs>
+    PlaceUrbanExplorer?: boolean | User$PlaceUrbanExplorerArgs<ExtArgs>
+    ReviewUrbanExplorer?: boolean | User$ReviewUrbanExplorerArgs<ExtArgs>
+    LikeUrbanExplorer?: boolean | User$LikeUrbanExplorerArgs<ExtArgs>
+    BookmarkUrbanExplorer?: boolean | User$BookmarkUrbanExplorerArgs<ExtArgs>
+    ReportUrbanExplorer?: boolean | User$ReportUrbanExplorerArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
@@ -1693,6 +2287,11 @@ export namespace Prisma {
     bookmarks?: boolean | User$bookmarksArgs<ExtArgs>
     Like?: boolean | User$LikeArgs<ExtArgs>
     Report?: boolean | User$ReportArgs<ExtArgs>
+    PlaceUrbanExplorer?: boolean | User$PlaceUrbanExplorerArgs<ExtArgs>
+    ReviewUrbanExplorer?: boolean | User$ReviewUrbanExplorerArgs<ExtArgs>
+    LikeUrbanExplorer?: boolean | User$LikeUrbanExplorerArgs<ExtArgs>
+    BookmarkUrbanExplorer?: boolean | User$BookmarkUrbanExplorerArgs<ExtArgs>
+    ReportUrbanExplorer?: boolean | User$ReportUrbanExplorerArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -1706,6 +2305,11 @@ export namespace Prisma {
       bookmarks: Prisma.$BookmarkDIYHomesPayload<ExtArgs>[]
       Like: Prisma.$LikeDIYHomesPayload<ExtArgs>[]
       Report: Prisma.$ReportDIYHomesPayload<ExtArgs>[]
+      PlaceUrbanExplorer: Prisma.$PlaceUrbanExplorerPayload<ExtArgs>[]
+      ReviewUrbanExplorer: Prisma.$ReviewUrbanExplorerPayload<ExtArgs>[]
+      LikeUrbanExplorer: Prisma.$LikeUrbanExplorerPayload<ExtArgs>[]
+      BookmarkUrbanExplorer: Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>[]
+      ReportUrbanExplorer: Prisma.$ReportUrbanExplorerPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -2113,6 +2717,11 @@ export namespace Prisma {
     bookmarks<T extends User$bookmarksArgs<ExtArgs> = {}>(args?: Subset<T, User$bookmarksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     Like<T extends User$LikeArgs<ExtArgs> = {}>(args?: Subset<T, User$LikeArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     Report<T extends User$ReportArgs<ExtArgs> = {}>(args?: Subset<T, User$ReportArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    PlaceUrbanExplorer<T extends User$PlaceUrbanExplorerArgs<ExtArgs> = {}>(args?: Subset<T, User$PlaceUrbanExplorerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    ReviewUrbanExplorer<T extends User$ReviewUrbanExplorerArgs<ExtArgs> = {}>(args?: Subset<T, User$ReviewUrbanExplorerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    LikeUrbanExplorer<T extends User$LikeUrbanExplorerArgs<ExtArgs> = {}>(args?: Subset<T, User$LikeUrbanExplorerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    BookmarkUrbanExplorer<T extends User$BookmarkUrbanExplorerArgs<ExtArgs> = {}>(args?: Subset<T, User$BookmarkUrbanExplorerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    ReportUrbanExplorer<T extends User$ReportUrbanExplorerArgs<ExtArgs> = {}>(args?: Subset<T, User$ReportUrbanExplorerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2653,6 +3262,126 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: ReportDIYHomesScalarFieldEnum | ReportDIYHomesScalarFieldEnum[]
+  }
+
+  /**
+   * User.PlaceUrbanExplorer
+   */
+  export type User$PlaceUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    where?: PlaceUrbanExplorerWhereInput
+    orderBy?: PlaceUrbanExplorerOrderByWithRelationInput | PlaceUrbanExplorerOrderByWithRelationInput[]
+    cursor?: PlaceUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: PlaceUrbanExplorerScalarFieldEnum | PlaceUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * User.ReviewUrbanExplorer
+   */
+  export type User$ReviewUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    where?: ReviewUrbanExplorerWhereInput
+    orderBy?: ReviewUrbanExplorerOrderByWithRelationInput | ReviewUrbanExplorerOrderByWithRelationInput[]
+    cursor?: ReviewUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReviewUrbanExplorerScalarFieldEnum | ReviewUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * User.LikeUrbanExplorer
+   */
+  export type User$LikeUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    where?: LikeUrbanExplorerWhereInput
+    orderBy?: LikeUrbanExplorerOrderByWithRelationInput | LikeUrbanExplorerOrderByWithRelationInput[]
+    cursor?: LikeUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LikeUrbanExplorerScalarFieldEnum | LikeUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * User.BookmarkUrbanExplorer
+   */
+  export type User$BookmarkUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    where?: BookmarkUrbanExplorerWhereInput
+    orderBy?: BookmarkUrbanExplorerOrderByWithRelationInput | BookmarkUrbanExplorerOrderByWithRelationInput[]
+    cursor?: BookmarkUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: BookmarkUrbanExplorerScalarFieldEnum | BookmarkUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * User.ReportUrbanExplorer
+   */
+  export type User$ReportUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    where?: ReportUrbanExplorerWhereInput
+    orderBy?: ReportUrbanExplorerOrderByWithRelationInput | ReportUrbanExplorerOrderByWithRelationInput[]
+    cursor?: ReportUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReportUrbanExplorerScalarFieldEnum | ReportUrbanExplorerScalarFieldEnum[]
   }
 
   /**
@@ -8234,6 +8963,5591 @@ export namespace Prisma {
 
 
   /**
+   * Model PlaceUrbanExplorer
+   */
+
+  export type AggregatePlaceUrbanExplorer = {
+    _count: PlaceUrbanExplorerCountAggregateOutputType | null
+    _min: PlaceUrbanExplorerMinAggregateOutputType | null
+    _max: PlaceUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  export type PlaceUrbanExplorerMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    category: string | null
+    location: string | null
+    description: string | null
+    ownerId: string | null
+    createdAt: Date | null
+    validated: boolean | null
+  }
+
+  export type PlaceUrbanExplorerMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    category: string | null
+    location: string | null
+    description: string | null
+    ownerId: string | null
+    createdAt: Date | null
+    validated: boolean | null
+  }
+
+  export type PlaceUrbanExplorerCountAggregateOutputType = {
+    id: number
+    name: number
+    category: number
+    location: number
+    description: number
+    ownerId: number
+    createdAt: number
+    validated: number
+    _all: number
+  }
+
+
+  export type PlaceUrbanExplorerMinAggregateInputType = {
+    id?: true
+    name?: true
+    category?: true
+    location?: true
+    description?: true
+    ownerId?: true
+    createdAt?: true
+    validated?: true
+  }
+
+  export type PlaceUrbanExplorerMaxAggregateInputType = {
+    id?: true
+    name?: true
+    category?: true
+    location?: true
+    description?: true
+    ownerId?: true
+    createdAt?: true
+    validated?: true
+  }
+
+  export type PlaceUrbanExplorerCountAggregateInputType = {
+    id?: true
+    name?: true
+    category?: true
+    location?: true
+    description?: true
+    ownerId?: true
+    createdAt?: true
+    validated?: true
+    _all?: true
+  }
+
+  export type PlaceUrbanExplorerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PlaceUrbanExplorer to aggregate.
+     */
+    where?: PlaceUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlaceUrbanExplorers to fetch.
+     */
+    orderBy?: PlaceUrbanExplorerOrderByWithRelationInput | PlaceUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: PlaceUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlaceUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlaceUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned PlaceUrbanExplorers
+    **/
+    _count?: true | PlaceUrbanExplorerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: PlaceUrbanExplorerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: PlaceUrbanExplorerMaxAggregateInputType
+  }
+
+  export type GetPlaceUrbanExplorerAggregateType<T extends PlaceUrbanExplorerAggregateArgs> = {
+        [P in keyof T & keyof AggregatePlaceUrbanExplorer]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregatePlaceUrbanExplorer[P]>
+      : GetScalarType<T[P], AggregatePlaceUrbanExplorer[P]>
+  }
+
+
+
+
+  export type PlaceUrbanExplorerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PlaceUrbanExplorerWhereInput
+    orderBy?: PlaceUrbanExplorerOrderByWithAggregationInput | PlaceUrbanExplorerOrderByWithAggregationInput[]
+    by: PlaceUrbanExplorerScalarFieldEnum[] | PlaceUrbanExplorerScalarFieldEnum
+    having?: PlaceUrbanExplorerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: PlaceUrbanExplorerCountAggregateInputType | true
+    _min?: PlaceUrbanExplorerMinAggregateInputType
+    _max?: PlaceUrbanExplorerMaxAggregateInputType
+  }
+
+  export type PlaceUrbanExplorerGroupByOutputType = {
+    id: string
+    name: string
+    category: string
+    location: string
+    description: string
+    ownerId: string
+    createdAt: Date
+    validated: boolean
+    _count: PlaceUrbanExplorerCountAggregateOutputType | null
+    _min: PlaceUrbanExplorerMinAggregateOutputType | null
+    _max: PlaceUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  type GetPlaceUrbanExplorerGroupByPayload<T extends PlaceUrbanExplorerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<PlaceUrbanExplorerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof PlaceUrbanExplorerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], PlaceUrbanExplorerGroupByOutputType[P]>
+            : GetScalarType<T[P], PlaceUrbanExplorerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type PlaceUrbanExplorerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    category?: boolean
+    location?: boolean
+    description?: boolean
+    ownerId?: boolean
+    createdAt?: boolean
+    validated?: boolean
+    owner?: boolean | UserDefaultArgs<ExtArgs>
+    reviews?: boolean | PlaceUrbanExplorer$reviewsArgs<ExtArgs>
+    bookmarks?: boolean | PlaceUrbanExplorer$bookmarksArgs<ExtArgs>
+    likes?: boolean | PlaceUrbanExplorer$likesArgs<ExtArgs>
+    reports?: boolean | PlaceUrbanExplorer$reportsArgs<ExtArgs>
+    _count?: boolean | PlaceUrbanExplorerCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["placeUrbanExplorer"]>
+
+  export type PlaceUrbanExplorerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    category?: boolean
+    location?: boolean
+    description?: boolean
+    ownerId?: boolean
+    createdAt?: boolean
+    validated?: boolean
+    owner?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["placeUrbanExplorer"]>
+
+  export type PlaceUrbanExplorerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    category?: boolean
+    location?: boolean
+    description?: boolean
+    ownerId?: boolean
+    createdAt?: boolean
+    validated?: boolean
+    owner?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["placeUrbanExplorer"]>
+
+  export type PlaceUrbanExplorerSelectScalar = {
+    id?: boolean
+    name?: boolean
+    category?: boolean
+    location?: boolean
+    description?: boolean
+    ownerId?: boolean
+    createdAt?: boolean
+    validated?: boolean
+  }
+
+  export type PlaceUrbanExplorerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "category" | "location" | "description" | "ownerId" | "createdAt" | "validated", ExtArgs["result"]["placeUrbanExplorer"]>
+  export type PlaceUrbanExplorerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    owner?: boolean | UserDefaultArgs<ExtArgs>
+    reviews?: boolean | PlaceUrbanExplorer$reviewsArgs<ExtArgs>
+    bookmarks?: boolean | PlaceUrbanExplorer$bookmarksArgs<ExtArgs>
+    likes?: boolean | PlaceUrbanExplorer$likesArgs<ExtArgs>
+    reports?: boolean | PlaceUrbanExplorer$reportsArgs<ExtArgs>
+    _count?: boolean | PlaceUrbanExplorerCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type PlaceUrbanExplorerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    owner?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type PlaceUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    owner?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $PlaceUrbanExplorerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "PlaceUrbanExplorer"
+    objects: {
+      owner: Prisma.$UserPayload<ExtArgs>
+      reviews: Prisma.$ReviewUrbanExplorerPayload<ExtArgs>[]
+      bookmarks: Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>[]
+      likes: Prisma.$LikeUrbanExplorerPayload<ExtArgs>[]
+      reports: Prisma.$ReportUrbanExplorerPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      category: string
+      location: string
+      description: string
+      ownerId: string
+      createdAt: Date
+      validated: boolean
+    }, ExtArgs["result"]["placeUrbanExplorer"]>
+    composites: {}
+  }
+
+  type PlaceUrbanExplorerGetPayload<S extends boolean | null | undefined | PlaceUrbanExplorerDefaultArgs> = $Result.GetResult<Prisma.$PlaceUrbanExplorerPayload, S>
+
+  type PlaceUrbanExplorerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<PlaceUrbanExplorerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: PlaceUrbanExplorerCountAggregateInputType | true
+    }
+
+  export interface PlaceUrbanExplorerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['PlaceUrbanExplorer'], meta: { name: 'PlaceUrbanExplorer' } }
+    /**
+     * Find zero or one PlaceUrbanExplorer that matches the filter.
+     * @param {PlaceUrbanExplorerFindUniqueArgs} args - Arguments to find a PlaceUrbanExplorer
+     * @example
+     * // Get one PlaceUrbanExplorer
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends PlaceUrbanExplorerFindUniqueArgs>(args: SelectSubset<T, PlaceUrbanExplorerFindUniqueArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one PlaceUrbanExplorer that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {PlaceUrbanExplorerFindUniqueOrThrowArgs} args - Arguments to find a PlaceUrbanExplorer
+     * @example
+     * // Get one PlaceUrbanExplorer
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends PlaceUrbanExplorerFindUniqueOrThrowArgs>(args: SelectSubset<T, PlaceUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PlaceUrbanExplorer that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaceUrbanExplorerFindFirstArgs} args - Arguments to find a PlaceUrbanExplorer
+     * @example
+     * // Get one PlaceUrbanExplorer
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends PlaceUrbanExplorerFindFirstArgs>(args?: SelectSubset<T, PlaceUrbanExplorerFindFirstArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PlaceUrbanExplorer that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaceUrbanExplorerFindFirstOrThrowArgs} args - Arguments to find a PlaceUrbanExplorer
+     * @example
+     * // Get one PlaceUrbanExplorer
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends PlaceUrbanExplorerFindFirstOrThrowArgs>(args?: SelectSubset<T, PlaceUrbanExplorerFindFirstOrThrowArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more PlaceUrbanExplorers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaceUrbanExplorerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all PlaceUrbanExplorers
+     * const placeUrbanExplorers = await prisma.placeUrbanExplorer.findMany()
+     * 
+     * // Get first 10 PlaceUrbanExplorers
+     * const placeUrbanExplorers = await prisma.placeUrbanExplorer.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const placeUrbanExplorerWithIdOnly = await prisma.placeUrbanExplorer.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends PlaceUrbanExplorerFindManyArgs>(args?: SelectSubset<T, PlaceUrbanExplorerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a PlaceUrbanExplorer.
+     * @param {PlaceUrbanExplorerCreateArgs} args - Arguments to create a PlaceUrbanExplorer.
+     * @example
+     * // Create one PlaceUrbanExplorer
+     * const PlaceUrbanExplorer = await prisma.placeUrbanExplorer.create({
+     *   data: {
+     *     // ... data to create a PlaceUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    create<T extends PlaceUrbanExplorerCreateArgs>(args: SelectSubset<T, PlaceUrbanExplorerCreateArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many PlaceUrbanExplorers.
+     * @param {PlaceUrbanExplorerCreateManyArgs} args - Arguments to create many PlaceUrbanExplorers.
+     * @example
+     * // Create many PlaceUrbanExplorers
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends PlaceUrbanExplorerCreateManyArgs>(args?: SelectSubset<T, PlaceUrbanExplorerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many PlaceUrbanExplorers and returns the data saved in the database.
+     * @param {PlaceUrbanExplorerCreateManyAndReturnArgs} args - Arguments to create many PlaceUrbanExplorers.
+     * @example
+     * // Create many PlaceUrbanExplorers
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many PlaceUrbanExplorers and only return the `id`
+     * const placeUrbanExplorerWithIdOnly = await prisma.placeUrbanExplorer.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends PlaceUrbanExplorerCreateManyAndReturnArgs>(args?: SelectSubset<T, PlaceUrbanExplorerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a PlaceUrbanExplorer.
+     * @param {PlaceUrbanExplorerDeleteArgs} args - Arguments to delete one PlaceUrbanExplorer.
+     * @example
+     * // Delete one PlaceUrbanExplorer
+     * const PlaceUrbanExplorer = await prisma.placeUrbanExplorer.delete({
+     *   where: {
+     *     // ... filter to delete one PlaceUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    delete<T extends PlaceUrbanExplorerDeleteArgs>(args: SelectSubset<T, PlaceUrbanExplorerDeleteArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one PlaceUrbanExplorer.
+     * @param {PlaceUrbanExplorerUpdateArgs} args - Arguments to update one PlaceUrbanExplorer.
+     * @example
+     * // Update one PlaceUrbanExplorer
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends PlaceUrbanExplorerUpdateArgs>(args: SelectSubset<T, PlaceUrbanExplorerUpdateArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more PlaceUrbanExplorers.
+     * @param {PlaceUrbanExplorerDeleteManyArgs} args - Arguments to filter PlaceUrbanExplorers to delete.
+     * @example
+     * // Delete a few PlaceUrbanExplorers
+     * const { count } = await prisma.placeUrbanExplorer.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends PlaceUrbanExplorerDeleteManyArgs>(args?: SelectSubset<T, PlaceUrbanExplorerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PlaceUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaceUrbanExplorerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many PlaceUrbanExplorers
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends PlaceUrbanExplorerUpdateManyArgs>(args: SelectSubset<T, PlaceUrbanExplorerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PlaceUrbanExplorers and returns the data updated in the database.
+     * @param {PlaceUrbanExplorerUpdateManyAndReturnArgs} args - Arguments to update many PlaceUrbanExplorers.
+     * @example
+     * // Update many PlaceUrbanExplorers
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more PlaceUrbanExplorers and only return the `id`
+     * const placeUrbanExplorerWithIdOnly = await prisma.placeUrbanExplorer.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends PlaceUrbanExplorerUpdateManyAndReturnArgs>(args: SelectSubset<T, PlaceUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one PlaceUrbanExplorer.
+     * @param {PlaceUrbanExplorerUpsertArgs} args - Arguments to update or create a PlaceUrbanExplorer.
+     * @example
+     * // Update or create a PlaceUrbanExplorer
+     * const placeUrbanExplorer = await prisma.placeUrbanExplorer.upsert({
+     *   create: {
+     *     // ... data to create a PlaceUrbanExplorer
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the PlaceUrbanExplorer we want to update
+     *   }
+     * })
+     */
+    upsert<T extends PlaceUrbanExplorerUpsertArgs>(args: SelectSubset<T, PlaceUrbanExplorerUpsertArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of PlaceUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaceUrbanExplorerCountArgs} args - Arguments to filter PlaceUrbanExplorers to count.
+     * @example
+     * // Count the number of PlaceUrbanExplorers
+     * const count = await prisma.placeUrbanExplorer.count({
+     *   where: {
+     *     // ... the filter for the PlaceUrbanExplorers we want to count
+     *   }
+     * })
+    **/
+    count<T extends PlaceUrbanExplorerCountArgs>(
+      args?: Subset<T, PlaceUrbanExplorerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], PlaceUrbanExplorerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a PlaceUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaceUrbanExplorerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends PlaceUrbanExplorerAggregateArgs>(args: Subset<T, PlaceUrbanExplorerAggregateArgs>): Prisma.PrismaPromise<GetPlaceUrbanExplorerAggregateType<T>>
+
+    /**
+     * Group by PlaceUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaceUrbanExplorerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends PlaceUrbanExplorerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: PlaceUrbanExplorerGroupByArgs['orderBy'] }
+        : { orderBy?: PlaceUrbanExplorerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, PlaceUrbanExplorerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPlaceUrbanExplorerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the PlaceUrbanExplorer model
+   */
+  readonly fields: PlaceUrbanExplorerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for PlaceUrbanExplorer.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__PlaceUrbanExplorerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    owner<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    reviews<T extends PlaceUrbanExplorer$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, PlaceUrbanExplorer$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    bookmarks<T extends PlaceUrbanExplorer$bookmarksArgs<ExtArgs> = {}>(args?: Subset<T, PlaceUrbanExplorer$bookmarksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    likes<T extends PlaceUrbanExplorer$likesArgs<ExtArgs> = {}>(args?: Subset<T, PlaceUrbanExplorer$likesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reports<T extends PlaceUrbanExplorer$reportsArgs<ExtArgs> = {}>(args?: Subset<T, PlaceUrbanExplorer$reportsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the PlaceUrbanExplorer model
+   */ 
+  interface PlaceUrbanExplorerFieldRefs {
+    readonly id: FieldRef<"PlaceUrbanExplorer", 'String'>
+    readonly name: FieldRef<"PlaceUrbanExplorer", 'String'>
+    readonly category: FieldRef<"PlaceUrbanExplorer", 'String'>
+    readonly location: FieldRef<"PlaceUrbanExplorer", 'String'>
+    readonly description: FieldRef<"PlaceUrbanExplorer", 'String'>
+    readonly ownerId: FieldRef<"PlaceUrbanExplorer", 'String'>
+    readonly createdAt: FieldRef<"PlaceUrbanExplorer", 'DateTime'>
+    readonly validated: FieldRef<"PlaceUrbanExplorer", 'Boolean'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * PlaceUrbanExplorer findUnique
+   */
+  export type PlaceUrbanExplorerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaceUrbanExplorer to fetch.
+     */
+    where: PlaceUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * PlaceUrbanExplorer findUniqueOrThrow
+   */
+  export type PlaceUrbanExplorerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaceUrbanExplorer to fetch.
+     */
+    where: PlaceUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * PlaceUrbanExplorer findFirst
+   */
+  export type PlaceUrbanExplorerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaceUrbanExplorer to fetch.
+     */
+    where?: PlaceUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlaceUrbanExplorers to fetch.
+     */
+    orderBy?: PlaceUrbanExplorerOrderByWithRelationInput | PlaceUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PlaceUrbanExplorers.
+     */
+    cursor?: PlaceUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlaceUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlaceUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PlaceUrbanExplorers.
+     */
+    distinct?: PlaceUrbanExplorerScalarFieldEnum | PlaceUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * PlaceUrbanExplorer findFirstOrThrow
+   */
+  export type PlaceUrbanExplorerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaceUrbanExplorer to fetch.
+     */
+    where?: PlaceUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlaceUrbanExplorers to fetch.
+     */
+    orderBy?: PlaceUrbanExplorerOrderByWithRelationInput | PlaceUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PlaceUrbanExplorers.
+     */
+    cursor?: PlaceUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlaceUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlaceUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PlaceUrbanExplorers.
+     */
+    distinct?: PlaceUrbanExplorerScalarFieldEnum | PlaceUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * PlaceUrbanExplorer findMany
+   */
+  export type PlaceUrbanExplorerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaceUrbanExplorers to fetch.
+     */
+    where?: PlaceUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlaceUrbanExplorers to fetch.
+     */
+    orderBy?: PlaceUrbanExplorerOrderByWithRelationInput | PlaceUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing PlaceUrbanExplorers.
+     */
+    cursor?: PlaceUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlaceUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlaceUrbanExplorers.
+     */
+    skip?: number
+    distinct?: PlaceUrbanExplorerScalarFieldEnum | PlaceUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * PlaceUrbanExplorer create
+   */
+  export type PlaceUrbanExplorerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a PlaceUrbanExplorer.
+     */
+    data: XOR<PlaceUrbanExplorerCreateInput, PlaceUrbanExplorerUncheckedCreateInput>
+  }
+
+  /**
+   * PlaceUrbanExplorer createMany
+   */
+  export type PlaceUrbanExplorerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many PlaceUrbanExplorers.
+     */
+    data: PlaceUrbanExplorerCreateManyInput | PlaceUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * PlaceUrbanExplorer createManyAndReturn
+   */
+  export type PlaceUrbanExplorerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to create many PlaceUrbanExplorers.
+     */
+    data: PlaceUrbanExplorerCreateManyInput | PlaceUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * PlaceUrbanExplorer update
+   */
+  export type PlaceUrbanExplorerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a PlaceUrbanExplorer.
+     */
+    data: XOR<PlaceUrbanExplorerUpdateInput, PlaceUrbanExplorerUncheckedUpdateInput>
+    /**
+     * Choose, which PlaceUrbanExplorer to update.
+     */
+    where: PlaceUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * PlaceUrbanExplorer updateMany
+   */
+  export type PlaceUrbanExplorerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update PlaceUrbanExplorers.
+     */
+    data: XOR<PlaceUrbanExplorerUpdateManyMutationInput, PlaceUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which PlaceUrbanExplorers to update
+     */
+    where?: PlaceUrbanExplorerWhereInput
+    /**
+     * Limit how many PlaceUrbanExplorers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * PlaceUrbanExplorer updateManyAndReturn
+   */
+  export type PlaceUrbanExplorerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to update PlaceUrbanExplorers.
+     */
+    data: XOR<PlaceUrbanExplorerUpdateManyMutationInput, PlaceUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which PlaceUrbanExplorers to update
+     */
+    where?: PlaceUrbanExplorerWhereInput
+    /**
+     * Limit how many PlaceUrbanExplorers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * PlaceUrbanExplorer upsert
+   */
+  export type PlaceUrbanExplorerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the PlaceUrbanExplorer to update in case it exists.
+     */
+    where: PlaceUrbanExplorerWhereUniqueInput
+    /**
+     * In case the PlaceUrbanExplorer found by the `where` argument doesn't exist, create a new PlaceUrbanExplorer with this data.
+     */
+    create: XOR<PlaceUrbanExplorerCreateInput, PlaceUrbanExplorerUncheckedCreateInput>
+    /**
+     * In case the PlaceUrbanExplorer was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<PlaceUrbanExplorerUpdateInput, PlaceUrbanExplorerUncheckedUpdateInput>
+  }
+
+  /**
+   * PlaceUrbanExplorer delete
+   */
+  export type PlaceUrbanExplorerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter which PlaceUrbanExplorer to delete.
+     */
+    where: PlaceUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * PlaceUrbanExplorer deleteMany
+   */
+  export type PlaceUrbanExplorerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PlaceUrbanExplorers to delete
+     */
+    where?: PlaceUrbanExplorerWhereInput
+    /**
+     * Limit how many PlaceUrbanExplorers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * PlaceUrbanExplorer.reviews
+   */
+  export type PlaceUrbanExplorer$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    where?: ReviewUrbanExplorerWhereInput
+    orderBy?: ReviewUrbanExplorerOrderByWithRelationInput | ReviewUrbanExplorerOrderByWithRelationInput[]
+    cursor?: ReviewUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReviewUrbanExplorerScalarFieldEnum | ReviewUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * PlaceUrbanExplorer.bookmarks
+   */
+  export type PlaceUrbanExplorer$bookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    where?: BookmarkUrbanExplorerWhereInput
+    orderBy?: BookmarkUrbanExplorerOrderByWithRelationInput | BookmarkUrbanExplorerOrderByWithRelationInput[]
+    cursor?: BookmarkUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: BookmarkUrbanExplorerScalarFieldEnum | BookmarkUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * PlaceUrbanExplorer.likes
+   */
+  export type PlaceUrbanExplorer$likesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    where?: LikeUrbanExplorerWhereInput
+    orderBy?: LikeUrbanExplorerOrderByWithRelationInput | LikeUrbanExplorerOrderByWithRelationInput[]
+    cursor?: LikeUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LikeUrbanExplorerScalarFieldEnum | LikeUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * PlaceUrbanExplorer.reports
+   */
+  export type PlaceUrbanExplorer$reportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    where?: ReportUrbanExplorerWhereInput
+    orderBy?: ReportUrbanExplorerOrderByWithRelationInput | ReportUrbanExplorerOrderByWithRelationInput[]
+    cursor?: ReportUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReportUrbanExplorerScalarFieldEnum | ReportUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * PlaceUrbanExplorer without action
+   */
+  export type PlaceUrbanExplorerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ReviewUrbanExplorer
+   */
+
+  export type AggregateReviewUrbanExplorer = {
+    _count: ReviewUrbanExplorerCountAggregateOutputType | null
+    _avg: ReviewUrbanExplorerAvgAggregateOutputType | null
+    _sum: ReviewUrbanExplorerSumAggregateOutputType | null
+    _min: ReviewUrbanExplorerMinAggregateOutputType | null
+    _max: ReviewUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  export type ReviewUrbanExplorerAvgAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type ReviewUrbanExplorerSumAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type ReviewUrbanExplorerMinAggregateOutputType = {
+    id: string | null
+    placeId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    createdAt: Date | null
+  }
+
+  export type ReviewUrbanExplorerMaxAggregateOutputType = {
+    id: string | null
+    placeId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    createdAt: Date | null
+  }
+
+  export type ReviewUrbanExplorerCountAggregateOutputType = {
+    id: number
+    placeId: number
+    userId: number
+    rating: number
+    comment: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ReviewUrbanExplorerAvgAggregateInputType = {
+    rating?: true
+  }
+
+  export type ReviewUrbanExplorerSumAggregateInputType = {
+    rating?: true
+  }
+
+  export type ReviewUrbanExplorerMinAggregateInputType = {
+    id?: true
+    placeId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    createdAt?: true
+  }
+
+  export type ReviewUrbanExplorerMaxAggregateInputType = {
+    id?: true
+    placeId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    createdAt?: true
+  }
+
+  export type ReviewUrbanExplorerCountAggregateInputType = {
+    id?: true
+    placeId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ReviewUrbanExplorerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReviewUrbanExplorer to aggregate.
+     */
+    where?: ReviewUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewUrbanExplorers to fetch.
+     */
+    orderBy?: ReviewUrbanExplorerOrderByWithRelationInput | ReviewUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ReviewUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ReviewUrbanExplorers
+    **/
+    _count?: true | ReviewUrbanExplorerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ReviewUrbanExplorerAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ReviewUrbanExplorerSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ReviewUrbanExplorerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ReviewUrbanExplorerMaxAggregateInputType
+  }
+
+  export type GetReviewUrbanExplorerAggregateType<T extends ReviewUrbanExplorerAggregateArgs> = {
+        [P in keyof T & keyof AggregateReviewUrbanExplorer]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateReviewUrbanExplorer[P]>
+      : GetScalarType<T[P], AggregateReviewUrbanExplorer[P]>
+  }
+
+
+
+
+  export type ReviewUrbanExplorerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewUrbanExplorerWhereInput
+    orderBy?: ReviewUrbanExplorerOrderByWithAggregationInput | ReviewUrbanExplorerOrderByWithAggregationInput[]
+    by: ReviewUrbanExplorerScalarFieldEnum[] | ReviewUrbanExplorerScalarFieldEnum
+    having?: ReviewUrbanExplorerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ReviewUrbanExplorerCountAggregateInputType | true
+    _avg?: ReviewUrbanExplorerAvgAggregateInputType
+    _sum?: ReviewUrbanExplorerSumAggregateInputType
+    _min?: ReviewUrbanExplorerMinAggregateInputType
+    _max?: ReviewUrbanExplorerMaxAggregateInputType
+  }
+
+  export type ReviewUrbanExplorerGroupByOutputType = {
+    id: string
+    placeId: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt: Date
+    _count: ReviewUrbanExplorerCountAggregateOutputType | null
+    _avg: ReviewUrbanExplorerAvgAggregateOutputType | null
+    _sum: ReviewUrbanExplorerSumAggregateOutputType | null
+    _min: ReviewUrbanExplorerMinAggregateOutputType | null
+    _max: ReviewUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  type GetReviewUrbanExplorerGroupByPayload<T extends ReviewUrbanExplorerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ReviewUrbanExplorerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ReviewUrbanExplorerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ReviewUrbanExplorerGroupByOutputType[P]>
+            : GetScalarType<T[P], ReviewUrbanExplorerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ReviewUrbanExplorerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+    reports?: boolean | ReviewUrbanExplorer$reportsArgs<ExtArgs>
+    _count?: boolean | ReviewUrbanExplorerCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewUrbanExplorer"]>
+
+  export type ReviewUrbanExplorerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewUrbanExplorer"]>
+
+  export type ReviewUrbanExplorerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewUrbanExplorer"]>
+
+  export type ReviewUrbanExplorerSelectScalar = {
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    createdAt?: boolean
+  }
+
+  export type ReviewUrbanExplorerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "placeId" | "userId" | "rating" | "comment" | "createdAt", ExtArgs["result"]["reviewUrbanExplorer"]>
+  export type ReviewUrbanExplorerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+    reports?: boolean | ReviewUrbanExplorer$reportsArgs<ExtArgs>
+    _count?: boolean | ReviewUrbanExplorerCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ReviewUrbanExplorerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }
+  export type ReviewUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }
+
+  export type $ReviewUrbanExplorerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ReviewUrbanExplorer"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      place: Prisma.$PlaceUrbanExplorerPayload<ExtArgs>
+      reports: Prisma.$ReportUrbanExplorerPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      placeId: string
+      userId: string
+      rating: number
+      comment: string
+      createdAt: Date
+    }, ExtArgs["result"]["reviewUrbanExplorer"]>
+    composites: {}
+  }
+
+  type ReviewUrbanExplorerGetPayload<S extends boolean | null | undefined | ReviewUrbanExplorerDefaultArgs> = $Result.GetResult<Prisma.$ReviewUrbanExplorerPayload, S>
+
+  type ReviewUrbanExplorerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ReviewUrbanExplorerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ReviewUrbanExplorerCountAggregateInputType | true
+    }
+
+  export interface ReviewUrbanExplorerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ReviewUrbanExplorer'], meta: { name: 'ReviewUrbanExplorer' } }
+    /**
+     * Find zero or one ReviewUrbanExplorer that matches the filter.
+     * @param {ReviewUrbanExplorerFindUniqueArgs} args - Arguments to find a ReviewUrbanExplorer
+     * @example
+     * // Get one ReviewUrbanExplorer
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ReviewUrbanExplorerFindUniqueArgs>(args: SelectSubset<T, ReviewUrbanExplorerFindUniqueArgs<ExtArgs>>): Prisma__ReviewUrbanExplorerClient<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ReviewUrbanExplorer that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ReviewUrbanExplorerFindUniqueOrThrowArgs} args - Arguments to find a ReviewUrbanExplorer
+     * @example
+     * // Get one ReviewUrbanExplorer
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ReviewUrbanExplorerFindUniqueOrThrowArgs>(args: SelectSubset<T, ReviewUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReviewUrbanExplorerClient<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReviewUrbanExplorer that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewUrbanExplorerFindFirstArgs} args - Arguments to find a ReviewUrbanExplorer
+     * @example
+     * // Get one ReviewUrbanExplorer
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ReviewUrbanExplorerFindFirstArgs>(args?: SelectSubset<T, ReviewUrbanExplorerFindFirstArgs<ExtArgs>>): Prisma__ReviewUrbanExplorerClient<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReviewUrbanExplorer that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewUrbanExplorerFindFirstOrThrowArgs} args - Arguments to find a ReviewUrbanExplorer
+     * @example
+     * // Get one ReviewUrbanExplorer
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ReviewUrbanExplorerFindFirstOrThrowArgs>(args?: SelectSubset<T, ReviewUrbanExplorerFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReviewUrbanExplorerClient<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ReviewUrbanExplorers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewUrbanExplorerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ReviewUrbanExplorers
+     * const reviewUrbanExplorers = await prisma.reviewUrbanExplorer.findMany()
+     * 
+     * // Get first 10 ReviewUrbanExplorers
+     * const reviewUrbanExplorers = await prisma.reviewUrbanExplorer.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const reviewUrbanExplorerWithIdOnly = await prisma.reviewUrbanExplorer.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ReviewUrbanExplorerFindManyArgs>(args?: SelectSubset<T, ReviewUrbanExplorerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ReviewUrbanExplorer.
+     * @param {ReviewUrbanExplorerCreateArgs} args - Arguments to create a ReviewUrbanExplorer.
+     * @example
+     * // Create one ReviewUrbanExplorer
+     * const ReviewUrbanExplorer = await prisma.reviewUrbanExplorer.create({
+     *   data: {
+     *     // ... data to create a ReviewUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    create<T extends ReviewUrbanExplorerCreateArgs>(args: SelectSubset<T, ReviewUrbanExplorerCreateArgs<ExtArgs>>): Prisma__ReviewUrbanExplorerClient<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ReviewUrbanExplorers.
+     * @param {ReviewUrbanExplorerCreateManyArgs} args - Arguments to create many ReviewUrbanExplorers.
+     * @example
+     * // Create many ReviewUrbanExplorers
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ReviewUrbanExplorerCreateManyArgs>(args?: SelectSubset<T, ReviewUrbanExplorerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ReviewUrbanExplorers and returns the data saved in the database.
+     * @param {ReviewUrbanExplorerCreateManyAndReturnArgs} args - Arguments to create many ReviewUrbanExplorers.
+     * @example
+     * // Create many ReviewUrbanExplorers
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ReviewUrbanExplorers and only return the `id`
+     * const reviewUrbanExplorerWithIdOnly = await prisma.reviewUrbanExplorer.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ReviewUrbanExplorerCreateManyAndReturnArgs>(args?: SelectSubset<T, ReviewUrbanExplorerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ReviewUrbanExplorer.
+     * @param {ReviewUrbanExplorerDeleteArgs} args - Arguments to delete one ReviewUrbanExplorer.
+     * @example
+     * // Delete one ReviewUrbanExplorer
+     * const ReviewUrbanExplorer = await prisma.reviewUrbanExplorer.delete({
+     *   where: {
+     *     // ... filter to delete one ReviewUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ReviewUrbanExplorerDeleteArgs>(args: SelectSubset<T, ReviewUrbanExplorerDeleteArgs<ExtArgs>>): Prisma__ReviewUrbanExplorerClient<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ReviewUrbanExplorer.
+     * @param {ReviewUrbanExplorerUpdateArgs} args - Arguments to update one ReviewUrbanExplorer.
+     * @example
+     * // Update one ReviewUrbanExplorer
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ReviewUrbanExplorerUpdateArgs>(args: SelectSubset<T, ReviewUrbanExplorerUpdateArgs<ExtArgs>>): Prisma__ReviewUrbanExplorerClient<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ReviewUrbanExplorers.
+     * @param {ReviewUrbanExplorerDeleteManyArgs} args - Arguments to filter ReviewUrbanExplorers to delete.
+     * @example
+     * // Delete a few ReviewUrbanExplorers
+     * const { count } = await prisma.reviewUrbanExplorer.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ReviewUrbanExplorerDeleteManyArgs>(args?: SelectSubset<T, ReviewUrbanExplorerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReviewUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewUrbanExplorerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ReviewUrbanExplorers
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ReviewUrbanExplorerUpdateManyArgs>(args: SelectSubset<T, ReviewUrbanExplorerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReviewUrbanExplorers and returns the data updated in the database.
+     * @param {ReviewUrbanExplorerUpdateManyAndReturnArgs} args - Arguments to update many ReviewUrbanExplorers.
+     * @example
+     * // Update many ReviewUrbanExplorers
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ReviewUrbanExplorers and only return the `id`
+     * const reviewUrbanExplorerWithIdOnly = await prisma.reviewUrbanExplorer.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ReviewUrbanExplorerUpdateManyAndReturnArgs>(args: SelectSubset<T, ReviewUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ReviewUrbanExplorer.
+     * @param {ReviewUrbanExplorerUpsertArgs} args - Arguments to update or create a ReviewUrbanExplorer.
+     * @example
+     * // Update or create a ReviewUrbanExplorer
+     * const reviewUrbanExplorer = await prisma.reviewUrbanExplorer.upsert({
+     *   create: {
+     *     // ... data to create a ReviewUrbanExplorer
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ReviewUrbanExplorer we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ReviewUrbanExplorerUpsertArgs>(args: SelectSubset<T, ReviewUrbanExplorerUpsertArgs<ExtArgs>>): Prisma__ReviewUrbanExplorerClient<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ReviewUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewUrbanExplorerCountArgs} args - Arguments to filter ReviewUrbanExplorers to count.
+     * @example
+     * // Count the number of ReviewUrbanExplorers
+     * const count = await prisma.reviewUrbanExplorer.count({
+     *   where: {
+     *     // ... the filter for the ReviewUrbanExplorers we want to count
+     *   }
+     * })
+    **/
+    count<T extends ReviewUrbanExplorerCountArgs>(
+      args?: Subset<T, ReviewUrbanExplorerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ReviewUrbanExplorerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ReviewUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewUrbanExplorerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ReviewUrbanExplorerAggregateArgs>(args: Subset<T, ReviewUrbanExplorerAggregateArgs>): Prisma.PrismaPromise<GetReviewUrbanExplorerAggregateType<T>>
+
+    /**
+     * Group by ReviewUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewUrbanExplorerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ReviewUrbanExplorerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ReviewUrbanExplorerGroupByArgs['orderBy'] }
+        : { orderBy?: ReviewUrbanExplorerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ReviewUrbanExplorerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReviewUrbanExplorerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ReviewUrbanExplorer model
+   */
+  readonly fields: ReviewUrbanExplorerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ReviewUrbanExplorer.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ReviewUrbanExplorerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    place<T extends PlaceUrbanExplorerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PlaceUrbanExplorerDefaultArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    reports<T extends ReviewUrbanExplorer$reportsArgs<ExtArgs> = {}>(args?: Subset<T, ReviewUrbanExplorer$reportsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ReviewUrbanExplorer model
+   */ 
+  interface ReviewUrbanExplorerFieldRefs {
+    readonly id: FieldRef<"ReviewUrbanExplorer", 'String'>
+    readonly placeId: FieldRef<"ReviewUrbanExplorer", 'String'>
+    readonly userId: FieldRef<"ReviewUrbanExplorer", 'String'>
+    readonly rating: FieldRef<"ReviewUrbanExplorer", 'Int'>
+    readonly comment: FieldRef<"ReviewUrbanExplorer", 'String'>
+    readonly createdAt: FieldRef<"ReviewUrbanExplorer", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ReviewUrbanExplorer findUnique
+   */
+  export type ReviewUrbanExplorerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewUrbanExplorer to fetch.
+     */
+    where: ReviewUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * ReviewUrbanExplorer findUniqueOrThrow
+   */
+  export type ReviewUrbanExplorerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewUrbanExplorer to fetch.
+     */
+    where: ReviewUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * ReviewUrbanExplorer findFirst
+   */
+  export type ReviewUrbanExplorerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewUrbanExplorer to fetch.
+     */
+    where?: ReviewUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewUrbanExplorers to fetch.
+     */
+    orderBy?: ReviewUrbanExplorerOrderByWithRelationInput | ReviewUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReviewUrbanExplorers.
+     */
+    cursor?: ReviewUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReviewUrbanExplorers.
+     */
+    distinct?: ReviewUrbanExplorerScalarFieldEnum | ReviewUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewUrbanExplorer findFirstOrThrow
+   */
+  export type ReviewUrbanExplorerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewUrbanExplorer to fetch.
+     */
+    where?: ReviewUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewUrbanExplorers to fetch.
+     */
+    orderBy?: ReviewUrbanExplorerOrderByWithRelationInput | ReviewUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReviewUrbanExplorers.
+     */
+    cursor?: ReviewUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReviewUrbanExplorers.
+     */
+    distinct?: ReviewUrbanExplorerScalarFieldEnum | ReviewUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewUrbanExplorer findMany
+   */
+  export type ReviewUrbanExplorerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewUrbanExplorers to fetch.
+     */
+    where?: ReviewUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewUrbanExplorers to fetch.
+     */
+    orderBy?: ReviewUrbanExplorerOrderByWithRelationInput | ReviewUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ReviewUrbanExplorers.
+     */
+    cursor?: ReviewUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewUrbanExplorers.
+     */
+    skip?: number
+    distinct?: ReviewUrbanExplorerScalarFieldEnum | ReviewUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewUrbanExplorer create
+   */
+  export type ReviewUrbanExplorerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ReviewUrbanExplorer.
+     */
+    data: XOR<ReviewUrbanExplorerCreateInput, ReviewUrbanExplorerUncheckedCreateInput>
+  }
+
+  /**
+   * ReviewUrbanExplorer createMany
+   */
+  export type ReviewUrbanExplorerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ReviewUrbanExplorers.
+     */
+    data: ReviewUrbanExplorerCreateManyInput | ReviewUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ReviewUrbanExplorer createManyAndReturn
+   */
+  export type ReviewUrbanExplorerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to create many ReviewUrbanExplorers.
+     */
+    data: ReviewUrbanExplorerCreateManyInput | ReviewUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReviewUrbanExplorer update
+   */
+  export type ReviewUrbanExplorerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ReviewUrbanExplorer.
+     */
+    data: XOR<ReviewUrbanExplorerUpdateInput, ReviewUrbanExplorerUncheckedUpdateInput>
+    /**
+     * Choose, which ReviewUrbanExplorer to update.
+     */
+    where: ReviewUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * ReviewUrbanExplorer updateMany
+   */
+  export type ReviewUrbanExplorerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ReviewUrbanExplorers.
+     */
+    data: XOR<ReviewUrbanExplorerUpdateManyMutationInput, ReviewUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which ReviewUrbanExplorers to update
+     */
+    where?: ReviewUrbanExplorerWhereInput
+    /**
+     * Limit how many ReviewUrbanExplorers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReviewUrbanExplorer updateManyAndReturn
+   */
+  export type ReviewUrbanExplorerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to update ReviewUrbanExplorers.
+     */
+    data: XOR<ReviewUrbanExplorerUpdateManyMutationInput, ReviewUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which ReviewUrbanExplorers to update
+     */
+    where?: ReviewUrbanExplorerWhereInput
+    /**
+     * Limit how many ReviewUrbanExplorers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReviewUrbanExplorer upsert
+   */
+  export type ReviewUrbanExplorerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ReviewUrbanExplorer to update in case it exists.
+     */
+    where: ReviewUrbanExplorerWhereUniqueInput
+    /**
+     * In case the ReviewUrbanExplorer found by the `where` argument doesn't exist, create a new ReviewUrbanExplorer with this data.
+     */
+    create: XOR<ReviewUrbanExplorerCreateInput, ReviewUrbanExplorerUncheckedCreateInput>
+    /**
+     * In case the ReviewUrbanExplorer was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ReviewUrbanExplorerUpdateInput, ReviewUrbanExplorerUncheckedUpdateInput>
+  }
+
+  /**
+   * ReviewUrbanExplorer delete
+   */
+  export type ReviewUrbanExplorerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter which ReviewUrbanExplorer to delete.
+     */
+    where: ReviewUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * ReviewUrbanExplorer deleteMany
+   */
+  export type ReviewUrbanExplorerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReviewUrbanExplorers to delete
+     */
+    where?: ReviewUrbanExplorerWhereInput
+    /**
+     * Limit how many ReviewUrbanExplorers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReviewUrbanExplorer.reports
+   */
+  export type ReviewUrbanExplorer$reportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    where?: ReportUrbanExplorerWhereInput
+    orderBy?: ReportUrbanExplorerOrderByWithRelationInput | ReportUrbanExplorerOrderByWithRelationInput[]
+    cursor?: ReportUrbanExplorerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReportUrbanExplorerScalarFieldEnum | ReportUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewUrbanExplorer without action
+   */
+  export type ReviewUrbanExplorerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model LikeUrbanExplorer
+   */
+
+  export type AggregateLikeUrbanExplorer = {
+    _count: LikeUrbanExplorerCountAggregateOutputType | null
+    _min: LikeUrbanExplorerMinAggregateOutputType | null
+    _max: LikeUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  export type LikeUrbanExplorerMinAggregateOutputType = {
+    id: string | null
+    placeId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type LikeUrbanExplorerMaxAggregateOutputType = {
+    id: string | null
+    placeId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type LikeUrbanExplorerCountAggregateOutputType = {
+    id: number
+    placeId: number
+    userId: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type LikeUrbanExplorerMinAggregateInputType = {
+    id?: true
+    placeId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type LikeUrbanExplorerMaxAggregateInputType = {
+    id?: true
+    placeId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type LikeUrbanExplorerCountAggregateInputType = {
+    id?: true
+    placeId?: true
+    userId?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type LikeUrbanExplorerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LikeUrbanExplorer to aggregate.
+     */
+    where?: LikeUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LikeUrbanExplorers to fetch.
+     */
+    orderBy?: LikeUrbanExplorerOrderByWithRelationInput | LikeUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: LikeUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LikeUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LikeUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned LikeUrbanExplorers
+    **/
+    _count?: true | LikeUrbanExplorerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: LikeUrbanExplorerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: LikeUrbanExplorerMaxAggregateInputType
+  }
+
+  export type GetLikeUrbanExplorerAggregateType<T extends LikeUrbanExplorerAggregateArgs> = {
+        [P in keyof T & keyof AggregateLikeUrbanExplorer]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateLikeUrbanExplorer[P]>
+      : GetScalarType<T[P], AggregateLikeUrbanExplorer[P]>
+  }
+
+
+
+
+  export type LikeUrbanExplorerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LikeUrbanExplorerWhereInput
+    orderBy?: LikeUrbanExplorerOrderByWithAggregationInput | LikeUrbanExplorerOrderByWithAggregationInput[]
+    by: LikeUrbanExplorerScalarFieldEnum[] | LikeUrbanExplorerScalarFieldEnum
+    having?: LikeUrbanExplorerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: LikeUrbanExplorerCountAggregateInputType | true
+    _min?: LikeUrbanExplorerMinAggregateInputType
+    _max?: LikeUrbanExplorerMaxAggregateInputType
+  }
+
+  export type LikeUrbanExplorerGroupByOutputType = {
+    id: string
+    placeId: string
+    userId: string
+    createdAt: Date
+    _count: LikeUrbanExplorerCountAggregateOutputType | null
+    _min: LikeUrbanExplorerMinAggregateOutputType | null
+    _max: LikeUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  type GetLikeUrbanExplorerGroupByPayload<T extends LikeUrbanExplorerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<LikeUrbanExplorerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof LikeUrbanExplorerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], LikeUrbanExplorerGroupByOutputType[P]>
+            : GetScalarType<T[P], LikeUrbanExplorerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type LikeUrbanExplorerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["likeUrbanExplorer"]>
+
+  export type LikeUrbanExplorerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["likeUrbanExplorer"]>
+
+  export type LikeUrbanExplorerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["likeUrbanExplorer"]>
+
+  export type LikeUrbanExplorerSelectScalar = {
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+  }
+
+  export type LikeUrbanExplorerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "placeId" | "userId" | "createdAt", ExtArgs["result"]["likeUrbanExplorer"]>
+  export type LikeUrbanExplorerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }
+  export type LikeUrbanExplorerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }
+  export type LikeUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }
+
+  export type $LikeUrbanExplorerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "LikeUrbanExplorer"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      place: Prisma.$PlaceUrbanExplorerPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      placeId: string
+      userId: string
+      createdAt: Date
+    }, ExtArgs["result"]["likeUrbanExplorer"]>
+    composites: {}
+  }
+
+  type LikeUrbanExplorerGetPayload<S extends boolean | null | undefined | LikeUrbanExplorerDefaultArgs> = $Result.GetResult<Prisma.$LikeUrbanExplorerPayload, S>
+
+  type LikeUrbanExplorerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LikeUrbanExplorerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LikeUrbanExplorerCountAggregateInputType | true
+    }
+
+  export interface LikeUrbanExplorerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['LikeUrbanExplorer'], meta: { name: 'LikeUrbanExplorer' } }
+    /**
+     * Find zero or one LikeUrbanExplorer that matches the filter.
+     * @param {LikeUrbanExplorerFindUniqueArgs} args - Arguments to find a LikeUrbanExplorer
+     * @example
+     * // Get one LikeUrbanExplorer
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends LikeUrbanExplorerFindUniqueArgs>(args: SelectSubset<T, LikeUrbanExplorerFindUniqueArgs<ExtArgs>>): Prisma__LikeUrbanExplorerClient<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one LikeUrbanExplorer that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {LikeUrbanExplorerFindUniqueOrThrowArgs} args - Arguments to find a LikeUrbanExplorer
+     * @example
+     * // Get one LikeUrbanExplorer
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends LikeUrbanExplorerFindUniqueOrThrowArgs>(args: SelectSubset<T, LikeUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LikeUrbanExplorerClient<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LikeUrbanExplorer that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeUrbanExplorerFindFirstArgs} args - Arguments to find a LikeUrbanExplorer
+     * @example
+     * // Get one LikeUrbanExplorer
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends LikeUrbanExplorerFindFirstArgs>(args?: SelectSubset<T, LikeUrbanExplorerFindFirstArgs<ExtArgs>>): Prisma__LikeUrbanExplorerClient<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LikeUrbanExplorer that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeUrbanExplorerFindFirstOrThrowArgs} args - Arguments to find a LikeUrbanExplorer
+     * @example
+     * // Get one LikeUrbanExplorer
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends LikeUrbanExplorerFindFirstOrThrowArgs>(args?: SelectSubset<T, LikeUrbanExplorerFindFirstOrThrowArgs<ExtArgs>>): Prisma__LikeUrbanExplorerClient<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more LikeUrbanExplorers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeUrbanExplorerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all LikeUrbanExplorers
+     * const likeUrbanExplorers = await prisma.likeUrbanExplorer.findMany()
+     * 
+     * // Get first 10 LikeUrbanExplorers
+     * const likeUrbanExplorers = await prisma.likeUrbanExplorer.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const likeUrbanExplorerWithIdOnly = await prisma.likeUrbanExplorer.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends LikeUrbanExplorerFindManyArgs>(args?: SelectSubset<T, LikeUrbanExplorerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a LikeUrbanExplorer.
+     * @param {LikeUrbanExplorerCreateArgs} args - Arguments to create a LikeUrbanExplorer.
+     * @example
+     * // Create one LikeUrbanExplorer
+     * const LikeUrbanExplorer = await prisma.likeUrbanExplorer.create({
+     *   data: {
+     *     // ... data to create a LikeUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    create<T extends LikeUrbanExplorerCreateArgs>(args: SelectSubset<T, LikeUrbanExplorerCreateArgs<ExtArgs>>): Prisma__LikeUrbanExplorerClient<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many LikeUrbanExplorers.
+     * @param {LikeUrbanExplorerCreateManyArgs} args - Arguments to create many LikeUrbanExplorers.
+     * @example
+     * // Create many LikeUrbanExplorers
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends LikeUrbanExplorerCreateManyArgs>(args?: SelectSubset<T, LikeUrbanExplorerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many LikeUrbanExplorers and returns the data saved in the database.
+     * @param {LikeUrbanExplorerCreateManyAndReturnArgs} args - Arguments to create many LikeUrbanExplorers.
+     * @example
+     * // Create many LikeUrbanExplorers
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many LikeUrbanExplorers and only return the `id`
+     * const likeUrbanExplorerWithIdOnly = await prisma.likeUrbanExplorer.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends LikeUrbanExplorerCreateManyAndReturnArgs>(args?: SelectSubset<T, LikeUrbanExplorerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a LikeUrbanExplorer.
+     * @param {LikeUrbanExplorerDeleteArgs} args - Arguments to delete one LikeUrbanExplorer.
+     * @example
+     * // Delete one LikeUrbanExplorer
+     * const LikeUrbanExplorer = await prisma.likeUrbanExplorer.delete({
+     *   where: {
+     *     // ... filter to delete one LikeUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    delete<T extends LikeUrbanExplorerDeleteArgs>(args: SelectSubset<T, LikeUrbanExplorerDeleteArgs<ExtArgs>>): Prisma__LikeUrbanExplorerClient<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one LikeUrbanExplorer.
+     * @param {LikeUrbanExplorerUpdateArgs} args - Arguments to update one LikeUrbanExplorer.
+     * @example
+     * // Update one LikeUrbanExplorer
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends LikeUrbanExplorerUpdateArgs>(args: SelectSubset<T, LikeUrbanExplorerUpdateArgs<ExtArgs>>): Prisma__LikeUrbanExplorerClient<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more LikeUrbanExplorers.
+     * @param {LikeUrbanExplorerDeleteManyArgs} args - Arguments to filter LikeUrbanExplorers to delete.
+     * @example
+     * // Delete a few LikeUrbanExplorers
+     * const { count } = await prisma.likeUrbanExplorer.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends LikeUrbanExplorerDeleteManyArgs>(args?: SelectSubset<T, LikeUrbanExplorerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LikeUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeUrbanExplorerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many LikeUrbanExplorers
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends LikeUrbanExplorerUpdateManyArgs>(args: SelectSubset<T, LikeUrbanExplorerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LikeUrbanExplorers and returns the data updated in the database.
+     * @param {LikeUrbanExplorerUpdateManyAndReturnArgs} args - Arguments to update many LikeUrbanExplorers.
+     * @example
+     * // Update many LikeUrbanExplorers
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more LikeUrbanExplorers and only return the `id`
+     * const likeUrbanExplorerWithIdOnly = await prisma.likeUrbanExplorer.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends LikeUrbanExplorerUpdateManyAndReturnArgs>(args: SelectSubset<T, LikeUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one LikeUrbanExplorer.
+     * @param {LikeUrbanExplorerUpsertArgs} args - Arguments to update or create a LikeUrbanExplorer.
+     * @example
+     * // Update or create a LikeUrbanExplorer
+     * const likeUrbanExplorer = await prisma.likeUrbanExplorer.upsert({
+     *   create: {
+     *     // ... data to create a LikeUrbanExplorer
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the LikeUrbanExplorer we want to update
+     *   }
+     * })
+     */
+    upsert<T extends LikeUrbanExplorerUpsertArgs>(args: SelectSubset<T, LikeUrbanExplorerUpsertArgs<ExtArgs>>): Prisma__LikeUrbanExplorerClient<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of LikeUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeUrbanExplorerCountArgs} args - Arguments to filter LikeUrbanExplorers to count.
+     * @example
+     * // Count the number of LikeUrbanExplorers
+     * const count = await prisma.likeUrbanExplorer.count({
+     *   where: {
+     *     // ... the filter for the LikeUrbanExplorers we want to count
+     *   }
+     * })
+    **/
+    count<T extends LikeUrbanExplorerCountArgs>(
+      args?: Subset<T, LikeUrbanExplorerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], LikeUrbanExplorerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a LikeUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeUrbanExplorerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends LikeUrbanExplorerAggregateArgs>(args: Subset<T, LikeUrbanExplorerAggregateArgs>): Prisma.PrismaPromise<GetLikeUrbanExplorerAggregateType<T>>
+
+    /**
+     * Group by LikeUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeUrbanExplorerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends LikeUrbanExplorerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: LikeUrbanExplorerGroupByArgs['orderBy'] }
+        : { orderBy?: LikeUrbanExplorerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, LikeUrbanExplorerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLikeUrbanExplorerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the LikeUrbanExplorer model
+   */
+  readonly fields: LikeUrbanExplorerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for LikeUrbanExplorer.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__LikeUrbanExplorerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    place<T extends PlaceUrbanExplorerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PlaceUrbanExplorerDefaultArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the LikeUrbanExplorer model
+   */ 
+  interface LikeUrbanExplorerFieldRefs {
+    readonly id: FieldRef<"LikeUrbanExplorer", 'String'>
+    readonly placeId: FieldRef<"LikeUrbanExplorer", 'String'>
+    readonly userId: FieldRef<"LikeUrbanExplorer", 'String'>
+    readonly createdAt: FieldRef<"LikeUrbanExplorer", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * LikeUrbanExplorer findUnique
+   */
+  export type LikeUrbanExplorerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeUrbanExplorer to fetch.
+     */
+    where: LikeUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * LikeUrbanExplorer findUniqueOrThrow
+   */
+  export type LikeUrbanExplorerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeUrbanExplorer to fetch.
+     */
+    where: LikeUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * LikeUrbanExplorer findFirst
+   */
+  export type LikeUrbanExplorerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeUrbanExplorer to fetch.
+     */
+    where?: LikeUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LikeUrbanExplorers to fetch.
+     */
+    orderBy?: LikeUrbanExplorerOrderByWithRelationInput | LikeUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LikeUrbanExplorers.
+     */
+    cursor?: LikeUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LikeUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LikeUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LikeUrbanExplorers.
+     */
+    distinct?: LikeUrbanExplorerScalarFieldEnum | LikeUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * LikeUrbanExplorer findFirstOrThrow
+   */
+  export type LikeUrbanExplorerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeUrbanExplorer to fetch.
+     */
+    where?: LikeUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LikeUrbanExplorers to fetch.
+     */
+    orderBy?: LikeUrbanExplorerOrderByWithRelationInput | LikeUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LikeUrbanExplorers.
+     */
+    cursor?: LikeUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LikeUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LikeUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LikeUrbanExplorers.
+     */
+    distinct?: LikeUrbanExplorerScalarFieldEnum | LikeUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * LikeUrbanExplorer findMany
+   */
+  export type LikeUrbanExplorerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeUrbanExplorers to fetch.
+     */
+    where?: LikeUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LikeUrbanExplorers to fetch.
+     */
+    orderBy?: LikeUrbanExplorerOrderByWithRelationInput | LikeUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing LikeUrbanExplorers.
+     */
+    cursor?: LikeUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LikeUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LikeUrbanExplorers.
+     */
+    skip?: number
+    distinct?: LikeUrbanExplorerScalarFieldEnum | LikeUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * LikeUrbanExplorer create
+   */
+  export type LikeUrbanExplorerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a LikeUrbanExplorer.
+     */
+    data: XOR<LikeUrbanExplorerCreateInput, LikeUrbanExplorerUncheckedCreateInput>
+  }
+
+  /**
+   * LikeUrbanExplorer createMany
+   */
+  export type LikeUrbanExplorerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many LikeUrbanExplorers.
+     */
+    data: LikeUrbanExplorerCreateManyInput | LikeUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * LikeUrbanExplorer createManyAndReturn
+   */
+  export type LikeUrbanExplorerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to create many LikeUrbanExplorers.
+     */
+    data: LikeUrbanExplorerCreateManyInput | LikeUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LikeUrbanExplorer update
+   */
+  export type LikeUrbanExplorerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a LikeUrbanExplorer.
+     */
+    data: XOR<LikeUrbanExplorerUpdateInput, LikeUrbanExplorerUncheckedUpdateInput>
+    /**
+     * Choose, which LikeUrbanExplorer to update.
+     */
+    where: LikeUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * LikeUrbanExplorer updateMany
+   */
+  export type LikeUrbanExplorerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update LikeUrbanExplorers.
+     */
+    data: XOR<LikeUrbanExplorerUpdateManyMutationInput, LikeUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which LikeUrbanExplorers to update
+     */
+    where?: LikeUrbanExplorerWhereInput
+    /**
+     * Limit how many LikeUrbanExplorers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * LikeUrbanExplorer updateManyAndReturn
+   */
+  export type LikeUrbanExplorerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to update LikeUrbanExplorers.
+     */
+    data: XOR<LikeUrbanExplorerUpdateManyMutationInput, LikeUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which LikeUrbanExplorers to update
+     */
+    where?: LikeUrbanExplorerWhereInput
+    /**
+     * Limit how many LikeUrbanExplorers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LikeUrbanExplorer upsert
+   */
+  export type LikeUrbanExplorerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the LikeUrbanExplorer to update in case it exists.
+     */
+    where: LikeUrbanExplorerWhereUniqueInput
+    /**
+     * In case the LikeUrbanExplorer found by the `where` argument doesn't exist, create a new LikeUrbanExplorer with this data.
+     */
+    create: XOR<LikeUrbanExplorerCreateInput, LikeUrbanExplorerUncheckedCreateInput>
+    /**
+     * In case the LikeUrbanExplorer was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<LikeUrbanExplorerUpdateInput, LikeUrbanExplorerUncheckedUpdateInput>
+  }
+
+  /**
+   * LikeUrbanExplorer delete
+   */
+  export type LikeUrbanExplorerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter which LikeUrbanExplorer to delete.
+     */
+    where: LikeUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * LikeUrbanExplorer deleteMany
+   */
+  export type LikeUrbanExplorerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LikeUrbanExplorers to delete
+     */
+    where?: LikeUrbanExplorerWhereInput
+    /**
+     * Limit how many LikeUrbanExplorers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * LikeUrbanExplorer without action
+   */
+  export type LikeUrbanExplorerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeUrbanExplorer
+     */
+    select?: LikeUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeUrbanExplorer
+     */
+    omit?: LikeUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeUrbanExplorerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model BookmarkUrbanExplorer
+   */
+
+  export type AggregateBookmarkUrbanExplorer = {
+    _count: BookmarkUrbanExplorerCountAggregateOutputType | null
+    _min: BookmarkUrbanExplorerMinAggregateOutputType | null
+    _max: BookmarkUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  export type BookmarkUrbanExplorerMinAggregateOutputType = {
+    id: string | null
+    placeId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type BookmarkUrbanExplorerMaxAggregateOutputType = {
+    id: string | null
+    placeId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type BookmarkUrbanExplorerCountAggregateOutputType = {
+    id: number
+    placeId: number
+    userId: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type BookmarkUrbanExplorerMinAggregateInputType = {
+    id?: true
+    placeId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type BookmarkUrbanExplorerMaxAggregateInputType = {
+    id?: true
+    placeId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type BookmarkUrbanExplorerCountAggregateInputType = {
+    id?: true
+    placeId?: true
+    userId?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type BookmarkUrbanExplorerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which BookmarkUrbanExplorer to aggregate.
+     */
+    where?: BookmarkUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of BookmarkUrbanExplorers to fetch.
+     */
+    orderBy?: BookmarkUrbanExplorerOrderByWithRelationInput | BookmarkUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: BookmarkUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` BookmarkUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` BookmarkUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned BookmarkUrbanExplorers
+    **/
+    _count?: true | BookmarkUrbanExplorerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: BookmarkUrbanExplorerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: BookmarkUrbanExplorerMaxAggregateInputType
+  }
+
+  export type GetBookmarkUrbanExplorerAggregateType<T extends BookmarkUrbanExplorerAggregateArgs> = {
+        [P in keyof T & keyof AggregateBookmarkUrbanExplorer]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateBookmarkUrbanExplorer[P]>
+      : GetScalarType<T[P], AggregateBookmarkUrbanExplorer[P]>
+  }
+
+
+
+
+  export type BookmarkUrbanExplorerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: BookmarkUrbanExplorerWhereInput
+    orderBy?: BookmarkUrbanExplorerOrderByWithAggregationInput | BookmarkUrbanExplorerOrderByWithAggregationInput[]
+    by: BookmarkUrbanExplorerScalarFieldEnum[] | BookmarkUrbanExplorerScalarFieldEnum
+    having?: BookmarkUrbanExplorerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: BookmarkUrbanExplorerCountAggregateInputType | true
+    _min?: BookmarkUrbanExplorerMinAggregateInputType
+    _max?: BookmarkUrbanExplorerMaxAggregateInputType
+  }
+
+  export type BookmarkUrbanExplorerGroupByOutputType = {
+    id: string
+    placeId: string
+    userId: string
+    createdAt: Date
+    _count: BookmarkUrbanExplorerCountAggregateOutputType | null
+    _min: BookmarkUrbanExplorerMinAggregateOutputType | null
+    _max: BookmarkUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  type GetBookmarkUrbanExplorerGroupByPayload<T extends BookmarkUrbanExplorerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<BookmarkUrbanExplorerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof BookmarkUrbanExplorerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], BookmarkUrbanExplorerGroupByOutputType[P]>
+            : GetScalarType<T[P], BookmarkUrbanExplorerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type BookmarkUrbanExplorerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["bookmarkUrbanExplorer"]>
+
+  export type BookmarkUrbanExplorerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["bookmarkUrbanExplorer"]>
+
+  export type BookmarkUrbanExplorerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["bookmarkUrbanExplorer"]>
+
+  export type BookmarkUrbanExplorerSelectScalar = {
+    id?: boolean
+    placeId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+  }
+
+  export type BookmarkUrbanExplorerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "placeId" | "userId" | "createdAt", ExtArgs["result"]["bookmarkUrbanExplorer"]>
+  export type BookmarkUrbanExplorerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }
+  export type BookmarkUrbanExplorerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }
+  export type BookmarkUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | PlaceUrbanExplorerDefaultArgs<ExtArgs>
+  }
+
+  export type $BookmarkUrbanExplorerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "BookmarkUrbanExplorer"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      place: Prisma.$PlaceUrbanExplorerPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      placeId: string
+      userId: string
+      createdAt: Date
+    }, ExtArgs["result"]["bookmarkUrbanExplorer"]>
+    composites: {}
+  }
+
+  type BookmarkUrbanExplorerGetPayload<S extends boolean | null | undefined | BookmarkUrbanExplorerDefaultArgs> = $Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload, S>
+
+  type BookmarkUrbanExplorerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<BookmarkUrbanExplorerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: BookmarkUrbanExplorerCountAggregateInputType | true
+    }
+
+  export interface BookmarkUrbanExplorerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['BookmarkUrbanExplorer'], meta: { name: 'BookmarkUrbanExplorer' } }
+    /**
+     * Find zero or one BookmarkUrbanExplorer that matches the filter.
+     * @param {BookmarkUrbanExplorerFindUniqueArgs} args - Arguments to find a BookmarkUrbanExplorer
+     * @example
+     * // Get one BookmarkUrbanExplorer
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends BookmarkUrbanExplorerFindUniqueArgs>(args: SelectSubset<T, BookmarkUrbanExplorerFindUniqueArgs<ExtArgs>>): Prisma__BookmarkUrbanExplorerClient<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one BookmarkUrbanExplorer that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {BookmarkUrbanExplorerFindUniqueOrThrowArgs} args - Arguments to find a BookmarkUrbanExplorer
+     * @example
+     * // Get one BookmarkUrbanExplorer
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends BookmarkUrbanExplorerFindUniqueOrThrowArgs>(args: SelectSubset<T, BookmarkUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__BookmarkUrbanExplorerClient<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first BookmarkUrbanExplorer that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkUrbanExplorerFindFirstArgs} args - Arguments to find a BookmarkUrbanExplorer
+     * @example
+     * // Get one BookmarkUrbanExplorer
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends BookmarkUrbanExplorerFindFirstArgs>(args?: SelectSubset<T, BookmarkUrbanExplorerFindFirstArgs<ExtArgs>>): Prisma__BookmarkUrbanExplorerClient<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first BookmarkUrbanExplorer that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkUrbanExplorerFindFirstOrThrowArgs} args - Arguments to find a BookmarkUrbanExplorer
+     * @example
+     * // Get one BookmarkUrbanExplorer
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends BookmarkUrbanExplorerFindFirstOrThrowArgs>(args?: SelectSubset<T, BookmarkUrbanExplorerFindFirstOrThrowArgs<ExtArgs>>): Prisma__BookmarkUrbanExplorerClient<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more BookmarkUrbanExplorers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkUrbanExplorerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all BookmarkUrbanExplorers
+     * const bookmarkUrbanExplorers = await prisma.bookmarkUrbanExplorer.findMany()
+     * 
+     * // Get first 10 BookmarkUrbanExplorers
+     * const bookmarkUrbanExplorers = await prisma.bookmarkUrbanExplorer.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const bookmarkUrbanExplorerWithIdOnly = await prisma.bookmarkUrbanExplorer.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends BookmarkUrbanExplorerFindManyArgs>(args?: SelectSubset<T, BookmarkUrbanExplorerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a BookmarkUrbanExplorer.
+     * @param {BookmarkUrbanExplorerCreateArgs} args - Arguments to create a BookmarkUrbanExplorer.
+     * @example
+     * // Create one BookmarkUrbanExplorer
+     * const BookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.create({
+     *   data: {
+     *     // ... data to create a BookmarkUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    create<T extends BookmarkUrbanExplorerCreateArgs>(args: SelectSubset<T, BookmarkUrbanExplorerCreateArgs<ExtArgs>>): Prisma__BookmarkUrbanExplorerClient<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many BookmarkUrbanExplorers.
+     * @param {BookmarkUrbanExplorerCreateManyArgs} args - Arguments to create many BookmarkUrbanExplorers.
+     * @example
+     * // Create many BookmarkUrbanExplorers
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends BookmarkUrbanExplorerCreateManyArgs>(args?: SelectSubset<T, BookmarkUrbanExplorerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many BookmarkUrbanExplorers and returns the data saved in the database.
+     * @param {BookmarkUrbanExplorerCreateManyAndReturnArgs} args - Arguments to create many BookmarkUrbanExplorers.
+     * @example
+     * // Create many BookmarkUrbanExplorers
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many BookmarkUrbanExplorers and only return the `id`
+     * const bookmarkUrbanExplorerWithIdOnly = await prisma.bookmarkUrbanExplorer.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends BookmarkUrbanExplorerCreateManyAndReturnArgs>(args?: SelectSubset<T, BookmarkUrbanExplorerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a BookmarkUrbanExplorer.
+     * @param {BookmarkUrbanExplorerDeleteArgs} args - Arguments to delete one BookmarkUrbanExplorer.
+     * @example
+     * // Delete one BookmarkUrbanExplorer
+     * const BookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.delete({
+     *   where: {
+     *     // ... filter to delete one BookmarkUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    delete<T extends BookmarkUrbanExplorerDeleteArgs>(args: SelectSubset<T, BookmarkUrbanExplorerDeleteArgs<ExtArgs>>): Prisma__BookmarkUrbanExplorerClient<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one BookmarkUrbanExplorer.
+     * @param {BookmarkUrbanExplorerUpdateArgs} args - Arguments to update one BookmarkUrbanExplorer.
+     * @example
+     * // Update one BookmarkUrbanExplorer
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends BookmarkUrbanExplorerUpdateArgs>(args: SelectSubset<T, BookmarkUrbanExplorerUpdateArgs<ExtArgs>>): Prisma__BookmarkUrbanExplorerClient<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more BookmarkUrbanExplorers.
+     * @param {BookmarkUrbanExplorerDeleteManyArgs} args - Arguments to filter BookmarkUrbanExplorers to delete.
+     * @example
+     * // Delete a few BookmarkUrbanExplorers
+     * const { count } = await prisma.bookmarkUrbanExplorer.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends BookmarkUrbanExplorerDeleteManyArgs>(args?: SelectSubset<T, BookmarkUrbanExplorerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more BookmarkUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkUrbanExplorerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many BookmarkUrbanExplorers
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends BookmarkUrbanExplorerUpdateManyArgs>(args: SelectSubset<T, BookmarkUrbanExplorerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more BookmarkUrbanExplorers and returns the data updated in the database.
+     * @param {BookmarkUrbanExplorerUpdateManyAndReturnArgs} args - Arguments to update many BookmarkUrbanExplorers.
+     * @example
+     * // Update many BookmarkUrbanExplorers
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more BookmarkUrbanExplorers and only return the `id`
+     * const bookmarkUrbanExplorerWithIdOnly = await prisma.bookmarkUrbanExplorer.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends BookmarkUrbanExplorerUpdateManyAndReturnArgs>(args: SelectSubset<T, BookmarkUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one BookmarkUrbanExplorer.
+     * @param {BookmarkUrbanExplorerUpsertArgs} args - Arguments to update or create a BookmarkUrbanExplorer.
+     * @example
+     * // Update or create a BookmarkUrbanExplorer
+     * const bookmarkUrbanExplorer = await prisma.bookmarkUrbanExplorer.upsert({
+     *   create: {
+     *     // ... data to create a BookmarkUrbanExplorer
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the BookmarkUrbanExplorer we want to update
+     *   }
+     * })
+     */
+    upsert<T extends BookmarkUrbanExplorerUpsertArgs>(args: SelectSubset<T, BookmarkUrbanExplorerUpsertArgs<ExtArgs>>): Prisma__BookmarkUrbanExplorerClient<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of BookmarkUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkUrbanExplorerCountArgs} args - Arguments to filter BookmarkUrbanExplorers to count.
+     * @example
+     * // Count the number of BookmarkUrbanExplorers
+     * const count = await prisma.bookmarkUrbanExplorer.count({
+     *   where: {
+     *     // ... the filter for the BookmarkUrbanExplorers we want to count
+     *   }
+     * })
+    **/
+    count<T extends BookmarkUrbanExplorerCountArgs>(
+      args?: Subset<T, BookmarkUrbanExplorerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], BookmarkUrbanExplorerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a BookmarkUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkUrbanExplorerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends BookmarkUrbanExplorerAggregateArgs>(args: Subset<T, BookmarkUrbanExplorerAggregateArgs>): Prisma.PrismaPromise<GetBookmarkUrbanExplorerAggregateType<T>>
+
+    /**
+     * Group by BookmarkUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkUrbanExplorerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends BookmarkUrbanExplorerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: BookmarkUrbanExplorerGroupByArgs['orderBy'] }
+        : { orderBy?: BookmarkUrbanExplorerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, BookmarkUrbanExplorerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetBookmarkUrbanExplorerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the BookmarkUrbanExplorer model
+   */
+  readonly fields: BookmarkUrbanExplorerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for BookmarkUrbanExplorer.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__BookmarkUrbanExplorerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    place<T extends PlaceUrbanExplorerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PlaceUrbanExplorerDefaultArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the BookmarkUrbanExplorer model
+   */ 
+  interface BookmarkUrbanExplorerFieldRefs {
+    readonly id: FieldRef<"BookmarkUrbanExplorer", 'String'>
+    readonly placeId: FieldRef<"BookmarkUrbanExplorer", 'String'>
+    readonly userId: FieldRef<"BookmarkUrbanExplorer", 'String'>
+    readonly createdAt: FieldRef<"BookmarkUrbanExplorer", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * BookmarkUrbanExplorer findUnique
+   */
+  export type BookmarkUrbanExplorerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkUrbanExplorer to fetch.
+     */
+    where: BookmarkUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * BookmarkUrbanExplorer findUniqueOrThrow
+   */
+  export type BookmarkUrbanExplorerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkUrbanExplorer to fetch.
+     */
+    where: BookmarkUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * BookmarkUrbanExplorer findFirst
+   */
+  export type BookmarkUrbanExplorerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkUrbanExplorer to fetch.
+     */
+    where?: BookmarkUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of BookmarkUrbanExplorers to fetch.
+     */
+    orderBy?: BookmarkUrbanExplorerOrderByWithRelationInput | BookmarkUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for BookmarkUrbanExplorers.
+     */
+    cursor?: BookmarkUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` BookmarkUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` BookmarkUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of BookmarkUrbanExplorers.
+     */
+    distinct?: BookmarkUrbanExplorerScalarFieldEnum | BookmarkUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * BookmarkUrbanExplorer findFirstOrThrow
+   */
+  export type BookmarkUrbanExplorerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkUrbanExplorer to fetch.
+     */
+    where?: BookmarkUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of BookmarkUrbanExplorers to fetch.
+     */
+    orderBy?: BookmarkUrbanExplorerOrderByWithRelationInput | BookmarkUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for BookmarkUrbanExplorers.
+     */
+    cursor?: BookmarkUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` BookmarkUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` BookmarkUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of BookmarkUrbanExplorers.
+     */
+    distinct?: BookmarkUrbanExplorerScalarFieldEnum | BookmarkUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * BookmarkUrbanExplorer findMany
+   */
+  export type BookmarkUrbanExplorerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkUrbanExplorers to fetch.
+     */
+    where?: BookmarkUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of BookmarkUrbanExplorers to fetch.
+     */
+    orderBy?: BookmarkUrbanExplorerOrderByWithRelationInput | BookmarkUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing BookmarkUrbanExplorers.
+     */
+    cursor?: BookmarkUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` BookmarkUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` BookmarkUrbanExplorers.
+     */
+    skip?: number
+    distinct?: BookmarkUrbanExplorerScalarFieldEnum | BookmarkUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * BookmarkUrbanExplorer create
+   */
+  export type BookmarkUrbanExplorerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a BookmarkUrbanExplorer.
+     */
+    data: XOR<BookmarkUrbanExplorerCreateInput, BookmarkUrbanExplorerUncheckedCreateInput>
+  }
+
+  /**
+   * BookmarkUrbanExplorer createMany
+   */
+  export type BookmarkUrbanExplorerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many BookmarkUrbanExplorers.
+     */
+    data: BookmarkUrbanExplorerCreateManyInput | BookmarkUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * BookmarkUrbanExplorer createManyAndReturn
+   */
+  export type BookmarkUrbanExplorerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to create many BookmarkUrbanExplorers.
+     */
+    data: BookmarkUrbanExplorerCreateManyInput | BookmarkUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * BookmarkUrbanExplorer update
+   */
+  export type BookmarkUrbanExplorerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a BookmarkUrbanExplorer.
+     */
+    data: XOR<BookmarkUrbanExplorerUpdateInput, BookmarkUrbanExplorerUncheckedUpdateInput>
+    /**
+     * Choose, which BookmarkUrbanExplorer to update.
+     */
+    where: BookmarkUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * BookmarkUrbanExplorer updateMany
+   */
+  export type BookmarkUrbanExplorerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update BookmarkUrbanExplorers.
+     */
+    data: XOR<BookmarkUrbanExplorerUpdateManyMutationInput, BookmarkUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which BookmarkUrbanExplorers to update
+     */
+    where?: BookmarkUrbanExplorerWhereInput
+    /**
+     * Limit how many BookmarkUrbanExplorers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * BookmarkUrbanExplorer updateManyAndReturn
+   */
+  export type BookmarkUrbanExplorerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to update BookmarkUrbanExplorers.
+     */
+    data: XOR<BookmarkUrbanExplorerUpdateManyMutationInput, BookmarkUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which BookmarkUrbanExplorers to update
+     */
+    where?: BookmarkUrbanExplorerWhereInput
+    /**
+     * Limit how many BookmarkUrbanExplorers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * BookmarkUrbanExplorer upsert
+   */
+  export type BookmarkUrbanExplorerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the BookmarkUrbanExplorer to update in case it exists.
+     */
+    where: BookmarkUrbanExplorerWhereUniqueInput
+    /**
+     * In case the BookmarkUrbanExplorer found by the `where` argument doesn't exist, create a new BookmarkUrbanExplorer with this data.
+     */
+    create: XOR<BookmarkUrbanExplorerCreateInput, BookmarkUrbanExplorerUncheckedCreateInput>
+    /**
+     * In case the BookmarkUrbanExplorer was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<BookmarkUrbanExplorerUpdateInput, BookmarkUrbanExplorerUncheckedUpdateInput>
+  }
+
+  /**
+   * BookmarkUrbanExplorer delete
+   */
+  export type BookmarkUrbanExplorerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter which BookmarkUrbanExplorer to delete.
+     */
+    where: BookmarkUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * BookmarkUrbanExplorer deleteMany
+   */
+  export type BookmarkUrbanExplorerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which BookmarkUrbanExplorers to delete
+     */
+    where?: BookmarkUrbanExplorerWhereInput
+    /**
+     * Limit how many BookmarkUrbanExplorers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * BookmarkUrbanExplorer without action
+   */
+  export type BookmarkUrbanExplorerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkUrbanExplorer
+     */
+    select?: BookmarkUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkUrbanExplorer
+     */
+    omit?: BookmarkUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkUrbanExplorerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ReportUrbanExplorer
+   */
+
+  export type AggregateReportUrbanExplorer = {
+    _count: ReportUrbanExplorerCountAggregateOutputType | null
+    _min: ReportUrbanExplorerMinAggregateOutputType | null
+    _max: ReportUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  export type ReportUrbanExplorerMinAggregateOutputType = {
+    id: string | null
+    placeId: string | null
+    reviewId: string | null
+    userId: string | null
+    reason: string | null
+    createdAt: Date | null
+  }
+
+  export type ReportUrbanExplorerMaxAggregateOutputType = {
+    id: string | null
+    placeId: string | null
+    reviewId: string | null
+    userId: string | null
+    reason: string | null
+    createdAt: Date | null
+  }
+
+  export type ReportUrbanExplorerCountAggregateOutputType = {
+    id: number
+    placeId: number
+    reviewId: number
+    userId: number
+    reason: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ReportUrbanExplorerMinAggregateInputType = {
+    id?: true
+    placeId?: true
+    reviewId?: true
+    userId?: true
+    reason?: true
+    createdAt?: true
+  }
+
+  export type ReportUrbanExplorerMaxAggregateInputType = {
+    id?: true
+    placeId?: true
+    reviewId?: true
+    userId?: true
+    reason?: true
+    createdAt?: true
+  }
+
+  export type ReportUrbanExplorerCountAggregateInputType = {
+    id?: true
+    placeId?: true
+    reviewId?: true
+    userId?: true
+    reason?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ReportUrbanExplorerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReportUrbanExplorer to aggregate.
+     */
+    where?: ReportUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReportUrbanExplorers to fetch.
+     */
+    orderBy?: ReportUrbanExplorerOrderByWithRelationInput | ReportUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ReportUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReportUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReportUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ReportUrbanExplorers
+    **/
+    _count?: true | ReportUrbanExplorerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ReportUrbanExplorerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ReportUrbanExplorerMaxAggregateInputType
+  }
+
+  export type GetReportUrbanExplorerAggregateType<T extends ReportUrbanExplorerAggregateArgs> = {
+        [P in keyof T & keyof AggregateReportUrbanExplorer]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateReportUrbanExplorer[P]>
+      : GetScalarType<T[P], AggregateReportUrbanExplorer[P]>
+  }
+
+
+
+
+  export type ReportUrbanExplorerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportUrbanExplorerWhereInput
+    orderBy?: ReportUrbanExplorerOrderByWithAggregationInput | ReportUrbanExplorerOrderByWithAggregationInput[]
+    by: ReportUrbanExplorerScalarFieldEnum[] | ReportUrbanExplorerScalarFieldEnum
+    having?: ReportUrbanExplorerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ReportUrbanExplorerCountAggregateInputType | true
+    _min?: ReportUrbanExplorerMinAggregateInputType
+    _max?: ReportUrbanExplorerMaxAggregateInputType
+  }
+
+  export type ReportUrbanExplorerGroupByOutputType = {
+    id: string
+    placeId: string | null
+    reviewId: string | null
+    userId: string
+    reason: string
+    createdAt: Date
+    _count: ReportUrbanExplorerCountAggregateOutputType | null
+    _min: ReportUrbanExplorerMinAggregateOutputType | null
+    _max: ReportUrbanExplorerMaxAggregateOutputType | null
+  }
+
+  type GetReportUrbanExplorerGroupByPayload<T extends ReportUrbanExplorerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ReportUrbanExplorerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ReportUrbanExplorerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ReportUrbanExplorerGroupByOutputType[P]>
+            : GetScalarType<T[P], ReportUrbanExplorerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ReportUrbanExplorerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    reviewId?: boolean
+    userId?: boolean
+    reason?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | ReportUrbanExplorer$placeArgs<ExtArgs>
+    review?: boolean | ReportUrbanExplorer$reviewArgs<ExtArgs>
+  }, ExtArgs["result"]["reportUrbanExplorer"]>
+
+  export type ReportUrbanExplorerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    reviewId?: boolean
+    userId?: boolean
+    reason?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | ReportUrbanExplorer$placeArgs<ExtArgs>
+    review?: boolean | ReportUrbanExplorer$reviewArgs<ExtArgs>
+  }, ExtArgs["result"]["reportUrbanExplorer"]>
+
+  export type ReportUrbanExplorerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    placeId?: boolean
+    reviewId?: boolean
+    userId?: boolean
+    reason?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | ReportUrbanExplorer$placeArgs<ExtArgs>
+    review?: boolean | ReportUrbanExplorer$reviewArgs<ExtArgs>
+  }, ExtArgs["result"]["reportUrbanExplorer"]>
+
+  export type ReportUrbanExplorerSelectScalar = {
+    id?: boolean
+    placeId?: boolean
+    reviewId?: boolean
+    userId?: boolean
+    reason?: boolean
+    createdAt?: boolean
+  }
+
+  export type ReportUrbanExplorerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "placeId" | "reviewId" | "userId" | "reason" | "createdAt", ExtArgs["result"]["reportUrbanExplorer"]>
+  export type ReportUrbanExplorerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | ReportUrbanExplorer$placeArgs<ExtArgs>
+    review?: boolean | ReportUrbanExplorer$reviewArgs<ExtArgs>
+  }
+  export type ReportUrbanExplorerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | ReportUrbanExplorer$placeArgs<ExtArgs>
+    review?: boolean | ReportUrbanExplorer$reviewArgs<ExtArgs>
+  }
+  export type ReportUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    place?: boolean | ReportUrbanExplorer$placeArgs<ExtArgs>
+    review?: boolean | ReportUrbanExplorer$reviewArgs<ExtArgs>
+  }
+
+  export type $ReportUrbanExplorerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ReportUrbanExplorer"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      place: Prisma.$PlaceUrbanExplorerPayload<ExtArgs> | null
+      review: Prisma.$ReviewUrbanExplorerPayload<ExtArgs> | null
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      placeId: string | null
+      reviewId: string | null
+      userId: string
+      reason: string
+      createdAt: Date
+    }, ExtArgs["result"]["reportUrbanExplorer"]>
+    composites: {}
+  }
+
+  type ReportUrbanExplorerGetPayload<S extends boolean | null | undefined | ReportUrbanExplorerDefaultArgs> = $Result.GetResult<Prisma.$ReportUrbanExplorerPayload, S>
+
+  type ReportUrbanExplorerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ReportUrbanExplorerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ReportUrbanExplorerCountAggregateInputType | true
+    }
+
+  export interface ReportUrbanExplorerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ReportUrbanExplorer'], meta: { name: 'ReportUrbanExplorer' } }
+    /**
+     * Find zero or one ReportUrbanExplorer that matches the filter.
+     * @param {ReportUrbanExplorerFindUniqueArgs} args - Arguments to find a ReportUrbanExplorer
+     * @example
+     * // Get one ReportUrbanExplorer
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ReportUrbanExplorerFindUniqueArgs>(args: SelectSubset<T, ReportUrbanExplorerFindUniqueArgs<ExtArgs>>): Prisma__ReportUrbanExplorerClient<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ReportUrbanExplorer that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ReportUrbanExplorerFindUniqueOrThrowArgs} args - Arguments to find a ReportUrbanExplorer
+     * @example
+     * // Get one ReportUrbanExplorer
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ReportUrbanExplorerFindUniqueOrThrowArgs>(args: SelectSubset<T, ReportUrbanExplorerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReportUrbanExplorerClient<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReportUrbanExplorer that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportUrbanExplorerFindFirstArgs} args - Arguments to find a ReportUrbanExplorer
+     * @example
+     * // Get one ReportUrbanExplorer
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ReportUrbanExplorerFindFirstArgs>(args?: SelectSubset<T, ReportUrbanExplorerFindFirstArgs<ExtArgs>>): Prisma__ReportUrbanExplorerClient<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReportUrbanExplorer that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportUrbanExplorerFindFirstOrThrowArgs} args - Arguments to find a ReportUrbanExplorer
+     * @example
+     * // Get one ReportUrbanExplorer
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ReportUrbanExplorerFindFirstOrThrowArgs>(args?: SelectSubset<T, ReportUrbanExplorerFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReportUrbanExplorerClient<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ReportUrbanExplorers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportUrbanExplorerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ReportUrbanExplorers
+     * const reportUrbanExplorers = await prisma.reportUrbanExplorer.findMany()
+     * 
+     * // Get first 10 ReportUrbanExplorers
+     * const reportUrbanExplorers = await prisma.reportUrbanExplorer.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const reportUrbanExplorerWithIdOnly = await prisma.reportUrbanExplorer.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ReportUrbanExplorerFindManyArgs>(args?: SelectSubset<T, ReportUrbanExplorerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ReportUrbanExplorer.
+     * @param {ReportUrbanExplorerCreateArgs} args - Arguments to create a ReportUrbanExplorer.
+     * @example
+     * // Create one ReportUrbanExplorer
+     * const ReportUrbanExplorer = await prisma.reportUrbanExplorer.create({
+     *   data: {
+     *     // ... data to create a ReportUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    create<T extends ReportUrbanExplorerCreateArgs>(args: SelectSubset<T, ReportUrbanExplorerCreateArgs<ExtArgs>>): Prisma__ReportUrbanExplorerClient<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ReportUrbanExplorers.
+     * @param {ReportUrbanExplorerCreateManyArgs} args - Arguments to create many ReportUrbanExplorers.
+     * @example
+     * // Create many ReportUrbanExplorers
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ReportUrbanExplorerCreateManyArgs>(args?: SelectSubset<T, ReportUrbanExplorerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ReportUrbanExplorers and returns the data saved in the database.
+     * @param {ReportUrbanExplorerCreateManyAndReturnArgs} args - Arguments to create many ReportUrbanExplorers.
+     * @example
+     * // Create many ReportUrbanExplorers
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ReportUrbanExplorers and only return the `id`
+     * const reportUrbanExplorerWithIdOnly = await prisma.reportUrbanExplorer.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ReportUrbanExplorerCreateManyAndReturnArgs>(args?: SelectSubset<T, ReportUrbanExplorerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ReportUrbanExplorer.
+     * @param {ReportUrbanExplorerDeleteArgs} args - Arguments to delete one ReportUrbanExplorer.
+     * @example
+     * // Delete one ReportUrbanExplorer
+     * const ReportUrbanExplorer = await prisma.reportUrbanExplorer.delete({
+     *   where: {
+     *     // ... filter to delete one ReportUrbanExplorer
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ReportUrbanExplorerDeleteArgs>(args: SelectSubset<T, ReportUrbanExplorerDeleteArgs<ExtArgs>>): Prisma__ReportUrbanExplorerClient<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ReportUrbanExplorer.
+     * @param {ReportUrbanExplorerUpdateArgs} args - Arguments to update one ReportUrbanExplorer.
+     * @example
+     * // Update one ReportUrbanExplorer
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ReportUrbanExplorerUpdateArgs>(args: SelectSubset<T, ReportUrbanExplorerUpdateArgs<ExtArgs>>): Prisma__ReportUrbanExplorerClient<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ReportUrbanExplorers.
+     * @param {ReportUrbanExplorerDeleteManyArgs} args - Arguments to filter ReportUrbanExplorers to delete.
+     * @example
+     * // Delete a few ReportUrbanExplorers
+     * const { count } = await prisma.reportUrbanExplorer.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ReportUrbanExplorerDeleteManyArgs>(args?: SelectSubset<T, ReportUrbanExplorerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReportUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportUrbanExplorerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ReportUrbanExplorers
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ReportUrbanExplorerUpdateManyArgs>(args: SelectSubset<T, ReportUrbanExplorerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReportUrbanExplorers and returns the data updated in the database.
+     * @param {ReportUrbanExplorerUpdateManyAndReturnArgs} args - Arguments to update many ReportUrbanExplorers.
+     * @example
+     * // Update many ReportUrbanExplorers
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ReportUrbanExplorers and only return the `id`
+     * const reportUrbanExplorerWithIdOnly = await prisma.reportUrbanExplorer.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ReportUrbanExplorerUpdateManyAndReturnArgs>(args: SelectSubset<T, ReportUrbanExplorerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ReportUrbanExplorer.
+     * @param {ReportUrbanExplorerUpsertArgs} args - Arguments to update or create a ReportUrbanExplorer.
+     * @example
+     * // Update or create a ReportUrbanExplorer
+     * const reportUrbanExplorer = await prisma.reportUrbanExplorer.upsert({
+     *   create: {
+     *     // ... data to create a ReportUrbanExplorer
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ReportUrbanExplorer we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ReportUrbanExplorerUpsertArgs>(args: SelectSubset<T, ReportUrbanExplorerUpsertArgs<ExtArgs>>): Prisma__ReportUrbanExplorerClient<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ReportUrbanExplorers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportUrbanExplorerCountArgs} args - Arguments to filter ReportUrbanExplorers to count.
+     * @example
+     * // Count the number of ReportUrbanExplorers
+     * const count = await prisma.reportUrbanExplorer.count({
+     *   where: {
+     *     // ... the filter for the ReportUrbanExplorers we want to count
+     *   }
+     * })
+    **/
+    count<T extends ReportUrbanExplorerCountArgs>(
+      args?: Subset<T, ReportUrbanExplorerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ReportUrbanExplorerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ReportUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportUrbanExplorerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ReportUrbanExplorerAggregateArgs>(args: Subset<T, ReportUrbanExplorerAggregateArgs>): Prisma.PrismaPromise<GetReportUrbanExplorerAggregateType<T>>
+
+    /**
+     * Group by ReportUrbanExplorer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportUrbanExplorerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ReportUrbanExplorerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ReportUrbanExplorerGroupByArgs['orderBy'] }
+        : { orderBy?: ReportUrbanExplorerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ReportUrbanExplorerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReportUrbanExplorerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ReportUrbanExplorer model
+   */
+  readonly fields: ReportUrbanExplorerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ReportUrbanExplorer.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ReportUrbanExplorerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    place<T extends ReportUrbanExplorer$placeArgs<ExtArgs> = {}>(args?: Subset<T, ReportUrbanExplorer$placeArgs<ExtArgs>>): Prisma__PlaceUrbanExplorerClient<$Result.GetResult<Prisma.$PlaceUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    review<T extends ReportUrbanExplorer$reviewArgs<ExtArgs> = {}>(args?: Subset<T, ReportUrbanExplorer$reviewArgs<ExtArgs>>): Prisma__ReviewUrbanExplorerClient<$Result.GetResult<Prisma.$ReviewUrbanExplorerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ReportUrbanExplorer model
+   */ 
+  interface ReportUrbanExplorerFieldRefs {
+    readonly id: FieldRef<"ReportUrbanExplorer", 'String'>
+    readonly placeId: FieldRef<"ReportUrbanExplorer", 'String'>
+    readonly reviewId: FieldRef<"ReportUrbanExplorer", 'String'>
+    readonly userId: FieldRef<"ReportUrbanExplorer", 'String'>
+    readonly reason: FieldRef<"ReportUrbanExplorer", 'String'>
+    readonly createdAt: FieldRef<"ReportUrbanExplorer", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ReportUrbanExplorer findUnique
+   */
+  export type ReportUrbanExplorerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportUrbanExplorer to fetch.
+     */
+    where: ReportUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * ReportUrbanExplorer findUniqueOrThrow
+   */
+  export type ReportUrbanExplorerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportUrbanExplorer to fetch.
+     */
+    where: ReportUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * ReportUrbanExplorer findFirst
+   */
+  export type ReportUrbanExplorerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportUrbanExplorer to fetch.
+     */
+    where?: ReportUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReportUrbanExplorers to fetch.
+     */
+    orderBy?: ReportUrbanExplorerOrderByWithRelationInput | ReportUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReportUrbanExplorers.
+     */
+    cursor?: ReportUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReportUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReportUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReportUrbanExplorers.
+     */
+    distinct?: ReportUrbanExplorerScalarFieldEnum | ReportUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * ReportUrbanExplorer findFirstOrThrow
+   */
+  export type ReportUrbanExplorerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportUrbanExplorer to fetch.
+     */
+    where?: ReportUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReportUrbanExplorers to fetch.
+     */
+    orderBy?: ReportUrbanExplorerOrderByWithRelationInput | ReportUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReportUrbanExplorers.
+     */
+    cursor?: ReportUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReportUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReportUrbanExplorers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReportUrbanExplorers.
+     */
+    distinct?: ReportUrbanExplorerScalarFieldEnum | ReportUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * ReportUrbanExplorer findMany
+   */
+  export type ReportUrbanExplorerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportUrbanExplorers to fetch.
+     */
+    where?: ReportUrbanExplorerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReportUrbanExplorers to fetch.
+     */
+    orderBy?: ReportUrbanExplorerOrderByWithRelationInput | ReportUrbanExplorerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ReportUrbanExplorers.
+     */
+    cursor?: ReportUrbanExplorerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReportUrbanExplorers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReportUrbanExplorers.
+     */
+    skip?: number
+    distinct?: ReportUrbanExplorerScalarFieldEnum | ReportUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * ReportUrbanExplorer create
+   */
+  export type ReportUrbanExplorerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ReportUrbanExplorer.
+     */
+    data: XOR<ReportUrbanExplorerCreateInput, ReportUrbanExplorerUncheckedCreateInput>
+  }
+
+  /**
+   * ReportUrbanExplorer createMany
+   */
+  export type ReportUrbanExplorerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ReportUrbanExplorers.
+     */
+    data: ReportUrbanExplorerCreateManyInput | ReportUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ReportUrbanExplorer createManyAndReturn
+   */
+  export type ReportUrbanExplorerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to create many ReportUrbanExplorers.
+     */
+    data: ReportUrbanExplorerCreateManyInput | ReportUrbanExplorerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReportUrbanExplorer update
+   */
+  export type ReportUrbanExplorerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ReportUrbanExplorer.
+     */
+    data: XOR<ReportUrbanExplorerUpdateInput, ReportUrbanExplorerUncheckedUpdateInput>
+    /**
+     * Choose, which ReportUrbanExplorer to update.
+     */
+    where: ReportUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * ReportUrbanExplorer updateMany
+   */
+  export type ReportUrbanExplorerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ReportUrbanExplorers.
+     */
+    data: XOR<ReportUrbanExplorerUpdateManyMutationInput, ReportUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which ReportUrbanExplorers to update
+     */
+    where?: ReportUrbanExplorerWhereInput
+    /**
+     * Limit how many ReportUrbanExplorers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReportUrbanExplorer updateManyAndReturn
+   */
+  export type ReportUrbanExplorerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * The data used to update ReportUrbanExplorers.
+     */
+    data: XOR<ReportUrbanExplorerUpdateManyMutationInput, ReportUrbanExplorerUncheckedUpdateManyInput>
+    /**
+     * Filter which ReportUrbanExplorers to update
+     */
+    where?: ReportUrbanExplorerWhereInput
+    /**
+     * Limit how many ReportUrbanExplorers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReportUrbanExplorer upsert
+   */
+  export type ReportUrbanExplorerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ReportUrbanExplorer to update in case it exists.
+     */
+    where: ReportUrbanExplorerWhereUniqueInput
+    /**
+     * In case the ReportUrbanExplorer found by the `where` argument doesn't exist, create a new ReportUrbanExplorer with this data.
+     */
+    create: XOR<ReportUrbanExplorerCreateInput, ReportUrbanExplorerUncheckedCreateInput>
+    /**
+     * In case the ReportUrbanExplorer was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ReportUrbanExplorerUpdateInput, ReportUrbanExplorerUncheckedUpdateInput>
+  }
+
+  /**
+   * ReportUrbanExplorer delete
+   */
+  export type ReportUrbanExplorerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+    /**
+     * Filter which ReportUrbanExplorer to delete.
+     */
+    where: ReportUrbanExplorerWhereUniqueInput
+  }
+
+  /**
+   * ReportUrbanExplorer deleteMany
+   */
+  export type ReportUrbanExplorerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReportUrbanExplorers to delete
+     */
+    where?: ReportUrbanExplorerWhereInput
+    /**
+     * Limit how many ReportUrbanExplorers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReportUrbanExplorer.place
+   */
+  export type ReportUrbanExplorer$placeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaceUrbanExplorer
+     */
+    select?: PlaceUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaceUrbanExplorer
+     */
+    omit?: PlaceUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaceUrbanExplorerInclude<ExtArgs> | null
+    where?: PlaceUrbanExplorerWhereInput
+  }
+
+  /**
+   * ReportUrbanExplorer.review
+   */
+  export type ReportUrbanExplorer$reviewArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewUrbanExplorer
+     */
+    select?: ReviewUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewUrbanExplorer
+     */
+    omit?: ReviewUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewUrbanExplorerInclude<ExtArgs> | null
+    where?: ReviewUrbanExplorerWhereInput
+  }
+
+  /**
+   * ReportUrbanExplorer without action
+   */
+  export type ReportUrbanExplorerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportUrbanExplorer
+     */
+    select?: ReportUrbanExplorerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportUrbanExplorer
+     */
+    omit?: ReportUrbanExplorerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportUrbanExplorerInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -8315,6 +14629,64 @@ export namespace Prisma {
   export type ReportDIYHomesScalarFieldEnum = (typeof ReportDIYHomesScalarFieldEnum)[keyof typeof ReportDIYHomesScalarFieldEnum]
 
 
+  export const PlaceUrbanExplorerScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    category: 'category',
+    location: 'location',
+    description: 'description',
+    ownerId: 'ownerId',
+    createdAt: 'createdAt',
+    validated: 'validated'
+  };
+
+  export type PlaceUrbanExplorerScalarFieldEnum = (typeof PlaceUrbanExplorerScalarFieldEnum)[keyof typeof PlaceUrbanExplorerScalarFieldEnum]
+
+
+  export const ReviewUrbanExplorerScalarFieldEnum: {
+    id: 'id',
+    placeId: 'placeId',
+    userId: 'userId',
+    rating: 'rating',
+    comment: 'comment',
+    createdAt: 'createdAt'
+  };
+
+  export type ReviewUrbanExplorerScalarFieldEnum = (typeof ReviewUrbanExplorerScalarFieldEnum)[keyof typeof ReviewUrbanExplorerScalarFieldEnum]
+
+
+  export const LikeUrbanExplorerScalarFieldEnum: {
+    id: 'id',
+    placeId: 'placeId',
+    userId: 'userId',
+    createdAt: 'createdAt'
+  };
+
+  export type LikeUrbanExplorerScalarFieldEnum = (typeof LikeUrbanExplorerScalarFieldEnum)[keyof typeof LikeUrbanExplorerScalarFieldEnum]
+
+
+  export const BookmarkUrbanExplorerScalarFieldEnum: {
+    id: 'id',
+    placeId: 'placeId',
+    userId: 'userId',
+    createdAt: 'createdAt'
+  };
+
+  export type BookmarkUrbanExplorerScalarFieldEnum = (typeof BookmarkUrbanExplorerScalarFieldEnum)[keyof typeof BookmarkUrbanExplorerScalarFieldEnum]
+
+
+  export const ReportUrbanExplorerScalarFieldEnum: {
+    id: 'id',
+    placeId: 'placeId',
+    reviewId: 'reviewId',
+    userId: 'userId',
+    reason: 'reason',
+    createdAt: 'createdAt'
+  };
+
+  export type ReportUrbanExplorerScalarFieldEnum = (typeof ReportUrbanExplorerScalarFieldEnum)[keyof typeof ReportUrbanExplorerScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
@@ -8387,6 +14759,13 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'Boolean'
+   */
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+    
+
+
+  /**
    * Reference to a field of type 'Float'
    */
   export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
@@ -8418,6 +14797,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesListRelationFilter
     Like?: LikeDIYHomesListRelationFilter
     Report?: ReportDIYHomesListRelationFilter
+    PlaceUrbanExplorer?: PlaceUrbanExplorerListRelationFilter
+    ReviewUrbanExplorer?: ReviewUrbanExplorerListRelationFilter
+    LikeUrbanExplorer?: LikeUrbanExplorerListRelationFilter
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerListRelationFilter
+    ReportUrbanExplorer?: ReportUrbanExplorerListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -8432,6 +14816,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesOrderByRelationAggregateInput
     Like?: LikeDIYHomesOrderByRelationAggregateInput
     Report?: ReportDIYHomesOrderByRelationAggregateInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerOrderByRelationAggregateInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerOrderByRelationAggregateInput
+    LikeUrbanExplorer?: LikeUrbanExplorerOrderByRelationAggregateInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerOrderByRelationAggregateInput
+    ReportUrbanExplorer?: ReportUrbanExplorerOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -8449,6 +14838,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesListRelationFilter
     Like?: LikeDIYHomesListRelationFilter
     Report?: ReportDIYHomesListRelationFilter
+    PlaceUrbanExplorer?: PlaceUrbanExplorerListRelationFilter
+    ReviewUrbanExplorer?: ReviewUrbanExplorerListRelationFilter
+    LikeUrbanExplorer?: LikeUrbanExplorerListRelationFilter
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerListRelationFilter
+    ReportUrbanExplorer?: ReportUrbanExplorerListRelationFilter
   }, "id" | "email">
 
   export type UserOrderByWithAggregationInput = {
@@ -8789,6 +15183,330 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"ReportDIYHomes"> | Date | string
   }
 
+  export type PlaceUrbanExplorerWhereInput = {
+    AND?: PlaceUrbanExplorerWhereInput | PlaceUrbanExplorerWhereInput[]
+    OR?: PlaceUrbanExplorerWhereInput[]
+    NOT?: PlaceUrbanExplorerWhereInput | PlaceUrbanExplorerWhereInput[]
+    id?: StringFilter<"PlaceUrbanExplorer"> | string
+    name?: StringFilter<"PlaceUrbanExplorer"> | string
+    category?: StringFilter<"PlaceUrbanExplorer"> | string
+    location?: StringFilter<"PlaceUrbanExplorer"> | string
+    description?: StringFilter<"PlaceUrbanExplorer"> | string
+    ownerId?: StringFilter<"PlaceUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"PlaceUrbanExplorer"> | Date | string
+    validated?: BoolFilter<"PlaceUrbanExplorer"> | boolean
+    owner?: XOR<UserScalarRelationFilter, UserWhereInput>
+    reviews?: ReviewUrbanExplorerListRelationFilter
+    bookmarks?: BookmarkUrbanExplorerListRelationFilter
+    likes?: LikeUrbanExplorerListRelationFilter
+    reports?: ReportUrbanExplorerListRelationFilter
+  }
+
+  export type PlaceUrbanExplorerOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    category?: SortOrder
+    location?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+    owner?: UserOrderByWithRelationInput
+    reviews?: ReviewUrbanExplorerOrderByRelationAggregateInput
+    bookmarks?: BookmarkUrbanExplorerOrderByRelationAggregateInput
+    likes?: LikeUrbanExplorerOrderByRelationAggregateInput
+    reports?: ReportUrbanExplorerOrderByRelationAggregateInput
+  }
+
+  export type PlaceUrbanExplorerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: PlaceUrbanExplorerWhereInput | PlaceUrbanExplorerWhereInput[]
+    OR?: PlaceUrbanExplorerWhereInput[]
+    NOT?: PlaceUrbanExplorerWhereInput | PlaceUrbanExplorerWhereInput[]
+    name?: StringFilter<"PlaceUrbanExplorer"> | string
+    category?: StringFilter<"PlaceUrbanExplorer"> | string
+    location?: StringFilter<"PlaceUrbanExplorer"> | string
+    description?: StringFilter<"PlaceUrbanExplorer"> | string
+    ownerId?: StringFilter<"PlaceUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"PlaceUrbanExplorer"> | Date | string
+    validated?: BoolFilter<"PlaceUrbanExplorer"> | boolean
+    owner?: XOR<UserScalarRelationFilter, UserWhereInput>
+    reviews?: ReviewUrbanExplorerListRelationFilter
+    bookmarks?: BookmarkUrbanExplorerListRelationFilter
+    likes?: LikeUrbanExplorerListRelationFilter
+    reports?: ReportUrbanExplorerListRelationFilter
+  }, "id">
+
+  export type PlaceUrbanExplorerOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    category?: SortOrder
+    location?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+    _count?: PlaceUrbanExplorerCountOrderByAggregateInput
+    _max?: PlaceUrbanExplorerMaxOrderByAggregateInput
+    _min?: PlaceUrbanExplorerMinOrderByAggregateInput
+  }
+
+  export type PlaceUrbanExplorerScalarWhereWithAggregatesInput = {
+    AND?: PlaceUrbanExplorerScalarWhereWithAggregatesInput | PlaceUrbanExplorerScalarWhereWithAggregatesInput[]
+    OR?: PlaceUrbanExplorerScalarWhereWithAggregatesInput[]
+    NOT?: PlaceUrbanExplorerScalarWhereWithAggregatesInput | PlaceUrbanExplorerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"PlaceUrbanExplorer"> | string
+    name?: StringWithAggregatesFilter<"PlaceUrbanExplorer"> | string
+    category?: StringWithAggregatesFilter<"PlaceUrbanExplorer"> | string
+    location?: StringWithAggregatesFilter<"PlaceUrbanExplorer"> | string
+    description?: StringWithAggregatesFilter<"PlaceUrbanExplorer"> | string
+    ownerId?: StringWithAggregatesFilter<"PlaceUrbanExplorer"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"PlaceUrbanExplorer"> | Date | string
+    validated?: BoolWithAggregatesFilter<"PlaceUrbanExplorer"> | boolean
+  }
+
+  export type ReviewUrbanExplorerWhereInput = {
+    AND?: ReviewUrbanExplorerWhereInput | ReviewUrbanExplorerWhereInput[]
+    OR?: ReviewUrbanExplorerWhereInput[]
+    NOT?: ReviewUrbanExplorerWhereInput | ReviewUrbanExplorerWhereInput[]
+    id?: StringFilter<"ReviewUrbanExplorer"> | string
+    placeId?: StringFilter<"ReviewUrbanExplorer"> | string
+    userId?: StringFilter<"ReviewUrbanExplorer"> | string
+    rating?: IntFilter<"ReviewUrbanExplorer"> | number
+    comment?: StringFilter<"ReviewUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"ReviewUrbanExplorer"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    place?: XOR<PlaceUrbanExplorerScalarRelationFilter, PlaceUrbanExplorerWhereInput>
+    reports?: ReportUrbanExplorerListRelationFilter
+  }
+
+  export type ReviewUrbanExplorerOrderByWithRelationInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    place?: PlaceUrbanExplorerOrderByWithRelationInput
+    reports?: ReportUrbanExplorerOrderByRelationAggregateInput
+  }
+
+  export type ReviewUrbanExplorerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ReviewUrbanExplorerWhereInput | ReviewUrbanExplorerWhereInput[]
+    OR?: ReviewUrbanExplorerWhereInput[]
+    NOT?: ReviewUrbanExplorerWhereInput | ReviewUrbanExplorerWhereInput[]
+    placeId?: StringFilter<"ReviewUrbanExplorer"> | string
+    userId?: StringFilter<"ReviewUrbanExplorer"> | string
+    rating?: IntFilter<"ReviewUrbanExplorer"> | number
+    comment?: StringFilter<"ReviewUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"ReviewUrbanExplorer"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    place?: XOR<PlaceUrbanExplorerScalarRelationFilter, PlaceUrbanExplorerWhereInput>
+    reports?: ReportUrbanExplorerListRelationFilter
+  }, "id">
+
+  export type ReviewUrbanExplorerOrderByWithAggregationInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+    _count?: ReviewUrbanExplorerCountOrderByAggregateInput
+    _avg?: ReviewUrbanExplorerAvgOrderByAggregateInput
+    _max?: ReviewUrbanExplorerMaxOrderByAggregateInput
+    _min?: ReviewUrbanExplorerMinOrderByAggregateInput
+    _sum?: ReviewUrbanExplorerSumOrderByAggregateInput
+  }
+
+  export type ReviewUrbanExplorerScalarWhereWithAggregatesInput = {
+    AND?: ReviewUrbanExplorerScalarWhereWithAggregatesInput | ReviewUrbanExplorerScalarWhereWithAggregatesInput[]
+    OR?: ReviewUrbanExplorerScalarWhereWithAggregatesInput[]
+    NOT?: ReviewUrbanExplorerScalarWhereWithAggregatesInput | ReviewUrbanExplorerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ReviewUrbanExplorer"> | string
+    placeId?: StringWithAggregatesFilter<"ReviewUrbanExplorer"> | string
+    userId?: StringWithAggregatesFilter<"ReviewUrbanExplorer"> | string
+    rating?: IntWithAggregatesFilter<"ReviewUrbanExplorer"> | number
+    comment?: StringWithAggregatesFilter<"ReviewUrbanExplorer"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"ReviewUrbanExplorer"> | Date | string
+  }
+
+  export type LikeUrbanExplorerWhereInput = {
+    AND?: LikeUrbanExplorerWhereInput | LikeUrbanExplorerWhereInput[]
+    OR?: LikeUrbanExplorerWhereInput[]
+    NOT?: LikeUrbanExplorerWhereInput | LikeUrbanExplorerWhereInput[]
+    id?: StringFilter<"LikeUrbanExplorer"> | string
+    placeId?: StringFilter<"LikeUrbanExplorer"> | string
+    userId?: StringFilter<"LikeUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"LikeUrbanExplorer"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    place?: XOR<PlaceUrbanExplorerScalarRelationFilter, PlaceUrbanExplorerWhereInput>
+  }
+
+  export type LikeUrbanExplorerOrderByWithRelationInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    place?: PlaceUrbanExplorerOrderByWithRelationInput
+  }
+
+  export type LikeUrbanExplorerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    placeId_userId?: LikeUrbanExplorerPlaceIdUserIdCompoundUniqueInput
+    AND?: LikeUrbanExplorerWhereInput | LikeUrbanExplorerWhereInput[]
+    OR?: LikeUrbanExplorerWhereInput[]
+    NOT?: LikeUrbanExplorerWhereInput | LikeUrbanExplorerWhereInput[]
+    placeId?: StringFilter<"LikeUrbanExplorer"> | string
+    userId?: StringFilter<"LikeUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"LikeUrbanExplorer"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    place?: XOR<PlaceUrbanExplorerScalarRelationFilter, PlaceUrbanExplorerWhereInput>
+  }, "id" | "placeId_userId">
+
+  export type LikeUrbanExplorerOrderByWithAggregationInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    _count?: LikeUrbanExplorerCountOrderByAggregateInput
+    _max?: LikeUrbanExplorerMaxOrderByAggregateInput
+    _min?: LikeUrbanExplorerMinOrderByAggregateInput
+  }
+
+  export type LikeUrbanExplorerScalarWhereWithAggregatesInput = {
+    AND?: LikeUrbanExplorerScalarWhereWithAggregatesInput | LikeUrbanExplorerScalarWhereWithAggregatesInput[]
+    OR?: LikeUrbanExplorerScalarWhereWithAggregatesInput[]
+    NOT?: LikeUrbanExplorerScalarWhereWithAggregatesInput | LikeUrbanExplorerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"LikeUrbanExplorer"> | string
+    placeId?: StringWithAggregatesFilter<"LikeUrbanExplorer"> | string
+    userId?: StringWithAggregatesFilter<"LikeUrbanExplorer"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"LikeUrbanExplorer"> | Date | string
+  }
+
+  export type BookmarkUrbanExplorerWhereInput = {
+    AND?: BookmarkUrbanExplorerWhereInput | BookmarkUrbanExplorerWhereInput[]
+    OR?: BookmarkUrbanExplorerWhereInput[]
+    NOT?: BookmarkUrbanExplorerWhereInput | BookmarkUrbanExplorerWhereInput[]
+    id?: StringFilter<"BookmarkUrbanExplorer"> | string
+    placeId?: StringFilter<"BookmarkUrbanExplorer"> | string
+    userId?: StringFilter<"BookmarkUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"BookmarkUrbanExplorer"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    place?: XOR<PlaceUrbanExplorerScalarRelationFilter, PlaceUrbanExplorerWhereInput>
+  }
+
+  export type BookmarkUrbanExplorerOrderByWithRelationInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    place?: PlaceUrbanExplorerOrderByWithRelationInput
+  }
+
+  export type BookmarkUrbanExplorerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    placeId_userId?: BookmarkUrbanExplorerPlaceIdUserIdCompoundUniqueInput
+    AND?: BookmarkUrbanExplorerWhereInput | BookmarkUrbanExplorerWhereInput[]
+    OR?: BookmarkUrbanExplorerWhereInput[]
+    NOT?: BookmarkUrbanExplorerWhereInput | BookmarkUrbanExplorerWhereInput[]
+    placeId?: StringFilter<"BookmarkUrbanExplorer"> | string
+    userId?: StringFilter<"BookmarkUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"BookmarkUrbanExplorer"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    place?: XOR<PlaceUrbanExplorerScalarRelationFilter, PlaceUrbanExplorerWhereInput>
+  }, "id" | "placeId_userId">
+
+  export type BookmarkUrbanExplorerOrderByWithAggregationInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    _count?: BookmarkUrbanExplorerCountOrderByAggregateInput
+    _max?: BookmarkUrbanExplorerMaxOrderByAggregateInput
+    _min?: BookmarkUrbanExplorerMinOrderByAggregateInput
+  }
+
+  export type BookmarkUrbanExplorerScalarWhereWithAggregatesInput = {
+    AND?: BookmarkUrbanExplorerScalarWhereWithAggregatesInput | BookmarkUrbanExplorerScalarWhereWithAggregatesInput[]
+    OR?: BookmarkUrbanExplorerScalarWhereWithAggregatesInput[]
+    NOT?: BookmarkUrbanExplorerScalarWhereWithAggregatesInput | BookmarkUrbanExplorerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"BookmarkUrbanExplorer"> | string
+    placeId?: StringWithAggregatesFilter<"BookmarkUrbanExplorer"> | string
+    userId?: StringWithAggregatesFilter<"BookmarkUrbanExplorer"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"BookmarkUrbanExplorer"> | Date | string
+  }
+
+  export type ReportUrbanExplorerWhereInput = {
+    AND?: ReportUrbanExplorerWhereInput | ReportUrbanExplorerWhereInput[]
+    OR?: ReportUrbanExplorerWhereInput[]
+    NOT?: ReportUrbanExplorerWhereInput | ReportUrbanExplorerWhereInput[]
+    id?: StringFilter<"ReportUrbanExplorer"> | string
+    placeId?: StringNullableFilter<"ReportUrbanExplorer"> | string | null
+    reviewId?: StringNullableFilter<"ReportUrbanExplorer"> | string | null
+    userId?: StringFilter<"ReportUrbanExplorer"> | string
+    reason?: StringFilter<"ReportUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"ReportUrbanExplorer"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    place?: XOR<PlaceUrbanExplorerNullableScalarRelationFilter, PlaceUrbanExplorerWhereInput> | null
+    review?: XOR<ReviewUrbanExplorerNullableScalarRelationFilter, ReviewUrbanExplorerWhereInput> | null
+  }
+
+  export type ReportUrbanExplorerOrderByWithRelationInput = {
+    id?: SortOrder
+    placeId?: SortOrderInput | SortOrder
+    reviewId?: SortOrderInput | SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    place?: PlaceUrbanExplorerOrderByWithRelationInput
+    review?: ReviewUrbanExplorerOrderByWithRelationInput
+  }
+
+  export type ReportUrbanExplorerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ReportUrbanExplorerWhereInput | ReportUrbanExplorerWhereInput[]
+    OR?: ReportUrbanExplorerWhereInput[]
+    NOT?: ReportUrbanExplorerWhereInput | ReportUrbanExplorerWhereInput[]
+    placeId?: StringNullableFilter<"ReportUrbanExplorer"> | string | null
+    reviewId?: StringNullableFilter<"ReportUrbanExplorer"> | string | null
+    userId?: StringFilter<"ReportUrbanExplorer"> | string
+    reason?: StringFilter<"ReportUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"ReportUrbanExplorer"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    place?: XOR<PlaceUrbanExplorerNullableScalarRelationFilter, PlaceUrbanExplorerWhereInput> | null
+    review?: XOR<ReviewUrbanExplorerNullableScalarRelationFilter, ReviewUrbanExplorerWhereInput> | null
+  }, "id">
+
+  export type ReportUrbanExplorerOrderByWithAggregationInput = {
+    id?: SortOrder
+    placeId?: SortOrderInput | SortOrder
+    reviewId?: SortOrderInput | SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
+    _count?: ReportUrbanExplorerCountOrderByAggregateInput
+    _max?: ReportUrbanExplorerMaxOrderByAggregateInput
+    _min?: ReportUrbanExplorerMinOrderByAggregateInput
+  }
+
+  export type ReportUrbanExplorerScalarWhereWithAggregatesInput = {
+    AND?: ReportUrbanExplorerScalarWhereWithAggregatesInput | ReportUrbanExplorerScalarWhereWithAggregatesInput[]
+    OR?: ReportUrbanExplorerScalarWhereWithAggregatesInput[]
+    NOT?: ReportUrbanExplorerScalarWhereWithAggregatesInput | ReportUrbanExplorerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ReportUrbanExplorer"> | string
+    placeId?: StringNullableWithAggregatesFilter<"ReportUrbanExplorer"> | string | null
+    reviewId?: StringNullableWithAggregatesFilter<"ReportUrbanExplorer"> | string | null
+    userId?: StringWithAggregatesFilter<"ReportUrbanExplorer"> | string
+    reason?: StringWithAggregatesFilter<"ReportUrbanExplorer"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"ReportUrbanExplorer"> | Date | string
+  }
+
   export type UserCreateInput = {
     id?: string
     email: string
@@ -8801,6 +15519,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -8815,6 +15538,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
@@ -8829,6 +15557,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -8843,6 +15576,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -9169,6 +15907,317 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type PlaceUrbanExplorerCreateInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    createdAt?: Date | string
+    validated?: boolean
+    owner: UserCreateNestedOneWithoutPlaceUrbanExplorerInput
+    reviews?: ReviewUrbanExplorerCreateNestedManyWithoutPlaceInput
+    bookmarks?: BookmarkUrbanExplorerCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedCreateInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    ownerId: string
+    createdAt?: Date | string
+    validated?: boolean
+    reviews?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    bookmarks?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    owner?: UserUpdateOneRequiredWithoutPlaceUrbanExplorerNestedInput
+    reviews?: ReviewUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    bookmarks?: BookmarkUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    ownerId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    reviews?: ReviewUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    bookmarks?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type PlaceUrbanExplorerCreateManyInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    ownerId: string
+    createdAt?: Date | string
+    validated?: boolean
+  }
+
+  export type PlaceUrbanExplorerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type PlaceUrbanExplorerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    ownerId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type ReviewUrbanExplorerCreateInput = {
+    id?: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutReviewUrbanExplorerInput
+    place: PlaceUrbanExplorerCreateNestedOneWithoutReviewsInput
+    reports?: ReportUrbanExplorerCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedCreateInput = {
+    id?: string
+    placeId: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    reports?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewUrbanExplorerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutReviewUrbanExplorerNestedInput
+    place?: PlaceUrbanExplorerUpdateOneRequiredWithoutReviewsNestedInput
+    reports?: ReportUrbanExplorerUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reports?: ReportUrbanExplorerUncheckedUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewUrbanExplorerCreateManyInput = {
+    id?: string
+    placeId: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type ReviewUrbanExplorerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewUrbanExplorerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeUrbanExplorerCreateInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutLikeUrbanExplorerInput
+    place: PlaceUrbanExplorerCreateNestedOneWithoutLikesInput
+  }
+
+  export type LikeUrbanExplorerUncheckedCreateInput = {
+    id?: string
+    placeId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeUrbanExplorerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutLikeUrbanExplorerNestedInput
+    place?: PlaceUrbanExplorerUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type LikeUrbanExplorerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeUrbanExplorerCreateManyInput = {
+    id?: string
+    placeId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeUrbanExplorerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeUrbanExplorerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkUrbanExplorerCreateInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutBookmarkUrbanExplorerInput
+    place: PlaceUrbanExplorerCreateNestedOneWithoutBookmarksInput
+  }
+
+  export type BookmarkUrbanExplorerUncheckedCreateInput = {
+    id?: string
+    placeId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkUrbanExplorerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutBookmarkUrbanExplorerNestedInput
+    place?: PlaceUrbanExplorerUpdateOneRequiredWithoutBookmarksNestedInput
+  }
+
+  export type BookmarkUrbanExplorerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkUrbanExplorerCreateManyInput = {
+    id?: string
+    placeId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkUrbanExplorerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkUrbanExplorerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportUrbanExplorerCreateInput = {
+    id?: string
+    reason: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutReportUrbanExplorerInput
+    place?: PlaceUrbanExplorerCreateNestedOneWithoutReportsInput
+    review?: ReviewUrbanExplorerCreateNestedOneWithoutReportsInput
+  }
+
+  export type ReportUrbanExplorerUncheckedCreateInput = {
+    id?: string
+    placeId?: string | null
+    reviewId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportUrbanExplorerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutReportUrbanExplorerNestedInput
+    place?: PlaceUrbanExplorerUpdateOneWithoutReportsNestedInput
+    review?: ReviewUrbanExplorerUpdateOneWithoutReportsNestedInput
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: NullableStringFieldUpdateOperationsInput | string | null
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportUrbanExplorerCreateManyInput = {
+    id?: string
+    placeId?: string | null
+    reviewId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportUrbanExplorerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: NullableStringFieldUpdateOperationsInput | string | null
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -9225,6 +16274,36 @@ export namespace Prisma {
     none?: ReportDIYHomesWhereInput
   }
 
+  export type PlaceUrbanExplorerListRelationFilter = {
+    every?: PlaceUrbanExplorerWhereInput
+    some?: PlaceUrbanExplorerWhereInput
+    none?: PlaceUrbanExplorerWhereInput
+  }
+
+  export type ReviewUrbanExplorerListRelationFilter = {
+    every?: ReviewUrbanExplorerWhereInput
+    some?: ReviewUrbanExplorerWhereInput
+    none?: ReviewUrbanExplorerWhereInput
+  }
+
+  export type LikeUrbanExplorerListRelationFilter = {
+    every?: LikeUrbanExplorerWhereInput
+    some?: LikeUrbanExplorerWhereInput
+    none?: LikeUrbanExplorerWhereInput
+  }
+
+  export type BookmarkUrbanExplorerListRelationFilter = {
+    every?: BookmarkUrbanExplorerWhereInput
+    some?: BookmarkUrbanExplorerWhereInput
+    none?: BookmarkUrbanExplorerWhereInput
+  }
+
+  export type ReportUrbanExplorerListRelationFilter = {
+    every?: ReportUrbanExplorerWhereInput
+    some?: ReportUrbanExplorerWhereInput
+    none?: ReportUrbanExplorerWhereInput
+  }
+
   export type PostDIYHomesOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
@@ -9242,6 +16321,26 @@ export namespace Prisma {
   }
 
   export type ReportDIYHomesOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type PlaceUrbanExplorerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ReviewUrbanExplorerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type LikeUrbanExplorerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type BookmarkUrbanExplorerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ReportUrbanExplorerOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -9530,6 +16629,181 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
+  export type BoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
+  export type PlaceUrbanExplorerCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    category?: SortOrder
+    location?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+  }
+
+  export type PlaceUrbanExplorerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    category?: SortOrder
+    location?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+  }
+
+  export type PlaceUrbanExplorerMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    category?: SortOrder
+    location?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+  }
+
+  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type PlaceUrbanExplorerScalarRelationFilter = {
+    is?: PlaceUrbanExplorerWhereInput
+    isNot?: PlaceUrbanExplorerWhereInput
+  }
+
+  export type ReviewUrbanExplorerCountOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewUrbanExplorerAvgOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type ReviewUrbanExplorerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewUrbanExplorerMinOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewUrbanExplorerSumOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type LikeUrbanExplorerPlaceIdUserIdCompoundUniqueInput = {
+    placeId: string
+    userId: string
+  }
+
+  export type LikeUrbanExplorerCountOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LikeUrbanExplorerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LikeUrbanExplorerMinOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type BookmarkUrbanExplorerPlaceIdUserIdCompoundUniqueInput = {
+    placeId: string
+    userId: string
+  }
+
+  export type BookmarkUrbanExplorerCountOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type BookmarkUrbanExplorerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type BookmarkUrbanExplorerMinOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type PlaceUrbanExplorerNullableScalarRelationFilter = {
+    is?: PlaceUrbanExplorerWhereInput | null
+    isNot?: PlaceUrbanExplorerWhereInput | null
+  }
+
+  export type ReviewUrbanExplorerNullableScalarRelationFilter = {
+    is?: ReviewUrbanExplorerWhereInput | null
+    isNot?: ReviewUrbanExplorerWhereInput | null
+  }
+
+  export type ReportUrbanExplorerCountOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    reviewId?: SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReportUrbanExplorerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    reviewId?: SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReportUrbanExplorerMinOrderByAggregateInput = {
+    id?: SortOrder
+    placeId?: SortOrder
+    reviewId?: SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
+  }
+
   export type PostDIYHomesCreateNestedManyWithoutUserInput = {
     create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
     connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
@@ -9565,6 +16839,41 @@ export namespace Prisma {
     connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
   }
 
+  export type PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutOwnerInput, PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput> | PlaceUrbanExplorerCreateWithoutOwnerInput[] | PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutOwnerInput | PlaceUrbanExplorerCreateOrConnectWithoutOwnerInput[]
+    createMany?: PlaceUrbanExplorerCreateManyOwnerInputEnvelope
+    connect?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type ReviewUrbanExplorerCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutUserInput, ReviewUrbanExplorerUncheckedCreateWithoutUserInput> | ReviewUrbanExplorerCreateWithoutUserInput[] | ReviewUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutUserInput | ReviewUrbanExplorerCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewUrbanExplorerCreateManyUserInputEnvelope
+    connect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type LikeUrbanExplorerCreateNestedManyWithoutUserInput = {
+    create?: XOR<LikeUrbanExplorerCreateWithoutUserInput, LikeUrbanExplorerUncheckedCreateWithoutUserInput> | LikeUrbanExplorerCreateWithoutUserInput[] | LikeUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeUrbanExplorerCreateOrConnectWithoutUserInput | LikeUrbanExplorerCreateOrConnectWithoutUserInput[]
+    createMany?: LikeUrbanExplorerCreateManyUserInputEnvelope
+    connect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type BookmarkUrbanExplorerCreateNestedManyWithoutUserInput = {
+    create?: XOR<BookmarkUrbanExplorerCreateWithoutUserInput, BookmarkUrbanExplorerUncheckedCreateWithoutUserInput> | BookmarkUrbanExplorerCreateWithoutUserInput[] | BookmarkUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkUrbanExplorerCreateOrConnectWithoutUserInput | BookmarkUrbanExplorerCreateOrConnectWithoutUserInput[]
+    createMany?: BookmarkUrbanExplorerCreateManyUserInputEnvelope
+    connect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type ReportUrbanExplorerCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutUserInput, ReportUrbanExplorerUncheckedCreateWithoutUserInput> | ReportUrbanExplorerCreateWithoutUserInput[] | ReportUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutUserInput | ReportUrbanExplorerCreateOrConnectWithoutUserInput[]
+    createMany?: ReportUrbanExplorerCreateManyUserInputEnvelope
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+  }
+
   export type PostDIYHomesUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
     connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
@@ -9598,6 +16907,41 @@ export namespace Prisma {
     connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutUserInput | ReportDIYHomesCreateOrConnectWithoutUserInput[]
     createMany?: ReportDIYHomesCreateManyUserInputEnvelope
     connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+  }
+
+  export type PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutOwnerInput, PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput> | PlaceUrbanExplorerCreateWithoutOwnerInput[] | PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutOwnerInput | PlaceUrbanExplorerCreateOrConnectWithoutOwnerInput[]
+    createMany?: PlaceUrbanExplorerCreateManyOwnerInputEnvelope
+    connect?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutUserInput, ReviewUrbanExplorerUncheckedCreateWithoutUserInput> | ReviewUrbanExplorerCreateWithoutUserInput[] | ReviewUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutUserInput | ReviewUrbanExplorerCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewUrbanExplorerCreateManyUserInputEnvelope
+    connect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<LikeUrbanExplorerCreateWithoutUserInput, LikeUrbanExplorerUncheckedCreateWithoutUserInput> | LikeUrbanExplorerCreateWithoutUserInput[] | LikeUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeUrbanExplorerCreateOrConnectWithoutUserInput | LikeUrbanExplorerCreateOrConnectWithoutUserInput[]
+    createMany?: LikeUrbanExplorerCreateManyUserInputEnvelope
+    connect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<BookmarkUrbanExplorerCreateWithoutUserInput, BookmarkUrbanExplorerUncheckedCreateWithoutUserInput> | BookmarkUrbanExplorerCreateWithoutUserInput[] | BookmarkUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkUrbanExplorerCreateOrConnectWithoutUserInput | BookmarkUrbanExplorerCreateOrConnectWithoutUserInput[]
+    createMany?: BookmarkUrbanExplorerCreateManyUserInputEnvelope
+    connect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutUserInput, ReportUrbanExplorerUncheckedCreateWithoutUserInput> | ReportUrbanExplorerCreateWithoutUserInput[] | ReportUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutUserInput | ReportUrbanExplorerCreateOrConnectWithoutUserInput[]
+    createMany?: ReportUrbanExplorerCreateManyUserInputEnvelope
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -9678,6 +17022,76 @@ export namespace Prisma {
     deleteMany?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
   }
 
+  export type PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutOwnerInput, PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput> | PlaceUrbanExplorerCreateWithoutOwnerInput[] | PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutOwnerInput | PlaceUrbanExplorerCreateOrConnectWithoutOwnerInput[]
+    upsert?: PlaceUrbanExplorerUpsertWithWhereUniqueWithoutOwnerInput | PlaceUrbanExplorerUpsertWithWhereUniqueWithoutOwnerInput[]
+    createMany?: PlaceUrbanExplorerCreateManyOwnerInputEnvelope
+    set?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+    disconnect?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+    delete?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+    connect?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+    update?: PlaceUrbanExplorerUpdateWithWhereUniqueWithoutOwnerInput | PlaceUrbanExplorerUpdateWithWhereUniqueWithoutOwnerInput[]
+    updateMany?: PlaceUrbanExplorerUpdateManyWithWhereWithoutOwnerInput | PlaceUrbanExplorerUpdateManyWithWhereWithoutOwnerInput[]
+    deleteMany?: PlaceUrbanExplorerScalarWhereInput | PlaceUrbanExplorerScalarWhereInput[]
+  }
+
+  export type ReviewUrbanExplorerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutUserInput, ReviewUrbanExplorerUncheckedCreateWithoutUserInput> | ReviewUrbanExplorerCreateWithoutUserInput[] | ReviewUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutUserInput | ReviewUrbanExplorerCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewUrbanExplorerUpsertWithWhereUniqueWithoutUserInput | ReviewUrbanExplorerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewUrbanExplorerCreateManyUserInputEnvelope
+    set?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    delete?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    connect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    update?: ReviewUrbanExplorerUpdateWithWhereUniqueWithoutUserInput | ReviewUrbanExplorerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewUrbanExplorerUpdateManyWithWhereWithoutUserInput | ReviewUrbanExplorerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewUrbanExplorerScalarWhereInput | ReviewUrbanExplorerScalarWhereInput[]
+  }
+
+  export type LikeUrbanExplorerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LikeUrbanExplorerCreateWithoutUserInput, LikeUrbanExplorerUncheckedCreateWithoutUserInput> | LikeUrbanExplorerCreateWithoutUserInput[] | LikeUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeUrbanExplorerCreateOrConnectWithoutUserInput | LikeUrbanExplorerCreateOrConnectWithoutUserInput[]
+    upsert?: LikeUrbanExplorerUpsertWithWhereUniqueWithoutUserInput | LikeUrbanExplorerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LikeUrbanExplorerCreateManyUserInputEnvelope
+    set?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    disconnect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    delete?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    connect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    update?: LikeUrbanExplorerUpdateWithWhereUniqueWithoutUserInput | LikeUrbanExplorerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LikeUrbanExplorerUpdateManyWithWhereWithoutUserInput | LikeUrbanExplorerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LikeUrbanExplorerScalarWhereInput | LikeUrbanExplorerScalarWhereInput[]
+  }
+
+  export type BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<BookmarkUrbanExplorerCreateWithoutUserInput, BookmarkUrbanExplorerUncheckedCreateWithoutUserInput> | BookmarkUrbanExplorerCreateWithoutUserInput[] | BookmarkUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkUrbanExplorerCreateOrConnectWithoutUserInput | BookmarkUrbanExplorerCreateOrConnectWithoutUserInput[]
+    upsert?: BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutUserInput | BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: BookmarkUrbanExplorerCreateManyUserInputEnvelope
+    set?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    disconnect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    delete?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    connect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    update?: BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutUserInput | BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: BookmarkUrbanExplorerUpdateManyWithWhereWithoutUserInput | BookmarkUrbanExplorerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: BookmarkUrbanExplorerScalarWhereInput | BookmarkUrbanExplorerScalarWhereInput[]
+  }
+
+  export type ReportUrbanExplorerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutUserInput, ReportUrbanExplorerUncheckedCreateWithoutUserInput> | ReportUrbanExplorerCreateWithoutUserInput[] | ReportUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutUserInput | ReportUrbanExplorerCreateOrConnectWithoutUserInput[]
+    upsert?: ReportUrbanExplorerUpsertWithWhereUniqueWithoutUserInput | ReportUrbanExplorerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReportUrbanExplorerCreateManyUserInputEnvelope
+    set?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    delete?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    update?: ReportUrbanExplorerUpdateWithWhereUniqueWithoutUserInput | ReportUrbanExplorerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReportUrbanExplorerUpdateManyWithWhereWithoutUserInput | ReportUrbanExplorerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
+  }
+
   export type PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput = {
     create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
     connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
@@ -9746,6 +17160,76 @@ export namespace Prisma {
     update?: ReportDIYHomesUpdateWithWhereUniqueWithoutUserInput | ReportDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
     updateMany?: ReportDIYHomesUpdateManyWithWhereWithoutUserInput | ReportDIYHomesUpdateManyWithWhereWithoutUserInput[]
     deleteMany?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
+  }
+
+  export type PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutOwnerInput, PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput> | PlaceUrbanExplorerCreateWithoutOwnerInput[] | PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutOwnerInput | PlaceUrbanExplorerCreateOrConnectWithoutOwnerInput[]
+    upsert?: PlaceUrbanExplorerUpsertWithWhereUniqueWithoutOwnerInput | PlaceUrbanExplorerUpsertWithWhereUniqueWithoutOwnerInput[]
+    createMany?: PlaceUrbanExplorerCreateManyOwnerInputEnvelope
+    set?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+    disconnect?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+    delete?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+    connect?: PlaceUrbanExplorerWhereUniqueInput | PlaceUrbanExplorerWhereUniqueInput[]
+    update?: PlaceUrbanExplorerUpdateWithWhereUniqueWithoutOwnerInput | PlaceUrbanExplorerUpdateWithWhereUniqueWithoutOwnerInput[]
+    updateMany?: PlaceUrbanExplorerUpdateManyWithWhereWithoutOwnerInput | PlaceUrbanExplorerUpdateManyWithWhereWithoutOwnerInput[]
+    deleteMany?: PlaceUrbanExplorerScalarWhereInput | PlaceUrbanExplorerScalarWhereInput[]
+  }
+
+  export type ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutUserInput, ReviewUrbanExplorerUncheckedCreateWithoutUserInput> | ReviewUrbanExplorerCreateWithoutUserInput[] | ReviewUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutUserInput | ReviewUrbanExplorerCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewUrbanExplorerUpsertWithWhereUniqueWithoutUserInput | ReviewUrbanExplorerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewUrbanExplorerCreateManyUserInputEnvelope
+    set?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    delete?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    connect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    update?: ReviewUrbanExplorerUpdateWithWhereUniqueWithoutUserInput | ReviewUrbanExplorerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewUrbanExplorerUpdateManyWithWhereWithoutUserInput | ReviewUrbanExplorerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewUrbanExplorerScalarWhereInput | ReviewUrbanExplorerScalarWhereInput[]
+  }
+
+  export type LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LikeUrbanExplorerCreateWithoutUserInput, LikeUrbanExplorerUncheckedCreateWithoutUserInput> | LikeUrbanExplorerCreateWithoutUserInput[] | LikeUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeUrbanExplorerCreateOrConnectWithoutUserInput | LikeUrbanExplorerCreateOrConnectWithoutUserInput[]
+    upsert?: LikeUrbanExplorerUpsertWithWhereUniqueWithoutUserInput | LikeUrbanExplorerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LikeUrbanExplorerCreateManyUserInputEnvelope
+    set?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    disconnect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    delete?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    connect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    update?: LikeUrbanExplorerUpdateWithWhereUniqueWithoutUserInput | LikeUrbanExplorerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LikeUrbanExplorerUpdateManyWithWhereWithoutUserInput | LikeUrbanExplorerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LikeUrbanExplorerScalarWhereInput | LikeUrbanExplorerScalarWhereInput[]
+  }
+
+  export type BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<BookmarkUrbanExplorerCreateWithoutUserInput, BookmarkUrbanExplorerUncheckedCreateWithoutUserInput> | BookmarkUrbanExplorerCreateWithoutUserInput[] | BookmarkUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkUrbanExplorerCreateOrConnectWithoutUserInput | BookmarkUrbanExplorerCreateOrConnectWithoutUserInput[]
+    upsert?: BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutUserInput | BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: BookmarkUrbanExplorerCreateManyUserInputEnvelope
+    set?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    disconnect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    delete?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    connect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    update?: BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutUserInput | BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: BookmarkUrbanExplorerUpdateManyWithWhereWithoutUserInput | BookmarkUrbanExplorerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: BookmarkUrbanExplorerScalarWhereInput | BookmarkUrbanExplorerScalarWhereInput[]
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutUserInput, ReportUrbanExplorerUncheckedCreateWithoutUserInput> | ReportUrbanExplorerCreateWithoutUserInput[] | ReportUrbanExplorerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutUserInput | ReportUrbanExplorerCreateOrConnectWithoutUserInput[]
+    upsert?: ReportUrbanExplorerUpsertWithWhereUniqueWithoutUserInput | ReportUrbanExplorerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReportUrbanExplorerCreateManyUserInputEnvelope
+    set?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    delete?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    update?: ReportUrbanExplorerUpdateWithWhereUniqueWithoutUserInput | ReportUrbanExplorerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReportUrbanExplorerUpdateManyWithWhereWithoutUserInput | ReportUrbanExplorerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutPostsInput = {
@@ -10114,6 +17598,364 @@ export namespace Prisma {
     set?: string | null
   }
 
+  export type UserCreateNestedOneWithoutPlaceUrbanExplorerInput = {
+    create?: XOR<UserCreateWithoutPlaceUrbanExplorerInput, UserUncheckedCreateWithoutPlaceUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutPlaceUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type ReviewUrbanExplorerCreateNestedManyWithoutPlaceInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutPlaceInput, ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput> | ReviewUrbanExplorerCreateWithoutPlaceInput[] | ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutPlaceInput | ReviewUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    createMany?: ReviewUrbanExplorerCreateManyPlaceInputEnvelope
+    connect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type BookmarkUrbanExplorerCreateNestedManyWithoutPlaceInput = {
+    create?: XOR<BookmarkUrbanExplorerCreateWithoutPlaceInput, BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput> | BookmarkUrbanExplorerCreateWithoutPlaceInput[] | BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: BookmarkUrbanExplorerCreateOrConnectWithoutPlaceInput | BookmarkUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    createMany?: BookmarkUrbanExplorerCreateManyPlaceInputEnvelope
+    connect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type LikeUrbanExplorerCreateNestedManyWithoutPlaceInput = {
+    create?: XOR<LikeUrbanExplorerCreateWithoutPlaceInput, LikeUrbanExplorerUncheckedCreateWithoutPlaceInput> | LikeUrbanExplorerCreateWithoutPlaceInput[] | LikeUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: LikeUrbanExplorerCreateOrConnectWithoutPlaceInput | LikeUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    createMany?: LikeUrbanExplorerCreateManyPlaceInputEnvelope
+    connect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type ReportUrbanExplorerCreateNestedManyWithoutPlaceInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutPlaceInput, ReportUrbanExplorerUncheckedCreateWithoutPlaceInput> | ReportUrbanExplorerCreateWithoutPlaceInput[] | ReportUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutPlaceInput | ReportUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    createMany?: ReportUrbanExplorerCreateManyPlaceInputEnvelope
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type ReviewUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutPlaceInput, ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput> | ReviewUrbanExplorerCreateWithoutPlaceInput[] | ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutPlaceInput | ReviewUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    createMany?: ReviewUrbanExplorerCreateManyPlaceInputEnvelope
+    connect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput = {
+    create?: XOR<BookmarkUrbanExplorerCreateWithoutPlaceInput, BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput> | BookmarkUrbanExplorerCreateWithoutPlaceInput[] | BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: BookmarkUrbanExplorerCreateOrConnectWithoutPlaceInput | BookmarkUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    createMany?: BookmarkUrbanExplorerCreateManyPlaceInputEnvelope
+    connect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type LikeUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput = {
+    create?: XOR<LikeUrbanExplorerCreateWithoutPlaceInput, LikeUrbanExplorerUncheckedCreateWithoutPlaceInput> | LikeUrbanExplorerCreateWithoutPlaceInput[] | LikeUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: LikeUrbanExplorerCreateOrConnectWithoutPlaceInput | LikeUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    createMany?: LikeUrbanExplorerCreateManyPlaceInputEnvelope
+    connect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type ReportUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutPlaceInput, ReportUrbanExplorerUncheckedCreateWithoutPlaceInput> | ReportUrbanExplorerCreateWithoutPlaceInput[] | ReportUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutPlaceInput | ReportUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    createMany?: ReportUrbanExplorerCreateManyPlaceInputEnvelope
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type BoolFieldUpdateOperationsInput = {
+    set?: boolean
+  }
+
+  export type UserUpdateOneRequiredWithoutPlaceUrbanExplorerNestedInput = {
+    create?: XOR<UserCreateWithoutPlaceUrbanExplorerInput, UserUncheckedCreateWithoutPlaceUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutPlaceUrbanExplorerInput
+    upsert?: UserUpsertWithoutPlaceUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutPlaceUrbanExplorerInput, UserUpdateWithoutPlaceUrbanExplorerInput>, UserUncheckedUpdateWithoutPlaceUrbanExplorerInput>
+  }
+
+  export type ReviewUrbanExplorerUpdateManyWithoutPlaceNestedInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutPlaceInput, ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput> | ReviewUrbanExplorerCreateWithoutPlaceInput[] | ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutPlaceInput | ReviewUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    upsert?: ReviewUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput | ReviewUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput[]
+    createMany?: ReviewUrbanExplorerCreateManyPlaceInputEnvelope
+    set?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    delete?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    connect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    update?: ReviewUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput | ReviewUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput[]
+    updateMany?: ReviewUrbanExplorerUpdateManyWithWhereWithoutPlaceInput | ReviewUrbanExplorerUpdateManyWithWhereWithoutPlaceInput[]
+    deleteMany?: ReviewUrbanExplorerScalarWhereInput | ReviewUrbanExplorerScalarWhereInput[]
+  }
+
+  export type BookmarkUrbanExplorerUpdateManyWithoutPlaceNestedInput = {
+    create?: XOR<BookmarkUrbanExplorerCreateWithoutPlaceInput, BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput> | BookmarkUrbanExplorerCreateWithoutPlaceInput[] | BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: BookmarkUrbanExplorerCreateOrConnectWithoutPlaceInput | BookmarkUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    upsert?: BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput | BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput[]
+    createMany?: BookmarkUrbanExplorerCreateManyPlaceInputEnvelope
+    set?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    disconnect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    delete?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    connect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    update?: BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput | BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput[]
+    updateMany?: BookmarkUrbanExplorerUpdateManyWithWhereWithoutPlaceInput | BookmarkUrbanExplorerUpdateManyWithWhereWithoutPlaceInput[]
+    deleteMany?: BookmarkUrbanExplorerScalarWhereInput | BookmarkUrbanExplorerScalarWhereInput[]
+  }
+
+  export type LikeUrbanExplorerUpdateManyWithoutPlaceNestedInput = {
+    create?: XOR<LikeUrbanExplorerCreateWithoutPlaceInput, LikeUrbanExplorerUncheckedCreateWithoutPlaceInput> | LikeUrbanExplorerCreateWithoutPlaceInput[] | LikeUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: LikeUrbanExplorerCreateOrConnectWithoutPlaceInput | LikeUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    upsert?: LikeUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput | LikeUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput[]
+    createMany?: LikeUrbanExplorerCreateManyPlaceInputEnvelope
+    set?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    disconnect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    delete?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    connect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    update?: LikeUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput | LikeUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput[]
+    updateMany?: LikeUrbanExplorerUpdateManyWithWhereWithoutPlaceInput | LikeUrbanExplorerUpdateManyWithWhereWithoutPlaceInput[]
+    deleteMany?: LikeUrbanExplorerScalarWhereInput | LikeUrbanExplorerScalarWhereInput[]
+  }
+
+  export type ReportUrbanExplorerUpdateManyWithoutPlaceNestedInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutPlaceInput, ReportUrbanExplorerUncheckedCreateWithoutPlaceInput> | ReportUrbanExplorerCreateWithoutPlaceInput[] | ReportUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutPlaceInput | ReportUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    upsert?: ReportUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput | ReportUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput[]
+    createMany?: ReportUrbanExplorerCreateManyPlaceInputEnvelope
+    set?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    delete?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    update?: ReportUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput | ReportUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput[]
+    updateMany?: ReportUrbanExplorerUpdateManyWithWhereWithoutPlaceInput | ReportUrbanExplorerUpdateManyWithWhereWithoutPlaceInput[]
+    deleteMany?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
+  }
+
+  export type ReviewUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutPlaceInput, ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput> | ReviewUrbanExplorerCreateWithoutPlaceInput[] | ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutPlaceInput | ReviewUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    upsert?: ReviewUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput | ReviewUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput[]
+    createMany?: ReviewUrbanExplorerCreateManyPlaceInputEnvelope
+    set?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    delete?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    connect?: ReviewUrbanExplorerWhereUniqueInput | ReviewUrbanExplorerWhereUniqueInput[]
+    update?: ReviewUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput | ReviewUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput[]
+    updateMany?: ReviewUrbanExplorerUpdateManyWithWhereWithoutPlaceInput | ReviewUrbanExplorerUpdateManyWithWhereWithoutPlaceInput[]
+    deleteMany?: ReviewUrbanExplorerScalarWhereInput | ReviewUrbanExplorerScalarWhereInput[]
+  }
+
+  export type BookmarkUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput = {
+    create?: XOR<BookmarkUrbanExplorerCreateWithoutPlaceInput, BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput> | BookmarkUrbanExplorerCreateWithoutPlaceInput[] | BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: BookmarkUrbanExplorerCreateOrConnectWithoutPlaceInput | BookmarkUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    upsert?: BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput | BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput[]
+    createMany?: BookmarkUrbanExplorerCreateManyPlaceInputEnvelope
+    set?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    disconnect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    delete?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    connect?: BookmarkUrbanExplorerWhereUniqueInput | BookmarkUrbanExplorerWhereUniqueInput[]
+    update?: BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput | BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput[]
+    updateMany?: BookmarkUrbanExplorerUpdateManyWithWhereWithoutPlaceInput | BookmarkUrbanExplorerUpdateManyWithWhereWithoutPlaceInput[]
+    deleteMany?: BookmarkUrbanExplorerScalarWhereInput | BookmarkUrbanExplorerScalarWhereInput[]
+  }
+
+  export type LikeUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput = {
+    create?: XOR<LikeUrbanExplorerCreateWithoutPlaceInput, LikeUrbanExplorerUncheckedCreateWithoutPlaceInput> | LikeUrbanExplorerCreateWithoutPlaceInput[] | LikeUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: LikeUrbanExplorerCreateOrConnectWithoutPlaceInput | LikeUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    upsert?: LikeUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput | LikeUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput[]
+    createMany?: LikeUrbanExplorerCreateManyPlaceInputEnvelope
+    set?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    disconnect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    delete?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    connect?: LikeUrbanExplorerWhereUniqueInput | LikeUrbanExplorerWhereUniqueInput[]
+    update?: LikeUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput | LikeUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput[]
+    updateMany?: LikeUrbanExplorerUpdateManyWithWhereWithoutPlaceInput | LikeUrbanExplorerUpdateManyWithWhereWithoutPlaceInput[]
+    deleteMany?: LikeUrbanExplorerScalarWhereInput | LikeUrbanExplorerScalarWhereInput[]
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutPlaceInput, ReportUrbanExplorerUncheckedCreateWithoutPlaceInput> | ReportUrbanExplorerCreateWithoutPlaceInput[] | ReportUrbanExplorerUncheckedCreateWithoutPlaceInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutPlaceInput | ReportUrbanExplorerCreateOrConnectWithoutPlaceInput[]
+    upsert?: ReportUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput | ReportUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput[]
+    createMany?: ReportUrbanExplorerCreateManyPlaceInputEnvelope
+    set?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    delete?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    update?: ReportUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput | ReportUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput[]
+    updateMany?: ReportUrbanExplorerUpdateManyWithWhereWithoutPlaceInput | ReportUrbanExplorerUpdateManyWithWhereWithoutPlaceInput[]
+    deleteMany?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
+  }
+
+  export type UserCreateNestedOneWithoutReviewUrbanExplorerInput = {
+    create?: XOR<UserCreateWithoutReviewUrbanExplorerInput, UserUncheckedCreateWithoutReviewUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutReviewUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type PlaceUrbanExplorerCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutReviewsInput, PlaceUrbanExplorerUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutReviewsInput
+    connect?: PlaceUrbanExplorerWhereUniqueInput
+  }
+
+  export type ReportUrbanExplorerCreateNestedManyWithoutReviewInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutReviewInput, ReportUrbanExplorerUncheckedCreateWithoutReviewInput> | ReportUrbanExplorerCreateWithoutReviewInput[] | ReportUrbanExplorerUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutReviewInput | ReportUrbanExplorerCreateOrConnectWithoutReviewInput[]
+    createMany?: ReportUrbanExplorerCreateManyReviewInputEnvelope
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type ReportUrbanExplorerUncheckedCreateNestedManyWithoutReviewInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutReviewInput, ReportUrbanExplorerUncheckedCreateWithoutReviewInput> | ReportUrbanExplorerCreateWithoutReviewInput[] | ReportUrbanExplorerUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutReviewInput | ReportUrbanExplorerCreateOrConnectWithoutReviewInput[]
+    createMany?: ReportUrbanExplorerCreateManyReviewInputEnvelope
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type UserUpdateOneRequiredWithoutReviewUrbanExplorerNestedInput = {
+    create?: XOR<UserCreateWithoutReviewUrbanExplorerInput, UserUncheckedCreateWithoutReviewUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutReviewUrbanExplorerInput
+    upsert?: UserUpsertWithoutReviewUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutReviewUrbanExplorerInput, UserUpdateWithoutReviewUrbanExplorerInput>, UserUncheckedUpdateWithoutReviewUrbanExplorerInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutReviewsInput, PlaceUrbanExplorerUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutReviewsInput
+    upsert?: PlaceUrbanExplorerUpsertWithoutReviewsInput
+    connect?: PlaceUrbanExplorerWhereUniqueInput
+    update?: XOR<XOR<PlaceUrbanExplorerUpdateToOneWithWhereWithoutReviewsInput, PlaceUrbanExplorerUpdateWithoutReviewsInput>, PlaceUrbanExplorerUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type ReportUrbanExplorerUpdateManyWithoutReviewNestedInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutReviewInput, ReportUrbanExplorerUncheckedCreateWithoutReviewInput> | ReportUrbanExplorerCreateWithoutReviewInput[] | ReportUrbanExplorerUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutReviewInput | ReportUrbanExplorerCreateOrConnectWithoutReviewInput[]
+    upsert?: ReportUrbanExplorerUpsertWithWhereUniqueWithoutReviewInput | ReportUrbanExplorerUpsertWithWhereUniqueWithoutReviewInput[]
+    createMany?: ReportUrbanExplorerCreateManyReviewInputEnvelope
+    set?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    delete?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    update?: ReportUrbanExplorerUpdateWithWhereUniqueWithoutReviewInput | ReportUrbanExplorerUpdateWithWhereUniqueWithoutReviewInput[]
+    updateMany?: ReportUrbanExplorerUpdateManyWithWhereWithoutReviewInput | ReportUrbanExplorerUpdateManyWithWhereWithoutReviewInput[]
+    deleteMany?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateManyWithoutReviewNestedInput = {
+    create?: XOR<ReportUrbanExplorerCreateWithoutReviewInput, ReportUrbanExplorerUncheckedCreateWithoutReviewInput> | ReportUrbanExplorerCreateWithoutReviewInput[] | ReportUrbanExplorerUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutReviewInput | ReportUrbanExplorerCreateOrConnectWithoutReviewInput[]
+    upsert?: ReportUrbanExplorerUpsertWithWhereUniqueWithoutReviewInput | ReportUrbanExplorerUpsertWithWhereUniqueWithoutReviewInput[]
+    createMany?: ReportUrbanExplorerCreateManyReviewInputEnvelope
+    set?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    disconnect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    delete?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+    update?: ReportUrbanExplorerUpdateWithWhereUniqueWithoutReviewInput | ReportUrbanExplorerUpdateWithWhereUniqueWithoutReviewInput[]
+    updateMany?: ReportUrbanExplorerUpdateManyWithWhereWithoutReviewInput | ReportUrbanExplorerUpdateManyWithWhereWithoutReviewInput[]
+    deleteMany?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
+  }
+
+  export type UserCreateNestedOneWithoutLikeUrbanExplorerInput = {
+    create?: XOR<UserCreateWithoutLikeUrbanExplorerInput, UserUncheckedCreateWithoutLikeUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutLikeUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type PlaceUrbanExplorerCreateNestedOneWithoutLikesInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutLikesInput, PlaceUrbanExplorerUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutLikesInput
+    connect?: PlaceUrbanExplorerWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutLikeUrbanExplorerNestedInput = {
+    create?: XOR<UserCreateWithoutLikeUrbanExplorerInput, UserUncheckedCreateWithoutLikeUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutLikeUrbanExplorerInput
+    upsert?: UserUpsertWithoutLikeUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutLikeUrbanExplorerInput, UserUpdateWithoutLikeUrbanExplorerInput>, UserUncheckedUpdateWithoutLikeUrbanExplorerInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateOneRequiredWithoutLikesNestedInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutLikesInput, PlaceUrbanExplorerUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutLikesInput
+    upsert?: PlaceUrbanExplorerUpsertWithoutLikesInput
+    connect?: PlaceUrbanExplorerWhereUniqueInput
+    update?: XOR<XOR<PlaceUrbanExplorerUpdateToOneWithWhereWithoutLikesInput, PlaceUrbanExplorerUpdateWithoutLikesInput>, PlaceUrbanExplorerUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type UserCreateNestedOneWithoutBookmarkUrbanExplorerInput = {
+    create?: XOR<UserCreateWithoutBookmarkUrbanExplorerInput, UserUncheckedCreateWithoutBookmarkUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutBookmarkUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type PlaceUrbanExplorerCreateNestedOneWithoutBookmarksInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutBookmarksInput, PlaceUrbanExplorerUncheckedCreateWithoutBookmarksInput>
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutBookmarksInput
+    connect?: PlaceUrbanExplorerWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutBookmarkUrbanExplorerNestedInput = {
+    create?: XOR<UserCreateWithoutBookmarkUrbanExplorerInput, UserUncheckedCreateWithoutBookmarkUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutBookmarkUrbanExplorerInput
+    upsert?: UserUpsertWithoutBookmarkUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutBookmarkUrbanExplorerInput, UserUpdateWithoutBookmarkUrbanExplorerInput>, UserUncheckedUpdateWithoutBookmarkUrbanExplorerInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateOneRequiredWithoutBookmarksNestedInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutBookmarksInput, PlaceUrbanExplorerUncheckedCreateWithoutBookmarksInput>
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutBookmarksInput
+    upsert?: PlaceUrbanExplorerUpsertWithoutBookmarksInput
+    connect?: PlaceUrbanExplorerWhereUniqueInput
+    update?: XOR<XOR<PlaceUrbanExplorerUpdateToOneWithWhereWithoutBookmarksInput, PlaceUrbanExplorerUpdateWithoutBookmarksInput>, PlaceUrbanExplorerUncheckedUpdateWithoutBookmarksInput>
+  }
+
+  export type UserCreateNestedOneWithoutReportUrbanExplorerInput = {
+    create?: XOR<UserCreateWithoutReportUrbanExplorerInput, UserUncheckedCreateWithoutReportUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutReportUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type PlaceUrbanExplorerCreateNestedOneWithoutReportsInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutReportsInput, PlaceUrbanExplorerUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutReportsInput
+    connect?: PlaceUrbanExplorerWhereUniqueInput
+  }
+
+  export type ReviewUrbanExplorerCreateNestedOneWithoutReportsInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutReportsInput, ReviewUrbanExplorerUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutReportsInput
+    connect?: ReviewUrbanExplorerWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutReportUrbanExplorerNestedInput = {
+    create?: XOR<UserCreateWithoutReportUrbanExplorerInput, UserUncheckedCreateWithoutReportUrbanExplorerInput>
+    connectOrCreate?: UserCreateOrConnectWithoutReportUrbanExplorerInput
+    upsert?: UserUpsertWithoutReportUrbanExplorerInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutReportUrbanExplorerInput, UserUpdateWithoutReportUrbanExplorerInput>, UserUncheckedUpdateWithoutReportUrbanExplorerInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateOneWithoutReportsNestedInput = {
+    create?: XOR<PlaceUrbanExplorerCreateWithoutReportsInput, PlaceUrbanExplorerUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: PlaceUrbanExplorerCreateOrConnectWithoutReportsInput
+    upsert?: PlaceUrbanExplorerUpsertWithoutReportsInput
+    disconnect?: PlaceUrbanExplorerWhereInput | boolean
+    delete?: PlaceUrbanExplorerWhereInput | boolean
+    connect?: PlaceUrbanExplorerWhereUniqueInput
+    update?: XOR<XOR<PlaceUrbanExplorerUpdateToOneWithWhereWithoutReportsInput, PlaceUrbanExplorerUpdateWithoutReportsInput>, PlaceUrbanExplorerUncheckedUpdateWithoutReportsInput>
+  }
+
+  export type ReviewUrbanExplorerUpdateOneWithoutReportsNestedInput = {
+    create?: XOR<ReviewUrbanExplorerCreateWithoutReportsInput, ReviewUrbanExplorerUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: ReviewUrbanExplorerCreateOrConnectWithoutReportsInput
+    upsert?: ReviewUrbanExplorerUpsertWithoutReportsInput
+    disconnect?: ReviewUrbanExplorerWhereInput | boolean
+    delete?: ReviewUrbanExplorerWhereInput | boolean
+    connect?: ReviewUrbanExplorerWhereUniqueInput
+    update?: XOR<XOR<ReviewUrbanExplorerUpdateToOneWithWhereWithoutReportsInput, ReviewUrbanExplorerUpdateWithoutReportsInput>, ReviewUrbanExplorerUncheckedUpdateWithoutReportsInput>
+  }
+
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -10250,6 +18092,19 @@ export namespace Prisma {
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
+  export type NestedBoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
   export type PostDIYHomesCreateWithoutUserInput = {
     id?: string
     title: string
@@ -10379,6 +18234,142 @@ export namespace Prisma {
 
   export type ReportDIYHomesCreateManyUserInputEnvelope = {
     data: ReportDIYHomesCreateManyUserInput | ReportDIYHomesCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type PlaceUrbanExplorerCreateWithoutOwnerInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    createdAt?: Date | string
+    validated?: boolean
+    reviews?: ReviewUrbanExplorerCreateNestedManyWithoutPlaceInput
+    bookmarks?: BookmarkUrbanExplorerCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    createdAt?: Date | string
+    validated?: boolean
+    reviews?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    bookmarks?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerCreateOrConnectWithoutOwnerInput = {
+    where: PlaceUrbanExplorerWhereUniqueInput
+    create: XOR<PlaceUrbanExplorerCreateWithoutOwnerInput, PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput>
+  }
+
+  export type PlaceUrbanExplorerCreateManyOwnerInputEnvelope = {
+    data: PlaceUrbanExplorerCreateManyOwnerInput | PlaceUrbanExplorerCreateManyOwnerInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ReviewUrbanExplorerCreateWithoutUserInput = {
+    id?: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    place: PlaceUrbanExplorerCreateNestedOneWithoutReviewsInput
+    reports?: ReportUrbanExplorerCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedCreateWithoutUserInput = {
+    id?: string
+    placeId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    reports?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewUrbanExplorerCreateOrConnectWithoutUserInput = {
+    where: ReviewUrbanExplorerWhereUniqueInput
+    create: XOR<ReviewUrbanExplorerCreateWithoutUserInput, ReviewUrbanExplorerUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReviewUrbanExplorerCreateManyUserInputEnvelope = {
+    data: ReviewUrbanExplorerCreateManyUserInput | ReviewUrbanExplorerCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LikeUrbanExplorerCreateWithoutUserInput = {
+    id?: string
+    createdAt?: Date | string
+    place: PlaceUrbanExplorerCreateNestedOneWithoutLikesInput
+  }
+
+  export type LikeUrbanExplorerUncheckedCreateWithoutUserInput = {
+    id?: string
+    placeId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeUrbanExplorerCreateOrConnectWithoutUserInput = {
+    where: LikeUrbanExplorerWhereUniqueInput
+    create: XOR<LikeUrbanExplorerCreateWithoutUserInput, LikeUrbanExplorerUncheckedCreateWithoutUserInput>
+  }
+
+  export type LikeUrbanExplorerCreateManyUserInputEnvelope = {
+    data: LikeUrbanExplorerCreateManyUserInput | LikeUrbanExplorerCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type BookmarkUrbanExplorerCreateWithoutUserInput = {
+    id?: string
+    createdAt?: Date | string
+    place: PlaceUrbanExplorerCreateNestedOneWithoutBookmarksInput
+  }
+
+  export type BookmarkUrbanExplorerUncheckedCreateWithoutUserInput = {
+    id?: string
+    placeId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkUrbanExplorerCreateOrConnectWithoutUserInput = {
+    where: BookmarkUrbanExplorerWhereUniqueInput
+    create: XOR<BookmarkUrbanExplorerCreateWithoutUserInput, BookmarkUrbanExplorerUncheckedCreateWithoutUserInput>
+  }
+
+  export type BookmarkUrbanExplorerCreateManyUserInputEnvelope = {
+    data: BookmarkUrbanExplorerCreateManyUserInput | BookmarkUrbanExplorerCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ReportUrbanExplorerCreateWithoutUserInput = {
+    id?: string
+    reason: string
+    createdAt?: Date | string
+    place?: PlaceUrbanExplorerCreateNestedOneWithoutReportsInput
+    review?: ReviewUrbanExplorerCreateNestedOneWithoutReportsInput
+  }
+
+  export type ReportUrbanExplorerUncheckedCreateWithoutUserInput = {
+    id?: string
+    placeId?: string | null
+    reviewId?: string | null
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportUrbanExplorerCreateOrConnectWithoutUserInput = {
+    where: ReportUrbanExplorerWhereUniqueInput
+    create: XOR<ReportUrbanExplorerCreateWithoutUserInput, ReportUrbanExplorerUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReportUrbanExplorerCreateManyUserInputEnvelope = {
+    data: ReportUrbanExplorerCreateManyUserInput | ReportUrbanExplorerCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
@@ -10518,6 +18509,144 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"ReportDIYHomes"> | Date | string
   }
 
+  export type PlaceUrbanExplorerUpsertWithWhereUniqueWithoutOwnerInput = {
+    where: PlaceUrbanExplorerWhereUniqueInput
+    update: XOR<PlaceUrbanExplorerUpdateWithoutOwnerInput, PlaceUrbanExplorerUncheckedUpdateWithoutOwnerInput>
+    create: XOR<PlaceUrbanExplorerCreateWithoutOwnerInput, PlaceUrbanExplorerUncheckedCreateWithoutOwnerInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateWithWhereUniqueWithoutOwnerInput = {
+    where: PlaceUrbanExplorerWhereUniqueInput
+    data: XOR<PlaceUrbanExplorerUpdateWithoutOwnerInput, PlaceUrbanExplorerUncheckedUpdateWithoutOwnerInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateManyWithWhereWithoutOwnerInput = {
+    where: PlaceUrbanExplorerScalarWhereInput
+    data: XOR<PlaceUrbanExplorerUpdateManyMutationInput, PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerInput>
+  }
+
+  export type PlaceUrbanExplorerScalarWhereInput = {
+    AND?: PlaceUrbanExplorerScalarWhereInput | PlaceUrbanExplorerScalarWhereInput[]
+    OR?: PlaceUrbanExplorerScalarWhereInput[]
+    NOT?: PlaceUrbanExplorerScalarWhereInput | PlaceUrbanExplorerScalarWhereInput[]
+    id?: StringFilter<"PlaceUrbanExplorer"> | string
+    name?: StringFilter<"PlaceUrbanExplorer"> | string
+    category?: StringFilter<"PlaceUrbanExplorer"> | string
+    location?: StringFilter<"PlaceUrbanExplorer"> | string
+    description?: StringFilter<"PlaceUrbanExplorer"> | string
+    ownerId?: StringFilter<"PlaceUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"PlaceUrbanExplorer"> | Date | string
+    validated?: BoolFilter<"PlaceUrbanExplorer"> | boolean
+  }
+
+  export type ReviewUrbanExplorerUpsertWithWhereUniqueWithoutUserInput = {
+    where: ReviewUrbanExplorerWhereUniqueInput
+    update: XOR<ReviewUrbanExplorerUpdateWithoutUserInput, ReviewUrbanExplorerUncheckedUpdateWithoutUserInput>
+    create: XOR<ReviewUrbanExplorerCreateWithoutUserInput, ReviewUrbanExplorerUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReviewUrbanExplorerUpdateWithWhereUniqueWithoutUserInput = {
+    where: ReviewUrbanExplorerWhereUniqueInput
+    data: XOR<ReviewUrbanExplorerUpdateWithoutUserInput, ReviewUrbanExplorerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ReviewUrbanExplorerUpdateManyWithWhereWithoutUserInput = {
+    where: ReviewUrbanExplorerScalarWhereInput
+    data: XOR<ReviewUrbanExplorerUpdateManyMutationInput, ReviewUrbanExplorerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ReviewUrbanExplorerScalarWhereInput = {
+    AND?: ReviewUrbanExplorerScalarWhereInput | ReviewUrbanExplorerScalarWhereInput[]
+    OR?: ReviewUrbanExplorerScalarWhereInput[]
+    NOT?: ReviewUrbanExplorerScalarWhereInput | ReviewUrbanExplorerScalarWhereInput[]
+    id?: StringFilter<"ReviewUrbanExplorer"> | string
+    placeId?: StringFilter<"ReviewUrbanExplorer"> | string
+    userId?: StringFilter<"ReviewUrbanExplorer"> | string
+    rating?: IntFilter<"ReviewUrbanExplorer"> | number
+    comment?: StringFilter<"ReviewUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"ReviewUrbanExplorer"> | Date | string
+  }
+
+  export type LikeUrbanExplorerUpsertWithWhereUniqueWithoutUserInput = {
+    where: LikeUrbanExplorerWhereUniqueInput
+    update: XOR<LikeUrbanExplorerUpdateWithoutUserInput, LikeUrbanExplorerUncheckedUpdateWithoutUserInput>
+    create: XOR<LikeUrbanExplorerCreateWithoutUserInput, LikeUrbanExplorerUncheckedCreateWithoutUserInput>
+  }
+
+  export type LikeUrbanExplorerUpdateWithWhereUniqueWithoutUserInput = {
+    where: LikeUrbanExplorerWhereUniqueInput
+    data: XOR<LikeUrbanExplorerUpdateWithoutUserInput, LikeUrbanExplorerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type LikeUrbanExplorerUpdateManyWithWhereWithoutUserInput = {
+    where: LikeUrbanExplorerScalarWhereInput
+    data: XOR<LikeUrbanExplorerUpdateManyMutationInput, LikeUrbanExplorerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type LikeUrbanExplorerScalarWhereInput = {
+    AND?: LikeUrbanExplorerScalarWhereInput | LikeUrbanExplorerScalarWhereInput[]
+    OR?: LikeUrbanExplorerScalarWhereInput[]
+    NOT?: LikeUrbanExplorerScalarWhereInput | LikeUrbanExplorerScalarWhereInput[]
+    id?: StringFilter<"LikeUrbanExplorer"> | string
+    placeId?: StringFilter<"LikeUrbanExplorer"> | string
+    userId?: StringFilter<"LikeUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"LikeUrbanExplorer"> | Date | string
+  }
+
+  export type BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutUserInput = {
+    where: BookmarkUrbanExplorerWhereUniqueInput
+    update: XOR<BookmarkUrbanExplorerUpdateWithoutUserInput, BookmarkUrbanExplorerUncheckedUpdateWithoutUserInput>
+    create: XOR<BookmarkUrbanExplorerCreateWithoutUserInput, BookmarkUrbanExplorerUncheckedCreateWithoutUserInput>
+  }
+
+  export type BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutUserInput = {
+    where: BookmarkUrbanExplorerWhereUniqueInput
+    data: XOR<BookmarkUrbanExplorerUpdateWithoutUserInput, BookmarkUrbanExplorerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type BookmarkUrbanExplorerUpdateManyWithWhereWithoutUserInput = {
+    where: BookmarkUrbanExplorerScalarWhereInput
+    data: XOR<BookmarkUrbanExplorerUpdateManyMutationInput, BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type BookmarkUrbanExplorerScalarWhereInput = {
+    AND?: BookmarkUrbanExplorerScalarWhereInput | BookmarkUrbanExplorerScalarWhereInput[]
+    OR?: BookmarkUrbanExplorerScalarWhereInput[]
+    NOT?: BookmarkUrbanExplorerScalarWhereInput | BookmarkUrbanExplorerScalarWhereInput[]
+    id?: StringFilter<"BookmarkUrbanExplorer"> | string
+    placeId?: StringFilter<"BookmarkUrbanExplorer"> | string
+    userId?: StringFilter<"BookmarkUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"BookmarkUrbanExplorer"> | Date | string
+  }
+
+  export type ReportUrbanExplorerUpsertWithWhereUniqueWithoutUserInput = {
+    where: ReportUrbanExplorerWhereUniqueInput
+    update: XOR<ReportUrbanExplorerUpdateWithoutUserInput, ReportUrbanExplorerUncheckedUpdateWithoutUserInput>
+    create: XOR<ReportUrbanExplorerCreateWithoutUserInput, ReportUrbanExplorerUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReportUrbanExplorerUpdateWithWhereUniqueWithoutUserInput = {
+    where: ReportUrbanExplorerWhereUniqueInput
+    data: XOR<ReportUrbanExplorerUpdateWithoutUserInput, ReportUrbanExplorerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ReportUrbanExplorerUpdateManyWithWhereWithoutUserInput = {
+    where: ReportUrbanExplorerScalarWhereInput
+    data: XOR<ReportUrbanExplorerUpdateManyMutationInput, ReportUrbanExplorerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ReportUrbanExplorerScalarWhereInput = {
+    AND?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
+    OR?: ReportUrbanExplorerScalarWhereInput[]
+    NOT?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
+    id?: StringFilter<"ReportUrbanExplorer"> | string
+    placeId?: StringNullableFilter<"ReportUrbanExplorer"> | string | null
+    reviewId?: StringNullableFilter<"ReportUrbanExplorer"> | string | null
+    userId?: StringFilter<"ReportUrbanExplorer"> | string
+    reason?: StringFilter<"ReportUrbanExplorer"> | string
+    createdAt?: DateTimeFilter<"ReportUrbanExplorer"> | Date | string
+  }
+
   export type UserCreateWithoutPostsInput = {
     id?: string
     email: string
@@ -10529,6 +18658,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPostsInput = {
@@ -10542,6 +18676,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPostsInput = {
@@ -10669,6 +18808,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPostsInput = {
@@ -10682,6 +18826,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type ReviewDIYHomesUpsertWithWhereUniqueWithoutPostInput = {
@@ -10759,6 +18908,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReviewsInput = {
@@ -10772,6 +18926,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReviewsInput = {
@@ -10856,6 +19015,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReviewsInput = {
@@ -10869,6 +19033,11 @@ export namespace Prisma {
     bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutReviewsInput = {
@@ -10933,6 +19102,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
     bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutLikeInput = {
@@ -10946,6 +19120,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
     bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutLikeInput = {
@@ -11004,6 +19183,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
     bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLikeInput = {
@@ -11017,6 +19201,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutLikeInput = {
@@ -11065,6 +19254,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutBookmarksInput = {
@@ -11078,6 +19272,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutBookmarksInput = {
@@ -11136,6 +19335,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutBookmarksInput = {
@@ -11149,6 +19353,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutBookmarksInput = {
@@ -11197,6 +19406,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
     bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReportInput = {
@@ -11210,6 +19424,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
     bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
     Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReportInput = {
@@ -11291,6 +19510,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
     bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReportInput = {
@@ -11304,6 +19528,11 @@ export namespace Prisma {
     reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
     Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutReportInput = {
@@ -11370,6 +19599,990 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserCreateWithoutPlaceUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutPlaceUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutPlaceUrbanExplorerInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutPlaceUrbanExplorerInput, UserUncheckedCreateWithoutPlaceUrbanExplorerInput>
+  }
+
+  export type ReviewUrbanExplorerCreateWithoutPlaceInput = {
+    id?: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutReviewUrbanExplorerInput
+    reports?: ReportUrbanExplorerCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    reports?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewUrbanExplorerCreateOrConnectWithoutPlaceInput = {
+    where: ReviewUrbanExplorerWhereUniqueInput
+    create: XOR<ReviewUrbanExplorerCreateWithoutPlaceInput, ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput>
+  }
+
+  export type ReviewUrbanExplorerCreateManyPlaceInputEnvelope = {
+    data: ReviewUrbanExplorerCreateManyPlaceInput | ReviewUrbanExplorerCreateManyPlaceInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type BookmarkUrbanExplorerCreateWithoutPlaceInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutBookmarkUrbanExplorerInput
+  }
+
+  export type BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkUrbanExplorerCreateOrConnectWithoutPlaceInput = {
+    where: BookmarkUrbanExplorerWhereUniqueInput
+    create: XOR<BookmarkUrbanExplorerCreateWithoutPlaceInput, BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput>
+  }
+
+  export type BookmarkUrbanExplorerCreateManyPlaceInputEnvelope = {
+    data: BookmarkUrbanExplorerCreateManyPlaceInput | BookmarkUrbanExplorerCreateManyPlaceInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LikeUrbanExplorerCreateWithoutPlaceInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutLikeUrbanExplorerInput
+  }
+
+  export type LikeUrbanExplorerUncheckedCreateWithoutPlaceInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeUrbanExplorerCreateOrConnectWithoutPlaceInput = {
+    where: LikeUrbanExplorerWhereUniqueInput
+    create: XOR<LikeUrbanExplorerCreateWithoutPlaceInput, LikeUrbanExplorerUncheckedCreateWithoutPlaceInput>
+  }
+
+  export type LikeUrbanExplorerCreateManyPlaceInputEnvelope = {
+    data: LikeUrbanExplorerCreateManyPlaceInput | LikeUrbanExplorerCreateManyPlaceInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ReportUrbanExplorerCreateWithoutPlaceInput = {
+    id?: string
+    reason: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutReportUrbanExplorerInput
+    review?: ReviewUrbanExplorerCreateNestedOneWithoutReportsInput
+  }
+
+  export type ReportUrbanExplorerUncheckedCreateWithoutPlaceInput = {
+    id?: string
+    reviewId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportUrbanExplorerCreateOrConnectWithoutPlaceInput = {
+    where: ReportUrbanExplorerWhereUniqueInput
+    create: XOR<ReportUrbanExplorerCreateWithoutPlaceInput, ReportUrbanExplorerUncheckedCreateWithoutPlaceInput>
+  }
+
+  export type ReportUrbanExplorerCreateManyPlaceInputEnvelope = {
+    data: ReportUrbanExplorerCreateManyPlaceInput | ReportUrbanExplorerCreateManyPlaceInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserUpsertWithoutPlaceUrbanExplorerInput = {
+    update: XOR<UserUpdateWithoutPlaceUrbanExplorerInput, UserUncheckedUpdateWithoutPlaceUrbanExplorerInput>
+    create: XOR<UserCreateWithoutPlaceUrbanExplorerInput, UserUncheckedCreateWithoutPlaceUrbanExplorerInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutPlaceUrbanExplorerInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutPlaceUrbanExplorerInput, UserUncheckedUpdateWithoutPlaceUrbanExplorerInput>
+  }
+
+  export type UserUpdateWithoutPlaceUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutPlaceUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ReviewUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput = {
+    where: ReviewUrbanExplorerWhereUniqueInput
+    update: XOR<ReviewUrbanExplorerUpdateWithoutPlaceInput, ReviewUrbanExplorerUncheckedUpdateWithoutPlaceInput>
+    create: XOR<ReviewUrbanExplorerCreateWithoutPlaceInput, ReviewUrbanExplorerUncheckedCreateWithoutPlaceInput>
+  }
+
+  export type ReviewUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput = {
+    where: ReviewUrbanExplorerWhereUniqueInput
+    data: XOR<ReviewUrbanExplorerUpdateWithoutPlaceInput, ReviewUrbanExplorerUncheckedUpdateWithoutPlaceInput>
+  }
+
+  export type ReviewUrbanExplorerUpdateManyWithWhereWithoutPlaceInput = {
+    where: ReviewUrbanExplorerScalarWhereInput
+    data: XOR<ReviewUrbanExplorerUpdateManyMutationInput, ReviewUrbanExplorerUncheckedUpdateManyWithoutPlaceInput>
+  }
+
+  export type BookmarkUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput = {
+    where: BookmarkUrbanExplorerWhereUniqueInput
+    update: XOR<BookmarkUrbanExplorerUpdateWithoutPlaceInput, BookmarkUrbanExplorerUncheckedUpdateWithoutPlaceInput>
+    create: XOR<BookmarkUrbanExplorerCreateWithoutPlaceInput, BookmarkUrbanExplorerUncheckedCreateWithoutPlaceInput>
+  }
+
+  export type BookmarkUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput = {
+    where: BookmarkUrbanExplorerWhereUniqueInput
+    data: XOR<BookmarkUrbanExplorerUpdateWithoutPlaceInput, BookmarkUrbanExplorerUncheckedUpdateWithoutPlaceInput>
+  }
+
+  export type BookmarkUrbanExplorerUpdateManyWithWhereWithoutPlaceInput = {
+    where: BookmarkUrbanExplorerScalarWhereInput
+    data: XOR<BookmarkUrbanExplorerUpdateManyMutationInput, BookmarkUrbanExplorerUncheckedUpdateManyWithoutPlaceInput>
+  }
+
+  export type LikeUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput = {
+    where: LikeUrbanExplorerWhereUniqueInput
+    update: XOR<LikeUrbanExplorerUpdateWithoutPlaceInput, LikeUrbanExplorerUncheckedUpdateWithoutPlaceInput>
+    create: XOR<LikeUrbanExplorerCreateWithoutPlaceInput, LikeUrbanExplorerUncheckedCreateWithoutPlaceInput>
+  }
+
+  export type LikeUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput = {
+    where: LikeUrbanExplorerWhereUniqueInput
+    data: XOR<LikeUrbanExplorerUpdateWithoutPlaceInput, LikeUrbanExplorerUncheckedUpdateWithoutPlaceInput>
+  }
+
+  export type LikeUrbanExplorerUpdateManyWithWhereWithoutPlaceInput = {
+    where: LikeUrbanExplorerScalarWhereInput
+    data: XOR<LikeUrbanExplorerUpdateManyMutationInput, LikeUrbanExplorerUncheckedUpdateManyWithoutPlaceInput>
+  }
+
+  export type ReportUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput = {
+    where: ReportUrbanExplorerWhereUniqueInput
+    update: XOR<ReportUrbanExplorerUpdateWithoutPlaceInput, ReportUrbanExplorerUncheckedUpdateWithoutPlaceInput>
+    create: XOR<ReportUrbanExplorerCreateWithoutPlaceInput, ReportUrbanExplorerUncheckedCreateWithoutPlaceInput>
+  }
+
+  export type ReportUrbanExplorerUpdateWithWhereUniqueWithoutPlaceInput = {
+    where: ReportUrbanExplorerWhereUniqueInput
+    data: XOR<ReportUrbanExplorerUpdateWithoutPlaceInput, ReportUrbanExplorerUncheckedUpdateWithoutPlaceInput>
+  }
+
+  export type ReportUrbanExplorerUpdateManyWithWhereWithoutPlaceInput = {
+    where: ReportUrbanExplorerScalarWhereInput
+    data: XOR<ReportUrbanExplorerUpdateManyMutationInput, ReportUrbanExplorerUncheckedUpdateManyWithoutPlaceInput>
+  }
+
+  export type UserCreateWithoutReviewUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutReviewUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutReviewUrbanExplorerInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutReviewUrbanExplorerInput, UserUncheckedCreateWithoutReviewUrbanExplorerInput>
+  }
+
+  export type PlaceUrbanExplorerCreateWithoutReviewsInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    createdAt?: Date | string
+    validated?: boolean
+    owner: UserCreateNestedOneWithoutPlaceUrbanExplorerInput
+    bookmarks?: BookmarkUrbanExplorerCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    ownerId: string
+    createdAt?: Date | string
+    validated?: boolean
+    bookmarks?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerCreateOrConnectWithoutReviewsInput = {
+    where: PlaceUrbanExplorerWhereUniqueInput
+    create: XOR<PlaceUrbanExplorerCreateWithoutReviewsInput, PlaceUrbanExplorerUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type ReportUrbanExplorerCreateWithoutReviewInput = {
+    id?: string
+    reason: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutReportUrbanExplorerInput
+    place?: PlaceUrbanExplorerCreateNestedOneWithoutReportsInput
+  }
+
+  export type ReportUrbanExplorerUncheckedCreateWithoutReviewInput = {
+    id?: string
+    placeId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportUrbanExplorerCreateOrConnectWithoutReviewInput = {
+    where: ReportUrbanExplorerWhereUniqueInput
+    create: XOR<ReportUrbanExplorerCreateWithoutReviewInput, ReportUrbanExplorerUncheckedCreateWithoutReviewInput>
+  }
+
+  export type ReportUrbanExplorerCreateManyReviewInputEnvelope = {
+    data: ReportUrbanExplorerCreateManyReviewInput | ReportUrbanExplorerCreateManyReviewInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserUpsertWithoutReviewUrbanExplorerInput = {
+    update: XOR<UserUpdateWithoutReviewUrbanExplorerInput, UserUncheckedUpdateWithoutReviewUrbanExplorerInput>
+    create: XOR<UserCreateWithoutReviewUrbanExplorerInput, UserUncheckedCreateWithoutReviewUrbanExplorerInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutReviewUrbanExplorerInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutReviewUrbanExplorerInput, UserUncheckedUpdateWithoutReviewUrbanExplorerInput>
+  }
+
+  export type UserUpdateWithoutReviewUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutReviewUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type PlaceUrbanExplorerUpsertWithoutReviewsInput = {
+    update: XOR<PlaceUrbanExplorerUpdateWithoutReviewsInput, PlaceUrbanExplorerUncheckedUpdateWithoutReviewsInput>
+    create: XOR<PlaceUrbanExplorerCreateWithoutReviewsInput, PlaceUrbanExplorerUncheckedCreateWithoutReviewsInput>
+    where?: PlaceUrbanExplorerWhereInput
+  }
+
+  export type PlaceUrbanExplorerUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: PlaceUrbanExplorerWhereInput
+    data: XOR<PlaceUrbanExplorerUpdateWithoutReviewsInput, PlaceUrbanExplorerUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    owner?: UserUpdateOneRequiredWithoutPlaceUrbanExplorerNestedInput
+    bookmarks?: BookmarkUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    ownerId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    bookmarks?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type ReportUrbanExplorerUpsertWithWhereUniqueWithoutReviewInput = {
+    where: ReportUrbanExplorerWhereUniqueInput
+    update: XOR<ReportUrbanExplorerUpdateWithoutReviewInput, ReportUrbanExplorerUncheckedUpdateWithoutReviewInput>
+    create: XOR<ReportUrbanExplorerCreateWithoutReviewInput, ReportUrbanExplorerUncheckedCreateWithoutReviewInput>
+  }
+
+  export type ReportUrbanExplorerUpdateWithWhereUniqueWithoutReviewInput = {
+    where: ReportUrbanExplorerWhereUniqueInput
+    data: XOR<ReportUrbanExplorerUpdateWithoutReviewInput, ReportUrbanExplorerUncheckedUpdateWithoutReviewInput>
+  }
+
+  export type ReportUrbanExplorerUpdateManyWithWhereWithoutReviewInput = {
+    where: ReportUrbanExplorerScalarWhereInput
+    data: XOR<ReportUrbanExplorerUpdateManyMutationInput, ReportUrbanExplorerUncheckedUpdateManyWithoutReviewInput>
+  }
+
+  export type UserCreateWithoutLikeUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutLikeUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutLikeUrbanExplorerInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutLikeUrbanExplorerInput, UserUncheckedCreateWithoutLikeUrbanExplorerInput>
+  }
+
+  export type PlaceUrbanExplorerCreateWithoutLikesInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    createdAt?: Date | string
+    validated?: boolean
+    owner: UserCreateNestedOneWithoutPlaceUrbanExplorerInput
+    reviews?: ReviewUrbanExplorerCreateNestedManyWithoutPlaceInput
+    bookmarks?: BookmarkUrbanExplorerCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedCreateWithoutLikesInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    ownerId: string
+    createdAt?: Date | string
+    validated?: boolean
+    reviews?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    bookmarks?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerCreateOrConnectWithoutLikesInput = {
+    where: PlaceUrbanExplorerWhereUniqueInput
+    create: XOR<PlaceUrbanExplorerCreateWithoutLikesInput, PlaceUrbanExplorerUncheckedCreateWithoutLikesInput>
+  }
+
+  export type UserUpsertWithoutLikeUrbanExplorerInput = {
+    update: XOR<UserUpdateWithoutLikeUrbanExplorerInput, UserUncheckedUpdateWithoutLikeUrbanExplorerInput>
+    create: XOR<UserCreateWithoutLikeUrbanExplorerInput, UserUncheckedCreateWithoutLikeUrbanExplorerInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutLikeUrbanExplorerInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutLikeUrbanExplorerInput, UserUncheckedUpdateWithoutLikeUrbanExplorerInput>
+  }
+
+  export type UserUpdateWithoutLikeUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutLikeUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type PlaceUrbanExplorerUpsertWithoutLikesInput = {
+    update: XOR<PlaceUrbanExplorerUpdateWithoutLikesInput, PlaceUrbanExplorerUncheckedUpdateWithoutLikesInput>
+    create: XOR<PlaceUrbanExplorerCreateWithoutLikesInput, PlaceUrbanExplorerUncheckedCreateWithoutLikesInput>
+    where?: PlaceUrbanExplorerWhereInput
+  }
+
+  export type PlaceUrbanExplorerUpdateToOneWithWhereWithoutLikesInput = {
+    where?: PlaceUrbanExplorerWhereInput
+    data: XOR<PlaceUrbanExplorerUpdateWithoutLikesInput, PlaceUrbanExplorerUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    owner?: UserUpdateOneRequiredWithoutPlaceUrbanExplorerNestedInput
+    reviews?: ReviewUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    bookmarks?: BookmarkUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    ownerId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    reviews?: ReviewUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    bookmarks?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type UserCreateWithoutBookmarkUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutBookmarkUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutBookmarkUrbanExplorerInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutBookmarkUrbanExplorerInput, UserUncheckedCreateWithoutBookmarkUrbanExplorerInput>
+  }
+
+  export type PlaceUrbanExplorerCreateWithoutBookmarksInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    createdAt?: Date | string
+    validated?: boolean
+    owner: UserCreateNestedOneWithoutPlaceUrbanExplorerInput
+    reviews?: ReviewUrbanExplorerCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedCreateWithoutBookmarksInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    ownerId: string
+    createdAt?: Date | string
+    validated?: boolean
+    reviews?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    reports?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerCreateOrConnectWithoutBookmarksInput = {
+    where: PlaceUrbanExplorerWhereUniqueInput
+    create: XOR<PlaceUrbanExplorerCreateWithoutBookmarksInput, PlaceUrbanExplorerUncheckedCreateWithoutBookmarksInput>
+  }
+
+  export type UserUpsertWithoutBookmarkUrbanExplorerInput = {
+    update: XOR<UserUpdateWithoutBookmarkUrbanExplorerInput, UserUncheckedUpdateWithoutBookmarkUrbanExplorerInput>
+    create: XOR<UserCreateWithoutBookmarkUrbanExplorerInput, UserUncheckedCreateWithoutBookmarkUrbanExplorerInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutBookmarkUrbanExplorerInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutBookmarkUrbanExplorerInput, UserUncheckedUpdateWithoutBookmarkUrbanExplorerInput>
+  }
+
+  export type UserUpdateWithoutBookmarkUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutBookmarkUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type PlaceUrbanExplorerUpsertWithoutBookmarksInput = {
+    update: XOR<PlaceUrbanExplorerUpdateWithoutBookmarksInput, PlaceUrbanExplorerUncheckedUpdateWithoutBookmarksInput>
+    create: XOR<PlaceUrbanExplorerCreateWithoutBookmarksInput, PlaceUrbanExplorerUncheckedCreateWithoutBookmarksInput>
+    where?: PlaceUrbanExplorerWhereInput
+  }
+
+  export type PlaceUrbanExplorerUpdateToOneWithWhereWithoutBookmarksInput = {
+    where?: PlaceUrbanExplorerWhereInput
+    data: XOR<PlaceUrbanExplorerUpdateWithoutBookmarksInput, PlaceUrbanExplorerUncheckedUpdateWithoutBookmarksInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateWithoutBookmarksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    owner?: UserUpdateOneRequiredWithoutPlaceUrbanExplorerNestedInput
+    reviews?: ReviewUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedUpdateWithoutBookmarksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    ownerId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    reviews?: ReviewUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type UserCreateWithoutReportUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutReportUrbanExplorerInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutReportUrbanExplorerInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutReportUrbanExplorerInput, UserUncheckedCreateWithoutReportUrbanExplorerInput>
+  }
+
+  export type PlaceUrbanExplorerCreateWithoutReportsInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    createdAt?: Date | string
+    validated?: boolean
+    owner: UserCreateNestedOneWithoutPlaceUrbanExplorerInput
+    reviews?: ReviewUrbanExplorerCreateNestedManyWithoutPlaceInput
+    bookmarks?: BookmarkUrbanExplorerCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedCreateWithoutReportsInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    ownerId: string
+    createdAt?: Date | string
+    validated?: boolean
+    reviews?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    bookmarks?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+    likes?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutPlaceInput
+  }
+
+  export type PlaceUrbanExplorerCreateOrConnectWithoutReportsInput = {
+    where: PlaceUrbanExplorerWhereUniqueInput
+    create: XOR<PlaceUrbanExplorerCreateWithoutReportsInput, PlaceUrbanExplorerUncheckedCreateWithoutReportsInput>
+  }
+
+  export type ReviewUrbanExplorerCreateWithoutReportsInput = {
+    id?: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutReviewUrbanExplorerInput
+    place: PlaceUrbanExplorerCreateNestedOneWithoutReviewsInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedCreateWithoutReportsInput = {
+    id?: string
+    placeId: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type ReviewUrbanExplorerCreateOrConnectWithoutReportsInput = {
+    where: ReviewUrbanExplorerWhereUniqueInput
+    create: XOR<ReviewUrbanExplorerCreateWithoutReportsInput, ReviewUrbanExplorerUncheckedCreateWithoutReportsInput>
+  }
+
+  export type UserUpsertWithoutReportUrbanExplorerInput = {
+    update: XOR<UserUpdateWithoutReportUrbanExplorerInput, UserUncheckedUpdateWithoutReportUrbanExplorerInput>
+    create: XOR<UserCreateWithoutReportUrbanExplorerInput, UserUncheckedCreateWithoutReportUrbanExplorerInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutReportUrbanExplorerInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutReportUrbanExplorerInput, UserUncheckedUpdateWithoutReportUrbanExplorerInput>
+  }
+
+  export type UserUpdateWithoutReportUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutReportUrbanExplorerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type PlaceUrbanExplorerUpsertWithoutReportsInput = {
+    update: XOR<PlaceUrbanExplorerUpdateWithoutReportsInput, PlaceUrbanExplorerUncheckedUpdateWithoutReportsInput>
+    create: XOR<PlaceUrbanExplorerCreateWithoutReportsInput, PlaceUrbanExplorerUncheckedCreateWithoutReportsInput>
+    where?: PlaceUrbanExplorerWhereInput
+  }
+
+  export type PlaceUrbanExplorerUpdateToOneWithWhereWithoutReportsInput = {
+    where?: PlaceUrbanExplorerWhereInput
+    data: XOR<PlaceUrbanExplorerUpdateWithoutReportsInput, PlaceUrbanExplorerUncheckedUpdateWithoutReportsInput>
+  }
+
+  export type PlaceUrbanExplorerUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    owner?: UserUpdateOneRequiredWithoutPlaceUrbanExplorerNestedInput
+    reviews?: ReviewUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    bookmarks?: BookmarkUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    ownerId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    reviews?: ReviewUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    bookmarks?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type ReviewUrbanExplorerUpsertWithoutReportsInput = {
+    update: XOR<ReviewUrbanExplorerUpdateWithoutReportsInput, ReviewUrbanExplorerUncheckedUpdateWithoutReportsInput>
+    create: XOR<ReviewUrbanExplorerCreateWithoutReportsInput, ReviewUrbanExplorerUncheckedCreateWithoutReportsInput>
+    where?: ReviewUrbanExplorerWhereInput
+  }
+
+  export type ReviewUrbanExplorerUpdateToOneWithWhereWithoutReportsInput = {
+    where?: ReviewUrbanExplorerWhereInput
+    data: XOR<ReviewUrbanExplorerUpdateWithoutReportsInput, ReviewUrbanExplorerUncheckedUpdateWithoutReportsInput>
+  }
+
+  export type ReviewUrbanExplorerUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutReviewUrbanExplorerNestedInput
+    place?: PlaceUrbanExplorerUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type PostDIYHomesCreateManyUserInput = {
     id?: string
     title: string
@@ -11401,6 +20614,44 @@ export namespace Prisma {
   export type ReportDIYHomesCreateManyUserInput = {
     id?: string
     postId?: string | null
+    reviewId?: string | null
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type PlaceUrbanExplorerCreateManyOwnerInput = {
+    id?: string
+    name: string
+    category: string
+    location: string
+    description: string
+    createdAt?: Date | string
+    validated?: boolean
+  }
+
+  export type ReviewUrbanExplorerCreateManyUserInput = {
+    id?: string
+    placeId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type LikeUrbanExplorerCreateManyUserInput = {
+    id?: string
+    placeId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkUrbanExplorerCreateManyUserInput = {
+    id?: string
+    placeId: string
+    createdAt?: Date | string
+  }
+
+  export type ReportUrbanExplorerCreateManyUserInput = {
+    id?: string
+    placeId?: string | null
     reviewId?: string | null
     reason: string
     createdAt?: Date | string
@@ -11519,6 +20770,130 @@ export namespace Prisma {
   export type ReportDIYHomesUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: NullableStringFieldUpdateOperationsInput | string | null
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlaceUrbanExplorerUpdateWithoutOwnerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    reviews?: ReviewUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    bookmarks?: BookmarkUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedUpdateWithoutOwnerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    reviews?: ReviewUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    bookmarks?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    likes?: LikeUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+    reports?: ReportUrbanExplorerUncheckedUpdateManyWithoutPlaceNestedInput
+  }
+
+  export type PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type ReviewUrbanExplorerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    place?: PlaceUrbanExplorerUpdateOneRequiredWithoutReviewsNestedInput
+    reports?: ReportUrbanExplorerUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reports?: ReportUrbanExplorerUncheckedUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeUrbanExplorerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    place?: PlaceUrbanExplorerUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type LikeUrbanExplorerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeUrbanExplorerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkUrbanExplorerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    place?: PlaceUrbanExplorerUpdateOneRequiredWithoutBookmarksNestedInput
+  }
+
+  export type BookmarkUrbanExplorerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportUrbanExplorerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    place?: PlaceUrbanExplorerUpdateOneWithoutReportsNestedInput
+    review?: ReviewUrbanExplorerUpdateOneWithoutReportsNestedInput
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: NullableStringFieldUpdateOperationsInput | string | null
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: NullableStringFieldUpdateOperationsInput | string | null
     reviewId?: NullableStringFieldUpdateOperationsInput | string | null
     reason?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -11665,6 +21040,152 @@ export namespace Prisma {
   export type ReportDIYHomesUncheckedUpdateManyWithoutReviewInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewUrbanExplorerCreateManyPlaceInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkUrbanExplorerCreateManyPlaceInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeUrbanExplorerCreateManyPlaceInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type ReportUrbanExplorerCreateManyPlaceInput = {
+    id?: string
+    reviewId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReviewUrbanExplorerUpdateWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutReviewUrbanExplorerNestedInput
+    reports?: ReportUrbanExplorerUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedUpdateWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reports?: ReportUrbanExplorerUncheckedUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewUrbanExplorerUncheckedUpdateManyWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkUrbanExplorerUpdateWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutBookmarkUrbanExplorerNestedInput
+  }
+
+  export type BookmarkUrbanExplorerUncheckedUpdateWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkUrbanExplorerUncheckedUpdateManyWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeUrbanExplorerUpdateWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutLikeUrbanExplorerNestedInput
+  }
+
+  export type LikeUrbanExplorerUncheckedUpdateWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeUrbanExplorerUncheckedUpdateManyWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportUrbanExplorerUpdateWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutReportUrbanExplorerNestedInput
+    review?: ReviewUrbanExplorerUpdateOneWithoutReportsNestedInput
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateManyWithoutPlaceInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportUrbanExplorerCreateManyReviewInput = {
+    id?: string
+    placeId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportUrbanExplorerUpdateWithoutReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutReportUrbanExplorerNestedInput
+    place?: PlaceUrbanExplorerUpdateOneWithoutReportsNestedInput
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateWithoutReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportUrbanExplorerUncheckedUpdateManyWithoutReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    placeId?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
     reason?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string

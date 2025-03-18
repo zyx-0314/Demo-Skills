@@ -17,11 +17,16 @@ model User {
   group     String
   createdAt DateTime @default(now())
 
-  posts     PostDIYHomes[]
-  reviews   ReviewDIYHomes[]
-  bookmarks BookmarkDIYHomes[]
-  Like      LikeDIYHomes[]
-  Report    ReportDIYHomes[]
+  posts                 PostDIYHomes[]
+  reviews               ReviewDIYHomes[]
+  bookmarks             BookmarkDIYHomes[]
+  Like                  LikeDIYHomes[]
+  Report                ReportDIYHomes[]
+  PlaceUrbanExplorer    PlaceUrbanExplorer[]
+  ReviewUrbanExplorer   ReviewUrbanExplorer[]
+  LikeUrbanExplorer     LikeUrbanExplorer[]
+  BookmarkUrbanExplorer BookmarkUrbanExplorer[]
+  ReportUrbanExplorer   ReportUrbanExplorer[]
 }
 
 model PostDIYHomes {
@@ -87,4 +92,71 @@ model ReportDIYHomes {
   user   User            @relation(fields: [userId], references: [id])
   post   PostDIYHomes?   @relation(fields: [postId], references: [id])
   review ReviewDIYHomes? @relation(fields: [reviewId], references: [id])
+}
+
+model PlaceUrbanExplorer {
+  id          String   @id @default(uuid())
+  name        String
+  category    String
+  location    String
+  description String
+  ownerId     String
+  createdAt   DateTime @default(now())
+  validated   Boolean  @default(false)
+
+  owner     User                    @relation(fields: [ownerId], references: [id])
+  reviews   ReviewUrbanExplorer[]
+  bookmarks BookmarkUrbanExplorer[]
+  likes     LikeUrbanExplorer[]
+  reports   ReportUrbanExplorer[]
+}
+
+model ReviewUrbanExplorer {
+  id        String   @id @default(uuid())
+  placeId   String
+  userId    String
+  rating    Int
+  comment   String
+  createdAt DateTime @default(now())
+
+  user    User                  @relation(fields: [userId], references: [id])
+  place   PlaceUrbanExplorer    @relation(fields: [placeId], references: [id])
+  reports ReportUrbanExplorer[]
+}
+
+model LikeUrbanExplorer {
+  id        String   @id @default(uuid())
+  placeId   String
+  userId    String
+  createdAt DateTime @default(now())
+
+  user  User               @relation(fields: [userId], references: [id])
+  place PlaceUrbanExplorer @relation(fields: [placeId], references: [id])
+
+  @@unique([placeId, userId])
+}
+
+model BookmarkUrbanExplorer {
+  id        String   @id @default(uuid())
+  placeId   String
+  userId    String
+  createdAt DateTime @default(now())
+
+  user  User               @relation(fields: [userId], references: [id])
+  place PlaceUrbanExplorer @relation(fields: [placeId], references: [id])
+
+  @@unique([placeId, userId])
+}
+
+model ReportUrbanExplorer {
+  id        String   @id @default(uuid())
+  placeId   String?
+  reviewId  String?
+  userId    String
+  reason    String
+  createdAt DateTime @default(now())
+
+  user   User                 @relation(fields: [userId], references: [id])
+  place  PlaceUrbanExplorer?  @relation(fields: [placeId], references: [id])
+  review ReviewUrbanExplorer? @relation(fields: [reviewId], references: [id])
 }
