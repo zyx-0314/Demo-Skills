@@ -126,7 +126,7 @@ exports.Prisma.UserScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.PostScalarFieldEnum = {
+exports.Prisma.PostDIYHomesScalarFieldEnum = {
   id: 'id',
   title: 'title',
   content: 'content',
@@ -135,7 +135,7 @@ exports.Prisma.PostScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.ReviewScalarFieldEnum = {
+exports.Prisma.ReviewDIYHomesScalarFieldEnum = {
   id: 'id',
   postId: 'postId',
   userId: 'userId',
@@ -144,21 +144,21 @@ exports.Prisma.ReviewScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.LikeScalarFieldEnum = {
+exports.Prisma.LikeDIYHomesScalarFieldEnum = {
   id: 'id',
   postId: 'postId',
   userId: 'userId',
   createdAt: 'createdAt'
 };
 
-exports.Prisma.BookmarkScalarFieldEnum = {
+exports.Prisma.BookmarkDIYHomesScalarFieldEnum = {
   id: 'id',
   postId: 'postId',
   userId: 'userId',
   createdAt: 'createdAt'
 };
 
-exports.Prisma.ReportScalarFieldEnum = {
+exports.Prisma.ReportDIYHomesScalarFieldEnum = {
   id: 'id',
   postId: 'postId',
   reviewId: 'reviewId',
@@ -185,11 +185,11 @@ exports.Prisma.NullsOrder = {
 
 exports.Prisma.ModelName = {
   User: 'User',
-  Post: 'Post',
-  Review: 'Review',
-  Like: 'Like',
-  Bookmark: 'Bookmark',
-  Report: 'Report'
+  PostDIYHomes: 'PostDIYHomes',
+  ReviewDIYHomes: 'ReviewDIYHomes',
+  LikeDIYHomes: 'LikeDIYHomes',
+  BookmarkDIYHomes: 'BookmarkDIYHomes',
+  ReportDIYHomes: 'ReportDIYHomes'
 };
 
 /**

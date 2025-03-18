@@ -7,12 +7,14 @@ describe("DIYHome Post API Tests", () => {
   let testPostId: string;
   let testUserId: string;
 
+  const testEmail = "testpost@example.com";
+
   // ✅ Create a user before running the tests
   beforeAll(async () => {
     const req = new NextRequest("http://localhost:3000/api/users", {
       method: "POST",
       body: JSON.stringify({
-        email: "testuser@example.com",
+        email: testEmail,
         name: "Test User",
         password: "password123",
         group: "member",
