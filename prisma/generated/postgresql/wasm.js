@@ -210,6 +210,43 @@ exports.Prisma.ReportUrbanExplorerScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.FoodieFoodScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  cuisine: 'cuisine',
+  origin: 'origin',
+  description: 'description',
+  submittedBy: 'submittedBy',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.FoodieLocationScalarFieldEnum = {
+  id: 'id',
+  foodId: 'foodId',
+  locationName: 'locationName',
+  address: 'address',
+  submittedBy: 'submittedBy',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.FoodieReviewScalarFieldEnum = {
+  id: 'id',
+  foodId: 'foodId',
+  userId: 'userId',
+  rating: 'rating',
+  comment: 'comment',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.FoodieLikeScalarFieldEnum = {
+  id: 'id',
+  foodId: 'foodId',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -237,7 +274,11 @@ exports.Prisma.ModelName = {
   ReviewUrbanExplorer: 'ReviewUrbanExplorer',
   LikeUrbanExplorer: 'LikeUrbanExplorer',
   BookmarkUrbanExplorer: 'BookmarkUrbanExplorer',
-  ReportUrbanExplorer: 'ReportUrbanExplorer'
+  ReportUrbanExplorer: 'ReportUrbanExplorer',
+  FoodieFood: 'FoodieFood',
+  FoodieLocation: 'FoodieLocation',
+  FoodieReview: 'FoodieReview',
+  FoodieLike: 'FoodieLike'
 };
 
 /**

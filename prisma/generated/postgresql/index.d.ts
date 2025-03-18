@@ -68,6 +68,26 @@ export type BookmarkUrbanExplorer = $Result.DefaultSelection<Prisma.$BookmarkUrb
  * 
  */
 export type ReportUrbanExplorer = $Result.DefaultSelection<Prisma.$ReportUrbanExplorerPayload>
+/**
+ * Model FoodieFood
+ * 
+ */
+export type FoodieFood = $Result.DefaultSelection<Prisma.$FoodieFoodPayload>
+/**
+ * Model FoodieLocation
+ * 
+ */
+export type FoodieLocation = $Result.DefaultSelection<Prisma.$FoodieLocationPayload>
+/**
+ * Model FoodieReview
+ * 
+ */
+export type FoodieReview = $Result.DefaultSelection<Prisma.$FoodieReviewPayload>
+/**
+ * Model FoodieLike
+ * 
+ */
+export type FoodieLike = $Result.DefaultSelection<Prisma.$FoodieLikePayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -303,6 +323,46 @@ export class PrismaClient<
     * ```
     */
   get reportUrbanExplorer(): Prisma.ReportUrbanExplorerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.foodieFood`: Exposes CRUD operations for the **FoodieFood** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more FoodieFoods
+    * const foodieFoods = await prisma.foodieFood.findMany()
+    * ```
+    */
+  get foodieFood(): Prisma.FoodieFoodDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.foodieLocation`: Exposes CRUD operations for the **FoodieLocation** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more FoodieLocations
+    * const foodieLocations = await prisma.foodieLocation.findMany()
+    * ```
+    */
+  get foodieLocation(): Prisma.FoodieLocationDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.foodieReview`: Exposes CRUD operations for the **FoodieReview** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more FoodieReviews
+    * const foodieReviews = await prisma.foodieReview.findMany()
+    * ```
+    */
+  get foodieReview(): Prisma.FoodieReviewDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.foodieLike`: Exposes CRUD operations for the **FoodieLike** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more FoodieLikes
+    * const foodieLikes = await prisma.foodieLike.findMany()
+    * ```
+    */
+  get foodieLike(): Prisma.FoodieLikeDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -753,7 +813,11 @@ export namespace Prisma {
     ReviewUrbanExplorer: 'ReviewUrbanExplorer',
     LikeUrbanExplorer: 'LikeUrbanExplorer',
     BookmarkUrbanExplorer: 'BookmarkUrbanExplorer',
-    ReportUrbanExplorer: 'ReportUrbanExplorer'
+    ReportUrbanExplorer: 'ReportUrbanExplorer',
+    FoodieFood: 'FoodieFood',
+    FoodieLocation: 'FoodieLocation',
+    FoodieReview: 'FoodieReview',
+    FoodieLike: 'FoodieLike'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -772,7 +836,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer"
+      modelProps: "user" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1590,6 +1654,302 @@ export namespace Prisma {
           }
         }
       }
+      FoodieFood: {
+        payload: Prisma.$FoodieFoodPayload<ExtArgs>
+        fields: Prisma.FoodieFoodFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.FoodieFoodFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.FoodieFoodFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload>
+          }
+          findFirst: {
+            args: Prisma.FoodieFoodFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.FoodieFoodFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload>
+          }
+          findMany: {
+            args: Prisma.FoodieFoodFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload>[]
+          }
+          create: {
+            args: Prisma.FoodieFoodCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload>
+          }
+          createMany: {
+            args: Prisma.FoodieFoodCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.FoodieFoodCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload>[]
+          }
+          delete: {
+            args: Prisma.FoodieFoodDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload>
+          }
+          update: {
+            args: Prisma.FoodieFoodUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload>
+          }
+          deleteMany: {
+            args: Prisma.FoodieFoodDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.FoodieFoodUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.FoodieFoodUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload>[]
+          }
+          upsert: {
+            args: Prisma.FoodieFoodUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieFoodPayload>
+          }
+          aggregate: {
+            args: Prisma.FoodieFoodAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateFoodieFood>
+          }
+          groupBy: {
+            args: Prisma.FoodieFoodGroupByArgs<ExtArgs>
+            result: $Utils.Optional<FoodieFoodGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.FoodieFoodCountArgs<ExtArgs>
+            result: $Utils.Optional<FoodieFoodCountAggregateOutputType> | number
+          }
+        }
+      }
+      FoodieLocation: {
+        payload: Prisma.$FoodieLocationPayload<ExtArgs>
+        fields: Prisma.FoodieLocationFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.FoodieLocationFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.FoodieLocationFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload>
+          }
+          findFirst: {
+            args: Prisma.FoodieLocationFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.FoodieLocationFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload>
+          }
+          findMany: {
+            args: Prisma.FoodieLocationFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload>[]
+          }
+          create: {
+            args: Prisma.FoodieLocationCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload>
+          }
+          createMany: {
+            args: Prisma.FoodieLocationCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.FoodieLocationCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload>[]
+          }
+          delete: {
+            args: Prisma.FoodieLocationDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload>
+          }
+          update: {
+            args: Prisma.FoodieLocationUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload>
+          }
+          deleteMany: {
+            args: Prisma.FoodieLocationDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.FoodieLocationUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.FoodieLocationUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload>[]
+          }
+          upsert: {
+            args: Prisma.FoodieLocationUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLocationPayload>
+          }
+          aggregate: {
+            args: Prisma.FoodieLocationAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateFoodieLocation>
+          }
+          groupBy: {
+            args: Prisma.FoodieLocationGroupByArgs<ExtArgs>
+            result: $Utils.Optional<FoodieLocationGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.FoodieLocationCountArgs<ExtArgs>
+            result: $Utils.Optional<FoodieLocationCountAggregateOutputType> | number
+          }
+        }
+      }
+      FoodieReview: {
+        payload: Prisma.$FoodieReviewPayload<ExtArgs>
+        fields: Prisma.FoodieReviewFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.FoodieReviewFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.FoodieReviewFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload>
+          }
+          findFirst: {
+            args: Prisma.FoodieReviewFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.FoodieReviewFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload>
+          }
+          findMany: {
+            args: Prisma.FoodieReviewFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload>[]
+          }
+          create: {
+            args: Prisma.FoodieReviewCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload>
+          }
+          createMany: {
+            args: Prisma.FoodieReviewCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.FoodieReviewCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload>[]
+          }
+          delete: {
+            args: Prisma.FoodieReviewDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload>
+          }
+          update: {
+            args: Prisma.FoodieReviewUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload>
+          }
+          deleteMany: {
+            args: Prisma.FoodieReviewDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.FoodieReviewUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.FoodieReviewUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload>[]
+          }
+          upsert: {
+            args: Prisma.FoodieReviewUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieReviewPayload>
+          }
+          aggregate: {
+            args: Prisma.FoodieReviewAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateFoodieReview>
+          }
+          groupBy: {
+            args: Prisma.FoodieReviewGroupByArgs<ExtArgs>
+            result: $Utils.Optional<FoodieReviewGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.FoodieReviewCountArgs<ExtArgs>
+            result: $Utils.Optional<FoodieReviewCountAggregateOutputType> | number
+          }
+        }
+      }
+      FoodieLike: {
+        payload: Prisma.$FoodieLikePayload<ExtArgs>
+        fields: Prisma.FoodieLikeFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.FoodieLikeFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.FoodieLikeFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload>
+          }
+          findFirst: {
+            args: Prisma.FoodieLikeFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.FoodieLikeFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload>
+          }
+          findMany: {
+            args: Prisma.FoodieLikeFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload>[]
+          }
+          create: {
+            args: Prisma.FoodieLikeCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload>
+          }
+          createMany: {
+            args: Prisma.FoodieLikeCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.FoodieLikeCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload>[]
+          }
+          delete: {
+            args: Prisma.FoodieLikeDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload>
+          }
+          update: {
+            args: Prisma.FoodieLikeUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload>
+          }
+          deleteMany: {
+            args: Prisma.FoodieLikeDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.FoodieLikeUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.FoodieLikeUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload>[]
+          }
+          upsert: {
+            args: Prisma.FoodieLikeUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$FoodieLikePayload>
+          }
+          aggregate: {
+            args: Prisma.FoodieLikeAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateFoodieLike>
+          }
+          groupBy: {
+            args: Prisma.FoodieLikeGroupByArgs<ExtArgs>
+            result: $Utils.Optional<FoodieLikeGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.FoodieLikeCountArgs<ExtArgs>
+            result: $Utils.Optional<FoodieLikeCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -1685,6 +2045,10 @@ export namespace Prisma {
     likeUrbanExplorer?: LikeUrbanExplorerOmit
     bookmarkUrbanExplorer?: BookmarkUrbanExplorerOmit
     reportUrbanExplorer?: ReportUrbanExplorerOmit
+    foodieFood?: FoodieFoodOmit
+    foodieLocation?: FoodieLocationOmit
+    foodieReview?: FoodieReviewOmit
+    foodieLike?: FoodieLikeOmit
   }
 
   /* Types for Logging */
@@ -1789,6 +2153,10 @@ export namespace Prisma {
     LikeUrbanExplorer: number
     BookmarkUrbanExplorer: number
     ReportUrbanExplorer: number
+    FoodieFood: number
+    FoodieLocation: number
+    FoodieReview: number
+    FoodieLike: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -1802,6 +2170,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: boolean | UserCountOutputTypeCountLikeUrbanExplorerArgs
     BookmarkUrbanExplorer?: boolean | UserCountOutputTypeCountBookmarkUrbanExplorerArgs
     ReportUrbanExplorer?: boolean | UserCountOutputTypeCountReportUrbanExplorerArgs
+    FoodieFood?: boolean | UserCountOutputTypeCountFoodieFoodArgs
+    FoodieLocation?: boolean | UserCountOutputTypeCountFoodieLocationArgs
+    FoodieReview?: boolean | UserCountOutputTypeCountFoodieReviewArgs
+    FoodieLike?: boolean | UserCountOutputTypeCountFoodieLikeArgs
   }
 
   // Custom InputTypes
@@ -1883,6 +2255,34 @@ export namespace Prisma {
    */
   export type UserCountOutputTypeCountReportUrbanExplorerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ReportUrbanExplorerWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountFoodieFoodArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieFoodWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountFoodieLocationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieLocationWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountFoodieReviewArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieReviewWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountFoodieLikeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieLikeWhereInput
   }
 
 
@@ -2061,6 +2461,55 @@ export namespace Prisma {
    */
   export type ReviewUrbanExplorerCountOutputTypeCountReportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ReportUrbanExplorerWhereInput
+  }
+
+
+  /**
+   * Count Type FoodieFoodCountOutputType
+   */
+
+  export type FoodieFoodCountOutputType = {
+    locations: number
+    reviews: number
+    likes: number
+  }
+
+  export type FoodieFoodCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    locations?: boolean | FoodieFoodCountOutputTypeCountLocationsArgs
+    reviews?: boolean | FoodieFoodCountOutputTypeCountReviewsArgs
+    likes?: boolean | FoodieFoodCountOutputTypeCountLikesArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * FoodieFoodCountOutputType without action
+   */
+  export type FoodieFoodCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFoodCountOutputType
+     */
+    select?: FoodieFoodCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * FoodieFoodCountOutputType without action
+   */
+  export type FoodieFoodCountOutputTypeCountLocationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieLocationWhereInput
+  }
+
+  /**
+   * FoodieFoodCountOutputType without action
+   */
+  export type FoodieFoodCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieReviewWhereInput
+  }
+
+  /**
+   * FoodieFoodCountOutputType without action
+   */
+  export type FoodieFoodCountOutputTypeCountLikesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieLikeWhereInput
   }
 
 
@@ -2250,6 +2699,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: boolean | User$LikeUrbanExplorerArgs<ExtArgs>
     BookmarkUrbanExplorer?: boolean | User$BookmarkUrbanExplorerArgs<ExtArgs>
     ReportUrbanExplorer?: boolean | User$ReportUrbanExplorerArgs<ExtArgs>
+    FoodieFood?: boolean | User$FoodieFoodArgs<ExtArgs>
+    FoodieLocation?: boolean | User$FoodieLocationArgs<ExtArgs>
+    FoodieReview?: boolean | User$FoodieReviewArgs<ExtArgs>
+    FoodieLike?: boolean | User$FoodieLikeArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
@@ -2292,6 +2745,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: boolean | User$LikeUrbanExplorerArgs<ExtArgs>
     BookmarkUrbanExplorer?: boolean | User$BookmarkUrbanExplorerArgs<ExtArgs>
     ReportUrbanExplorer?: boolean | User$ReportUrbanExplorerArgs<ExtArgs>
+    FoodieFood?: boolean | User$FoodieFoodArgs<ExtArgs>
+    FoodieLocation?: boolean | User$FoodieLocationArgs<ExtArgs>
+    FoodieReview?: boolean | User$FoodieReviewArgs<ExtArgs>
+    FoodieLike?: boolean | User$FoodieLikeArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -2310,6 +2767,10 @@ export namespace Prisma {
       LikeUrbanExplorer: Prisma.$LikeUrbanExplorerPayload<ExtArgs>[]
       BookmarkUrbanExplorer: Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>[]
       ReportUrbanExplorer: Prisma.$ReportUrbanExplorerPayload<ExtArgs>[]
+      FoodieFood: Prisma.$FoodieFoodPayload<ExtArgs>[]
+      FoodieLocation: Prisma.$FoodieLocationPayload<ExtArgs>[]
+      FoodieReview: Prisma.$FoodieReviewPayload<ExtArgs>[]
+      FoodieLike: Prisma.$FoodieLikePayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -2722,6 +3183,10 @@ export namespace Prisma {
     LikeUrbanExplorer<T extends User$LikeUrbanExplorerArgs<ExtArgs> = {}>(args?: Subset<T, User$LikeUrbanExplorerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     BookmarkUrbanExplorer<T extends User$BookmarkUrbanExplorerArgs<ExtArgs> = {}>(args?: Subset<T, User$BookmarkUrbanExplorerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     ReportUrbanExplorer<T extends User$ReportUrbanExplorerArgs<ExtArgs> = {}>(args?: Subset<T, User$ReportUrbanExplorerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportUrbanExplorerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    FoodieFood<T extends User$FoodieFoodArgs<ExtArgs> = {}>(args?: Subset<T, User$FoodieFoodArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    FoodieLocation<T extends User$FoodieLocationArgs<ExtArgs> = {}>(args?: Subset<T, User$FoodieLocationArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    FoodieReview<T extends User$FoodieReviewArgs<ExtArgs> = {}>(args?: Subset<T, User$FoodieReviewArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    FoodieLike<T extends User$FoodieLikeArgs<ExtArgs> = {}>(args?: Subset<T, User$FoodieLikeArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3382,6 +3847,102 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: ReportUrbanExplorerScalarFieldEnum | ReportUrbanExplorerScalarFieldEnum[]
+  }
+
+  /**
+   * User.FoodieFood
+   */
+  export type User$FoodieFoodArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    where?: FoodieFoodWhereInput
+    orderBy?: FoodieFoodOrderByWithRelationInput | FoodieFoodOrderByWithRelationInput[]
+    cursor?: FoodieFoodWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FoodieFoodScalarFieldEnum | FoodieFoodScalarFieldEnum[]
+  }
+
+  /**
+   * User.FoodieLocation
+   */
+  export type User$FoodieLocationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    where?: FoodieLocationWhereInput
+    orderBy?: FoodieLocationOrderByWithRelationInput | FoodieLocationOrderByWithRelationInput[]
+    cursor?: FoodieLocationWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FoodieLocationScalarFieldEnum | FoodieLocationScalarFieldEnum[]
+  }
+
+  /**
+   * User.FoodieReview
+   */
+  export type User$FoodieReviewArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    where?: FoodieReviewWhereInput
+    orderBy?: FoodieReviewOrderByWithRelationInput | FoodieReviewOrderByWithRelationInput[]
+    cursor?: FoodieReviewWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FoodieReviewScalarFieldEnum | FoodieReviewScalarFieldEnum[]
+  }
+
+  /**
+   * User.FoodieLike
+   */
+  export type User$FoodieLikeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    where?: FoodieLikeWhereInput
+    orderBy?: FoodieLikeOrderByWithRelationInput | FoodieLikeOrderByWithRelationInput[]
+    cursor?: FoodieLikeWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FoodieLikeScalarFieldEnum | FoodieLikeScalarFieldEnum[]
   }
 
   /**
@@ -14548,6 +15109,4447 @@ export namespace Prisma {
 
 
   /**
+   * Model FoodieFood
+   */
+
+  export type AggregateFoodieFood = {
+    _count: FoodieFoodCountAggregateOutputType | null
+    _min: FoodieFoodMinAggregateOutputType | null
+    _max: FoodieFoodMaxAggregateOutputType | null
+  }
+
+  export type FoodieFoodMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    cuisine: string | null
+    origin: string | null
+    description: string | null
+    submittedBy: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type FoodieFoodMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    cuisine: string | null
+    origin: string | null
+    description: string | null
+    submittedBy: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type FoodieFoodCountAggregateOutputType = {
+    id: number
+    name: number
+    cuisine: number
+    origin: number
+    description: number
+    submittedBy: number
+    validated: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type FoodieFoodMinAggregateInputType = {
+    id?: true
+    name?: true
+    cuisine?: true
+    origin?: true
+    description?: true
+    submittedBy?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type FoodieFoodMaxAggregateInputType = {
+    id?: true
+    name?: true
+    cuisine?: true
+    origin?: true
+    description?: true
+    submittedBy?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type FoodieFoodCountAggregateInputType = {
+    id?: true
+    name?: true
+    cuisine?: true
+    origin?: true
+    description?: true
+    submittedBy?: true
+    validated?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type FoodieFoodAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FoodieFood to aggregate.
+     */
+    where?: FoodieFoodWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieFoods to fetch.
+     */
+    orderBy?: FoodieFoodOrderByWithRelationInput | FoodieFoodOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: FoodieFoodWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieFoods from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieFoods.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned FoodieFoods
+    **/
+    _count?: true | FoodieFoodCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: FoodieFoodMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: FoodieFoodMaxAggregateInputType
+  }
+
+  export type GetFoodieFoodAggregateType<T extends FoodieFoodAggregateArgs> = {
+        [P in keyof T & keyof AggregateFoodieFood]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateFoodieFood[P]>
+      : GetScalarType<T[P], AggregateFoodieFood[P]>
+  }
+
+
+
+
+  export type FoodieFoodGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieFoodWhereInput
+    orderBy?: FoodieFoodOrderByWithAggregationInput | FoodieFoodOrderByWithAggregationInput[]
+    by: FoodieFoodScalarFieldEnum[] | FoodieFoodScalarFieldEnum
+    having?: FoodieFoodScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: FoodieFoodCountAggregateInputType | true
+    _min?: FoodieFoodMinAggregateInputType
+    _max?: FoodieFoodMaxAggregateInputType
+  }
+
+  export type FoodieFoodGroupByOutputType = {
+    id: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    submittedBy: string
+    validated: boolean
+    createdAt: Date
+    _count: FoodieFoodCountAggregateOutputType | null
+    _min: FoodieFoodMinAggregateOutputType | null
+    _max: FoodieFoodMaxAggregateOutputType | null
+  }
+
+  type GetFoodieFoodGroupByPayload<T extends FoodieFoodGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<FoodieFoodGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof FoodieFoodGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], FoodieFoodGroupByOutputType[P]>
+            : GetScalarType<T[P], FoodieFoodGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type FoodieFoodSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    cuisine?: boolean
+    origin?: boolean
+    description?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    locations?: boolean | FoodieFood$locationsArgs<ExtArgs>
+    reviews?: boolean | FoodieFood$reviewsArgs<ExtArgs>
+    likes?: boolean | FoodieFood$likesArgs<ExtArgs>
+    _count?: boolean | FoodieFoodCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieFood"]>
+
+  export type FoodieFoodSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    cuisine?: boolean
+    origin?: boolean
+    description?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieFood"]>
+
+  export type FoodieFoodSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    cuisine?: boolean
+    origin?: boolean
+    description?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieFood"]>
+
+  export type FoodieFoodSelectScalar = {
+    id?: boolean
+    name?: boolean
+    cuisine?: boolean
+    origin?: boolean
+    description?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }
+
+  export type FoodieFoodOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "cuisine" | "origin" | "description" | "submittedBy" | "validated" | "createdAt", ExtArgs["result"]["foodieFood"]>
+  export type FoodieFoodInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    locations?: boolean | FoodieFood$locationsArgs<ExtArgs>
+    reviews?: boolean | FoodieFood$reviewsArgs<ExtArgs>
+    likes?: boolean | FoodieFood$likesArgs<ExtArgs>
+    _count?: boolean | FoodieFoodCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type FoodieFoodIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type FoodieFoodIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $FoodieFoodPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "FoodieFood"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      locations: Prisma.$FoodieLocationPayload<ExtArgs>[]
+      reviews: Prisma.$FoodieReviewPayload<ExtArgs>[]
+      likes: Prisma.$FoodieLikePayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      cuisine: string
+      origin: string
+      description: string
+      submittedBy: string
+      validated: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["foodieFood"]>
+    composites: {}
+  }
+
+  type FoodieFoodGetPayload<S extends boolean | null | undefined | FoodieFoodDefaultArgs> = $Result.GetResult<Prisma.$FoodieFoodPayload, S>
+
+  type FoodieFoodCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<FoodieFoodFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: FoodieFoodCountAggregateInputType | true
+    }
+
+  export interface FoodieFoodDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['FoodieFood'], meta: { name: 'FoodieFood' } }
+    /**
+     * Find zero or one FoodieFood that matches the filter.
+     * @param {FoodieFoodFindUniqueArgs} args - Arguments to find a FoodieFood
+     * @example
+     * // Get one FoodieFood
+     * const foodieFood = await prisma.foodieFood.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends FoodieFoodFindUniqueArgs>(args: SelectSubset<T, FoodieFoodFindUniqueArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one FoodieFood that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {FoodieFoodFindUniqueOrThrowArgs} args - Arguments to find a FoodieFood
+     * @example
+     * // Get one FoodieFood
+     * const foodieFood = await prisma.foodieFood.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends FoodieFoodFindUniqueOrThrowArgs>(args: SelectSubset<T, FoodieFoodFindUniqueOrThrowArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FoodieFood that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieFoodFindFirstArgs} args - Arguments to find a FoodieFood
+     * @example
+     * // Get one FoodieFood
+     * const foodieFood = await prisma.foodieFood.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends FoodieFoodFindFirstArgs>(args?: SelectSubset<T, FoodieFoodFindFirstArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FoodieFood that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieFoodFindFirstOrThrowArgs} args - Arguments to find a FoodieFood
+     * @example
+     * // Get one FoodieFood
+     * const foodieFood = await prisma.foodieFood.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends FoodieFoodFindFirstOrThrowArgs>(args?: SelectSubset<T, FoodieFoodFindFirstOrThrowArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more FoodieFoods that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieFoodFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all FoodieFoods
+     * const foodieFoods = await prisma.foodieFood.findMany()
+     * 
+     * // Get first 10 FoodieFoods
+     * const foodieFoods = await prisma.foodieFood.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const foodieFoodWithIdOnly = await prisma.foodieFood.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends FoodieFoodFindManyArgs>(args?: SelectSubset<T, FoodieFoodFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a FoodieFood.
+     * @param {FoodieFoodCreateArgs} args - Arguments to create a FoodieFood.
+     * @example
+     * // Create one FoodieFood
+     * const FoodieFood = await prisma.foodieFood.create({
+     *   data: {
+     *     // ... data to create a FoodieFood
+     *   }
+     * })
+     * 
+     */
+    create<T extends FoodieFoodCreateArgs>(args: SelectSubset<T, FoodieFoodCreateArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many FoodieFoods.
+     * @param {FoodieFoodCreateManyArgs} args - Arguments to create many FoodieFoods.
+     * @example
+     * // Create many FoodieFoods
+     * const foodieFood = await prisma.foodieFood.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends FoodieFoodCreateManyArgs>(args?: SelectSubset<T, FoodieFoodCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many FoodieFoods and returns the data saved in the database.
+     * @param {FoodieFoodCreateManyAndReturnArgs} args - Arguments to create many FoodieFoods.
+     * @example
+     * // Create many FoodieFoods
+     * const foodieFood = await prisma.foodieFood.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many FoodieFoods and only return the `id`
+     * const foodieFoodWithIdOnly = await prisma.foodieFood.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends FoodieFoodCreateManyAndReturnArgs>(args?: SelectSubset<T, FoodieFoodCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a FoodieFood.
+     * @param {FoodieFoodDeleteArgs} args - Arguments to delete one FoodieFood.
+     * @example
+     * // Delete one FoodieFood
+     * const FoodieFood = await prisma.foodieFood.delete({
+     *   where: {
+     *     // ... filter to delete one FoodieFood
+     *   }
+     * })
+     * 
+     */
+    delete<T extends FoodieFoodDeleteArgs>(args: SelectSubset<T, FoodieFoodDeleteArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one FoodieFood.
+     * @param {FoodieFoodUpdateArgs} args - Arguments to update one FoodieFood.
+     * @example
+     * // Update one FoodieFood
+     * const foodieFood = await prisma.foodieFood.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends FoodieFoodUpdateArgs>(args: SelectSubset<T, FoodieFoodUpdateArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more FoodieFoods.
+     * @param {FoodieFoodDeleteManyArgs} args - Arguments to filter FoodieFoods to delete.
+     * @example
+     * // Delete a few FoodieFoods
+     * const { count } = await prisma.foodieFood.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends FoodieFoodDeleteManyArgs>(args?: SelectSubset<T, FoodieFoodDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FoodieFoods.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieFoodUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many FoodieFoods
+     * const foodieFood = await prisma.foodieFood.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends FoodieFoodUpdateManyArgs>(args: SelectSubset<T, FoodieFoodUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FoodieFoods and returns the data updated in the database.
+     * @param {FoodieFoodUpdateManyAndReturnArgs} args - Arguments to update many FoodieFoods.
+     * @example
+     * // Update many FoodieFoods
+     * const foodieFood = await prisma.foodieFood.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more FoodieFoods and only return the `id`
+     * const foodieFoodWithIdOnly = await prisma.foodieFood.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends FoodieFoodUpdateManyAndReturnArgs>(args: SelectSubset<T, FoodieFoodUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one FoodieFood.
+     * @param {FoodieFoodUpsertArgs} args - Arguments to update or create a FoodieFood.
+     * @example
+     * // Update or create a FoodieFood
+     * const foodieFood = await prisma.foodieFood.upsert({
+     *   create: {
+     *     // ... data to create a FoodieFood
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the FoodieFood we want to update
+     *   }
+     * })
+     */
+    upsert<T extends FoodieFoodUpsertArgs>(args: SelectSubset<T, FoodieFoodUpsertArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of FoodieFoods.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieFoodCountArgs} args - Arguments to filter FoodieFoods to count.
+     * @example
+     * // Count the number of FoodieFoods
+     * const count = await prisma.foodieFood.count({
+     *   where: {
+     *     // ... the filter for the FoodieFoods we want to count
+     *   }
+     * })
+    **/
+    count<T extends FoodieFoodCountArgs>(
+      args?: Subset<T, FoodieFoodCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], FoodieFoodCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a FoodieFood.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieFoodAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends FoodieFoodAggregateArgs>(args: Subset<T, FoodieFoodAggregateArgs>): Prisma.PrismaPromise<GetFoodieFoodAggregateType<T>>
+
+    /**
+     * Group by FoodieFood.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieFoodGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends FoodieFoodGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: FoodieFoodGroupByArgs['orderBy'] }
+        : { orderBy?: FoodieFoodGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, FoodieFoodGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFoodieFoodGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the FoodieFood model
+   */
+  readonly fields: FoodieFoodFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for FoodieFood.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__FoodieFoodClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    locations<T extends FoodieFood$locationsArgs<ExtArgs> = {}>(args?: Subset<T, FoodieFood$locationsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reviews<T extends FoodieFood$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, FoodieFood$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    likes<T extends FoodieFood$likesArgs<ExtArgs> = {}>(args?: Subset<T, FoodieFood$likesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the FoodieFood model
+   */ 
+  interface FoodieFoodFieldRefs {
+    readonly id: FieldRef<"FoodieFood", 'String'>
+    readonly name: FieldRef<"FoodieFood", 'String'>
+    readonly cuisine: FieldRef<"FoodieFood", 'String'>
+    readonly origin: FieldRef<"FoodieFood", 'String'>
+    readonly description: FieldRef<"FoodieFood", 'String'>
+    readonly submittedBy: FieldRef<"FoodieFood", 'String'>
+    readonly validated: FieldRef<"FoodieFood", 'Boolean'>
+    readonly createdAt: FieldRef<"FoodieFood", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * FoodieFood findUnique
+   */
+  export type FoodieFoodFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieFood to fetch.
+     */
+    where: FoodieFoodWhereUniqueInput
+  }
+
+  /**
+   * FoodieFood findUniqueOrThrow
+   */
+  export type FoodieFoodFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieFood to fetch.
+     */
+    where: FoodieFoodWhereUniqueInput
+  }
+
+  /**
+   * FoodieFood findFirst
+   */
+  export type FoodieFoodFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieFood to fetch.
+     */
+    where?: FoodieFoodWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieFoods to fetch.
+     */
+    orderBy?: FoodieFoodOrderByWithRelationInput | FoodieFoodOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FoodieFoods.
+     */
+    cursor?: FoodieFoodWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieFoods from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieFoods.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FoodieFoods.
+     */
+    distinct?: FoodieFoodScalarFieldEnum | FoodieFoodScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieFood findFirstOrThrow
+   */
+  export type FoodieFoodFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieFood to fetch.
+     */
+    where?: FoodieFoodWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieFoods to fetch.
+     */
+    orderBy?: FoodieFoodOrderByWithRelationInput | FoodieFoodOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FoodieFoods.
+     */
+    cursor?: FoodieFoodWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieFoods from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieFoods.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FoodieFoods.
+     */
+    distinct?: FoodieFoodScalarFieldEnum | FoodieFoodScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieFood findMany
+   */
+  export type FoodieFoodFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieFoods to fetch.
+     */
+    where?: FoodieFoodWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieFoods to fetch.
+     */
+    orderBy?: FoodieFoodOrderByWithRelationInput | FoodieFoodOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing FoodieFoods.
+     */
+    cursor?: FoodieFoodWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieFoods from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieFoods.
+     */
+    skip?: number
+    distinct?: FoodieFoodScalarFieldEnum | FoodieFoodScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieFood create
+   */
+  export type FoodieFoodCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    /**
+     * The data needed to create a FoodieFood.
+     */
+    data: XOR<FoodieFoodCreateInput, FoodieFoodUncheckedCreateInput>
+  }
+
+  /**
+   * FoodieFood createMany
+   */
+  export type FoodieFoodCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many FoodieFoods.
+     */
+    data: FoodieFoodCreateManyInput | FoodieFoodCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * FoodieFood createManyAndReturn
+   */
+  export type FoodieFoodCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * The data used to create many FoodieFoods.
+     */
+    data: FoodieFoodCreateManyInput | FoodieFoodCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FoodieFood update
+   */
+  export type FoodieFoodUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    /**
+     * The data needed to update a FoodieFood.
+     */
+    data: XOR<FoodieFoodUpdateInput, FoodieFoodUncheckedUpdateInput>
+    /**
+     * Choose, which FoodieFood to update.
+     */
+    where: FoodieFoodWhereUniqueInput
+  }
+
+  /**
+   * FoodieFood updateMany
+   */
+  export type FoodieFoodUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update FoodieFoods.
+     */
+    data: XOR<FoodieFoodUpdateManyMutationInput, FoodieFoodUncheckedUpdateManyInput>
+    /**
+     * Filter which FoodieFoods to update
+     */
+    where?: FoodieFoodWhereInput
+    /**
+     * Limit how many FoodieFoods to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * FoodieFood updateManyAndReturn
+   */
+  export type FoodieFoodUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * The data used to update FoodieFoods.
+     */
+    data: XOR<FoodieFoodUpdateManyMutationInput, FoodieFoodUncheckedUpdateManyInput>
+    /**
+     * Filter which FoodieFoods to update
+     */
+    where?: FoodieFoodWhereInput
+    /**
+     * Limit how many FoodieFoods to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FoodieFood upsert
+   */
+  export type FoodieFoodUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    /**
+     * The filter to search for the FoodieFood to update in case it exists.
+     */
+    where: FoodieFoodWhereUniqueInput
+    /**
+     * In case the FoodieFood found by the `where` argument doesn't exist, create a new FoodieFood with this data.
+     */
+    create: XOR<FoodieFoodCreateInput, FoodieFoodUncheckedCreateInput>
+    /**
+     * In case the FoodieFood was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<FoodieFoodUpdateInput, FoodieFoodUncheckedUpdateInput>
+  }
+
+  /**
+   * FoodieFood delete
+   */
+  export type FoodieFoodDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+    /**
+     * Filter which FoodieFood to delete.
+     */
+    where: FoodieFoodWhereUniqueInput
+  }
+
+  /**
+   * FoodieFood deleteMany
+   */
+  export type FoodieFoodDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FoodieFoods to delete
+     */
+    where?: FoodieFoodWhereInput
+    /**
+     * Limit how many FoodieFoods to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * FoodieFood.locations
+   */
+  export type FoodieFood$locationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    where?: FoodieLocationWhereInput
+    orderBy?: FoodieLocationOrderByWithRelationInput | FoodieLocationOrderByWithRelationInput[]
+    cursor?: FoodieLocationWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FoodieLocationScalarFieldEnum | FoodieLocationScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieFood.reviews
+   */
+  export type FoodieFood$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    where?: FoodieReviewWhereInput
+    orderBy?: FoodieReviewOrderByWithRelationInput | FoodieReviewOrderByWithRelationInput[]
+    cursor?: FoodieReviewWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FoodieReviewScalarFieldEnum | FoodieReviewScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieFood.likes
+   */
+  export type FoodieFood$likesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    where?: FoodieLikeWhereInput
+    orderBy?: FoodieLikeOrderByWithRelationInput | FoodieLikeOrderByWithRelationInput[]
+    cursor?: FoodieLikeWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: FoodieLikeScalarFieldEnum | FoodieLikeScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieFood without action
+   */
+  export type FoodieFoodDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieFood
+     */
+    select?: FoodieFoodSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieFood
+     */
+    omit?: FoodieFoodOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieFoodInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model FoodieLocation
+   */
+
+  export type AggregateFoodieLocation = {
+    _count: FoodieLocationCountAggregateOutputType | null
+    _min: FoodieLocationMinAggregateOutputType | null
+    _max: FoodieLocationMaxAggregateOutputType | null
+  }
+
+  export type FoodieLocationMinAggregateOutputType = {
+    id: string | null
+    foodId: string | null
+    locationName: string | null
+    address: string | null
+    submittedBy: string | null
+    createdAt: Date | null
+  }
+
+  export type FoodieLocationMaxAggregateOutputType = {
+    id: string | null
+    foodId: string | null
+    locationName: string | null
+    address: string | null
+    submittedBy: string | null
+    createdAt: Date | null
+  }
+
+  export type FoodieLocationCountAggregateOutputType = {
+    id: number
+    foodId: number
+    locationName: number
+    address: number
+    submittedBy: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type FoodieLocationMinAggregateInputType = {
+    id?: true
+    foodId?: true
+    locationName?: true
+    address?: true
+    submittedBy?: true
+    createdAt?: true
+  }
+
+  export type FoodieLocationMaxAggregateInputType = {
+    id?: true
+    foodId?: true
+    locationName?: true
+    address?: true
+    submittedBy?: true
+    createdAt?: true
+  }
+
+  export type FoodieLocationCountAggregateInputType = {
+    id?: true
+    foodId?: true
+    locationName?: true
+    address?: true
+    submittedBy?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type FoodieLocationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FoodieLocation to aggregate.
+     */
+    where?: FoodieLocationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieLocations to fetch.
+     */
+    orderBy?: FoodieLocationOrderByWithRelationInput | FoodieLocationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: FoodieLocationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieLocations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieLocations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned FoodieLocations
+    **/
+    _count?: true | FoodieLocationCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: FoodieLocationMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: FoodieLocationMaxAggregateInputType
+  }
+
+  export type GetFoodieLocationAggregateType<T extends FoodieLocationAggregateArgs> = {
+        [P in keyof T & keyof AggregateFoodieLocation]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateFoodieLocation[P]>
+      : GetScalarType<T[P], AggregateFoodieLocation[P]>
+  }
+
+
+
+
+  export type FoodieLocationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieLocationWhereInput
+    orderBy?: FoodieLocationOrderByWithAggregationInput | FoodieLocationOrderByWithAggregationInput[]
+    by: FoodieLocationScalarFieldEnum[] | FoodieLocationScalarFieldEnum
+    having?: FoodieLocationScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: FoodieLocationCountAggregateInputType | true
+    _min?: FoodieLocationMinAggregateInputType
+    _max?: FoodieLocationMaxAggregateInputType
+  }
+
+  export type FoodieLocationGroupByOutputType = {
+    id: string
+    foodId: string
+    locationName: string
+    address: string
+    submittedBy: string
+    createdAt: Date
+    _count: FoodieLocationCountAggregateOutputType | null
+    _min: FoodieLocationMinAggregateOutputType | null
+    _max: FoodieLocationMaxAggregateOutputType | null
+  }
+
+  type GetFoodieLocationGroupByPayload<T extends FoodieLocationGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<FoodieLocationGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof FoodieLocationGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], FoodieLocationGroupByOutputType[P]>
+            : GetScalarType<T[P], FoodieLocationGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type FoodieLocationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    foodId?: boolean
+    locationName?: boolean
+    address?: boolean
+    submittedBy?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieLocation"]>
+
+  export type FoodieLocationSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    foodId?: boolean
+    locationName?: boolean
+    address?: boolean
+    submittedBy?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieLocation"]>
+
+  export type FoodieLocationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    foodId?: boolean
+    locationName?: boolean
+    address?: boolean
+    submittedBy?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieLocation"]>
+
+  export type FoodieLocationSelectScalar = {
+    id?: boolean
+    foodId?: boolean
+    locationName?: boolean
+    address?: boolean
+    submittedBy?: boolean
+    createdAt?: boolean
+  }
+
+  export type FoodieLocationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "foodId" | "locationName" | "address" | "submittedBy" | "createdAt", ExtArgs["result"]["foodieLocation"]>
+  export type FoodieLocationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }
+  export type FoodieLocationIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }
+  export type FoodieLocationIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }
+
+  export type $FoodieLocationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "FoodieLocation"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      food: Prisma.$FoodieFoodPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      foodId: string
+      locationName: string
+      address: string
+      submittedBy: string
+      createdAt: Date
+    }, ExtArgs["result"]["foodieLocation"]>
+    composites: {}
+  }
+
+  type FoodieLocationGetPayload<S extends boolean | null | undefined | FoodieLocationDefaultArgs> = $Result.GetResult<Prisma.$FoodieLocationPayload, S>
+
+  type FoodieLocationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<FoodieLocationFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: FoodieLocationCountAggregateInputType | true
+    }
+
+  export interface FoodieLocationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['FoodieLocation'], meta: { name: 'FoodieLocation' } }
+    /**
+     * Find zero or one FoodieLocation that matches the filter.
+     * @param {FoodieLocationFindUniqueArgs} args - Arguments to find a FoodieLocation
+     * @example
+     * // Get one FoodieLocation
+     * const foodieLocation = await prisma.foodieLocation.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends FoodieLocationFindUniqueArgs>(args: SelectSubset<T, FoodieLocationFindUniqueArgs<ExtArgs>>): Prisma__FoodieLocationClient<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one FoodieLocation that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {FoodieLocationFindUniqueOrThrowArgs} args - Arguments to find a FoodieLocation
+     * @example
+     * // Get one FoodieLocation
+     * const foodieLocation = await prisma.foodieLocation.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends FoodieLocationFindUniqueOrThrowArgs>(args: SelectSubset<T, FoodieLocationFindUniqueOrThrowArgs<ExtArgs>>): Prisma__FoodieLocationClient<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FoodieLocation that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLocationFindFirstArgs} args - Arguments to find a FoodieLocation
+     * @example
+     * // Get one FoodieLocation
+     * const foodieLocation = await prisma.foodieLocation.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends FoodieLocationFindFirstArgs>(args?: SelectSubset<T, FoodieLocationFindFirstArgs<ExtArgs>>): Prisma__FoodieLocationClient<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FoodieLocation that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLocationFindFirstOrThrowArgs} args - Arguments to find a FoodieLocation
+     * @example
+     * // Get one FoodieLocation
+     * const foodieLocation = await prisma.foodieLocation.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends FoodieLocationFindFirstOrThrowArgs>(args?: SelectSubset<T, FoodieLocationFindFirstOrThrowArgs<ExtArgs>>): Prisma__FoodieLocationClient<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more FoodieLocations that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLocationFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all FoodieLocations
+     * const foodieLocations = await prisma.foodieLocation.findMany()
+     * 
+     * // Get first 10 FoodieLocations
+     * const foodieLocations = await prisma.foodieLocation.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const foodieLocationWithIdOnly = await prisma.foodieLocation.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends FoodieLocationFindManyArgs>(args?: SelectSubset<T, FoodieLocationFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a FoodieLocation.
+     * @param {FoodieLocationCreateArgs} args - Arguments to create a FoodieLocation.
+     * @example
+     * // Create one FoodieLocation
+     * const FoodieLocation = await prisma.foodieLocation.create({
+     *   data: {
+     *     // ... data to create a FoodieLocation
+     *   }
+     * })
+     * 
+     */
+    create<T extends FoodieLocationCreateArgs>(args: SelectSubset<T, FoodieLocationCreateArgs<ExtArgs>>): Prisma__FoodieLocationClient<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many FoodieLocations.
+     * @param {FoodieLocationCreateManyArgs} args - Arguments to create many FoodieLocations.
+     * @example
+     * // Create many FoodieLocations
+     * const foodieLocation = await prisma.foodieLocation.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends FoodieLocationCreateManyArgs>(args?: SelectSubset<T, FoodieLocationCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many FoodieLocations and returns the data saved in the database.
+     * @param {FoodieLocationCreateManyAndReturnArgs} args - Arguments to create many FoodieLocations.
+     * @example
+     * // Create many FoodieLocations
+     * const foodieLocation = await prisma.foodieLocation.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many FoodieLocations and only return the `id`
+     * const foodieLocationWithIdOnly = await prisma.foodieLocation.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends FoodieLocationCreateManyAndReturnArgs>(args?: SelectSubset<T, FoodieLocationCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a FoodieLocation.
+     * @param {FoodieLocationDeleteArgs} args - Arguments to delete one FoodieLocation.
+     * @example
+     * // Delete one FoodieLocation
+     * const FoodieLocation = await prisma.foodieLocation.delete({
+     *   where: {
+     *     // ... filter to delete one FoodieLocation
+     *   }
+     * })
+     * 
+     */
+    delete<T extends FoodieLocationDeleteArgs>(args: SelectSubset<T, FoodieLocationDeleteArgs<ExtArgs>>): Prisma__FoodieLocationClient<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one FoodieLocation.
+     * @param {FoodieLocationUpdateArgs} args - Arguments to update one FoodieLocation.
+     * @example
+     * // Update one FoodieLocation
+     * const foodieLocation = await prisma.foodieLocation.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends FoodieLocationUpdateArgs>(args: SelectSubset<T, FoodieLocationUpdateArgs<ExtArgs>>): Prisma__FoodieLocationClient<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more FoodieLocations.
+     * @param {FoodieLocationDeleteManyArgs} args - Arguments to filter FoodieLocations to delete.
+     * @example
+     * // Delete a few FoodieLocations
+     * const { count } = await prisma.foodieLocation.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends FoodieLocationDeleteManyArgs>(args?: SelectSubset<T, FoodieLocationDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FoodieLocations.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLocationUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many FoodieLocations
+     * const foodieLocation = await prisma.foodieLocation.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends FoodieLocationUpdateManyArgs>(args: SelectSubset<T, FoodieLocationUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FoodieLocations and returns the data updated in the database.
+     * @param {FoodieLocationUpdateManyAndReturnArgs} args - Arguments to update many FoodieLocations.
+     * @example
+     * // Update many FoodieLocations
+     * const foodieLocation = await prisma.foodieLocation.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more FoodieLocations and only return the `id`
+     * const foodieLocationWithIdOnly = await prisma.foodieLocation.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends FoodieLocationUpdateManyAndReturnArgs>(args: SelectSubset<T, FoodieLocationUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one FoodieLocation.
+     * @param {FoodieLocationUpsertArgs} args - Arguments to update or create a FoodieLocation.
+     * @example
+     * // Update or create a FoodieLocation
+     * const foodieLocation = await prisma.foodieLocation.upsert({
+     *   create: {
+     *     // ... data to create a FoodieLocation
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the FoodieLocation we want to update
+     *   }
+     * })
+     */
+    upsert<T extends FoodieLocationUpsertArgs>(args: SelectSubset<T, FoodieLocationUpsertArgs<ExtArgs>>): Prisma__FoodieLocationClient<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of FoodieLocations.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLocationCountArgs} args - Arguments to filter FoodieLocations to count.
+     * @example
+     * // Count the number of FoodieLocations
+     * const count = await prisma.foodieLocation.count({
+     *   where: {
+     *     // ... the filter for the FoodieLocations we want to count
+     *   }
+     * })
+    **/
+    count<T extends FoodieLocationCountArgs>(
+      args?: Subset<T, FoodieLocationCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], FoodieLocationCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a FoodieLocation.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLocationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends FoodieLocationAggregateArgs>(args: Subset<T, FoodieLocationAggregateArgs>): Prisma.PrismaPromise<GetFoodieLocationAggregateType<T>>
+
+    /**
+     * Group by FoodieLocation.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLocationGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends FoodieLocationGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: FoodieLocationGroupByArgs['orderBy'] }
+        : { orderBy?: FoodieLocationGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, FoodieLocationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFoodieLocationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the FoodieLocation model
+   */
+  readonly fields: FoodieLocationFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for FoodieLocation.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__FoodieLocationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    food<T extends FoodieFoodDefaultArgs<ExtArgs> = {}>(args?: Subset<T, FoodieFoodDefaultArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the FoodieLocation model
+   */ 
+  interface FoodieLocationFieldRefs {
+    readonly id: FieldRef<"FoodieLocation", 'String'>
+    readonly foodId: FieldRef<"FoodieLocation", 'String'>
+    readonly locationName: FieldRef<"FoodieLocation", 'String'>
+    readonly address: FieldRef<"FoodieLocation", 'String'>
+    readonly submittedBy: FieldRef<"FoodieLocation", 'String'>
+    readonly createdAt: FieldRef<"FoodieLocation", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * FoodieLocation findUnique
+   */
+  export type FoodieLocationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLocation to fetch.
+     */
+    where: FoodieLocationWhereUniqueInput
+  }
+
+  /**
+   * FoodieLocation findUniqueOrThrow
+   */
+  export type FoodieLocationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLocation to fetch.
+     */
+    where: FoodieLocationWhereUniqueInput
+  }
+
+  /**
+   * FoodieLocation findFirst
+   */
+  export type FoodieLocationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLocation to fetch.
+     */
+    where?: FoodieLocationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieLocations to fetch.
+     */
+    orderBy?: FoodieLocationOrderByWithRelationInput | FoodieLocationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FoodieLocations.
+     */
+    cursor?: FoodieLocationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieLocations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieLocations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FoodieLocations.
+     */
+    distinct?: FoodieLocationScalarFieldEnum | FoodieLocationScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieLocation findFirstOrThrow
+   */
+  export type FoodieLocationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLocation to fetch.
+     */
+    where?: FoodieLocationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieLocations to fetch.
+     */
+    orderBy?: FoodieLocationOrderByWithRelationInput | FoodieLocationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FoodieLocations.
+     */
+    cursor?: FoodieLocationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieLocations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieLocations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FoodieLocations.
+     */
+    distinct?: FoodieLocationScalarFieldEnum | FoodieLocationScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieLocation findMany
+   */
+  export type FoodieLocationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLocations to fetch.
+     */
+    where?: FoodieLocationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieLocations to fetch.
+     */
+    orderBy?: FoodieLocationOrderByWithRelationInput | FoodieLocationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing FoodieLocations.
+     */
+    cursor?: FoodieLocationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieLocations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieLocations.
+     */
+    skip?: number
+    distinct?: FoodieLocationScalarFieldEnum | FoodieLocationScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieLocation create
+   */
+  export type FoodieLocationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    /**
+     * The data needed to create a FoodieLocation.
+     */
+    data: XOR<FoodieLocationCreateInput, FoodieLocationUncheckedCreateInput>
+  }
+
+  /**
+   * FoodieLocation createMany
+   */
+  export type FoodieLocationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many FoodieLocations.
+     */
+    data: FoodieLocationCreateManyInput | FoodieLocationCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * FoodieLocation createManyAndReturn
+   */
+  export type FoodieLocationCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * The data used to create many FoodieLocations.
+     */
+    data: FoodieLocationCreateManyInput | FoodieLocationCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FoodieLocation update
+   */
+  export type FoodieLocationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    /**
+     * The data needed to update a FoodieLocation.
+     */
+    data: XOR<FoodieLocationUpdateInput, FoodieLocationUncheckedUpdateInput>
+    /**
+     * Choose, which FoodieLocation to update.
+     */
+    where: FoodieLocationWhereUniqueInput
+  }
+
+  /**
+   * FoodieLocation updateMany
+   */
+  export type FoodieLocationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update FoodieLocations.
+     */
+    data: XOR<FoodieLocationUpdateManyMutationInput, FoodieLocationUncheckedUpdateManyInput>
+    /**
+     * Filter which FoodieLocations to update
+     */
+    where?: FoodieLocationWhereInput
+    /**
+     * Limit how many FoodieLocations to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * FoodieLocation updateManyAndReturn
+   */
+  export type FoodieLocationUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * The data used to update FoodieLocations.
+     */
+    data: XOR<FoodieLocationUpdateManyMutationInput, FoodieLocationUncheckedUpdateManyInput>
+    /**
+     * Filter which FoodieLocations to update
+     */
+    where?: FoodieLocationWhereInput
+    /**
+     * Limit how many FoodieLocations to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FoodieLocation upsert
+   */
+  export type FoodieLocationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    /**
+     * The filter to search for the FoodieLocation to update in case it exists.
+     */
+    where: FoodieLocationWhereUniqueInput
+    /**
+     * In case the FoodieLocation found by the `where` argument doesn't exist, create a new FoodieLocation with this data.
+     */
+    create: XOR<FoodieLocationCreateInput, FoodieLocationUncheckedCreateInput>
+    /**
+     * In case the FoodieLocation was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<FoodieLocationUpdateInput, FoodieLocationUncheckedUpdateInput>
+  }
+
+  /**
+   * FoodieLocation delete
+   */
+  export type FoodieLocationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+    /**
+     * Filter which FoodieLocation to delete.
+     */
+    where: FoodieLocationWhereUniqueInput
+  }
+
+  /**
+   * FoodieLocation deleteMany
+   */
+  export type FoodieLocationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FoodieLocations to delete
+     */
+    where?: FoodieLocationWhereInput
+    /**
+     * Limit how many FoodieLocations to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * FoodieLocation without action
+   */
+  export type FoodieLocationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLocation
+     */
+    select?: FoodieLocationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLocation
+     */
+    omit?: FoodieLocationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLocationInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model FoodieReview
+   */
+
+  export type AggregateFoodieReview = {
+    _count: FoodieReviewCountAggregateOutputType | null
+    _avg: FoodieReviewAvgAggregateOutputType | null
+    _sum: FoodieReviewSumAggregateOutputType | null
+    _min: FoodieReviewMinAggregateOutputType | null
+    _max: FoodieReviewMaxAggregateOutputType | null
+  }
+
+  export type FoodieReviewAvgAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type FoodieReviewSumAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type FoodieReviewMinAggregateOutputType = {
+    id: string | null
+    foodId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type FoodieReviewMaxAggregateOutputType = {
+    id: string | null
+    foodId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type FoodieReviewCountAggregateOutputType = {
+    id: number
+    foodId: number
+    userId: number
+    rating: number
+    comment: number
+    validated: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type FoodieReviewAvgAggregateInputType = {
+    rating?: true
+  }
+
+  export type FoodieReviewSumAggregateInputType = {
+    rating?: true
+  }
+
+  export type FoodieReviewMinAggregateInputType = {
+    id?: true
+    foodId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type FoodieReviewMaxAggregateInputType = {
+    id?: true
+    foodId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type FoodieReviewCountAggregateInputType = {
+    id?: true
+    foodId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type FoodieReviewAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FoodieReview to aggregate.
+     */
+    where?: FoodieReviewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieReviews to fetch.
+     */
+    orderBy?: FoodieReviewOrderByWithRelationInput | FoodieReviewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: FoodieReviewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieReviews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieReviews.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned FoodieReviews
+    **/
+    _count?: true | FoodieReviewCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: FoodieReviewAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: FoodieReviewSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: FoodieReviewMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: FoodieReviewMaxAggregateInputType
+  }
+
+  export type GetFoodieReviewAggregateType<T extends FoodieReviewAggregateArgs> = {
+        [P in keyof T & keyof AggregateFoodieReview]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateFoodieReview[P]>
+      : GetScalarType<T[P], AggregateFoodieReview[P]>
+  }
+
+
+
+
+  export type FoodieReviewGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieReviewWhereInput
+    orderBy?: FoodieReviewOrderByWithAggregationInput | FoodieReviewOrderByWithAggregationInput[]
+    by: FoodieReviewScalarFieldEnum[] | FoodieReviewScalarFieldEnum
+    having?: FoodieReviewScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: FoodieReviewCountAggregateInputType | true
+    _avg?: FoodieReviewAvgAggregateInputType
+    _sum?: FoodieReviewSumAggregateInputType
+    _min?: FoodieReviewMinAggregateInputType
+    _max?: FoodieReviewMaxAggregateInputType
+  }
+
+  export type FoodieReviewGroupByOutputType = {
+    id: string
+    foodId: string
+    userId: string
+    rating: number
+    comment: string
+    validated: boolean
+    createdAt: Date
+    _count: FoodieReviewCountAggregateOutputType | null
+    _avg: FoodieReviewAvgAggregateOutputType | null
+    _sum: FoodieReviewSumAggregateOutputType | null
+    _min: FoodieReviewMinAggregateOutputType | null
+    _max: FoodieReviewMaxAggregateOutputType | null
+  }
+
+  type GetFoodieReviewGroupByPayload<T extends FoodieReviewGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<FoodieReviewGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof FoodieReviewGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], FoodieReviewGroupByOutputType[P]>
+            : GetScalarType<T[P], FoodieReviewGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type FoodieReviewSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    foodId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieReview"]>
+
+  export type FoodieReviewSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    foodId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieReview"]>
+
+  export type FoodieReviewSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    foodId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieReview"]>
+
+  export type FoodieReviewSelectScalar = {
+    id?: boolean
+    foodId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }
+
+  export type FoodieReviewOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "foodId" | "userId" | "rating" | "comment" | "validated" | "createdAt", ExtArgs["result"]["foodieReview"]>
+  export type FoodieReviewInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }
+  export type FoodieReviewIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }
+  export type FoodieReviewIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }
+
+  export type $FoodieReviewPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "FoodieReview"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      food: Prisma.$FoodieFoodPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      foodId: string
+      userId: string
+      rating: number
+      comment: string
+      validated: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["foodieReview"]>
+    composites: {}
+  }
+
+  type FoodieReviewGetPayload<S extends boolean | null | undefined | FoodieReviewDefaultArgs> = $Result.GetResult<Prisma.$FoodieReviewPayload, S>
+
+  type FoodieReviewCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<FoodieReviewFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: FoodieReviewCountAggregateInputType | true
+    }
+
+  export interface FoodieReviewDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['FoodieReview'], meta: { name: 'FoodieReview' } }
+    /**
+     * Find zero or one FoodieReview that matches the filter.
+     * @param {FoodieReviewFindUniqueArgs} args - Arguments to find a FoodieReview
+     * @example
+     * // Get one FoodieReview
+     * const foodieReview = await prisma.foodieReview.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends FoodieReviewFindUniqueArgs>(args: SelectSubset<T, FoodieReviewFindUniqueArgs<ExtArgs>>): Prisma__FoodieReviewClient<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one FoodieReview that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {FoodieReviewFindUniqueOrThrowArgs} args - Arguments to find a FoodieReview
+     * @example
+     * // Get one FoodieReview
+     * const foodieReview = await prisma.foodieReview.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends FoodieReviewFindUniqueOrThrowArgs>(args: SelectSubset<T, FoodieReviewFindUniqueOrThrowArgs<ExtArgs>>): Prisma__FoodieReviewClient<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FoodieReview that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieReviewFindFirstArgs} args - Arguments to find a FoodieReview
+     * @example
+     * // Get one FoodieReview
+     * const foodieReview = await prisma.foodieReview.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends FoodieReviewFindFirstArgs>(args?: SelectSubset<T, FoodieReviewFindFirstArgs<ExtArgs>>): Prisma__FoodieReviewClient<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FoodieReview that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieReviewFindFirstOrThrowArgs} args - Arguments to find a FoodieReview
+     * @example
+     * // Get one FoodieReview
+     * const foodieReview = await prisma.foodieReview.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends FoodieReviewFindFirstOrThrowArgs>(args?: SelectSubset<T, FoodieReviewFindFirstOrThrowArgs<ExtArgs>>): Prisma__FoodieReviewClient<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more FoodieReviews that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieReviewFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all FoodieReviews
+     * const foodieReviews = await prisma.foodieReview.findMany()
+     * 
+     * // Get first 10 FoodieReviews
+     * const foodieReviews = await prisma.foodieReview.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const foodieReviewWithIdOnly = await prisma.foodieReview.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends FoodieReviewFindManyArgs>(args?: SelectSubset<T, FoodieReviewFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a FoodieReview.
+     * @param {FoodieReviewCreateArgs} args - Arguments to create a FoodieReview.
+     * @example
+     * // Create one FoodieReview
+     * const FoodieReview = await prisma.foodieReview.create({
+     *   data: {
+     *     // ... data to create a FoodieReview
+     *   }
+     * })
+     * 
+     */
+    create<T extends FoodieReviewCreateArgs>(args: SelectSubset<T, FoodieReviewCreateArgs<ExtArgs>>): Prisma__FoodieReviewClient<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many FoodieReviews.
+     * @param {FoodieReviewCreateManyArgs} args - Arguments to create many FoodieReviews.
+     * @example
+     * // Create many FoodieReviews
+     * const foodieReview = await prisma.foodieReview.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends FoodieReviewCreateManyArgs>(args?: SelectSubset<T, FoodieReviewCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many FoodieReviews and returns the data saved in the database.
+     * @param {FoodieReviewCreateManyAndReturnArgs} args - Arguments to create many FoodieReviews.
+     * @example
+     * // Create many FoodieReviews
+     * const foodieReview = await prisma.foodieReview.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many FoodieReviews and only return the `id`
+     * const foodieReviewWithIdOnly = await prisma.foodieReview.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends FoodieReviewCreateManyAndReturnArgs>(args?: SelectSubset<T, FoodieReviewCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a FoodieReview.
+     * @param {FoodieReviewDeleteArgs} args - Arguments to delete one FoodieReview.
+     * @example
+     * // Delete one FoodieReview
+     * const FoodieReview = await prisma.foodieReview.delete({
+     *   where: {
+     *     // ... filter to delete one FoodieReview
+     *   }
+     * })
+     * 
+     */
+    delete<T extends FoodieReviewDeleteArgs>(args: SelectSubset<T, FoodieReviewDeleteArgs<ExtArgs>>): Prisma__FoodieReviewClient<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one FoodieReview.
+     * @param {FoodieReviewUpdateArgs} args - Arguments to update one FoodieReview.
+     * @example
+     * // Update one FoodieReview
+     * const foodieReview = await prisma.foodieReview.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends FoodieReviewUpdateArgs>(args: SelectSubset<T, FoodieReviewUpdateArgs<ExtArgs>>): Prisma__FoodieReviewClient<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more FoodieReviews.
+     * @param {FoodieReviewDeleteManyArgs} args - Arguments to filter FoodieReviews to delete.
+     * @example
+     * // Delete a few FoodieReviews
+     * const { count } = await prisma.foodieReview.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends FoodieReviewDeleteManyArgs>(args?: SelectSubset<T, FoodieReviewDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FoodieReviews.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieReviewUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many FoodieReviews
+     * const foodieReview = await prisma.foodieReview.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends FoodieReviewUpdateManyArgs>(args: SelectSubset<T, FoodieReviewUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FoodieReviews and returns the data updated in the database.
+     * @param {FoodieReviewUpdateManyAndReturnArgs} args - Arguments to update many FoodieReviews.
+     * @example
+     * // Update many FoodieReviews
+     * const foodieReview = await prisma.foodieReview.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more FoodieReviews and only return the `id`
+     * const foodieReviewWithIdOnly = await prisma.foodieReview.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends FoodieReviewUpdateManyAndReturnArgs>(args: SelectSubset<T, FoodieReviewUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one FoodieReview.
+     * @param {FoodieReviewUpsertArgs} args - Arguments to update or create a FoodieReview.
+     * @example
+     * // Update or create a FoodieReview
+     * const foodieReview = await prisma.foodieReview.upsert({
+     *   create: {
+     *     // ... data to create a FoodieReview
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the FoodieReview we want to update
+     *   }
+     * })
+     */
+    upsert<T extends FoodieReviewUpsertArgs>(args: SelectSubset<T, FoodieReviewUpsertArgs<ExtArgs>>): Prisma__FoodieReviewClient<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of FoodieReviews.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieReviewCountArgs} args - Arguments to filter FoodieReviews to count.
+     * @example
+     * // Count the number of FoodieReviews
+     * const count = await prisma.foodieReview.count({
+     *   where: {
+     *     // ... the filter for the FoodieReviews we want to count
+     *   }
+     * })
+    **/
+    count<T extends FoodieReviewCountArgs>(
+      args?: Subset<T, FoodieReviewCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], FoodieReviewCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a FoodieReview.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieReviewAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends FoodieReviewAggregateArgs>(args: Subset<T, FoodieReviewAggregateArgs>): Prisma.PrismaPromise<GetFoodieReviewAggregateType<T>>
+
+    /**
+     * Group by FoodieReview.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieReviewGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends FoodieReviewGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: FoodieReviewGroupByArgs['orderBy'] }
+        : { orderBy?: FoodieReviewGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, FoodieReviewGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFoodieReviewGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the FoodieReview model
+   */
+  readonly fields: FoodieReviewFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for FoodieReview.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__FoodieReviewClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    food<T extends FoodieFoodDefaultArgs<ExtArgs> = {}>(args?: Subset<T, FoodieFoodDefaultArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the FoodieReview model
+   */ 
+  interface FoodieReviewFieldRefs {
+    readonly id: FieldRef<"FoodieReview", 'String'>
+    readonly foodId: FieldRef<"FoodieReview", 'String'>
+    readonly userId: FieldRef<"FoodieReview", 'String'>
+    readonly rating: FieldRef<"FoodieReview", 'Int'>
+    readonly comment: FieldRef<"FoodieReview", 'String'>
+    readonly validated: FieldRef<"FoodieReview", 'Boolean'>
+    readonly createdAt: FieldRef<"FoodieReview", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * FoodieReview findUnique
+   */
+  export type FoodieReviewFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieReview to fetch.
+     */
+    where: FoodieReviewWhereUniqueInput
+  }
+
+  /**
+   * FoodieReview findUniqueOrThrow
+   */
+  export type FoodieReviewFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieReview to fetch.
+     */
+    where: FoodieReviewWhereUniqueInput
+  }
+
+  /**
+   * FoodieReview findFirst
+   */
+  export type FoodieReviewFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieReview to fetch.
+     */
+    where?: FoodieReviewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieReviews to fetch.
+     */
+    orderBy?: FoodieReviewOrderByWithRelationInput | FoodieReviewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FoodieReviews.
+     */
+    cursor?: FoodieReviewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieReviews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieReviews.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FoodieReviews.
+     */
+    distinct?: FoodieReviewScalarFieldEnum | FoodieReviewScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieReview findFirstOrThrow
+   */
+  export type FoodieReviewFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieReview to fetch.
+     */
+    where?: FoodieReviewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieReviews to fetch.
+     */
+    orderBy?: FoodieReviewOrderByWithRelationInput | FoodieReviewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FoodieReviews.
+     */
+    cursor?: FoodieReviewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieReviews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieReviews.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FoodieReviews.
+     */
+    distinct?: FoodieReviewScalarFieldEnum | FoodieReviewScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieReview findMany
+   */
+  export type FoodieReviewFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieReviews to fetch.
+     */
+    where?: FoodieReviewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieReviews to fetch.
+     */
+    orderBy?: FoodieReviewOrderByWithRelationInput | FoodieReviewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing FoodieReviews.
+     */
+    cursor?: FoodieReviewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieReviews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieReviews.
+     */
+    skip?: number
+    distinct?: FoodieReviewScalarFieldEnum | FoodieReviewScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieReview create
+   */
+  export type FoodieReviewCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    /**
+     * The data needed to create a FoodieReview.
+     */
+    data: XOR<FoodieReviewCreateInput, FoodieReviewUncheckedCreateInput>
+  }
+
+  /**
+   * FoodieReview createMany
+   */
+  export type FoodieReviewCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many FoodieReviews.
+     */
+    data: FoodieReviewCreateManyInput | FoodieReviewCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * FoodieReview createManyAndReturn
+   */
+  export type FoodieReviewCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * The data used to create many FoodieReviews.
+     */
+    data: FoodieReviewCreateManyInput | FoodieReviewCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FoodieReview update
+   */
+  export type FoodieReviewUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    /**
+     * The data needed to update a FoodieReview.
+     */
+    data: XOR<FoodieReviewUpdateInput, FoodieReviewUncheckedUpdateInput>
+    /**
+     * Choose, which FoodieReview to update.
+     */
+    where: FoodieReviewWhereUniqueInput
+  }
+
+  /**
+   * FoodieReview updateMany
+   */
+  export type FoodieReviewUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update FoodieReviews.
+     */
+    data: XOR<FoodieReviewUpdateManyMutationInput, FoodieReviewUncheckedUpdateManyInput>
+    /**
+     * Filter which FoodieReviews to update
+     */
+    where?: FoodieReviewWhereInput
+    /**
+     * Limit how many FoodieReviews to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * FoodieReview updateManyAndReturn
+   */
+  export type FoodieReviewUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * The data used to update FoodieReviews.
+     */
+    data: XOR<FoodieReviewUpdateManyMutationInput, FoodieReviewUncheckedUpdateManyInput>
+    /**
+     * Filter which FoodieReviews to update
+     */
+    where?: FoodieReviewWhereInput
+    /**
+     * Limit how many FoodieReviews to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FoodieReview upsert
+   */
+  export type FoodieReviewUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    /**
+     * The filter to search for the FoodieReview to update in case it exists.
+     */
+    where: FoodieReviewWhereUniqueInput
+    /**
+     * In case the FoodieReview found by the `where` argument doesn't exist, create a new FoodieReview with this data.
+     */
+    create: XOR<FoodieReviewCreateInput, FoodieReviewUncheckedCreateInput>
+    /**
+     * In case the FoodieReview was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<FoodieReviewUpdateInput, FoodieReviewUncheckedUpdateInput>
+  }
+
+  /**
+   * FoodieReview delete
+   */
+  export type FoodieReviewDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+    /**
+     * Filter which FoodieReview to delete.
+     */
+    where: FoodieReviewWhereUniqueInput
+  }
+
+  /**
+   * FoodieReview deleteMany
+   */
+  export type FoodieReviewDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FoodieReviews to delete
+     */
+    where?: FoodieReviewWhereInput
+    /**
+     * Limit how many FoodieReviews to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * FoodieReview without action
+   */
+  export type FoodieReviewDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieReview
+     */
+    select?: FoodieReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieReview
+     */
+    omit?: FoodieReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieReviewInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model FoodieLike
+   */
+
+  export type AggregateFoodieLike = {
+    _count: FoodieLikeCountAggregateOutputType | null
+    _min: FoodieLikeMinAggregateOutputType | null
+    _max: FoodieLikeMaxAggregateOutputType | null
+  }
+
+  export type FoodieLikeMinAggregateOutputType = {
+    id: string | null
+    foodId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type FoodieLikeMaxAggregateOutputType = {
+    id: string | null
+    foodId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type FoodieLikeCountAggregateOutputType = {
+    id: number
+    foodId: number
+    userId: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type FoodieLikeMinAggregateInputType = {
+    id?: true
+    foodId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type FoodieLikeMaxAggregateInputType = {
+    id?: true
+    foodId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type FoodieLikeCountAggregateInputType = {
+    id?: true
+    foodId?: true
+    userId?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type FoodieLikeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FoodieLike to aggregate.
+     */
+    where?: FoodieLikeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieLikes to fetch.
+     */
+    orderBy?: FoodieLikeOrderByWithRelationInput | FoodieLikeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: FoodieLikeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieLikes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieLikes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned FoodieLikes
+    **/
+    _count?: true | FoodieLikeCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: FoodieLikeMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: FoodieLikeMaxAggregateInputType
+  }
+
+  export type GetFoodieLikeAggregateType<T extends FoodieLikeAggregateArgs> = {
+        [P in keyof T & keyof AggregateFoodieLike]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateFoodieLike[P]>
+      : GetScalarType<T[P], AggregateFoodieLike[P]>
+  }
+
+
+
+
+  export type FoodieLikeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: FoodieLikeWhereInput
+    orderBy?: FoodieLikeOrderByWithAggregationInput | FoodieLikeOrderByWithAggregationInput[]
+    by: FoodieLikeScalarFieldEnum[] | FoodieLikeScalarFieldEnum
+    having?: FoodieLikeScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: FoodieLikeCountAggregateInputType | true
+    _min?: FoodieLikeMinAggregateInputType
+    _max?: FoodieLikeMaxAggregateInputType
+  }
+
+  export type FoodieLikeGroupByOutputType = {
+    id: string
+    foodId: string
+    userId: string
+    createdAt: Date
+    _count: FoodieLikeCountAggregateOutputType | null
+    _min: FoodieLikeMinAggregateOutputType | null
+    _max: FoodieLikeMaxAggregateOutputType | null
+  }
+
+  type GetFoodieLikeGroupByPayload<T extends FoodieLikeGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<FoodieLikeGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof FoodieLikeGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], FoodieLikeGroupByOutputType[P]>
+            : GetScalarType<T[P], FoodieLikeGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type FoodieLikeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    foodId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieLike"]>
+
+  export type FoodieLikeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    foodId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieLike"]>
+
+  export type FoodieLikeSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    foodId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["foodieLike"]>
+
+  export type FoodieLikeSelectScalar = {
+    id?: boolean
+    foodId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+  }
+
+  export type FoodieLikeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "foodId" | "userId" | "createdAt", ExtArgs["result"]["foodieLike"]>
+  export type FoodieLikeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }
+  export type FoodieLikeIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }
+  export type FoodieLikeIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    food?: boolean | FoodieFoodDefaultArgs<ExtArgs>
+  }
+
+  export type $FoodieLikePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "FoodieLike"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      food: Prisma.$FoodieFoodPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      foodId: string
+      userId: string
+      createdAt: Date
+    }, ExtArgs["result"]["foodieLike"]>
+    composites: {}
+  }
+
+  type FoodieLikeGetPayload<S extends boolean | null | undefined | FoodieLikeDefaultArgs> = $Result.GetResult<Prisma.$FoodieLikePayload, S>
+
+  type FoodieLikeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<FoodieLikeFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: FoodieLikeCountAggregateInputType | true
+    }
+
+  export interface FoodieLikeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['FoodieLike'], meta: { name: 'FoodieLike' } }
+    /**
+     * Find zero or one FoodieLike that matches the filter.
+     * @param {FoodieLikeFindUniqueArgs} args - Arguments to find a FoodieLike
+     * @example
+     * // Get one FoodieLike
+     * const foodieLike = await prisma.foodieLike.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends FoodieLikeFindUniqueArgs>(args: SelectSubset<T, FoodieLikeFindUniqueArgs<ExtArgs>>): Prisma__FoodieLikeClient<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one FoodieLike that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {FoodieLikeFindUniqueOrThrowArgs} args - Arguments to find a FoodieLike
+     * @example
+     * // Get one FoodieLike
+     * const foodieLike = await prisma.foodieLike.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends FoodieLikeFindUniqueOrThrowArgs>(args: SelectSubset<T, FoodieLikeFindUniqueOrThrowArgs<ExtArgs>>): Prisma__FoodieLikeClient<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FoodieLike that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLikeFindFirstArgs} args - Arguments to find a FoodieLike
+     * @example
+     * // Get one FoodieLike
+     * const foodieLike = await prisma.foodieLike.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends FoodieLikeFindFirstArgs>(args?: SelectSubset<T, FoodieLikeFindFirstArgs<ExtArgs>>): Prisma__FoodieLikeClient<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first FoodieLike that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLikeFindFirstOrThrowArgs} args - Arguments to find a FoodieLike
+     * @example
+     * // Get one FoodieLike
+     * const foodieLike = await prisma.foodieLike.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends FoodieLikeFindFirstOrThrowArgs>(args?: SelectSubset<T, FoodieLikeFindFirstOrThrowArgs<ExtArgs>>): Prisma__FoodieLikeClient<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more FoodieLikes that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLikeFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all FoodieLikes
+     * const foodieLikes = await prisma.foodieLike.findMany()
+     * 
+     * // Get first 10 FoodieLikes
+     * const foodieLikes = await prisma.foodieLike.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const foodieLikeWithIdOnly = await prisma.foodieLike.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends FoodieLikeFindManyArgs>(args?: SelectSubset<T, FoodieLikeFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a FoodieLike.
+     * @param {FoodieLikeCreateArgs} args - Arguments to create a FoodieLike.
+     * @example
+     * // Create one FoodieLike
+     * const FoodieLike = await prisma.foodieLike.create({
+     *   data: {
+     *     // ... data to create a FoodieLike
+     *   }
+     * })
+     * 
+     */
+    create<T extends FoodieLikeCreateArgs>(args: SelectSubset<T, FoodieLikeCreateArgs<ExtArgs>>): Prisma__FoodieLikeClient<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many FoodieLikes.
+     * @param {FoodieLikeCreateManyArgs} args - Arguments to create many FoodieLikes.
+     * @example
+     * // Create many FoodieLikes
+     * const foodieLike = await prisma.foodieLike.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends FoodieLikeCreateManyArgs>(args?: SelectSubset<T, FoodieLikeCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many FoodieLikes and returns the data saved in the database.
+     * @param {FoodieLikeCreateManyAndReturnArgs} args - Arguments to create many FoodieLikes.
+     * @example
+     * // Create many FoodieLikes
+     * const foodieLike = await prisma.foodieLike.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many FoodieLikes and only return the `id`
+     * const foodieLikeWithIdOnly = await prisma.foodieLike.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends FoodieLikeCreateManyAndReturnArgs>(args?: SelectSubset<T, FoodieLikeCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a FoodieLike.
+     * @param {FoodieLikeDeleteArgs} args - Arguments to delete one FoodieLike.
+     * @example
+     * // Delete one FoodieLike
+     * const FoodieLike = await prisma.foodieLike.delete({
+     *   where: {
+     *     // ... filter to delete one FoodieLike
+     *   }
+     * })
+     * 
+     */
+    delete<T extends FoodieLikeDeleteArgs>(args: SelectSubset<T, FoodieLikeDeleteArgs<ExtArgs>>): Prisma__FoodieLikeClient<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one FoodieLike.
+     * @param {FoodieLikeUpdateArgs} args - Arguments to update one FoodieLike.
+     * @example
+     * // Update one FoodieLike
+     * const foodieLike = await prisma.foodieLike.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends FoodieLikeUpdateArgs>(args: SelectSubset<T, FoodieLikeUpdateArgs<ExtArgs>>): Prisma__FoodieLikeClient<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more FoodieLikes.
+     * @param {FoodieLikeDeleteManyArgs} args - Arguments to filter FoodieLikes to delete.
+     * @example
+     * // Delete a few FoodieLikes
+     * const { count } = await prisma.foodieLike.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends FoodieLikeDeleteManyArgs>(args?: SelectSubset<T, FoodieLikeDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FoodieLikes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLikeUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many FoodieLikes
+     * const foodieLike = await prisma.foodieLike.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends FoodieLikeUpdateManyArgs>(args: SelectSubset<T, FoodieLikeUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more FoodieLikes and returns the data updated in the database.
+     * @param {FoodieLikeUpdateManyAndReturnArgs} args - Arguments to update many FoodieLikes.
+     * @example
+     * // Update many FoodieLikes
+     * const foodieLike = await prisma.foodieLike.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more FoodieLikes and only return the `id`
+     * const foodieLikeWithIdOnly = await prisma.foodieLike.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends FoodieLikeUpdateManyAndReturnArgs>(args: SelectSubset<T, FoodieLikeUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one FoodieLike.
+     * @param {FoodieLikeUpsertArgs} args - Arguments to update or create a FoodieLike.
+     * @example
+     * // Update or create a FoodieLike
+     * const foodieLike = await prisma.foodieLike.upsert({
+     *   create: {
+     *     // ... data to create a FoodieLike
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the FoodieLike we want to update
+     *   }
+     * })
+     */
+    upsert<T extends FoodieLikeUpsertArgs>(args: SelectSubset<T, FoodieLikeUpsertArgs<ExtArgs>>): Prisma__FoodieLikeClient<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of FoodieLikes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLikeCountArgs} args - Arguments to filter FoodieLikes to count.
+     * @example
+     * // Count the number of FoodieLikes
+     * const count = await prisma.foodieLike.count({
+     *   where: {
+     *     // ... the filter for the FoodieLikes we want to count
+     *   }
+     * })
+    **/
+    count<T extends FoodieLikeCountArgs>(
+      args?: Subset<T, FoodieLikeCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], FoodieLikeCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a FoodieLike.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLikeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends FoodieLikeAggregateArgs>(args: Subset<T, FoodieLikeAggregateArgs>): Prisma.PrismaPromise<GetFoodieLikeAggregateType<T>>
+
+    /**
+     * Group by FoodieLike.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {FoodieLikeGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends FoodieLikeGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: FoodieLikeGroupByArgs['orderBy'] }
+        : { orderBy?: FoodieLikeGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, FoodieLikeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFoodieLikeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the FoodieLike model
+   */
+  readonly fields: FoodieLikeFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for FoodieLike.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__FoodieLikeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    food<T extends FoodieFoodDefaultArgs<ExtArgs> = {}>(args?: Subset<T, FoodieFoodDefaultArgs<ExtArgs>>): Prisma__FoodieFoodClient<$Result.GetResult<Prisma.$FoodieFoodPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the FoodieLike model
+   */ 
+  interface FoodieLikeFieldRefs {
+    readonly id: FieldRef<"FoodieLike", 'String'>
+    readonly foodId: FieldRef<"FoodieLike", 'String'>
+    readonly userId: FieldRef<"FoodieLike", 'String'>
+    readonly createdAt: FieldRef<"FoodieLike", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * FoodieLike findUnique
+   */
+  export type FoodieLikeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLike to fetch.
+     */
+    where: FoodieLikeWhereUniqueInput
+  }
+
+  /**
+   * FoodieLike findUniqueOrThrow
+   */
+  export type FoodieLikeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLike to fetch.
+     */
+    where: FoodieLikeWhereUniqueInput
+  }
+
+  /**
+   * FoodieLike findFirst
+   */
+  export type FoodieLikeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLike to fetch.
+     */
+    where?: FoodieLikeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieLikes to fetch.
+     */
+    orderBy?: FoodieLikeOrderByWithRelationInput | FoodieLikeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FoodieLikes.
+     */
+    cursor?: FoodieLikeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieLikes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieLikes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FoodieLikes.
+     */
+    distinct?: FoodieLikeScalarFieldEnum | FoodieLikeScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieLike findFirstOrThrow
+   */
+  export type FoodieLikeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLike to fetch.
+     */
+    where?: FoodieLikeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieLikes to fetch.
+     */
+    orderBy?: FoodieLikeOrderByWithRelationInput | FoodieLikeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for FoodieLikes.
+     */
+    cursor?: FoodieLikeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieLikes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieLikes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of FoodieLikes.
+     */
+    distinct?: FoodieLikeScalarFieldEnum | FoodieLikeScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieLike findMany
+   */
+  export type FoodieLikeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which FoodieLikes to fetch.
+     */
+    where?: FoodieLikeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of FoodieLikes to fetch.
+     */
+    orderBy?: FoodieLikeOrderByWithRelationInput | FoodieLikeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing FoodieLikes.
+     */
+    cursor?: FoodieLikeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` FoodieLikes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` FoodieLikes.
+     */
+    skip?: number
+    distinct?: FoodieLikeScalarFieldEnum | FoodieLikeScalarFieldEnum[]
+  }
+
+  /**
+   * FoodieLike create
+   */
+  export type FoodieLikeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    /**
+     * The data needed to create a FoodieLike.
+     */
+    data: XOR<FoodieLikeCreateInput, FoodieLikeUncheckedCreateInput>
+  }
+
+  /**
+   * FoodieLike createMany
+   */
+  export type FoodieLikeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many FoodieLikes.
+     */
+    data: FoodieLikeCreateManyInput | FoodieLikeCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * FoodieLike createManyAndReturn
+   */
+  export type FoodieLikeCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * The data used to create many FoodieLikes.
+     */
+    data: FoodieLikeCreateManyInput | FoodieLikeCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FoodieLike update
+   */
+  export type FoodieLikeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    /**
+     * The data needed to update a FoodieLike.
+     */
+    data: XOR<FoodieLikeUpdateInput, FoodieLikeUncheckedUpdateInput>
+    /**
+     * Choose, which FoodieLike to update.
+     */
+    where: FoodieLikeWhereUniqueInput
+  }
+
+  /**
+   * FoodieLike updateMany
+   */
+  export type FoodieLikeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update FoodieLikes.
+     */
+    data: XOR<FoodieLikeUpdateManyMutationInput, FoodieLikeUncheckedUpdateManyInput>
+    /**
+     * Filter which FoodieLikes to update
+     */
+    where?: FoodieLikeWhereInput
+    /**
+     * Limit how many FoodieLikes to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * FoodieLike updateManyAndReturn
+   */
+  export type FoodieLikeUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * The data used to update FoodieLikes.
+     */
+    data: XOR<FoodieLikeUpdateManyMutationInput, FoodieLikeUncheckedUpdateManyInput>
+    /**
+     * Filter which FoodieLikes to update
+     */
+    where?: FoodieLikeWhereInput
+    /**
+     * Limit how many FoodieLikes to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * FoodieLike upsert
+   */
+  export type FoodieLikeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    /**
+     * The filter to search for the FoodieLike to update in case it exists.
+     */
+    where: FoodieLikeWhereUniqueInput
+    /**
+     * In case the FoodieLike found by the `where` argument doesn't exist, create a new FoodieLike with this data.
+     */
+    create: XOR<FoodieLikeCreateInput, FoodieLikeUncheckedCreateInput>
+    /**
+     * In case the FoodieLike was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<FoodieLikeUpdateInput, FoodieLikeUncheckedUpdateInput>
+  }
+
+  /**
+   * FoodieLike delete
+   */
+  export type FoodieLikeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+    /**
+     * Filter which FoodieLike to delete.
+     */
+    where: FoodieLikeWhereUniqueInput
+  }
+
+  /**
+   * FoodieLike deleteMany
+   */
+  export type FoodieLikeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which FoodieLikes to delete
+     */
+    where?: FoodieLikeWhereInput
+    /**
+     * Limit how many FoodieLikes to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * FoodieLike without action
+   */
+  export type FoodieLikeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the FoodieLike
+     */
+    select?: FoodieLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the FoodieLike
+     */
+    omit?: FoodieLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: FoodieLikeInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -14687,6 +19689,55 @@ export namespace Prisma {
   export type ReportUrbanExplorerScalarFieldEnum = (typeof ReportUrbanExplorerScalarFieldEnum)[keyof typeof ReportUrbanExplorerScalarFieldEnum]
 
 
+  export const FoodieFoodScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    cuisine: 'cuisine',
+    origin: 'origin',
+    description: 'description',
+    submittedBy: 'submittedBy',
+    validated: 'validated',
+    createdAt: 'createdAt'
+  };
+
+  export type FoodieFoodScalarFieldEnum = (typeof FoodieFoodScalarFieldEnum)[keyof typeof FoodieFoodScalarFieldEnum]
+
+
+  export const FoodieLocationScalarFieldEnum: {
+    id: 'id',
+    foodId: 'foodId',
+    locationName: 'locationName',
+    address: 'address',
+    submittedBy: 'submittedBy',
+    createdAt: 'createdAt'
+  };
+
+  export type FoodieLocationScalarFieldEnum = (typeof FoodieLocationScalarFieldEnum)[keyof typeof FoodieLocationScalarFieldEnum]
+
+
+  export const FoodieReviewScalarFieldEnum: {
+    id: 'id',
+    foodId: 'foodId',
+    userId: 'userId',
+    rating: 'rating',
+    comment: 'comment',
+    validated: 'validated',
+    createdAt: 'createdAt'
+  };
+
+  export type FoodieReviewScalarFieldEnum = (typeof FoodieReviewScalarFieldEnum)[keyof typeof FoodieReviewScalarFieldEnum]
+
+
+  export const FoodieLikeScalarFieldEnum: {
+    id: 'id',
+    foodId: 'foodId',
+    userId: 'userId',
+    createdAt: 'createdAt'
+  };
+
+  export type FoodieLikeScalarFieldEnum = (typeof FoodieLikeScalarFieldEnum)[keyof typeof FoodieLikeScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
@@ -14802,6 +19853,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerListRelationFilter
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerListRelationFilter
     ReportUrbanExplorer?: ReportUrbanExplorerListRelationFilter
+    FoodieFood?: FoodieFoodListRelationFilter
+    FoodieLocation?: FoodieLocationListRelationFilter
+    FoodieReview?: FoodieReviewListRelationFilter
+    FoodieLike?: FoodieLikeListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -14821,6 +19876,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerOrderByRelationAggregateInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerOrderByRelationAggregateInput
     ReportUrbanExplorer?: ReportUrbanExplorerOrderByRelationAggregateInput
+    FoodieFood?: FoodieFoodOrderByRelationAggregateInput
+    FoodieLocation?: FoodieLocationOrderByRelationAggregateInput
+    FoodieReview?: FoodieReviewOrderByRelationAggregateInput
+    FoodieLike?: FoodieLikeOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -14843,6 +19902,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerListRelationFilter
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerListRelationFilter
     ReportUrbanExplorer?: ReportUrbanExplorerListRelationFilter
+    FoodieFood?: FoodieFoodListRelationFilter
+    FoodieLocation?: FoodieLocationListRelationFilter
+    FoodieReview?: FoodieReviewListRelationFilter
+    FoodieLike?: FoodieLikeListRelationFilter
   }, "id" | "email">
 
   export type UserOrderByWithAggregationInput = {
@@ -15507,6 +20570,272 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"ReportUrbanExplorer"> | Date | string
   }
 
+  export type FoodieFoodWhereInput = {
+    AND?: FoodieFoodWhereInput | FoodieFoodWhereInput[]
+    OR?: FoodieFoodWhereInput[]
+    NOT?: FoodieFoodWhereInput | FoodieFoodWhereInput[]
+    id?: StringFilter<"FoodieFood"> | string
+    name?: StringFilter<"FoodieFood"> | string
+    cuisine?: StringFilter<"FoodieFood"> | string
+    origin?: StringFilter<"FoodieFood"> | string
+    description?: StringFilter<"FoodieFood"> | string
+    submittedBy?: StringFilter<"FoodieFood"> | string
+    validated?: BoolFilter<"FoodieFood"> | boolean
+    createdAt?: DateTimeFilter<"FoodieFood"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    locations?: FoodieLocationListRelationFilter
+    reviews?: FoodieReviewListRelationFilter
+    likes?: FoodieLikeListRelationFilter
+  }
+
+  export type FoodieFoodOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    cuisine?: SortOrder
+    origin?: SortOrder
+    description?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    locations?: FoodieLocationOrderByRelationAggregateInput
+    reviews?: FoodieReviewOrderByRelationAggregateInput
+    likes?: FoodieLikeOrderByRelationAggregateInput
+  }
+
+  export type FoodieFoodWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: FoodieFoodWhereInput | FoodieFoodWhereInput[]
+    OR?: FoodieFoodWhereInput[]
+    NOT?: FoodieFoodWhereInput | FoodieFoodWhereInput[]
+    name?: StringFilter<"FoodieFood"> | string
+    cuisine?: StringFilter<"FoodieFood"> | string
+    origin?: StringFilter<"FoodieFood"> | string
+    description?: StringFilter<"FoodieFood"> | string
+    submittedBy?: StringFilter<"FoodieFood"> | string
+    validated?: BoolFilter<"FoodieFood"> | boolean
+    createdAt?: DateTimeFilter<"FoodieFood"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    locations?: FoodieLocationListRelationFilter
+    reviews?: FoodieReviewListRelationFilter
+    likes?: FoodieLikeListRelationFilter
+  }, "id">
+
+  export type FoodieFoodOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    cuisine?: SortOrder
+    origin?: SortOrder
+    description?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    _count?: FoodieFoodCountOrderByAggregateInput
+    _max?: FoodieFoodMaxOrderByAggregateInput
+    _min?: FoodieFoodMinOrderByAggregateInput
+  }
+
+  export type FoodieFoodScalarWhereWithAggregatesInput = {
+    AND?: FoodieFoodScalarWhereWithAggregatesInput | FoodieFoodScalarWhereWithAggregatesInput[]
+    OR?: FoodieFoodScalarWhereWithAggregatesInput[]
+    NOT?: FoodieFoodScalarWhereWithAggregatesInput | FoodieFoodScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"FoodieFood"> | string
+    name?: StringWithAggregatesFilter<"FoodieFood"> | string
+    cuisine?: StringWithAggregatesFilter<"FoodieFood"> | string
+    origin?: StringWithAggregatesFilter<"FoodieFood"> | string
+    description?: StringWithAggregatesFilter<"FoodieFood"> | string
+    submittedBy?: StringWithAggregatesFilter<"FoodieFood"> | string
+    validated?: BoolWithAggregatesFilter<"FoodieFood"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"FoodieFood"> | Date | string
+  }
+
+  export type FoodieLocationWhereInput = {
+    AND?: FoodieLocationWhereInput | FoodieLocationWhereInput[]
+    OR?: FoodieLocationWhereInput[]
+    NOT?: FoodieLocationWhereInput | FoodieLocationWhereInput[]
+    id?: StringFilter<"FoodieLocation"> | string
+    foodId?: StringFilter<"FoodieLocation"> | string
+    locationName?: StringFilter<"FoodieLocation"> | string
+    address?: StringFilter<"FoodieLocation"> | string
+    submittedBy?: StringFilter<"FoodieLocation"> | string
+    createdAt?: DateTimeFilter<"FoodieLocation"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    food?: XOR<FoodieFoodScalarRelationFilter, FoodieFoodWhereInput>
+  }
+
+  export type FoodieLocationOrderByWithRelationInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    locationName?: SortOrder
+    address?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    food?: FoodieFoodOrderByWithRelationInput
+  }
+
+  export type FoodieLocationWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: FoodieLocationWhereInput | FoodieLocationWhereInput[]
+    OR?: FoodieLocationWhereInput[]
+    NOT?: FoodieLocationWhereInput | FoodieLocationWhereInput[]
+    foodId?: StringFilter<"FoodieLocation"> | string
+    locationName?: StringFilter<"FoodieLocation"> | string
+    address?: StringFilter<"FoodieLocation"> | string
+    submittedBy?: StringFilter<"FoodieLocation"> | string
+    createdAt?: DateTimeFilter<"FoodieLocation"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    food?: XOR<FoodieFoodScalarRelationFilter, FoodieFoodWhereInput>
+  }, "id">
+
+  export type FoodieLocationOrderByWithAggregationInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    locationName?: SortOrder
+    address?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+    _count?: FoodieLocationCountOrderByAggregateInput
+    _max?: FoodieLocationMaxOrderByAggregateInput
+    _min?: FoodieLocationMinOrderByAggregateInput
+  }
+
+  export type FoodieLocationScalarWhereWithAggregatesInput = {
+    AND?: FoodieLocationScalarWhereWithAggregatesInput | FoodieLocationScalarWhereWithAggregatesInput[]
+    OR?: FoodieLocationScalarWhereWithAggregatesInput[]
+    NOT?: FoodieLocationScalarWhereWithAggregatesInput | FoodieLocationScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"FoodieLocation"> | string
+    foodId?: StringWithAggregatesFilter<"FoodieLocation"> | string
+    locationName?: StringWithAggregatesFilter<"FoodieLocation"> | string
+    address?: StringWithAggregatesFilter<"FoodieLocation"> | string
+    submittedBy?: StringWithAggregatesFilter<"FoodieLocation"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"FoodieLocation"> | Date | string
+  }
+
+  export type FoodieReviewWhereInput = {
+    AND?: FoodieReviewWhereInput | FoodieReviewWhereInput[]
+    OR?: FoodieReviewWhereInput[]
+    NOT?: FoodieReviewWhereInput | FoodieReviewWhereInput[]
+    id?: StringFilter<"FoodieReview"> | string
+    foodId?: StringFilter<"FoodieReview"> | string
+    userId?: StringFilter<"FoodieReview"> | string
+    rating?: IntFilter<"FoodieReview"> | number
+    comment?: StringFilter<"FoodieReview"> | string
+    validated?: BoolFilter<"FoodieReview"> | boolean
+    createdAt?: DateTimeFilter<"FoodieReview"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    food?: XOR<FoodieFoodScalarRelationFilter, FoodieFoodWhereInput>
+  }
+
+  export type FoodieReviewOrderByWithRelationInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    food?: FoodieFoodOrderByWithRelationInput
+  }
+
+  export type FoodieReviewWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: FoodieReviewWhereInput | FoodieReviewWhereInput[]
+    OR?: FoodieReviewWhereInput[]
+    NOT?: FoodieReviewWhereInput | FoodieReviewWhereInput[]
+    foodId?: StringFilter<"FoodieReview"> | string
+    userId?: StringFilter<"FoodieReview"> | string
+    rating?: IntFilter<"FoodieReview"> | number
+    comment?: StringFilter<"FoodieReview"> | string
+    validated?: BoolFilter<"FoodieReview"> | boolean
+    createdAt?: DateTimeFilter<"FoodieReview"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    food?: XOR<FoodieFoodScalarRelationFilter, FoodieFoodWhereInput>
+  }, "id">
+
+  export type FoodieReviewOrderByWithAggregationInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    _count?: FoodieReviewCountOrderByAggregateInput
+    _avg?: FoodieReviewAvgOrderByAggregateInput
+    _max?: FoodieReviewMaxOrderByAggregateInput
+    _min?: FoodieReviewMinOrderByAggregateInput
+    _sum?: FoodieReviewSumOrderByAggregateInput
+  }
+
+  export type FoodieReviewScalarWhereWithAggregatesInput = {
+    AND?: FoodieReviewScalarWhereWithAggregatesInput | FoodieReviewScalarWhereWithAggregatesInput[]
+    OR?: FoodieReviewScalarWhereWithAggregatesInput[]
+    NOT?: FoodieReviewScalarWhereWithAggregatesInput | FoodieReviewScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"FoodieReview"> | string
+    foodId?: StringWithAggregatesFilter<"FoodieReview"> | string
+    userId?: StringWithAggregatesFilter<"FoodieReview"> | string
+    rating?: IntWithAggregatesFilter<"FoodieReview"> | number
+    comment?: StringWithAggregatesFilter<"FoodieReview"> | string
+    validated?: BoolWithAggregatesFilter<"FoodieReview"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"FoodieReview"> | Date | string
+  }
+
+  export type FoodieLikeWhereInput = {
+    AND?: FoodieLikeWhereInput | FoodieLikeWhereInput[]
+    OR?: FoodieLikeWhereInput[]
+    NOT?: FoodieLikeWhereInput | FoodieLikeWhereInput[]
+    id?: StringFilter<"FoodieLike"> | string
+    foodId?: StringFilter<"FoodieLike"> | string
+    userId?: StringFilter<"FoodieLike"> | string
+    createdAt?: DateTimeFilter<"FoodieLike"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    food?: XOR<FoodieFoodScalarRelationFilter, FoodieFoodWhereInput>
+  }
+
+  export type FoodieLikeOrderByWithRelationInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    food?: FoodieFoodOrderByWithRelationInput
+  }
+
+  export type FoodieLikeWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    foodId_userId?: FoodieLikeFoodIdUserIdCompoundUniqueInput
+    AND?: FoodieLikeWhereInput | FoodieLikeWhereInput[]
+    OR?: FoodieLikeWhereInput[]
+    NOT?: FoodieLikeWhereInput | FoodieLikeWhereInput[]
+    foodId?: StringFilter<"FoodieLike"> | string
+    userId?: StringFilter<"FoodieLike"> | string
+    createdAt?: DateTimeFilter<"FoodieLike"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    food?: XOR<FoodieFoodScalarRelationFilter, FoodieFoodWhereInput>
+  }, "id" | "foodId_userId">
+
+  export type FoodieLikeOrderByWithAggregationInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    _count?: FoodieLikeCountOrderByAggregateInput
+    _max?: FoodieLikeMaxOrderByAggregateInput
+    _min?: FoodieLikeMinOrderByAggregateInput
+  }
+
+  export type FoodieLikeScalarWhereWithAggregatesInput = {
+    AND?: FoodieLikeScalarWhereWithAggregatesInput | FoodieLikeScalarWhereWithAggregatesInput[]
+    OR?: FoodieLikeScalarWhereWithAggregatesInput[]
+    NOT?: FoodieLikeScalarWhereWithAggregatesInput | FoodieLikeScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"FoodieLike"> | string
+    foodId?: StringWithAggregatesFilter<"FoodieLike"> | string
+    userId?: StringWithAggregatesFilter<"FoodieLike"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"FoodieLike"> | Date | string
+  }
+
   export type UserCreateInput = {
     id?: string
     email: string
@@ -15524,6 +20853,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -15543,6 +20876,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
@@ -15562,6 +20899,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -15581,6 +20922,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -16218,6 +21563,270 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type FoodieFoodCreateInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieFoodInput
+    locations?: FoodieLocationCreateNestedManyWithoutFoodInput
+    reviews?: FoodieReviewCreateNestedManyWithoutFoodInput
+    likes?: FoodieLikeCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodUncheckedCreateInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    locations?: FoodieLocationUncheckedCreateNestedManyWithoutFoodInput
+    reviews?: FoodieReviewUncheckedCreateNestedManyWithoutFoodInput
+    likes?: FoodieLikeUncheckedCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieFoodNestedInput
+    locations?: FoodieLocationUpdateManyWithoutFoodNestedInput
+    reviews?: FoodieReviewUpdateManyWithoutFoodNestedInput
+    likes?: FoodieLikeUpdateManyWithoutFoodNestedInput
+  }
+
+  export type FoodieFoodUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    locations?: FoodieLocationUncheckedUpdateManyWithoutFoodNestedInput
+    reviews?: FoodieReviewUncheckedUpdateManyWithoutFoodNestedInput
+    likes?: FoodieLikeUncheckedUpdateManyWithoutFoodNestedInput
+  }
+
+  export type FoodieFoodCreateManyInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FoodieFoodUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieFoodUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLocationCreateInput = {
+    id?: string
+    locationName: string
+    address: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieLocationInput
+    food: FoodieFoodCreateNestedOneWithoutLocationsInput
+  }
+
+  export type FoodieLocationUncheckedCreateInput = {
+    id?: string
+    foodId: string
+    locationName: string
+    address: string
+    submittedBy: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieLocationUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieLocationNestedInput
+    food?: FoodieFoodUpdateOneRequiredWithoutLocationsNestedInput
+  }
+
+  export type FoodieLocationUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLocationCreateManyInput = {
+    id?: string
+    foodId: string
+    locationName: string
+    address: string
+    submittedBy: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieLocationUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLocationUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieReviewCreateInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieReviewInput
+    food: FoodieFoodCreateNestedOneWithoutReviewsInput
+  }
+
+  export type FoodieReviewUncheckedCreateInput = {
+    id?: string
+    foodId: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FoodieReviewUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieReviewNestedInput
+    food?: FoodieFoodUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type FoodieReviewUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieReviewCreateManyInput = {
+    id?: string
+    foodId: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FoodieReviewUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieReviewUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLikeCreateInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieLikeInput
+    food: FoodieFoodCreateNestedOneWithoutLikesInput
+  }
+
+  export type FoodieLikeUncheckedCreateInput = {
+    id?: string
+    foodId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieLikeUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieLikeNestedInput
+    food?: FoodieFoodUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type FoodieLikeUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLikeCreateManyInput = {
+    id?: string
+    foodId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieLikeUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLikeUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -16304,6 +21913,30 @@ export namespace Prisma {
     none?: ReportUrbanExplorerWhereInput
   }
 
+  export type FoodieFoodListRelationFilter = {
+    every?: FoodieFoodWhereInput
+    some?: FoodieFoodWhereInput
+    none?: FoodieFoodWhereInput
+  }
+
+  export type FoodieLocationListRelationFilter = {
+    every?: FoodieLocationWhereInput
+    some?: FoodieLocationWhereInput
+    none?: FoodieLocationWhereInput
+  }
+
+  export type FoodieReviewListRelationFilter = {
+    every?: FoodieReviewWhereInput
+    some?: FoodieReviewWhereInput
+    none?: FoodieReviewWhereInput
+  }
+
+  export type FoodieLikeListRelationFilter = {
+    every?: FoodieLikeWhereInput
+    some?: FoodieLikeWhereInput
+    none?: FoodieLikeWhereInput
+  }
+
   export type PostDIYHomesOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
@@ -16341,6 +21974,22 @@ export namespace Prisma {
   }
 
   export type ReportUrbanExplorerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type FoodieFoodOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type FoodieLocationOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type FoodieReviewOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type FoodieLikeOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -16804,6 +22453,135 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
+  export type FoodieFoodCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    cuisine?: SortOrder
+    origin?: SortOrder
+    description?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieFoodMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    cuisine?: SortOrder
+    origin?: SortOrder
+    description?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieFoodMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    cuisine?: SortOrder
+    origin?: SortOrder
+    description?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieFoodScalarRelationFilter = {
+    is?: FoodieFoodWhereInput
+    isNot?: FoodieFoodWhereInput
+  }
+
+  export type FoodieLocationCountOrderByAggregateInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    locationName?: SortOrder
+    address?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieLocationMaxOrderByAggregateInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    locationName?: SortOrder
+    address?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieLocationMinOrderByAggregateInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    locationName?: SortOrder
+    address?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieReviewCountOrderByAggregateInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieReviewAvgOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type FoodieReviewMaxOrderByAggregateInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieReviewMinOrderByAggregateInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieReviewSumOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type FoodieLikeFoodIdUserIdCompoundUniqueInput = {
+    foodId: string
+    userId: string
+  }
+
+  export type FoodieLikeCountOrderByAggregateInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieLikeMaxOrderByAggregateInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type FoodieLikeMinOrderByAggregateInput = {
+    id?: SortOrder
+    foodId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
   export type PostDIYHomesCreateNestedManyWithoutUserInput = {
     create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
     connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
@@ -16874,6 +22652,34 @@ export namespace Prisma {
     connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
   }
 
+  export type FoodieFoodCreateNestedManyWithoutUserInput = {
+    create?: XOR<FoodieFoodCreateWithoutUserInput, FoodieFoodUncheckedCreateWithoutUserInput> | FoodieFoodCreateWithoutUserInput[] | FoodieFoodUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutUserInput | FoodieFoodCreateOrConnectWithoutUserInput[]
+    createMany?: FoodieFoodCreateManyUserInputEnvelope
+    connect?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+  }
+
+  export type FoodieLocationCreateNestedManyWithoutUserInput = {
+    create?: XOR<FoodieLocationCreateWithoutUserInput, FoodieLocationUncheckedCreateWithoutUserInput> | FoodieLocationCreateWithoutUserInput[] | FoodieLocationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieLocationCreateOrConnectWithoutUserInput | FoodieLocationCreateOrConnectWithoutUserInput[]
+    createMany?: FoodieLocationCreateManyUserInputEnvelope
+    connect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+  }
+
+  export type FoodieReviewCreateNestedManyWithoutUserInput = {
+    create?: XOR<FoodieReviewCreateWithoutUserInput, FoodieReviewUncheckedCreateWithoutUserInput> | FoodieReviewCreateWithoutUserInput[] | FoodieReviewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieReviewCreateOrConnectWithoutUserInput | FoodieReviewCreateOrConnectWithoutUserInput[]
+    createMany?: FoodieReviewCreateManyUserInputEnvelope
+    connect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+  }
+
+  export type FoodieLikeCreateNestedManyWithoutUserInput = {
+    create?: XOR<FoodieLikeCreateWithoutUserInput, FoodieLikeUncheckedCreateWithoutUserInput> | FoodieLikeCreateWithoutUserInput[] | FoodieLikeUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieLikeCreateOrConnectWithoutUserInput | FoodieLikeCreateOrConnectWithoutUserInput[]
+    createMany?: FoodieLikeCreateManyUserInputEnvelope
+    connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+  }
+
   export type PostDIYHomesUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
     connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
@@ -16942,6 +22748,34 @@ export namespace Prisma {
     connectOrCreate?: ReportUrbanExplorerCreateOrConnectWithoutUserInput | ReportUrbanExplorerCreateOrConnectWithoutUserInput[]
     createMany?: ReportUrbanExplorerCreateManyUserInputEnvelope
     connect?: ReportUrbanExplorerWhereUniqueInput | ReportUrbanExplorerWhereUniqueInput[]
+  }
+
+  export type FoodieFoodUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<FoodieFoodCreateWithoutUserInput, FoodieFoodUncheckedCreateWithoutUserInput> | FoodieFoodCreateWithoutUserInput[] | FoodieFoodUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutUserInput | FoodieFoodCreateOrConnectWithoutUserInput[]
+    createMany?: FoodieFoodCreateManyUserInputEnvelope
+    connect?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+  }
+
+  export type FoodieLocationUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<FoodieLocationCreateWithoutUserInput, FoodieLocationUncheckedCreateWithoutUserInput> | FoodieLocationCreateWithoutUserInput[] | FoodieLocationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieLocationCreateOrConnectWithoutUserInput | FoodieLocationCreateOrConnectWithoutUserInput[]
+    createMany?: FoodieLocationCreateManyUserInputEnvelope
+    connect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+  }
+
+  export type FoodieReviewUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<FoodieReviewCreateWithoutUserInput, FoodieReviewUncheckedCreateWithoutUserInput> | FoodieReviewCreateWithoutUserInput[] | FoodieReviewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieReviewCreateOrConnectWithoutUserInput | FoodieReviewCreateOrConnectWithoutUserInput[]
+    createMany?: FoodieReviewCreateManyUserInputEnvelope
+    connect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+  }
+
+  export type FoodieLikeUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<FoodieLikeCreateWithoutUserInput, FoodieLikeUncheckedCreateWithoutUserInput> | FoodieLikeCreateWithoutUserInput[] | FoodieLikeUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieLikeCreateOrConnectWithoutUserInput | FoodieLikeCreateOrConnectWithoutUserInput[]
+    createMany?: FoodieLikeCreateManyUserInputEnvelope
+    connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -17092,6 +22926,62 @@ export namespace Prisma {
     deleteMany?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
   }
 
+  export type FoodieFoodUpdateManyWithoutUserNestedInput = {
+    create?: XOR<FoodieFoodCreateWithoutUserInput, FoodieFoodUncheckedCreateWithoutUserInput> | FoodieFoodCreateWithoutUserInput[] | FoodieFoodUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutUserInput | FoodieFoodCreateOrConnectWithoutUserInput[]
+    upsert?: FoodieFoodUpsertWithWhereUniqueWithoutUserInput | FoodieFoodUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: FoodieFoodCreateManyUserInputEnvelope
+    set?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+    disconnect?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+    delete?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+    connect?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+    update?: FoodieFoodUpdateWithWhereUniqueWithoutUserInput | FoodieFoodUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: FoodieFoodUpdateManyWithWhereWithoutUserInput | FoodieFoodUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: FoodieFoodScalarWhereInput | FoodieFoodScalarWhereInput[]
+  }
+
+  export type FoodieLocationUpdateManyWithoutUserNestedInput = {
+    create?: XOR<FoodieLocationCreateWithoutUserInput, FoodieLocationUncheckedCreateWithoutUserInput> | FoodieLocationCreateWithoutUserInput[] | FoodieLocationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieLocationCreateOrConnectWithoutUserInput | FoodieLocationCreateOrConnectWithoutUserInput[]
+    upsert?: FoodieLocationUpsertWithWhereUniqueWithoutUserInput | FoodieLocationUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: FoodieLocationCreateManyUserInputEnvelope
+    set?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    disconnect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    delete?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    connect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    update?: FoodieLocationUpdateWithWhereUniqueWithoutUserInput | FoodieLocationUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: FoodieLocationUpdateManyWithWhereWithoutUserInput | FoodieLocationUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: FoodieLocationScalarWhereInput | FoodieLocationScalarWhereInput[]
+  }
+
+  export type FoodieReviewUpdateManyWithoutUserNestedInput = {
+    create?: XOR<FoodieReviewCreateWithoutUserInput, FoodieReviewUncheckedCreateWithoutUserInput> | FoodieReviewCreateWithoutUserInput[] | FoodieReviewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieReviewCreateOrConnectWithoutUserInput | FoodieReviewCreateOrConnectWithoutUserInput[]
+    upsert?: FoodieReviewUpsertWithWhereUniqueWithoutUserInput | FoodieReviewUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: FoodieReviewCreateManyUserInputEnvelope
+    set?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    disconnect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    delete?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    connect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    update?: FoodieReviewUpdateWithWhereUniqueWithoutUserInput | FoodieReviewUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: FoodieReviewUpdateManyWithWhereWithoutUserInput | FoodieReviewUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: FoodieReviewScalarWhereInput | FoodieReviewScalarWhereInput[]
+  }
+
+  export type FoodieLikeUpdateManyWithoutUserNestedInput = {
+    create?: XOR<FoodieLikeCreateWithoutUserInput, FoodieLikeUncheckedCreateWithoutUserInput> | FoodieLikeCreateWithoutUserInput[] | FoodieLikeUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieLikeCreateOrConnectWithoutUserInput | FoodieLikeCreateOrConnectWithoutUserInput[]
+    upsert?: FoodieLikeUpsertWithWhereUniqueWithoutUserInput | FoodieLikeUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: FoodieLikeCreateManyUserInputEnvelope
+    set?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    disconnect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    delete?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    update?: FoodieLikeUpdateWithWhereUniqueWithoutUserInput | FoodieLikeUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: FoodieLikeUpdateManyWithWhereWithoutUserInput | FoodieLikeUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: FoodieLikeScalarWhereInput | FoodieLikeScalarWhereInput[]
+  }
+
   export type PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput = {
     create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
     connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
@@ -17230,6 +23120,62 @@ export namespace Prisma {
     update?: ReportUrbanExplorerUpdateWithWhereUniqueWithoutUserInput | ReportUrbanExplorerUpdateWithWhereUniqueWithoutUserInput[]
     updateMany?: ReportUrbanExplorerUpdateManyWithWhereWithoutUserInput | ReportUrbanExplorerUpdateManyWithWhereWithoutUserInput[]
     deleteMany?: ReportUrbanExplorerScalarWhereInput | ReportUrbanExplorerScalarWhereInput[]
+  }
+
+  export type FoodieFoodUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<FoodieFoodCreateWithoutUserInput, FoodieFoodUncheckedCreateWithoutUserInput> | FoodieFoodCreateWithoutUserInput[] | FoodieFoodUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutUserInput | FoodieFoodCreateOrConnectWithoutUserInput[]
+    upsert?: FoodieFoodUpsertWithWhereUniqueWithoutUserInput | FoodieFoodUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: FoodieFoodCreateManyUserInputEnvelope
+    set?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+    disconnect?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+    delete?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+    connect?: FoodieFoodWhereUniqueInput | FoodieFoodWhereUniqueInput[]
+    update?: FoodieFoodUpdateWithWhereUniqueWithoutUserInput | FoodieFoodUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: FoodieFoodUpdateManyWithWhereWithoutUserInput | FoodieFoodUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: FoodieFoodScalarWhereInput | FoodieFoodScalarWhereInput[]
+  }
+
+  export type FoodieLocationUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<FoodieLocationCreateWithoutUserInput, FoodieLocationUncheckedCreateWithoutUserInput> | FoodieLocationCreateWithoutUserInput[] | FoodieLocationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieLocationCreateOrConnectWithoutUserInput | FoodieLocationCreateOrConnectWithoutUserInput[]
+    upsert?: FoodieLocationUpsertWithWhereUniqueWithoutUserInput | FoodieLocationUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: FoodieLocationCreateManyUserInputEnvelope
+    set?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    disconnect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    delete?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    connect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    update?: FoodieLocationUpdateWithWhereUniqueWithoutUserInput | FoodieLocationUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: FoodieLocationUpdateManyWithWhereWithoutUserInput | FoodieLocationUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: FoodieLocationScalarWhereInput | FoodieLocationScalarWhereInput[]
+  }
+
+  export type FoodieReviewUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<FoodieReviewCreateWithoutUserInput, FoodieReviewUncheckedCreateWithoutUserInput> | FoodieReviewCreateWithoutUserInput[] | FoodieReviewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieReviewCreateOrConnectWithoutUserInput | FoodieReviewCreateOrConnectWithoutUserInput[]
+    upsert?: FoodieReviewUpsertWithWhereUniqueWithoutUserInput | FoodieReviewUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: FoodieReviewCreateManyUserInputEnvelope
+    set?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    disconnect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    delete?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    connect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    update?: FoodieReviewUpdateWithWhereUniqueWithoutUserInput | FoodieReviewUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: FoodieReviewUpdateManyWithWhereWithoutUserInput | FoodieReviewUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: FoodieReviewScalarWhereInput | FoodieReviewScalarWhereInput[]
+  }
+
+  export type FoodieLikeUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<FoodieLikeCreateWithoutUserInput, FoodieLikeUncheckedCreateWithoutUserInput> | FoodieLikeCreateWithoutUserInput[] | FoodieLikeUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: FoodieLikeCreateOrConnectWithoutUserInput | FoodieLikeCreateOrConnectWithoutUserInput[]
+    upsert?: FoodieLikeUpsertWithWhereUniqueWithoutUserInput | FoodieLikeUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: FoodieLikeCreateManyUserInputEnvelope
+    set?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    disconnect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    delete?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    update?: FoodieLikeUpdateWithWhereUniqueWithoutUserInput | FoodieLikeUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: FoodieLikeUpdateManyWithWhereWithoutUserInput | FoodieLikeUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: FoodieLikeScalarWhereInput | FoodieLikeScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutPostsInput = {
@@ -17956,6 +23902,230 @@ export namespace Prisma {
     update?: XOR<XOR<ReviewUrbanExplorerUpdateToOneWithWhereWithoutReportsInput, ReviewUrbanExplorerUpdateWithoutReportsInput>, ReviewUrbanExplorerUncheckedUpdateWithoutReportsInput>
   }
 
+  export type UserCreateNestedOneWithoutFoodieFoodInput = {
+    create?: XOR<UserCreateWithoutFoodieFoodInput, UserUncheckedCreateWithoutFoodieFoodInput>
+    connectOrCreate?: UserCreateOrConnectWithoutFoodieFoodInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type FoodieLocationCreateNestedManyWithoutFoodInput = {
+    create?: XOR<FoodieLocationCreateWithoutFoodInput, FoodieLocationUncheckedCreateWithoutFoodInput> | FoodieLocationCreateWithoutFoodInput[] | FoodieLocationUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieLocationCreateOrConnectWithoutFoodInput | FoodieLocationCreateOrConnectWithoutFoodInput[]
+    createMany?: FoodieLocationCreateManyFoodInputEnvelope
+    connect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+  }
+
+  export type FoodieReviewCreateNestedManyWithoutFoodInput = {
+    create?: XOR<FoodieReviewCreateWithoutFoodInput, FoodieReviewUncheckedCreateWithoutFoodInput> | FoodieReviewCreateWithoutFoodInput[] | FoodieReviewUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieReviewCreateOrConnectWithoutFoodInput | FoodieReviewCreateOrConnectWithoutFoodInput[]
+    createMany?: FoodieReviewCreateManyFoodInputEnvelope
+    connect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+  }
+
+  export type FoodieLikeCreateNestedManyWithoutFoodInput = {
+    create?: XOR<FoodieLikeCreateWithoutFoodInput, FoodieLikeUncheckedCreateWithoutFoodInput> | FoodieLikeCreateWithoutFoodInput[] | FoodieLikeUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieLikeCreateOrConnectWithoutFoodInput | FoodieLikeCreateOrConnectWithoutFoodInput[]
+    createMany?: FoodieLikeCreateManyFoodInputEnvelope
+    connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+  }
+
+  export type FoodieLocationUncheckedCreateNestedManyWithoutFoodInput = {
+    create?: XOR<FoodieLocationCreateWithoutFoodInput, FoodieLocationUncheckedCreateWithoutFoodInput> | FoodieLocationCreateWithoutFoodInput[] | FoodieLocationUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieLocationCreateOrConnectWithoutFoodInput | FoodieLocationCreateOrConnectWithoutFoodInput[]
+    createMany?: FoodieLocationCreateManyFoodInputEnvelope
+    connect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+  }
+
+  export type FoodieReviewUncheckedCreateNestedManyWithoutFoodInput = {
+    create?: XOR<FoodieReviewCreateWithoutFoodInput, FoodieReviewUncheckedCreateWithoutFoodInput> | FoodieReviewCreateWithoutFoodInput[] | FoodieReviewUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieReviewCreateOrConnectWithoutFoodInput | FoodieReviewCreateOrConnectWithoutFoodInput[]
+    createMany?: FoodieReviewCreateManyFoodInputEnvelope
+    connect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+  }
+
+  export type FoodieLikeUncheckedCreateNestedManyWithoutFoodInput = {
+    create?: XOR<FoodieLikeCreateWithoutFoodInput, FoodieLikeUncheckedCreateWithoutFoodInput> | FoodieLikeCreateWithoutFoodInput[] | FoodieLikeUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieLikeCreateOrConnectWithoutFoodInput | FoodieLikeCreateOrConnectWithoutFoodInput[]
+    createMany?: FoodieLikeCreateManyFoodInputEnvelope
+    connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+  }
+
+  export type UserUpdateOneRequiredWithoutFoodieFoodNestedInput = {
+    create?: XOR<UserCreateWithoutFoodieFoodInput, UserUncheckedCreateWithoutFoodieFoodInput>
+    connectOrCreate?: UserCreateOrConnectWithoutFoodieFoodInput
+    upsert?: UserUpsertWithoutFoodieFoodInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutFoodieFoodInput, UserUpdateWithoutFoodieFoodInput>, UserUncheckedUpdateWithoutFoodieFoodInput>
+  }
+
+  export type FoodieLocationUpdateManyWithoutFoodNestedInput = {
+    create?: XOR<FoodieLocationCreateWithoutFoodInput, FoodieLocationUncheckedCreateWithoutFoodInput> | FoodieLocationCreateWithoutFoodInput[] | FoodieLocationUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieLocationCreateOrConnectWithoutFoodInput | FoodieLocationCreateOrConnectWithoutFoodInput[]
+    upsert?: FoodieLocationUpsertWithWhereUniqueWithoutFoodInput | FoodieLocationUpsertWithWhereUniqueWithoutFoodInput[]
+    createMany?: FoodieLocationCreateManyFoodInputEnvelope
+    set?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    disconnect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    delete?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    connect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    update?: FoodieLocationUpdateWithWhereUniqueWithoutFoodInput | FoodieLocationUpdateWithWhereUniqueWithoutFoodInput[]
+    updateMany?: FoodieLocationUpdateManyWithWhereWithoutFoodInput | FoodieLocationUpdateManyWithWhereWithoutFoodInput[]
+    deleteMany?: FoodieLocationScalarWhereInput | FoodieLocationScalarWhereInput[]
+  }
+
+  export type FoodieReviewUpdateManyWithoutFoodNestedInput = {
+    create?: XOR<FoodieReviewCreateWithoutFoodInput, FoodieReviewUncheckedCreateWithoutFoodInput> | FoodieReviewCreateWithoutFoodInput[] | FoodieReviewUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieReviewCreateOrConnectWithoutFoodInput | FoodieReviewCreateOrConnectWithoutFoodInput[]
+    upsert?: FoodieReviewUpsertWithWhereUniqueWithoutFoodInput | FoodieReviewUpsertWithWhereUniqueWithoutFoodInput[]
+    createMany?: FoodieReviewCreateManyFoodInputEnvelope
+    set?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    disconnect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    delete?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    connect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    update?: FoodieReviewUpdateWithWhereUniqueWithoutFoodInput | FoodieReviewUpdateWithWhereUniqueWithoutFoodInput[]
+    updateMany?: FoodieReviewUpdateManyWithWhereWithoutFoodInput | FoodieReviewUpdateManyWithWhereWithoutFoodInput[]
+    deleteMany?: FoodieReviewScalarWhereInput | FoodieReviewScalarWhereInput[]
+  }
+
+  export type FoodieLikeUpdateManyWithoutFoodNestedInput = {
+    create?: XOR<FoodieLikeCreateWithoutFoodInput, FoodieLikeUncheckedCreateWithoutFoodInput> | FoodieLikeCreateWithoutFoodInput[] | FoodieLikeUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieLikeCreateOrConnectWithoutFoodInput | FoodieLikeCreateOrConnectWithoutFoodInput[]
+    upsert?: FoodieLikeUpsertWithWhereUniqueWithoutFoodInput | FoodieLikeUpsertWithWhereUniqueWithoutFoodInput[]
+    createMany?: FoodieLikeCreateManyFoodInputEnvelope
+    set?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    disconnect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    delete?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    update?: FoodieLikeUpdateWithWhereUniqueWithoutFoodInput | FoodieLikeUpdateWithWhereUniqueWithoutFoodInput[]
+    updateMany?: FoodieLikeUpdateManyWithWhereWithoutFoodInput | FoodieLikeUpdateManyWithWhereWithoutFoodInput[]
+    deleteMany?: FoodieLikeScalarWhereInput | FoodieLikeScalarWhereInput[]
+  }
+
+  export type FoodieLocationUncheckedUpdateManyWithoutFoodNestedInput = {
+    create?: XOR<FoodieLocationCreateWithoutFoodInput, FoodieLocationUncheckedCreateWithoutFoodInput> | FoodieLocationCreateWithoutFoodInput[] | FoodieLocationUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieLocationCreateOrConnectWithoutFoodInput | FoodieLocationCreateOrConnectWithoutFoodInput[]
+    upsert?: FoodieLocationUpsertWithWhereUniqueWithoutFoodInput | FoodieLocationUpsertWithWhereUniqueWithoutFoodInput[]
+    createMany?: FoodieLocationCreateManyFoodInputEnvelope
+    set?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    disconnect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    delete?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    connect?: FoodieLocationWhereUniqueInput | FoodieLocationWhereUniqueInput[]
+    update?: FoodieLocationUpdateWithWhereUniqueWithoutFoodInput | FoodieLocationUpdateWithWhereUniqueWithoutFoodInput[]
+    updateMany?: FoodieLocationUpdateManyWithWhereWithoutFoodInput | FoodieLocationUpdateManyWithWhereWithoutFoodInput[]
+    deleteMany?: FoodieLocationScalarWhereInput | FoodieLocationScalarWhereInput[]
+  }
+
+  export type FoodieReviewUncheckedUpdateManyWithoutFoodNestedInput = {
+    create?: XOR<FoodieReviewCreateWithoutFoodInput, FoodieReviewUncheckedCreateWithoutFoodInput> | FoodieReviewCreateWithoutFoodInput[] | FoodieReviewUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieReviewCreateOrConnectWithoutFoodInput | FoodieReviewCreateOrConnectWithoutFoodInput[]
+    upsert?: FoodieReviewUpsertWithWhereUniqueWithoutFoodInput | FoodieReviewUpsertWithWhereUniqueWithoutFoodInput[]
+    createMany?: FoodieReviewCreateManyFoodInputEnvelope
+    set?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    disconnect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    delete?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    connect?: FoodieReviewWhereUniqueInput | FoodieReviewWhereUniqueInput[]
+    update?: FoodieReviewUpdateWithWhereUniqueWithoutFoodInput | FoodieReviewUpdateWithWhereUniqueWithoutFoodInput[]
+    updateMany?: FoodieReviewUpdateManyWithWhereWithoutFoodInput | FoodieReviewUpdateManyWithWhereWithoutFoodInput[]
+    deleteMany?: FoodieReviewScalarWhereInput | FoodieReviewScalarWhereInput[]
+  }
+
+  export type FoodieLikeUncheckedUpdateManyWithoutFoodNestedInput = {
+    create?: XOR<FoodieLikeCreateWithoutFoodInput, FoodieLikeUncheckedCreateWithoutFoodInput> | FoodieLikeCreateWithoutFoodInput[] | FoodieLikeUncheckedCreateWithoutFoodInput[]
+    connectOrCreate?: FoodieLikeCreateOrConnectWithoutFoodInput | FoodieLikeCreateOrConnectWithoutFoodInput[]
+    upsert?: FoodieLikeUpsertWithWhereUniqueWithoutFoodInput | FoodieLikeUpsertWithWhereUniqueWithoutFoodInput[]
+    createMany?: FoodieLikeCreateManyFoodInputEnvelope
+    set?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    disconnect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    delete?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+    update?: FoodieLikeUpdateWithWhereUniqueWithoutFoodInput | FoodieLikeUpdateWithWhereUniqueWithoutFoodInput[]
+    updateMany?: FoodieLikeUpdateManyWithWhereWithoutFoodInput | FoodieLikeUpdateManyWithWhereWithoutFoodInput[]
+    deleteMany?: FoodieLikeScalarWhereInput | FoodieLikeScalarWhereInput[]
+  }
+
+  export type UserCreateNestedOneWithoutFoodieLocationInput = {
+    create?: XOR<UserCreateWithoutFoodieLocationInput, UserUncheckedCreateWithoutFoodieLocationInput>
+    connectOrCreate?: UserCreateOrConnectWithoutFoodieLocationInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type FoodieFoodCreateNestedOneWithoutLocationsInput = {
+    create?: XOR<FoodieFoodCreateWithoutLocationsInput, FoodieFoodUncheckedCreateWithoutLocationsInput>
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutLocationsInput
+    connect?: FoodieFoodWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutFoodieLocationNestedInput = {
+    create?: XOR<UserCreateWithoutFoodieLocationInput, UserUncheckedCreateWithoutFoodieLocationInput>
+    connectOrCreate?: UserCreateOrConnectWithoutFoodieLocationInput
+    upsert?: UserUpsertWithoutFoodieLocationInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutFoodieLocationInput, UserUpdateWithoutFoodieLocationInput>, UserUncheckedUpdateWithoutFoodieLocationInput>
+  }
+
+  export type FoodieFoodUpdateOneRequiredWithoutLocationsNestedInput = {
+    create?: XOR<FoodieFoodCreateWithoutLocationsInput, FoodieFoodUncheckedCreateWithoutLocationsInput>
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutLocationsInput
+    upsert?: FoodieFoodUpsertWithoutLocationsInput
+    connect?: FoodieFoodWhereUniqueInput
+    update?: XOR<XOR<FoodieFoodUpdateToOneWithWhereWithoutLocationsInput, FoodieFoodUpdateWithoutLocationsInput>, FoodieFoodUncheckedUpdateWithoutLocationsInput>
+  }
+
+  export type UserCreateNestedOneWithoutFoodieReviewInput = {
+    create?: XOR<UserCreateWithoutFoodieReviewInput, UserUncheckedCreateWithoutFoodieReviewInput>
+    connectOrCreate?: UserCreateOrConnectWithoutFoodieReviewInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type FoodieFoodCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<FoodieFoodCreateWithoutReviewsInput, FoodieFoodUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutReviewsInput
+    connect?: FoodieFoodWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutFoodieReviewNestedInput = {
+    create?: XOR<UserCreateWithoutFoodieReviewInput, UserUncheckedCreateWithoutFoodieReviewInput>
+    connectOrCreate?: UserCreateOrConnectWithoutFoodieReviewInput
+    upsert?: UserUpsertWithoutFoodieReviewInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutFoodieReviewInput, UserUpdateWithoutFoodieReviewInput>, UserUncheckedUpdateWithoutFoodieReviewInput>
+  }
+
+  export type FoodieFoodUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<FoodieFoodCreateWithoutReviewsInput, FoodieFoodUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutReviewsInput
+    upsert?: FoodieFoodUpsertWithoutReviewsInput
+    connect?: FoodieFoodWhereUniqueInput
+    update?: XOR<XOR<FoodieFoodUpdateToOneWithWhereWithoutReviewsInput, FoodieFoodUpdateWithoutReviewsInput>, FoodieFoodUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type UserCreateNestedOneWithoutFoodieLikeInput = {
+    create?: XOR<UserCreateWithoutFoodieLikeInput, UserUncheckedCreateWithoutFoodieLikeInput>
+    connectOrCreate?: UserCreateOrConnectWithoutFoodieLikeInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type FoodieFoodCreateNestedOneWithoutLikesInput = {
+    create?: XOR<FoodieFoodCreateWithoutLikesInput, FoodieFoodUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutLikesInput
+    connect?: FoodieFoodWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutFoodieLikeNestedInput = {
+    create?: XOR<UserCreateWithoutFoodieLikeInput, UserUncheckedCreateWithoutFoodieLikeInput>
+    connectOrCreate?: UserCreateOrConnectWithoutFoodieLikeInput
+    upsert?: UserUpsertWithoutFoodieLikeInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutFoodieLikeInput, UserUpdateWithoutFoodieLikeInput>, UserUncheckedUpdateWithoutFoodieLikeInput>
+  }
+
+  export type FoodieFoodUpdateOneRequiredWithoutLikesNestedInput = {
+    create?: XOR<FoodieFoodCreateWithoutLikesInput, FoodieFoodUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: FoodieFoodCreateOrConnectWithoutLikesInput
+    upsert?: FoodieFoodUpsertWithoutLikesInput
+    connect?: FoodieFoodWhereUniqueInput
+    update?: XOR<XOR<FoodieFoodUpdateToOneWithWhereWithoutLikesInput, FoodieFoodUpdateWithoutLikesInput>, FoodieFoodUncheckedUpdateWithoutLikesInput>
+  }
+
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -18373,6 +24543,118 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type FoodieFoodCreateWithoutUserInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    validated?: boolean
+    createdAt?: Date | string
+    locations?: FoodieLocationCreateNestedManyWithoutFoodInput
+    reviews?: FoodieReviewCreateNestedManyWithoutFoodInput
+    likes?: FoodieLikeCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodUncheckedCreateWithoutUserInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    validated?: boolean
+    createdAt?: Date | string
+    locations?: FoodieLocationUncheckedCreateNestedManyWithoutFoodInput
+    reviews?: FoodieReviewUncheckedCreateNestedManyWithoutFoodInput
+    likes?: FoodieLikeUncheckedCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodCreateOrConnectWithoutUserInput = {
+    where: FoodieFoodWhereUniqueInput
+    create: XOR<FoodieFoodCreateWithoutUserInput, FoodieFoodUncheckedCreateWithoutUserInput>
+  }
+
+  export type FoodieFoodCreateManyUserInputEnvelope = {
+    data: FoodieFoodCreateManyUserInput | FoodieFoodCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type FoodieLocationCreateWithoutUserInput = {
+    id?: string
+    locationName: string
+    address: string
+    createdAt?: Date | string
+    food: FoodieFoodCreateNestedOneWithoutLocationsInput
+  }
+
+  export type FoodieLocationUncheckedCreateWithoutUserInput = {
+    id?: string
+    foodId: string
+    locationName: string
+    address: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieLocationCreateOrConnectWithoutUserInput = {
+    where: FoodieLocationWhereUniqueInput
+    create: XOR<FoodieLocationCreateWithoutUserInput, FoodieLocationUncheckedCreateWithoutUserInput>
+  }
+
+  export type FoodieLocationCreateManyUserInputEnvelope = {
+    data: FoodieLocationCreateManyUserInput | FoodieLocationCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type FoodieReviewCreateWithoutUserInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    food: FoodieFoodCreateNestedOneWithoutReviewsInput
+  }
+
+  export type FoodieReviewUncheckedCreateWithoutUserInput = {
+    id?: string
+    foodId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FoodieReviewCreateOrConnectWithoutUserInput = {
+    where: FoodieReviewWhereUniqueInput
+    create: XOR<FoodieReviewCreateWithoutUserInput, FoodieReviewUncheckedCreateWithoutUserInput>
+  }
+
+  export type FoodieReviewCreateManyUserInputEnvelope = {
+    data: FoodieReviewCreateManyUserInput | FoodieReviewCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type FoodieLikeCreateWithoutUserInput = {
+    id?: string
+    createdAt?: Date | string
+    food: FoodieFoodCreateNestedOneWithoutLikesInput
+  }
+
+  export type FoodieLikeUncheckedCreateWithoutUserInput = {
+    id?: string
+    foodId: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieLikeCreateOrConnectWithoutUserInput = {
+    where: FoodieLikeWhereUniqueInput
+    create: XOR<FoodieLikeCreateWithoutUserInput, FoodieLikeUncheckedCreateWithoutUserInput>
+  }
+
+  export type FoodieLikeCreateManyUserInputEnvelope = {
+    data: FoodieLikeCreateManyUserInput | FoodieLikeCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
   export type PostDIYHomesUpsertWithWhereUniqueWithoutUserInput = {
     where: PostDIYHomesWhereUniqueInput
     update: XOR<PostDIYHomesUpdateWithoutUserInput, PostDIYHomesUncheckedUpdateWithoutUserInput>
@@ -18647,6 +24929,119 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"ReportUrbanExplorer"> | Date | string
   }
 
+  export type FoodieFoodUpsertWithWhereUniqueWithoutUserInput = {
+    where: FoodieFoodWhereUniqueInput
+    update: XOR<FoodieFoodUpdateWithoutUserInput, FoodieFoodUncheckedUpdateWithoutUserInput>
+    create: XOR<FoodieFoodCreateWithoutUserInput, FoodieFoodUncheckedCreateWithoutUserInput>
+  }
+
+  export type FoodieFoodUpdateWithWhereUniqueWithoutUserInput = {
+    where: FoodieFoodWhereUniqueInput
+    data: XOR<FoodieFoodUpdateWithoutUserInput, FoodieFoodUncheckedUpdateWithoutUserInput>
+  }
+
+  export type FoodieFoodUpdateManyWithWhereWithoutUserInput = {
+    where: FoodieFoodScalarWhereInput
+    data: XOR<FoodieFoodUpdateManyMutationInput, FoodieFoodUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type FoodieFoodScalarWhereInput = {
+    AND?: FoodieFoodScalarWhereInput | FoodieFoodScalarWhereInput[]
+    OR?: FoodieFoodScalarWhereInput[]
+    NOT?: FoodieFoodScalarWhereInput | FoodieFoodScalarWhereInput[]
+    id?: StringFilter<"FoodieFood"> | string
+    name?: StringFilter<"FoodieFood"> | string
+    cuisine?: StringFilter<"FoodieFood"> | string
+    origin?: StringFilter<"FoodieFood"> | string
+    description?: StringFilter<"FoodieFood"> | string
+    submittedBy?: StringFilter<"FoodieFood"> | string
+    validated?: BoolFilter<"FoodieFood"> | boolean
+    createdAt?: DateTimeFilter<"FoodieFood"> | Date | string
+  }
+
+  export type FoodieLocationUpsertWithWhereUniqueWithoutUserInput = {
+    where: FoodieLocationWhereUniqueInput
+    update: XOR<FoodieLocationUpdateWithoutUserInput, FoodieLocationUncheckedUpdateWithoutUserInput>
+    create: XOR<FoodieLocationCreateWithoutUserInput, FoodieLocationUncheckedCreateWithoutUserInput>
+  }
+
+  export type FoodieLocationUpdateWithWhereUniqueWithoutUserInput = {
+    where: FoodieLocationWhereUniqueInput
+    data: XOR<FoodieLocationUpdateWithoutUserInput, FoodieLocationUncheckedUpdateWithoutUserInput>
+  }
+
+  export type FoodieLocationUpdateManyWithWhereWithoutUserInput = {
+    where: FoodieLocationScalarWhereInput
+    data: XOR<FoodieLocationUpdateManyMutationInput, FoodieLocationUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type FoodieLocationScalarWhereInput = {
+    AND?: FoodieLocationScalarWhereInput | FoodieLocationScalarWhereInput[]
+    OR?: FoodieLocationScalarWhereInput[]
+    NOT?: FoodieLocationScalarWhereInput | FoodieLocationScalarWhereInput[]
+    id?: StringFilter<"FoodieLocation"> | string
+    foodId?: StringFilter<"FoodieLocation"> | string
+    locationName?: StringFilter<"FoodieLocation"> | string
+    address?: StringFilter<"FoodieLocation"> | string
+    submittedBy?: StringFilter<"FoodieLocation"> | string
+    createdAt?: DateTimeFilter<"FoodieLocation"> | Date | string
+  }
+
+  export type FoodieReviewUpsertWithWhereUniqueWithoutUserInput = {
+    where: FoodieReviewWhereUniqueInput
+    update: XOR<FoodieReviewUpdateWithoutUserInput, FoodieReviewUncheckedUpdateWithoutUserInput>
+    create: XOR<FoodieReviewCreateWithoutUserInput, FoodieReviewUncheckedCreateWithoutUserInput>
+  }
+
+  export type FoodieReviewUpdateWithWhereUniqueWithoutUserInput = {
+    where: FoodieReviewWhereUniqueInput
+    data: XOR<FoodieReviewUpdateWithoutUserInput, FoodieReviewUncheckedUpdateWithoutUserInput>
+  }
+
+  export type FoodieReviewUpdateManyWithWhereWithoutUserInput = {
+    where: FoodieReviewScalarWhereInput
+    data: XOR<FoodieReviewUpdateManyMutationInput, FoodieReviewUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type FoodieReviewScalarWhereInput = {
+    AND?: FoodieReviewScalarWhereInput | FoodieReviewScalarWhereInput[]
+    OR?: FoodieReviewScalarWhereInput[]
+    NOT?: FoodieReviewScalarWhereInput | FoodieReviewScalarWhereInput[]
+    id?: StringFilter<"FoodieReview"> | string
+    foodId?: StringFilter<"FoodieReview"> | string
+    userId?: StringFilter<"FoodieReview"> | string
+    rating?: IntFilter<"FoodieReview"> | number
+    comment?: StringFilter<"FoodieReview"> | string
+    validated?: BoolFilter<"FoodieReview"> | boolean
+    createdAt?: DateTimeFilter<"FoodieReview"> | Date | string
+  }
+
+  export type FoodieLikeUpsertWithWhereUniqueWithoutUserInput = {
+    where: FoodieLikeWhereUniqueInput
+    update: XOR<FoodieLikeUpdateWithoutUserInput, FoodieLikeUncheckedUpdateWithoutUserInput>
+    create: XOR<FoodieLikeCreateWithoutUserInput, FoodieLikeUncheckedCreateWithoutUserInput>
+  }
+
+  export type FoodieLikeUpdateWithWhereUniqueWithoutUserInput = {
+    where: FoodieLikeWhereUniqueInput
+    data: XOR<FoodieLikeUpdateWithoutUserInput, FoodieLikeUncheckedUpdateWithoutUserInput>
+  }
+
+  export type FoodieLikeUpdateManyWithWhereWithoutUserInput = {
+    where: FoodieLikeScalarWhereInput
+    data: XOR<FoodieLikeUpdateManyMutationInput, FoodieLikeUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type FoodieLikeScalarWhereInput = {
+    AND?: FoodieLikeScalarWhereInput | FoodieLikeScalarWhereInput[]
+    OR?: FoodieLikeScalarWhereInput[]
+    NOT?: FoodieLikeScalarWhereInput | FoodieLikeScalarWhereInput[]
+    id?: StringFilter<"FoodieLike"> | string
+    foodId?: StringFilter<"FoodieLike"> | string
+    userId?: StringFilter<"FoodieLike"> | string
+    createdAt?: DateTimeFilter<"FoodieLike"> | Date | string
+  }
+
   export type UserCreateWithoutPostsInput = {
     id?: string
     email: string
@@ -18663,6 +25058,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPostsInput = {
@@ -18681,6 +25080,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPostsInput = {
@@ -18813,6 +25216,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPostsInput = {
@@ -18831,6 +25238,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type ReviewDIYHomesUpsertWithWhereUniqueWithoutPostInput = {
@@ -18913,6 +25324,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReviewsInput = {
@@ -18931,6 +25346,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReviewsInput = {
@@ -19020,6 +25439,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReviewsInput = {
@@ -19038,6 +25461,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutReviewsInput = {
@@ -19107,6 +25534,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutLikeInput = {
@@ -19125,6 +25556,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutLikeInput = {
@@ -19188,6 +25623,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLikeInput = {
@@ -19206,6 +25645,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutLikeInput = {
@@ -19259,6 +25702,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutBookmarksInput = {
@@ -19277,6 +25724,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutBookmarksInput = {
@@ -19340,6 +25791,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutBookmarksInput = {
@@ -19358,6 +25813,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutBookmarksInput = {
@@ -19411,6 +25870,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReportInput = {
@@ -19429,6 +25892,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReportInput = {
@@ -19515,6 +25982,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReportInput = {
@@ -19533,6 +26004,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutReportInput = {
@@ -19615,6 +26090,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPlaceUrbanExplorerInput = {
@@ -19633,6 +26112,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPlaceUrbanExplorerInput = {
@@ -19765,6 +26248,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPlaceUrbanExplorerInput = {
@@ -19783,6 +26270,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type ReviewUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput = {
@@ -19865,6 +26356,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReviewUrbanExplorerInput = {
@@ -19883,6 +26378,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReviewUrbanExplorerInput = {
@@ -19976,6 +26475,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReviewUrbanExplorerInput = {
@@ -19994,6 +26497,10 @@ export namespace Prisma {
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PlaceUrbanExplorerUpsertWithoutReviewsInput = {
@@ -20067,6 +26574,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutLikeUrbanExplorerInput = {
@@ -20085,6 +26596,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutLikeUrbanExplorerInput = {
@@ -20152,6 +26667,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLikeUrbanExplorerInput = {
@@ -20170,6 +26689,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PlaceUrbanExplorerUpsertWithoutLikesInput = {
@@ -20227,6 +26750,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutBookmarkUrbanExplorerInput = {
@@ -20245,6 +26772,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutBookmarkUrbanExplorerInput = {
@@ -20312,6 +26843,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutBookmarkUrbanExplorerInput = {
@@ -20330,6 +26865,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PlaceUrbanExplorerUpsertWithoutBookmarksInput = {
@@ -20387,6 +26926,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
     LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReportUrbanExplorerInput = {
@@ -20405,6 +26948,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReportUrbanExplorerInput = {
@@ -20495,6 +27042,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
     LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReportUrbanExplorerInput = {
@@ -20513,6 +27064,10 @@ export namespace Prisma {
     ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
     BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PlaceUrbanExplorerUpsertWithoutReportsInput = {
@@ -20581,6 +27136,750 @@ export namespace Prisma {
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserCreateWithoutFoodieFoodInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutFoodieFoodInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutFoodieFoodInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutFoodieFoodInput, UserUncheckedCreateWithoutFoodieFoodInput>
+  }
+
+  export type FoodieLocationCreateWithoutFoodInput = {
+    id?: string
+    locationName: string
+    address: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieLocationInput
+  }
+
+  export type FoodieLocationUncheckedCreateWithoutFoodInput = {
+    id?: string
+    locationName: string
+    address: string
+    submittedBy: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieLocationCreateOrConnectWithoutFoodInput = {
+    where: FoodieLocationWhereUniqueInput
+    create: XOR<FoodieLocationCreateWithoutFoodInput, FoodieLocationUncheckedCreateWithoutFoodInput>
+  }
+
+  export type FoodieLocationCreateManyFoodInputEnvelope = {
+    data: FoodieLocationCreateManyFoodInput | FoodieLocationCreateManyFoodInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type FoodieReviewCreateWithoutFoodInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieReviewInput
+  }
+
+  export type FoodieReviewUncheckedCreateWithoutFoodInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FoodieReviewCreateOrConnectWithoutFoodInput = {
+    where: FoodieReviewWhereUniqueInput
+    create: XOR<FoodieReviewCreateWithoutFoodInput, FoodieReviewUncheckedCreateWithoutFoodInput>
+  }
+
+  export type FoodieReviewCreateManyFoodInputEnvelope = {
+    data: FoodieReviewCreateManyFoodInput | FoodieReviewCreateManyFoodInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type FoodieLikeCreateWithoutFoodInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieLikeInput
+  }
+
+  export type FoodieLikeUncheckedCreateWithoutFoodInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieLikeCreateOrConnectWithoutFoodInput = {
+    where: FoodieLikeWhereUniqueInput
+    create: XOR<FoodieLikeCreateWithoutFoodInput, FoodieLikeUncheckedCreateWithoutFoodInput>
+  }
+
+  export type FoodieLikeCreateManyFoodInputEnvelope = {
+    data: FoodieLikeCreateManyFoodInput | FoodieLikeCreateManyFoodInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserUpsertWithoutFoodieFoodInput = {
+    update: XOR<UserUpdateWithoutFoodieFoodInput, UserUncheckedUpdateWithoutFoodieFoodInput>
+    create: XOR<UserCreateWithoutFoodieFoodInput, UserUncheckedCreateWithoutFoodieFoodInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutFoodieFoodInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutFoodieFoodInput, UserUncheckedUpdateWithoutFoodieFoodInput>
+  }
+
+  export type UserUpdateWithoutFoodieFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutFoodieFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type FoodieLocationUpsertWithWhereUniqueWithoutFoodInput = {
+    where: FoodieLocationWhereUniqueInput
+    update: XOR<FoodieLocationUpdateWithoutFoodInput, FoodieLocationUncheckedUpdateWithoutFoodInput>
+    create: XOR<FoodieLocationCreateWithoutFoodInput, FoodieLocationUncheckedCreateWithoutFoodInput>
+  }
+
+  export type FoodieLocationUpdateWithWhereUniqueWithoutFoodInput = {
+    where: FoodieLocationWhereUniqueInput
+    data: XOR<FoodieLocationUpdateWithoutFoodInput, FoodieLocationUncheckedUpdateWithoutFoodInput>
+  }
+
+  export type FoodieLocationUpdateManyWithWhereWithoutFoodInput = {
+    where: FoodieLocationScalarWhereInput
+    data: XOR<FoodieLocationUpdateManyMutationInput, FoodieLocationUncheckedUpdateManyWithoutFoodInput>
+  }
+
+  export type FoodieReviewUpsertWithWhereUniqueWithoutFoodInput = {
+    where: FoodieReviewWhereUniqueInput
+    update: XOR<FoodieReviewUpdateWithoutFoodInput, FoodieReviewUncheckedUpdateWithoutFoodInput>
+    create: XOR<FoodieReviewCreateWithoutFoodInput, FoodieReviewUncheckedCreateWithoutFoodInput>
+  }
+
+  export type FoodieReviewUpdateWithWhereUniqueWithoutFoodInput = {
+    where: FoodieReviewWhereUniqueInput
+    data: XOR<FoodieReviewUpdateWithoutFoodInput, FoodieReviewUncheckedUpdateWithoutFoodInput>
+  }
+
+  export type FoodieReviewUpdateManyWithWhereWithoutFoodInput = {
+    where: FoodieReviewScalarWhereInput
+    data: XOR<FoodieReviewUpdateManyMutationInput, FoodieReviewUncheckedUpdateManyWithoutFoodInput>
+  }
+
+  export type FoodieLikeUpsertWithWhereUniqueWithoutFoodInput = {
+    where: FoodieLikeWhereUniqueInput
+    update: XOR<FoodieLikeUpdateWithoutFoodInput, FoodieLikeUncheckedUpdateWithoutFoodInput>
+    create: XOR<FoodieLikeCreateWithoutFoodInput, FoodieLikeUncheckedCreateWithoutFoodInput>
+  }
+
+  export type FoodieLikeUpdateWithWhereUniqueWithoutFoodInput = {
+    where: FoodieLikeWhereUniqueInput
+    data: XOR<FoodieLikeUpdateWithoutFoodInput, FoodieLikeUncheckedUpdateWithoutFoodInput>
+  }
+
+  export type FoodieLikeUpdateManyWithWhereWithoutFoodInput = {
+    where: FoodieLikeScalarWhereInput
+    data: XOR<FoodieLikeUpdateManyMutationInput, FoodieLikeUncheckedUpdateManyWithoutFoodInput>
+  }
+
+  export type UserCreateWithoutFoodieLocationInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutFoodieLocationInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutFoodieLocationInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutFoodieLocationInput, UserUncheckedCreateWithoutFoodieLocationInput>
+  }
+
+  export type FoodieFoodCreateWithoutLocationsInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieFoodInput
+    reviews?: FoodieReviewCreateNestedManyWithoutFoodInput
+    likes?: FoodieLikeCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodUncheckedCreateWithoutLocationsInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: FoodieReviewUncheckedCreateNestedManyWithoutFoodInput
+    likes?: FoodieLikeUncheckedCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodCreateOrConnectWithoutLocationsInput = {
+    where: FoodieFoodWhereUniqueInput
+    create: XOR<FoodieFoodCreateWithoutLocationsInput, FoodieFoodUncheckedCreateWithoutLocationsInput>
+  }
+
+  export type UserUpsertWithoutFoodieLocationInput = {
+    update: XOR<UserUpdateWithoutFoodieLocationInput, UserUncheckedUpdateWithoutFoodieLocationInput>
+    create: XOR<UserCreateWithoutFoodieLocationInput, UserUncheckedCreateWithoutFoodieLocationInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutFoodieLocationInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutFoodieLocationInput, UserUncheckedUpdateWithoutFoodieLocationInput>
+  }
+
+  export type UserUpdateWithoutFoodieLocationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutFoodieLocationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type FoodieFoodUpsertWithoutLocationsInput = {
+    update: XOR<FoodieFoodUpdateWithoutLocationsInput, FoodieFoodUncheckedUpdateWithoutLocationsInput>
+    create: XOR<FoodieFoodCreateWithoutLocationsInput, FoodieFoodUncheckedCreateWithoutLocationsInput>
+    where?: FoodieFoodWhereInput
+  }
+
+  export type FoodieFoodUpdateToOneWithWhereWithoutLocationsInput = {
+    where?: FoodieFoodWhereInput
+    data: XOR<FoodieFoodUpdateWithoutLocationsInput, FoodieFoodUncheckedUpdateWithoutLocationsInput>
+  }
+
+  export type FoodieFoodUpdateWithoutLocationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieFoodNestedInput
+    reviews?: FoodieReviewUpdateManyWithoutFoodNestedInput
+    likes?: FoodieLikeUpdateManyWithoutFoodNestedInput
+  }
+
+  export type FoodieFoodUncheckedUpdateWithoutLocationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: FoodieReviewUncheckedUpdateManyWithoutFoodNestedInput
+    likes?: FoodieLikeUncheckedUpdateManyWithoutFoodNestedInput
+  }
+
+  export type UserCreateWithoutFoodieReviewInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutFoodieReviewInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutFoodieReviewInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutFoodieReviewInput, UserUncheckedCreateWithoutFoodieReviewInput>
+  }
+
+  export type FoodieFoodCreateWithoutReviewsInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieFoodInput
+    locations?: FoodieLocationCreateNestedManyWithoutFoodInput
+    likes?: FoodieLikeCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    locations?: FoodieLocationUncheckedCreateNestedManyWithoutFoodInput
+    likes?: FoodieLikeUncheckedCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodCreateOrConnectWithoutReviewsInput = {
+    where: FoodieFoodWhereUniqueInput
+    create: XOR<FoodieFoodCreateWithoutReviewsInput, FoodieFoodUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type UserUpsertWithoutFoodieReviewInput = {
+    update: XOR<UserUpdateWithoutFoodieReviewInput, UserUncheckedUpdateWithoutFoodieReviewInput>
+    create: XOR<UserCreateWithoutFoodieReviewInput, UserUncheckedCreateWithoutFoodieReviewInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutFoodieReviewInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutFoodieReviewInput, UserUncheckedUpdateWithoutFoodieReviewInput>
+  }
+
+  export type UserUpdateWithoutFoodieReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutFoodieReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type FoodieFoodUpsertWithoutReviewsInput = {
+    update: XOR<FoodieFoodUpdateWithoutReviewsInput, FoodieFoodUncheckedUpdateWithoutReviewsInput>
+    create: XOR<FoodieFoodCreateWithoutReviewsInput, FoodieFoodUncheckedCreateWithoutReviewsInput>
+    where?: FoodieFoodWhereInput
+  }
+
+  export type FoodieFoodUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: FoodieFoodWhereInput
+    data: XOR<FoodieFoodUpdateWithoutReviewsInput, FoodieFoodUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type FoodieFoodUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieFoodNestedInput
+    locations?: FoodieLocationUpdateManyWithoutFoodNestedInput
+    likes?: FoodieLikeUpdateManyWithoutFoodNestedInput
+  }
+
+  export type FoodieFoodUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    locations?: FoodieLocationUncheckedUpdateManyWithoutFoodNestedInput
+    likes?: FoodieLikeUncheckedUpdateManyWithoutFoodNestedInput
+  }
+
+  export type UserCreateWithoutFoodieLikeInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutFoodieLikeInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutFoodieLikeInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutFoodieLikeInput, UserUncheckedCreateWithoutFoodieLikeInput>
+  }
+
+  export type FoodieFoodCreateWithoutLikesInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutFoodieFoodInput
+    locations?: FoodieLocationCreateNestedManyWithoutFoodInput
+    reviews?: FoodieReviewCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodUncheckedCreateWithoutLikesInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    locations?: FoodieLocationUncheckedCreateNestedManyWithoutFoodInput
+    reviews?: FoodieReviewUncheckedCreateNestedManyWithoutFoodInput
+  }
+
+  export type FoodieFoodCreateOrConnectWithoutLikesInput = {
+    where: FoodieFoodWhereUniqueInput
+    create: XOR<FoodieFoodCreateWithoutLikesInput, FoodieFoodUncheckedCreateWithoutLikesInput>
+  }
+
+  export type UserUpsertWithoutFoodieLikeInput = {
+    update: XOR<UserUpdateWithoutFoodieLikeInput, UserUncheckedUpdateWithoutFoodieLikeInput>
+    create: XOR<UserCreateWithoutFoodieLikeInput, UserUncheckedCreateWithoutFoodieLikeInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutFoodieLikeInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutFoodieLikeInput, UserUncheckedUpdateWithoutFoodieLikeInput>
+  }
+
+  export type UserUpdateWithoutFoodieLikeInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutFoodieLikeInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type FoodieFoodUpsertWithoutLikesInput = {
+    update: XOR<FoodieFoodUpdateWithoutLikesInput, FoodieFoodUncheckedUpdateWithoutLikesInput>
+    create: XOR<FoodieFoodCreateWithoutLikesInput, FoodieFoodUncheckedCreateWithoutLikesInput>
+    where?: FoodieFoodWhereInput
+  }
+
+  export type FoodieFoodUpdateToOneWithWhereWithoutLikesInput = {
+    where?: FoodieFoodWhereInput
+    data: XOR<FoodieFoodUpdateWithoutLikesInput, FoodieFoodUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type FoodieFoodUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieFoodNestedInput
+    locations?: FoodieLocationUpdateManyWithoutFoodNestedInput
+    reviews?: FoodieReviewUpdateManyWithoutFoodNestedInput
+  }
+
+  export type FoodieFoodUncheckedUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    locations?: FoodieLocationUncheckedUpdateManyWithoutFoodNestedInput
+    reviews?: FoodieReviewUncheckedUpdateManyWithoutFoodNestedInput
   }
 
   export type PostDIYHomesCreateManyUserInput = {
@@ -20654,6 +27953,39 @@ export namespace Prisma {
     placeId?: string | null
     reviewId?: string | null
     reason: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieFoodCreateManyUserInput = {
+    id?: string
+    name: string
+    cuisine: string
+    origin: string
+    description: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FoodieLocationCreateManyUserInput = {
+    id?: string
+    foodId: string
+    locationName: string
+    address: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieReviewCreateManyUserInput = {
+    id?: string
+    foodId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FoodieLikeCreateManyUserInput = {
+    id?: string
+    foodId: string
     createdAt?: Date | string
   }
 
@@ -20896,6 +28228,111 @@ export namespace Prisma {
     placeId?: NullableStringFieldUpdateOperationsInput | string | null
     reviewId?: NullableStringFieldUpdateOperationsInput | string | null
     reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieFoodUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    locations?: FoodieLocationUpdateManyWithoutFoodNestedInput
+    reviews?: FoodieReviewUpdateManyWithoutFoodNestedInput
+    likes?: FoodieLikeUpdateManyWithoutFoodNestedInput
+  }
+
+  export type FoodieFoodUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    locations?: FoodieLocationUncheckedUpdateManyWithoutFoodNestedInput
+    reviews?: FoodieReviewUncheckedUpdateManyWithoutFoodNestedInput
+    likes?: FoodieLikeUncheckedUpdateManyWithoutFoodNestedInput
+  }
+
+  export type FoodieFoodUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    cuisine?: StringFieldUpdateOperationsInput | string
+    origin?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLocationUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    food?: FoodieFoodUpdateOneRequiredWithoutLocationsNestedInput
+  }
+
+  export type FoodieLocationUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLocationUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieReviewUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    food?: FoodieFoodUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type FoodieReviewUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieReviewUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLikeUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    food?: FoodieFoodUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type FoodieLikeUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLikeUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    foodId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -21188,6 +28625,98 @@ export namespace Prisma {
     placeId?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
     reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLocationCreateManyFoodInput = {
+    id?: string
+    locationName: string
+    address: string
+    submittedBy: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieReviewCreateManyFoodInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type FoodieLikeCreateManyFoodInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type FoodieLocationUpdateWithoutFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieLocationNestedInput
+  }
+
+  export type FoodieLocationUncheckedUpdateWithoutFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLocationUncheckedUpdateManyWithoutFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    locationName?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieReviewUpdateWithoutFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieReviewNestedInput
+  }
+
+  export type FoodieReviewUncheckedUpdateWithoutFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieReviewUncheckedUpdateManyWithoutFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLikeUpdateWithoutFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutFoodieLikeNestedInput
+  }
+
+  export type FoodieLikeUncheckedUpdateWithoutFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type FoodieLikeUncheckedUpdateManyWithoutFoodInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
