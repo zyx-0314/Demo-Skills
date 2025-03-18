@@ -54,7 +54,7 @@ export async function GET(req: NextRequest) {
     const group = searchParams.get("group");
 
     // Validate input manually
-    if (group !== null && group.trim() === "") {
+    if (group === null || group.trim() === "") {
       return NextResponse.json({ error: "Invalid or missing group query" }, { status: 400 });
     }
 
