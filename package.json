@@ -13,7 +13,9 @@
     "test:noTest": "jest --passWithNoTests",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "dbReset": "prisma migrate reset --schema=./prisma/postgresql/schema.prisma"
+    "dbReset": "prisma migrate reset --schema=./prisma/postgresql/schema.prisma",
+    "fullTest": "npm run dbReset && npm run test:coverage",
+    "dbGM": "prisma generate --schema=./prisma/postgresql/schema.prisma && prisma migrate dev --schema=./prisma/postgresql/schema.prisma"
   },
   "dependencies": {
     "@apollo/server": "^4.11.3",
