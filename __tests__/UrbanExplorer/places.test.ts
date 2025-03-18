@@ -1,40 +1,22 @@
-import { POST as createPlace, GET as getPlaces } from "@/app/api/old/UrbanExplorer/places/route";
-import { GET as getPlaceById, PUT as updatePlace, DELETE as deletePlace } from "@/app/api/old/UrbanExplorer/places/[id]/route";
+import { POST as createPlace, GET as getPlaces } from "@/app/api/UrbanExplorer/places/route";
+import { GET as getPlaceById, PUT as updatePlace, DELETE as deletePlace } from "@/app/api/UrbanExplorer/places/[id]/route";
 import { NextRequest } from "next/server";
 import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
-import { POST as createUser } from "@/app/api/old/UrbanExplorer/users/route"; // ✅ Import User API
 
 const prisma = new PostgresqlClient();
 
-describe("UrbanExplorer - Places API Tests", () => {
+describe("UrbanExplorer Places API Tests", () => {
   let testPlaceId: string;
-  let testUserId: string;
+  const testPlaceName = "Urban Test Place";
 
-  const testEmail = "UrbanExplorerPlaces@example.com";
-
-  // ✅ Create a user before running the tests
+  // ✅ Cleanup before running tests
   beforeAll(async () => {
-    const req = new NextRequest("http://localhost:3000/api/users", {
-      method: "POST",
-      body: JSON.stringify({
-        email: testEmail,
-        name: "Test User",
-        password: "password123",
-      }),
-      headers: new Headers({ "Content-Type": "application/json" }),
-    });
-
-    const res = await createUser(req);
-    const user = await res.json();
-    testUserId = user.id; // ✅ Store valid user ID
+    await prisma.placeUrbanExplorer.deleteMany({ where: { name: testPlaceName } });
   });
 
-  beforeAll(async () => {
-    await prisma.placeUrbanExplorer.deleteMany({});
-  });
-
+  // ✅ Cleanup after tests
   afterAll(async () => {
-    await prisma.placeUrbanExplorer.deleteMany({});
+    await prisma.placeUrbanExplorer.deleteMany({ where: { name: testPlaceName } });
     await prisma.$disconnect();
   });
 
@@ -43,11 +25,11 @@ describe("UrbanExplorer - Places API Tests", () => {
     const req = new NextRequest("http://localhost:3000/api/UrbanExplorer/places", {
       method: "POST",
       body: JSON.stringify({
-        name: "Test Place",
-        category: "Historical",
+        name: testPlaceName,
+        category: "Test Category",
         location: "Test City",
-        description: "A historical place",
-        ownerId: testUserId,
+        description: "A test description",
+        ownerId: "1",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
@@ -57,13 +39,14 @@ describe("UrbanExplorer - Places API Tests", () => {
     const place = await res.json();
 
     expect(place).toHaveProperty("id");
-    expect(place.name).toBe("Test Place");
+    expect(place.name).toBe(testPlaceName);
     testPlaceId = place.id;
   });
 
   // ✅ Fetch all places
   it("should fetch all places", async () => {
-    const res = await getPlaces();
+    const req = new NextRequest("http://localhost:3000/api/UrbanExplorer/places");
+    const res = await getPlaces(req);
 
     expect(res.status).toBe(200);
     const places = await res.json();
@@ -80,13 +63,14 @@ describe("UrbanExplorer - Places API Tests", () => {
     expect(res.status).toBe(200);
     const place = await res.json();
     expect(place.id).toBe(testPlaceId);
+    expect(place.name).toBe(testPlaceName);
   });
 
-  // ✅ Update a place
+  // ✅ Update place details
   it("should update a place", async () => {
     const req = new NextRequest(`http://localhost:3000/api/UrbanExplorer/places/${testPlaceId}`, {
       method: "PUT",
-      body: JSON.stringify({ name: "Updated Test Place" }),
+      body: JSON.stringify({ description: "Updated test description" }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
 
@@ -94,7 +78,7 @@ describe("UrbanExplorer - Places API Tests", () => {
     expect(res.status).toBe(200);
     const place = await res.json();
 
-    expect(place.name).toBe("Updated Test Place");
+    expect(place.description).toBe("Updated test description");
   });
 
   // ✅ Delete a place
@@ -105,5 +89,7 @@ describe("UrbanExplorer - Places API Tests", () => {
 
     const res = await deletePlace(req, { params: { id: testPlaceId } });
     expect(res.status).toBe(200);
+    const data = await res.json();
+    expect(data.message).toBe("Place deleted successfully");
   });
 });
