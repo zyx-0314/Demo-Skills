@@ -76,6 +76,7 @@ describe("Admin Validation API Tests", () => {
     });
 
     const res = await validateFood(req, { params: { id: testFoodId } });
+    console.info("Report created:", res);
     expect(res.status).toBe(200);
     const food = await res.json();
     expect(food.food.validated).toBe(true);
@@ -90,6 +91,7 @@ describe("Admin Validation API Tests", () => {
     });
 
     const res = await validateReview(req, { params: { id: testReviewId } });
+    console.info("Report created:", res);
     expect(res.status).toBe(200);
     const review = await res.json();
     expect(review.review.validated).toBe(true);

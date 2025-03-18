@@ -88,6 +88,31 @@ export type FoodieReview = $Result.DefaultSelection<Prisma.$FoodieReviewPayload>
  * 
  */
 export type FoodieLike = $Result.DefaultSelection<Prisma.$FoodieLikePayload>
+/**
+ * Model PetPetLover
+ * 
+ */
+export type PetPetLover = $Result.DefaultSelection<Prisma.$PetPetLoverPayload>
+/**
+ * Model AppointmentPetLover
+ * 
+ */
+export type AppointmentPetLover = $Result.DefaultSelection<Prisma.$AppointmentPetLoverPayload>
+/**
+ * Model VaccinationPetLover
+ * 
+ */
+export type VaccinationPetLover = $Result.DefaultSelection<Prisma.$VaccinationPetLoverPayload>
+/**
+ * Model ClinicPetLover
+ * 
+ */
+export type ClinicPetLover = $Result.DefaultSelection<Prisma.$ClinicPetLoverPayload>
+/**
+ * Model StorePetLover
+ * 
+ */
+export type StorePetLover = $Result.DefaultSelection<Prisma.$StorePetLoverPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -363,6 +388,56 @@ export class PrismaClient<
     * ```
     */
   get foodieLike(): Prisma.FoodieLikeDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.petPetLover`: Exposes CRUD operations for the **PetPetLover** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more PetPetLovers
+    * const petPetLovers = await prisma.petPetLover.findMany()
+    * ```
+    */
+  get petPetLover(): Prisma.PetPetLoverDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.appointmentPetLover`: Exposes CRUD operations for the **AppointmentPetLover** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more AppointmentPetLovers
+    * const appointmentPetLovers = await prisma.appointmentPetLover.findMany()
+    * ```
+    */
+  get appointmentPetLover(): Prisma.AppointmentPetLoverDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.vaccinationPetLover`: Exposes CRUD operations for the **VaccinationPetLover** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more VaccinationPetLovers
+    * const vaccinationPetLovers = await prisma.vaccinationPetLover.findMany()
+    * ```
+    */
+  get vaccinationPetLover(): Prisma.VaccinationPetLoverDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.clinicPetLover`: Exposes CRUD operations for the **ClinicPetLover** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ClinicPetLovers
+    * const clinicPetLovers = await prisma.clinicPetLover.findMany()
+    * ```
+    */
+  get clinicPetLover(): Prisma.ClinicPetLoverDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.storePetLover`: Exposes CRUD operations for the **StorePetLover** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more StorePetLovers
+    * const storePetLovers = await prisma.storePetLover.findMany()
+    * ```
+    */
+  get storePetLover(): Prisma.StorePetLoverDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -817,7 +892,12 @@ export namespace Prisma {
     FoodieFood: 'FoodieFood',
     FoodieLocation: 'FoodieLocation',
     FoodieReview: 'FoodieReview',
-    FoodieLike: 'FoodieLike'
+    FoodieLike: 'FoodieLike',
+    PetPetLover: 'PetPetLover',
+    AppointmentPetLover: 'AppointmentPetLover',
+    VaccinationPetLover: 'VaccinationPetLover',
+    ClinicPetLover: 'ClinicPetLover',
+    StorePetLover: 'StorePetLover'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -836,7 +916,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike"
+      modelProps: "user" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike" | "petPetLover" | "appointmentPetLover" | "vaccinationPetLover" | "clinicPetLover" | "storePetLover"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1950,6 +2030,376 @@ export namespace Prisma {
           }
         }
       }
+      PetPetLover: {
+        payload: Prisma.$PetPetLoverPayload<ExtArgs>
+        fields: Prisma.PetPetLoverFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.PetPetLoverFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.PetPetLoverFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload>
+          }
+          findFirst: {
+            args: Prisma.PetPetLoverFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.PetPetLoverFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload>
+          }
+          findMany: {
+            args: Prisma.PetPetLoverFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload>[]
+          }
+          create: {
+            args: Prisma.PetPetLoverCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload>
+          }
+          createMany: {
+            args: Prisma.PetPetLoverCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.PetPetLoverCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload>[]
+          }
+          delete: {
+            args: Prisma.PetPetLoverDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload>
+          }
+          update: {
+            args: Prisma.PetPetLoverUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload>
+          }
+          deleteMany: {
+            args: Prisma.PetPetLoverDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.PetPetLoverUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.PetPetLoverUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload>[]
+          }
+          upsert: {
+            args: Prisma.PetPetLoverUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PetPetLoverPayload>
+          }
+          aggregate: {
+            args: Prisma.PetPetLoverAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregatePetPetLover>
+          }
+          groupBy: {
+            args: Prisma.PetPetLoverGroupByArgs<ExtArgs>
+            result: $Utils.Optional<PetPetLoverGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.PetPetLoverCountArgs<ExtArgs>
+            result: $Utils.Optional<PetPetLoverCountAggregateOutputType> | number
+          }
+        }
+      }
+      AppointmentPetLover: {
+        payload: Prisma.$AppointmentPetLoverPayload<ExtArgs>
+        fields: Prisma.AppointmentPetLoverFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.AppointmentPetLoverFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.AppointmentPetLoverFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload>
+          }
+          findFirst: {
+            args: Prisma.AppointmentPetLoverFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.AppointmentPetLoverFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload>
+          }
+          findMany: {
+            args: Prisma.AppointmentPetLoverFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload>[]
+          }
+          create: {
+            args: Prisma.AppointmentPetLoverCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload>
+          }
+          createMany: {
+            args: Prisma.AppointmentPetLoverCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.AppointmentPetLoverCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload>[]
+          }
+          delete: {
+            args: Prisma.AppointmentPetLoverDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload>
+          }
+          update: {
+            args: Prisma.AppointmentPetLoverUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload>
+          }
+          deleteMany: {
+            args: Prisma.AppointmentPetLoverDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.AppointmentPetLoverUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.AppointmentPetLoverUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload>[]
+          }
+          upsert: {
+            args: Prisma.AppointmentPetLoverUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AppointmentPetLoverPayload>
+          }
+          aggregate: {
+            args: Prisma.AppointmentPetLoverAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateAppointmentPetLover>
+          }
+          groupBy: {
+            args: Prisma.AppointmentPetLoverGroupByArgs<ExtArgs>
+            result: $Utils.Optional<AppointmentPetLoverGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.AppointmentPetLoverCountArgs<ExtArgs>
+            result: $Utils.Optional<AppointmentPetLoverCountAggregateOutputType> | number
+          }
+        }
+      }
+      VaccinationPetLover: {
+        payload: Prisma.$VaccinationPetLoverPayload<ExtArgs>
+        fields: Prisma.VaccinationPetLoverFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.VaccinationPetLoverFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.VaccinationPetLoverFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload>
+          }
+          findFirst: {
+            args: Prisma.VaccinationPetLoverFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.VaccinationPetLoverFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload>
+          }
+          findMany: {
+            args: Prisma.VaccinationPetLoverFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload>[]
+          }
+          create: {
+            args: Prisma.VaccinationPetLoverCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload>
+          }
+          createMany: {
+            args: Prisma.VaccinationPetLoverCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.VaccinationPetLoverCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload>[]
+          }
+          delete: {
+            args: Prisma.VaccinationPetLoverDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload>
+          }
+          update: {
+            args: Prisma.VaccinationPetLoverUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload>
+          }
+          deleteMany: {
+            args: Prisma.VaccinationPetLoverDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.VaccinationPetLoverUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.VaccinationPetLoverUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload>[]
+          }
+          upsert: {
+            args: Prisma.VaccinationPetLoverUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VaccinationPetLoverPayload>
+          }
+          aggregate: {
+            args: Prisma.VaccinationPetLoverAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateVaccinationPetLover>
+          }
+          groupBy: {
+            args: Prisma.VaccinationPetLoverGroupByArgs<ExtArgs>
+            result: $Utils.Optional<VaccinationPetLoverGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.VaccinationPetLoverCountArgs<ExtArgs>
+            result: $Utils.Optional<VaccinationPetLoverCountAggregateOutputType> | number
+          }
+        }
+      }
+      ClinicPetLover: {
+        payload: Prisma.$ClinicPetLoverPayload<ExtArgs>
+        fields: Prisma.ClinicPetLoverFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ClinicPetLoverFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ClinicPetLoverFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload>
+          }
+          findFirst: {
+            args: Prisma.ClinicPetLoverFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ClinicPetLoverFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload>
+          }
+          findMany: {
+            args: Prisma.ClinicPetLoverFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload>[]
+          }
+          create: {
+            args: Prisma.ClinicPetLoverCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload>
+          }
+          createMany: {
+            args: Prisma.ClinicPetLoverCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ClinicPetLoverCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload>[]
+          }
+          delete: {
+            args: Prisma.ClinicPetLoverDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload>
+          }
+          update: {
+            args: Prisma.ClinicPetLoverUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload>
+          }
+          deleteMany: {
+            args: Prisma.ClinicPetLoverDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ClinicPetLoverUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ClinicPetLoverUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload>[]
+          }
+          upsert: {
+            args: Prisma.ClinicPetLoverUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicPetLoverPayload>
+          }
+          aggregate: {
+            args: Prisma.ClinicPetLoverAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateClinicPetLover>
+          }
+          groupBy: {
+            args: Prisma.ClinicPetLoverGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ClinicPetLoverGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ClinicPetLoverCountArgs<ExtArgs>
+            result: $Utils.Optional<ClinicPetLoverCountAggregateOutputType> | number
+          }
+        }
+      }
+      StorePetLover: {
+        payload: Prisma.$StorePetLoverPayload<ExtArgs>
+        fields: Prisma.StorePetLoverFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.StorePetLoverFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.StorePetLoverFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload>
+          }
+          findFirst: {
+            args: Prisma.StorePetLoverFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.StorePetLoverFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload>
+          }
+          findMany: {
+            args: Prisma.StorePetLoverFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload>[]
+          }
+          create: {
+            args: Prisma.StorePetLoverCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload>
+          }
+          createMany: {
+            args: Prisma.StorePetLoverCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.StorePetLoverCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload>[]
+          }
+          delete: {
+            args: Prisma.StorePetLoverDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload>
+          }
+          update: {
+            args: Prisma.StorePetLoverUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload>
+          }
+          deleteMany: {
+            args: Prisma.StorePetLoverDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.StorePetLoverUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.StorePetLoverUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload>[]
+          }
+          upsert: {
+            args: Prisma.StorePetLoverUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$StorePetLoverPayload>
+          }
+          aggregate: {
+            args: Prisma.StorePetLoverAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateStorePetLover>
+          }
+          groupBy: {
+            args: Prisma.StorePetLoverGroupByArgs<ExtArgs>
+            result: $Utils.Optional<StorePetLoverGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.StorePetLoverCountArgs<ExtArgs>
+            result: $Utils.Optional<StorePetLoverCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -2049,6 +2499,11 @@ export namespace Prisma {
     foodieLocation?: FoodieLocationOmit
     foodieReview?: FoodieReviewOmit
     foodieLike?: FoodieLikeOmit
+    petPetLover?: PetPetLoverOmit
+    appointmentPetLover?: AppointmentPetLoverOmit
+    vaccinationPetLover?: VaccinationPetLoverOmit
+    clinicPetLover?: ClinicPetLoverOmit
+    storePetLover?: StorePetLoverOmit
   }
 
   /* Types for Logging */
@@ -2157,6 +2612,8 @@ export namespace Prisma {
     FoodieLocation: number
     FoodieReview: number
     FoodieLike: number
+    PetPetLover: number
+    AppointmentPetLover: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -2174,6 +2631,8 @@ export namespace Prisma {
     FoodieLocation?: boolean | UserCountOutputTypeCountFoodieLocationArgs
     FoodieReview?: boolean | UserCountOutputTypeCountFoodieReviewArgs
     FoodieLike?: boolean | UserCountOutputTypeCountFoodieLikeArgs
+    PetPetLover?: boolean | UserCountOutputTypeCountPetPetLoverArgs
+    AppointmentPetLover?: boolean | UserCountOutputTypeCountAppointmentPetLoverArgs
   }
 
   // Custom InputTypes
@@ -2283,6 +2742,20 @@ export namespace Prisma {
    */
   export type UserCountOutputTypeCountFoodieLikeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: FoodieLikeWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountPetPetLoverArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PetPetLoverWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountAppointmentPetLoverArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AppointmentPetLoverWhereInput
   }
 
 
@@ -2514,6 +2987,46 @@ export namespace Prisma {
 
 
   /**
+   * Count Type PetPetLoverCountOutputType
+   */
+
+  export type PetPetLoverCountOutputType = {
+    vaccinations: number
+    appointments: number
+  }
+
+  export type PetPetLoverCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    vaccinations?: boolean | PetPetLoverCountOutputTypeCountVaccinationsArgs
+    appointments?: boolean | PetPetLoverCountOutputTypeCountAppointmentsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * PetPetLoverCountOutputType without action
+   */
+  export type PetPetLoverCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLoverCountOutputType
+     */
+    select?: PetPetLoverCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * PetPetLoverCountOutputType without action
+   */
+  export type PetPetLoverCountOutputTypeCountVaccinationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: VaccinationPetLoverWhereInput
+  }
+
+  /**
+   * PetPetLoverCountOutputType without action
+   */
+  export type PetPetLoverCountOutputTypeCountAppointmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AppointmentPetLoverWhereInput
+  }
+
+
+  /**
    * Models
    */
 
@@ -2703,6 +3216,8 @@ export namespace Prisma {
     FoodieLocation?: boolean | User$FoodieLocationArgs<ExtArgs>
     FoodieReview?: boolean | User$FoodieReviewArgs<ExtArgs>
     FoodieLike?: boolean | User$FoodieLikeArgs<ExtArgs>
+    PetPetLover?: boolean | User$PetPetLoverArgs<ExtArgs>
+    AppointmentPetLover?: boolean | User$AppointmentPetLoverArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
@@ -2749,6 +3264,8 @@ export namespace Prisma {
     FoodieLocation?: boolean | User$FoodieLocationArgs<ExtArgs>
     FoodieReview?: boolean | User$FoodieReviewArgs<ExtArgs>
     FoodieLike?: boolean | User$FoodieLikeArgs<ExtArgs>
+    PetPetLover?: boolean | User$PetPetLoverArgs<ExtArgs>
+    AppointmentPetLover?: boolean | User$AppointmentPetLoverArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -2771,6 +3288,8 @@ export namespace Prisma {
       FoodieLocation: Prisma.$FoodieLocationPayload<ExtArgs>[]
       FoodieReview: Prisma.$FoodieReviewPayload<ExtArgs>[]
       FoodieLike: Prisma.$FoodieLikePayload<ExtArgs>[]
+      PetPetLover: Prisma.$PetPetLoverPayload<ExtArgs>[]
+      AppointmentPetLover: Prisma.$AppointmentPetLoverPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -3187,6 +3706,8 @@ export namespace Prisma {
     FoodieLocation<T extends User$FoodieLocationArgs<ExtArgs> = {}>(args?: Subset<T, User$FoodieLocationArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLocationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     FoodieReview<T extends User$FoodieReviewArgs<ExtArgs> = {}>(args?: Subset<T, User$FoodieReviewArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     FoodieLike<T extends User$FoodieLikeArgs<ExtArgs> = {}>(args?: Subset<T, User$FoodieLikeArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FoodieLikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    PetPetLover<T extends User$PetPetLoverArgs<ExtArgs> = {}>(args?: Subset<T, User$PetPetLoverArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    AppointmentPetLover<T extends User$AppointmentPetLoverArgs<ExtArgs> = {}>(args?: Subset<T, User$AppointmentPetLoverArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3943,6 +4464,54 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: FoodieLikeScalarFieldEnum | FoodieLikeScalarFieldEnum[]
+  }
+
+  /**
+   * User.PetPetLover
+   */
+  export type User$PetPetLoverArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    where?: PetPetLoverWhereInput
+    orderBy?: PetPetLoverOrderByWithRelationInput | PetPetLoverOrderByWithRelationInput[]
+    cursor?: PetPetLoverWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: PetPetLoverScalarFieldEnum | PetPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * User.AppointmentPetLover
+   */
+  export type User$AppointmentPetLoverArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    where?: AppointmentPetLoverWhereInput
+    orderBy?: AppointmentPetLoverOrderByWithRelationInput | AppointmentPetLoverOrderByWithRelationInput[]
+    cursor?: AppointmentPetLoverWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: AppointmentPetLoverScalarFieldEnum | AppointmentPetLoverScalarFieldEnum[]
   }
 
   /**
@@ -19550,6 +20119,5348 @@ export namespace Prisma {
 
 
   /**
+   * Model PetPetLover
+   */
+
+  export type AggregatePetPetLover = {
+    _count: PetPetLoverCountAggregateOutputType | null
+    _avg: PetPetLoverAvgAggregateOutputType | null
+    _sum: PetPetLoverSumAggregateOutputType | null
+    _min: PetPetLoverMinAggregateOutputType | null
+    _max: PetPetLoverMaxAggregateOutputType | null
+  }
+
+  export type PetPetLoverAvgAggregateOutputType = {
+    age: number | null
+  }
+
+  export type PetPetLoverSumAggregateOutputType = {
+    age: number | null
+  }
+
+  export type PetPetLoverMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    petName: string | null
+    species: string | null
+    breed: string | null
+    age: number | null
+    medicalHistory: string | null
+    createdAt: Date | null
+  }
+
+  export type PetPetLoverMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    petName: string | null
+    species: string | null
+    breed: string | null
+    age: number | null
+    medicalHistory: string | null
+    createdAt: Date | null
+  }
+
+  export type PetPetLoverCountAggregateOutputType = {
+    id: number
+    userId: number
+    petName: number
+    species: number
+    breed: number
+    age: number
+    medicalHistory: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type PetPetLoverAvgAggregateInputType = {
+    age?: true
+  }
+
+  export type PetPetLoverSumAggregateInputType = {
+    age?: true
+  }
+
+  export type PetPetLoverMinAggregateInputType = {
+    id?: true
+    userId?: true
+    petName?: true
+    species?: true
+    breed?: true
+    age?: true
+    medicalHistory?: true
+    createdAt?: true
+  }
+
+  export type PetPetLoverMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    petName?: true
+    species?: true
+    breed?: true
+    age?: true
+    medicalHistory?: true
+    createdAt?: true
+  }
+
+  export type PetPetLoverCountAggregateInputType = {
+    id?: true
+    userId?: true
+    petName?: true
+    species?: true
+    breed?: true
+    age?: true
+    medicalHistory?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type PetPetLoverAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PetPetLover to aggregate.
+     */
+    where?: PetPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PetPetLovers to fetch.
+     */
+    orderBy?: PetPetLoverOrderByWithRelationInput | PetPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: PetPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PetPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PetPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned PetPetLovers
+    **/
+    _count?: true | PetPetLoverCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: PetPetLoverAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: PetPetLoverSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: PetPetLoverMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: PetPetLoverMaxAggregateInputType
+  }
+
+  export type GetPetPetLoverAggregateType<T extends PetPetLoverAggregateArgs> = {
+        [P in keyof T & keyof AggregatePetPetLover]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregatePetPetLover[P]>
+      : GetScalarType<T[P], AggregatePetPetLover[P]>
+  }
+
+
+
+
+  export type PetPetLoverGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PetPetLoverWhereInput
+    orderBy?: PetPetLoverOrderByWithAggregationInput | PetPetLoverOrderByWithAggregationInput[]
+    by: PetPetLoverScalarFieldEnum[] | PetPetLoverScalarFieldEnum
+    having?: PetPetLoverScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: PetPetLoverCountAggregateInputType | true
+    _avg?: PetPetLoverAvgAggregateInputType
+    _sum?: PetPetLoverSumAggregateInputType
+    _min?: PetPetLoverMinAggregateInputType
+    _max?: PetPetLoverMaxAggregateInputType
+  }
+
+  export type PetPetLoverGroupByOutputType = {
+    id: string
+    userId: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory: string | null
+    createdAt: Date
+    _count: PetPetLoverCountAggregateOutputType | null
+    _avg: PetPetLoverAvgAggregateOutputType | null
+    _sum: PetPetLoverSumAggregateOutputType | null
+    _min: PetPetLoverMinAggregateOutputType | null
+    _max: PetPetLoverMaxAggregateOutputType | null
+  }
+
+  type GetPetPetLoverGroupByPayload<T extends PetPetLoverGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<PetPetLoverGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof PetPetLoverGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], PetPetLoverGroupByOutputType[P]>
+            : GetScalarType<T[P], PetPetLoverGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type PetPetLoverSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    petName?: boolean
+    species?: boolean
+    breed?: boolean
+    age?: boolean
+    medicalHistory?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    vaccinations?: boolean | PetPetLover$vaccinationsArgs<ExtArgs>
+    appointments?: boolean | PetPetLover$appointmentsArgs<ExtArgs>
+    _count?: boolean | PetPetLoverCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["petPetLover"]>
+
+  export type PetPetLoverSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    petName?: boolean
+    species?: boolean
+    breed?: boolean
+    age?: boolean
+    medicalHistory?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["petPetLover"]>
+
+  export type PetPetLoverSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    petName?: boolean
+    species?: boolean
+    breed?: boolean
+    age?: boolean
+    medicalHistory?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["petPetLover"]>
+
+  export type PetPetLoverSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    petName?: boolean
+    species?: boolean
+    breed?: boolean
+    age?: boolean
+    medicalHistory?: boolean
+    createdAt?: boolean
+  }
+
+  export type PetPetLoverOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "petName" | "species" | "breed" | "age" | "medicalHistory" | "createdAt", ExtArgs["result"]["petPetLover"]>
+  export type PetPetLoverInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    vaccinations?: boolean | PetPetLover$vaccinationsArgs<ExtArgs>
+    appointments?: boolean | PetPetLover$appointmentsArgs<ExtArgs>
+    _count?: boolean | PetPetLoverCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type PetPetLoverIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type PetPetLoverIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $PetPetLoverPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "PetPetLover"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      vaccinations: Prisma.$VaccinationPetLoverPayload<ExtArgs>[]
+      appointments: Prisma.$AppointmentPetLoverPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      petName: string
+      species: string
+      breed: string
+      age: number
+      medicalHistory: string | null
+      createdAt: Date
+    }, ExtArgs["result"]["petPetLover"]>
+    composites: {}
+  }
+
+  type PetPetLoverGetPayload<S extends boolean | null | undefined | PetPetLoverDefaultArgs> = $Result.GetResult<Prisma.$PetPetLoverPayload, S>
+
+  type PetPetLoverCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<PetPetLoverFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: PetPetLoverCountAggregateInputType | true
+    }
+
+  export interface PetPetLoverDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['PetPetLover'], meta: { name: 'PetPetLover' } }
+    /**
+     * Find zero or one PetPetLover that matches the filter.
+     * @param {PetPetLoverFindUniqueArgs} args - Arguments to find a PetPetLover
+     * @example
+     * // Get one PetPetLover
+     * const petPetLover = await prisma.petPetLover.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends PetPetLoverFindUniqueArgs>(args: SelectSubset<T, PetPetLoverFindUniqueArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one PetPetLover that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {PetPetLoverFindUniqueOrThrowArgs} args - Arguments to find a PetPetLover
+     * @example
+     * // Get one PetPetLover
+     * const petPetLover = await prisma.petPetLover.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends PetPetLoverFindUniqueOrThrowArgs>(args: SelectSubset<T, PetPetLoverFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PetPetLover that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PetPetLoverFindFirstArgs} args - Arguments to find a PetPetLover
+     * @example
+     * // Get one PetPetLover
+     * const petPetLover = await prisma.petPetLover.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends PetPetLoverFindFirstArgs>(args?: SelectSubset<T, PetPetLoverFindFirstArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PetPetLover that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PetPetLoverFindFirstOrThrowArgs} args - Arguments to find a PetPetLover
+     * @example
+     * // Get one PetPetLover
+     * const petPetLover = await prisma.petPetLover.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends PetPetLoverFindFirstOrThrowArgs>(args?: SelectSubset<T, PetPetLoverFindFirstOrThrowArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more PetPetLovers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PetPetLoverFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all PetPetLovers
+     * const petPetLovers = await prisma.petPetLover.findMany()
+     * 
+     * // Get first 10 PetPetLovers
+     * const petPetLovers = await prisma.petPetLover.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const petPetLoverWithIdOnly = await prisma.petPetLover.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends PetPetLoverFindManyArgs>(args?: SelectSubset<T, PetPetLoverFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a PetPetLover.
+     * @param {PetPetLoverCreateArgs} args - Arguments to create a PetPetLover.
+     * @example
+     * // Create one PetPetLover
+     * const PetPetLover = await prisma.petPetLover.create({
+     *   data: {
+     *     // ... data to create a PetPetLover
+     *   }
+     * })
+     * 
+     */
+    create<T extends PetPetLoverCreateArgs>(args: SelectSubset<T, PetPetLoverCreateArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many PetPetLovers.
+     * @param {PetPetLoverCreateManyArgs} args - Arguments to create many PetPetLovers.
+     * @example
+     * // Create many PetPetLovers
+     * const petPetLover = await prisma.petPetLover.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends PetPetLoverCreateManyArgs>(args?: SelectSubset<T, PetPetLoverCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many PetPetLovers and returns the data saved in the database.
+     * @param {PetPetLoverCreateManyAndReturnArgs} args - Arguments to create many PetPetLovers.
+     * @example
+     * // Create many PetPetLovers
+     * const petPetLover = await prisma.petPetLover.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many PetPetLovers and only return the `id`
+     * const petPetLoverWithIdOnly = await prisma.petPetLover.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends PetPetLoverCreateManyAndReturnArgs>(args?: SelectSubset<T, PetPetLoverCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a PetPetLover.
+     * @param {PetPetLoverDeleteArgs} args - Arguments to delete one PetPetLover.
+     * @example
+     * // Delete one PetPetLover
+     * const PetPetLover = await prisma.petPetLover.delete({
+     *   where: {
+     *     // ... filter to delete one PetPetLover
+     *   }
+     * })
+     * 
+     */
+    delete<T extends PetPetLoverDeleteArgs>(args: SelectSubset<T, PetPetLoverDeleteArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one PetPetLover.
+     * @param {PetPetLoverUpdateArgs} args - Arguments to update one PetPetLover.
+     * @example
+     * // Update one PetPetLover
+     * const petPetLover = await prisma.petPetLover.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends PetPetLoverUpdateArgs>(args: SelectSubset<T, PetPetLoverUpdateArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more PetPetLovers.
+     * @param {PetPetLoverDeleteManyArgs} args - Arguments to filter PetPetLovers to delete.
+     * @example
+     * // Delete a few PetPetLovers
+     * const { count } = await prisma.petPetLover.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends PetPetLoverDeleteManyArgs>(args?: SelectSubset<T, PetPetLoverDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PetPetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PetPetLoverUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many PetPetLovers
+     * const petPetLover = await prisma.petPetLover.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends PetPetLoverUpdateManyArgs>(args: SelectSubset<T, PetPetLoverUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PetPetLovers and returns the data updated in the database.
+     * @param {PetPetLoverUpdateManyAndReturnArgs} args - Arguments to update many PetPetLovers.
+     * @example
+     * // Update many PetPetLovers
+     * const petPetLover = await prisma.petPetLover.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more PetPetLovers and only return the `id`
+     * const petPetLoverWithIdOnly = await prisma.petPetLover.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends PetPetLoverUpdateManyAndReturnArgs>(args: SelectSubset<T, PetPetLoverUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one PetPetLover.
+     * @param {PetPetLoverUpsertArgs} args - Arguments to update or create a PetPetLover.
+     * @example
+     * // Update or create a PetPetLover
+     * const petPetLover = await prisma.petPetLover.upsert({
+     *   create: {
+     *     // ... data to create a PetPetLover
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the PetPetLover we want to update
+     *   }
+     * })
+     */
+    upsert<T extends PetPetLoverUpsertArgs>(args: SelectSubset<T, PetPetLoverUpsertArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of PetPetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PetPetLoverCountArgs} args - Arguments to filter PetPetLovers to count.
+     * @example
+     * // Count the number of PetPetLovers
+     * const count = await prisma.petPetLover.count({
+     *   where: {
+     *     // ... the filter for the PetPetLovers we want to count
+     *   }
+     * })
+    **/
+    count<T extends PetPetLoverCountArgs>(
+      args?: Subset<T, PetPetLoverCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], PetPetLoverCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a PetPetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PetPetLoverAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends PetPetLoverAggregateArgs>(args: Subset<T, PetPetLoverAggregateArgs>): Prisma.PrismaPromise<GetPetPetLoverAggregateType<T>>
+
+    /**
+     * Group by PetPetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PetPetLoverGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends PetPetLoverGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: PetPetLoverGroupByArgs['orderBy'] }
+        : { orderBy?: PetPetLoverGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, PetPetLoverGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPetPetLoverGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the PetPetLover model
+   */
+  readonly fields: PetPetLoverFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for PetPetLover.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__PetPetLoverClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    vaccinations<T extends PetPetLover$vaccinationsArgs<ExtArgs> = {}>(args?: Subset<T, PetPetLover$vaccinationsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    appointments<T extends PetPetLover$appointmentsArgs<ExtArgs> = {}>(args?: Subset<T, PetPetLover$appointmentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the PetPetLover model
+   */ 
+  interface PetPetLoverFieldRefs {
+    readonly id: FieldRef<"PetPetLover", 'String'>
+    readonly userId: FieldRef<"PetPetLover", 'String'>
+    readonly petName: FieldRef<"PetPetLover", 'String'>
+    readonly species: FieldRef<"PetPetLover", 'String'>
+    readonly breed: FieldRef<"PetPetLover", 'String'>
+    readonly age: FieldRef<"PetPetLover", 'Int'>
+    readonly medicalHistory: FieldRef<"PetPetLover", 'String'>
+    readonly createdAt: FieldRef<"PetPetLover", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * PetPetLover findUnique
+   */
+  export type PetPetLoverFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which PetPetLover to fetch.
+     */
+    where: PetPetLoverWhereUniqueInput
+  }
+
+  /**
+   * PetPetLover findUniqueOrThrow
+   */
+  export type PetPetLoverFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which PetPetLover to fetch.
+     */
+    where: PetPetLoverWhereUniqueInput
+  }
+
+  /**
+   * PetPetLover findFirst
+   */
+  export type PetPetLoverFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which PetPetLover to fetch.
+     */
+    where?: PetPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PetPetLovers to fetch.
+     */
+    orderBy?: PetPetLoverOrderByWithRelationInput | PetPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PetPetLovers.
+     */
+    cursor?: PetPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PetPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PetPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PetPetLovers.
+     */
+    distinct?: PetPetLoverScalarFieldEnum | PetPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * PetPetLover findFirstOrThrow
+   */
+  export type PetPetLoverFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which PetPetLover to fetch.
+     */
+    where?: PetPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PetPetLovers to fetch.
+     */
+    orderBy?: PetPetLoverOrderByWithRelationInput | PetPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PetPetLovers.
+     */
+    cursor?: PetPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PetPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PetPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PetPetLovers.
+     */
+    distinct?: PetPetLoverScalarFieldEnum | PetPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * PetPetLover findMany
+   */
+  export type PetPetLoverFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which PetPetLovers to fetch.
+     */
+    where?: PetPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PetPetLovers to fetch.
+     */
+    orderBy?: PetPetLoverOrderByWithRelationInput | PetPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing PetPetLovers.
+     */
+    cursor?: PetPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PetPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PetPetLovers.
+     */
+    skip?: number
+    distinct?: PetPetLoverScalarFieldEnum | PetPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * PetPetLover create
+   */
+  export type PetPetLoverCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to create a PetPetLover.
+     */
+    data: XOR<PetPetLoverCreateInput, PetPetLoverUncheckedCreateInput>
+  }
+
+  /**
+   * PetPetLover createMany
+   */
+  export type PetPetLoverCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many PetPetLovers.
+     */
+    data: PetPetLoverCreateManyInput | PetPetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * PetPetLover createManyAndReturn
+   */
+  export type PetPetLoverCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to create many PetPetLovers.
+     */
+    data: PetPetLoverCreateManyInput | PetPetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * PetPetLover update
+   */
+  export type PetPetLoverUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to update a PetPetLover.
+     */
+    data: XOR<PetPetLoverUpdateInput, PetPetLoverUncheckedUpdateInput>
+    /**
+     * Choose, which PetPetLover to update.
+     */
+    where: PetPetLoverWhereUniqueInput
+  }
+
+  /**
+   * PetPetLover updateMany
+   */
+  export type PetPetLoverUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update PetPetLovers.
+     */
+    data: XOR<PetPetLoverUpdateManyMutationInput, PetPetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which PetPetLovers to update
+     */
+    where?: PetPetLoverWhereInput
+    /**
+     * Limit how many PetPetLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * PetPetLover updateManyAndReturn
+   */
+  export type PetPetLoverUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to update PetPetLovers.
+     */
+    data: XOR<PetPetLoverUpdateManyMutationInput, PetPetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which PetPetLovers to update
+     */
+    where?: PetPetLoverWhereInput
+    /**
+     * Limit how many PetPetLovers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * PetPetLover upsert
+   */
+  export type PetPetLoverUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    /**
+     * The filter to search for the PetPetLover to update in case it exists.
+     */
+    where: PetPetLoverWhereUniqueInput
+    /**
+     * In case the PetPetLover found by the `where` argument doesn't exist, create a new PetPetLover with this data.
+     */
+    create: XOR<PetPetLoverCreateInput, PetPetLoverUncheckedCreateInput>
+    /**
+     * In case the PetPetLover was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<PetPetLoverUpdateInput, PetPetLoverUncheckedUpdateInput>
+  }
+
+  /**
+   * PetPetLover delete
+   */
+  export type PetPetLoverDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter which PetPetLover to delete.
+     */
+    where: PetPetLoverWhereUniqueInput
+  }
+
+  /**
+   * PetPetLover deleteMany
+   */
+  export type PetPetLoverDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PetPetLovers to delete
+     */
+    where?: PetPetLoverWhereInput
+    /**
+     * Limit how many PetPetLovers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * PetPetLover.vaccinations
+   */
+  export type PetPetLover$vaccinationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    where?: VaccinationPetLoverWhereInput
+    orderBy?: VaccinationPetLoverOrderByWithRelationInput | VaccinationPetLoverOrderByWithRelationInput[]
+    cursor?: VaccinationPetLoverWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: VaccinationPetLoverScalarFieldEnum | VaccinationPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * PetPetLover.appointments
+   */
+  export type PetPetLover$appointmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    where?: AppointmentPetLoverWhereInput
+    orderBy?: AppointmentPetLoverOrderByWithRelationInput | AppointmentPetLoverOrderByWithRelationInput[]
+    cursor?: AppointmentPetLoverWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: AppointmentPetLoverScalarFieldEnum | AppointmentPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * PetPetLover without action
+   */
+  export type PetPetLoverDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PetPetLover
+     */
+    select?: PetPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PetPetLover
+     */
+    omit?: PetPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PetPetLoverInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model AppointmentPetLover
+   */
+
+  export type AggregateAppointmentPetLover = {
+    _count: AppointmentPetLoverCountAggregateOutputType | null
+    _min: AppointmentPetLoverMinAggregateOutputType | null
+    _max: AppointmentPetLoverMaxAggregateOutputType | null
+  }
+
+  export type AppointmentPetLoverMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    petId: string | null
+    appointmentType: string | null
+    dateTime: Date | null
+    location: string | null
+    createdAt: Date | null
+  }
+
+  export type AppointmentPetLoverMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    petId: string | null
+    appointmentType: string | null
+    dateTime: Date | null
+    location: string | null
+    createdAt: Date | null
+  }
+
+  export type AppointmentPetLoverCountAggregateOutputType = {
+    id: number
+    userId: number
+    petId: number
+    appointmentType: number
+    dateTime: number
+    location: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type AppointmentPetLoverMinAggregateInputType = {
+    id?: true
+    userId?: true
+    petId?: true
+    appointmentType?: true
+    dateTime?: true
+    location?: true
+    createdAt?: true
+  }
+
+  export type AppointmentPetLoverMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    petId?: true
+    appointmentType?: true
+    dateTime?: true
+    location?: true
+    createdAt?: true
+  }
+
+  export type AppointmentPetLoverCountAggregateInputType = {
+    id?: true
+    userId?: true
+    petId?: true
+    appointmentType?: true
+    dateTime?: true
+    location?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type AppointmentPetLoverAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which AppointmentPetLover to aggregate.
+     */
+    where?: AppointmentPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AppointmentPetLovers to fetch.
+     */
+    orderBy?: AppointmentPetLoverOrderByWithRelationInput | AppointmentPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: AppointmentPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AppointmentPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AppointmentPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned AppointmentPetLovers
+    **/
+    _count?: true | AppointmentPetLoverCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: AppointmentPetLoverMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: AppointmentPetLoverMaxAggregateInputType
+  }
+
+  export type GetAppointmentPetLoverAggregateType<T extends AppointmentPetLoverAggregateArgs> = {
+        [P in keyof T & keyof AggregateAppointmentPetLover]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateAppointmentPetLover[P]>
+      : GetScalarType<T[P], AggregateAppointmentPetLover[P]>
+  }
+
+
+
+
+  export type AppointmentPetLoverGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AppointmentPetLoverWhereInput
+    orderBy?: AppointmentPetLoverOrderByWithAggregationInput | AppointmentPetLoverOrderByWithAggregationInput[]
+    by: AppointmentPetLoverScalarFieldEnum[] | AppointmentPetLoverScalarFieldEnum
+    having?: AppointmentPetLoverScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: AppointmentPetLoverCountAggregateInputType | true
+    _min?: AppointmentPetLoverMinAggregateInputType
+    _max?: AppointmentPetLoverMaxAggregateInputType
+  }
+
+  export type AppointmentPetLoverGroupByOutputType = {
+    id: string
+    userId: string
+    petId: string
+    appointmentType: string
+    dateTime: Date
+    location: string
+    createdAt: Date
+    _count: AppointmentPetLoverCountAggregateOutputType | null
+    _min: AppointmentPetLoverMinAggregateOutputType | null
+    _max: AppointmentPetLoverMaxAggregateOutputType | null
+  }
+
+  type GetAppointmentPetLoverGroupByPayload<T extends AppointmentPetLoverGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<AppointmentPetLoverGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof AppointmentPetLoverGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], AppointmentPetLoverGroupByOutputType[P]>
+            : GetScalarType<T[P], AppointmentPetLoverGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type AppointmentPetLoverSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    petId?: boolean
+    appointmentType?: boolean
+    dateTime?: boolean
+    location?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["appointmentPetLover"]>
+
+  export type AppointmentPetLoverSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    petId?: boolean
+    appointmentType?: boolean
+    dateTime?: boolean
+    location?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["appointmentPetLover"]>
+
+  export type AppointmentPetLoverSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    petId?: boolean
+    appointmentType?: boolean
+    dateTime?: boolean
+    location?: boolean
+    createdAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["appointmentPetLover"]>
+
+  export type AppointmentPetLoverSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    petId?: boolean
+    appointmentType?: boolean
+    dateTime?: boolean
+    location?: boolean
+    createdAt?: boolean
+  }
+
+  export type AppointmentPetLoverOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "petId" | "appointmentType" | "dateTime" | "location" | "createdAt", ExtArgs["result"]["appointmentPetLover"]>
+  export type AppointmentPetLoverInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }
+  export type AppointmentPetLoverIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }
+  export type AppointmentPetLoverIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }
+
+  export type $AppointmentPetLoverPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "AppointmentPetLover"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      pet: Prisma.$PetPetLoverPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      petId: string
+      appointmentType: string
+      dateTime: Date
+      location: string
+      createdAt: Date
+    }, ExtArgs["result"]["appointmentPetLover"]>
+    composites: {}
+  }
+
+  type AppointmentPetLoverGetPayload<S extends boolean | null | undefined | AppointmentPetLoverDefaultArgs> = $Result.GetResult<Prisma.$AppointmentPetLoverPayload, S>
+
+  type AppointmentPetLoverCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<AppointmentPetLoverFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: AppointmentPetLoverCountAggregateInputType | true
+    }
+
+  export interface AppointmentPetLoverDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AppointmentPetLover'], meta: { name: 'AppointmentPetLover' } }
+    /**
+     * Find zero or one AppointmentPetLover that matches the filter.
+     * @param {AppointmentPetLoverFindUniqueArgs} args - Arguments to find a AppointmentPetLover
+     * @example
+     * // Get one AppointmentPetLover
+     * const appointmentPetLover = await prisma.appointmentPetLover.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends AppointmentPetLoverFindUniqueArgs>(args: SelectSubset<T, AppointmentPetLoverFindUniqueArgs<ExtArgs>>): Prisma__AppointmentPetLoverClient<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one AppointmentPetLover that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {AppointmentPetLoverFindUniqueOrThrowArgs} args - Arguments to find a AppointmentPetLover
+     * @example
+     * // Get one AppointmentPetLover
+     * const appointmentPetLover = await prisma.appointmentPetLover.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends AppointmentPetLoverFindUniqueOrThrowArgs>(args: SelectSubset<T, AppointmentPetLoverFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AppointmentPetLoverClient<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first AppointmentPetLover that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AppointmentPetLoverFindFirstArgs} args - Arguments to find a AppointmentPetLover
+     * @example
+     * // Get one AppointmentPetLover
+     * const appointmentPetLover = await prisma.appointmentPetLover.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends AppointmentPetLoverFindFirstArgs>(args?: SelectSubset<T, AppointmentPetLoverFindFirstArgs<ExtArgs>>): Prisma__AppointmentPetLoverClient<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first AppointmentPetLover that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AppointmentPetLoverFindFirstOrThrowArgs} args - Arguments to find a AppointmentPetLover
+     * @example
+     * // Get one AppointmentPetLover
+     * const appointmentPetLover = await prisma.appointmentPetLover.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends AppointmentPetLoverFindFirstOrThrowArgs>(args?: SelectSubset<T, AppointmentPetLoverFindFirstOrThrowArgs<ExtArgs>>): Prisma__AppointmentPetLoverClient<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more AppointmentPetLovers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AppointmentPetLoverFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all AppointmentPetLovers
+     * const appointmentPetLovers = await prisma.appointmentPetLover.findMany()
+     * 
+     * // Get first 10 AppointmentPetLovers
+     * const appointmentPetLovers = await prisma.appointmentPetLover.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const appointmentPetLoverWithIdOnly = await prisma.appointmentPetLover.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends AppointmentPetLoverFindManyArgs>(args?: SelectSubset<T, AppointmentPetLoverFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a AppointmentPetLover.
+     * @param {AppointmentPetLoverCreateArgs} args - Arguments to create a AppointmentPetLover.
+     * @example
+     * // Create one AppointmentPetLover
+     * const AppointmentPetLover = await prisma.appointmentPetLover.create({
+     *   data: {
+     *     // ... data to create a AppointmentPetLover
+     *   }
+     * })
+     * 
+     */
+    create<T extends AppointmentPetLoverCreateArgs>(args: SelectSubset<T, AppointmentPetLoverCreateArgs<ExtArgs>>): Prisma__AppointmentPetLoverClient<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many AppointmentPetLovers.
+     * @param {AppointmentPetLoverCreateManyArgs} args - Arguments to create many AppointmentPetLovers.
+     * @example
+     * // Create many AppointmentPetLovers
+     * const appointmentPetLover = await prisma.appointmentPetLover.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends AppointmentPetLoverCreateManyArgs>(args?: SelectSubset<T, AppointmentPetLoverCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many AppointmentPetLovers and returns the data saved in the database.
+     * @param {AppointmentPetLoverCreateManyAndReturnArgs} args - Arguments to create many AppointmentPetLovers.
+     * @example
+     * // Create many AppointmentPetLovers
+     * const appointmentPetLover = await prisma.appointmentPetLover.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many AppointmentPetLovers and only return the `id`
+     * const appointmentPetLoverWithIdOnly = await prisma.appointmentPetLover.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends AppointmentPetLoverCreateManyAndReturnArgs>(args?: SelectSubset<T, AppointmentPetLoverCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a AppointmentPetLover.
+     * @param {AppointmentPetLoverDeleteArgs} args - Arguments to delete one AppointmentPetLover.
+     * @example
+     * // Delete one AppointmentPetLover
+     * const AppointmentPetLover = await prisma.appointmentPetLover.delete({
+     *   where: {
+     *     // ... filter to delete one AppointmentPetLover
+     *   }
+     * })
+     * 
+     */
+    delete<T extends AppointmentPetLoverDeleteArgs>(args: SelectSubset<T, AppointmentPetLoverDeleteArgs<ExtArgs>>): Prisma__AppointmentPetLoverClient<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one AppointmentPetLover.
+     * @param {AppointmentPetLoverUpdateArgs} args - Arguments to update one AppointmentPetLover.
+     * @example
+     * // Update one AppointmentPetLover
+     * const appointmentPetLover = await prisma.appointmentPetLover.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends AppointmentPetLoverUpdateArgs>(args: SelectSubset<T, AppointmentPetLoverUpdateArgs<ExtArgs>>): Prisma__AppointmentPetLoverClient<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more AppointmentPetLovers.
+     * @param {AppointmentPetLoverDeleteManyArgs} args - Arguments to filter AppointmentPetLovers to delete.
+     * @example
+     * // Delete a few AppointmentPetLovers
+     * const { count } = await prisma.appointmentPetLover.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends AppointmentPetLoverDeleteManyArgs>(args?: SelectSubset<T, AppointmentPetLoverDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more AppointmentPetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AppointmentPetLoverUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many AppointmentPetLovers
+     * const appointmentPetLover = await prisma.appointmentPetLover.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends AppointmentPetLoverUpdateManyArgs>(args: SelectSubset<T, AppointmentPetLoverUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more AppointmentPetLovers and returns the data updated in the database.
+     * @param {AppointmentPetLoverUpdateManyAndReturnArgs} args - Arguments to update many AppointmentPetLovers.
+     * @example
+     * // Update many AppointmentPetLovers
+     * const appointmentPetLover = await prisma.appointmentPetLover.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more AppointmentPetLovers and only return the `id`
+     * const appointmentPetLoverWithIdOnly = await prisma.appointmentPetLover.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends AppointmentPetLoverUpdateManyAndReturnArgs>(args: SelectSubset<T, AppointmentPetLoverUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one AppointmentPetLover.
+     * @param {AppointmentPetLoverUpsertArgs} args - Arguments to update or create a AppointmentPetLover.
+     * @example
+     * // Update or create a AppointmentPetLover
+     * const appointmentPetLover = await prisma.appointmentPetLover.upsert({
+     *   create: {
+     *     // ... data to create a AppointmentPetLover
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the AppointmentPetLover we want to update
+     *   }
+     * })
+     */
+    upsert<T extends AppointmentPetLoverUpsertArgs>(args: SelectSubset<T, AppointmentPetLoverUpsertArgs<ExtArgs>>): Prisma__AppointmentPetLoverClient<$Result.GetResult<Prisma.$AppointmentPetLoverPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of AppointmentPetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AppointmentPetLoverCountArgs} args - Arguments to filter AppointmentPetLovers to count.
+     * @example
+     * // Count the number of AppointmentPetLovers
+     * const count = await prisma.appointmentPetLover.count({
+     *   where: {
+     *     // ... the filter for the AppointmentPetLovers we want to count
+     *   }
+     * })
+    **/
+    count<T extends AppointmentPetLoverCountArgs>(
+      args?: Subset<T, AppointmentPetLoverCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], AppointmentPetLoverCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a AppointmentPetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AppointmentPetLoverAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends AppointmentPetLoverAggregateArgs>(args: Subset<T, AppointmentPetLoverAggregateArgs>): Prisma.PrismaPromise<GetAppointmentPetLoverAggregateType<T>>
+
+    /**
+     * Group by AppointmentPetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AppointmentPetLoverGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends AppointmentPetLoverGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: AppointmentPetLoverGroupByArgs['orderBy'] }
+        : { orderBy?: AppointmentPetLoverGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, AppointmentPetLoverGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAppointmentPetLoverGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the AppointmentPetLover model
+   */
+  readonly fields: AppointmentPetLoverFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for AppointmentPetLover.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__AppointmentPetLoverClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    pet<T extends PetPetLoverDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PetPetLoverDefaultArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the AppointmentPetLover model
+   */ 
+  interface AppointmentPetLoverFieldRefs {
+    readonly id: FieldRef<"AppointmentPetLover", 'String'>
+    readonly userId: FieldRef<"AppointmentPetLover", 'String'>
+    readonly petId: FieldRef<"AppointmentPetLover", 'String'>
+    readonly appointmentType: FieldRef<"AppointmentPetLover", 'String'>
+    readonly dateTime: FieldRef<"AppointmentPetLover", 'DateTime'>
+    readonly location: FieldRef<"AppointmentPetLover", 'String'>
+    readonly createdAt: FieldRef<"AppointmentPetLover", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * AppointmentPetLover findUnique
+   */
+  export type AppointmentPetLoverFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which AppointmentPetLover to fetch.
+     */
+    where: AppointmentPetLoverWhereUniqueInput
+  }
+
+  /**
+   * AppointmentPetLover findUniqueOrThrow
+   */
+  export type AppointmentPetLoverFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which AppointmentPetLover to fetch.
+     */
+    where: AppointmentPetLoverWhereUniqueInput
+  }
+
+  /**
+   * AppointmentPetLover findFirst
+   */
+  export type AppointmentPetLoverFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which AppointmentPetLover to fetch.
+     */
+    where?: AppointmentPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AppointmentPetLovers to fetch.
+     */
+    orderBy?: AppointmentPetLoverOrderByWithRelationInput | AppointmentPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for AppointmentPetLovers.
+     */
+    cursor?: AppointmentPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AppointmentPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AppointmentPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of AppointmentPetLovers.
+     */
+    distinct?: AppointmentPetLoverScalarFieldEnum | AppointmentPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * AppointmentPetLover findFirstOrThrow
+   */
+  export type AppointmentPetLoverFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which AppointmentPetLover to fetch.
+     */
+    where?: AppointmentPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AppointmentPetLovers to fetch.
+     */
+    orderBy?: AppointmentPetLoverOrderByWithRelationInput | AppointmentPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for AppointmentPetLovers.
+     */
+    cursor?: AppointmentPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AppointmentPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AppointmentPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of AppointmentPetLovers.
+     */
+    distinct?: AppointmentPetLoverScalarFieldEnum | AppointmentPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * AppointmentPetLover findMany
+   */
+  export type AppointmentPetLoverFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which AppointmentPetLovers to fetch.
+     */
+    where?: AppointmentPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AppointmentPetLovers to fetch.
+     */
+    orderBy?: AppointmentPetLoverOrderByWithRelationInput | AppointmentPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing AppointmentPetLovers.
+     */
+    cursor?: AppointmentPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AppointmentPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AppointmentPetLovers.
+     */
+    skip?: number
+    distinct?: AppointmentPetLoverScalarFieldEnum | AppointmentPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * AppointmentPetLover create
+   */
+  export type AppointmentPetLoverCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to create a AppointmentPetLover.
+     */
+    data: XOR<AppointmentPetLoverCreateInput, AppointmentPetLoverUncheckedCreateInput>
+  }
+
+  /**
+   * AppointmentPetLover createMany
+   */
+  export type AppointmentPetLoverCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many AppointmentPetLovers.
+     */
+    data: AppointmentPetLoverCreateManyInput | AppointmentPetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * AppointmentPetLover createManyAndReturn
+   */
+  export type AppointmentPetLoverCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to create many AppointmentPetLovers.
+     */
+    data: AppointmentPetLoverCreateManyInput | AppointmentPetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * AppointmentPetLover update
+   */
+  export type AppointmentPetLoverUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to update a AppointmentPetLover.
+     */
+    data: XOR<AppointmentPetLoverUpdateInput, AppointmentPetLoverUncheckedUpdateInput>
+    /**
+     * Choose, which AppointmentPetLover to update.
+     */
+    where: AppointmentPetLoverWhereUniqueInput
+  }
+
+  /**
+   * AppointmentPetLover updateMany
+   */
+  export type AppointmentPetLoverUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update AppointmentPetLovers.
+     */
+    data: XOR<AppointmentPetLoverUpdateManyMutationInput, AppointmentPetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which AppointmentPetLovers to update
+     */
+    where?: AppointmentPetLoverWhereInput
+    /**
+     * Limit how many AppointmentPetLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * AppointmentPetLover updateManyAndReturn
+   */
+  export type AppointmentPetLoverUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to update AppointmentPetLovers.
+     */
+    data: XOR<AppointmentPetLoverUpdateManyMutationInput, AppointmentPetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which AppointmentPetLovers to update
+     */
+    where?: AppointmentPetLoverWhereInput
+    /**
+     * Limit how many AppointmentPetLovers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * AppointmentPetLover upsert
+   */
+  export type AppointmentPetLoverUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    /**
+     * The filter to search for the AppointmentPetLover to update in case it exists.
+     */
+    where: AppointmentPetLoverWhereUniqueInput
+    /**
+     * In case the AppointmentPetLover found by the `where` argument doesn't exist, create a new AppointmentPetLover with this data.
+     */
+    create: XOR<AppointmentPetLoverCreateInput, AppointmentPetLoverUncheckedCreateInput>
+    /**
+     * In case the AppointmentPetLover was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<AppointmentPetLoverUpdateInput, AppointmentPetLoverUncheckedUpdateInput>
+  }
+
+  /**
+   * AppointmentPetLover delete
+   */
+  export type AppointmentPetLoverDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter which AppointmentPetLover to delete.
+     */
+    where: AppointmentPetLoverWhereUniqueInput
+  }
+
+  /**
+   * AppointmentPetLover deleteMany
+   */
+  export type AppointmentPetLoverDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which AppointmentPetLovers to delete
+     */
+    where?: AppointmentPetLoverWhereInput
+    /**
+     * Limit how many AppointmentPetLovers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * AppointmentPetLover without action
+   */
+  export type AppointmentPetLoverDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AppointmentPetLover
+     */
+    select?: AppointmentPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AppointmentPetLover
+     */
+    omit?: AppointmentPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AppointmentPetLoverInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model VaccinationPetLover
+   */
+
+  export type AggregateVaccinationPetLover = {
+    _count: VaccinationPetLoverCountAggregateOutputType | null
+    _min: VaccinationPetLoverMinAggregateOutputType | null
+    _max: VaccinationPetLoverMaxAggregateOutputType | null
+  }
+
+  export type VaccinationPetLoverMinAggregateOutputType = {
+    id: string | null
+    petId: string | null
+    vaccineName: string | null
+    dateAdministered: Date | null
+    nextDueDate: Date | null
+    createdAt: Date | null
+  }
+
+  export type VaccinationPetLoverMaxAggregateOutputType = {
+    id: string | null
+    petId: string | null
+    vaccineName: string | null
+    dateAdministered: Date | null
+    nextDueDate: Date | null
+    createdAt: Date | null
+  }
+
+  export type VaccinationPetLoverCountAggregateOutputType = {
+    id: number
+    petId: number
+    vaccineName: number
+    dateAdministered: number
+    nextDueDate: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type VaccinationPetLoverMinAggregateInputType = {
+    id?: true
+    petId?: true
+    vaccineName?: true
+    dateAdministered?: true
+    nextDueDate?: true
+    createdAt?: true
+  }
+
+  export type VaccinationPetLoverMaxAggregateInputType = {
+    id?: true
+    petId?: true
+    vaccineName?: true
+    dateAdministered?: true
+    nextDueDate?: true
+    createdAt?: true
+  }
+
+  export type VaccinationPetLoverCountAggregateInputType = {
+    id?: true
+    petId?: true
+    vaccineName?: true
+    dateAdministered?: true
+    nextDueDate?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type VaccinationPetLoverAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which VaccinationPetLover to aggregate.
+     */
+    where?: VaccinationPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of VaccinationPetLovers to fetch.
+     */
+    orderBy?: VaccinationPetLoverOrderByWithRelationInput | VaccinationPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: VaccinationPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` VaccinationPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` VaccinationPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned VaccinationPetLovers
+    **/
+    _count?: true | VaccinationPetLoverCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: VaccinationPetLoverMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: VaccinationPetLoverMaxAggregateInputType
+  }
+
+  export type GetVaccinationPetLoverAggregateType<T extends VaccinationPetLoverAggregateArgs> = {
+        [P in keyof T & keyof AggregateVaccinationPetLover]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateVaccinationPetLover[P]>
+      : GetScalarType<T[P], AggregateVaccinationPetLover[P]>
+  }
+
+
+
+
+  export type VaccinationPetLoverGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: VaccinationPetLoverWhereInput
+    orderBy?: VaccinationPetLoverOrderByWithAggregationInput | VaccinationPetLoverOrderByWithAggregationInput[]
+    by: VaccinationPetLoverScalarFieldEnum[] | VaccinationPetLoverScalarFieldEnum
+    having?: VaccinationPetLoverScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: VaccinationPetLoverCountAggregateInputType | true
+    _min?: VaccinationPetLoverMinAggregateInputType
+    _max?: VaccinationPetLoverMaxAggregateInputType
+  }
+
+  export type VaccinationPetLoverGroupByOutputType = {
+    id: string
+    petId: string
+    vaccineName: string
+    dateAdministered: Date
+    nextDueDate: Date | null
+    createdAt: Date
+    _count: VaccinationPetLoverCountAggregateOutputType | null
+    _min: VaccinationPetLoverMinAggregateOutputType | null
+    _max: VaccinationPetLoverMaxAggregateOutputType | null
+  }
+
+  type GetVaccinationPetLoverGroupByPayload<T extends VaccinationPetLoverGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<VaccinationPetLoverGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof VaccinationPetLoverGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], VaccinationPetLoverGroupByOutputType[P]>
+            : GetScalarType<T[P], VaccinationPetLoverGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type VaccinationPetLoverSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    petId?: boolean
+    vaccineName?: boolean
+    dateAdministered?: boolean
+    nextDueDate?: boolean
+    createdAt?: boolean
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["vaccinationPetLover"]>
+
+  export type VaccinationPetLoverSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    petId?: boolean
+    vaccineName?: boolean
+    dateAdministered?: boolean
+    nextDueDate?: boolean
+    createdAt?: boolean
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["vaccinationPetLover"]>
+
+  export type VaccinationPetLoverSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    petId?: boolean
+    vaccineName?: boolean
+    dateAdministered?: boolean
+    nextDueDate?: boolean
+    createdAt?: boolean
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["vaccinationPetLover"]>
+
+  export type VaccinationPetLoverSelectScalar = {
+    id?: boolean
+    petId?: boolean
+    vaccineName?: boolean
+    dateAdministered?: boolean
+    nextDueDate?: boolean
+    createdAt?: boolean
+  }
+
+  export type VaccinationPetLoverOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "petId" | "vaccineName" | "dateAdministered" | "nextDueDate" | "createdAt", ExtArgs["result"]["vaccinationPetLover"]>
+  export type VaccinationPetLoverInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }
+  export type VaccinationPetLoverIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }
+  export type VaccinationPetLoverIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    pet?: boolean | PetPetLoverDefaultArgs<ExtArgs>
+  }
+
+  export type $VaccinationPetLoverPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "VaccinationPetLover"
+    objects: {
+      pet: Prisma.$PetPetLoverPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      petId: string
+      vaccineName: string
+      dateAdministered: Date
+      nextDueDate: Date | null
+      createdAt: Date
+    }, ExtArgs["result"]["vaccinationPetLover"]>
+    composites: {}
+  }
+
+  type VaccinationPetLoverGetPayload<S extends boolean | null | undefined | VaccinationPetLoverDefaultArgs> = $Result.GetResult<Prisma.$VaccinationPetLoverPayload, S>
+
+  type VaccinationPetLoverCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<VaccinationPetLoverFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: VaccinationPetLoverCountAggregateInputType | true
+    }
+
+  export interface VaccinationPetLoverDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['VaccinationPetLover'], meta: { name: 'VaccinationPetLover' } }
+    /**
+     * Find zero or one VaccinationPetLover that matches the filter.
+     * @param {VaccinationPetLoverFindUniqueArgs} args - Arguments to find a VaccinationPetLover
+     * @example
+     * // Get one VaccinationPetLover
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends VaccinationPetLoverFindUniqueArgs>(args: SelectSubset<T, VaccinationPetLoverFindUniqueArgs<ExtArgs>>): Prisma__VaccinationPetLoverClient<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one VaccinationPetLover that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {VaccinationPetLoverFindUniqueOrThrowArgs} args - Arguments to find a VaccinationPetLover
+     * @example
+     * // Get one VaccinationPetLover
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends VaccinationPetLoverFindUniqueOrThrowArgs>(args: SelectSubset<T, VaccinationPetLoverFindUniqueOrThrowArgs<ExtArgs>>): Prisma__VaccinationPetLoverClient<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first VaccinationPetLover that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VaccinationPetLoverFindFirstArgs} args - Arguments to find a VaccinationPetLover
+     * @example
+     * // Get one VaccinationPetLover
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends VaccinationPetLoverFindFirstArgs>(args?: SelectSubset<T, VaccinationPetLoverFindFirstArgs<ExtArgs>>): Prisma__VaccinationPetLoverClient<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first VaccinationPetLover that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VaccinationPetLoverFindFirstOrThrowArgs} args - Arguments to find a VaccinationPetLover
+     * @example
+     * // Get one VaccinationPetLover
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends VaccinationPetLoverFindFirstOrThrowArgs>(args?: SelectSubset<T, VaccinationPetLoverFindFirstOrThrowArgs<ExtArgs>>): Prisma__VaccinationPetLoverClient<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more VaccinationPetLovers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VaccinationPetLoverFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all VaccinationPetLovers
+     * const vaccinationPetLovers = await prisma.vaccinationPetLover.findMany()
+     * 
+     * // Get first 10 VaccinationPetLovers
+     * const vaccinationPetLovers = await prisma.vaccinationPetLover.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const vaccinationPetLoverWithIdOnly = await prisma.vaccinationPetLover.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends VaccinationPetLoverFindManyArgs>(args?: SelectSubset<T, VaccinationPetLoverFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a VaccinationPetLover.
+     * @param {VaccinationPetLoverCreateArgs} args - Arguments to create a VaccinationPetLover.
+     * @example
+     * // Create one VaccinationPetLover
+     * const VaccinationPetLover = await prisma.vaccinationPetLover.create({
+     *   data: {
+     *     // ... data to create a VaccinationPetLover
+     *   }
+     * })
+     * 
+     */
+    create<T extends VaccinationPetLoverCreateArgs>(args: SelectSubset<T, VaccinationPetLoverCreateArgs<ExtArgs>>): Prisma__VaccinationPetLoverClient<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many VaccinationPetLovers.
+     * @param {VaccinationPetLoverCreateManyArgs} args - Arguments to create many VaccinationPetLovers.
+     * @example
+     * // Create many VaccinationPetLovers
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends VaccinationPetLoverCreateManyArgs>(args?: SelectSubset<T, VaccinationPetLoverCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many VaccinationPetLovers and returns the data saved in the database.
+     * @param {VaccinationPetLoverCreateManyAndReturnArgs} args - Arguments to create many VaccinationPetLovers.
+     * @example
+     * // Create many VaccinationPetLovers
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many VaccinationPetLovers and only return the `id`
+     * const vaccinationPetLoverWithIdOnly = await prisma.vaccinationPetLover.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends VaccinationPetLoverCreateManyAndReturnArgs>(args?: SelectSubset<T, VaccinationPetLoverCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a VaccinationPetLover.
+     * @param {VaccinationPetLoverDeleteArgs} args - Arguments to delete one VaccinationPetLover.
+     * @example
+     * // Delete one VaccinationPetLover
+     * const VaccinationPetLover = await prisma.vaccinationPetLover.delete({
+     *   where: {
+     *     // ... filter to delete one VaccinationPetLover
+     *   }
+     * })
+     * 
+     */
+    delete<T extends VaccinationPetLoverDeleteArgs>(args: SelectSubset<T, VaccinationPetLoverDeleteArgs<ExtArgs>>): Prisma__VaccinationPetLoverClient<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one VaccinationPetLover.
+     * @param {VaccinationPetLoverUpdateArgs} args - Arguments to update one VaccinationPetLover.
+     * @example
+     * // Update one VaccinationPetLover
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends VaccinationPetLoverUpdateArgs>(args: SelectSubset<T, VaccinationPetLoverUpdateArgs<ExtArgs>>): Prisma__VaccinationPetLoverClient<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more VaccinationPetLovers.
+     * @param {VaccinationPetLoverDeleteManyArgs} args - Arguments to filter VaccinationPetLovers to delete.
+     * @example
+     * // Delete a few VaccinationPetLovers
+     * const { count } = await prisma.vaccinationPetLover.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends VaccinationPetLoverDeleteManyArgs>(args?: SelectSubset<T, VaccinationPetLoverDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more VaccinationPetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VaccinationPetLoverUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many VaccinationPetLovers
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends VaccinationPetLoverUpdateManyArgs>(args: SelectSubset<T, VaccinationPetLoverUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more VaccinationPetLovers and returns the data updated in the database.
+     * @param {VaccinationPetLoverUpdateManyAndReturnArgs} args - Arguments to update many VaccinationPetLovers.
+     * @example
+     * // Update many VaccinationPetLovers
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more VaccinationPetLovers and only return the `id`
+     * const vaccinationPetLoverWithIdOnly = await prisma.vaccinationPetLover.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends VaccinationPetLoverUpdateManyAndReturnArgs>(args: SelectSubset<T, VaccinationPetLoverUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one VaccinationPetLover.
+     * @param {VaccinationPetLoverUpsertArgs} args - Arguments to update or create a VaccinationPetLover.
+     * @example
+     * // Update or create a VaccinationPetLover
+     * const vaccinationPetLover = await prisma.vaccinationPetLover.upsert({
+     *   create: {
+     *     // ... data to create a VaccinationPetLover
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the VaccinationPetLover we want to update
+     *   }
+     * })
+     */
+    upsert<T extends VaccinationPetLoverUpsertArgs>(args: SelectSubset<T, VaccinationPetLoverUpsertArgs<ExtArgs>>): Prisma__VaccinationPetLoverClient<$Result.GetResult<Prisma.$VaccinationPetLoverPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of VaccinationPetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VaccinationPetLoverCountArgs} args - Arguments to filter VaccinationPetLovers to count.
+     * @example
+     * // Count the number of VaccinationPetLovers
+     * const count = await prisma.vaccinationPetLover.count({
+     *   where: {
+     *     // ... the filter for the VaccinationPetLovers we want to count
+     *   }
+     * })
+    **/
+    count<T extends VaccinationPetLoverCountArgs>(
+      args?: Subset<T, VaccinationPetLoverCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], VaccinationPetLoverCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a VaccinationPetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VaccinationPetLoverAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends VaccinationPetLoverAggregateArgs>(args: Subset<T, VaccinationPetLoverAggregateArgs>): Prisma.PrismaPromise<GetVaccinationPetLoverAggregateType<T>>
+
+    /**
+     * Group by VaccinationPetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VaccinationPetLoverGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends VaccinationPetLoverGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: VaccinationPetLoverGroupByArgs['orderBy'] }
+        : { orderBy?: VaccinationPetLoverGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, VaccinationPetLoverGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetVaccinationPetLoverGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the VaccinationPetLover model
+   */
+  readonly fields: VaccinationPetLoverFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for VaccinationPetLover.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__VaccinationPetLoverClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    pet<T extends PetPetLoverDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PetPetLoverDefaultArgs<ExtArgs>>): Prisma__PetPetLoverClient<$Result.GetResult<Prisma.$PetPetLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the VaccinationPetLover model
+   */ 
+  interface VaccinationPetLoverFieldRefs {
+    readonly id: FieldRef<"VaccinationPetLover", 'String'>
+    readonly petId: FieldRef<"VaccinationPetLover", 'String'>
+    readonly vaccineName: FieldRef<"VaccinationPetLover", 'String'>
+    readonly dateAdministered: FieldRef<"VaccinationPetLover", 'DateTime'>
+    readonly nextDueDate: FieldRef<"VaccinationPetLover", 'DateTime'>
+    readonly createdAt: FieldRef<"VaccinationPetLover", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * VaccinationPetLover findUnique
+   */
+  export type VaccinationPetLoverFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which VaccinationPetLover to fetch.
+     */
+    where: VaccinationPetLoverWhereUniqueInput
+  }
+
+  /**
+   * VaccinationPetLover findUniqueOrThrow
+   */
+  export type VaccinationPetLoverFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which VaccinationPetLover to fetch.
+     */
+    where: VaccinationPetLoverWhereUniqueInput
+  }
+
+  /**
+   * VaccinationPetLover findFirst
+   */
+  export type VaccinationPetLoverFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which VaccinationPetLover to fetch.
+     */
+    where?: VaccinationPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of VaccinationPetLovers to fetch.
+     */
+    orderBy?: VaccinationPetLoverOrderByWithRelationInput | VaccinationPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for VaccinationPetLovers.
+     */
+    cursor?: VaccinationPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` VaccinationPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` VaccinationPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of VaccinationPetLovers.
+     */
+    distinct?: VaccinationPetLoverScalarFieldEnum | VaccinationPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * VaccinationPetLover findFirstOrThrow
+   */
+  export type VaccinationPetLoverFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which VaccinationPetLover to fetch.
+     */
+    where?: VaccinationPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of VaccinationPetLovers to fetch.
+     */
+    orderBy?: VaccinationPetLoverOrderByWithRelationInput | VaccinationPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for VaccinationPetLovers.
+     */
+    cursor?: VaccinationPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` VaccinationPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` VaccinationPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of VaccinationPetLovers.
+     */
+    distinct?: VaccinationPetLoverScalarFieldEnum | VaccinationPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * VaccinationPetLover findMany
+   */
+  export type VaccinationPetLoverFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which VaccinationPetLovers to fetch.
+     */
+    where?: VaccinationPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of VaccinationPetLovers to fetch.
+     */
+    orderBy?: VaccinationPetLoverOrderByWithRelationInput | VaccinationPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing VaccinationPetLovers.
+     */
+    cursor?: VaccinationPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` VaccinationPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` VaccinationPetLovers.
+     */
+    skip?: number
+    distinct?: VaccinationPetLoverScalarFieldEnum | VaccinationPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * VaccinationPetLover create
+   */
+  export type VaccinationPetLoverCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to create a VaccinationPetLover.
+     */
+    data: XOR<VaccinationPetLoverCreateInput, VaccinationPetLoverUncheckedCreateInput>
+  }
+
+  /**
+   * VaccinationPetLover createMany
+   */
+  export type VaccinationPetLoverCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many VaccinationPetLovers.
+     */
+    data: VaccinationPetLoverCreateManyInput | VaccinationPetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * VaccinationPetLover createManyAndReturn
+   */
+  export type VaccinationPetLoverCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to create many VaccinationPetLovers.
+     */
+    data: VaccinationPetLoverCreateManyInput | VaccinationPetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * VaccinationPetLover update
+   */
+  export type VaccinationPetLoverUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to update a VaccinationPetLover.
+     */
+    data: XOR<VaccinationPetLoverUpdateInput, VaccinationPetLoverUncheckedUpdateInput>
+    /**
+     * Choose, which VaccinationPetLover to update.
+     */
+    where: VaccinationPetLoverWhereUniqueInput
+  }
+
+  /**
+   * VaccinationPetLover updateMany
+   */
+  export type VaccinationPetLoverUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update VaccinationPetLovers.
+     */
+    data: XOR<VaccinationPetLoverUpdateManyMutationInput, VaccinationPetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which VaccinationPetLovers to update
+     */
+    where?: VaccinationPetLoverWhereInput
+    /**
+     * Limit how many VaccinationPetLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * VaccinationPetLover updateManyAndReturn
+   */
+  export type VaccinationPetLoverUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to update VaccinationPetLovers.
+     */
+    data: XOR<VaccinationPetLoverUpdateManyMutationInput, VaccinationPetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which VaccinationPetLovers to update
+     */
+    where?: VaccinationPetLoverWhereInput
+    /**
+     * Limit how many VaccinationPetLovers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * VaccinationPetLover upsert
+   */
+  export type VaccinationPetLoverUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    /**
+     * The filter to search for the VaccinationPetLover to update in case it exists.
+     */
+    where: VaccinationPetLoverWhereUniqueInput
+    /**
+     * In case the VaccinationPetLover found by the `where` argument doesn't exist, create a new VaccinationPetLover with this data.
+     */
+    create: XOR<VaccinationPetLoverCreateInput, VaccinationPetLoverUncheckedCreateInput>
+    /**
+     * In case the VaccinationPetLover was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<VaccinationPetLoverUpdateInput, VaccinationPetLoverUncheckedUpdateInput>
+  }
+
+  /**
+   * VaccinationPetLover delete
+   */
+  export type VaccinationPetLoverDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+    /**
+     * Filter which VaccinationPetLover to delete.
+     */
+    where: VaccinationPetLoverWhereUniqueInput
+  }
+
+  /**
+   * VaccinationPetLover deleteMany
+   */
+  export type VaccinationPetLoverDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which VaccinationPetLovers to delete
+     */
+    where?: VaccinationPetLoverWhereInput
+    /**
+     * Limit how many VaccinationPetLovers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * VaccinationPetLover without action
+   */
+  export type VaccinationPetLoverDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VaccinationPetLover
+     */
+    select?: VaccinationPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VaccinationPetLover
+     */
+    omit?: VaccinationPetLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VaccinationPetLoverInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ClinicPetLover
+   */
+
+  export type AggregateClinicPetLover = {
+    _count: ClinicPetLoverCountAggregateOutputType | null
+    _min: ClinicPetLoverMinAggregateOutputType | null
+    _max: ClinicPetLoverMaxAggregateOutputType | null
+  }
+
+  export type ClinicPetLoverMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    address: string | null
+    phone: string | null
+    createdAt: Date | null
+  }
+
+  export type ClinicPetLoverMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    address: string | null
+    phone: string | null
+    createdAt: Date | null
+  }
+
+  export type ClinicPetLoverCountAggregateOutputType = {
+    id: number
+    name: number
+    address: number
+    phone: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ClinicPetLoverMinAggregateInputType = {
+    id?: true
+    name?: true
+    address?: true
+    phone?: true
+    createdAt?: true
+  }
+
+  export type ClinicPetLoverMaxAggregateInputType = {
+    id?: true
+    name?: true
+    address?: true
+    phone?: true
+    createdAt?: true
+  }
+
+  export type ClinicPetLoverCountAggregateInputType = {
+    id?: true
+    name?: true
+    address?: true
+    phone?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ClinicPetLoverAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ClinicPetLover to aggregate.
+     */
+    where?: ClinicPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ClinicPetLovers to fetch.
+     */
+    orderBy?: ClinicPetLoverOrderByWithRelationInput | ClinicPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ClinicPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ClinicPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ClinicPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ClinicPetLovers
+    **/
+    _count?: true | ClinicPetLoverCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ClinicPetLoverMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ClinicPetLoverMaxAggregateInputType
+  }
+
+  export type GetClinicPetLoverAggregateType<T extends ClinicPetLoverAggregateArgs> = {
+        [P in keyof T & keyof AggregateClinicPetLover]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateClinicPetLover[P]>
+      : GetScalarType<T[P], AggregateClinicPetLover[P]>
+  }
+
+
+
+
+  export type ClinicPetLoverGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ClinicPetLoverWhereInput
+    orderBy?: ClinicPetLoverOrderByWithAggregationInput | ClinicPetLoverOrderByWithAggregationInput[]
+    by: ClinicPetLoverScalarFieldEnum[] | ClinicPetLoverScalarFieldEnum
+    having?: ClinicPetLoverScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ClinicPetLoverCountAggregateInputType | true
+    _min?: ClinicPetLoverMinAggregateInputType
+    _max?: ClinicPetLoverMaxAggregateInputType
+  }
+
+  export type ClinicPetLoverGroupByOutputType = {
+    id: string
+    name: string
+    address: string
+    phone: string
+    createdAt: Date
+    _count: ClinicPetLoverCountAggregateOutputType | null
+    _min: ClinicPetLoverMinAggregateOutputType | null
+    _max: ClinicPetLoverMaxAggregateOutputType | null
+  }
+
+  type GetClinicPetLoverGroupByPayload<T extends ClinicPetLoverGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ClinicPetLoverGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ClinicPetLoverGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ClinicPetLoverGroupByOutputType[P]>
+            : GetScalarType<T[P], ClinicPetLoverGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ClinicPetLoverSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["clinicPetLover"]>
+
+  export type ClinicPetLoverSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["clinicPetLover"]>
+
+  export type ClinicPetLoverSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["clinicPetLover"]>
+
+  export type ClinicPetLoverSelectScalar = {
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    createdAt?: boolean
+  }
+
+  export type ClinicPetLoverOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "address" | "phone" | "createdAt", ExtArgs["result"]["clinicPetLover"]>
+
+  export type $ClinicPetLoverPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ClinicPetLover"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      address: string
+      phone: string
+      createdAt: Date
+    }, ExtArgs["result"]["clinicPetLover"]>
+    composites: {}
+  }
+
+  type ClinicPetLoverGetPayload<S extends boolean | null | undefined | ClinicPetLoverDefaultArgs> = $Result.GetResult<Prisma.$ClinicPetLoverPayload, S>
+
+  type ClinicPetLoverCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ClinicPetLoverFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ClinicPetLoverCountAggregateInputType | true
+    }
+
+  export interface ClinicPetLoverDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ClinicPetLover'], meta: { name: 'ClinicPetLover' } }
+    /**
+     * Find zero or one ClinicPetLover that matches the filter.
+     * @param {ClinicPetLoverFindUniqueArgs} args - Arguments to find a ClinicPetLover
+     * @example
+     * // Get one ClinicPetLover
+     * const clinicPetLover = await prisma.clinicPetLover.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ClinicPetLoverFindUniqueArgs>(args: SelectSubset<T, ClinicPetLoverFindUniqueArgs<ExtArgs>>): Prisma__ClinicPetLoverClient<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ClinicPetLover that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ClinicPetLoverFindUniqueOrThrowArgs} args - Arguments to find a ClinicPetLover
+     * @example
+     * // Get one ClinicPetLover
+     * const clinicPetLover = await prisma.clinicPetLover.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ClinicPetLoverFindUniqueOrThrowArgs>(args: SelectSubset<T, ClinicPetLoverFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ClinicPetLoverClient<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ClinicPetLover that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicPetLoverFindFirstArgs} args - Arguments to find a ClinicPetLover
+     * @example
+     * // Get one ClinicPetLover
+     * const clinicPetLover = await prisma.clinicPetLover.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ClinicPetLoverFindFirstArgs>(args?: SelectSubset<T, ClinicPetLoverFindFirstArgs<ExtArgs>>): Prisma__ClinicPetLoverClient<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ClinicPetLover that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicPetLoverFindFirstOrThrowArgs} args - Arguments to find a ClinicPetLover
+     * @example
+     * // Get one ClinicPetLover
+     * const clinicPetLover = await prisma.clinicPetLover.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ClinicPetLoverFindFirstOrThrowArgs>(args?: SelectSubset<T, ClinicPetLoverFindFirstOrThrowArgs<ExtArgs>>): Prisma__ClinicPetLoverClient<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ClinicPetLovers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicPetLoverFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ClinicPetLovers
+     * const clinicPetLovers = await prisma.clinicPetLover.findMany()
+     * 
+     * // Get first 10 ClinicPetLovers
+     * const clinicPetLovers = await prisma.clinicPetLover.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const clinicPetLoverWithIdOnly = await prisma.clinicPetLover.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ClinicPetLoverFindManyArgs>(args?: SelectSubset<T, ClinicPetLoverFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ClinicPetLover.
+     * @param {ClinicPetLoverCreateArgs} args - Arguments to create a ClinicPetLover.
+     * @example
+     * // Create one ClinicPetLover
+     * const ClinicPetLover = await prisma.clinicPetLover.create({
+     *   data: {
+     *     // ... data to create a ClinicPetLover
+     *   }
+     * })
+     * 
+     */
+    create<T extends ClinicPetLoverCreateArgs>(args: SelectSubset<T, ClinicPetLoverCreateArgs<ExtArgs>>): Prisma__ClinicPetLoverClient<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ClinicPetLovers.
+     * @param {ClinicPetLoverCreateManyArgs} args - Arguments to create many ClinicPetLovers.
+     * @example
+     * // Create many ClinicPetLovers
+     * const clinicPetLover = await prisma.clinicPetLover.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ClinicPetLoverCreateManyArgs>(args?: SelectSubset<T, ClinicPetLoverCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ClinicPetLovers and returns the data saved in the database.
+     * @param {ClinicPetLoverCreateManyAndReturnArgs} args - Arguments to create many ClinicPetLovers.
+     * @example
+     * // Create many ClinicPetLovers
+     * const clinicPetLover = await prisma.clinicPetLover.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ClinicPetLovers and only return the `id`
+     * const clinicPetLoverWithIdOnly = await prisma.clinicPetLover.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ClinicPetLoverCreateManyAndReturnArgs>(args?: SelectSubset<T, ClinicPetLoverCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ClinicPetLover.
+     * @param {ClinicPetLoverDeleteArgs} args - Arguments to delete one ClinicPetLover.
+     * @example
+     * // Delete one ClinicPetLover
+     * const ClinicPetLover = await prisma.clinicPetLover.delete({
+     *   where: {
+     *     // ... filter to delete one ClinicPetLover
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ClinicPetLoverDeleteArgs>(args: SelectSubset<T, ClinicPetLoverDeleteArgs<ExtArgs>>): Prisma__ClinicPetLoverClient<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ClinicPetLover.
+     * @param {ClinicPetLoverUpdateArgs} args - Arguments to update one ClinicPetLover.
+     * @example
+     * // Update one ClinicPetLover
+     * const clinicPetLover = await prisma.clinicPetLover.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ClinicPetLoverUpdateArgs>(args: SelectSubset<T, ClinicPetLoverUpdateArgs<ExtArgs>>): Prisma__ClinicPetLoverClient<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ClinicPetLovers.
+     * @param {ClinicPetLoverDeleteManyArgs} args - Arguments to filter ClinicPetLovers to delete.
+     * @example
+     * // Delete a few ClinicPetLovers
+     * const { count } = await prisma.clinicPetLover.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ClinicPetLoverDeleteManyArgs>(args?: SelectSubset<T, ClinicPetLoverDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ClinicPetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicPetLoverUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ClinicPetLovers
+     * const clinicPetLover = await prisma.clinicPetLover.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ClinicPetLoverUpdateManyArgs>(args: SelectSubset<T, ClinicPetLoverUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ClinicPetLovers and returns the data updated in the database.
+     * @param {ClinicPetLoverUpdateManyAndReturnArgs} args - Arguments to update many ClinicPetLovers.
+     * @example
+     * // Update many ClinicPetLovers
+     * const clinicPetLover = await prisma.clinicPetLover.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ClinicPetLovers and only return the `id`
+     * const clinicPetLoverWithIdOnly = await prisma.clinicPetLover.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ClinicPetLoverUpdateManyAndReturnArgs>(args: SelectSubset<T, ClinicPetLoverUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ClinicPetLover.
+     * @param {ClinicPetLoverUpsertArgs} args - Arguments to update or create a ClinicPetLover.
+     * @example
+     * // Update or create a ClinicPetLover
+     * const clinicPetLover = await prisma.clinicPetLover.upsert({
+     *   create: {
+     *     // ... data to create a ClinicPetLover
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ClinicPetLover we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ClinicPetLoverUpsertArgs>(args: SelectSubset<T, ClinicPetLoverUpsertArgs<ExtArgs>>): Prisma__ClinicPetLoverClient<$Result.GetResult<Prisma.$ClinicPetLoverPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ClinicPetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicPetLoverCountArgs} args - Arguments to filter ClinicPetLovers to count.
+     * @example
+     * // Count the number of ClinicPetLovers
+     * const count = await prisma.clinicPetLover.count({
+     *   where: {
+     *     // ... the filter for the ClinicPetLovers we want to count
+     *   }
+     * })
+    **/
+    count<T extends ClinicPetLoverCountArgs>(
+      args?: Subset<T, ClinicPetLoverCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ClinicPetLoverCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ClinicPetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicPetLoverAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ClinicPetLoverAggregateArgs>(args: Subset<T, ClinicPetLoverAggregateArgs>): Prisma.PrismaPromise<GetClinicPetLoverAggregateType<T>>
+
+    /**
+     * Group by ClinicPetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicPetLoverGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ClinicPetLoverGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ClinicPetLoverGroupByArgs['orderBy'] }
+        : { orderBy?: ClinicPetLoverGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ClinicPetLoverGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetClinicPetLoverGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ClinicPetLover model
+   */
+  readonly fields: ClinicPetLoverFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ClinicPetLover.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ClinicPetLoverClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ClinicPetLover model
+   */ 
+  interface ClinicPetLoverFieldRefs {
+    readonly id: FieldRef<"ClinicPetLover", 'String'>
+    readonly name: FieldRef<"ClinicPetLover", 'String'>
+    readonly address: FieldRef<"ClinicPetLover", 'String'>
+    readonly phone: FieldRef<"ClinicPetLover", 'String'>
+    readonly createdAt: FieldRef<"ClinicPetLover", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ClinicPetLover findUnique
+   */
+  export type ClinicPetLoverFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicPetLover to fetch.
+     */
+    where: ClinicPetLoverWhereUniqueInput
+  }
+
+  /**
+   * ClinicPetLover findUniqueOrThrow
+   */
+  export type ClinicPetLoverFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicPetLover to fetch.
+     */
+    where: ClinicPetLoverWhereUniqueInput
+  }
+
+  /**
+   * ClinicPetLover findFirst
+   */
+  export type ClinicPetLoverFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicPetLover to fetch.
+     */
+    where?: ClinicPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ClinicPetLovers to fetch.
+     */
+    orderBy?: ClinicPetLoverOrderByWithRelationInput | ClinicPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ClinicPetLovers.
+     */
+    cursor?: ClinicPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ClinicPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ClinicPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ClinicPetLovers.
+     */
+    distinct?: ClinicPetLoverScalarFieldEnum | ClinicPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ClinicPetLover findFirstOrThrow
+   */
+  export type ClinicPetLoverFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicPetLover to fetch.
+     */
+    where?: ClinicPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ClinicPetLovers to fetch.
+     */
+    orderBy?: ClinicPetLoverOrderByWithRelationInput | ClinicPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ClinicPetLovers.
+     */
+    cursor?: ClinicPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ClinicPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ClinicPetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ClinicPetLovers.
+     */
+    distinct?: ClinicPetLoverScalarFieldEnum | ClinicPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ClinicPetLover findMany
+   */
+  export type ClinicPetLoverFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicPetLovers to fetch.
+     */
+    where?: ClinicPetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ClinicPetLovers to fetch.
+     */
+    orderBy?: ClinicPetLoverOrderByWithRelationInput | ClinicPetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ClinicPetLovers.
+     */
+    cursor?: ClinicPetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ClinicPetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ClinicPetLovers.
+     */
+    skip?: number
+    distinct?: ClinicPetLoverScalarFieldEnum | ClinicPetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ClinicPetLover create
+   */
+  export type ClinicPetLoverCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * The data needed to create a ClinicPetLover.
+     */
+    data: XOR<ClinicPetLoverCreateInput, ClinicPetLoverUncheckedCreateInput>
+  }
+
+  /**
+   * ClinicPetLover createMany
+   */
+  export type ClinicPetLoverCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ClinicPetLovers.
+     */
+    data: ClinicPetLoverCreateManyInput | ClinicPetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ClinicPetLover createManyAndReturn
+   */
+  export type ClinicPetLoverCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to create many ClinicPetLovers.
+     */
+    data: ClinicPetLoverCreateManyInput | ClinicPetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ClinicPetLover update
+   */
+  export type ClinicPetLoverUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * The data needed to update a ClinicPetLover.
+     */
+    data: XOR<ClinicPetLoverUpdateInput, ClinicPetLoverUncheckedUpdateInput>
+    /**
+     * Choose, which ClinicPetLover to update.
+     */
+    where: ClinicPetLoverWhereUniqueInput
+  }
+
+  /**
+   * ClinicPetLover updateMany
+   */
+  export type ClinicPetLoverUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ClinicPetLovers.
+     */
+    data: XOR<ClinicPetLoverUpdateManyMutationInput, ClinicPetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which ClinicPetLovers to update
+     */
+    where?: ClinicPetLoverWhereInput
+    /**
+     * Limit how many ClinicPetLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ClinicPetLover updateManyAndReturn
+   */
+  export type ClinicPetLoverUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to update ClinicPetLovers.
+     */
+    data: XOR<ClinicPetLoverUpdateManyMutationInput, ClinicPetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which ClinicPetLovers to update
+     */
+    where?: ClinicPetLoverWhereInput
+    /**
+     * Limit how many ClinicPetLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ClinicPetLover upsert
+   */
+  export type ClinicPetLoverUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * The filter to search for the ClinicPetLover to update in case it exists.
+     */
+    where: ClinicPetLoverWhereUniqueInput
+    /**
+     * In case the ClinicPetLover found by the `where` argument doesn't exist, create a new ClinicPetLover with this data.
+     */
+    create: XOR<ClinicPetLoverCreateInput, ClinicPetLoverUncheckedCreateInput>
+    /**
+     * In case the ClinicPetLover was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ClinicPetLoverUpdateInput, ClinicPetLoverUncheckedUpdateInput>
+  }
+
+  /**
+   * ClinicPetLover delete
+   */
+  export type ClinicPetLoverDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+    /**
+     * Filter which ClinicPetLover to delete.
+     */
+    where: ClinicPetLoverWhereUniqueInput
+  }
+
+  /**
+   * ClinicPetLover deleteMany
+   */
+  export type ClinicPetLoverDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ClinicPetLovers to delete
+     */
+    where?: ClinicPetLoverWhereInput
+    /**
+     * Limit how many ClinicPetLovers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ClinicPetLover without action
+   */
+  export type ClinicPetLoverDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicPetLover
+     */
+    select?: ClinicPetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicPetLover
+     */
+    omit?: ClinicPetLoverOmit<ExtArgs> | null
+  }
+
+
+  /**
+   * Model StorePetLover
+   */
+
+  export type AggregateStorePetLover = {
+    _count: StorePetLoverCountAggregateOutputType | null
+    _min: StorePetLoverMinAggregateOutputType | null
+    _max: StorePetLoverMaxAggregateOutputType | null
+  }
+
+  export type StorePetLoverMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    address: string | null
+    phone: string | null
+    createdAt: Date | null
+  }
+
+  export type StorePetLoverMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    address: string | null
+    phone: string | null
+    createdAt: Date | null
+  }
+
+  export type StorePetLoverCountAggregateOutputType = {
+    id: number
+    name: number
+    address: number
+    phone: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type StorePetLoverMinAggregateInputType = {
+    id?: true
+    name?: true
+    address?: true
+    phone?: true
+    createdAt?: true
+  }
+
+  export type StorePetLoverMaxAggregateInputType = {
+    id?: true
+    name?: true
+    address?: true
+    phone?: true
+    createdAt?: true
+  }
+
+  export type StorePetLoverCountAggregateInputType = {
+    id?: true
+    name?: true
+    address?: true
+    phone?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type StorePetLoverAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which StorePetLover to aggregate.
+     */
+    where?: StorePetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of StorePetLovers to fetch.
+     */
+    orderBy?: StorePetLoverOrderByWithRelationInput | StorePetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: StorePetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` StorePetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` StorePetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned StorePetLovers
+    **/
+    _count?: true | StorePetLoverCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: StorePetLoverMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: StorePetLoverMaxAggregateInputType
+  }
+
+  export type GetStorePetLoverAggregateType<T extends StorePetLoverAggregateArgs> = {
+        [P in keyof T & keyof AggregateStorePetLover]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateStorePetLover[P]>
+      : GetScalarType<T[P], AggregateStorePetLover[P]>
+  }
+
+
+
+
+  export type StorePetLoverGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: StorePetLoverWhereInput
+    orderBy?: StorePetLoverOrderByWithAggregationInput | StorePetLoverOrderByWithAggregationInput[]
+    by: StorePetLoverScalarFieldEnum[] | StorePetLoverScalarFieldEnum
+    having?: StorePetLoverScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: StorePetLoverCountAggregateInputType | true
+    _min?: StorePetLoverMinAggregateInputType
+    _max?: StorePetLoverMaxAggregateInputType
+  }
+
+  export type StorePetLoverGroupByOutputType = {
+    id: string
+    name: string
+    address: string
+    phone: string
+    createdAt: Date
+    _count: StorePetLoverCountAggregateOutputType | null
+    _min: StorePetLoverMinAggregateOutputType | null
+    _max: StorePetLoverMaxAggregateOutputType | null
+  }
+
+  type GetStorePetLoverGroupByPayload<T extends StorePetLoverGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<StorePetLoverGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof StorePetLoverGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], StorePetLoverGroupByOutputType[P]>
+            : GetScalarType<T[P], StorePetLoverGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type StorePetLoverSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["storePetLover"]>
+
+  export type StorePetLoverSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["storePetLover"]>
+
+  export type StorePetLoverSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["storePetLover"]>
+
+  export type StorePetLoverSelectScalar = {
+    id?: boolean
+    name?: boolean
+    address?: boolean
+    phone?: boolean
+    createdAt?: boolean
+  }
+
+  export type StorePetLoverOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "address" | "phone" | "createdAt", ExtArgs["result"]["storePetLover"]>
+
+  export type $StorePetLoverPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "StorePetLover"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      address: string
+      phone: string
+      createdAt: Date
+    }, ExtArgs["result"]["storePetLover"]>
+    composites: {}
+  }
+
+  type StorePetLoverGetPayload<S extends boolean | null | undefined | StorePetLoverDefaultArgs> = $Result.GetResult<Prisma.$StorePetLoverPayload, S>
+
+  type StorePetLoverCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<StorePetLoverFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: StorePetLoverCountAggregateInputType | true
+    }
+
+  export interface StorePetLoverDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['StorePetLover'], meta: { name: 'StorePetLover' } }
+    /**
+     * Find zero or one StorePetLover that matches the filter.
+     * @param {StorePetLoverFindUniqueArgs} args - Arguments to find a StorePetLover
+     * @example
+     * // Get one StorePetLover
+     * const storePetLover = await prisma.storePetLover.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends StorePetLoverFindUniqueArgs>(args: SelectSubset<T, StorePetLoverFindUniqueArgs<ExtArgs>>): Prisma__StorePetLoverClient<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one StorePetLover that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {StorePetLoverFindUniqueOrThrowArgs} args - Arguments to find a StorePetLover
+     * @example
+     * // Get one StorePetLover
+     * const storePetLover = await prisma.storePetLover.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends StorePetLoverFindUniqueOrThrowArgs>(args: SelectSubset<T, StorePetLoverFindUniqueOrThrowArgs<ExtArgs>>): Prisma__StorePetLoverClient<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first StorePetLover that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StorePetLoverFindFirstArgs} args - Arguments to find a StorePetLover
+     * @example
+     * // Get one StorePetLover
+     * const storePetLover = await prisma.storePetLover.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends StorePetLoverFindFirstArgs>(args?: SelectSubset<T, StorePetLoverFindFirstArgs<ExtArgs>>): Prisma__StorePetLoverClient<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first StorePetLover that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StorePetLoverFindFirstOrThrowArgs} args - Arguments to find a StorePetLover
+     * @example
+     * // Get one StorePetLover
+     * const storePetLover = await prisma.storePetLover.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends StorePetLoverFindFirstOrThrowArgs>(args?: SelectSubset<T, StorePetLoverFindFirstOrThrowArgs<ExtArgs>>): Prisma__StorePetLoverClient<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more StorePetLovers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StorePetLoverFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all StorePetLovers
+     * const storePetLovers = await prisma.storePetLover.findMany()
+     * 
+     * // Get first 10 StorePetLovers
+     * const storePetLovers = await prisma.storePetLover.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const storePetLoverWithIdOnly = await prisma.storePetLover.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends StorePetLoverFindManyArgs>(args?: SelectSubset<T, StorePetLoverFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a StorePetLover.
+     * @param {StorePetLoverCreateArgs} args - Arguments to create a StorePetLover.
+     * @example
+     * // Create one StorePetLover
+     * const StorePetLover = await prisma.storePetLover.create({
+     *   data: {
+     *     // ... data to create a StorePetLover
+     *   }
+     * })
+     * 
+     */
+    create<T extends StorePetLoverCreateArgs>(args: SelectSubset<T, StorePetLoverCreateArgs<ExtArgs>>): Prisma__StorePetLoverClient<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many StorePetLovers.
+     * @param {StorePetLoverCreateManyArgs} args - Arguments to create many StorePetLovers.
+     * @example
+     * // Create many StorePetLovers
+     * const storePetLover = await prisma.storePetLover.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends StorePetLoverCreateManyArgs>(args?: SelectSubset<T, StorePetLoverCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many StorePetLovers and returns the data saved in the database.
+     * @param {StorePetLoverCreateManyAndReturnArgs} args - Arguments to create many StorePetLovers.
+     * @example
+     * // Create many StorePetLovers
+     * const storePetLover = await prisma.storePetLover.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many StorePetLovers and only return the `id`
+     * const storePetLoverWithIdOnly = await prisma.storePetLover.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends StorePetLoverCreateManyAndReturnArgs>(args?: SelectSubset<T, StorePetLoverCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a StorePetLover.
+     * @param {StorePetLoverDeleteArgs} args - Arguments to delete one StorePetLover.
+     * @example
+     * // Delete one StorePetLover
+     * const StorePetLover = await prisma.storePetLover.delete({
+     *   where: {
+     *     // ... filter to delete one StorePetLover
+     *   }
+     * })
+     * 
+     */
+    delete<T extends StorePetLoverDeleteArgs>(args: SelectSubset<T, StorePetLoverDeleteArgs<ExtArgs>>): Prisma__StorePetLoverClient<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one StorePetLover.
+     * @param {StorePetLoverUpdateArgs} args - Arguments to update one StorePetLover.
+     * @example
+     * // Update one StorePetLover
+     * const storePetLover = await prisma.storePetLover.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends StorePetLoverUpdateArgs>(args: SelectSubset<T, StorePetLoverUpdateArgs<ExtArgs>>): Prisma__StorePetLoverClient<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more StorePetLovers.
+     * @param {StorePetLoverDeleteManyArgs} args - Arguments to filter StorePetLovers to delete.
+     * @example
+     * // Delete a few StorePetLovers
+     * const { count } = await prisma.storePetLover.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends StorePetLoverDeleteManyArgs>(args?: SelectSubset<T, StorePetLoverDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more StorePetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StorePetLoverUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many StorePetLovers
+     * const storePetLover = await prisma.storePetLover.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends StorePetLoverUpdateManyArgs>(args: SelectSubset<T, StorePetLoverUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more StorePetLovers and returns the data updated in the database.
+     * @param {StorePetLoverUpdateManyAndReturnArgs} args - Arguments to update many StorePetLovers.
+     * @example
+     * // Update many StorePetLovers
+     * const storePetLover = await prisma.storePetLover.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more StorePetLovers and only return the `id`
+     * const storePetLoverWithIdOnly = await prisma.storePetLover.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends StorePetLoverUpdateManyAndReturnArgs>(args: SelectSubset<T, StorePetLoverUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one StorePetLover.
+     * @param {StorePetLoverUpsertArgs} args - Arguments to update or create a StorePetLover.
+     * @example
+     * // Update or create a StorePetLover
+     * const storePetLover = await prisma.storePetLover.upsert({
+     *   create: {
+     *     // ... data to create a StorePetLover
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the StorePetLover we want to update
+     *   }
+     * })
+     */
+    upsert<T extends StorePetLoverUpsertArgs>(args: SelectSubset<T, StorePetLoverUpsertArgs<ExtArgs>>): Prisma__StorePetLoverClient<$Result.GetResult<Prisma.$StorePetLoverPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of StorePetLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StorePetLoverCountArgs} args - Arguments to filter StorePetLovers to count.
+     * @example
+     * // Count the number of StorePetLovers
+     * const count = await prisma.storePetLover.count({
+     *   where: {
+     *     // ... the filter for the StorePetLovers we want to count
+     *   }
+     * })
+    **/
+    count<T extends StorePetLoverCountArgs>(
+      args?: Subset<T, StorePetLoverCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], StorePetLoverCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a StorePetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StorePetLoverAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends StorePetLoverAggregateArgs>(args: Subset<T, StorePetLoverAggregateArgs>): Prisma.PrismaPromise<GetStorePetLoverAggregateType<T>>
+
+    /**
+     * Group by StorePetLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {StorePetLoverGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends StorePetLoverGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: StorePetLoverGroupByArgs['orderBy'] }
+        : { orderBy?: StorePetLoverGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, StorePetLoverGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetStorePetLoverGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the StorePetLover model
+   */
+  readonly fields: StorePetLoverFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for StorePetLover.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__StorePetLoverClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the StorePetLover model
+   */ 
+  interface StorePetLoverFieldRefs {
+    readonly id: FieldRef<"StorePetLover", 'String'>
+    readonly name: FieldRef<"StorePetLover", 'String'>
+    readonly address: FieldRef<"StorePetLover", 'String'>
+    readonly phone: FieldRef<"StorePetLover", 'String'>
+    readonly createdAt: FieldRef<"StorePetLover", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * StorePetLover findUnique
+   */
+  export type StorePetLoverFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which StorePetLover to fetch.
+     */
+    where: StorePetLoverWhereUniqueInput
+  }
+
+  /**
+   * StorePetLover findUniqueOrThrow
+   */
+  export type StorePetLoverFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which StorePetLover to fetch.
+     */
+    where: StorePetLoverWhereUniqueInput
+  }
+
+  /**
+   * StorePetLover findFirst
+   */
+  export type StorePetLoverFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which StorePetLover to fetch.
+     */
+    where?: StorePetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of StorePetLovers to fetch.
+     */
+    orderBy?: StorePetLoverOrderByWithRelationInput | StorePetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for StorePetLovers.
+     */
+    cursor?: StorePetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` StorePetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` StorePetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of StorePetLovers.
+     */
+    distinct?: StorePetLoverScalarFieldEnum | StorePetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * StorePetLover findFirstOrThrow
+   */
+  export type StorePetLoverFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which StorePetLover to fetch.
+     */
+    where?: StorePetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of StorePetLovers to fetch.
+     */
+    orderBy?: StorePetLoverOrderByWithRelationInput | StorePetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for StorePetLovers.
+     */
+    cursor?: StorePetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` StorePetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` StorePetLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of StorePetLovers.
+     */
+    distinct?: StorePetLoverScalarFieldEnum | StorePetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * StorePetLover findMany
+   */
+  export type StorePetLoverFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * Filter, which StorePetLovers to fetch.
+     */
+    where?: StorePetLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of StorePetLovers to fetch.
+     */
+    orderBy?: StorePetLoverOrderByWithRelationInput | StorePetLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing StorePetLovers.
+     */
+    cursor?: StorePetLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` StorePetLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` StorePetLovers.
+     */
+    skip?: number
+    distinct?: StorePetLoverScalarFieldEnum | StorePetLoverScalarFieldEnum[]
+  }
+
+  /**
+   * StorePetLover create
+   */
+  export type StorePetLoverCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * The data needed to create a StorePetLover.
+     */
+    data: XOR<StorePetLoverCreateInput, StorePetLoverUncheckedCreateInput>
+  }
+
+  /**
+   * StorePetLover createMany
+   */
+  export type StorePetLoverCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many StorePetLovers.
+     */
+    data: StorePetLoverCreateManyInput | StorePetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * StorePetLover createManyAndReturn
+   */
+  export type StorePetLoverCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to create many StorePetLovers.
+     */
+    data: StorePetLoverCreateManyInput | StorePetLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * StorePetLover update
+   */
+  export type StorePetLoverUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * The data needed to update a StorePetLover.
+     */
+    data: XOR<StorePetLoverUpdateInput, StorePetLoverUncheckedUpdateInput>
+    /**
+     * Choose, which StorePetLover to update.
+     */
+    where: StorePetLoverWhereUniqueInput
+  }
+
+  /**
+   * StorePetLover updateMany
+   */
+  export type StorePetLoverUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update StorePetLovers.
+     */
+    data: XOR<StorePetLoverUpdateManyMutationInput, StorePetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which StorePetLovers to update
+     */
+    where?: StorePetLoverWhereInput
+    /**
+     * Limit how many StorePetLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * StorePetLover updateManyAndReturn
+   */
+  export type StorePetLoverUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * The data used to update StorePetLovers.
+     */
+    data: XOR<StorePetLoverUpdateManyMutationInput, StorePetLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which StorePetLovers to update
+     */
+    where?: StorePetLoverWhereInput
+    /**
+     * Limit how many StorePetLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * StorePetLover upsert
+   */
+  export type StorePetLoverUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * The filter to search for the StorePetLover to update in case it exists.
+     */
+    where: StorePetLoverWhereUniqueInput
+    /**
+     * In case the StorePetLover found by the `where` argument doesn't exist, create a new StorePetLover with this data.
+     */
+    create: XOR<StorePetLoverCreateInput, StorePetLoverUncheckedCreateInput>
+    /**
+     * In case the StorePetLover was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<StorePetLoverUpdateInput, StorePetLoverUncheckedUpdateInput>
+  }
+
+  /**
+   * StorePetLover delete
+   */
+  export type StorePetLoverDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+    /**
+     * Filter which StorePetLover to delete.
+     */
+    where: StorePetLoverWhereUniqueInput
+  }
+
+  /**
+   * StorePetLover deleteMany
+   */
+  export type StorePetLoverDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which StorePetLovers to delete
+     */
+    where?: StorePetLoverWhereInput
+    /**
+     * Limit how many StorePetLovers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * StorePetLover without action
+   */
+  export type StorePetLoverDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the StorePetLover
+     */
+    select?: StorePetLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the StorePetLover
+     */
+    omit?: StorePetLoverOmit<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -19738,6 +25649,67 @@ export namespace Prisma {
   export type FoodieLikeScalarFieldEnum = (typeof FoodieLikeScalarFieldEnum)[keyof typeof FoodieLikeScalarFieldEnum]
 
 
+  export const PetPetLoverScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    petName: 'petName',
+    species: 'species',
+    breed: 'breed',
+    age: 'age',
+    medicalHistory: 'medicalHistory',
+    createdAt: 'createdAt'
+  };
+
+  export type PetPetLoverScalarFieldEnum = (typeof PetPetLoverScalarFieldEnum)[keyof typeof PetPetLoverScalarFieldEnum]
+
+
+  export const AppointmentPetLoverScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    petId: 'petId',
+    appointmentType: 'appointmentType',
+    dateTime: 'dateTime',
+    location: 'location',
+    createdAt: 'createdAt'
+  };
+
+  export type AppointmentPetLoverScalarFieldEnum = (typeof AppointmentPetLoverScalarFieldEnum)[keyof typeof AppointmentPetLoverScalarFieldEnum]
+
+
+  export const VaccinationPetLoverScalarFieldEnum: {
+    id: 'id',
+    petId: 'petId',
+    vaccineName: 'vaccineName',
+    dateAdministered: 'dateAdministered',
+    nextDueDate: 'nextDueDate',
+    createdAt: 'createdAt'
+  };
+
+  export type VaccinationPetLoverScalarFieldEnum = (typeof VaccinationPetLoverScalarFieldEnum)[keyof typeof VaccinationPetLoverScalarFieldEnum]
+
+
+  export const ClinicPetLoverScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    address: 'address',
+    phone: 'phone',
+    createdAt: 'createdAt'
+  };
+
+  export type ClinicPetLoverScalarFieldEnum = (typeof ClinicPetLoverScalarFieldEnum)[keyof typeof ClinicPetLoverScalarFieldEnum]
+
+
+  export const StorePetLoverScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    address: 'address',
+    phone: 'phone',
+    createdAt: 'createdAt'
+  };
+
+  export type StorePetLoverScalarFieldEnum = (typeof StorePetLoverScalarFieldEnum)[keyof typeof StorePetLoverScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
@@ -19857,6 +25829,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationListRelationFilter
     FoodieReview?: FoodieReviewListRelationFilter
     FoodieLike?: FoodieLikeListRelationFilter
+    PetPetLover?: PetPetLoverListRelationFilter
+    AppointmentPetLover?: AppointmentPetLoverListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -19880,6 +25854,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationOrderByRelationAggregateInput
     FoodieReview?: FoodieReviewOrderByRelationAggregateInput
     FoodieLike?: FoodieLikeOrderByRelationAggregateInput
+    PetPetLover?: PetPetLoverOrderByRelationAggregateInput
+    AppointmentPetLover?: AppointmentPetLoverOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -19906,6 +25882,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationListRelationFilter
     FoodieReview?: FoodieReviewListRelationFilter
     FoodieLike?: FoodieLikeListRelationFilter
+    PetPetLover?: PetPetLoverListRelationFilter
+    AppointmentPetLover?: AppointmentPetLoverListRelationFilter
   }, "id" | "email">
 
   export type UserOrderByWithAggregationInput = {
@@ -20836,6 +26814,316 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"FoodieLike"> | Date | string
   }
 
+  export type PetPetLoverWhereInput = {
+    AND?: PetPetLoverWhereInput | PetPetLoverWhereInput[]
+    OR?: PetPetLoverWhereInput[]
+    NOT?: PetPetLoverWhereInput | PetPetLoverWhereInput[]
+    id?: StringFilter<"PetPetLover"> | string
+    userId?: StringFilter<"PetPetLover"> | string
+    petName?: StringFilter<"PetPetLover"> | string
+    species?: StringFilter<"PetPetLover"> | string
+    breed?: StringFilter<"PetPetLover"> | string
+    age?: IntFilter<"PetPetLover"> | number
+    medicalHistory?: StringNullableFilter<"PetPetLover"> | string | null
+    createdAt?: DateTimeFilter<"PetPetLover"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    vaccinations?: VaccinationPetLoverListRelationFilter
+    appointments?: AppointmentPetLoverListRelationFilter
+  }
+
+  export type PetPetLoverOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petName?: SortOrder
+    species?: SortOrder
+    breed?: SortOrder
+    age?: SortOrder
+    medicalHistory?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    vaccinations?: VaccinationPetLoverOrderByRelationAggregateInput
+    appointments?: AppointmentPetLoverOrderByRelationAggregateInput
+  }
+
+  export type PetPetLoverWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: PetPetLoverWhereInput | PetPetLoverWhereInput[]
+    OR?: PetPetLoverWhereInput[]
+    NOT?: PetPetLoverWhereInput | PetPetLoverWhereInput[]
+    userId?: StringFilter<"PetPetLover"> | string
+    petName?: StringFilter<"PetPetLover"> | string
+    species?: StringFilter<"PetPetLover"> | string
+    breed?: StringFilter<"PetPetLover"> | string
+    age?: IntFilter<"PetPetLover"> | number
+    medicalHistory?: StringNullableFilter<"PetPetLover"> | string | null
+    createdAt?: DateTimeFilter<"PetPetLover"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    vaccinations?: VaccinationPetLoverListRelationFilter
+    appointments?: AppointmentPetLoverListRelationFilter
+  }, "id">
+
+  export type PetPetLoverOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petName?: SortOrder
+    species?: SortOrder
+    breed?: SortOrder
+    age?: SortOrder
+    medicalHistory?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    _count?: PetPetLoverCountOrderByAggregateInput
+    _avg?: PetPetLoverAvgOrderByAggregateInput
+    _max?: PetPetLoverMaxOrderByAggregateInput
+    _min?: PetPetLoverMinOrderByAggregateInput
+    _sum?: PetPetLoverSumOrderByAggregateInput
+  }
+
+  export type PetPetLoverScalarWhereWithAggregatesInput = {
+    AND?: PetPetLoverScalarWhereWithAggregatesInput | PetPetLoverScalarWhereWithAggregatesInput[]
+    OR?: PetPetLoverScalarWhereWithAggregatesInput[]
+    NOT?: PetPetLoverScalarWhereWithAggregatesInput | PetPetLoverScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"PetPetLover"> | string
+    userId?: StringWithAggregatesFilter<"PetPetLover"> | string
+    petName?: StringWithAggregatesFilter<"PetPetLover"> | string
+    species?: StringWithAggregatesFilter<"PetPetLover"> | string
+    breed?: StringWithAggregatesFilter<"PetPetLover"> | string
+    age?: IntWithAggregatesFilter<"PetPetLover"> | number
+    medicalHistory?: StringNullableWithAggregatesFilter<"PetPetLover"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"PetPetLover"> | Date | string
+  }
+
+  export type AppointmentPetLoverWhereInput = {
+    AND?: AppointmentPetLoverWhereInput | AppointmentPetLoverWhereInput[]
+    OR?: AppointmentPetLoverWhereInput[]
+    NOT?: AppointmentPetLoverWhereInput | AppointmentPetLoverWhereInput[]
+    id?: StringFilter<"AppointmentPetLover"> | string
+    userId?: StringFilter<"AppointmentPetLover"> | string
+    petId?: StringFilter<"AppointmentPetLover"> | string
+    appointmentType?: StringFilter<"AppointmentPetLover"> | string
+    dateTime?: DateTimeFilter<"AppointmentPetLover"> | Date | string
+    location?: StringFilter<"AppointmentPetLover"> | string
+    createdAt?: DateTimeFilter<"AppointmentPetLover"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    pet?: XOR<PetPetLoverScalarRelationFilter, PetPetLoverWhereInput>
+  }
+
+  export type AppointmentPetLoverOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petId?: SortOrder
+    appointmentType?: SortOrder
+    dateTime?: SortOrder
+    location?: SortOrder
+    createdAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    pet?: PetPetLoverOrderByWithRelationInput
+  }
+
+  export type AppointmentPetLoverWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: AppointmentPetLoverWhereInput | AppointmentPetLoverWhereInput[]
+    OR?: AppointmentPetLoverWhereInput[]
+    NOT?: AppointmentPetLoverWhereInput | AppointmentPetLoverWhereInput[]
+    userId?: StringFilter<"AppointmentPetLover"> | string
+    petId?: StringFilter<"AppointmentPetLover"> | string
+    appointmentType?: StringFilter<"AppointmentPetLover"> | string
+    dateTime?: DateTimeFilter<"AppointmentPetLover"> | Date | string
+    location?: StringFilter<"AppointmentPetLover"> | string
+    createdAt?: DateTimeFilter<"AppointmentPetLover"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    pet?: XOR<PetPetLoverScalarRelationFilter, PetPetLoverWhereInput>
+  }, "id">
+
+  export type AppointmentPetLoverOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petId?: SortOrder
+    appointmentType?: SortOrder
+    dateTime?: SortOrder
+    location?: SortOrder
+    createdAt?: SortOrder
+    _count?: AppointmentPetLoverCountOrderByAggregateInput
+    _max?: AppointmentPetLoverMaxOrderByAggregateInput
+    _min?: AppointmentPetLoverMinOrderByAggregateInput
+  }
+
+  export type AppointmentPetLoverScalarWhereWithAggregatesInput = {
+    AND?: AppointmentPetLoverScalarWhereWithAggregatesInput | AppointmentPetLoverScalarWhereWithAggregatesInput[]
+    OR?: AppointmentPetLoverScalarWhereWithAggregatesInput[]
+    NOT?: AppointmentPetLoverScalarWhereWithAggregatesInput | AppointmentPetLoverScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"AppointmentPetLover"> | string
+    userId?: StringWithAggregatesFilter<"AppointmentPetLover"> | string
+    petId?: StringWithAggregatesFilter<"AppointmentPetLover"> | string
+    appointmentType?: StringWithAggregatesFilter<"AppointmentPetLover"> | string
+    dateTime?: DateTimeWithAggregatesFilter<"AppointmentPetLover"> | Date | string
+    location?: StringWithAggregatesFilter<"AppointmentPetLover"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"AppointmentPetLover"> | Date | string
+  }
+
+  export type VaccinationPetLoverWhereInput = {
+    AND?: VaccinationPetLoverWhereInput | VaccinationPetLoverWhereInput[]
+    OR?: VaccinationPetLoverWhereInput[]
+    NOT?: VaccinationPetLoverWhereInput | VaccinationPetLoverWhereInput[]
+    id?: StringFilter<"VaccinationPetLover"> | string
+    petId?: StringFilter<"VaccinationPetLover"> | string
+    vaccineName?: StringFilter<"VaccinationPetLover"> | string
+    dateAdministered?: DateTimeFilter<"VaccinationPetLover"> | Date | string
+    nextDueDate?: DateTimeNullableFilter<"VaccinationPetLover"> | Date | string | null
+    createdAt?: DateTimeFilter<"VaccinationPetLover"> | Date | string
+    pet?: XOR<PetPetLoverScalarRelationFilter, PetPetLoverWhereInput>
+  }
+
+  export type VaccinationPetLoverOrderByWithRelationInput = {
+    id?: SortOrder
+    petId?: SortOrder
+    vaccineName?: SortOrder
+    dateAdministered?: SortOrder
+    nextDueDate?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    pet?: PetPetLoverOrderByWithRelationInput
+  }
+
+  export type VaccinationPetLoverWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: VaccinationPetLoverWhereInput | VaccinationPetLoverWhereInput[]
+    OR?: VaccinationPetLoverWhereInput[]
+    NOT?: VaccinationPetLoverWhereInput | VaccinationPetLoverWhereInput[]
+    petId?: StringFilter<"VaccinationPetLover"> | string
+    vaccineName?: StringFilter<"VaccinationPetLover"> | string
+    dateAdministered?: DateTimeFilter<"VaccinationPetLover"> | Date | string
+    nextDueDate?: DateTimeNullableFilter<"VaccinationPetLover"> | Date | string | null
+    createdAt?: DateTimeFilter<"VaccinationPetLover"> | Date | string
+    pet?: XOR<PetPetLoverScalarRelationFilter, PetPetLoverWhereInput>
+  }, "id">
+
+  export type VaccinationPetLoverOrderByWithAggregationInput = {
+    id?: SortOrder
+    petId?: SortOrder
+    vaccineName?: SortOrder
+    dateAdministered?: SortOrder
+    nextDueDate?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    _count?: VaccinationPetLoverCountOrderByAggregateInput
+    _max?: VaccinationPetLoverMaxOrderByAggregateInput
+    _min?: VaccinationPetLoverMinOrderByAggregateInput
+  }
+
+  export type VaccinationPetLoverScalarWhereWithAggregatesInput = {
+    AND?: VaccinationPetLoverScalarWhereWithAggregatesInput | VaccinationPetLoverScalarWhereWithAggregatesInput[]
+    OR?: VaccinationPetLoverScalarWhereWithAggregatesInput[]
+    NOT?: VaccinationPetLoverScalarWhereWithAggregatesInput | VaccinationPetLoverScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"VaccinationPetLover"> | string
+    petId?: StringWithAggregatesFilter<"VaccinationPetLover"> | string
+    vaccineName?: StringWithAggregatesFilter<"VaccinationPetLover"> | string
+    dateAdministered?: DateTimeWithAggregatesFilter<"VaccinationPetLover"> | Date | string
+    nextDueDate?: DateTimeNullableWithAggregatesFilter<"VaccinationPetLover"> | Date | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"VaccinationPetLover"> | Date | string
+  }
+
+  export type ClinicPetLoverWhereInput = {
+    AND?: ClinicPetLoverWhereInput | ClinicPetLoverWhereInput[]
+    OR?: ClinicPetLoverWhereInput[]
+    NOT?: ClinicPetLoverWhereInput | ClinicPetLoverWhereInput[]
+    id?: StringFilter<"ClinicPetLover"> | string
+    name?: StringFilter<"ClinicPetLover"> | string
+    address?: StringFilter<"ClinicPetLover"> | string
+    phone?: StringFilter<"ClinicPetLover"> | string
+    createdAt?: DateTimeFilter<"ClinicPetLover"> | Date | string
+  }
+
+  export type ClinicPetLoverOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ClinicPetLoverWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ClinicPetLoverWhereInput | ClinicPetLoverWhereInput[]
+    OR?: ClinicPetLoverWhereInput[]
+    NOT?: ClinicPetLoverWhereInput | ClinicPetLoverWhereInput[]
+    name?: StringFilter<"ClinicPetLover"> | string
+    address?: StringFilter<"ClinicPetLover"> | string
+    phone?: StringFilter<"ClinicPetLover"> | string
+    createdAt?: DateTimeFilter<"ClinicPetLover"> | Date | string
+  }, "id">
+
+  export type ClinicPetLoverOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+    _count?: ClinicPetLoverCountOrderByAggregateInput
+    _max?: ClinicPetLoverMaxOrderByAggregateInput
+    _min?: ClinicPetLoverMinOrderByAggregateInput
+  }
+
+  export type ClinicPetLoverScalarWhereWithAggregatesInput = {
+    AND?: ClinicPetLoverScalarWhereWithAggregatesInput | ClinicPetLoverScalarWhereWithAggregatesInput[]
+    OR?: ClinicPetLoverScalarWhereWithAggregatesInput[]
+    NOT?: ClinicPetLoverScalarWhereWithAggregatesInput | ClinicPetLoverScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ClinicPetLover"> | string
+    name?: StringWithAggregatesFilter<"ClinicPetLover"> | string
+    address?: StringWithAggregatesFilter<"ClinicPetLover"> | string
+    phone?: StringWithAggregatesFilter<"ClinicPetLover"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"ClinicPetLover"> | Date | string
+  }
+
+  export type StorePetLoverWhereInput = {
+    AND?: StorePetLoverWhereInput | StorePetLoverWhereInput[]
+    OR?: StorePetLoverWhereInput[]
+    NOT?: StorePetLoverWhereInput | StorePetLoverWhereInput[]
+    id?: StringFilter<"StorePetLover"> | string
+    name?: StringFilter<"StorePetLover"> | string
+    address?: StringFilter<"StorePetLover"> | string
+    phone?: StringFilter<"StorePetLover"> | string
+    createdAt?: DateTimeFilter<"StorePetLover"> | Date | string
+  }
+
+  export type StorePetLoverOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type StorePetLoverWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: StorePetLoverWhereInput | StorePetLoverWhereInput[]
+    OR?: StorePetLoverWhereInput[]
+    NOT?: StorePetLoverWhereInput | StorePetLoverWhereInput[]
+    name?: StringFilter<"StorePetLover"> | string
+    address?: StringFilter<"StorePetLover"> | string
+    phone?: StringFilter<"StorePetLover"> | string
+    createdAt?: DateTimeFilter<"StorePetLover"> | Date | string
+  }, "id">
+
+  export type StorePetLoverOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+    _count?: StorePetLoverCountOrderByAggregateInput
+    _max?: StorePetLoverMaxOrderByAggregateInput
+    _min?: StorePetLoverMinOrderByAggregateInput
+  }
+
+  export type StorePetLoverScalarWhereWithAggregatesInput = {
+    AND?: StorePetLoverScalarWhereWithAggregatesInput | StorePetLoverScalarWhereWithAggregatesInput[]
+    OR?: StorePetLoverScalarWhereWithAggregatesInput[]
+    NOT?: StorePetLoverScalarWhereWithAggregatesInput | StorePetLoverScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"StorePetLover"> | string
+    name?: StringWithAggregatesFilter<"StorePetLover"> | string
+    address?: StringWithAggregatesFilter<"StorePetLover"> | string
+    phone?: StringWithAggregatesFilter<"StorePetLover"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"StorePetLover"> | Date | string
+  }
+
   export type UserCreateInput = {
     id?: string
     email: string
@@ -20857,6 +27145,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -20880,6 +27170,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
@@ -20903,6 +27195,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -20926,6 +27220,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -21827,6 +28123,332 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type PetPetLoverCreateInput = {
+    id?: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutPetPetLoverInput
+    vaccinations?: VaccinationPetLoverCreateNestedManyWithoutPetInput
+    appointments?: AppointmentPetLoverCreateNestedManyWithoutPetInput
+  }
+
+  export type PetPetLoverUncheckedCreateInput = {
+    id?: string
+    userId: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+    vaccinations?: VaccinationPetLoverUncheckedCreateNestedManyWithoutPetInput
+    appointments?: AppointmentPetLoverUncheckedCreateNestedManyWithoutPetInput
+  }
+
+  export type PetPetLoverUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutPetPetLoverNestedInput
+    vaccinations?: VaccinationPetLoverUpdateManyWithoutPetNestedInput
+    appointments?: AppointmentPetLoverUpdateManyWithoutPetNestedInput
+  }
+
+  export type PetPetLoverUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    vaccinations?: VaccinationPetLoverUncheckedUpdateManyWithoutPetNestedInput
+    appointments?: AppointmentPetLoverUncheckedUpdateManyWithoutPetNestedInput
+  }
+
+  export type PetPetLoverCreateManyInput = {
+    id?: string
+    userId: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+  }
+
+  export type PetPetLoverUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PetPetLoverUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AppointmentPetLoverCreateInput = {
+    id?: string
+    appointmentType: string
+    dateTime: Date | string
+    location: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutAppointmentPetLoverInput
+    pet: PetPetLoverCreateNestedOneWithoutAppointmentsInput
+  }
+
+  export type AppointmentPetLoverUncheckedCreateInput = {
+    id?: string
+    userId: string
+    petId: string
+    appointmentType: string
+    dateTime: Date | string
+    location: string
+    createdAt?: Date | string
+  }
+
+  export type AppointmentPetLoverUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutAppointmentPetLoverNestedInput
+    pet?: PetPetLoverUpdateOneRequiredWithoutAppointmentsNestedInput
+  }
+
+  export type AppointmentPetLoverUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    petId?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AppointmentPetLoverCreateManyInput = {
+    id?: string
+    userId: string
+    petId: string
+    appointmentType: string
+    dateTime: Date | string
+    location: string
+    createdAt?: Date | string
+  }
+
+  export type AppointmentPetLoverUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AppointmentPetLoverUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    petId?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type VaccinationPetLoverCreateInput = {
+    id?: string
+    vaccineName: string
+    dateAdministered: Date | string
+    nextDueDate?: Date | string | null
+    createdAt?: Date | string
+    pet: PetPetLoverCreateNestedOneWithoutVaccinationsInput
+  }
+
+  export type VaccinationPetLoverUncheckedCreateInput = {
+    id?: string
+    petId: string
+    vaccineName: string
+    dateAdministered: Date | string
+    nextDueDate?: Date | string | null
+    createdAt?: Date | string
+  }
+
+  export type VaccinationPetLoverUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    vaccineName?: StringFieldUpdateOperationsInput | string
+    dateAdministered?: DateTimeFieldUpdateOperationsInput | Date | string
+    nextDueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    pet?: PetPetLoverUpdateOneRequiredWithoutVaccinationsNestedInput
+  }
+
+  export type VaccinationPetLoverUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petId?: StringFieldUpdateOperationsInput | string
+    vaccineName?: StringFieldUpdateOperationsInput | string
+    dateAdministered?: DateTimeFieldUpdateOperationsInput | Date | string
+    nextDueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type VaccinationPetLoverCreateManyInput = {
+    id?: string
+    petId: string
+    vaccineName: string
+    dateAdministered: Date | string
+    nextDueDate?: Date | string | null
+    createdAt?: Date | string
+  }
+
+  export type VaccinationPetLoverUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    vaccineName?: StringFieldUpdateOperationsInput | string
+    dateAdministered?: DateTimeFieldUpdateOperationsInput | Date | string
+    nextDueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type VaccinationPetLoverUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petId?: StringFieldUpdateOperationsInput | string
+    vaccineName?: StringFieldUpdateOperationsInput | string
+    dateAdministered?: DateTimeFieldUpdateOperationsInput | Date | string
+    nextDueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ClinicPetLoverCreateInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    createdAt?: Date | string
+  }
+
+  export type ClinicPetLoverUncheckedCreateInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    createdAt?: Date | string
+  }
+
+  export type ClinicPetLoverUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ClinicPetLoverUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ClinicPetLoverCreateManyInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    createdAt?: Date | string
+  }
+
+  export type ClinicPetLoverUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ClinicPetLoverUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type StorePetLoverCreateInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    createdAt?: Date | string
+  }
+
+  export type StorePetLoverUncheckedCreateInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    createdAt?: Date | string
+  }
+
+  export type StorePetLoverUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type StorePetLoverUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type StorePetLoverCreateManyInput = {
+    id?: string
+    name: string
+    address: string
+    phone: string
+    createdAt?: Date | string
+  }
+
+  export type StorePetLoverUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type StorePetLoverUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    address?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -21937,6 +28559,18 @@ export namespace Prisma {
     none?: FoodieLikeWhereInput
   }
 
+  export type PetPetLoverListRelationFilter = {
+    every?: PetPetLoverWhereInput
+    some?: PetPetLoverWhereInput
+    none?: PetPetLoverWhereInput
+  }
+
+  export type AppointmentPetLoverListRelationFilter = {
+    every?: AppointmentPetLoverWhereInput
+    some?: AppointmentPetLoverWhereInput
+    none?: AppointmentPetLoverWhereInput
+  }
+
   export type PostDIYHomesOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
@@ -21990,6 +28624,14 @@ export namespace Prisma {
   }
 
   export type FoodieLikeOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type PetPetLoverOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type AppointmentPetLoverOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -22582,6 +29224,192 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
+  export type VaccinationPetLoverListRelationFilter = {
+    every?: VaccinationPetLoverWhereInput
+    some?: VaccinationPetLoverWhereInput
+    none?: VaccinationPetLoverWhereInput
+  }
+
+  export type VaccinationPetLoverOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type PetPetLoverCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petName?: SortOrder
+    species?: SortOrder
+    breed?: SortOrder
+    age?: SortOrder
+    medicalHistory?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type PetPetLoverAvgOrderByAggregateInput = {
+    age?: SortOrder
+  }
+
+  export type PetPetLoverMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petName?: SortOrder
+    species?: SortOrder
+    breed?: SortOrder
+    age?: SortOrder
+    medicalHistory?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type PetPetLoverMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petName?: SortOrder
+    species?: SortOrder
+    breed?: SortOrder
+    age?: SortOrder
+    medicalHistory?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type PetPetLoverSumOrderByAggregateInput = {
+    age?: SortOrder
+  }
+
+  export type PetPetLoverScalarRelationFilter = {
+    is?: PetPetLoverWhereInput
+    isNot?: PetPetLoverWhereInput
+  }
+
+  export type AppointmentPetLoverCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petId?: SortOrder
+    appointmentType?: SortOrder
+    dateTime?: SortOrder
+    location?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type AppointmentPetLoverMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petId?: SortOrder
+    appointmentType?: SortOrder
+    dateTime?: SortOrder
+    location?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type AppointmentPetLoverMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    petId?: SortOrder
+    appointmentType?: SortOrder
+    dateTime?: SortOrder
+    location?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type DateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
+  export type VaccinationPetLoverCountOrderByAggregateInput = {
+    id?: SortOrder
+    petId?: SortOrder
+    vaccineName?: SortOrder
+    dateAdministered?: SortOrder
+    nextDueDate?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type VaccinationPetLoverMaxOrderByAggregateInput = {
+    id?: SortOrder
+    petId?: SortOrder
+    vaccineName?: SortOrder
+    dateAdministered?: SortOrder
+    nextDueDate?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type VaccinationPetLoverMinOrderByAggregateInput = {
+    id?: SortOrder
+    petId?: SortOrder
+    vaccineName?: SortOrder
+    dateAdministered?: SortOrder
+    nextDueDate?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
+  }
+
+  export type ClinicPetLoverCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ClinicPetLoverMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ClinicPetLoverMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type StorePetLoverCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type StorePetLoverMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type StorePetLoverMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    address?: SortOrder
+    phone?: SortOrder
+    createdAt?: SortOrder
+  }
+
   export type PostDIYHomesCreateNestedManyWithoutUserInput = {
     create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
     connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
@@ -22680,6 +29508,20 @@ export namespace Prisma {
     connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
   }
 
+  export type PetPetLoverCreateNestedManyWithoutUserInput = {
+    create?: XOR<PetPetLoverCreateWithoutUserInput, PetPetLoverUncheckedCreateWithoutUserInput> | PetPetLoverCreateWithoutUserInput[] | PetPetLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PetPetLoverCreateOrConnectWithoutUserInput | PetPetLoverCreateOrConnectWithoutUserInput[]
+    createMany?: PetPetLoverCreateManyUserInputEnvelope
+    connect?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+  }
+
+  export type AppointmentPetLoverCreateNestedManyWithoutUserInput = {
+    create?: XOR<AppointmentPetLoverCreateWithoutUserInput, AppointmentPetLoverUncheckedCreateWithoutUserInput> | AppointmentPetLoverCreateWithoutUserInput[] | AppointmentPetLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: AppointmentPetLoverCreateOrConnectWithoutUserInput | AppointmentPetLoverCreateOrConnectWithoutUserInput[]
+    createMany?: AppointmentPetLoverCreateManyUserInputEnvelope
+    connect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+  }
+
   export type PostDIYHomesUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
     connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
@@ -22776,6 +29618,20 @@ export namespace Prisma {
     connectOrCreate?: FoodieLikeCreateOrConnectWithoutUserInput | FoodieLikeCreateOrConnectWithoutUserInput[]
     createMany?: FoodieLikeCreateManyUserInputEnvelope
     connect?: FoodieLikeWhereUniqueInput | FoodieLikeWhereUniqueInput[]
+  }
+
+  export type PetPetLoverUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<PetPetLoverCreateWithoutUserInput, PetPetLoverUncheckedCreateWithoutUserInput> | PetPetLoverCreateWithoutUserInput[] | PetPetLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PetPetLoverCreateOrConnectWithoutUserInput | PetPetLoverCreateOrConnectWithoutUserInput[]
+    createMany?: PetPetLoverCreateManyUserInputEnvelope
+    connect?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+  }
+
+  export type AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<AppointmentPetLoverCreateWithoutUserInput, AppointmentPetLoverUncheckedCreateWithoutUserInput> | AppointmentPetLoverCreateWithoutUserInput[] | AppointmentPetLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: AppointmentPetLoverCreateOrConnectWithoutUserInput | AppointmentPetLoverCreateOrConnectWithoutUserInput[]
+    createMany?: AppointmentPetLoverCreateManyUserInputEnvelope
+    connect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -22982,6 +29838,34 @@ export namespace Prisma {
     deleteMany?: FoodieLikeScalarWhereInput | FoodieLikeScalarWhereInput[]
   }
 
+  export type PetPetLoverUpdateManyWithoutUserNestedInput = {
+    create?: XOR<PetPetLoverCreateWithoutUserInput, PetPetLoverUncheckedCreateWithoutUserInput> | PetPetLoverCreateWithoutUserInput[] | PetPetLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PetPetLoverCreateOrConnectWithoutUserInput | PetPetLoverCreateOrConnectWithoutUserInput[]
+    upsert?: PetPetLoverUpsertWithWhereUniqueWithoutUserInput | PetPetLoverUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: PetPetLoverCreateManyUserInputEnvelope
+    set?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+    disconnect?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+    delete?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+    connect?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+    update?: PetPetLoverUpdateWithWhereUniqueWithoutUserInput | PetPetLoverUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: PetPetLoverUpdateManyWithWhereWithoutUserInput | PetPetLoverUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: PetPetLoverScalarWhereInput | PetPetLoverScalarWhereInput[]
+  }
+
+  export type AppointmentPetLoverUpdateManyWithoutUserNestedInput = {
+    create?: XOR<AppointmentPetLoverCreateWithoutUserInput, AppointmentPetLoverUncheckedCreateWithoutUserInput> | AppointmentPetLoverCreateWithoutUserInput[] | AppointmentPetLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: AppointmentPetLoverCreateOrConnectWithoutUserInput | AppointmentPetLoverCreateOrConnectWithoutUserInput[]
+    upsert?: AppointmentPetLoverUpsertWithWhereUniqueWithoutUserInput | AppointmentPetLoverUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: AppointmentPetLoverCreateManyUserInputEnvelope
+    set?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    disconnect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    delete?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    connect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    update?: AppointmentPetLoverUpdateWithWhereUniqueWithoutUserInput | AppointmentPetLoverUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: AppointmentPetLoverUpdateManyWithWhereWithoutUserInput | AppointmentPetLoverUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: AppointmentPetLoverScalarWhereInput | AppointmentPetLoverScalarWhereInput[]
+  }
+
   export type PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput = {
     create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
     connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
@@ -23176,6 +30060,34 @@ export namespace Prisma {
     update?: FoodieLikeUpdateWithWhereUniqueWithoutUserInput | FoodieLikeUpdateWithWhereUniqueWithoutUserInput[]
     updateMany?: FoodieLikeUpdateManyWithWhereWithoutUserInput | FoodieLikeUpdateManyWithWhereWithoutUserInput[]
     deleteMany?: FoodieLikeScalarWhereInput | FoodieLikeScalarWhereInput[]
+  }
+
+  export type PetPetLoverUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<PetPetLoverCreateWithoutUserInput, PetPetLoverUncheckedCreateWithoutUserInput> | PetPetLoverCreateWithoutUserInput[] | PetPetLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PetPetLoverCreateOrConnectWithoutUserInput | PetPetLoverCreateOrConnectWithoutUserInput[]
+    upsert?: PetPetLoverUpsertWithWhereUniqueWithoutUserInput | PetPetLoverUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: PetPetLoverCreateManyUserInputEnvelope
+    set?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+    disconnect?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+    delete?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+    connect?: PetPetLoverWhereUniqueInput | PetPetLoverWhereUniqueInput[]
+    update?: PetPetLoverUpdateWithWhereUniqueWithoutUserInput | PetPetLoverUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: PetPetLoverUpdateManyWithWhereWithoutUserInput | PetPetLoverUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: PetPetLoverScalarWhereInput | PetPetLoverScalarWhereInput[]
+  }
+
+  export type AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<AppointmentPetLoverCreateWithoutUserInput, AppointmentPetLoverUncheckedCreateWithoutUserInput> | AppointmentPetLoverCreateWithoutUserInput[] | AppointmentPetLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: AppointmentPetLoverCreateOrConnectWithoutUserInput | AppointmentPetLoverCreateOrConnectWithoutUserInput[]
+    upsert?: AppointmentPetLoverUpsertWithWhereUniqueWithoutUserInput | AppointmentPetLoverUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: AppointmentPetLoverCreateManyUserInputEnvelope
+    set?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    disconnect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    delete?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    connect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    update?: AppointmentPetLoverUpdateWithWhereUniqueWithoutUserInput | AppointmentPetLoverUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: AppointmentPetLoverUpdateManyWithWhereWithoutUserInput | AppointmentPetLoverUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: AppointmentPetLoverScalarWhereInput | AppointmentPetLoverScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutPostsInput = {
@@ -24126,6 +31038,150 @@ export namespace Prisma {
     update?: XOR<XOR<FoodieFoodUpdateToOneWithWhereWithoutLikesInput, FoodieFoodUpdateWithoutLikesInput>, FoodieFoodUncheckedUpdateWithoutLikesInput>
   }
 
+  export type UserCreateNestedOneWithoutPetPetLoverInput = {
+    create?: XOR<UserCreateWithoutPetPetLoverInput, UserUncheckedCreateWithoutPetPetLoverInput>
+    connectOrCreate?: UserCreateOrConnectWithoutPetPetLoverInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type VaccinationPetLoverCreateNestedManyWithoutPetInput = {
+    create?: XOR<VaccinationPetLoverCreateWithoutPetInput, VaccinationPetLoverUncheckedCreateWithoutPetInput> | VaccinationPetLoverCreateWithoutPetInput[] | VaccinationPetLoverUncheckedCreateWithoutPetInput[]
+    connectOrCreate?: VaccinationPetLoverCreateOrConnectWithoutPetInput | VaccinationPetLoverCreateOrConnectWithoutPetInput[]
+    createMany?: VaccinationPetLoverCreateManyPetInputEnvelope
+    connect?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+  }
+
+  export type AppointmentPetLoverCreateNestedManyWithoutPetInput = {
+    create?: XOR<AppointmentPetLoverCreateWithoutPetInput, AppointmentPetLoverUncheckedCreateWithoutPetInput> | AppointmentPetLoverCreateWithoutPetInput[] | AppointmentPetLoverUncheckedCreateWithoutPetInput[]
+    connectOrCreate?: AppointmentPetLoverCreateOrConnectWithoutPetInput | AppointmentPetLoverCreateOrConnectWithoutPetInput[]
+    createMany?: AppointmentPetLoverCreateManyPetInputEnvelope
+    connect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+  }
+
+  export type VaccinationPetLoverUncheckedCreateNestedManyWithoutPetInput = {
+    create?: XOR<VaccinationPetLoverCreateWithoutPetInput, VaccinationPetLoverUncheckedCreateWithoutPetInput> | VaccinationPetLoverCreateWithoutPetInput[] | VaccinationPetLoverUncheckedCreateWithoutPetInput[]
+    connectOrCreate?: VaccinationPetLoverCreateOrConnectWithoutPetInput | VaccinationPetLoverCreateOrConnectWithoutPetInput[]
+    createMany?: VaccinationPetLoverCreateManyPetInputEnvelope
+    connect?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+  }
+
+  export type AppointmentPetLoverUncheckedCreateNestedManyWithoutPetInput = {
+    create?: XOR<AppointmentPetLoverCreateWithoutPetInput, AppointmentPetLoverUncheckedCreateWithoutPetInput> | AppointmentPetLoverCreateWithoutPetInput[] | AppointmentPetLoverUncheckedCreateWithoutPetInput[]
+    connectOrCreate?: AppointmentPetLoverCreateOrConnectWithoutPetInput | AppointmentPetLoverCreateOrConnectWithoutPetInput[]
+    createMany?: AppointmentPetLoverCreateManyPetInputEnvelope
+    connect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+  }
+
+  export type UserUpdateOneRequiredWithoutPetPetLoverNestedInput = {
+    create?: XOR<UserCreateWithoutPetPetLoverInput, UserUncheckedCreateWithoutPetPetLoverInput>
+    connectOrCreate?: UserCreateOrConnectWithoutPetPetLoverInput
+    upsert?: UserUpsertWithoutPetPetLoverInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutPetPetLoverInput, UserUpdateWithoutPetPetLoverInput>, UserUncheckedUpdateWithoutPetPetLoverInput>
+  }
+
+  export type VaccinationPetLoverUpdateManyWithoutPetNestedInput = {
+    create?: XOR<VaccinationPetLoverCreateWithoutPetInput, VaccinationPetLoverUncheckedCreateWithoutPetInput> | VaccinationPetLoverCreateWithoutPetInput[] | VaccinationPetLoverUncheckedCreateWithoutPetInput[]
+    connectOrCreate?: VaccinationPetLoverCreateOrConnectWithoutPetInput | VaccinationPetLoverCreateOrConnectWithoutPetInput[]
+    upsert?: VaccinationPetLoverUpsertWithWhereUniqueWithoutPetInput | VaccinationPetLoverUpsertWithWhereUniqueWithoutPetInput[]
+    createMany?: VaccinationPetLoverCreateManyPetInputEnvelope
+    set?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+    disconnect?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+    delete?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+    connect?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+    update?: VaccinationPetLoverUpdateWithWhereUniqueWithoutPetInput | VaccinationPetLoverUpdateWithWhereUniqueWithoutPetInput[]
+    updateMany?: VaccinationPetLoverUpdateManyWithWhereWithoutPetInput | VaccinationPetLoverUpdateManyWithWhereWithoutPetInput[]
+    deleteMany?: VaccinationPetLoverScalarWhereInput | VaccinationPetLoverScalarWhereInput[]
+  }
+
+  export type AppointmentPetLoverUpdateManyWithoutPetNestedInput = {
+    create?: XOR<AppointmentPetLoverCreateWithoutPetInput, AppointmentPetLoverUncheckedCreateWithoutPetInput> | AppointmentPetLoverCreateWithoutPetInput[] | AppointmentPetLoverUncheckedCreateWithoutPetInput[]
+    connectOrCreate?: AppointmentPetLoverCreateOrConnectWithoutPetInput | AppointmentPetLoverCreateOrConnectWithoutPetInput[]
+    upsert?: AppointmentPetLoverUpsertWithWhereUniqueWithoutPetInput | AppointmentPetLoverUpsertWithWhereUniqueWithoutPetInput[]
+    createMany?: AppointmentPetLoverCreateManyPetInputEnvelope
+    set?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    disconnect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    delete?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    connect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    update?: AppointmentPetLoverUpdateWithWhereUniqueWithoutPetInput | AppointmentPetLoverUpdateWithWhereUniqueWithoutPetInput[]
+    updateMany?: AppointmentPetLoverUpdateManyWithWhereWithoutPetInput | AppointmentPetLoverUpdateManyWithWhereWithoutPetInput[]
+    deleteMany?: AppointmentPetLoverScalarWhereInput | AppointmentPetLoverScalarWhereInput[]
+  }
+
+  export type VaccinationPetLoverUncheckedUpdateManyWithoutPetNestedInput = {
+    create?: XOR<VaccinationPetLoverCreateWithoutPetInput, VaccinationPetLoverUncheckedCreateWithoutPetInput> | VaccinationPetLoverCreateWithoutPetInput[] | VaccinationPetLoverUncheckedCreateWithoutPetInput[]
+    connectOrCreate?: VaccinationPetLoverCreateOrConnectWithoutPetInput | VaccinationPetLoverCreateOrConnectWithoutPetInput[]
+    upsert?: VaccinationPetLoverUpsertWithWhereUniqueWithoutPetInput | VaccinationPetLoverUpsertWithWhereUniqueWithoutPetInput[]
+    createMany?: VaccinationPetLoverCreateManyPetInputEnvelope
+    set?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+    disconnect?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+    delete?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+    connect?: VaccinationPetLoverWhereUniqueInput | VaccinationPetLoverWhereUniqueInput[]
+    update?: VaccinationPetLoverUpdateWithWhereUniqueWithoutPetInput | VaccinationPetLoverUpdateWithWhereUniqueWithoutPetInput[]
+    updateMany?: VaccinationPetLoverUpdateManyWithWhereWithoutPetInput | VaccinationPetLoverUpdateManyWithWhereWithoutPetInput[]
+    deleteMany?: VaccinationPetLoverScalarWhereInput | VaccinationPetLoverScalarWhereInput[]
+  }
+
+  export type AppointmentPetLoverUncheckedUpdateManyWithoutPetNestedInput = {
+    create?: XOR<AppointmentPetLoverCreateWithoutPetInput, AppointmentPetLoverUncheckedCreateWithoutPetInput> | AppointmentPetLoverCreateWithoutPetInput[] | AppointmentPetLoverUncheckedCreateWithoutPetInput[]
+    connectOrCreate?: AppointmentPetLoverCreateOrConnectWithoutPetInput | AppointmentPetLoverCreateOrConnectWithoutPetInput[]
+    upsert?: AppointmentPetLoverUpsertWithWhereUniqueWithoutPetInput | AppointmentPetLoverUpsertWithWhereUniqueWithoutPetInput[]
+    createMany?: AppointmentPetLoverCreateManyPetInputEnvelope
+    set?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    disconnect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    delete?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    connect?: AppointmentPetLoverWhereUniqueInput | AppointmentPetLoverWhereUniqueInput[]
+    update?: AppointmentPetLoverUpdateWithWhereUniqueWithoutPetInput | AppointmentPetLoverUpdateWithWhereUniqueWithoutPetInput[]
+    updateMany?: AppointmentPetLoverUpdateManyWithWhereWithoutPetInput | AppointmentPetLoverUpdateManyWithWhereWithoutPetInput[]
+    deleteMany?: AppointmentPetLoverScalarWhereInput | AppointmentPetLoverScalarWhereInput[]
+  }
+
+  export type UserCreateNestedOneWithoutAppointmentPetLoverInput = {
+    create?: XOR<UserCreateWithoutAppointmentPetLoverInput, UserUncheckedCreateWithoutAppointmentPetLoverInput>
+    connectOrCreate?: UserCreateOrConnectWithoutAppointmentPetLoverInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type PetPetLoverCreateNestedOneWithoutAppointmentsInput = {
+    create?: XOR<PetPetLoverCreateWithoutAppointmentsInput, PetPetLoverUncheckedCreateWithoutAppointmentsInput>
+    connectOrCreate?: PetPetLoverCreateOrConnectWithoutAppointmentsInput
+    connect?: PetPetLoverWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutAppointmentPetLoverNestedInput = {
+    create?: XOR<UserCreateWithoutAppointmentPetLoverInput, UserUncheckedCreateWithoutAppointmentPetLoverInput>
+    connectOrCreate?: UserCreateOrConnectWithoutAppointmentPetLoverInput
+    upsert?: UserUpsertWithoutAppointmentPetLoverInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutAppointmentPetLoverInput, UserUpdateWithoutAppointmentPetLoverInput>, UserUncheckedUpdateWithoutAppointmentPetLoverInput>
+  }
+
+  export type PetPetLoverUpdateOneRequiredWithoutAppointmentsNestedInput = {
+    create?: XOR<PetPetLoverCreateWithoutAppointmentsInput, PetPetLoverUncheckedCreateWithoutAppointmentsInput>
+    connectOrCreate?: PetPetLoverCreateOrConnectWithoutAppointmentsInput
+    upsert?: PetPetLoverUpsertWithoutAppointmentsInput
+    connect?: PetPetLoverWhereUniqueInput
+    update?: XOR<XOR<PetPetLoverUpdateToOneWithWhereWithoutAppointmentsInput, PetPetLoverUpdateWithoutAppointmentsInput>, PetPetLoverUncheckedUpdateWithoutAppointmentsInput>
+  }
+
+  export type PetPetLoverCreateNestedOneWithoutVaccinationsInput = {
+    create?: XOR<PetPetLoverCreateWithoutVaccinationsInput, PetPetLoverUncheckedCreateWithoutVaccinationsInput>
+    connectOrCreate?: PetPetLoverCreateOrConnectWithoutVaccinationsInput
+    connect?: PetPetLoverWhereUniqueInput
+  }
+
+  export type NullableDateTimeFieldUpdateOperationsInput = {
+    set?: Date | string | null
+  }
+
+  export type PetPetLoverUpdateOneRequiredWithoutVaccinationsNestedInput = {
+    create?: XOR<PetPetLoverCreateWithoutVaccinationsInput, PetPetLoverUncheckedCreateWithoutVaccinationsInput>
+    connectOrCreate?: PetPetLoverCreateOrConnectWithoutVaccinationsInput
+    upsert?: PetPetLoverUpsertWithoutVaccinationsInput
+    connect?: PetPetLoverWhereUniqueInput
+    update?: XOR<XOR<PetPetLoverUpdateToOneWithWhereWithoutVaccinationsInput, PetPetLoverUpdateWithoutVaccinationsInput>, PetPetLoverUncheckedUpdateWithoutVaccinationsInput>
+  }
+
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -24273,6 +31329,31 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedBoolFilter<$PrismaModel>
     _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
+  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type PostDIYHomesCreateWithoutUserInput = {
@@ -24652,6 +31733,68 @@ export namespace Prisma {
 
   export type FoodieLikeCreateManyUserInputEnvelope = {
     data: FoodieLikeCreateManyUserInput | FoodieLikeCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type PetPetLoverCreateWithoutUserInput = {
+    id?: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+    vaccinations?: VaccinationPetLoverCreateNestedManyWithoutPetInput
+    appointments?: AppointmentPetLoverCreateNestedManyWithoutPetInput
+  }
+
+  export type PetPetLoverUncheckedCreateWithoutUserInput = {
+    id?: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+    vaccinations?: VaccinationPetLoverUncheckedCreateNestedManyWithoutPetInput
+    appointments?: AppointmentPetLoverUncheckedCreateNestedManyWithoutPetInput
+  }
+
+  export type PetPetLoverCreateOrConnectWithoutUserInput = {
+    where: PetPetLoverWhereUniqueInput
+    create: XOR<PetPetLoverCreateWithoutUserInput, PetPetLoverUncheckedCreateWithoutUserInput>
+  }
+
+  export type PetPetLoverCreateManyUserInputEnvelope = {
+    data: PetPetLoverCreateManyUserInput | PetPetLoverCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type AppointmentPetLoverCreateWithoutUserInput = {
+    id?: string
+    appointmentType: string
+    dateTime: Date | string
+    location: string
+    createdAt?: Date | string
+    pet: PetPetLoverCreateNestedOneWithoutAppointmentsInput
+  }
+
+  export type AppointmentPetLoverUncheckedCreateWithoutUserInput = {
+    id?: string
+    petId: string
+    appointmentType: string
+    dateTime: Date | string
+    location: string
+    createdAt?: Date | string
+  }
+
+  export type AppointmentPetLoverCreateOrConnectWithoutUserInput = {
+    where: AppointmentPetLoverWhereUniqueInput
+    create: XOR<AppointmentPetLoverCreateWithoutUserInput, AppointmentPetLoverUncheckedCreateWithoutUserInput>
+  }
+
+  export type AppointmentPetLoverCreateManyUserInputEnvelope = {
+    data: AppointmentPetLoverCreateManyUserInput | AppointmentPetLoverCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
@@ -25042,6 +32185,65 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"FoodieLike"> | Date | string
   }
 
+  export type PetPetLoverUpsertWithWhereUniqueWithoutUserInput = {
+    where: PetPetLoverWhereUniqueInput
+    update: XOR<PetPetLoverUpdateWithoutUserInput, PetPetLoverUncheckedUpdateWithoutUserInput>
+    create: XOR<PetPetLoverCreateWithoutUserInput, PetPetLoverUncheckedCreateWithoutUserInput>
+  }
+
+  export type PetPetLoverUpdateWithWhereUniqueWithoutUserInput = {
+    where: PetPetLoverWhereUniqueInput
+    data: XOR<PetPetLoverUpdateWithoutUserInput, PetPetLoverUncheckedUpdateWithoutUserInput>
+  }
+
+  export type PetPetLoverUpdateManyWithWhereWithoutUserInput = {
+    where: PetPetLoverScalarWhereInput
+    data: XOR<PetPetLoverUpdateManyMutationInput, PetPetLoverUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type PetPetLoverScalarWhereInput = {
+    AND?: PetPetLoverScalarWhereInput | PetPetLoverScalarWhereInput[]
+    OR?: PetPetLoverScalarWhereInput[]
+    NOT?: PetPetLoverScalarWhereInput | PetPetLoverScalarWhereInput[]
+    id?: StringFilter<"PetPetLover"> | string
+    userId?: StringFilter<"PetPetLover"> | string
+    petName?: StringFilter<"PetPetLover"> | string
+    species?: StringFilter<"PetPetLover"> | string
+    breed?: StringFilter<"PetPetLover"> | string
+    age?: IntFilter<"PetPetLover"> | number
+    medicalHistory?: StringNullableFilter<"PetPetLover"> | string | null
+    createdAt?: DateTimeFilter<"PetPetLover"> | Date | string
+  }
+
+  export type AppointmentPetLoverUpsertWithWhereUniqueWithoutUserInput = {
+    where: AppointmentPetLoverWhereUniqueInput
+    update: XOR<AppointmentPetLoverUpdateWithoutUserInput, AppointmentPetLoverUncheckedUpdateWithoutUserInput>
+    create: XOR<AppointmentPetLoverCreateWithoutUserInput, AppointmentPetLoverUncheckedCreateWithoutUserInput>
+  }
+
+  export type AppointmentPetLoverUpdateWithWhereUniqueWithoutUserInput = {
+    where: AppointmentPetLoverWhereUniqueInput
+    data: XOR<AppointmentPetLoverUpdateWithoutUserInput, AppointmentPetLoverUncheckedUpdateWithoutUserInput>
+  }
+
+  export type AppointmentPetLoverUpdateManyWithWhereWithoutUserInput = {
+    where: AppointmentPetLoverScalarWhereInput
+    data: XOR<AppointmentPetLoverUpdateManyMutationInput, AppointmentPetLoverUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type AppointmentPetLoverScalarWhereInput = {
+    AND?: AppointmentPetLoverScalarWhereInput | AppointmentPetLoverScalarWhereInput[]
+    OR?: AppointmentPetLoverScalarWhereInput[]
+    NOT?: AppointmentPetLoverScalarWhereInput | AppointmentPetLoverScalarWhereInput[]
+    id?: StringFilter<"AppointmentPetLover"> | string
+    userId?: StringFilter<"AppointmentPetLover"> | string
+    petId?: StringFilter<"AppointmentPetLover"> | string
+    appointmentType?: StringFilter<"AppointmentPetLover"> | string
+    dateTime?: DateTimeFilter<"AppointmentPetLover"> | Date | string
+    location?: StringFilter<"AppointmentPetLover"> | string
+    createdAt?: DateTimeFilter<"AppointmentPetLover"> | Date | string
+  }
+
   export type UserCreateWithoutPostsInput = {
     id?: string
     email: string
@@ -25062,6 +32264,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPostsInput = {
@@ -25084,6 +32288,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPostsInput = {
@@ -25220,6 +32426,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPostsInput = {
@@ -25242,6 +32450,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type ReviewDIYHomesUpsertWithWhereUniqueWithoutPostInput = {
@@ -25328,6 +32538,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReviewsInput = {
@@ -25350,6 +32562,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReviewsInput = {
@@ -25443,6 +32657,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReviewsInput = {
@@ -25465,6 +32681,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutReviewsInput = {
@@ -25538,6 +32756,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutLikeInput = {
@@ -25560,6 +32780,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutLikeInput = {
@@ -25627,6 +32849,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLikeInput = {
@@ -25649,6 +32873,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutLikeInput = {
@@ -25706,6 +32932,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutBookmarksInput = {
@@ -25728,6 +32956,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutBookmarksInput = {
@@ -25795,6 +33025,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutBookmarksInput = {
@@ -25817,6 +33049,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutBookmarksInput = {
@@ -25874,6 +33108,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReportInput = {
@@ -25896,6 +33132,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReportInput = {
@@ -25986,6 +33224,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReportInput = {
@@ -26008,6 +33248,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PostDIYHomesUpsertWithoutReportInput = {
@@ -26094,6 +33336,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPlaceUrbanExplorerInput = {
@@ -26116,6 +33360,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPlaceUrbanExplorerInput = {
@@ -26252,6 +33498,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPlaceUrbanExplorerInput = {
@@ -26274,6 +33522,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type ReviewUrbanExplorerUpsertWithWhereUniqueWithoutPlaceInput = {
@@ -26360,6 +33610,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReviewUrbanExplorerInput = {
@@ -26382,6 +33634,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReviewUrbanExplorerInput = {
@@ -26479,6 +33733,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReviewUrbanExplorerInput = {
@@ -26501,6 +33757,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PlaceUrbanExplorerUpsertWithoutReviewsInput = {
@@ -26578,6 +33836,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutLikeUrbanExplorerInput = {
@@ -26600,6 +33860,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutLikeUrbanExplorerInput = {
@@ -26671,6 +33933,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLikeUrbanExplorerInput = {
@@ -26693,6 +33957,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PlaceUrbanExplorerUpsertWithoutLikesInput = {
@@ -26754,6 +34020,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutBookmarkUrbanExplorerInput = {
@@ -26776,6 +34044,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutBookmarkUrbanExplorerInput = {
@@ -26847,6 +34117,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutBookmarkUrbanExplorerInput = {
@@ -26869,6 +34141,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PlaceUrbanExplorerUpsertWithoutBookmarksInput = {
@@ -26930,6 +34204,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReportUrbanExplorerInput = {
@@ -26952,6 +34228,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReportUrbanExplorerInput = {
@@ -27046,6 +34324,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReportUrbanExplorerInput = {
@@ -27068,6 +34348,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type PlaceUrbanExplorerUpsertWithoutReportsInput = {
@@ -27158,6 +34440,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutFoodieFoodInput = {
@@ -27180,6 +34464,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutFoodieFoodInput = {
@@ -27294,6 +34580,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutFoodieFoodInput = {
@@ -27316,6 +34604,8 @@ export namespace Prisma {
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type FoodieLocationUpsertWithWhereUniqueWithoutFoodInput = {
@@ -27386,6 +34676,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutFoodieLocationInput = {
@@ -27408,6 +34700,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutFoodieLocationInput = {
@@ -27477,6 +34771,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutFoodieLocationInput = {
@@ -27499,6 +34795,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type FoodieFoodUpsertWithoutLocationsInput = {
@@ -27558,6 +34856,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutFoodieReviewInput = {
@@ -27580,6 +34880,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutFoodieReviewInput = {
@@ -27649,6 +34951,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutFoodieReviewInput = {
@@ -27671,6 +34975,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type FoodieFoodUpsertWithoutReviewsInput = {
@@ -27730,6 +35036,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
     FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutFoodieLikeInput = {
@@ -27752,6 +35060,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
     FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
     FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutFoodieLikeInput = {
@@ -27821,6 +35131,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
     FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutFoodieLikeInput = {
@@ -27843,6 +35155,8 @@ export namespace Prisma {
     FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
     FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
     FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type FoodieFoodUpsertWithoutLikesInput = {
@@ -27880,6 +35194,456 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     locations?: FoodieLocationUncheckedUpdateManyWithoutFoodNestedInput
     reviews?: FoodieReviewUncheckedUpdateManyWithoutFoodNestedInput
+  }
+
+  export type UserCreateWithoutPetPetLoverInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutPetPetLoverInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutPetPetLoverInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutPetPetLoverInput, UserUncheckedCreateWithoutPetPetLoverInput>
+  }
+
+  export type VaccinationPetLoverCreateWithoutPetInput = {
+    id?: string
+    vaccineName: string
+    dateAdministered: Date | string
+    nextDueDate?: Date | string | null
+    createdAt?: Date | string
+  }
+
+  export type VaccinationPetLoverUncheckedCreateWithoutPetInput = {
+    id?: string
+    vaccineName: string
+    dateAdministered: Date | string
+    nextDueDate?: Date | string | null
+    createdAt?: Date | string
+  }
+
+  export type VaccinationPetLoverCreateOrConnectWithoutPetInput = {
+    where: VaccinationPetLoverWhereUniqueInput
+    create: XOR<VaccinationPetLoverCreateWithoutPetInput, VaccinationPetLoverUncheckedCreateWithoutPetInput>
+  }
+
+  export type VaccinationPetLoverCreateManyPetInputEnvelope = {
+    data: VaccinationPetLoverCreateManyPetInput | VaccinationPetLoverCreateManyPetInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type AppointmentPetLoverCreateWithoutPetInput = {
+    id?: string
+    appointmentType: string
+    dateTime: Date | string
+    location: string
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutAppointmentPetLoverInput
+  }
+
+  export type AppointmentPetLoverUncheckedCreateWithoutPetInput = {
+    id?: string
+    userId: string
+    appointmentType: string
+    dateTime: Date | string
+    location: string
+    createdAt?: Date | string
+  }
+
+  export type AppointmentPetLoverCreateOrConnectWithoutPetInput = {
+    where: AppointmentPetLoverWhereUniqueInput
+    create: XOR<AppointmentPetLoverCreateWithoutPetInput, AppointmentPetLoverUncheckedCreateWithoutPetInput>
+  }
+
+  export type AppointmentPetLoverCreateManyPetInputEnvelope = {
+    data: AppointmentPetLoverCreateManyPetInput | AppointmentPetLoverCreateManyPetInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserUpsertWithoutPetPetLoverInput = {
+    update: XOR<UserUpdateWithoutPetPetLoverInput, UserUncheckedUpdateWithoutPetPetLoverInput>
+    create: XOR<UserCreateWithoutPetPetLoverInput, UserUncheckedCreateWithoutPetPetLoverInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutPetPetLoverInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutPetPetLoverInput, UserUncheckedUpdateWithoutPetPetLoverInput>
+  }
+
+  export type UserUpdateWithoutPetPetLoverInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutPetPetLoverInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    AppointmentPetLover?: AppointmentPetLoverUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type VaccinationPetLoverUpsertWithWhereUniqueWithoutPetInput = {
+    where: VaccinationPetLoverWhereUniqueInput
+    update: XOR<VaccinationPetLoverUpdateWithoutPetInput, VaccinationPetLoverUncheckedUpdateWithoutPetInput>
+    create: XOR<VaccinationPetLoverCreateWithoutPetInput, VaccinationPetLoverUncheckedCreateWithoutPetInput>
+  }
+
+  export type VaccinationPetLoverUpdateWithWhereUniqueWithoutPetInput = {
+    where: VaccinationPetLoverWhereUniqueInput
+    data: XOR<VaccinationPetLoverUpdateWithoutPetInput, VaccinationPetLoverUncheckedUpdateWithoutPetInput>
+  }
+
+  export type VaccinationPetLoverUpdateManyWithWhereWithoutPetInput = {
+    where: VaccinationPetLoverScalarWhereInput
+    data: XOR<VaccinationPetLoverUpdateManyMutationInput, VaccinationPetLoverUncheckedUpdateManyWithoutPetInput>
+  }
+
+  export type VaccinationPetLoverScalarWhereInput = {
+    AND?: VaccinationPetLoverScalarWhereInput | VaccinationPetLoverScalarWhereInput[]
+    OR?: VaccinationPetLoverScalarWhereInput[]
+    NOT?: VaccinationPetLoverScalarWhereInput | VaccinationPetLoverScalarWhereInput[]
+    id?: StringFilter<"VaccinationPetLover"> | string
+    petId?: StringFilter<"VaccinationPetLover"> | string
+    vaccineName?: StringFilter<"VaccinationPetLover"> | string
+    dateAdministered?: DateTimeFilter<"VaccinationPetLover"> | Date | string
+    nextDueDate?: DateTimeNullableFilter<"VaccinationPetLover"> | Date | string | null
+    createdAt?: DateTimeFilter<"VaccinationPetLover"> | Date | string
+  }
+
+  export type AppointmentPetLoverUpsertWithWhereUniqueWithoutPetInput = {
+    where: AppointmentPetLoverWhereUniqueInput
+    update: XOR<AppointmentPetLoverUpdateWithoutPetInput, AppointmentPetLoverUncheckedUpdateWithoutPetInput>
+    create: XOR<AppointmentPetLoverCreateWithoutPetInput, AppointmentPetLoverUncheckedCreateWithoutPetInput>
+  }
+
+  export type AppointmentPetLoverUpdateWithWhereUniqueWithoutPetInput = {
+    where: AppointmentPetLoverWhereUniqueInput
+    data: XOR<AppointmentPetLoverUpdateWithoutPetInput, AppointmentPetLoverUncheckedUpdateWithoutPetInput>
+  }
+
+  export type AppointmentPetLoverUpdateManyWithWhereWithoutPetInput = {
+    where: AppointmentPetLoverScalarWhereInput
+    data: XOR<AppointmentPetLoverUpdateManyMutationInput, AppointmentPetLoverUncheckedUpdateManyWithoutPetInput>
+  }
+
+  export type UserCreateWithoutAppointmentPetLoverInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutAppointmentPetLoverInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    group: string
+    createdAt?: Date | string
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedCreateNestedManyWithoutOwnerInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedCreateNestedManyWithoutUserInput
+    FoodieFood?: FoodieFoodUncheckedCreateNestedManyWithoutUserInput
+    FoodieLocation?: FoodieLocationUncheckedCreateNestedManyWithoutUserInput
+    FoodieReview?: FoodieReviewUncheckedCreateNestedManyWithoutUserInput
+    FoodieLike?: FoodieLikeUncheckedCreateNestedManyWithoutUserInput
+    PetPetLover?: PetPetLoverUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutAppointmentPetLoverInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutAppointmentPetLoverInput, UserUncheckedCreateWithoutAppointmentPetLoverInput>
+  }
+
+  export type PetPetLoverCreateWithoutAppointmentsInput = {
+    id?: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutPetPetLoverInput
+    vaccinations?: VaccinationPetLoverCreateNestedManyWithoutPetInput
+  }
+
+  export type PetPetLoverUncheckedCreateWithoutAppointmentsInput = {
+    id?: string
+    userId: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+    vaccinations?: VaccinationPetLoverUncheckedCreateNestedManyWithoutPetInput
+  }
+
+  export type PetPetLoverCreateOrConnectWithoutAppointmentsInput = {
+    where: PetPetLoverWhereUniqueInput
+    create: XOR<PetPetLoverCreateWithoutAppointmentsInput, PetPetLoverUncheckedCreateWithoutAppointmentsInput>
+  }
+
+  export type UserUpsertWithoutAppointmentPetLoverInput = {
+    update: XOR<UserUpdateWithoutAppointmentPetLoverInput, UserUncheckedUpdateWithoutAppointmentPetLoverInput>
+    create: XOR<UserCreateWithoutAppointmentPetLoverInput, UserUncheckedCreateWithoutAppointmentPetLoverInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutAppointmentPetLoverInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutAppointmentPetLoverInput, UserUncheckedUpdateWithoutAppointmentPetLoverInput>
+  }
+
+  export type UserUpdateWithoutAppointmentPetLoverInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutAppointmentPetLoverInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    group?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    PlaceUrbanExplorer?: PlaceUrbanExplorerUncheckedUpdateManyWithoutOwnerNestedInput
+    ReviewUrbanExplorer?: ReviewUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    LikeUrbanExplorer?: LikeUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    BookmarkUrbanExplorer?: BookmarkUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    ReportUrbanExplorer?: ReportUrbanExplorerUncheckedUpdateManyWithoutUserNestedInput
+    FoodieFood?: FoodieFoodUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLocation?: FoodieLocationUncheckedUpdateManyWithoutUserNestedInput
+    FoodieReview?: FoodieReviewUncheckedUpdateManyWithoutUserNestedInput
+    FoodieLike?: FoodieLikeUncheckedUpdateManyWithoutUserNestedInput
+    PetPetLover?: PetPetLoverUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type PetPetLoverUpsertWithoutAppointmentsInput = {
+    update: XOR<PetPetLoverUpdateWithoutAppointmentsInput, PetPetLoverUncheckedUpdateWithoutAppointmentsInput>
+    create: XOR<PetPetLoverCreateWithoutAppointmentsInput, PetPetLoverUncheckedCreateWithoutAppointmentsInput>
+    where?: PetPetLoverWhereInput
+  }
+
+  export type PetPetLoverUpdateToOneWithWhereWithoutAppointmentsInput = {
+    where?: PetPetLoverWhereInput
+    data: XOR<PetPetLoverUpdateWithoutAppointmentsInput, PetPetLoverUncheckedUpdateWithoutAppointmentsInput>
+  }
+
+  export type PetPetLoverUpdateWithoutAppointmentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutPetPetLoverNestedInput
+    vaccinations?: VaccinationPetLoverUpdateManyWithoutPetNestedInput
+  }
+
+  export type PetPetLoverUncheckedUpdateWithoutAppointmentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    vaccinations?: VaccinationPetLoverUncheckedUpdateManyWithoutPetNestedInput
+  }
+
+  export type PetPetLoverCreateWithoutVaccinationsInput = {
+    id?: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+    user: UserCreateNestedOneWithoutPetPetLoverInput
+    appointments?: AppointmentPetLoverCreateNestedManyWithoutPetInput
+  }
+
+  export type PetPetLoverUncheckedCreateWithoutVaccinationsInput = {
+    id?: string
+    userId: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+    appointments?: AppointmentPetLoverUncheckedCreateNestedManyWithoutPetInput
+  }
+
+  export type PetPetLoverCreateOrConnectWithoutVaccinationsInput = {
+    where: PetPetLoverWhereUniqueInput
+    create: XOR<PetPetLoverCreateWithoutVaccinationsInput, PetPetLoverUncheckedCreateWithoutVaccinationsInput>
+  }
+
+  export type PetPetLoverUpsertWithoutVaccinationsInput = {
+    update: XOR<PetPetLoverUpdateWithoutVaccinationsInput, PetPetLoverUncheckedUpdateWithoutVaccinationsInput>
+    create: XOR<PetPetLoverCreateWithoutVaccinationsInput, PetPetLoverUncheckedCreateWithoutVaccinationsInput>
+    where?: PetPetLoverWhereInput
+  }
+
+  export type PetPetLoverUpdateToOneWithWhereWithoutVaccinationsInput = {
+    where?: PetPetLoverWhereInput
+    data: XOR<PetPetLoverUpdateWithoutVaccinationsInput, PetPetLoverUncheckedUpdateWithoutVaccinationsInput>
+  }
+
+  export type PetPetLoverUpdateWithoutVaccinationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutPetPetLoverNestedInput
+    appointments?: AppointmentPetLoverUpdateManyWithoutPetNestedInput
+  }
+
+  export type PetPetLoverUncheckedUpdateWithoutVaccinationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    appointments?: AppointmentPetLoverUncheckedUpdateManyWithoutPetNestedInput
   }
 
   export type PostDIYHomesCreateManyUserInput = {
@@ -27986,6 +35750,25 @@ export namespace Prisma {
   export type FoodieLikeCreateManyUserInput = {
     id?: string
     foodId: string
+    createdAt?: Date | string
+  }
+
+  export type PetPetLoverCreateManyUserInput = {
+    id?: string
+    petName: string
+    species: string
+    breed: string
+    age: number
+    medicalHistory?: string | null
+    createdAt?: Date | string
+  }
+
+  export type AppointmentPetLoverCreateManyUserInput = {
+    id?: string
+    petId: string
+    appointmentType: string
+    dateTime: Date | string
+    location: string
     createdAt?: Date | string
   }
 
@@ -28333,6 +36116,67 @@ export namespace Prisma {
   export type FoodieLikeUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     foodId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PetPetLoverUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    vaccinations?: VaccinationPetLoverUpdateManyWithoutPetNestedInput
+    appointments?: AppointmentPetLoverUpdateManyWithoutPetNestedInput
+  }
+
+  export type PetPetLoverUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    vaccinations?: VaccinationPetLoverUncheckedUpdateManyWithoutPetNestedInput
+    appointments?: AppointmentPetLoverUncheckedUpdateManyWithoutPetNestedInput
+  }
+
+  export type PetPetLoverUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petName?: StringFieldUpdateOperationsInput | string
+    species?: StringFieldUpdateOperationsInput | string
+    breed?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    medicalHistory?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AppointmentPetLoverUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    pet?: PetPetLoverUpdateOneRequiredWithoutAppointmentsNestedInput
+  }
+
+  export type AppointmentPetLoverUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petId?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AppointmentPetLoverUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    petId?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -28717,6 +36561,74 @@ export namespace Prisma {
   export type FoodieLikeUncheckedUpdateManyWithoutFoodInput = {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type VaccinationPetLoverCreateManyPetInput = {
+    id?: string
+    vaccineName: string
+    dateAdministered: Date | string
+    nextDueDate?: Date | string | null
+    createdAt?: Date | string
+  }
+
+  export type AppointmentPetLoverCreateManyPetInput = {
+    id?: string
+    userId: string
+    appointmentType: string
+    dateTime: Date | string
+    location: string
+    createdAt?: Date | string
+  }
+
+  export type VaccinationPetLoverUpdateWithoutPetInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    vaccineName?: StringFieldUpdateOperationsInput | string
+    dateAdministered?: DateTimeFieldUpdateOperationsInput | Date | string
+    nextDueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type VaccinationPetLoverUncheckedUpdateWithoutPetInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    vaccineName?: StringFieldUpdateOperationsInput | string
+    dateAdministered?: DateTimeFieldUpdateOperationsInput | Date | string
+    nextDueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type VaccinationPetLoverUncheckedUpdateManyWithoutPetInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    vaccineName?: StringFieldUpdateOperationsInput | string
+    dateAdministered?: DateTimeFieldUpdateOperationsInput | Date | string
+    nextDueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AppointmentPetLoverUpdateWithoutPetInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutAppointmentPetLoverNestedInput
+  }
+
+  export type AppointmentPetLoverUncheckedUpdateWithoutPetInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AppointmentPetLoverUncheckedUpdateManyWithoutPetInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    appointmentType?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 

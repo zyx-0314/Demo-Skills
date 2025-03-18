@@ -43,7 +43,8 @@ describe("UrbanExplorer - Place & User Validation API Tests", () => {
       body: JSON.stringify({ id: testPlaceId }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
-    const res = await validatePlace(req, { params: { id: testPlaceId } });
+    const res = await validatePlace(req);
+    console.info("Report created:", res);
 
     expect(res.status).toBe(200);
     const place = await res.json();
@@ -59,6 +60,7 @@ describe("UrbanExplorer - Place & User Validation API Tests", () => {
     });
 
     const res = await reportPlace(req);
+    console.info("Report created:", res);
     expect(res.status).toBe(201); // ✅ Ensure successful report submission
   });
 

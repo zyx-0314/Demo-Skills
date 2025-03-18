@@ -247,6 +247,52 @@ exports.Prisma.FoodieLikeScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.PetPetLoverScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  petName: 'petName',
+  species: 'species',
+  breed: 'breed',
+  age: 'age',
+  medicalHistory: 'medicalHistory',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.AppointmentPetLoverScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  petId: 'petId',
+  appointmentType: 'appointmentType',
+  dateTime: 'dateTime',
+  location: 'location',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.VaccinationPetLoverScalarFieldEnum = {
+  id: 'id',
+  petId: 'petId',
+  vaccineName: 'vaccineName',
+  dateAdministered: 'dateAdministered',
+  nextDueDate: 'nextDueDate',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ClinicPetLoverScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  address: 'address',
+  phone: 'phone',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.StorePetLoverScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  address: 'address',
+  phone: 'phone',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -278,7 +324,12 @@ exports.Prisma.ModelName = {
   FoodieFood: 'FoodieFood',
   FoodieLocation: 'FoodieLocation',
   FoodieReview: 'FoodieReview',
-  FoodieLike: 'FoodieLike'
+  FoodieLike: 'FoodieLike',
+  PetPetLover: 'PetPetLover',
+  AppointmentPetLover: 'AppointmentPetLover',
+  VaccinationPetLover: 'VaccinationPetLover',
+  ClinicPetLover: 'ClinicPetLover',
+  StorePetLover: 'StorePetLover'
 };
 
 /**
