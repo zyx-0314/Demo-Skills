@@ -24,7 +24,22 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(report, { status: 201 });
   } catch (error) {
+    let message = "Failed to create report";
+    if (error instanceof Error) {
+      message = error.message;
+    }
     console.error("Error creating report:", error);
-    return NextResponse.json({ error: "Failed to create report" }, { status: 500 });
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
+}
+
+export async function GET() {
+  try {
+    console.log("Fetching all reports...");
+    const reports = await prisma.reportUrbanExplorer.findMany();
+    return NextResponse.json(reports, { status: 200 });
+  } catch (error) {
+    console.error("Error fetching reports:", error);
+    return NextResponse.json({ error: "Failed to fetch reports" }, { status: 500 });
   }
 }
