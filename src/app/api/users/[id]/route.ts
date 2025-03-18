@@ -45,3 +45,17 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
     return NextResponse.json({ error: "Failed to update user" }, { status: 500 });
   }
 }
+
+// ✅ Delete User (DELETE)
+export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+  try {
+    await prisma.user.delete({ where: { id: params.id } });
+
+    return NextResponse.json({ message: "User deleted successfully" }, { status: 200 });
+  } catch (error) {
+    let message = "Failed to create post";
+    if (error instanceof Error) message = error.message;
+    console.log(message);
+    return NextResponse.json({ error: "Failed to delete user" }, { status: 500 });
+  }
+}
