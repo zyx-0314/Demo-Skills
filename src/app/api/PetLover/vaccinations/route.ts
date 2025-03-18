@@ -3,34 +3,22 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient();
 
-export async function GET() {
-  try {
-    const vaccinations = await prisma.vaccinationPetLover.findMany();
-    return NextResponse.json(vaccinations, { status: 200 });
-  } catch (error) {
-    let errorMessage = "Failed to create vaccination";
-    if (error instanceof Error) {
-      errorMessage = error.message;
-    }
-
-    return NextResponse.json({ error: errorMessage }, { status: 500 });
-  }
-}
-
+// ✅ Create a New Vaccination Record (POST)
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const { petId, vaccineName, dateAdministered, nextDueDate } = await req.json();
+
+    if (!petId || !vaccineName || !dateAdministered) {
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    }
+
     const vaccination = await prisma.vaccinationPetLover.create({
-      data: { petId: body.petId, vaccineName: body.vaccineName, dateAdministered: new Date(body.dateAdministered), nextDueDate: body.nextDueDate ? new Date(body.nextDueDate) : null },
+      data: { petId, vaccineName, dateAdministered: new Date(dateAdministered), nextDueDate: nextDueDate ? new Date(nextDueDate) : null },
     });
 
     return NextResponse.json(vaccination, { status: 201 });
   } catch (error) {
-    let errorMessage = "Failed to create vaccination";
-    if (error instanceof Error) {
-      errorMessage = error.message;
-    }
-
-    return NextResponse.json({ error: errorMessage }, { status: 500 });
+    console.error("Error creating vaccination record:", error);
+    return NextResponse.json({ error: "Failed to create vaccination record" }, { status: 500 });
   }
 }

@@ -1,24 +1,30 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
+import { PrismaClient } from "@/../prisma/generated/postgresql";
 
-const prisma = new PostgresqlClient();
+const prisma = new PrismaClient();
 
-// ✅ Confirm food submission (Admin Only)
+// ✅ Validate a Food Submission (Admin Only) (POST)
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    console.log("Admin validating food submission:", params.id);
+    const { id } = params;
 
-    const body = await req.json();
-    const { validated } = body;
+    // Validate if the food item exists
+    const food = await prisma.foodieFood.findUnique({ where: { id } });
+    if (!food) {
+      return NextResponse.json({ error: "Food item not found" }, { status: 404 });
+    }
 
-    const updatedFood = await prisma.foodieFood.update({
-      where: { id: params.id },
-      data: { validated: validated },
+    // Update validation status
+    const validatedFood = await prisma.foodieFood.update({
+      where: { id },
+      data: { validated: true },
+      select: { id: true, name: true, validated: true },
     });
 
-    return NextResponse.json({ message: "Food submission validated", food: updatedFood }, { status: 200 });
+    return NextResponse.json(validatedFood, { status: 200 });
+
   } catch (error) {
-    console.error("Error validating food submission:", error);
-    return NextResponse.json({ error: "Failed to validate food" }, { status: 500 });
+    console.error("Error validating food item:", error);
+    return NextResponse.json({ error: "Failed to validate food item" }, { status: 500 });
   }
 }

@@ -3,14 +3,17 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient();
 
-// ✅ Fetch appointment by ID
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+// ✅ Get Appointment by ID (GET /{id})
+export async function GET(req: NextRequest) {
   try {
-    const appointment = await prisma.appointmentPetLover.findUnique({
-      where: { id: params.id },
-      include: { pet: true, user: true }, // Include related pet & user details
-    });
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
 
+    if (!id) {
+      return NextResponse.json({ error: "Appointment ID is required" }, { status: 400 });
+    }
+
+    const appointment = await prisma.appointmentPetLover.findUnique({ where: { id } });
     if (!appointment) {
       return NextResponse.json({ error: "Appointment not found" }, { status: 404 });
     }
@@ -22,22 +25,20 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
   }
 }
 
-// ✅ Update appointment details
-export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
+// ✅ Update Appointment (PUT /{id})
+export async function PUT(req: NextRequest) {
   try {
-    const body = await req.json();
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
+    const { appointmentType, dateTime, location } = await req.json();
 
-    if (!body.appointmentType || !body.dateTime || !body.location) {
+    if (!id || !appointmentType || !dateTime || !location) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
     const updatedAppointment = await prisma.appointmentPetLover.update({
-      where: { id: params.id },
-      data: {
-        appointmentType: body.appointmentType,
-        dateTime: new Date(body.dateTime),
-        location: body.location,
-      },
+      where: { id },
+      data: { appointmentType, dateTime: new Date(dateTime), location },
     });
 
     return NextResponse.json(updatedAppointment, { status: 200 });
@@ -47,13 +48,17 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
   }
 }
 
-// ✅ Delete appointment
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+// ✅ Delete Appointment (DELETE /{id})
+export async function DELETE(req: NextRequest) {
   try {
-    await prisma.appointmentPetLover.delete({
-      where: { id: params.id },
-    });
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
 
+    if (!id) {
+      return NextResponse.json({ error: "Appointment ID is required" }, { status: 400 });
+    }
+
+    await prisma.appointmentPetLover.delete({ where: { id } });
     return NextResponse.json({ message: "Appointment deleted successfully" }, { status: 200 });
   } catch (error) {
     console.error("Error deleting appointment:", error);

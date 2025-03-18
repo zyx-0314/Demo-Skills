@@ -3,35 +3,23 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient();
 
-// ✅ Fetch vaccination by ID
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+// ✅ Get All Vaccination Records for a Pet (GET)
+export async function GET(req: NextRequest) {
   try {
-    const vaccination = await prisma.vaccinationPetLover.findUnique({
-      where: { id: params.id },
-      include: { pet: true }, // Include pet details
-    });
+    const { searchParams } = new URL(req.url);
+    const petId = searchParams.get("petId");
 
-    if (!vaccination) {
-      return NextResponse.json({ error: "Vaccination record not found" }, { status: 404 });
+    if (!petId) {
+      return NextResponse.json({ error: "Pet ID is required" }, { status: 400 });
     }
 
-    return NextResponse.json(vaccination, { status: 200 });
-  } catch (error) {
-    console.error("Error fetching vaccination:", error);
-    return NextResponse.json({ error: "Failed to fetch vaccination" }, { status: 500 });
-  }
-}
-
-// ✅ Delete vaccination record
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
-  try {
-    await prisma.vaccinationPetLover.delete({
-      where: { id: params.id },
+    const vaccinations = await prisma.vaccinationPetLover.findMany({
+      where: { petId },
     });
 
-    return NextResponse.json({ message: "Vaccination record deleted successfully" }, { status: 200 });
+    return NextResponse.json(vaccinations, { status: 200 });
   } catch (error) {
-    console.error("Error deleting vaccination:", error);
-    return NextResponse.json({ error: "Failed to delete vaccination" }, { status: 500 });
+    console.error("Error fetching vaccination records:", error);
+    return NextResponse.json({ error: "Failed to fetch vaccination records" }, { status: 500 });
   }
 }

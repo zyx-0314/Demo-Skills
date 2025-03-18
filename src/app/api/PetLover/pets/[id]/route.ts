@@ -3,13 +3,17 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient();
 
-// ✅ Get pet by ID
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+// ✅ Get Pet by ID (GET /{id})
+export async function GET(req: NextRequest) {
   try {
-    const pet = await prisma.petPetLover.findUnique({
-      where: { id: params.id },
-    });
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
 
+    if (!id) {
+      return NextResponse.json({ error: "Pet ID is required" }, { status: 400 });
+    }
+
+    const pet = await prisma.petPetLover.findUnique({ where: { id } });
     if (!pet) {
       return NextResponse.json({ error: "Pet not found" }, { status: 404 });
     }
@@ -21,20 +25,20 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
   }
 }
 
-// ✅ Update pet
-export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
+// ✅ Update Pet (PUT /{id})
+export async function PUT(req: NextRequest) {
   try {
-    const body = await req.json();
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
+    const { petName, species, breed, age, medicalHistory } = await req.json();
+
+    if (!id || !petName || !species || !breed || age === undefined) {
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    }
 
     const updatedPet = await prisma.petPetLover.update({
-      where: { id: params.id },
-      data: {
-        petName: body.petName,
-        species: body.species,
-        breed: body.breed,
-        age: body.age,
-        medicalHistory: body.medicalHistory,
-      },
+      where: { id },
+      data: { petName, species, breed, age, medicalHistory },
     });
 
     return NextResponse.json(updatedPet, { status: 200 });
@@ -44,13 +48,17 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
   }
 }
 
-// ✅ Delete pet
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+// ✅ Delete Pet (DELETE /{id})
+export async function DELETE(req: NextRequest) {
   try {
-    await prisma.petPetLover.delete({
-      where: { id: params.id },
-    });
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get("id");
 
+    if (!id) {
+      return NextResponse.json({ error: "Pet ID is required" }, { status: 400 });
+    }
+
+    await prisma.petPetLover.delete({ where: { id } });
     return NextResponse.json({ message: "Pet deleted successfully" }, { status: 200 });
   } catch (error) {
     console.error("Error deleting pet:", error);

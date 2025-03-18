@@ -3,37 +3,17 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient();
 
-// ✅ Fetch all appointments
-export async function GET() {
-  try {
-    const appointments = await prisma.appointmentPetLover.findMany({
-      include: { pet: true, user: true },
-    });
-
-    return NextResponse.json(appointments, { status: 200 });
-  } catch (error) {
-    console.error("Error fetching appointments:", error);
-    return NextResponse.json({ error: "Failed to fetch appointments" }, { status: 500 });
-  }
-}
-
-// ✅ Create a new appointment
+// ✅ Create a New Appointment (POST)
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const { userId, petId, appointmentType, dateTime, location } = await req.json();
 
-    if (!body.userId || !body.petId || !body.appointmentType || !body.dateTime || !body.location) {
+    if (!userId || !petId || !appointmentType || !dateTime || !location) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
     const appointment = await prisma.appointmentPetLover.create({
-      data: {
-        userId: body.userId,
-        petId: body.petId,
-        appointmentType: body.appointmentType,
-        dateTime: new Date(body.dateTime),
-        location: body.location,
-      },
+      data: { userId, petId, appointmentType, dateTime: new Date(dateTime), location },
     });
 
     return NextResponse.json(appointment, { status: 201 });

@@ -3,39 +3,17 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient();
 
-// ✅ Fetch all pets
-export async function GET() {
-  try {
-    console.log("Fetching all pets...");
-    const pets = await prisma.petPetLover.findMany({
-      include: { user: true },
-    });
-
-    return NextResponse.json(pets, { status: 200 });
-  } catch (error) {
-    console.error("Error fetching pets:", error);
-    return NextResponse.json({ error: "Failed to fetch pets" }, { status: 500 });
-  }
-}
-
-// ✅ Create a new pet
+// ✅ Create a New Pet (POST)
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const { userId, petName, species, breed, age, medicalHistory } = await req.json();
 
-    if (!body.userId || !body.petName || !body.species || !body.breed || !body.age) {
+    if (!userId || !petName || !species || !breed || age === undefined) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
     const pet = await prisma.petPetLover.create({
-      data: {
-        userId: body.userId,
-        petName: body.petName,
-        species: body.species,
-        breed: body.breed,
-        age: body.age,
-        medicalHistory: body.medicalHistory || null,
-      },
+      data: { userId, petName, species, breed, age, medicalHistory },
     });
 
     return NextResponse.json(pet, { status: 201 });

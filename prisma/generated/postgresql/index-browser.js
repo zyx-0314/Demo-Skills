@@ -117,12 +117,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.UserScalarFieldEnum = {
+exports.Prisma.UserDIYHomesScalarFieldEnum = {
   id: 'id',
   email: 'email',
   name: 'name',
   password: 'password',
-  group: 'group',
   createdAt: 'createdAt'
 };
 
@@ -164,6 +163,14 @@ exports.Prisma.ReportDIYHomesScalarFieldEnum = {
   reviewId: 'reviewId',
   userId: 'userId',
   reason: 'reason',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserUrbanExplorerScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
   createdAt: 'createdAt'
 };
 
@@ -210,6 +217,14 @@ exports.Prisma.ReportUrbanExplorerScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.UserFoodieScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.FoodieFoodScalarFieldEnum = {
   id: 'id',
   name: 'name',
@@ -244,6 +259,14 @@ exports.Prisma.FoodieLikeScalarFieldEnum = {
   id: 'id',
   foodId: 'foodId',
   userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserPetLoverScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
   createdAt: 'createdAt'
 };
 
@@ -293,6 +316,14 @@ exports.Prisma.StorePetLoverScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.UserElderlyCareCompanionScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.ElderlyCareCompanionAppointmentScalarFieldEnum = {
   id: 'id',
   userId: 'userId',
@@ -329,6 +360,54 @@ exports.Prisma.ElderlyCareCompanionRecordScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.EventOrganizerUserScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.EventOrganizerTaskScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  description: 'description',
+  dueDate: 'dueDate',
+  status: 'status',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.EventOrganizerGuestScalarFieldEnum = {
+  id: 'id',
+  eventId: 'eventId',
+  name: 'name',
+  email: 'email',
+  phone: 'phone',
+  status: 'status',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.EventOrganizerVenueScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  location: 'location',
+  capacity: 'capacity',
+  amenities: 'amenities',
+  submittedBy: 'submittedBy',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.EventOrganizerServiceProviderScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  serviceType: 'serviceType',
+  contactInfo: 'contactInfo',
+  submittedBy: 'submittedBy',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -346,30 +425,39 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  User: 'User',
+  UserDIYHomes: 'UserDIYHomes',
   PostDIYHomes: 'PostDIYHomes',
   ReviewDIYHomes: 'ReviewDIYHomes',
   LikeDIYHomes: 'LikeDIYHomes',
   BookmarkDIYHomes: 'BookmarkDIYHomes',
   ReportDIYHomes: 'ReportDIYHomes',
+  UserUrbanExplorer: 'UserUrbanExplorer',
   PlaceUrbanExplorer: 'PlaceUrbanExplorer',
   ReviewUrbanExplorer: 'ReviewUrbanExplorer',
   LikeUrbanExplorer: 'LikeUrbanExplorer',
   BookmarkUrbanExplorer: 'BookmarkUrbanExplorer',
   ReportUrbanExplorer: 'ReportUrbanExplorer',
+  UserFoodie: 'UserFoodie',
   FoodieFood: 'FoodieFood',
   FoodieLocation: 'FoodieLocation',
   FoodieReview: 'FoodieReview',
   FoodieLike: 'FoodieLike',
+  UserPetLover: 'UserPetLover',
   PetPetLover: 'PetPetLover',
   AppointmentPetLover: 'AppointmentPetLover',
   VaccinationPetLover: 'VaccinationPetLover',
   ClinicPetLover: 'ClinicPetLover',
   StorePetLover: 'StorePetLover',
+  UserElderlyCareCompanion: 'UserElderlyCareCompanion',
   ElderlyCareCompanionAppointment: 'ElderlyCareCompanionAppointment',
   ElderlyCareCompanionClinic: 'ElderlyCareCompanionClinic',
   ElderlyCareCompanionStore: 'ElderlyCareCompanionStore',
-  ElderlyCareCompanionRecord: 'ElderlyCareCompanionRecord'
+  ElderlyCareCompanionRecord: 'ElderlyCareCompanionRecord',
+  EventOrganizerUser: 'EventOrganizerUser',
+  EventOrganizerTask: 'EventOrganizerTask',
+  EventOrganizerGuest: 'EventOrganizerGuest',
+  EventOrganizerVenue: 'EventOrganizerVenue',
+  EventOrganizerServiceProvider: 'EventOrganizerServiceProvider'
 };
 
 /**

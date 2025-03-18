@@ -1,24 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
+import { PrismaClient } from "@/../prisma/generated/postgresql";
 
-const prisma = new PostgresqlClient();
+const prisma = new PrismaClient();
 
-// ✅ Get a single food item by ID
+// ✅ Fetch a Single Food Item by ID (GET)
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    console.log("Fetching food by ID:", params.id);
+    const { id } = params;
 
     const food = await prisma.foodieFood.findUnique({
-      where: { id: params.id },
+      where: { id },
+      select: { id: true, name: true, cuisine: true, origin: true, description: true, createdAt: true },
     });
 
     if (!food) {
-      return NextResponse.json({ error: "Food not found" }, { status: 404 });
+      return NextResponse.json({ error: "Food item not found" }, { status: 404 });
     }
 
     return NextResponse.json(food, { status: 200 });
+
   } catch (error) {
-    console.error("Error fetching food:", error);
-    return NextResponse.json({ error: "Failed to fetch food" }, { status: 500 });
+    console.error("Error fetching food item:", error);
+    return NextResponse.json({ error: "Failed to fetch food item" }, { status: 500 });
   }
 }

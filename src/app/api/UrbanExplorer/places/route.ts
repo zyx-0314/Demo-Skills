@@ -3,47 +3,36 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient();
 
-/**
- * ✅ Get all places
- */
-export async function GET() {
-  try {
-    console.log("Fetching all places...");
-    const places = await prisma.placeUrbanExplorer.findMany();
-    console.log("Fetched places:", places);
-
-    return NextResponse.json(places, { status: 200 });
-  } catch (error) {
-    console.error("Error fetching places:", error);
-    return NextResponse.json({ error: "Failed to fetch places" }, { status: 500 });
-  }
-}
-
-/**
- * ✅ Create a new place
- */
+// ✅ Create Place (POST)
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    console.log("Received data:", body);
+    const { name, category, location, description, ownerId } = await req.json();
 
-    if (!body.name || !body.category || !body.location || !body.description || !body.ownerId) {
+    if (!name || !category || !location || !description || !ownerId) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
     const place = await prisma.placeUrbanExplorer.create({
-      data: {
-        name: body.name,
-        category: body.category,
-        location: body.location,
-        description: body.description,
-        ownerId: body.ownerId,
-      },
+      data: { name, category, location, description, ownerId },
     });
 
     return NextResponse.json(place, { status: 201 });
+
   } catch (error) {
-    console.error("Error creating place:", error);
     return NextResponse.json({ error: "Failed to create place" }, { status: 500 });
+  }
+}
+
+// ✅ Get All Places (GET)
+export async function GET(req: NextRequest) {
+  try {
+    const places = await prisma.placeUrbanExplorer.findMany({
+      select: { id: true, name: true, category: true, location: true, description: true, ownerId: true },
+    });
+
+    return NextResponse.json(places, { status: 200 });
+
+  } catch (error) {
+    return NextResponse.json({ error: "Failed to fetch places" }, { status: 500 });
   }
 }
