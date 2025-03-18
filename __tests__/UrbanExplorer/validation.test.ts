@@ -36,12 +36,11 @@ describe("UrbanExplorer - Place & User Validation API Tests", () => {
     testPlaceId = place.id; // ✅ Store the created place ID
   });
 
-
   // ✅ Validate a place (Admin only)
   it("should validate a place", async () => {
     const req = new NextRequest(`http://localhost:3000/api/UrbanExplorer/admin/places/${testPlaceId}/validate`, {
       method: "POST",
-      body: JSON.stringify({ placeId: testPlaceId }),
+      body: JSON.stringify({ id: testPlaceId }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
     const res = await validatePlace(req, { params: { id: testPlaceId } });
