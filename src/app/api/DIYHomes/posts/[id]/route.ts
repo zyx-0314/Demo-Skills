@@ -7,7 +7,7 @@ const prisma = new PostgresqlClient();
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     console.log(`Fetching post with ID: ${params.id}`); // Debugging log
-    const post = await prisma.post.findUnique({
+    const post = await prisma.postDIYHomes.findUnique({
       where: { id: params.id },
       include: { user: true },
     });
@@ -26,7 +26,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const { title, content, category } = await req.json();
-    const updatedPost = await prisma.post.update({
+    const updatedPost = await prisma.postDIYHomes.update({
       where: { id: params.id },
       data: { title, content, category },
     });
@@ -40,7 +40,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
 // ✅ Delete post
 export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    await prisma.post.delete({ where: { id: params.id } });
+    await prisma.postDIYHomes.delete({ where: { id: params.id } });
 
     return NextResponse.json({ message: "Post deleted successfully" }, { status: 200 });
   } catch (error) {

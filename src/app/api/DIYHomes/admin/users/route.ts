@@ -34,14 +34,14 @@ export async function DELETE(req: NextRequest) {
     }
 
     // ✅ Step 1: Delete all bookmarks & likes from the user
-    await prisma.like.deleteMany({ where: { userId } });
-    await prisma.bookmark.deleteMany({ where: { userId } });
+    await prisma.likeDIYHomes.deleteMany({ where: { userId } });
+    await prisma.bookmarkDIYHomes.deleteMany({ where: { userId } });
 
     // ✅ Step 2: Delete all user's posts, which cascade deletes related reviews & likes
-    await prisma.post.deleteMany({ where: { userId } });
+    await prisma.postDIYHomes.deleteMany({ where: { userId } });
 
     // ✅ Step 3: Delete all reports associated with the user
-    await prisma.report.deleteMany({ where: { userId } });
+    await prisma.reportDIYHomes.deleteMany({ where: { userId } });
 
     // ✅ Step 4: Finally delete the user
     await prisma.user.delete({ where: { id: userId } });

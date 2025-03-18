@@ -7,7 +7,7 @@ const prisma = new PostgresqlClient();
 export async function GET() {
   try {
     console.log("Fetching all posts..."); // Debugging log
-    const posts = await prisma.post.findMany({
+    const posts = await prisma.postDIYHomes.findMany({
       include: { user: true }, // ✅ Ensure this relation exists
     });
     console.log("Fetched posts:", posts); // Debugging log
@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
     if (!body.title || !body.content || !body.category || !body.userId)
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
 
-    const post = await prisma.post.create({
+    const post = await prisma.postDIYHomes.create({
       data: { title: body.title, content: body.content, category: body.category, userId: body.userId },
     });
 

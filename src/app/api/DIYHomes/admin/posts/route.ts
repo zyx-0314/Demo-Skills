@@ -6,7 +6,7 @@ const prisma = new PostgresqlClient();
 // ✅ Get all posts (Admin only)
 export async function GET() {
   try {
-    const posts = await prisma.post.findMany({
+    const posts = await prisma.postDIYHomes.findMany({
       include: { user: true },
     });
 
@@ -28,20 +28,20 @@ export async function DELETE(req: NextRequest) {
     console.log(`Deleting post: ${postId}`);
 
     // ✅ Step 1: Check if the post exists
-    const post = await prisma.post.findUnique({ where: { id: postId } });
+    const post = await prisma.postDIYHomes.findUnique({ where: { id: postId } });
     if (!post) {
       console.error("Post not found");
       return NextResponse.json({ error: "Post not found" }, { status: 404 });
     }
 
     // ✅ Step 2: Delete all related data (likes, bookmarks, reports, reviews)
-    await prisma.like.deleteMany({ where: { postId } });
-    await prisma.bookmark.deleteMany({ where: { postId } });
-    await prisma.report.deleteMany({ where: { postId } });
-    await prisma.review.deleteMany({ where: { postId } });
+    await prisma.likeDIYHomes.deleteMany({ where: { postId } });
+    await prisma.bookmarkDIYHomes.deleteMany({ where: { postId } });
+    await prisma.reportDIYHomes.deleteMany({ where: { postId } });
+    await prisma.reviewDIYHomes.deleteMany({ where: { postId } });
 
     // ✅ Step 3: Delete the post
-    await prisma.post.delete({ where: { id: postId } });
+    await prisma.postDIYHomes.delete({ where: { id: postId } });
 
     console.log(`Post ${postId} deleted successfully`);
     return NextResponse.json({ message: "Post deleted successfully" }, { status: 200 });

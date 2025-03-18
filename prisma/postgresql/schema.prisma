@@ -17,14 +17,14 @@ model User {
   group     String
   createdAt DateTime @default(now())
 
-  posts     Post[]
-  reviews   Review[]
-  bookmarks Bookmark[]
-  Like      Like[]
-  Report    Report[]
+  posts     PostDIYHomes[]
+  reviews   ReviewDIYHomes[]
+  bookmarks BookmarkDIYHomes[]
+  Like      LikeDIYHomes[]
+  Report    ReportDIYHomes[]
 }
 
-model Post {
+model PostDIYHomes {
   id        String   @id @default(uuid())
   title     String
   content   String
@@ -32,14 +32,14 @@ model Post {
   userId    String
   createdAt DateTime @default(now())
 
-  user      User       @relation(fields: [userId], references: [id])
-  reviews   Review[]
-  bookmarks Bookmark[]
-  Like      Like[]
-  Report    Report[]
+  user      User               @relation(fields: [userId], references: [id])
+  reviews   ReviewDIYHomes[]
+  bookmarks BookmarkDIYHomes[]
+  Like      LikeDIYHomes[]
+  Report    ReportDIYHomes[]
 }
 
-model Review {
+model ReviewDIYHomes {
   id        String   @id @default(uuid())
   postId    String
   userId    String
@@ -47,36 +47,36 @@ model Review {
   comment   String
   createdAt DateTime @default(now())
 
-  user   User     @relation(fields: [userId], references: [id])
-  post   Post     @relation(fields: [postId], references: [id])
-  Report Report[]
+  user   User             @relation(fields: [userId], references: [id])
+  post   PostDIYHomes     @relation(fields: [postId], references: [id])
+  Report ReportDIYHomes[]
 }
 
-model Like {
+model LikeDIYHomes {
   id        String   @id @default(uuid())
   postId    String
   userId    String
   createdAt DateTime @default(now())
 
-  user User @relation(fields: [userId], references: [id])
-  post Post @relation(fields: [postId], references: [id])
+  user User         @relation(fields: [userId], references: [id])
+  post PostDIYHomes @relation(fields: [postId], references: [id])
 
   @@unique([postId, userId])
 }
 
-model Bookmark {
+model BookmarkDIYHomes {
   id        String   @id @default(uuid())
   postId    String
   userId    String
   createdAt DateTime @default(now())
 
-  user User @relation(fields: [userId], references: [id])
-  post Post @relation(fields: [postId], references: [id])
+  user User         @relation(fields: [userId], references: [id])
+  post PostDIYHomes @relation(fields: [postId], references: [id])
 
   @@unique([postId, userId])
 }
 
-model Report {
+model ReportDIYHomes {
   id        String   @id @default(uuid())
   postId    String?
   reviewId  String?
@@ -84,7 +84,7 @@ model Report {
   reason    String
   createdAt DateTime @default(now())
 
-  user   User    @relation(fields: [userId], references: [id])
-  post   Post?   @relation(fields: [postId], references: [id])
-  review Review? @relation(fields: [reviewId], references: [id])
+  user   User            @relation(fields: [userId], references: [id])
+  post   PostDIYHomes?   @relation(fields: [postId], references: [id])
+  review ReviewDIYHomes? @relation(fields: [reviewId], references: [id])
 }

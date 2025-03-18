@@ -16,7 +16,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       return NextResponse.json({ error: "Rating must be between 1 and 5" }, { status: 400 });
     }
 
-    const updatedReview = await prisma.review.update({
+    const updatedReview = await prisma.reviewDIYHomes.update({
       where: { id: params.id },
       data: { rating, comment },
     });
@@ -31,7 +31,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
 // ✅ Delete a review
 export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    await prisma.review.delete({ where: { id: params.id } });
+    await prisma.reviewDIYHomes.delete({ where: { id: params.id } });
 
     return NextResponse.json({ message: "Review deleted successfully" }, { status: 200 });
   } catch (error) {

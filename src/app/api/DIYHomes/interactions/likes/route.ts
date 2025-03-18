@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Ensure user can only like once
-    const like = await prisma.like.upsert({
+    const like = await prisma.likeDIYHomes.upsert({
       where: { postId_userId: { postId, userId } },
       update: {}, // No changes needed if already exists
       create: { postId, userId },
@@ -33,7 +33,7 @@ export async function DELETE(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    await prisma.like.deleteMany({
+    await prisma.likeDIYHomes.deleteMany({
       where: { postId, userId },
     });
 

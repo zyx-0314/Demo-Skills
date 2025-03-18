@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: "postId is required" }, { status: 400 });
     }
 
-    const reviews = await prisma.review.findMany({
+    const reviews = await prisma.reviewDIYHomes.findMany({
       where: { postId },
       include: { user: true }, // Include user details
     });
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Rating must be between 1 and 5" }, { status: 400 });
     }
 
-    const review = await prisma.review.create({
+    const review = await prisma.reviewDIYHomes.create({
       data: { postId, userId, rating, comment },
     });
 

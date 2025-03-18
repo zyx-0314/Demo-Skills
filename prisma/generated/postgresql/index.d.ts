@@ -19,30 +19,30 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
  */
 export type User = $Result.DefaultSelection<Prisma.$UserPayload>
 /**
- * Model Post
+ * Model PostDIYHomes
  * 
  */
-export type Post = $Result.DefaultSelection<Prisma.$PostPayload>
+export type PostDIYHomes = $Result.DefaultSelection<Prisma.$PostDIYHomesPayload>
 /**
- * Model Review
+ * Model ReviewDIYHomes
  * 
  */
-export type Review = $Result.DefaultSelection<Prisma.$ReviewPayload>
+export type ReviewDIYHomes = $Result.DefaultSelection<Prisma.$ReviewDIYHomesPayload>
 /**
- * Model Like
+ * Model LikeDIYHomes
  * 
  */
-export type Like = $Result.DefaultSelection<Prisma.$LikePayload>
+export type LikeDIYHomes = $Result.DefaultSelection<Prisma.$LikeDIYHomesPayload>
 /**
- * Model Bookmark
+ * Model BookmarkDIYHomes
  * 
  */
-export type Bookmark = $Result.DefaultSelection<Prisma.$BookmarkPayload>
+export type BookmarkDIYHomes = $Result.DefaultSelection<Prisma.$BookmarkDIYHomesPayload>
 /**
- * Model Report
+ * Model ReportDIYHomes
  * 
  */
-export type Report = $Result.DefaultSelection<Prisma.$ReportPayload>
+export type ReportDIYHomes = $Result.DefaultSelection<Prisma.$ReportDIYHomesPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -180,54 +180,54 @@ export class PrismaClient<
   get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.post`: Exposes CRUD operations for the **Post** model.
+   * `prisma.postDIYHomes`: Exposes CRUD operations for the **PostDIYHomes** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Posts
-    * const posts = await prisma.post.findMany()
+    * // Fetch zero or more PostDIYHomes
+    * const postDIYHomes = await prisma.postDIYHomes.findMany()
     * ```
     */
-  get post(): Prisma.PostDelegate<ExtArgs, ClientOptions>;
+  get postDIYHomes(): Prisma.PostDIYHomesDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.review`: Exposes CRUD operations for the **Review** model.
+   * `prisma.reviewDIYHomes`: Exposes CRUD operations for the **ReviewDIYHomes** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Reviews
-    * const reviews = await prisma.review.findMany()
+    * // Fetch zero or more ReviewDIYHomes
+    * const reviewDIYHomes = await prisma.reviewDIYHomes.findMany()
     * ```
     */
-  get review(): Prisma.ReviewDelegate<ExtArgs, ClientOptions>;
+  get reviewDIYHomes(): Prisma.ReviewDIYHomesDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.like`: Exposes CRUD operations for the **Like** model.
+   * `prisma.likeDIYHomes`: Exposes CRUD operations for the **LikeDIYHomes** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Likes
-    * const likes = await prisma.like.findMany()
+    * // Fetch zero or more LikeDIYHomes
+    * const likeDIYHomes = await prisma.likeDIYHomes.findMany()
     * ```
     */
-  get like(): Prisma.LikeDelegate<ExtArgs, ClientOptions>;
+  get likeDIYHomes(): Prisma.LikeDIYHomesDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.bookmark`: Exposes CRUD operations for the **Bookmark** model.
+   * `prisma.bookmarkDIYHomes`: Exposes CRUD operations for the **BookmarkDIYHomes** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Bookmarks
-    * const bookmarks = await prisma.bookmark.findMany()
+    * // Fetch zero or more BookmarkDIYHomes
+    * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.findMany()
     * ```
     */
-  get bookmark(): Prisma.BookmarkDelegate<ExtArgs, ClientOptions>;
+  get bookmarkDIYHomes(): Prisma.BookmarkDIYHomesDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.report`: Exposes CRUD operations for the **Report** model.
+   * `prisma.reportDIYHomes`: Exposes CRUD operations for the **ReportDIYHomes** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Reports
-    * const reports = await prisma.report.findMany()
+    * // Fetch zero or more ReportDIYHomes
+    * const reportDIYHomes = await prisma.reportDIYHomes.findMany()
     * ```
     */
-  get report(): Prisma.ReportDelegate<ExtArgs, ClientOptions>;
+  get reportDIYHomes(): Prisma.ReportDIYHomesDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -669,11 +669,11 @@ export namespace Prisma {
 
   export const ModelName: {
     User: 'User',
-    Post: 'Post',
-    Review: 'Review',
-    Like: 'Like',
-    Bookmark: 'Bookmark',
-    Report: 'Report'
+    PostDIYHomes: 'PostDIYHomes',
+    ReviewDIYHomes: 'ReviewDIYHomes',
+    LikeDIYHomes: 'LikeDIYHomes',
+    BookmarkDIYHomes: 'BookmarkDIYHomes',
+    ReportDIYHomes: 'ReportDIYHomes'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -692,7 +692,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "post" | "review" | "like" | "bookmark" | "report"
+      modelProps: "user" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -770,373 +770,373 @@ export namespace Prisma {
           }
         }
       }
-      Post: {
-        payload: Prisma.$PostPayload<ExtArgs>
-        fields: Prisma.PostFieldRefs
+      PostDIYHomes: {
+        payload: Prisma.$PostDIYHomesPayload<ExtArgs>
+        fields: Prisma.PostDIYHomesFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.PostFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload> | null
+            args: Prisma.PostDIYHomesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.PostFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.PostDIYHomesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload>
           }
           findFirst: {
-            args: Prisma.PostFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload> | null
+            args: Prisma.PostDIYHomesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.PostFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.PostDIYHomesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload>
           }
           findMany: {
-            args: Prisma.PostFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>[]
+            args: Prisma.PostDIYHomesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload>[]
           }
           create: {
-            args: Prisma.PostCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.PostDIYHomesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload>
           }
           createMany: {
-            args: Prisma.PostCreateManyArgs<ExtArgs>
+            args: Prisma.PostDIYHomesCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.PostCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>[]
+            args: Prisma.PostDIYHomesCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload>[]
           }
           delete: {
-            args: Prisma.PostDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.PostDIYHomesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload>
           }
           update: {
-            args: Prisma.PostUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.PostDIYHomesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload>
           }
           deleteMany: {
-            args: Prisma.PostDeleteManyArgs<ExtArgs>
+            args: Prisma.PostDIYHomesDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.PostUpdateManyArgs<ExtArgs>
+            args: Prisma.PostDIYHomesUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.PostUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>[]
+            args: Prisma.PostDIYHomesUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload>[]
           }
           upsert: {
-            args: Prisma.PostUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.PostDIYHomesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PostDIYHomesPayload>
           }
           aggregate: {
-            args: Prisma.PostAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregatePost>
+            args: Prisma.PostDIYHomesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregatePostDIYHomes>
           }
           groupBy: {
-            args: Prisma.PostGroupByArgs<ExtArgs>
-            result: $Utils.Optional<PostGroupByOutputType>[]
+            args: Prisma.PostDIYHomesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<PostDIYHomesGroupByOutputType>[]
           }
           count: {
-            args: Prisma.PostCountArgs<ExtArgs>
-            result: $Utils.Optional<PostCountAggregateOutputType> | number
+            args: Prisma.PostDIYHomesCountArgs<ExtArgs>
+            result: $Utils.Optional<PostDIYHomesCountAggregateOutputType> | number
           }
         }
       }
-      Review: {
-        payload: Prisma.$ReviewPayload<ExtArgs>
-        fields: Prisma.ReviewFieldRefs
+      ReviewDIYHomes: {
+        payload: Prisma.$ReviewDIYHomesPayload<ExtArgs>
+        fields: Prisma.ReviewDIYHomesFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.ReviewFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload> | null
+            args: Prisma.ReviewDIYHomesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.ReviewFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>
+            args: Prisma.ReviewDIYHomesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload>
           }
           findFirst: {
-            args: Prisma.ReviewFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload> | null
+            args: Prisma.ReviewDIYHomesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.ReviewFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>
+            args: Prisma.ReviewDIYHomesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload>
           }
           findMany: {
-            args: Prisma.ReviewFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>[]
+            args: Prisma.ReviewDIYHomesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload>[]
           }
           create: {
-            args: Prisma.ReviewCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>
+            args: Prisma.ReviewDIYHomesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload>
           }
           createMany: {
-            args: Prisma.ReviewCreateManyArgs<ExtArgs>
+            args: Prisma.ReviewDIYHomesCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.ReviewCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>[]
+            args: Prisma.ReviewDIYHomesCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload>[]
           }
           delete: {
-            args: Prisma.ReviewDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>
+            args: Prisma.ReviewDIYHomesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload>
           }
           update: {
-            args: Prisma.ReviewUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>
+            args: Prisma.ReviewDIYHomesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload>
           }
           deleteMany: {
-            args: Prisma.ReviewDeleteManyArgs<ExtArgs>
+            args: Prisma.ReviewDIYHomesDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.ReviewUpdateManyArgs<ExtArgs>
+            args: Prisma.ReviewDIYHomesUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.ReviewUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>[]
+            args: Prisma.ReviewDIYHomesUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload>[]
           }
           upsert: {
-            args: Prisma.ReviewUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>
+            args: Prisma.ReviewDIYHomesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewDIYHomesPayload>
           }
           aggregate: {
-            args: Prisma.ReviewAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateReview>
+            args: Prisma.ReviewDIYHomesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateReviewDIYHomes>
           }
           groupBy: {
-            args: Prisma.ReviewGroupByArgs<ExtArgs>
-            result: $Utils.Optional<ReviewGroupByOutputType>[]
+            args: Prisma.ReviewDIYHomesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ReviewDIYHomesGroupByOutputType>[]
           }
           count: {
-            args: Prisma.ReviewCountArgs<ExtArgs>
-            result: $Utils.Optional<ReviewCountAggregateOutputType> | number
+            args: Prisma.ReviewDIYHomesCountArgs<ExtArgs>
+            result: $Utils.Optional<ReviewDIYHomesCountAggregateOutputType> | number
           }
         }
       }
-      Like: {
-        payload: Prisma.$LikePayload<ExtArgs>
-        fields: Prisma.LikeFieldRefs
+      LikeDIYHomes: {
+        payload: Prisma.$LikeDIYHomesPayload<ExtArgs>
+        fields: Prisma.LikeDIYHomesFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.LikeFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload> | null
+            args: Prisma.LikeDIYHomesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.LikeFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload>
+            args: Prisma.LikeDIYHomesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload>
           }
           findFirst: {
-            args: Prisma.LikeFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload> | null
+            args: Prisma.LikeDIYHomesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.LikeFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload>
+            args: Prisma.LikeDIYHomesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload>
           }
           findMany: {
-            args: Prisma.LikeFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload>[]
+            args: Prisma.LikeDIYHomesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload>[]
           }
           create: {
-            args: Prisma.LikeCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload>
+            args: Prisma.LikeDIYHomesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload>
           }
           createMany: {
-            args: Prisma.LikeCreateManyArgs<ExtArgs>
+            args: Prisma.LikeDIYHomesCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.LikeCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload>[]
+            args: Prisma.LikeDIYHomesCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload>[]
           }
           delete: {
-            args: Prisma.LikeDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload>
+            args: Prisma.LikeDIYHomesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload>
           }
           update: {
-            args: Prisma.LikeUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload>
+            args: Prisma.LikeDIYHomesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload>
           }
           deleteMany: {
-            args: Prisma.LikeDeleteManyArgs<ExtArgs>
+            args: Prisma.LikeDIYHomesDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.LikeUpdateManyArgs<ExtArgs>
+            args: Prisma.LikeDIYHomesUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.LikeUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload>[]
+            args: Prisma.LikeDIYHomesUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload>[]
           }
           upsert: {
-            args: Prisma.LikeUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LikePayload>
+            args: Prisma.LikeDIYHomesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeDIYHomesPayload>
           }
           aggregate: {
-            args: Prisma.LikeAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateLike>
+            args: Prisma.LikeDIYHomesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLikeDIYHomes>
           }
           groupBy: {
-            args: Prisma.LikeGroupByArgs<ExtArgs>
-            result: $Utils.Optional<LikeGroupByOutputType>[]
+            args: Prisma.LikeDIYHomesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LikeDIYHomesGroupByOutputType>[]
           }
           count: {
-            args: Prisma.LikeCountArgs<ExtArgs>
-            result: $Utils.Optional<LikeCountAggregateOutputType> | number
+            args: Prisma.LikeDIYHomesCountArgs<ExtArgs>
+            result: $Utils.Optional<LikeDIYHomesCountAggregateOutputType> | number
           }
         }
       }
-      Bookmark: {
-        payload: Prisma.$BookmarkPayload<ExtArgs>
-        fields: Prisma.BookmarkFieldRefs
+      BookmarkDIYHomes: {
+        payload: Prisma.$BookmarkDIYHomesPayload<ExtArgs>
+        fields: Prisma.BookmarkDIYHomesFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.BookmarkFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload> | null
+            args: Prisma.BookmarkDIYHomesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.BookmarkFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
+            args: Prisma.BookmarkDIYHomesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload>
           }
           findFirst: {
-            args: Prisma.BookmarkFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload> | null
+            args: Prisma.BookmarkDIYHomesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.BookmarkFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
+            args: Prisma.BookmarkDIYHomesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload>
           }
           findMany: {
-            args: Prisma.BookmarkFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>[]
+            args: Prisma.BookmarkDIYHomesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload>[]
           }
           create: {
-            args: Prisma.BookmarkCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
+            args: Prisma.BookmarkDIYHomesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload>
           }
           createMany: {
-            args: Prisma.BookmarkCreateManyArgs<ExtArgs>
+            args: Prisma.BookmarkDIYHomesCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.BookmarkCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>[]
+            args: Prisma.BookmarkDIYHomesCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload>[]
           }
           delete: {
-            args: Prisma.BookmarkDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
+            args: Prisma.BookmarkDIYHomesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload>
           }
           update: {
-            args: Prisma.BookmarkUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
+            args: Prisma.BookmarkDIYHomesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload>
           }
           deleteMany: {
-            args: Prisma.BookmarkDeleteManyArgs<ExtArgs>
+            args: Prisma.BookmarkDIYHomesDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.BookmarkUpdateManyArgs<ExtArgs>
+            args: Prisma.BookmarkDIYHomesUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.BookmarkUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>[]
+            args: Prisma.BookmarkDIYHomesUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload>[]
           }
           upsert: {
-            args: Prisma.BookmarkUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
+            args: Prisma.BookmarkDIYHomesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkDIYHomesPayload>
           }
           aggregate: {
-            args: Prisma.BookmarkAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateBookmark>
+            args: Prisma.BookmarkDIYHomesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateBookmarkDIYHomes>
           }
           groupBy: {
-            args: Prisma.BookmarkGroupByArgs<ExtArgs>
-            result: $Utils.Optional<BookmarkGroupByOutputType>[]
+            args: Prisma.BookmarkDIYHomesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<BookmarkDIYHomesGroupByOutputType>[]
           }
           count: {
-            args: Prisma.BookmarkCountArgs<ExtArgs>
-            result: $Utils.Optional<BookmarkCountAggregateOutputType> | number
+            args: Prisma.BookmarkDIYHomesCountArgs<ExtArgs>
+            result: $Utils.Optional<BookmarkDIYHomesCountAggregateOutputType> | number
           }
         }
       }
-      Report: {
-        payload: Prisma.$ReportPayload<ExtArgs>
-        fields: Prisma.ReportFieldRefs
+      ReportDIYHomes: {
+        payload: Prisma.$ReportDIYHomesPayload<ExtArgs>
+        fields: Prisma.ReportDIYHomesFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.ReportFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload> | null
+            args: Prisma.ReportDIYHomesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.ReportFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload>
+            args: Prisma.ReportDIYHomesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload>
           }
           findFirst: {
-            args: Prisma.ReportFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload> | null
+            args: Prisma.ReportDIYHomesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.ReportFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload>
+            args: Prisma.ReportDIYHomesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload>
           }
           findMany: {
-            args: Prisma.ReportFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload>[]
+            args: Prisma.ReportDIYHomesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload>[]
           }
           create: {
-            args: Prisma.ReportCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload>
+            args: Prisma.ReportDIYHomesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload>
           }
           createMany: {
-            args: Prisma.ReportCreateManyArgs<ExtArgs>
+            args: Prisma.ReportDIYHomesCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.ReportCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload>[]
+            args: Prisma.ReportDIYHomesCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload>[]
           }
           delete: {
-            args: Prisma.ReportDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload>
+            args: Prisma.ReportDIYHomesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload>
           }
           update: {
-            args: Prisma.ReportUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload>
+            args: Prisma.ReportDIYHomesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload>
           }
           deleteMany: {
-            args: Prisma.ReportDeleteManyArgs<ExtArgs>
+            args: Prisma.ReportDIYHomesDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.ReportUpdateManyArgs<ExtArgs>
+            args: Prisma.ReportDIYHomesUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.ReportUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload>[]
+            args: Prisma.ReportDIYHomesUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload>[]
           }
           upsert: {
-            args: Prisma.ReportUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReportPayload>
+            args: Prisma.ReportDIYHomesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportDIYHomesPayload>
           }
           aggregate: {
-            args: Prisma.ReportAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateReport>
+            args: Prisma.ReportDIYHomesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateReportDIYHomes>
           }
           groupBy: {
-            args: Prisma.ReportGroupByArgs<ExtArgs>
-            result: $Utils.Optional<ReportGroupByOutputType>[]
+            args: Prisma.ReportDIYHomesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ReportDIYHomesGroupByOutputType>[]
           }
           count: {
-            args: Prisma.ReportCountArgs<ExtArgs>
-            result: $Utils.Optional<ReportCountAggregateOutputType> | number
+            args: Prisma.ReportDIYHomesCountArgs<ExtArgs>
+            result: $Utils.Optional<ReportDIYHomesCountAggregateOutputType> | number
           }
         }
       }
@@ -1225,11 +1225,11 @@ export namespace Prisma {
   }
   export type GlobalOmitConfig = {
     user?: UserOmit
-    post?: PostOmit
-    review?: ReviewOmit
-    like?: LikeOmit
-    bookmark?: BookmarkOmit
-    report?: ReportOmit
+    postDIYHomes?: PostDIYHomesOmit
+    reviewDIYHomes?: ReviewDIYHomesOmit
+    likeDIYHomes?: LikeDIYHomesOmit
+    bookmarkDIYHomes?: BookmarkDIYHomesOmit
+    reportDIYHomes?: ReportDIYHomesOmit
   }
 
   /* Types for Logging */
@@ -1354,124 +1354,124 @@ export namespace Prisma {
    * UserCountOutputType without action
    */
   export type UserCountOutputTypeCountPostsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: PostWhereInput
+    where?: PostDIYHomesWhereInput
   }
 
   /**
    * UserCountOutputType without action
    */
   export type UserCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ReviewWhereInput
+    where?: ReviewDIYHomesWhereInput
   }
 
   /**
    * UserCountOutputType without action
    */
   export type UserCountOutputTypeCountBookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: BookmarkWhereInput
+    where?: BookmarkDIYHomesWhereInput
   }
 
   /**
    * UserCountOutputType without action
    */
   export type UserCountOutputTypeCountLikeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: LikeWhereInput
+    where?: LikeDIYHomesWhereInput
   }
 
   /**
    * UserCountOutputType without action
    */
   export type UserCountOutputTypeCountReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ReportWhereInput
+    where?: ReportDIYHomesWhereInput
   }
 
 
   /**
-   * Count Type PostCountOutputType
+   * Count Type PostDIYHomesCountOutputType
    */
 
-  export type PostCountOutputType = {
+  export type PostDIYHomesCountOutputType = {
     reviews: number
     bookmarks: number
     Like: number
     Report: number
   }
 
-  export type PostCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    reviews?: boolean | PostCountOutputTypeCountReviewsArgs
-    bookmarks?: boolean | PostCountOutputTypeCountBookmarksArgs
-    Like?: boolean | PostCountOutputTypeCountLikeArgs
-    Report?: boolean | PostCountOutputTypeCountReportArgs
+  export type PostDIYHomesCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reviews?: boolean | PostDIYHomesCountOutputTypeCountReviewsArgs
+    bookmarks?: boolean | PostDIYHomesCountOutputTypeCountBookmarksArgs
+    Like?: boolean | PostDIYHomesCountOutputTypeCountLikeArgs
+    Report?: boolean | PostDIYHomesCountOutputTypeCountReportArgs
   }
 
   // Custom InputTypes
   /**
-   * PostCountOutputType without action
+   * PostDIYHomesCountOutputType without action
    */
-  export type PostCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the PostCountOutputType
+     * Select specific fields to fetch from the PostDIYHomesCountOutputType
      */
-    select?: PostCountOutputTypeSelect<ExtArgs> | null
+    select?: PostDIYHomesCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * PostCountOutputType without action
+   * PostDIYHomesCountOutputType without action
    */
-  export type PostCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ReviewWhereInput
+  export type PostDIYHomesCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewDIYHomesWhereInput
   }
 
   /**
-   * PostCountOutputType without action
+   * PostDIYHomesCountOutputType without action
    */
-  export type PostCountOutputTypeCountBookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: BookmarkWhereInput
+  export type PostDIYHomesCountOutputTypeCountBookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: BookmarkDIYHomesWhereInput
   }
 
   /**
-   * PostCountOutputType without action
+   * PostDIYHomesCountOutputType without action
    */
-  export type PostCountOutputTypeCountLikeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: LikeWhereInput
+  export type PostDIYHomesCountOutputTypeCountLikeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LikeDIYHomesWhereInput
   }
 
   /**
-   * PostCountOutputType without action
+   * PostDIYHomesCountOutputType without action
    */
-  export type PostCountOutputTypeCountReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ReportWhereInput
+  export type PostDIYHomesCountOutputTypeCountReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportDIYHomesWhereInput
   }
 
 
   /**
-   * Count Type ReviewCountOutputType
+   * Count Type ReviewDIYHomesCountOutputType
    */
 
-  export type ReviewCountOutputType = {
+  export type ReviewDIYHomesCountOutputType = {
     Report: number
   }
 
-  export type ReviewCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    Report?: boolean | ReviewCountOutputTypeCountReportArgs
+  export type ReviewDIYHomesCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    Report?: boolean | ReviewDIYHomesCountOutputTypeCountReportArgs
   }
 
   // Custom InputTypes
   /**
-   * ReviewCountOutputType without action
+   * ReviewDIYHomesCountOutputType without action
    */
-  export type ReviewCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ReviewCountOutputType
+     * Select specific fields to fetch from the ReviewDIYHomesCountOutputType
      */
-    select?: ReviewCountOutputTypeSelect<ExtArgs> | null
+    select?: ReviewDIYHomesCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * ReviewCountOutputType without action
+   * ReviewDIYHomesCountOutputType without action
    */
-  export type ReviewCountOutputTypeCountReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ReportWhereInput
+  export type ReviewDIYHomesCountOutputTypeCountReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportDIYHomesWhereInput
   }
 
 
@@ -1701,11 +1701,11 @@ export namespace Prisma {
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
     objects: {
-      posts: Prisma.$PostPayload<ExtArgs>[]
-      reviews: Prisma.$ReviewPayload<ExtArgs>[]
-      bookmarks: Prisma.$BookmarkPayload<ExtArgs>[]
-      Like: Prisma.$LikePayload<ExtArgs>[]
-      Report: Prisma.$ReportPayload<ExtArgs>[]
+      posts: Prisma.$PostDIYHomesPayload<ExtArgs>[]
+      reviews: Prisma.$ReviewDIYHomesPayload<ExtArgs>[]
+      bookmarks: Prisma.$BookmarkDIYHomesPayload<ExtArgs>[]
+      Like: Prisma.$LikeDIYHomesPayload<ExtArgs>[]
+      Report: Prisma.$ReportDIYHomesPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -2108,11 +2108,11 @@ export namespace Prisma {
    */
   export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    posts<T extends User$postsArgs<ExtArgs> = {}>(args?: Subset<T, User$postsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    reviews<T extends User$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, User$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    bookmarks<T extends User$bookmarksArgs<ExtArgs> = {}>(args?: Subset<T, User$bookmarksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    Like<T extends User$LikeArgs<ExtArgs> = {}>(args?: Subset<T, User$LikeArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    Report<T extends User$ReportArgs<ExtArgs> = {}>(args?: Subset<T, User$ReportArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    posts<T extends User$postsArgs<ExtArgs> = {}>(args?: Subset<T, User$postsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reviews<T extends User$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, User$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    bookmarks<T extends User$bookmarksArgs<ExtArgs> = {}>(args?: Subset<T, User$bookmarksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    Like<T extends User$LikeArgs<ExtArgs> = {}>(args?: Subset<T, User$LikeArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    Report<T extends User$ReportArgs<ExtArgs> = {}>(args?: Subset<T, User$ReportArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2540,23 +2540,23 @@ export namespace Prisma {
    */
   export type User$postsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
-    where?: PostWhereInput
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
-    cursor?: PostWhereUniqueInput
+    include?: PostDIYHomesInclude<ExtArgs> | null
+    where?: PostDIYHomesWhereInput
+    orderBy?: PostDIYHomesOrderByWithRelationInput | PostDIYHomesOrderByWithRelationInput[]
+    cursor?: PostDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: PostScalarFieldEnum | PostScalarFieldEnum[]
+    distinct?: PostDIYHomesScalarFieldEnum | PostDIYHomesScalarFieldEnum[]
   }
 
   /**
@@ -2564,23 +2564,23 @@ export namespace Prisma {
    */
   export type User$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
-    where?: ReviewWhereInput
-    orderBy?: ReviewOrderByWithRelationInput | ReviewOrderByWithRelationInput[]
-    cursor?: ReviewWhereUniqueInput
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
+    where?: ReviewDIYHomesWhereInput
+    orderBy?: ReviewDIYHomesOrderByWithRelationInput | ReviewDIYHomesOrderByWithRelationInput[]
+    cursor?: ReviewDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: ReviewScalarFieldEnum | ReviewScalarFieldEnum[]
+    distinct?: ReviewDIYHomesScalarFieldEnum | ReviewDIYHomesScalarFieldEnum[]
   }
 
   /**
@@ -2588,23 +2588,23 @@ export namespace Prisma {
    */
   export type User$bookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
-    where?: BookmarkWhereInput
-    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
-    cursor?: BookmarkWhereUniqueInput
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
+    where?: BookmarkDIYHomesWhereInput
+    orderBy?: BookmarkDIYHomesOrderByWithRelationInput | BookmarkDIYHomesOrderByWithRelationInput[]
+    cursor?: BookmarkDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: BookmarkScalarFieldEnum | BookmarkScalarFieldEnum[]
+    distinct?: BookmarkDIYHomesScalarFieldEnum | BookmarkDIYHomesScalarFieldEnum[]
   }
 
   /**
@@ -2612,23 +2612,23 @@ export namespace Prisma {
    */
   export type User$LikeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
-    where?: LikeWhereInput
-    orderBy?: LikeOrderByWithRelationInput | LikeOrderByWithRelationInput[]
-    cursor?: LikeWhereUniqueInput
+    include?: LikeDIYHomesInclude<ExtArgs> | null
+    where?: LikeDIYHomesWhereInput
+    orderBy?: LikeDIYHomesOrderByWithRelationInput | LikeDIYHomesOrderByWithRelationInput[]
+    cursor?: LikeDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: LikeScalarFieldEnum | LikeScalarFieldEnum[]
+    distinct?: LikeDIYHomesScalarFieldEnum | LikeDIYHomesScalarFieldEnum[]
   }
 
   /**
@@ -2636,23 +2636,23 @@ export namespace Prisma {
    */
   export type User$ReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
-    where?: ReportWhereInput
-    orderBy?: ReportOrderByWithRelationInput | ReportOrderByWithRelationInput[]
-    cursor?: ReportWhereUniqueInput
+    include?: ReportDIYHomesInclude<ExtArgs> | null
+    where?: ReportDIYHomesWhereInput
+    orderBy?: ReportDIYHomesOrderByWithRelationInput | ReportDIYHomesOrderByWithRelationInput[]
+    cursor?: ReportDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: ReportScalarFieldEnum | ReportScalarFieldEnum[]
+    distinct?: ReportDIYHomesScalarFieldEnum | ReportDIYHomesScalarFieldEnum[]
   }
 
   /**
@@ -2675,16 +2675,16 @@ export namespace Prisma {
 
 
   /**
-   * Model Post
+   * Model PostDIYHomes
    */
 
-  export type AggregatePost = {
-    _count: PostCountAggregateOutputType | null
-    _min: PostMinAggregateOutputType | null
-    _max: PostMaxAggregateOutputType | null
+  export type AggregatePostDIYHomes = {
+    _count: PostDIYHomesCountAggregateOutputType | null
+    _min: PostDIYHomesMinAggregateOutputType | null
+    _max: PostDIYHomesMaxAggregateOutputType | null
   }
 
-  export type PostMinAggregateOutputType = {
+  export type PostDIYHomesMinAggregateOutputType = {
     id: string | null
     title: string | null
     content: string | null
@@ -2693,7 +2693,7 @@ export namespace Prisma {
     createdAt: Date | null
   }
 
-  export type PostMaxAggregateOutputType = {
+  export type PostDIYHomesMaxAggregateOutputType = {
     id: string | null
     title: string | null
     content: string | null
@@ -2702,7 +2702,7 @@ export namespace Prisma {
     createdAt: Date | null
   }
 
-  export type PostCountAggregateOutputType = {
+  export type PostDIYHomesCountAggregateOutputType = {
     id: number
     title: number
     content: number
@@ -2713,7 +2713,7 @@ export namespace Prisma {
   }
 
 
-  export type PostMinAggregateInputType = {
+  export type PostDIYHomesMinAggregateInputType = {
     id?: true
     title?: true
     content?: true
@@ -2722,7 +2722,7 @@ export namespace Prisma {
     createdAt?: true
   }
 
-  export type PostMaxAggregateInputType = {
+  export type PostDIYHomesMaxAggregateInputType = {
     id?: true
     title?: true
     content?: true
@@ -2731,7 +2731,7 @@ export namespace Prisma {
     createdAt?: true
   }
 
-  export type PostCountAggregateInputType = {
+  export type PostDIYHomesCountAggregateInputType = {
     id?: true
     title?: true
     content?: true
@@ -2741,105 +2741,105 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type PostAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Post to aggregate.
+     * Filter which PostDIYHomes to aggregate.
      */
-    where?: PostWhereInput
+    where?: PostDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Posts to fetch.
+     * Determine the order of PostDIYHomes to fetch.
      */
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
+    orderBy?: PostDIYHomesOrderByWithRelationInput | PostDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: PostWhereUniqueInput
+    cursor?: PostDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Posts from the position of the cursor.
+     * Take `±n` PostDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Posts.
+     * Skip the first `n` PostDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Posts
+     * Count returned PostDIYHomes
     **/
-    _count?: true | PostCountAggregateInputType
+    _count?: true | PostDIYHomesCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: PostMinAggregateInputType
+    _min?: PostDIYHomesMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: PostMaxAggregateInputType
+    _max?: PostDIYHomesMaxAggregateInputType
   }
 
-  export type GetPostAggregateType<T extends PostAggregateArgs> = {
-        [P in keyof T & keyof AggregatePost]: P extends '_count' | 'count'
+  export type GetPostDIYHomesAggregateType<T extends PostDIYHomesAggregateArgs> = {
+        [P in keyof T & keyof AggregatePostDIYHomes]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregatePost[P]>
-      : GetScalarType<T[P], AggregatePost[P]>
+        : GetScalarType<T[P], AggregatePostDIYHomes[P]>
+      : GetScalarType<T[P], AggregatePostDIYHomes[P]>
   }
 
 
 
 
-  export type PostGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: PostWhereInput
-    orderBy?: PostOrderByWithAggregationInput | PostOrderByWithAggregationInput[]
-    by: PostScalarFieldEnum[] | PostScalarFieldEnum
-    having?: PostScalarWhereWithAggregatesInput
+  export type PostDIYHomesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PostDIYHomesWhereInput
+    orderBy?: PostDIYHomesOrderByWithAggregationInput | PostDIYHomesOrderByWithAggregationInput[]
+    by: PostDIYHomesScalarFieldEnum[] | PostDIYHomesScalarFieldEnum
+    having?: PostDIYHomesScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: PostCountAggregateInputType | true
-    _min?: PostMinAggregateInputType
-    _max?: PostMaxAggregateInputType
+    _count?: PostDIYHomesCountAggregateInputType | true
+    _min?: PostDIYHomesMinAggregateInputType
+    _max?: PostDIYHomesMaxAggregateInputType
   }
 
-  export type PostGroupByOutputType = {
+  export type PostDIYHomesGroupByOutputType = {
     id: string
     title: string
     content: string
     category: string
     userId: string
     createdAt: Date
-    _count: PostCountAggregateOutputType | null
-    _min: PostMinAggregateOutputType | null
-    _max: PostMaxAggregateOutputType | null
+    _count: PostDIYHomesCountAggregateOutputType | null
+    _min: PostDIYHomesMinAggregateOutputType | null
+    _max: PostDIYHomesMaxAggregateOutputType | null
   }
 
-  type GetPostGroupByPayload<T extends PostGroupByArgs> = Prisma.PrismaPromise<
+  type GetPostDIYHomesGroupByPayload<T extends PostDIYHomesGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<PostGroupByOutputType, T['by']> &
+      PickEnumerable<PostDIYHomesGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof PostGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof PostDIYHomesGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], PostGroupByOutputType[P]>
-            : GetScalarType<T[P], PostGroupByOutputType[P]>
+              : GetScalarType<T[P], PostDIYHomesGroupByOutputType[P]>
+            : GetScalarType<T[P], PostDIYHomesGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type PostSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PostDIYHomesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
     content?: boolean
@@ -2847,14 +2847,14 @@ export namespace Prisma {
     userId?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    reviews?: boolean | Post$reviewsArgs<ExtArgs>
-    bookmarks?: boolean | Post$bookmarksArgs<ExtArgs>
-    Like?: boolean | Post$LikeArgs<ExtArgs>
-    Report?: boolean | Post$ReportArgs<ExtArgs>
-    _count?: boolean | PostCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["post"]>
+    reviews?: boolean | PostDIYHomes$reviewsArgs<ExtArgs>
+    bookmarks?: boolean | PostDIYHomes$bookmarksArgs<ExtArgs>
+    Like?: boolean | PostDIYHomes$LikeArgs<ExtArgs>
+    Report?: boolean | PostDIYHomes$ReportArgs<ExtArgs>
+    _count?: boolean | PostDIYHomesCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["postDIYHomes"]>
 
-  export type PostSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PostDIYHomesSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
     content?: boolean
@@ -2862,9 +2862,9 @@ export namespace Prisma {
     userId?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["post"]>
+  }, ExtArgs["result"]["postDIYHomes"]>
 
-  export type PostSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PostDIYHomesSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
     content?: boolean
@@ -2872,9 +2872,9 @@ export namespace Prisma {
     userId?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["post"]>
+  }, ExtArgs["result"]["postDIYHomes"]>
 
-  export type PostSelectScalar = {
+  export type PostDIYHomesSelectScalar = {
     id?: boolean
     title?: boolean
     content?: boolean
@@ -2883,30 +2883,30 @@ export namespace Prisma {
     createdAt?: boolean
   }
 
-  export type PostOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "content" | "category" | "userId" | "createdAt", ExtArgs["result"]["post"]>
-  export type PostInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "content" | "category" | "userId" | "createdAt", ExtArgs["result"]["postDIYHomes"]>
+  export type PostDIYHomesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    reviews?: boolean | Post$reviewsArgs<ExtArgs>
-    bookmarks?: boolean | Post$bookmarksArgs<ExtArgs>
-    Like?: boolean | Post$LikeArgs<ExtArgs>
-    Report?: boolean | Post$ReportArgs<ExtArgs>
-    _count?: boolean | PostCountOutputTypeDefaultArgs<ExtArgs>
+    reviews?: boolean | PostDIYHomes$reviewsArgs<ExtArgs>
+    bookmarks?: boolean | PostDIYHomes$bookmarksArgs<ExtArgs>
+    Like?: boolean | PostDIYHomes$LikeArgs<ExtArgs>
+    Report?: boolean | PostDIYHomes$ReportArgs<ExtArgs>
+    _count?: boolean | PostDIYHomesCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type PostIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
-  export type PostIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
 
-  export type $PostPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Post"
+  export type $PostDIYHomesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "PostDIYHomes"
     objects: {
       user: Prisma.$UserPayload<ExtArgs>
-      reviews: Prisma.$ReviewPayload<ExtArgs>[]
-      bookmarks: Prisma.$BookmarkPayload<ExtArgs>[]
-      Like: Prisma.$LikePayload<ExtArgs>[]
-      Report: Prisma.$ReportPayload<ExtArgs>[]
+      reviews: Prisma.$ReviewDIYHomesPayload<ExtArgs>[]
+      bookmarks: Prisma.$BookmarkDIYHomesPayload<ExtArgs>[]
+      Like: Prisma.$LikeDIYHomesPayload<ExtArgs>[]
+      Report: Prisma.$ReportDIYHomesPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -2915,136 +2915,136 @@ export namespace Prisma {
       category: string
       userId: string
       createdAt: Date
-    }, ExtArgs["result"]["post"]>
+    }, ExtArgs["result"]["postDIYHomes"]>
     composites: {}
   }
 
-  type PostGetPayload<S extends boolean | null | undefined | PostDefaultArgs> = $Result.GetResult<Prisma.$PostPayload, S>
+  type PostDIYHomesGetPayload<S extends boolean | null | undefined | PostDIYHomesDefaultArgs> = $Result.GetResult<Prisma.$PostDIYHomesPayload, S>
 
-  type PostCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<PostFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: PostCountAggregateInputType | true
+  type PostDIYHomesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<PostDIYHomesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: PostDIYHomesCountAggregateInputType | true
     }
 
-  export interface PostDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Post'], meta: { name: 'Post' } }
+  export interface PostDIYHomesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['PostDIYHomes'], meta: { name: 'PostDIYHomes' } }
     /**
-     * Find zero or one Post that matches the filter.
-     * @param {PostFindUniqueArgs} args - Arguments to find a Post
+     * Find zero or one PostDIYHomes that matches the filter.
+     * @param {PostDIYHomesFindUniqueArgs} args - Arguments to find a PostDIYHomes
      * @example
-     * // Get one Post
-     * const post = await prisma.post.findUnique({
+     * // Get one PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends PostFindUniqueArgs>(args: SelectSubset<T, PostFindUniqueArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends PostDIYHomesFindUniqueArgs>(args: SelectSubset<T, PostDIYHomesFindUniqueArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Post that matches the filter or throw an error with `error.code='P2025'`
+     * Find one PostDIYHomes that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {PostFindUniqueOrThrowArgs} args - Arguments to find a Post
+     * @param {PostDIYHomesFindUniqueOrThrowArgs} args - Arguments to find a PostDIYHomes
      * @example
-     * // Get one Post
-     * const post = await prisma.post.findUniqueOrThrow({
+     * // Get one PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends PostFindUniqueOrThrowArgs>(args: SelectSubset<T, PostFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends PostDIYHomesFindUniqueOrThrowArgs>(args: SelectSubset<T, PostDIYHomesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Post that matches the filter.
+     * Find the first PostDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostFindFirstArgs} args - Arguments to find a Post
+     * @param {PostDIYHomesFindFirstArgs} args - Arguments to find a PostDIYHomes
      * @example
-     * // Get one Post
-     * const post = await prisma.post.findFirst({
+     * // Get one PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends PostFindFirstArgs>(args?: SelectSubset<T, PostFindFirstArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends PostDIYHomesFindFirstArgs>(args?: SelectSubset<T, PostDIYHomesFindFirstArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Post that matches the filter or
+     * Find the first PostDIYHomes that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostFindFirstOrThrowArgs} args - Arguments to find a Post
+     * @param {PostDIYHomesFindFirstOrThrowArgs} args - Arguments to find a PostDIYHomes
      * @example
-     * // Get one Post
-     * const post = await prisma.post.findFirstOrThrow({
+     * // Get one PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends PostFindFirstOrThrowArgs>(args?: SelectSubset<T, PostFindFirstOrThrowArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends PostDIYHomesFindFirstOrThrowArgs>(args?: SelectSubset<T, PostDIYHomesFindFirstOrThrowArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Posts that matches the filter.
+     * Find zero or more PostDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {PostDIYHomesFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Posts
-     * const posts = await prisma.post.findMany()
+     * // Get all PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.findMany()
      * 
-     * // Get first 10 Posts
-     * const posts = await prisma.post.findMany({ take: 10 })
+     * // Get first 10 PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const postWithIdOnly = await prisma.post.findMany({ select: { id: true } })
+     * const postDIYHomesWithIdOnly = await prisma.postDIYHomes.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends PostFindManyArgs>(args?: SelectSubset<T, PostFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends PostDIYHomesFindManyArgs>(args?: SelectSubset<T, PostDIYHomesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Post.
-     * @param {PostCreateArgs} args - Arguments to create a Post.
+     * Create a PostDIYHomes.
+     * @param {PostDIYHomesCreateArgs} args - Arguments to create a PostDIYHomes.
      * @example
-     * // Create one Post
-     * const Post = await prisma.post.create({
+     * // Create one PostDIYHomes
+     * const PostDIYHomes = await prisma.postDIYHomes.create({
      *   data: {
-     *     // ... data to create a Post
+     *     // ... data to create a PostDIYHomes
      *   }
      * })
      * 
      */
-    create<T extends PostCreateArgs>(args: SelectSubset<T, PostCreateArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends PostDIYHomesCreateArgs>(args: SelectSubset<T, PostDIYHomesCreateArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Posts.
-     * @param {PostCreateManyArgs} args - Arguments to create many Posts.
+     * Create many PostDIYHomes.
+     * @param {PostDIYHomesCreateManyArgs} args - Arguments to create many PostDIYHomes.
      * @example
-     * // Create many Posts
-     * const post = await prisma.post.createMany({
+     * // Create many PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends PostCreateManyArgs>(args?: SelectSubset<T, PostCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends PostDIYHomesCreateManyArgs>(args?: SelectSubset<T, PostDIYHomesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Posts and returns the data saved in the database.
-     * @param {PostCreateManyAndReturnArgs} args - Arguments to create many Posts.
+     * Create many PostDIYHomes and returns the data saved in the database.
+     * @param {PostDIYHomesCreateManyAndReturnArgs} args - Arguments to create many PostDIYHomes.
      * @example
-     * // Create many Posts
-     * const post = await prisma.post.createManyAndReturn({
+     * // Create many PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Posts and only return the `id`
-     * const postWithIdOnly = await prisma.post.createManyAndReturn({
+     * // Create many PostDIYHomes and only return the `id`
+     * const postDIYHomesWithIdOnly = await prisma.postDIYHomes.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -3054,28 +3054,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends PostCreateManyAndReturnArgs>(args?: SelectSubset<T, PostCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends PostDIYHomesCreateManyAndReturnArgs>(args?: SelectSubset<T, PostDIYHomesCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Post.
-     * @param {PostDeleteArgs} args - Arguments to delete one Post.
+     * Delete a PostDIYHomes.
+     * @param {PostDIYHomesDeleteArgs} args - Arguments to delete one PostDIYHomes.
      * @example
-     * // Delete one Post
-     * const Post = await prisma.post.delete({
+     * // Delete one PostDIYHomes
+     * const PostDIYHomes = await prisma.postDIYHomes.delete({
      *   where: {
-     *     // ... filter to delete one Post
+     *     // ... filter to delete one PostDIYHomes
      *   }
      * })
      * 
      */
-    delete<T extends PostDeleteArgs>(args: SelectSubset<T, PostDeleteArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends PostDIYHomesDeleteArgs>(args: SelectSubset<T, PostDIYHomesDeleteArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Post.
-     * @param {PostUpdateArgs} args - Arguments to update one Post.
+     * Update one PostDIYHomes.
+     * @param {PostDIYHomesUpdateArgs} args - Arguments to update one PostDIYHomes.
      * @example
-     * // Update one Post
-     * const post = await prisma.post.update({
+     * // Update one PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3085,30 +3085,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends PostUpdateArgs>(args: SelectSubset<T, PostUpdateArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends PostDIYHomesUpdateArgs>(args: SelectSubset<T, PostDIYHomesUpdateArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Posts.
-     * @param {PostDeleteManyArgs} args - Arguments to filter Posts to delete.
+     * Delete zero or more PostDIYHomes.
+     * @param {PostDIYHomesDeleteManyArgs} args - Arguments to filter PostDIYHomes to delete.
      * @example
-     * // Delete a few Posts
-     * const { count } = await prisma.post.deleteMany({
+     * // Delete a few PostDIYHomes
+     * const { count } = await prisma.postDIYHomes.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends PostDeleteManyArgs>(args?: SelectSubset<T, PostDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends PostDIYHomesDeleteManyArgs>(args?: SelectSubset<T, PostDIYHomesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Posts.
+     * Update zero or more PostDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {PostDIYHomesUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Posts
-     * const post = await prisma.post.updateMany({
+     * // Update many PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3118,14 +3118,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends PostUpdateManyArgs>(args: SelectSubset<T, PostUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends PostDIYHomesUpdateManyArgs>(args: SelectSubset<T, PostDIYHomesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Posts and returns the data updated in the database.
-     * @param {PostUpdateManyAndReturnArgs} args - Arguments to update many Posts.
+     * Update zero or more PostDIYHomes and returns the data updated in the database.
+     * @param {PostDIYHomesUpdateManyAndReturnArgs} args - Arguments to update many PostDIYHomes.
      * @example
-     * // Update many Posts
-     * const post = await prisma.post.updateManyAndReturn({
+     * // Update many PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3134,8 +3134,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Posts and only return the `id`
-     * const postWithIdOnly = await prisma.post.updateManyAndReturn({
+     * // Update zero or more PostDIYHomes and only return the `id`
+     * const postDIYHomesWithIdOnly = await prisma.postDIYHomes.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -3148,56 +3148,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends PostUpdateManyAndReturnArgs>(args: SelectSubset<T, PostUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends PostDIYHomesUpdateManyAndReturnArgs>(args: SelectSubset<T, PostDIYHomesUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Post.
-     * @param {PostUpsertArgs} args - Arguments to update or create a Post.
+     * Create or update one PostDIYHomes.
+     * @param {PostDIYHomesUpsertArgs} args - Arguments to update or create a PostDIYHomes.
      * @example
-     * // Update or create a Post
-     * const post = await prisma.post.upsert({
+     * // Update or create a PostDIYHomes
+     * const postDIYHomes = await prisma.postDIYHomes.upsert({
      *   create: {
-     *     // ... data to create a Post
+     *     // ... data to create a PostDIYHomes
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Post we want to update
+     *     // ... the filter for the PostDIYHomes we want to update
      *   }
      * })
      */
-    upsert<T extends PostUpsertArgs>(args: SelectSubset<T, PostUpsertArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends PostDIYHomesUpsertArgs>(args: SelectSubset<T, PostDIYHomesUpsertArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Posts.
+     * Count the number of PostDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostCountArgs} args - Arguments to filter Posts to count.
+     * @param {PostDIYHomesCountArgs} args - Arguments to filter PostDIYHomes to count.
      * @example
-     * // Count the number of Posts
-     * const count = await prisma.post.count({
+     * // Count the number of PostDIYHomes
+     * const count = await prisma.postDIYHomes.count({
      *   where: {
-     *     // ... the filter for the Posts we want to count
+     *     // ... the filter for the PostDIYHomes we want to count
      *   }
      * })
     **/
-    count<T extends PostCountArgs>(
-      args?: Subset<T, PostCountArgs>,
+    count<T extends PostDIYHomesCountArgs>(
+      args?: Subset<T, PostDIYHomesCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], PostCountAggregateOutputType>
+          : GetScalarType<T['select'], PostDIYHomesCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Post.
+     * Allows you to perform aggregations operations on a PostDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {PostDIYHomesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -3217,13 +3217,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends PostAggregateArgs>(args: Subset<T, PostAggregateArgs>): Prisma.PrismaPromise<GetPostAggregateType<T>>
+    aggregate<T extends PostDIYHomesAggregateArgs>(args: Subset<T, PostDIYHomesAggregateArgs>): Prisma.PrismaPromise<GetPostDIYHomesAggregateType<T>>
 
     /**
-     * Group by Post.
+     * Group by PostDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostGroupByArgs} args - Group by arguments.
+     * @param {PostDIYHomesGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -3238,14 +3238,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends PostGroupByArgs,
+      T extends PostDIYHomesGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: PostGroupByArgs['orderBy'] }
-        : { orderBy?: PostGroupByArgs['orderBy'] },
+        ? { orderBy: PostDIYHomesGroupByArgs['orderBy'] }
+        : { orderBy?: PostDIYHomesGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -3294,26 +3294,26 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, PostGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPostGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, PostDIYHomesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPostDIYHomesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Post model
+   * Fields of the PostDIYHomes model
    */
-  readonly fields: PostFieldRefs;
+  readonly fields: PostDIYHomesFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Post.
+   * The delegate class that acts as a "Promise-like" for PostDIYHomes.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__PostClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__PostDIYHomesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    reviews<T extends Post$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, Post$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    bookmarks<T extends Post$bookmarksArgs<ExtArgs> = {}>(args?: Subset<T, Post$bookmarksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    Like<T extends Post$LikeArgs<ExtArgs> = {}>(args?: Subset<T, Post$LikeArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    Report<T extends Post$ReportArgs<ExtArgs> = {}>(args?: Subset<T, Post$ReportArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reviews<T extends PostDIYHomes$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, PostDIYHomes$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    bookmarks<T extends PostDIYHomes$bookmarksArgs<ExtArgs> = {}>(args?: Subset<T, PostDIYHomes$bookmarksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    Like<T extends PostDIYHomes$LikeArgs<ExtArgs> = {}>(args?: Subset<T, PostDIYHomes$LikeArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    Report<T extends PostDIYHomes$ReportArgs<ExtArgs> = {}>(args?: Subset<T, PostDIYHomes$ReportArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3340,546 +3340,546 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Post model
+   * Fields of the PostDIYHomes model
    */ 
-  interface PostFieldRefs {
-    readonly id: FieldRef<"Post", 'String'>
-    readonly title: FieldRef<"Post", 'String'>
-    readonly content: FieldRef<"Post", 'String'>
-    readonly category: FieldRef<"Post", 'String'>
-    readonly userId: FieldRef<"Post", 'String'>
-    readonly createdAt: FieldRef<"Post", 'DateTime'>
+  interface PostDIYHomesFieldRefs {
+    readonly id: FieldRef<"PostDIYHomes", 'String'>
+    readonly title: FieldRef<"PostDIYHomes", 'String'>
+    readonly content: FieldRef<"PostDIYHomes", 'String'>
+    readonly category: FieldRef<"PostDIYHomes", 'String'>
+    readonly userId: FieldRef<"PostDIYHomes", 'String'>
+    readonly createdAt: FieldRef<"PostDIYHomes", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Post findUnique
+   * PostDIYHomes findUnique
    */
-  export type PostFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Post to fetch.
+     * Filter, which PostDIYHomes to fetch.
      */
-    where: PostWhereUniqueInput
+    where: PostDIYHomesWhereUniqueInput
   }
 
   /**
-   * Post findUniqueOrThrow
+   * PostDIYHomes findUniqueOrThrow
    */
-  export type PostFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Post to fetch.
+     * Filter, which PostDIYHomes to fetch.
      */
-    where: PostWhereUniqueInput
+    where: PostDIYHomesWhereUniqueInput
   }
 
   /**
-   * Post findFirst
+   * PostDIYHomes findFirst
    */
-  export type PostFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Post to fetch.
+     * Filter, which PostDIYHomes to fetch.
      */
-    where?: PostWhereInput
+    where?: PostDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Posts to fetch.
+     * Determine the order of PostDIYHomes to fetch.
      */
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
+    orderBy?: PostDIYHomesOrderByWithRelationInput | PostDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Posts.
+     * Sets the position for searching for PostDIYHomes.
      */
-    cursor?: PostWhereUniqueInput
+    cursor?: PostDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Posts from the position of the cursor.
+     * Take `±n` PostDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Posts.
+     * Skip the first `n` PostDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Posts.
+     * Filter by unique combinations of PostDIYHomes.
      */
-    distinct?: PostScalarFieldEnum | PostScalarFieldEnum[]
+    distinct?: PostDIYHomesScalarFieldEnum | PostDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Post findFirstOrThrow
+   * PostDIYHomes findFirstOrThrow
    */
-  export type PostFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Post to fetch.
+     * Filter, which PostDIYHomes to fetch.
      */
-    where?: PostWhereInput
+    where?: PostDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Posts to fetch.
+     * Determine the order of PostDIYHomes to fetch.
      */
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
+    orderBy?: PostDIYHomesOrderByWithRelationInput | PostDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Posts.
+     * Sets the position for searching for PostDIYHomes.
      */
-    cursor?: PostWhereUniqueInput
+    cursor?: PostDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Posts from the position of the cursor.
+     * Take `±n` PostDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Posts.
+     * Skip the first `n` PostDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Posts.
+     * Filter by unique combinations of PostDIYHomes.
      */
-    distinct?: PostScalarFieldEnum | PostScalarFieldEnum[]
+    distinct?: PostDIYHomesScalarFieldEnum | PostDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Post findMany
+   * PostDIYHomes findMany
    */
-  export type PostFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Posts to fetch.
+     * Filter, which PostDIYHomes to fetch.
      */
-    where?: PostWhereInput
+    where?: PostDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Posts to fetch.
+     * Determine the order of PostDIYHomes to fetch.
      */
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
+    orderBy?: PostDIYHomesOrderByWithRelationInput | PostDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Posts.
+     * Sets the position for listing PostDIYHomes.
      */
-    cursor?: PostWhereUniqueInput
+    cursor?: PostDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Posts from the position of the cursor.
+     * Take `±n` PostDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Posts.
+     * Skip the first `n` PostDIYHomes.
      */
     skip?: number
-    distinct?: PostScalarFieldEnum | PostScalarFieldEnum[]
+    distinct?: PostDIYHomesScalarFieldEnum | PostDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Post create
+   * PostDIYHomes create
    */
-  export type PostCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to create a Post.
+     * The data needed to create a PostDIYHomes.
      */
-    data: XOR<PostCreateInput, PostUncheckedCreateInput>
+    data: XOR<PostDIYHomesCreateInput, PostDIYHomesUncheckedCreateInput>
   }
 
   /**
-   * Post createMany
+   * PostDIYHomes createMany
    */
-  export type PostCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Posts.
+     * The data used to create many PostDIYHomes.
      */
-    data: PostCreateManyInput | PostCreateManyInput[]
+    data: PostDIYHomesCreateManyInput | PostDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Post createManyAndReturn
+   * PostDIYHomes createManyAndReturn
    */
-  export type PostCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelectCreateManyAndReturn<ExtArgs> | null
+    select?: PostDIYHomesSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to create many Posts.
+     * The data used to create many PostDIYHomes.
      */
-    data: PostCreateManyInput | PostCreateManyInput[]
+    data: PostDIYHomesCreateManyInput | PostDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: PostDIYHomesIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Post update
+   * PostDIYHomes update
    */
-  export type PostUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to update a Post.
+     * The data needed to update a PostDIYHomes.
      */
-    data: XOR<PostUpdateInput, PostUncheckedUpdateInput>
+    data: XOR<PostDIYHomesUpdateInput, PostDIYHomesUncheckedUpdateInput>
     /**
-     * Choose, which Post to update.
+     * Choose, which PostDIYHomes to update.
      */
-    where: PostWhereUniqueInput
+    where: PostDIYHomesWhereUniqueInput
   }
 
   /**
-   * Post updateMany
+   * PostDIYHomes updateMany
    */
-  export type PostUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Posts.
+     * The data used to update PostDIYHomes.
      */
-    data: XOR<PostUpdateManyMutationInput, PostUncheckedUpdateManyInput>
+    data: XOR<PostDIYHomesUpdateManyMutationInput, PostDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Posts to update
+     * Filter which PostDIYHomes to update
      */
-    where?: PostWhereInput
+    where?: PostDIYHomesWhereInput
     /**
-     * Limit how many Posts to update.
+     * Limit how many PostDIYHomes to update.
      */
     limit?: number
   }
 
   /**
-   * Post updateManyAndReturn
+   * PostDIYHomes updateManyAndReturn
    */
-  export type PostUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: PostDIYHomesSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to update Posts.
+     * The data used to update PostDIYHomes.
      */
-    data: XOR<PostUpdateManyMutationInput, PostUncheckedUpdateManyInput>
+    data: XOR<PostDIYHomesUpdateManyMutationInput, PostDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Posts to update
+     * Filter which PostDIYHomes to update
      */
-    where?: PostWhereInput
+    where?: PostDIYHomesWhereInput
     /**
-     * Limit how many Posts to update.
+     * Limit how many PostDIYHomes to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: PostDIYHomesIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Post upsert
+   * PostDIYHomes upsert
    */
-  export type PostUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
     /**
-     * The filter to search for the Post to update in case it exists.
+     * The filter to search for the PostDIYHomes to update in case it exists.
      */
-    where: PostWhereUniqueInput
+    where: PostDIYHomesWhereUniqueInput
     /**
-     * In case the Post found by the `where` argument doesn't exist, create a new Post with this data.
+     * In case the PostDIYHomes found by the `where` argument doesn't exist, create a new PostDIYHomes with this data.
      */
-    create: XOR<PostCreateInput, PostUncheckedCreateInput>
+    create: XOR<PostDIYHomesCreateInput, PostDIYHomesUncheckedCreateInput>
     /**
-     * In case the Post was found with the provided `where` argument, update it with this data.
+     * In case the PostDIYHomes was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<PostUpdateInput, PostUncheckedUpdateInput>
+    update: XOR<PostDIYHomesUpdateInput, PostDIYHomesUncheckedUpdateInput>
   }
 
   /**
-   * Post delete
+   * PostDIYHomes delete
    */
-  export type PostDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter which Post to delete.
+     * Filter which PostDIYHomes to delete.
      */
-    where: PostWhereUniqueInput
+    where: PostDIYHomesWhereUniqueInput
   }
 
   /**
-   * Post deleteMany
+   * PostDIYHomes deleteMany
    */
-  export type PostDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Posts to delete
+     * Filter which PostDIYHomes to delete
      */
-    where?: PostWhereInput
+    where?: PostDIYHomesWhereInput
     /**
-     * Limit how many Posts to delete.
+     * Limit how many PostDIYHomes to delete.
      */
     limit?: number
   }
 
   /**
-   * Post.reviews
+   * PostDIYHomes.reviews
    */
-  export type Post$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomes$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
-    where?: ReviewWhereInput
-    orderBy?: ReviewOrderByWithRelationInput | ReviewOrderByWithRelationInput[]
-    cursor?: ReviewWhereUniqueInput
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
+    where?: ReviewDIYHomesWhereInput
+    orderBy?: ReviewDIYHomesOrderByWithRelationInput | ReviewDIYHomesOrderByWithRelationInput[]
+    cursor?: ReviewDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: ReviewScalarFieldEnum | ReviewScalarFieldEnum[]
+    distinct?: ReviewDIYHomesScalarFieldEnum | ReviewDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Post.bookmarks
+   * PostDIYHomes.bookmarks
    */
-  export type Post$bookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomes$bookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
-    where?: BookmarkWhereInput
-    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
-    cursor?: BookmarkWhereUniqueInput
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
+    where?: BookmarkDIYHomesWhereInput
+    orderBy?: BookmarkDIYHomesOrderByWithRelationInput | BookmarkDIYHomesOrderByWithRelationInput[]
+    cursor?: BookmarkDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: BookmarkScalarFieldEnum | BookmarkScalarFieldEnum[]
+    distinct?: BookmarkDIYHomesScalarFieldEnum | BookmarkDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Post.Like
+   * PostDIYHomes.Like
    */
-  export type Post$LikeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomes$LikeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
-    where?: LikeWhereInput
-    orderBy?: LikeOrderByWithRelationInput | LikeOrderByWithRelationInput[]
-    cursor?: LikeWhereUniqueInput
+    include?: LikeDIYHomesInclude<ExtArgs> | null
+    where?: LikeDIYHomesWhereInput
+    orderBy?: LikeDIYHomesOrderByWithRelationInput | LikeDIYHomesOrderByWithRelationInput[]
+    cursor?: LikeDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: LikeScalarFieldEnum | LikeScalarFieldEnum[]
+    distinct?: LikeDIYHomesScalarFieldEnum | LikeDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Post.Report
+   * PostDIYHomes.Report
    */
-  export type Post$ReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomes$ReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
-    where?: ReportWhereInput
-    orderBy?: ReportOrderByWithRelationInput | ReportOrderByWithRelationInput[]
-    cursor?: ReportWhereUniqueInput
+    include?: ReportDIYHomesInclude<ExtArgs> | null
+    where?: ReportDIYHomesWhereInput
+    orderBy?: ReportDIYHomesOrderByWithRelationInput | ReportDIYHomesOrderByWithRelationInput[]
+    cursor?: ReportDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: ReportScalarFieldEnum | ReportScalarFieldEnum[]
+    distinct?: ReportDIYHomesScalarFieldEnum | ReportDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Post without action
+   * PostDIYHomes without action
    */
-  export type PostDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PostDIYHomesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: PostDIYHomesInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model Review
+   * Model ReviewDIYHomes
    */
 
-  export type AggregateReview = {
-    _count: ReviewCountAggregateOutputType | null
-    _avg: ReviewAvgAggregateOutputType | null
-    _sum: ReviewSumAggregateOutputType | null
-    _min: ReviewMinAggregateOutputType | null
-    _max: ReviewMaxAggregateOutputType | null
+  export type AggregateReviewDIYHomes = {
+    _count: ReviewDIYHomesCountAggregateOutputType | null
+    _avg: ReviewDIYHomesAvgAggregateOutputType | null
+    _sum: ReviewDIYHomesSumAggregateOutputType | null
+    _min: ReviewDIYHomesMinAggregateOutputType | null
+    _max: ReviewDIYHomesMaxAggregateOutputType | null
   }
 
-  export type ReviewAvgAggregateOutputType = {
+  export type ReviewDIYHomesAvgAggregateOutputType = {
     rating: number | null
   }
 
-  export type ReviewSumAggregateOutputType = {
+  export type ReviewDIYHomesSumAggregateOutputType = {
     rating: number | null
   }
 
-  export type ReviewMinAggregateOutputType = {
+  export type ReviewDIYHomesMinAggregateOutputType = {
     id: string | null
     postId: string | null
     userId: string | null
@@ -3888,7 +3888,7 @@ export namespace Prisma {
     createdAt: Date | null
   }
 
-  export type ReviewMaxAggregateOutputType = {
+  export type ReviewDIYHomesMaxAggregateOutputType = {
     id: string | null
     postId: string | null
     userId: string | null
@@ -3897,7 +3897,7 @@ export namespace Prisma {
     createdAt: Date | null
   }
 
-  export type ReviewCountAggregateOutputType = {
+  export type ReviewDIYHomesCountAggregateOutputType = {
     id: number
     postId: number
     userId: number
@@ -3908,15 +3908,15 @@ export namespace Prisma {
   }
 
 
-  export type ReviewAvgAggregateInputType = {
+  export type ReviewDIYHomesAvgAggregateInputType = {
     rating?: true
   }
 
-  export type ReviewSumAggregateInputType = {
+  export type ReviewDIYHomesSumAggregateInputType = {
     rating?: true
   }
 
-  export type ReviewMinAggregateInputType = {
+  export type ReviewDIYHomesMinAggregateInputType = {
     id?: true
     postId?: true
     userId?: true
@@ -3925,7 +3925,7 @@ export namespace Prisma {
     createdAt?: true
   }
 
-  export type ReviewMaxAggregateInputType = {
+  export type ReviewDIYHomesMaxAggregateInputType = {
     id?: true
     postId?: true
     userId?: true
@@ -3934,7 +3934,7 @@ export namespace Prisma {
     createdAt?: true
   }
 
-  export type ReviewCountAggregateInputType = {
+  export type ReviewDIYHomesCountAggregateInputType = {
     id?: true
     postId?: true
     userId?: true
@@ -3944,121 +3944,121 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type ReviewAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Review to aggregate.
+     * Filter which ReviewDIYHomes to aggregate.
      */
-    where?: ReviewWhereInput
+    where?: ReviewDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Reviews to fetch.
+     * Determine the order of ReviewDIYHomes to fetch.
      */
-    orderBy?: ReviewOrderByWithRelationInput | ReviewOrderByWithRelationInput[]
+    orderBy?: ReviewDIYHomesOrderByWithRelationInput | ReviewDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: ReviewWhereUniqueInput
+    cursor?: ReviewDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Reviews from the position of the cursor.
+     * Take `±n` ReviewDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Reviews.
+     * Skip the first `n` ReviewDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Reviews
+     * Count returned ReviewDIYHomes
     **/
-    _count?: true | ReviewCountAggregateInputType
+    _count?: true | ReviewDIYHomesCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: ReviewAvgAggregateInputType
+    _avg?: ReviewDIYHomesAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: ReviewSumAggregateInputType
+    _sum?: ReviewDIYHomesSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: ReviewMinAggregateInputType
+    _min?: ReviewDIYHomesMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: ReviewMaxAggregateInputType
+    _max?: ReviewDIYHomesMaxAggregateInputType
   }
 
-  export type GetReviewAggregateType<T extends ReviewAggregateArgs> = {
-        [P in keyof T & keyof AggregateReview]: P extends '_count' | 'count'
+  export type GetReviewDIYHomesAggregateType<T extends ReviewDIYHomesAggregateArgs> = {
+        [P in keyof T & keyof AggregateReviewDIYHomes]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateReview[P]>
-      : GetScalarType<T[P], AggregateReview[P]>
+        : GetScalarType<T[P], AggregateReviewDIYHomes[P]>
+      : GetScalarType<T[P], AggregateReviewDIYHomes[P]>
   }
 
 
 
 
-  export type ReviewGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ReviewWhereInput
-    orderBy?: ReviewOrderByWithAggregationInput | ReviewOrderByWithAggregationInput[]
-    by: ReviewScalarFieldEnum[] | ReviewScalarFieldEnum
-    having?: ReviewScalarWhereWithAggregatesInput
+  export type ReviewDIYHomesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewDIYHomesWhereInput
+    orderBy?: ReviewDIYHomesOrderByWithAggregationInput | ReviewDIYHomesOrderByWithAggregationInput[]
+    by: ReviewDIYHomesScalarFieldEnum[] | ReviewDIYHomesScalarFieldEnum
+    having?: ReviewDIYHomesScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: ReviewCountAggregateInputType | true
-    _avg?: ReviewAvgAggregateInputType
-    _sum?: ReviewSumAggregateInputType
-    _min?: ReviewMinAggregateInputType
-    _max?: ReviewMaxAggregateInputType
+    _count?: ReviewDIYHomesCountAggregateInputType | true
+    _avg?: ReviewDIYHomesAvgAggregateInputType
+    _sum?: ReviewDIYHomesSumAggregateInputType
+    _min?: ReviewDIYHomesMinAggregateInputType
+    _max?: ReviewDIYHomesMaxAggregateInputType
   }
 
-  export type ReviewGroupByOutputType = {
+  export type ReviewDIYHomesGroupByOutputType = {
     id: string
     postId: string
     userId: string
     rating: number
     comment: string
     createdAt: Date
-    _count: ReviewCountAggregateOutputType | null
-    _avg: ReviewAvgAggregateOutputType | null
-    _sum: ReviewSumAggregateOutputType | null
-    _min: ReviewMinAggregateOutputType | null
-    _max: ReviewMaxAggregateOutputType | null
+    _count: ReviewDIYHomesCountAggregateOutputType | null
+    _avg: ReviewDIYHomesAvgAggregateOutputType | null
+    _sum: ReviewDIYHomesSumAggregateOutputType | null
+    _min: ReviewDIYHomesMinAggregateOutputType | null
+    _max: ReviewDIYHomesMaxAggregateOutputType | null
   }
 
-  type GetReviewGroupByPayload<T extends ReviewGroupByArgs> = Prisma.PrismaPromise<
+  type GetReviewDIYHomesGroupByPayload<T extends ReviewDIYHomesGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<ReviewGroupByOutputType, T['by']> &
+      PickEnumerable<ReviewDIYHomesGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof ReviewGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof ReviewDIYHomesGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], ReviewGroupByOutputType[P]>
-            : GetScalarType<T[P], ReviewGroupByOutputType[P]>
+              : GetScalarType<T[P], ReviewDIYHomesGroupByOutputType[P]>
+            : GetScalarType<T[P], ReviewDIYHomesGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type ReviewSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type ReviewDIYHomesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     userId?: boolean
@@ -4066,12 +4066,12 @@ export namespace Prisma {
     comment?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-    Report?: boolean | Review$ReportArgs<ExtArgs>
-    _count?: boolean | ReviewCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["review"]>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+    Report?: boolean | ReviewDIYHomes$ReportArgs<ExtArgs>
+    _count?: boolean | ReviewDIYHomesCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewDIYHomes"]>
 
-  export type ReviewSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type ReviewDIYHomesSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     userId?: boolean
@@ -4079,10 +4079,10 @@ export namespace Prisma {
     comment?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["review"]>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewDIYHomes"]>
 
-  export type ReviewSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type ReviewDIYHomesSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     userId?: boolean
@@ -4090,10 +4090,10 @@ export namespace Prisma {
     comment?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["review"]>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewDIYHomes"]>
 
-  export type ReviewSelectScalar = {
+  export type ReviewDIYHomesSelectScalar = {
     id?: boolean
     postId?: boolean
     userId?: boolean
@@ -4102,28 +4102,28 @@ export namespace Prisma {
     createdAt?: boolean
   }
 
-  export type ReviewOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "postId" | "userId" | "rating" | "comment" | "createdAt", ExtArgs["result"]["review"]>
-  export type ReviewInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "postId" | "userId" | "rating" | "comment" | "createdAt", ExtArgs["result"]["reviewDIYHomes"]>
+  export type ReviewDIYHomesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-    Report?: boolean | Review$ReportArgs<ExtArgs>
-    _count?: boolean | ReviewCountOutputTypeDefaultArgs<ExtArgs>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+    Report?: boolean | ReviewDIYHomes$ReportArgs<ExtArgs>
+    _count?: boolean | ReviewDIYHomesCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type ReviewIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
   }
-  export type ReviewIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
   }
 
-  export type $ReviewPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Review"
+  export type $ReviewDIYHomesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ReviewDIYHomes"
     objects: {
       user: Prisma.$UserPayload<ExtArgs>
-      post: Prisma.$PostPayload<ExtArgs>
-      Report: Prisma.$ReportPayload<ExtArgs>[]
+      post: Prisma.$PostDIYHomesPayload<ExtArgs>
+      Report: Prisma.$ReportDIYHomesPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -4132,136 +4132,136 @@ export namespace Prisma {
       rating: number
       comment: string
       createdAt: Date
-    }, ExtArgs["result"]["review"]>
+    }, ExtArgs["result"]["reviewDIYHomes"]>
     composites: {}
   }
 
-  type ReviewGetPayload<S extends boolean | null | undefined | ReviewDefaultArgs> = $Result.GetResult<Prisma.$ReviewPayload, S>
+  type ReviewDIYHomesGetPayload<S extends boolean | null | undefined | ReviewDIYHomesDefaultArgs> = $Result.GetResult<Prisma.$ReviewDIYHomesPayload, S>
 
-  type ReviewCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<ReviewFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: ReviewCountAggregateInputType | true
+  type ReviewDIYHomesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ReviewDIYHomesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ReviewDIYHomesCountAggregateInputType | true
     }
 
-  export interface ReviewDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Review'], meta: { name: 'Review' } }
+  export interface ReviewDIYHomesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ReviewDIYHomes'], meta: { name: 'ReviewDIYHomes' } }
     /**
-     * Find zero or one Review that matches the filter.
-     * @param {ReviewFindUniqueArgs} args - Arguments to find a Review
+     * Find zero or one ReviewDIYHomes that matches the filter.
+     * @param {ReviewDIYHomesFindUniqueArgs} args - Arguments to find a ReviewDIYHomes
      * @example
-     * // Get one Review
-     * const review = await prisma.review.findUnique({
+     * // Get one ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends ReviewFindUniqueArgs>(args: SelectSubset<T, ReviewFindUniqueArgs<ExtArgs>>): Prisma__ReviewClient<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends ReviewDIYHomesFindUniqueArgs>(args: SelectSubset<T, ReviewDIYHomesFindUniqueArgs<ExtArgs>>): Prisma__ReviewDIYHomesClient<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Review that matches the filter or throw an error with `error.code='P2025'`
+     * Find one ReviewDIYHomes that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {ReviewFindUniqueOrThrowArgs} args - Arguments to find a Review
+     * @param {ReviewDIYHomesFindUniqueOrThrowArgs} args - Arguments to find a ReviewDIYHomes
      * @example
-     * // Get one Review
-     * const review = await prisma.review.findUniqueOrThrow({
+     * // Get one ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends ReviewFindUniqueOrThrowArgs>(args: SelectSubset<T, ReviewFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReviewClient<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends ReviewDIYHomesFindUniqueOrThrowArgs>(args: SelectSubset<T, ReviewDIYHomesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReviewDIYHomesClient<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Review that matches the filter.
+     * Find the first ReviewDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReviewFindFirstArgs} args - Arguments to find a Review
+     * @param {ReviewDIYHomesFindFirstArgs} args - Arguments to find a ReviewDIYHomes
      * @example
-     * // Get one Review
-     * const review = await prisma.review.findFirst({
+     * // Get one ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends ReviewFindFirstArgs>(args?: SelectSubset<T, ReviewFindFirstArgs<ExtArgs>>): Prisma__ReviewClient<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends ReviewDIYHomesFindFirstArgs>(args?: SelectSubset<T, ReviewDIYHomesFindFirstArgs<ExtArgs>>): Prisma__ReviewDIYHomesClient<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Review that matches the filter or
+     * Find the first ReviewDIYHomes that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReviewFindFirstOrThrowArgs} args - Arguments to find a Review
+     * @param {ReviewDIYHomesFindFirstOrThrowArgs} args - Arguments to find a ReviewDIYHomes
      * @example
-     * // Get one Review
-     * const review = await prisma.review.findFirstOrThrow({
+     * // Get one ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends ReviewFindFirstOrThrowArgs>(args?: SelectSubset<T, ReviewFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReviewClient<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends ReviewDIYHomesFindFirstOrThrowArgs>(args?: SelectSubset<T, ReviewDIYHomesFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReviewDIYHomesClient<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Reviews that matches the filter.
+     * Find zero or more ReviewDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReviewFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {ReviewDIYHomesFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Reviews
-     * const reviews = await prisma.review.findMany()
+     * // Get all ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.findMany()
      * 
-     * // Get first 10 Reviews
-     * const reviews = await prisma.review.findMany({ take: 10 })
+     * // Get first 10 ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const reviewWithIdOnly = await prisma.review.findMany({ select: { id: true } })
+     * const reviewDIYHomesWithIdOnly = await prisma.reviewDIYHomes.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends ReviewFindManyArgs>(args?: SelectSubset<T, ReviewFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends ReviewDIYHomesFindManyArgs>(args?: SelectSubset<T, ReviewDIYHomesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Review.
-     * @param {ReviewCreateArgs} args - Arguments to create a Review.
+     * Create a ReviewDIYHomes.
+     * @param {ReviewDIYHomesCreateArgs} args - Arguments to create a ReviewDIYHomes.
      * @example
-     * // Create one Review
-     * const Review = await prisma.review.create({
+     * // Create one ReviewDIYHomes
+     * const ReviewDIYHomes = await prisma.reviewDIYHomes.create({
      *   data: {
-     *     // ... data to create a Review
+     *     // ... data to create a ReviewDIYHomes
      *   }
      * })
      * 
      */
-    create<T extends ReviewCreateArgs>(args: SelectSubset<T, ReviewCreateArgs<ExtArgs>>): Prisma__ReviewClient<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends ReviewDIYHomesCreateArgs>(args: SelectSubset<T, ReviewDIYHomesCreateArgs<ExtArgs>>): Prisma__ReviewDIYHomesClient<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Reviews.
-     * @param {ReviewCreateManyArgs} args - Arguments to create many Reviews.
+     * Create many ReviewDIYHomes.
+     * @param {ReviewDIYHomesCreateManyArgs} args - Arguments to create many ReviewDIYHomes.
      * @example
-     * // Create many Reviews
-     * const review = await prisma.review.createMany({
+     * // Create many ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends ReviewCreateManyArgs>(args?: SelectSubset<T, ReviewCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends ReviewDIYHomesCreateManyArgs>(args?: SelectSubset<T, ReviewDIYHomesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Reviews and returns the data saved in the database.
-     * @param {ReviewCreateManyAndReturnArgs} args - Arguments to create many Reviews.
+     * Create many ReviewDIYHomes and returns the data saved in the database.
+     * @param {ReviewDIYHomesCreateManyAndReturnArgs} args - Arguments to create many ReviewDIYHomes.
      * @example
-     * // Create many Reviews
-     * const review = await prisma.review.createManyAndReturn({
+     * // Create many ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Reviews and only return the `id`
-     * const reviewWithIdOnly = await prisma.review.createManyAndReturn({
+     * // Create many ReviewDIYHomes and only return the `id`
+     * const reviewDIYHomesWithIdOnly = await prisma.reviewDIYHomes.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -4271,28 +4271,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends ReviewCreateManyAndReturnArgs>(args?: SelectSubset<T, ReviewCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends ReviewDIYHomesCreateManyAndReturnArgs>(args?: SelectSubset<T, ReviewDIYHomesCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Review.
-     * @param {ReviewDeleteArgs} args - Arguments to delete one Review.
+     * Delete a ReviewDIYHomes.
+     * @param {ReviewDIYHomesDeleteArgs} args - Arguments to delete one ReviewDIYHomes.
      * @example
-     * // Delete one Review
-     * const Review = await prisma.review.delete({
+     * // Delete one ReviewDIYHomes
+     * const ReviewDIYHomes = await prisma.reviewDIYHomes.delete({
      *   where: {
-     *     // ... filter to delete one Review
+     *     // ... filter to delete one ReviewDIYHomes
      *   }
      * })
      * 
      */
-    delete<T extends ReviewDeleteArgs>(args: SelectSubset<T, ReviewDeleteArgs<ExtArgs>>): Prisma__ReviewClient<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends ReviewDIYHomesDeleteArgs>(args: SelectSubset<T, ReviewDIYHomesDeleteArgs<ExtArgs>>): Prisma__ReviewDIYHomesClient<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Review.
-     * @param {ReviewUpdateArgs} args - Arguments to update one Review.
+     * Update one ReviewDIYHomes.
+     * @param {ReviewDIYHomesUpdateArgs} args - Arguments to update one ReviewDIYHomes.
      * @example
-     * // Update one Review
-     * const review = await prisma.review.update({
+     * // Update one ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4302,30 +4302,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends ReviewUpdateArgs>(args: SelectSubset<T, ReviewUpdateArgs<ExtArgs>>): Prisma__ReviewClient<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends ReviewDIYHomesUpdateArgs>(args: SelectSubset<T, ReviewDIYHomesUpdateArgs<ExtArgs>>): Prisma__ReviewDIYHomesClient<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Reviews.
-     * @param {ReviewDeleteManyArgs} args - Arguments to filter Reviews to delete.
+     * Delete zero or more ReviewDIYHomes.
+     * @param {ReviewDIYHomesDeleteManyArgs} args - Arguments to filter ReviewDIYHomes to delete.
      * @example
-     * // Delete a few Reviews
-     * const { count } = await prisma.review.deleteMany({
+     * // Delete a few ReviewDIYHomes
+     * const { count } = await prisma.reviewDIYHomes.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends ReviewDeleteManyArgs>(args?: SelectSubset<T, ReviewDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends ReviewDIYHomesDeleteManyArgs>(args?: SelectSubset<T, ReviewDIYHomesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Reviews.
+     * Update zero or more ReviewDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReviewUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {ReviewDIYHomesUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Reviews
-     * const review = await prisma.review.updateMany({
+     * // Update many ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4335,14 +4335,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends ReviewUpdateManyArgs>(args: SelectSubset<T, ReviewUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends ReviewDIYHomesUpdateManyArgs>(args: SelectSubset<T, ReviewDIYHomesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Reviews and returns the data updated in the database.
-     * @param {ReviewUpdateManyAndReturnArgs} args - Arguments to update many Reviews.
+     * Update zero or more ReviewDIYHomes and returns the data updated in the database.
+     * @param {ReviewDIYHomesUpdateManyAndReturnArgs} args - Arguments to update many ReviewDIYHomes.
      * @example
-     * // Update many Reviews
-     * const review = await prisma.review.updateManyAndReturn({
+     * // Update many ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4351,8 +4351,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Reviews and only return the `id`
-     * const reviewWithIdOnly = await prisma.review.updateManyAndReturn({
+     * // Update zero or more ReviewDIYHomes and only return the `id`
+     * const reviewDIYHomesWithIdOnly = await prisma.reviewDIYHomes.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -4365,56 +4365,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends ReviewUpdateManyAndReturnArgs>(args: SelectSubset<T, ReviewUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends ReviewDIYHomesUpdateManyAndReturnArgs>(args: SelectSubset<T, ReviewDIYHomesUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Review.
-     * @param {ReviewUpsertArgs} args - Arguments to update or create a Review.
+     * Create or update one ReviewDIYHomes.
+     * @param {ReviewDIYHomesUpsertArgs} args - Arguments to update or create a ReviewDIYHomes.
      * @example
-     * // Update or create a Review
-     * const review = await prisma.review.upsert({
+     * // Update or create a ReviewDIYHomes
+     * const reviewDIYHomes = await prisma.reviewDIYHomes.upsert({
      *   create: {
-     *     // ... data to create a Review
+     *     // ... data to create a ReviewDIYHomes
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Review we want to update
+     *     // ... the filter for the ReviewDIYHomes we want to update
      *   }
      * })
      */
-    upsert<T extends ReviewUpsertArgs>(args: SelectSubset<T, ReviewUpsertArgs<ExtArgs>>): Prisma__ReviewClient<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends ReviewDIYHomesUpsertArgs>(args: SelectSubset<T, ReviewDIYHomesUpsertArgs<ExtArgs>>): Prisma__ReviewDIYHomesClient<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Reviews.
+     * Count the number of ReviewDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReviewCountArgs} args - Arguments to filter Reviews to count.
+     * @param {ReviewDIYHomesCountArgs} args - Arguments to filter ReviewDIYHomes to count.
      * @example
-     * // Count the number of Reviews
-     * const count = await prisma.review.count({
+     * // Count the number of ReviewDIYHomes
+     * const count = await prisma.reviewDIYHomes.count({
      *   where: {
-     *     // ... the filter for the Reviews we want to count
+     *     // ... the filter for the ReviewDIYHomes we want to count
      *   }
      * })
     **/
-    count<T extends ReviewCountArgs>(
-      args?: Subset<T, ReviewCountArgs>,
+    count<T extends ReviewDIYHomesCountArgs>(
+      args?: Subset<T, ReviewDIYHomesCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], ReviewCountAggregateOutputType>
+          : GetScalarType<T['select'], ReviewDIYHomesCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Review.
+     * Allows you to perform aggregations operations on a ReviewDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReviewAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {ReviewDIYHomesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -4434,13 +4434,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends ReviewAggregateArgs>(args: Subset<T, ReviewAggregateArgs>): Prisma.PrismaPromise<GetReviewAggregateType<T>>
+    aggregate<T extends ReviewDIYHomesAggregateArgs>(args: Subset<T, ReviewDIYHomesAggregateArgs>): Prisma.PrismaPromise<GetReviewDIYHomesAggregateType<T>>
 
     /**
-     * Group by Review.
+     * Group by ReviewDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReviewGroupByArgs} args - Group by arguments.
+     * @param {ReviewDIYHomesGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -4455,14 +4455,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends ReviewGroupByArgs,
+      T extends ReviewDIYHomesGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: ReviewGroupByArgs['orderBy'] }
-        : { orderBy?: ReviewGroupByArgs['orderBy'] },
+        ? { orderBy: ReviewDIYHomesGroupByArgs['orderBy'] }
+        : { orderBy?: ReviewDIYHomesGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -4511,24 +4511,24 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, ReviewGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReviewGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, ReviewDIYHomesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReviewDIYHomesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Review model
+   * Fields of the ReviewDIYHomes model
    */
-  readonly fields: ReviewFieldRefs;
+  readonly fields: ReviewDIYHomesFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Review.
+   * The delegate class that acts as a "Promise-like" for ReviewDIYHomes.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__ReviewClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__ReviewDIYHomesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    post<T extends PostDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PostDefaultArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    Report<T extends Review$ReportArgs<ExtArgs> = {}>(args?: Subset<T, Review$ReportArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    post<T extends PostDIYHomesDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PostDIYHomesDefaultArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    Report<T extends ReviewDIYHomes$ReportArgs<ExtArgs> = {}>(args?: Subset<T, ReviewDIYHomes$ReportArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4555,478 +4555,478 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Review model
+   * Fields of the ReviewDIYHomes model
    */ 
-  interface ReviewFieldRefs {
-    readonly id: FieldRef<"Review", 'String'>
-    readonly postId: FieldRef<"Review", 'String'>
-    readonly userId: FieldRef<"Review", 'String'>
-    readonly rating: FieldRef<"Review", 'Int'>
-    readonly comment: FieldRef<"Review", 'String'>
-    readonly createdAt: FieldRef<"Review", 'DateTime'>
+  interface ReviewDIYHomesFieldRefs {
+    readonly id: FieldRef<"ReviewDIYHomes", 'String'>
+    readonly postId: FieldRef<"ReviewDIYHomes", 'String'>
+    readonly userId: FieldRef<"ReviewDIYHomes", 'String'>
+    readonly rating: FieldRef<"ReviewDIYHomes", 'Int'>
+    readonly comment: FieldRef<"ReviewDIYHomes", 'String'>
+    readonly createdAt: FieldRef<"ReviewDIYHomes", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Review findUnique
+   * ReviewDIYHomes findUnique
    */
-  export type ReviewFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Review to fetch.
+     * Filter, which ReviewDIYHomes to fetch.
      */
-    where: ReviewWhereUniqueInput
+    where: ReviewDIYHomesWhereUniqueInput
   }
 
   /**
-   * Review findUniqueOrThrow
+   * ReviewDIYHomes findUniqueOrThrow
    */
-  export type ReviewFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Review to fetch.
+     * Filter, which ReviewDIYHomes to fetch.
      */
-    where: ReviewWhereUniqueInput
+    where: ReviewDIYHomesWhereUniqueInput
   }
 
   /**
-   * Review findFirst
+   * ReviewDIYHomes findFirst
    */
-  export type ReviewFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Review to fetch.
+     * Filter, which ReviewDIYHomes to fetch.
      */
-    where?: ReviewWhereInput
+    where?: ReviewDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Reviews to fetch.
+     * Determine the order of ReviewDIYHomes to fetch.
      */
-    orderBy?: ReviewOrderByWithRelationInput | ReviewOrderByWithRelationInput[]
+    orderBy?: ReviewDIYHomesOrderByWithRelationInput | ReviewDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Reviews.
+     * Sets the position for searching for ReviewDIYHomes.
      */
-    cursor?: ReviewWhereUniqueInput
+    cursor?: ReviewDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Reviews from the position of the cursor.
+     * Take `±n` ReviewDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Reviews.
+     * Skip the first `n` ReviewDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Reviews.
+     * Filter by unique combinations of ReviewDIYHomes.
      */
-    distinct?: ReviewScalarFieldEnum | ReviewScalarFieldEnum[]
+    distinct?: ReviewDIYHomesScalarFieldEnum | ReviewDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Review findFirstOrThrow
+   * ReviewDIYHomes findFirstOrThrow
    */
-  export type ReviewFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Review to fetch.
+     * Filter, which ReviewDIYHomes to fetch.
      */
-    where?: ReviewWhereInput
+    where?: ReviewDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Reviews to fetch.
+     * Determine the order of ReviewDIYHomes to fetch.
      */
-    orderBy?: ReviewOrderByWithRelationInput | ReviewOrderByWithRelationInput[]
+    orderBy?: ReviewDIYHomesOrderByWithRelationInput | ReviewDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Reviews.
+     * Sets the position for searching for ReviewDIYHomes.
      */
-    cursor?: ReviewWhereUniqueInput
+    cursor?: ReviewDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Reviews from the position of the cursor.
+     * Take `±n` ReviewDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Reviews.
+     * Skip the first `n` ReviewDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Reviews.
+     * Filter by unique combinations of ReviewDIYHomes.
      */
-    distinct?: ReviewScalarFieldEnum | ReviewScalarFieldEnum[]
+    distinct?: ReviewDIYHomesScalarFieldEnum | ReviewDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Review findMany
+   * ReviewDIYHomes findMany
    */
-  export type ReviewFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Reviews to fetch.
+     * Filter, which ReviewDIYHomes to fetch.
      */
-    where?: ReviewWhereInput
+    where?: ReviewDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Reviews to fetch.
+     * Determine the order of ReviewDIYHomes to fetch.
      */
-    orderBy?: ReviewOrderByWithRelationInput | ReviewOrderByWithRelationInput[]
+    orderBy?: ReviewDIYHomesOrderByWithRelationInput | ReviewDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Reviews.
+     * Sets the position for listing ReviewDIYHomes.
      */
-    cursor?: ReviewWhereUniqueInput
+    cursor?: ReviewDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Reviews from the position of the cursor.
+     * Take `±n` ReviewDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Reviews.
+     * Skip the first `n` ReviewDIYHomes.
      */
     skip?: number
-    distinct?: ReviewScalarFieldEnum | ReviewScalarFieldEnum[]
+    distinct?: ReviewDIYHomesScalarFieldEnum | ReviewDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Review create
+   * ReviewDIYHomes create
    */
-  export type ReviewCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to create a Review.
+     * The data needed to create a ReviewDIYHomes.
      */
-    data: XOR<ReviewCreateInput, ReviewUncheckedCreateInput>
+    data: XOR<ReviewDIYHomesCreateInput, ReviewDIYHomesUncheckedCreateInput>
   }
 
   /**
-   * Review createMany
+   * ReviewDIYHomes createMany
    */
-  export type ReviewCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Reviews.
+     * The data used to create many ReviewDIYHomes.
      */
-    data: ReviewCreateManyInput | ReviewCreateManyInput[]
+    data: ReviewDIYHomesCreateManyInput | ReviewDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Review createManyAndReturn
+   * ReviewDIYHomes createManyAndReturn
    */
-  export type ReviewCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelectCreateManyAndReturn<ExtArgs> | null
+    select?: ReviewDIYHomesSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to create many Reviews.
+     * The data used to create many ReviewDIYHomes.
      */
-    data: ReviewCreateManyInput | ReviewCreateManyInput[]
+    data: ReviewDIYHomesCreateManyInput | ReviewDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: ReviewDIYHomesIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Review update
+   * ReviewDIYHomes update
    */
-  export type ReviewUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to update a Review.
+     * The data needed to update a ReviewDIYHomes.
      */
-    data: XOR<ReviewUpdateInput, ReviewUncheckedUpdateInput>
+    data: XOR<ReviewDIYHomesUpdateInput, ReviewDIYHomesUncheckedUpdateInput>
     /**
-     * Choose, which Review to update.
+     * Choose, which ReviewDIYHomes to update.
      */
-    where: ReviewWhereUniqueInput
+    where: ReviewDIYHomesWhereUniqueInput
   }
 
   /**
-   * Review updateMany
+   * ReviewDIYHomes updateMany
    */
-  export type ReviewUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Reviews.
+     * The data used to update ReviewDIYHomes.
      */
-    data: XOR<ReviewUpdateManyMutationInput, ReviewUncheckedUpdateManyInput>
+    data: XOR<ReviewDIYHomesUpdateManyMutationInput, ReviewDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Reviews to update
+     * Filter which ReviewDIYHomes to update
      */
-    where?: ReviewWhereInput
+    where?: ReviewDIYHomesWhereInput
     /**
-     * Limit how many Reviews to update.
+     * Limit how many ReviewDIYHomes to update.
      */
     limit?: number
   }
 
   /**
-   * Review updateManyAndReturn
+   * ReviewDIYHomes updateManyAndReturn
    */
-  export type ReviewUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: ReviewDIYHomesSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to update Reviews.
+     * The data used to update ReviewDIYHomes.
      */
-    data: XOR<ReviewUpdateManyMutationInput, ReviewUncheckedUpdateManyInput>
+    data: XOR<ReviewDIYHomesUpdateManyMutationInput, ReviewDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Reviews to update
+     * Filter which ReviewDIYHomes to update
      */
-    where?: ReviewWhereInput
+    where?: ReviewDIYHomesWhereInput
     /**
-     * Limit how many Reviews to update.
+     * Limit how many ReviewDIYHomes to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: ReviewDIYHomesIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Review upsert
+   * ReviewDIYHomes upsert
    */
-  export type ReviewUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
     /**
-     * The filter to search for the Review to update in case it exists.
+     * The filter to search for the ReviewDIYHomes to update in case it exists.
      */
-    where: ReviewWhereUniqueInput
+    where: ReviewDIYHomesWhereUniqueInput
     /**
-     * In case the Review found by the `where` argument doesn't exist, create a new Review with this data.
+     * In case the ReviewDIYHomes found by the `where` argument doesn't exist, create a new ReviewDIYHomes with this data.
      */
-    create: XOR<ReviewCreateInput, ReviewUncheckedCreateInput>
+    create: XOR<ReviewDIYHomesCreateInput, ReviewDIYHomesUncheckedCreateInput>
     /**
-     * In case the Review was found with the provided `where` argument, update it with this data.
+     * In case the ReviewDIYHomes was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<ReviewUpdateInput, ReviewUncheckedUpdateInput>
+    update: XOR<ReviewDIYHomesUpdateInput, ReviewDIYHomesUncheckedUpdateInput>
   }
 
   /**
-   * Review delete
+   * ReviewDIYHomes delete
    */
-  export type ReviewDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter which Review to delete.
+     * Filter which ReviewDIYHomes to delete.
      */
-    where: ReviewWhereUniqueInput
+    where: ReviewDIYHomesWhereUniqueInput
   }
 
   /**
-   * Review deleteMany
+   * ReviewDIYHomes deleteMany
    */
-  export type ReviewDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Reviews to delete
+     * Filter which ReviewDIYHomes to delete
      */
-    where?: ReviewWhereInput
+    where?: ReviewDIYHomesWhereInput
     /**
-     * Limit how many Reviews to delete.
+     * Limit how many ReviewDIYHomes to delete.
      */
     limit?: number
   }
 
   /**
-   * Review.Report
+   * ReviewDIYHomes.Report
    */
-  export type Review$ReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomes$ReportArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
-    where?: ReportWhereInput
-    orderBy?: ReportOrderByWithRelationInput | ReportOrderByWithRelationInput[]
-    cursor?: ReportWhereUniqueInput
+    include?: ReportDIYHomesInclude<ExtArgs> | null
+    where?: ReportDIYHomesWhereInput
+    orderBy?: ReportDIYHomesOrderByWithRelationInput | ReportDIYHomesOrderByWithRelationInput[]
+    cursor?: ReportDIYHomesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: ReportScalarFieldEnum | ReportScalarFieldEnum[]
+    distinct?: ReportDIYHomesScalarFieldEnum | ReportDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Review without action
+   * ReviewDIYHomes without action
    */
-  export type ReviewDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReviewDIYHomesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model Like
+   * Model LikeDIYHomes
    */
 
-  export type AggregateLike = {
-    _count: LikeCountAggregateOutputType | null
-    _min: LikeMinAggregateOutputType | null
-    _max: LikeMaxAggregateOutputType | null
+  export type AggregateLikeDIYHomes = {
+    _count: LikeDIYHomesCountAggregateOutputType | null
+    _min: LikeDIYHomesMinAggregateOutputType | null
+    _max: LikeDIYHomesMaxAggregateOutputType | null
   }
 
-  export type LikeMinAggregateOutputType = {
+  export type LikeDIYHomesMinAggregateOutputType = {
     id: string | null
     postId: string | null
     userId: string | null
     createdAt: Date | null
   }
 
-  export type LikeMaxAggregateOutputType = {
+  export type LikeDIYHomesMaxAggregateOutputType = {
     id: string | null
     postId: string | null
     userId: string | null
     createdAt: Date | null
   }
 
-  export type LikeCountAggregateOutputType = {
+  export type LikeDIYHomesCountAggregateOutputType = {
     id: number
     postId: number
     userId: number
@@ -5035,21 +5035,21 @@ export namespace Prisma {
   }
 
 
-  export type LikeMinAggregateInputType = {
+  export type LikeDIYHomesMinAggregateInputType = {
     id?: true
     postId?: true
     userId?: true
     createdAt?: true
   }
 
-  export type LikeMaxAggregateInputType = {
+  export type LikeDIYHomesMaxAggregateInputType = {
     id?: true
     postId?: true
     userId?: true
     createdAt?: true
   }
 
-  export type LikeCountAggregateInputType = {
+  export type LikeDIYHomesCountAggregateInputType = {
     id?: true
     postId?: true
     userId?: true
@@ -5057,291 +5057,291 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type LikeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Like to aggregate.
+     * Filter which LikeDIYHomes to aggregate.
      */
-    where?: LikeWhereInput
+    where?: LikeDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Likes to fetch.
+     * Determine the order of LikeDIYHomes to fetch.
      */
-    orderBy?: LikeOrderByWithRelationInput | LikeOrderByWithRelationInput[]
+    orderBy?: LikeDIYHomesOrderByWithRelationInput | LikeDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: LikeWhereUniqueInput
+    cursor?: LikeDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Likes from the position of the cursor.
+     * Take `±n` LikeDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Likes.
+     * Skip the first `n` LikeDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Likes
+     * Count returned LikeDIYHomes
     **/
-    _count?: true | LikeCountAggregateInputType
+    _count?: true | LikeDIYHomesCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: LikeMinAggregateInputType
+    _min?: LikeDIYHomesMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: LikeMaxAggregateInputType
+    _max?: LikeDIYHomesMaxAggregateInputType
   }
 
-  export type GetLikeAggregateType<T extends LikeAggregateArgs> = {
-        [P in keyof T & keyof AggregateLike]: P extends '_count' | 'count'
+  export type GetLikeDIYHomesAggregateType<T extends LikeDIYHomesAggregateArgs> = {
+        [P in keyof T & keyof AggregateLikeDIYHomes]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateLike[P]>
-      : GetScalarType<T[P], AggregateLike[P]>
+        : GetScalarType<T[P], AggregateLikeDIYHomes[P]>
+      : GetScalarType<T[P], AggregateLikeDIYHomes[P]>
   }
 
 
 
 
-  export type LikeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: LikeWhereInput
-    orderBy?: LikeOrderByWithAggregationInput | LikeOrderByWithAggregationInput[]
-    by: LikeScalarFieldEnum[] | LikeScalarFieldEnum
-    having?: LikeScalarWhereWithAggregatesInput
+  export type LikeDIYHomesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LikeDIYHomesWhereInput
+    orderBy?: LikeDIYHomesOrderByWithAggregationInput | LikeDIYHomesOrderByWithAggregationInput[]
+    by: LikeDIYHomesScalarFieldEnum[] | LikeDIYHomesScalarFieldEnum
+    having?: LikeDIYHomesScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: LikeCountAggregateInputType | true
-    _min?: LikeMinAggregateInputType
-    _max?: LikeMaxAggregateInputType
+    _count?: LikeDIYHomesCountAggregateInputType | true
+    _min?: LikeDIYHomesMinAggregateInputType
+    _max?: LikeDIYHomesMaxAggregateInputType
   }
 
-  export type LikeGroupByOutputType = {
+  export type LikeDIYHomesGroupByOutputType = {
     id: string
     postId: string
     userId: string
     createdAt: Date
-    _count: LikeCountAggregateOutputType | null
-    _min: LikeMinAggregateOutputType | null
-    _max: LikeMaxAggregateOutputType | null
+    _count: LikeDIYHomesCountAggregateOutputType | null
+    _min: LikeDIYHomesMinAggregateOutputType | null
+    _max: LikeDIYHomesMaxAggregateOutputType | null
   }
 
-  type GetLikeGroupByPayload<T extends LikeGroupByArgs> = Prisma.PrismaPromise<
+  type GetLikeDIYHomesGroupByPayload<T extends LikeDIYHomesGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<LikeGroupByOutputType, T['by']> &
+      PickEnumerable<LikeDIYHomesGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof LikeGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof LikeDIYHomesGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], LikeGroupByOutputType[P]>
-            : GetScalarType<T[P], LikeGroupByOutputType[P]>
+              : GetScalarType<T[P], LikeDIYHomesGroupByOutputType[P]>
+            : GetScalarType<T[P], LikeDIYHomesGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type LikeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type LikeDIYHomesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     userId?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["like"]>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["likeDIYHomes"]>
 
-  export type LikeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type LikeDIYHomesSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     userId?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["like"]>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["likeDIYHomes"]>
 
-  export type LikeSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type LikeDIYHomesSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     userId?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["like"]>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["likeDIYHomes"]>
 
-  export type LikeSelectScalar = {
+  export type LikeDIYHomesSelectScalar = {
     id?: boolean
     postId?: boolean
     userId?: boolean
     createdAt?: boolean
   }
 
-  export type LikeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "postId" | "userId" | "createdAt", ExtArgs["result"]["like"]>
-  export type LikeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "postId" | "userId" | "createdAt", ExtArgs["result"]["likeDIYHomes"]>
+  export type LikeDIYHomesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
   }
-  export type LikeIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
   }
-  export type LikeIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
   }
 
-  export type $LikePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Like"
+  export type $LikeDIYHomesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "LikeDIYHomes"
     objects: {
       user: Prisma.$UserPayload<ExtArgs>
-      post: Prisma.$PostPayload<ExtArgs>
+      post: Prisma.$PostDIYHomesPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
       postId: string
       userId: string
       createdAt: Date
-    }, ExtArgs["result"]["like"]>
+    }, ExtArgs["result"]["likeDIYHomes"]>
     composites: {}
   }
 
-  type LikeGetPayload<S extends boolean | null | undefined | LikeDefaultArgs> = $Result.GetResult<Prisma.$LikePayload, S>
+  type LikeDIYHomesGetPayload<S extends boolean | null | undefined | LikeDIYHomesDefaultArgs> = $Result.GetResult<Prisma.$LikeDIYHomesPayload, S>
 
-  type LikeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<LikeFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: LikeCountAggregateInputType | true
+  type LikeDIYHomesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LikeDIYHomesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LikeDIYHomesCountAggregateInputType | true
     }
 
-  export interface LikeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Like'], meta: { name: 'Like' } }
+  export interface LikeDIYHomesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['LikeDIYHomes'], meta: { name: 'LikeDIYHomes' } }
     /**
-     * Find zero or one Like that matches the filter.
-     * @param {LikeFindUniqueArgs} args - Arguments to find a Like
+     * Find zero or one LikeDIYHomes that matches the filter.
+     * @param {LikeDIYHomesFindUniqueArgs} args - Arguments to find a LikeDIYHomes
      * @example
-     * // Get one Like
-     * const like = await prisma.like.findUnique({
+     * // Get one LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends LikeFindUniqueArgs>(args: SelectSubset<T, LikeFindUniqueArgs<ExtArgs>>): Prisma__LikeClient<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends LikeDIYHomesFindUniqueArgs>(args: SelectSubset<T, LikeDIYHomesFindUniqueArgs<ExtArgs>>): Prisma__LikeDIYHomesClient<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Like that matches the filter or throw an error with `error.code='P2025'`
+     * Find one LikeDIYHomes that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {LikeFindUniqueOrThrowArgs} args - Arguments to find a Like
+     * @param {LikeDIYHomesFindUniqueOrThrowArgs} args - Arguments to find a LikeDIYHomes
      * @example
-     * // Get one Like
-     * const like = await prisma.like.findUniqueOrThrow({
+     * // Get one LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends LikeFindUniqueOrThrowArgs>(args: SelectSubset<T, LikeFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LikeClient<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends LikeDIYHomesFindUniqueOrThrowArgs>(args: SelectSubset<T, LikeDIYHomesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LikeDIYHomesClient<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Like that matches the filter.
+     * Find the first LikeDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LikeFindFirstArgs} args - Arguments to find a Like
+     * @param {LikeDIYHomesFindFirstArgs} args - Arguments to find a LikeDIYHomes
      * @example
-     * // Get one Like
-     * const like = await prisma.like.findFirst({
+     * // Get one LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends LikeFindFirstArgs>(args?: SelectSubset<T, LikeFindFirstArgs<ExtArgs>>): Prisma__LikeClient<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends LikeDIYHomesFindFirstArgs>(args?: SelectSubset<T, LikeDIYHomesFindFirstArgs<ExtArgs>>): Prisma__LikeDIYHomesClient<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Like that matches the filter or
+     * Find the first LikeDIYHomes that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LikeFindFirstOrThrowArgs} args - Arguments to find a Like
+     * @param {LikeDIYHomesFindFirstOrThrowArgs} args - Arguments to find a LikeDIYHomes
      * @example
-     * // Get one Like
-     * const like = await prisma.like.findFirstOrThrow({
+     * // Get one LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends LikeFindFirstOrThrowArgs>(args?: SelectSubset<T, LikeFindFirstOrThrowArgs<ExtArgs>>): Prisma__LikeClient<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends LikeDIYHomesFindFirstOrThrowArgs>(args?: SelectSubset<T, LikeDIYHomesFindFirstOrThrowArgs<ExtArgs>>): Prisma__LikeDIYHomesClient<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Likes that matches the filter.
+     * Find zero or more LikeDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LikeFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {LikeDIYHomesFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Likes
-     * const likes = await prisma.like.findMany()
+     * // Get all LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.findMany()
      * 
-     * // Get first 10 Likes
-     * const likes = await prisma.like.findMany({ take: 10 })
+     * // Get first 10 LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const likeWithIdOnly = await prisma.like.findMany({ select: { id: true } })
+     * const likeDIYHomesWithIdOnly = await prisma.likeDIYHomes.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends LikeFindManyArgs>(args?: SelectSubset<T, LikeFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends LikeDIYHomesFindManyArgs>(args?: SelectSubset<T, LikeDIYHomesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Like.
-     * @param {LikeCreateArgs} args - Arguments to create a Like.
+     * Create a LikeDIYHomes.
+     * @param {LikeDIYHomesCreateArgs} args - Arguments to create a LikeDIYHomes.
      * @example
-     * // Create one Like
-     * const Like = await prisma.like.create({
+     * // Create one LikeDIYHomes
+     * const LikeDIYHomes = await prisma.likeDIYHomes.create({
      *   data: {
-     *     // ... data to create a Like
+     *     // ... data to create a LikeDIYHomes
      *   }
      * })
      * 
      */
-    create<T extends LikeCreateArgs>(args: SelectSubset<T, LikeCreateArgs<ExtArgs>>): Prisma__LikeClient<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends LikeDIYHomesCreateArgs>(args: SelectSubset<T, LikeDIYHomesCreateArgs<ExtArgs>>): Prisma__LikeDIYHomesClient<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Likes.
-     * @param {LikeCreateManyArgs} args - Arguments to create many Likes.
+     * Create many LikeDIYHomes.
+     * @param {LikeDIYHomesCreateManyArgs} args - Arguments to create many LikeDIYHomes.
      * @example
-     * // Create many Likes
-     * const like = await prisma.like.createMany({
+     * // Create many LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends LikeCreateManyArgs>(args?: SelectSubset<T, LikeCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends LikeDIYHomesCreateManyArgs>(args?: SelectSubset<T, LikeDIYHomesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Likes and returns the data saved in the database.
-     * @param {LikeCreateManyAndReturnArgs} args - Arguments to create many Likes.
+     * Create many LikeDIYHomes and returns the data saved in the database.
+     * @param {LikeDIYHomesCreateManyAndReturnArgs} args - Arguments to create many LikeDIYHomes.
      * @example
-     * // Create many Likes
-     * const like = await prisma.like.createManyAndReturn({
+     * // Create many LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Likes and only return the `id`
-     * const likeWithIdOnly = await prisma.like.createManyAndReturn({
+     * // Create many LikeDIYHomes and only return the `id`
+     * const likeDIYHomesWithIdOnly = await prisma.likeDIYHomes.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -5351,28 +5351,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends LikeCreateManyAndReturnArgs>(args?: SelectSubset<T, LikeCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends LikeDIYHomesCreateManyAndReturnArgs>(args?: SelectSubset<T, LikeDIYHomesCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Like.
-     * @param {LikeDeleteArgs} args - Arguments to delete one Like.
+     * Delete a LikeDIYHomes.
+     * @param {LikeDIYHomesDeleteArgs} args - Arguments to delete one LikeDIYHomes.
      * @example
-     * // Delete one Like
-     * const Like = await prisma.like.delete({
+     * // Delete one LikeDIYHomes
+     * const LikeDIYHomes = await prisma.likeDIYHomes.delete({
      *   where: {
-     *     // ... filter to delete one Like
+     *     // ... filter to delete one LikeDIYHomes
      *   }
      * })
      * 
      */
-    delete<T extends LikeDeleteArgs>(args: SelectSubset<T, LikeDeleteArgs<ExtArgs>>): Prisma__LikeClient<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends LikeDIYHomesDeleteArgs>(args: SelectSubset<T, LikeDIYHomesDeleteArgs<ExtArgs>>): Prisma__LikeDIYHomesClient<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Like.
-     * @param {LikeUpdateArgs} args - Arguments to update one Like.
+     * Update one LikeDIYHomes.
+     * @param {LikeDIYHomesUpdateArgs} args - Arguments to update one LikeDIYHomes.
      * @example
-     * // Update one Like
-     * const like = await prisma.like.update({
+     * // Update one LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5382,30 +5382,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends LikeUpdateArgs>(args: SelectSubset<T, LikeUpdateArgs<ExtArgs>>): Prisma__LikeClient<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends LikeDIYHomesUpdateArgs>(args: SelectSubset<T, LikeDIYHomesUpdateArgs<ExtArgs>>): Prisma__LikeDIYHomesClient<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Likes.
-     * @param {LikeDeleteManyArgs} args - Arguments to filter Likes to delete.
+     * Delete zero or more LikeDIYHomes.
+     * @param {LikeDIYHomesDeleteManyArgs} args - Arguments to filter LikeDIYHomes to delete.
      * @example
-     * // Delete a few Likes
-     * const { count } = await prisma.like.deleteMany({
+     * // Delete a few LikeDIYHomes
+     * const { count } = await prisma.likeDIYHomes.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends LikeDeleteManyArgs>(args?: SelectSubset<T, LikeDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends LikeDIYHomesDeleteManyArgs>(args?: SelectSubset<T, LikeDIYHomesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Likes.
+     * Update zero or more LikeDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LikeUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {LikeDIYHomesUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Likes
-     * const like = await prisma.like.updateMany({
+     * // Update many LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5415,14 +5415,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends LikeUpdateManyArgs>(args: SelectSubset<T, LikeUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends LikeDIYHomesUpdateManyArgs>(args: SelectSubset<T, LikeDIYHomesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Likes and returns the data updated in the database.
-     * @param {LikeUpdateManyAndReturnArgs} args - Arguments to update many Likes.
+     * Update zero or more LikeDIYHomes and returns the data updated in the database.
+     * @param {LikeDIYHomesUpdateManyAndReturnArgs} args - Arguments to update many LikeDIYHomes.
      * @example
-     * // Update many Likes
-     * const like = await prisma.like.updateManyAndReturn({
+     * // Update many LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5431,8 +5431,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Likes and only return the `id`
-     * const likeWithIdOnly = await prisma.like.updateManyAndReturn({
+     * // Update zero or more LikeDIYHomes and only return the `id`
+     * const likeDIYHomesWithIdOnly = await prisma.likeDIYHomes.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -5445,56 +5445,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends LikeUpdateManyAndReturnArgs>(args: SelectSubset<T, LikeUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends LikeDIYHomesUpdateManyAndReturnArgs>(args: SelectSubset<T, LikeDIYHomesUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Like.
-     * @param {LikeUpsertArgs} args - Arguments to update or create a Like.
+     * Create or update one LikeDIYHomes.
+     * @param {LikeDIYHomesUpsertArgs} args - Arguments to update or create a LikeDIYHomes.
      * @example
-     * // Update or create a Like
-     * const like = await prisma.like.upsert({
+     * // Update or create a LikeDIYHomes
+     * const likeDIYHomes = await prisma.likeDIYHomes.upsert({
      *   create: {
-     *     // ... data to create a Like
+     *     // ... data to create a LikeDIYHomes
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Like we want to update
+     *     // ... the filter for the LikeDIYHomes we want to update
      *   }
      * })
      */
-    upsert<T extends LikeUpsertArgs>(args: SelectSubset<T, LikeUpsertArgs<ExtArgs>>): Prisma__LikeClient<$Result.GetResult<Prisma.$LikePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends LikeDIYHomesUpsertArgs>(args: SelectSubset<T, LikeDIYHomesUpsertArgs<ExtArgs>>): Prisma__LikeDIYHomesClient<$Result.GetResult<Prisma.$LikeDIYHomesPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Likes.
+     * Count the number of LikeDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LikeCountArgs} args - Arguments to filter Likes to count.
+     * @param {LikeDIYHomesCountArgs} args - Arguments to filter LikeDIYHomes to count.
      * @example
-     * // Count the number of Likes
-     * const count = await prisma.like.count({
+     * // Count the number of LikeDIYHomes
+     * const count = await prisma.likeDIYHomes.count({
      *   where: {
-     *     // ... the filter for the Likes we want to count
+     *     // ... the filter for the LikeDIYHomes we want to count
      *   }
      * })
     **/
-    count<T extends LikeCountArgs>(
-      args?: Subset<T, LikeCountArgs>,
+    count<T extends LikeDIYHomesCountArgs>(
+      args?: Subset<T, LikeDIYHomesCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], LikeCountAggregateOutputType>
+          : GetScalarType<T['select'], LikeDIYHomesCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Like.
+     * Allows you to perform aggregations operations on a LikeDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LikeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {LikeDIYHomesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -5514,13 +5514,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends LikeAggregateArgs>(args: Subset<T, LikeAggregateArgs>): Prisma.PrismaPromise<GetLikeAggregateType<T>>
+    aggregate<T extends LikeDIYHomesAggregateArgs>(args: Subset<T, LikeDIYHomesAggregateArgs>): Prisma.PrismaPromise<GetLikeDIYHomesAggregateType<T>>
 
     /**
-     * Group by Like.
+     * Group by LikeDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LikeGroupByArgs} args - Group by arguments.
+     * @param {LikeDIYHomesGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -5535,14 +5535,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends LikeGroupByArgs,
+      T extends LikeDIYHomesGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: LikeGroupByArgs['orderBy'] }
-        : { orderBy?: LikeGroupByArgs['orderBy'] },
+        ? { orderBy: LikeDIYHomesGroupByArgs['orderBy'] }
+        : { orderBy?: LikeDIYHomesGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -5591,23 +5591,23 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, LikeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLikeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, LikeDIYHomesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLikeDIYHomesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Like model
+   * Fields of the LikeDIYHomes model
    */
-  readonly fields: LikeFieldRefs;
+  readonly fields: LikeDIYHomesFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Like.
+   * The delegate class that acts as a "Promise-like" for LikeDIYHomes.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__LikeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__LikeDIYHomesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    post<T extends PostDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PostDefaultArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    post<T extends PostDIYHomesDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PostDIYHomesDefaultArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -5634,452 +5634,452 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Like model
+   * Fields of the LikeDIYHomes model
    */ 
-  interface LikeFieldRefs {
-    readonly id: FieldRef<"Like", 'String'>
-    readonly postId: FieldRef<"Like", 'String'>
-    readonly userId: FieldRef<"Like", 'String'>
-    readonly createdAt: FieldRef<"Like", 'DateTime'>
+  interface LikeDIYHomesFieldRefs {
+    readonly id: FieldRef<"LikeDIYHomes", 'String'>
+    readonly postId: FieldRef<"LikeDIYHomes", 'String'>
+    readonly userId: FieldRef<"LikeDIYHomes", 'String'>
+    readonly createdAt: FieldRef<"LikeDIYHomes", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Like findUnique
+   * LikeDIYHomes findUnique
    */
-  export type LikeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Like to fetch.
+     * Filter, which LikeDIYHomes to fetch.
      */
-    where: LikeWhereUniqueInput
+    where: LikeDIYHomesWhereUniqueInput
   }
 
   /**
-   * Like findUniqueOrThrow
+   * LikeDIYHomes findUniqueOrThrow
    */
-  export type LikeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Like to fetch.
+     * Filter, which LikeDIYHomes to fetch.
      */
-    where: LikeWhereUniqueInput
+    where: LikeDIYHomesWhereUniqueInput
   }
 
   /**
-   * Like findFirst
+   * LikeDIYHomes findFirst
    */
-  export type LikeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Like to fetch.
+     * Filter, which LikeDIYHomes to fetch.
      */
-    where?: LikeWhereInput
+    where?: LikeDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Likes to fetch.
+     * Determine the order of LikeDIYHomes to fetch.
      */
-    orderBy?: LikeOrderByWithRelationInput | LikeOrderByWithRelationInput[]
+    orderBy?: LikeDIYHomesOrderByWithRelationInput | LikeDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Likes.
+     * Sets the position for searching for LikeDIYHomes.
      */
-    cursor?: LikeWhereUniqueInput
+    cursor?: LikeDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Likes from the position of the cursor.
+     * Take `±n` LikeDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Likes.
+     * Skip the first `n` LikeDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Likes.
+     * Filter by unique combinations of LikeDIYHomes.
      */
-    distinct?: LikeScalarFieldEnum | LikeScalarFieldEnum[]
+    distinct?: LikeDIYHomesScalarFieldEnum | LikeDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Like findFirstOrThrow
+   * LikeDIYHomes findFirstOrThrow
    */
-  export type LikeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Like to fetch.
+     * Filter, which LikeDIYHomes to fetch.
      */
-    where?: LikeWhereInput
+    where?: LikeDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Likes to fetch.
+     * Determine the order of LikeDIYHomes to fetch.
      */
-    orderBy?: LikeOrderByWithRelationInput | LikeOrderByWithRelationInput[]
+    orderBy?: LikeDIYHomesOrderByWithRelationInput | LikeDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Likes.
+     * Sets the position for searching for LikeDIYHomes.
      */
-    cursor?: LikeWhereUniqueInput
+    cursor?: LikeDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Likes from the position of the cursor.
+     * Take `±n` LikeDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Likes.
+     * Skip the first `n` LikeDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Likes.
+     * Filter by unique combinations of LikeDIYHomes.
      */
-    distinct?: LikeScalarFieldEnum | LikeScalarFieldEnum[]
+    distinct?: LikeDIYHomesScalarFieldEnum | LikeDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Like findMany
+   * LikeDIYHomes findMany
    */
-  export type LikeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Likes to fetch.
+     * Filter, which LikeDIYHomes to fetch.
      */
-    where?: LikeWhereInput
+    where?: LikeDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Likes to fetch.
+     * Determine the order of LikeDIYHomes to fetch.
      */
-    orderBy?: LikeOrderByWithRelationInput | LikeOrderByWithRelationInput[]
+    orderBy?: LikeDIYHomesOrderByWithRelationInput | LikeDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Likes.
+     * Sets the position for listing LikeDIYHomes.
      */
-    cursor?: LikeWhereUniqueInput
+    cursor?: LikeDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Likes from the position of the cursor.
+     * Take `±n` LikeDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Likes.
+     * Skip the first `n` LikeDIYHomes.
      */
     skip?: number
-    distinct?: LikeScalarFieldEnum | LikeScalarFieldEnum[]
+    distinct?: LikeDIYHomesScalarFieldEnum | LikeDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Like create
+   * LikeDIYHomes create
    */
-  export type LikeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to create a Like.
+     * The data needed to create a LikeDIYHomes.
      */
-    data: XOR<LikeCreateInput, LikeUncheckedCreateInput>
+    data: XOR<LikeDIYHomesCreateInput, LikeDIYHomesUncheckedCreateInput>
   }
 
   /**
-   * Like createMany
+   * LikeDIYHomes createMany
    */
-  export type LikeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Likes.
+     * The data used to create many LikeDIYHomes.
      */
-    data: LikeCreateManyInput | LikeCreateManyInput[]
+    data: LikeDIYHomesCreateManyInput | LikeDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Like createManyAndReturn
+   * LikeDIYHomes createManyAndReturn
    */
-  export type LikeCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelectCreateManyAndReturn<ExtArgs> | null
+    select?: LikeDIYHomesSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to create many Likes.
+     * The data used to create many LikeDIYHomes.
      */
-    data: LikeCreateManyInput | LikeCreateManyInput[]
+    data: LikeDIYHomesCreateManyInput | LikeDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: LikeDIYHomesIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Like update
+   * LikeDIYHomes update
    */
-  export type LikeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to update a Like.
+     * The data needed to update a LikeDIYHomes.
      */
-    data: XOR<LikeUpdateInput, LikeUncheckedUpdateInput>
+    data: XOR<LikeDIYHomesUpdateInput, LikeDIYHomesUncheckedUpdateInput>
     /**
-     * Choose, which Like to update.
+     * Choose, which LikeDIYHomes to update.
      */
-    where: LikeWhereUniqueInput
+    where: LikeDIYHomesWhereUniqueInput
   }
 
   /**
-   * Like updateMany
+   * LikeDIYHomes updateMany
    */
-  export type LikeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Likes.
+     * The data used to update LikeDIYHomes.
      */
-    data: XOR<LikeUpdateManyMutationInput, LikeUncheckedUpdateManyInput>
+    data: XOR<LikeDIYHomesUpdateManyMutationInput, LikeDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Likes to update
+     * Filter which LikeDIYHomes to update
      */
-    where?: LikeWhereInput
+    where?: LikeDIYHomesWhereInput
     /**
-     * Limit how many Likes to update.
+     * Limit how many LikeDIYHomes to update.
      */
     limit?: number
   }
 
   /**
-   * Like updateManyAndReturn
+   * LikeDIYHomes updateManyAndReturn
    */
-  export type LikeUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: LikeDIYHomesSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to update Likes.
+     * The data used to update LikeDIYHomes.
      */
-    data: XOR<LikeUpdateManyMutationInput, LikeUncheckedUpdateManyInput>
+    data: XOR<LikeDIYHomesUpdateManyMutationInput, LikeDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Likes to update
+     * Filter which LikeDIYHomes to update
      */
-    where?: LikeWhereInput
+    where?: LikeDIYHomesWhereInput
     /**
-     * Limit how many Likes to update.
+     * Limit how many LikeDIYHomes to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: LikeDIYHomesIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Like upsert
+   * LikeDIYHomes upsert
    */
-  export type LikeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
     /**
-     * The filter to search for the Like to update in case it exists.
+     * The filter to search for the LikeDIYHomes to update in case it exists.
      */
-    where: LikeWhereUniqueInput
+    where: LikeDIYHomesWhereUniqueInput
     /**
-     * In case the Like found by the `where` argument doesn't exist, create a new Like with this data.
+     * In case the LikeDIYHomes found by the `where` argument doesn't exist, create a new LikeDIYHomes with this data.
      */
-    create: XOR<LikeCreateInput, LikeUncheckedCreateInput>
+    create: XOR<LikeDIYHomesCreateInput, LikeDIYHomesUncheckedCreateInput>
     /**
-     * In case the Like was found with the provided `where` argument, update it with this data.
+     * In case the LikeDIYHomes was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<LikeUpdateInput, LikeUncheckedUpdateInput>
+    update: XOR<LikeDIYHomesUpdateInput, LikeDIYHomesUncheckedUpdateInput>
   }
 
   /**
-   * Like delete
+   * LikeDIYHomes delete
    */
-  export type LikeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter which Like to delete.
+     * Filter which LikeDIYHomes to delete.
      */
-    where: LikeWhereUniqueInput
+    where: LikeDIYHomesWhereUniqueInput
   }
 
   /**
-   * Like deleteMany
+   * LikeDIYHomes deleteMany
    */
-  export type LikeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Likes to delete
+     * Filter which LikeDIYHomes to delete
      */
-    where?: LikeWhereInput
+    where?: LikeDIYHomesWhereInput
     /**
-     * Limit how many Likes to delete.
+     * Limit how many LikeDIYHomes to delete.
      */
     limit?: number
   }
 
   /**
-   * Like without action
+   * LikeDIYHomes without action
    */
-  export type LikeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LikeDIYHomesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Like
+     * Select specific fields to fetch from the LikeDIYHomes
      */
-    select?: LikeSelect<ExtArgs> | null
+    select?: LikeDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Like
+     * Omit specific fields from the LikeDIYHomes
      */
-    omit?: LikeOmit<ExtArgs> | null
+    omit?: LikeDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LikeInclude<ExtArgs> | null
+    include?: LikeDIYHomesInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model Bookmark
+   * Model BookmarkDIYHomes
    */
 
-  export type AggregateBookmark = {
-    _count: BookmarkCountAggregateOutputType | null
-    _min: BookmarkMinAggregateOutputType | null
-    _max: BookmarkMaxAggregateOutputType | null
+  export type AggregateBookmarkDIYHomes = {
+    _count: BookmarkDIYHomesCountAggregateOutputType | null
+    _min: BookmarkDIYHomesMinAggregateOutputType | null
+    _max: BookmarkDIYHomesMaxAggregateOutputType | null
   }
 
-  export type BookmarkMinAggregateOutputType = {
+  export type BookmarkDIYHomesMinAggregateOutputType = {
     id: string | null
     postId: string | null
     userId: string | null
     createdAt: Date | null
   }
 
-  export type BookmarkMaxAggregateOutputType = {
+  export type BookmarkDIYHomesMaxAggregateOutputType = {
     id: string | null
     postId: string | null
     userId: string | null
     createdAt: Date | null
   }
 
-  export type BookmarkCountAggregateOutputType = {
+  export type BookmarkDIYHomesCountAggregateOutputType = {
     id: number
     postId: number
     userId: number
@@ -6088,21 +6088,21 @@ export namespace Prisma {
   }
 
 
-  export type BookmarkMinAggregateInputType = {
+  export type BookmarkDIYHomesMinAggregateInputType = {
     id?: true
     postId?: true
     userId?: true
     createdAt?: true
   }
 
-  export type BookmarkMaxAggregateInputType = {
+  export type BookmarkDIYHomesMaxAggregateInputType = {
     id?: true
     postId?: true
     userId?: true
     createdAt?: true
   }
 
-  export type BookmarkCountAggregateInputType = {
+  export type BookmarkDIYHomesCountAggregateInputType = {
     id?: true
     postId?: true
     userId?: true
@@ -6110,291 +6110,291 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type BookmarkAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Bookmark to aggregate.
+     * Filter which BookmarkDIYHomes to aggregate.
      */
-    where?: BookmarkWhereInput
+    where?: BookmarkDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Bookmarks to fetch.
+     * Determine the order of BookmarkDIYHomes to fetch.
      */
-    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
+    orderBy?: BookmarkDIYHomesOrderByWithRelationInput | BookmarkDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: BookmarkWhereUniqueInput
+    cursor?: BookmarkDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Bookmarks from the position of the cursor.
+     * Take `±n` BookmarkDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Bookmarks.
+     * Skip the first `n` BookmarkDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Bookmarks
+     * Count returned BookmarkDIYHomes
     **/
-    _count?: true | BookmarkCountAggregateInputType
+    _count?: true | BookmarkDIYHomesCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: BookmarkMinAggregateInputType
+    _min?: BookmarkDIYHomesMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: BookmarkMaxAggregateInputType
+    _max?: BookmarkDIYHomesMaxAggregateInputType
   }
 
-  export type GetBookmarkAggregateType<T extends BookmarkAggregateArgs> = {
-        [P in keyof T & keyof AggregateBookmark]: P extends '_count' | 'count'
+  export type GetBookmarkDIYHomesAggregateType<T extends BookmarkDIYHomesAggregateArgs> = {
+        [P in keyof T & keyof AggregateBookmarkDIYHomes]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateBookmark[P]>
-      : GetScalarType<T[P], AggregateBookmark[P]>
+        : GetScalarType<T[P], AggregateBookmarkDIYHomes[P]>
+      : GetScalarType<T[P], AggregateBookmarkDIYHomes[P]>
   }
 
 
 
 
-  export type BookmarkGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: BookmarkWhereInput
-    orderBy?: BookmarkOrderByWithAggregationInput | BookmarkOrderByWithAggregationInput[]
-    by: BookmarkScalarFieldEnum[] | BookmarkScalarFieldEnum
-    having?: BookmarkScalarWhereWithAggregatesInput
+  export type BookmarkDIYHomesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: BookmarkDIYHomesWhereInput
+    orderBy?: BookmarkDIYHomesOrderByWithAggregationInput | BookmarkDIYHomesOrderByWithAggregationInput[]
+    by: BookmarkDIYHomesScalarFieldEnum[] | BookmarkDIYHomesScalarFieldEnum
+    having?: BookmarkDIYHomesScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: BookmarkCountAggregateInputType | true
-    _min?: BookmarkMinAggregateInputType
-    _max?: BookmarkMaxAggregateInputType
+    _count?: BookmarkDIYHomesCountAggregateInputType | true
+    _min?: BookmarkDIYHomesMinAggregateInputType
+    _max?: BookmarkDIYHomesMaxAggregateInputType
   }
 
-  export type BookmarkGroupByOutputType = {
+  export type BookmarkDIYHomesGroupByOutputType = {
     id: string
     postId: string
     userId: string
     createdAt: Date
-    _count: BookmarkCountAggregateOutputType | null
-    _min: BookmarkMinAggregateOutputType | null
-    _max: BookmarkMaxAggregateOutputType | null
+    _count: BookmarkDIYHomesCountAggregateOutputType | null
+    _min: BookmarkDIYHomesMinAggregateOutputType | null
+    _max: BookmarkDIYHomesMaxAggregateOutputType | null
   }
 
-  type GetBookmarkGroupByPayload<T extends BookmarkGroupByArgs> = Prisma.PrismaPromise<
+  type GetBookmarkDIYHomesGroupByPayload<T extends BookmarkDIYHomesGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<BookmarkGroupByOutputType, T['by']> &
+      PickEnumerable<BookmarkDIYHomesGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof BookmarkGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof BookmarkDIYHomesGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], BookmarkGroupByOutputType[P]>
-            : GetScalarType<T[P], BookmarkGroupByOutputType[P]>
+              : GetScalarType<T[P], BookmarkDIYHomesGroupByOutputType[P]>
+            : GetScalarType<T[P], BookmarkDIYHomesGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type BookmarkSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type BookmarkDIYHomesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     userId?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["bookmark"]>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["bookmarkDIYHomes"]>
 
-  export type BookmarkSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type BookmarkDIYHomesSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     userId?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["bookmark"]>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["bookmarkDIYHomes"]>
 
-  export type BookmarkSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type BookmarkDIYHomesSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     userId?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["bookmark"]>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["bookmarkDIYHomes"]>
 
-  export type BookmarkSelectScalar = {
+  export type BookmarkDIYHomesSelectScalar = {
     id?: boolean
     postId?: boolean
     userId?: boolean
     createdAt?: boolean
   }
 
-  export type BookmarkOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "postId" | "userId" | "createdAt", ExtArgs["result"]["bookmark"]>
-  export type BookmarkInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "postId" | "userId" | "createdAt", ExtArgs["result"]["bookmarkDIYHomes"]>
+  export type BookmarkDIYHomesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
   }
-  export type BookmarkIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
   }
-  export type BookmarkIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | PostDefaultArgs<ExtArgs>
+    post?: boolean | PostDIYHomesDefaultArgs<ExtArgs>
   }
 
-  export type $BookmarkPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Bookmark"
+  export type $BookmarkDIYHomesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "BookmarkDIYHomes"
     objects: {
       user: Prisma.$UserPayload<ExtArgs>
-      post: Prisma.$PostPayload<ExtArgs>
+      post: Prisma.$PostDIYHomesPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
       postId: string
       userId: string
       createdAt: Date
-    }, ExtArgs["result"]["bookmark"]>
+    }, ExtArgs["result"]["bookmarkDIYHomes"]>
     composites: {}
   }
 
-  type BookmarkGetPayload<S extends boolean | null | undefined | BookmarkDefaultArgs> = $Result.GetResult<Prisma.$BookmarkPayload, S>
+  type BookmarkDIYHomesGetPayload<S extends boolean | null | undefined | BookmarkDIYHomesDefaultArgs> = $Result.GetResult<Prisma.$BookmarkDIYHomesPayload, S>
 
-  type BookmarkCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<BookmarkFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: BookmarkCountAggregateInputType | true
+  type BookmarkDIYHomesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<BookmarkDIYHomesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: BookmarkDIYHomesCountAggregateInputType | true
     }
 
-  export interface BookmarkDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Bookmark'], meta: { name: 'Bookmark' } }
+  export interface BookmarkDIYHomesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['BookmarkDIYHomes'], meta: { name: 'BookmarkDIYHomes' } }
     /**
-     * Find zero or one Bookmark that matches the filter.
-     * @param {BookmarkFindUniqueArgs} args - Arguments to find a Bookmark
+     * Find zero or one BookmarkDIYHomes that matches the filter.
+     * @param {BookmarkDIYHomesFindUniqueArgs} args - Arguments to find a BookmarkDIYHomes
      * @example
-     * // Get one Bookmark
-     * const bookmark = await prisma.bookmark.findUnique({
+     * // Get one BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends BookmarkFindUniqueArgs>(args: SelectSubset<T, BookmarkFindUniqueArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends BookmarkDIYHomesFindUniqueArgs>(args: SelectSubset<T, BookmarkDIYHomesFindUniqueArgs<ExtArgs>>): Prisma__BookmarkDIYHomesClient<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Bookmark that matches the filter or throw an error with `error.code='P2025'`
+     * Find one BookmarkDIYHomes that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {BookmarkFindUniqueOrThrowArgs} args - Arguments to find a Bookmark
+     * @param {BookmarkDIYHomesFindUniqueOrThrowArgs} args - Arguments to find a BookmarkDIYHomes
      * @example
-     * // Get one Bookmark
-     * const bookmark = await prisma.bookmark.findUniqueOrThrow({
+     * // Get one BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends BookmarkFindUniqueOrThrowArgs>(args: SelectSubset<T, BookmarkFindUniqueOrThrowArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends BookmarkDIYHomesFindUniqueOrThrowArgs>(args: SelectSubset<T, BookmarkDIYHomesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__BookmarkDIYHomesClient<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Bookmark that matches the filter.
+     * Find the first BookmarkDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookmarkFindFirstArgs} args - Arguments to find a Bookmark
+     * @param {BookmarkDIYHomesFindFirstArgs} args - Arguments to find a BookmarkDIYHomes
      * @example
-     * // Get one Bookmark
-     * const bookmark = await prisma.bookmark.findFirst({
+     * // Get one BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends BookmarkFindFirstArgs>(args?: SelectSubset<T, BookmarkFindFirstArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends BookmarkDIYHomesFindFirstArgs>(args?: SelectSubset<T, BookmarkDIYHomesFindFirstArgs<ExtArgs>>): Prisma__BookmarkDIYHomesClient<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Bookmark that matches the filter or
+     * Find the first BookmarkDIYHomes that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookmarkFindFirstOrThrowArgs} args - Arguments to find a Bookmark
+     * @param {BookmarkDIYHomesFindFirstOrThrowArgs} args - Arguments to find a BookmarkDIYHomes
      * @example
-     * // Get one Bookmark
-     * const bookmark = await prisma.bookmark.findFirstOrThrow({
+     * // Get one BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends BookmarkFindFirstOrThrowArgs>(args?: SelectSubset<T, BookmarkFindFirstOrThrowArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends BookmarkDIYHomesFindFirstOrThrowArgs>(args?: SelectSubset<T, BookmarkDIYHomesFindFirstOrThrowArgs<ExtArgs>>): Prisma__BookmarkDIYHomesClient<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Bookmarks that matches the filter.
+     * Find zero or more BookmarkDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookmarkFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {BookmarkDIYHomesFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Bookmarks
-     * const bookmarks = await prisma.bookmark.findMany()
+     * // Get all BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.findMany()
      * 
-     * // Get first 10 Bookmarks
-     * const bookmarks = await prisma.bookmark.findMany({ take: 10 })
+     * // Get first 10 BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const bookmarkWithIdOnly = await prisma.bookmark.findMany({ select: { id: true } })
+     * const bookmarkDIYHomesWithIdOnly = await prisma.bookmarkDIYHomes.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends BookmarkFindManyArgs>(args?: SelectSubset<T, BookmarkFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends BookmarkDIYHomesFindManyArgs>(args?: SelectSubset<T, BookmarkDIYHomesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Bookmark.
-     * @param {BookmarkCreateArgs} args - Arguments to create a Bookmark.
+     * Create a BookmarkDIYHomes.
+     * @param {BookmarkDIYHomesCreateArgs} args - Arguments to create a BookmarkDIYHomes.
      * @example
-     * // Create one Bookmark
-     * const Bookmark = await prisma.bookmark.create({
+     * // Create one BookmarkDIYHomes
+     * const BookmarkDIYHomes = await prisma.bookmarkDIYHomes.create({
      *   data: {
-     *     // ... data to create a Bookmark
+     *     // ... data to create a BookmarkDIYHomes
      *   }
      * })
      * 
      */
-    create<T extends BookmarkCreateArgs>(args: SelectSubset<T, BookmarkCreateArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends BookmarkDIYHomesCreateArgs>(args: SelectSubset<T, BookmarkDIYHomesCreateArgs<ExtArgs>>): Prisma__BookmarkDIYHomesClient<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Bookmarks.
-     * @param {BookmarkCreateManyArgs} args - Arguments to create many Bookmarks.
+     * Create many BookmarkDIYHomes.
+     * @param {BookmarkDIYHomesCreateManyArgs} args - Arguments to create many BookmarkDIYHomes.
      * @example
-     * // Create many Bookmarks
-     * const bookmark = await prisma.bookmark.createMany({
+     * // Create many BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends BookmarkCreateManyArgs>(args?: SelectSubset<T, BookmarkCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends BookmarkDIYHomesCreateManyArgs>(args?: SelectSubset<T, BookmarkDIYHomesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Bookmarks and returns the data saved in the database.
-     * @param {BookmarkCreateManyAndReturnArgs} args - Arguments to create many Bookmarks.
+     * Create many BookmarkDIYHomes and returns the data saved in the database.
+     * @param {BookmarkDIYHomesCreateManyAndReturnArgs} args - Arguments to create many BookmarkDIYHomes.
      * @example
-     * // Create many Bookmarks
-     * const bookmark = await prisma.bookmark.createManyAndReturn({
+     * // Create many BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Bookmarks and only return the `id`
-     * const bookmarkWithIdOnly = await prisma.bookmark.createManyAndReturn({
+     * // Create many BookmarkDIYHomes and only return the `id`
+     * const bookmarkDIYHomesWithIdOnly = await prisma.bookmarkDIYHomes.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -6404,28 +6404,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends BookmarkCreateManyAndReturnArgs>(args?: SelectSubset<T, BookmarkCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends BookmarkDIYHomesCreateManyAndReturnArgs>(args?: SelectSubset<T, BookmarkDIYHomesCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Bookmark.
-     * @param {BookmarkDeleteArgs} args - Arguments to delete one Bookmark.
+     * Delete a BookmarkDIYHomes.
+     * @param {BookmarkDIYHomesDeleteArgs} args - Arguments to delete one BookmarkDIYHomes.
      * @example
-     * // Delete one Bookmark
-     * const Bookmark = await prisma.bookmark.delete({
+     * // Delete one BookmarkDIYHomes
+     * const BookmarkDIYHomes = await prisma.bookmarkDIYHomes.delete({
      *   where: {
-     *     // ... filter to delete one Bookmark
+     *     // ... filter to delete one BookmarkDIYHomes
      *   }
      * })
      * 
      */
-    delete<T extends BookmarkDeleteArgs>(args: SelectSubset<T, BookmarkDeleteArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends BookmarkDIYHomesDeleteArgs>(args: SelectSubset<T, BookmarkDIYHomesDeleteArgs<ExtArgs>>): Prisma__BookmarkDIYHomesClient<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Bookmark.
-     * @param {BookmarkUpdateArgs} args - Arguments to update one Bookmark.
+     * Update one BookmarkDIYHomes.
+     * @param {BookmarkDIYHomesUpdateArgs} args - Arguments to update one BookmarkDIYHomes.
      * @example
-     * // Update one Bookmark
-     * const bookmark = await prisma.bookmark.update({
+     * // Update one BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6435,30 +6435,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends BookmarkUpdateArgs>(args: SelectSubset<T, BookmarkUpdateArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends BookmarkDIYHomesUpdateArgs>(args: SelectSubset<T, BookmarkDIYHomesUpdateArgs<ExtArgs>>): Prisma__BookmarkDIYHomesClient<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Bookmarks.
-     * @param {BookmarkDeleteManyArgs} args - Arguments to filter Bookmarks to delete.
+     * Delete zero or more BookmarkDIYHomes.
+     * @param {BookmarkDIYHomesDeleteManyArgs} args - Arguments to filter BookmarkDIYHomes to delete.
      * @example
-     * // Delete a few Bookmarks
-     * const { count } = await prisma.bookmark.deleteMany({
+     * // Delete a few BookmarkDIYHomes
+     * const { count } = await prisma.bookmarkDIYHomes.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends BookmarkDeleteManyArgs>(args?: SelectSubset<T, BookmarkDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends BookmarkDIYHomesDeleteManyArgs>(args?: SelectSubset<T, BookmarkDIYHomesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Bookmarks.
+     * Update zero or more BookmarkDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookmarkUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {BookmarkDIYHomesUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Bookmarks
-     * const bookmark = await prisma.bookmark.updateMany({
+     * // Update many BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6468,14 +6468,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends BookmarkUpdateManyArgs>(args: SelectSubset<T, BookmarkUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends BookmarkDIYHomesUpdateManyArgs>(args: SelectSubset<T, BookmarkDIYHomesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Bookmarks and returns the data updated in the database.
-     * @param {BookmarkUpdateManyAndReturnArgs} args - Arguments to update many Bookmarks.
+     * Update zero or more BookmarkDIYHomes and returns the data updated in the database.
+     * @param {BookmarkDIYHomesUpdateManyAndReturnArgs} args - Arguments to update many BookmarkDIYHomes.
      * @example
-     * // Update many Bookmarks
-     * const bookmark = await prisma.bookmark.updateManyAndReturn({
+     * // Update many BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6484,8 +6484,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Bookmarks and only return the `id`
-     * const bookmarkWithIdOnly = await prisma.bookmark.updateManyAndReturn({
+     * // Update zero or more BookmarkDIYHomes and only return the `id`
+     * const bookmarkDIYHomesWithIdOnly = await prisma.bookmarkDIYHomes.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -6498,56 +6498,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends BookmarkUpdateManyAndReturnArgs>(args: SelectSubset<T, BookmarkUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends BookmarkDIYHomesUpdateManyAndReturnArgs>(args: SelectSubset<T, BookmarkDIYHomesUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Bookmark.
-     * @param {BookmarkUpsertArgs} args - Arguments to update or create a Bookmark.
+     * Create or update one BookmarkDIYHomes.
+     * @param {BookmarkDIYHomesUpsertArgs} args - Arguments to update or create a BookmarkDIYHomes.
      * @example
-     * // Update or create a Bookmark
-     * const bookmark = await prisma.bookmark.upsert({
+     * // Update or create a BookmarkDIYHomes
+     * const bookmarkDIYHomes = await prisma.bookmarkDIYHomes.upsert({
      *   create: {
-     *     // ... data to create a Bookmark
+     *     // ... data to create a BookmarkDIYHomes
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Bookmark we want to update
+     *     // ... the filter for the BookmarkDIYHomes we want to update
      *   }
      * })
      */
-    upsert<T extends BookmarkUpsertArgs>(args: SelectSubset<T, BookmarkUpsertArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends BookmarkDIYHomesUpsertArgs>(args: SelectSubset<T, BookmarkDIYHomesUpsertArgs<ExtArgs>>): Prisma__BookmarkDIYHomesClient<$Result.GetResult<Prisma.$BookmarkDIYHomesPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Bookmarks.
+     * Count the number of BookmarkDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookmarkCountArgs} args - Arguments to filter Bookmarks to count.
+     * @param {BookmarkDIYHomesCountArgs} args - Arguments to filter BookmarkDIYHomes to count.
      * @example
-     * // Count the number of Bookmarks
-     * const count = await prisma.bookmark.count({
+     * // Count the number of BookmarkDIYHomes
+     * const count = await prisma.bookmarkDIYHomes.count({
      *   where: {
-     *     // ... the filter for the Bookmarks we want to count
+     *     // ... the filter for the BookmarkDIYHomes we want to count
      *   }
      * })
     **/
-    count<T extends BookmarkCountArgs>(
-      args?: Subset<T, BookmarkCountArgs>,
+    count<T extends BookmarkDIYHomesCountArgs>(
+      args?: Subset<T, BookmarkDIYHomesCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], BookmarkCountAggregateOutputType>
+          : GetScalarType<T['select'], BookmarkDIYHomesCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Bookmark.
+     * Allows you to perform aggregations operations on a BookmarkDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookmarkAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {BookmarkDIYHomesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -6567,13 +6567,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends BookmarkAggregateArgs>(args: Subset<T, BookmarkAggregateArgs>): Prisma.PrismaPromise<GetBookmarkAggregateType<T>>
+    aggregate<T extends BookmarkDIYHomesAggregateArgs>(args: Subset<T, BookmarkDIYHomesAggregateArgs>): Prisma.PrismaPromise<GetBookmarkDIYHomesAggregateType<T>>
 
     /**
-     * Group by Bookmark.
+     * Group by BookmarkDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookmarkGroupByArgs} args - Group by arguments.
+     * @param {BookmarkDIYHomesGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -6588,14 +6588,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends BookmarkGroupByArgs,
+      T extends BookmarkDIYHomesGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: BookmarkGroupByArgs['orderBy'] }
-        : { orderBy?: BookmarkGroupByArgs['orderBy'] },
+        ? { orderBy: BookmarkDIYHomesGroupByArgs['orderBy'] }
+        : { orderBy?: BookmarkDIYHomesGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -6644,23 +6644,23 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, BookmarkGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetBookmarkGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, BookmarkDIYHomesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetBookmarkDIYHomesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Bookmark model
+   * Fields of the BookmarkDIYHomes model
    */
-  readonly fields: BookmarkFieldRefs;
+  readonly fields: BookmarkDIYHomesFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Bookmark.
+   * The delegate class that acts as a "Promise-like" for BookmarkDIYHomes.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__BookmarkClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__BookmarkDIYHomesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    post<T extends PostDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PostDefaultArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    post<T extends PostDIYHomesDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PostDIYHomesDefaultArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -6687,438 +6687,438 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Bookmark model
+   * Fields of the BookmarkDIYHomes model
    */ 
-  interface BookmarkFieldRefs {
-    readonly id: FieldRef<"Bookmark", 'String'>
-    readonly postId: FieldRef<"Bookmark", 'String'>
-    readonly userId: FieldRef<"Bookmark", 'String'>
-    readonly createdAt: FieldRef<"Bookmark", 'DateTime'>
+  interface BookmarkDIYHomesFieldRefs {
+    readonly id: FieldRef<"BookmarkDIYHomes", 'String'>
+    readonly postId: FieldRef<"BookmarkDIYHomes", 'String'>
+    readonly userId: FieldRef<"BookmarkDIYHomes", 'String'>
+    readonly createdAt: FieldRef<"BookmarkDIYHomes", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Bookmark findUnique
+   * BookmarkDIYHomes findUnique
    */
-  export type BookmarkFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Bookmark to fetch.
+     * Filter, which BookmarkDIYHomes to fetch.
      */
-    where: BookmarkWhereUniqueInput
+    where: BookmarkDIYHomesWhereUniqueInput
   }
 
   /**
-   * Bookmark findUniqueOrThrow
+   * BookmarkDIYHomes findUniqueOrThrow
    */
-  export type BookmarkFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Bookmark to fetch.
+     * Filter, which BookmarkDIYHomes to fetch.
      */
-    where: BookmarkWhereUniqueInput
+    where: BookmarkDIYHomesWhereUniqueInput
   }
 
   /**
-   * Bookmark findFirst
+   * BookmarkDIYHomes findFirst
    */
-  export type BookmarkFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Bookmark to fetch.
+     * Filter, which BookmarkDIYHomes to fetch.
      */
-    where?: BookmarkWhereInput
+    where?: BookmarkDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Bookmarks to fetch.
+     * Determine the order of BookmarkDIYHomes to fetch.
      */
-    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
+    orderBy?: BookmarkDIYHomesOrderByWithRelationInput | BookmarkDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Bookmarks.
+     * Sets the position for searching for BookmarkDIYHomes.
      */
-    cursor?: BookmarkWhereUniqueInput
+    cursor?: BookmarkDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Bookmarks from the position of the cursor.
+     * Take `±n` BookmarkDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Bookmarks.
+     * Skip the first `n` BookmarkDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Bookmarks.
+     * Filter by unique combinations of BookmarkDIYHomes.
      */
-    distinct?: BookmarkScalarFieldEnum | BookmarkScalarFieldEnum[]
+    distinct?: BookmarkDIYHomesScalarFieldEnum | BookmarkDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Bookmark findFirstOrThrow
+   * BookmarkDIYHomes findFirstOrThrow
    */
-  export type BookmarkFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Bookmark to fetch.
+     * Filter, which BookmarkDIYHomes to fetch.
      */
-    where?: BookmarkWhereInput
+    where?: BookmarkDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Bookmarks to fetch.
+     * Determine the order of BookmarkDIYHomes to fetch.
      */
-    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
+    orderBy?: BookmarkDIYHomesOrderByWithRelationInput | BookmarkDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Bookmarks.
+     * Sets the position for searching for BookmarkDIYHomes.
      */
-    cursor?: BookmarkWhereUniqueInput
+    cursor?: BookmarkDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Bookmarks from the position of the cursor.
+     * Take `±n` BookmarkDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Bookmarks.
+     * Skip the first `n` BookmarkDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Bookmarks.
+     * Filter by unique combinations of BookmarkDIYHomes.
      */
-    distinct?: BookmarkScalarFieldEnum | BookmarkScalarFieldEnum[]
+    distinct?: BookmarkDIYHomesScalarFieldEnum | BookmarkDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Bookmark findMany
+   * BookmarkDIYHomes findMany
    */
-  export type BookmarkFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Bookmarks to fetch.
+     * Filter, which BookmarkDIYHomes to fetch.
      */
-    where?: BookmarkWhereInput
+    where?: BookmarkDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Bookmarks to fetch.
+     * Determine the order of BookmarkDIYHomes to fetch.
      */
-    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
+    orderBy?: BookmarkDIYHomesOrderByWithRelationInput | BookmarkDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Bookmarks.
+     * Sets the position for listing BookmarkDIYHomes.
      */
-    cursor?: BookmarkWhereUniqueInput
+    cursor?: BookmarkDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Bookmarks from the position of the cursor.
+     * Take `±n` BookmarkDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Bookmarks.
+     * Skip the first `n` BookmarkDIYHomes.
      */
     skip?: number
-    distinct?: BookmarkScalarFieldEnum | BookmarkScalarFieldEnum[]
+    distinct?: BookmarkDIYHomesScalarFieldEnum | BookmarkDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Bookmark create
+   * BookmarkDIYHomes create
    */
-  export type BookmarkCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to create a Bookmark.
+     * The data needed to create a BookmarkDIYHomes.
      */
-    data: XOR<BookmarkCreateInput, BookmarkUncheckedCreateInput>
+    data: XOR<BookmarkDIYHomesCreateInput, BookmarkDIYHomesUncheckedCreateInput>
   }
 
   /**
-   * Bookmark createMany
+   * BookmarkDIYHomes createMany
    */
-  export type BookmarkCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Bookmarks.
+     * The data used to create many BookmarkDIYHomes.
      */
-    data: BookmarkCreateManyInput | BookmarkCreateManyInput[]
+    data: BookmarkDIYHomesCreateManyInput | BookmarkDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Bookmark createManyAndReturn
+   * BookmarkDIYHomes createManyAndReturn
    */
-  export type BookmarkCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelectCreateManyAndReturn<ExtArgs> | null
+    select?: BookmarkDIYHomesSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to create many Bookmarks.
+     * The data used to create many BookmarkDIYHomes.
      */
-    data: BookmarkCreateManyInput | BookmarkCreateManyInput[]
+    data: BookmarkDIYHomesCreateManyInput | BookmarkDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: BookmarkDIYHomesIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Bookmark update
+   * BookmarkDIYHomes update
    */
-  export type BookmarkUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to update a Bookmark.
+     * The data needed to update a BookmarkDIYHomes.
      */
-    data: XOR<BookmarkUpdateInput, BookmarkUncheckedUpdateInput>
+    data: XOR<BookmarkDIYHomesUpdateInput, BookmarkDIYHomesUncheckedUpdateInput>
     /**
-     * Choose, which Bookmark to update.
+     * Choose, which BookmarkDIYHomes to update.
      */
-    where: BookmarkWhereUniqueInput
+    where: BookmarkDIYHomesWhereUniqueInput
   }
 
   /**
-   * Bookmark updateMany
+   * BookmarkDIYHomes updateMany
    */
-  export type BookmarkUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Bookmarks.
+     * The data used to update BookmarkDIYHomes.
      */
-    data: XOR<BookmarkUpdateManyMutationInput, BookmarkUncheckedUpdateManyInput>
+    data: XOR<BookmarkDIYHomesUpdateManyMutationInput, BookmarkDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Bookmarks to update
+     * Filter which BookmarkDIYHomes to update
      */
-    where?: BookmarkWhereInput
+    where?: BookmarkDIYHomesWhereInput
     /**
-     * Limit how many Bookmarks to update.
+     * Limit how many BookmarkDIYHomes to update.
      */
     limit?: number
   }
 
   /**
-   * Bookmark updateManyAndReturn
+   * BookmarkDIYHomes updateManyAndReturn
    */
-  export type BookmarkUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: BookmarkDIYHomesSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to update Bookmarks.
+     * The data used to update BookmarkDIYHomes.
      */
-    data: XOR<BookmarkUpdateManyMutationInput, BookmarkUncheckedUpdateManyInput>
+    data: XOR<BookmarkDIYHomesUpdateManyMutationInput, BookmarkDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Bookmarks to update
+     * Filter which BookmarkDIYHomes to update
      */
-    where?: BookmarkWhereInput
+    where?: BookmarkDIYHomesWhereInput
     /**
-     * Limit how many Bookmarks to update.
+     * Limit how many BookmarkDIYHomes to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: BookmarkDIYHomesIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Bookmark upsert
+   * BookmarkDIYHomes upsert
    */
-  export type BookmarkUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
     /**
-     * The filter to search for the Bookmark to update in case it exists.
+     * The filter to search for the BookmarkDIYHomes to update in case it exists.
      */
-    where: BookmarkWhereUniqueInput
+    where: BookmarkDIYHomesWhereUniqueInput
     /**
-     * In case the Bookmark found by the `where` argument doesn't exist, create a new Bookmark with this data.
+     * In case the BookmarkDIYHomes found by the `where` argument doesn't exist, create a new BookmarkDIYHomes with this data.
      */
-    create: XOR<BookmarkCreateInput, BookmarkUncheckedCreateInput>
+    create: XOR<BookmarkDIYHomesCreateInput, BookmarkDIYHomesUncheckedCreateInput>
     /**
-     * In case the Bookmark was found with the provided `where` argument, update it with this data.
+     * In case the BookmarkDIYHomes was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<BookmarkUpdateInput, BookmarkUncheckedUpdateInput>
+    update: XOR<BookmarkDIYHomesUpdateInput, BookmarkDIYHomesUncheckedUpdateInput>
   }
 
   /**
-   * Bookmark delete
+   * BookmarkDIYHomes delete
    */
-  export type BookmarkDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter which Bookmark to delete.
+     * Filter which BookmarkDIYHomes to delete.
      */
-    where: BookmarkWhereUniqueInput
+    where: BookmarkDIYHomesWhereUniqueInput
   }
 
   /**
-   * Bookmark deleteMany
+   * BookmarkDIYHomes deleteMany
    */
-  export type BookmarkDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Bookmarks to delete
+     * Filter which BookmarkDIYHomes to delete
      */
-    where?: BookmarkWhereInput
+    where?: BookmarkDIYHomesWhereInput
     /**
-     * Limit how many Bookmarks to delete.
+     * Limit how many BookmarkDIYHomes to delete.
      */
     limit?: number
   }
 
   /**
-   * Bookmark without action
+   * BookmarkDIYHomes without action
    */
-  export type BookmarkDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDIYHomesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Bookmark
+     * Select specific fields to fetch from the BookmarkDIYHomes
      */
-    select?: BookmarkSelect<ExtArgs> | null
+    select?: BookmarkDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Bookmark
+     * Omit specific fields from the BookmarkDIYHomes
      */
-    omit?: BookmarkOmit<ExtArgs> | null
+    omit?: BookmarkDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: BookmarkInclude<ExtArgs> | null
+    include?: BookmarkDIYHomesInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model Report
+   * Model ReportDIYHomes
    */
 
-  export type AggregateReport = {
-    _count: ReportCountAggregateOutputType | null
-    _min: ReportMinAggregateOutputType | null
-    _max: ReportMaxAggregateOutputType | null
+  export type AggregateReportDIYHomes = {
+    _count: ReportDIYHomesCountAggregateOutputType | null
+    _min: ReportDIYHomesMinAggregateOutputType | null
+    _max: ReportDIYHomesMaxAggregateOutputType | null
   }
 
-  export type ReportMinAggregateOutputType = {
+  export type ReportDIYHomesMinAggregateOutputType = {
     id: string | null
     postId: string | null
     reviewId: string | null
@@ -7127,7 +7127,7 @@ export namespace Prisma {
     createdAt: Date | null
   }
 
-  export type ReportMaxAggregateOutputType = {
+  export type ReportDIYHomesMaxAggregateOutputType = {
     id: string | null
     postId: string | null
     reviewId: string | null
@@ -7136,7 +7136,7 @@ export namespace Prisma {
     createdAt: Date | null
   }
 
-  export type ReportCountAggregateOutputType = {
+  export type ReportDIYHomesCountAggregateOutputType = {
     id: number
     postId: number
     reviewId: number
@@ -7147,7 +7147,7 @@ export namespace Prisma {
   }
 
 
-  export type ReportMinAggregateInputType = {
+  export type ReportDIYHomesMinAggregateInputType = {
     id?: true
     postId?: true
     reviewId?: true
@@ -7156,7 +7156,7 @@ export namespace Prisma {
     createdAt?: true
   }
 
-  export type ReportMaxAggregateInputType = {
+  export type ReportDIYHomesMaxAggregateInputType = {
     id?: true
     postId?: true
     reviewId?: true
@@ -7165,7 +7165,7 @@ export namespace Prisma {
     createdAt?: true
   }
 
-  export type ReportCountAggregateInputType = {
+  export type ReportDIYHomesCountAggregateInputType = {
     id?: true
     postId?: true
     reviewId?: true
@@ -7175,105 +7175,105 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type ReportAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Report to aggregate.
+     * Filter which ReportDIYHomes to aggregate.
      */
-    where?: ReportWhereInput
+    where?: ReportDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Reports to fetch.
+     * Determine the order of ReportDIYHomes to fetch.
      */
-    orderBy?: ReportOrderByWithRelationInput | ReportOrderByWithRelationInput[]
+    orderBy?: ReportDIYHomesOrderByWithRelationInput | ReportDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: ReportWhereUniqueInput
+    cursor?: ReportDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Reports from the position of the cursor.
+     * Take `±n` ReportDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Reports.
+     * Skip the first `n` ReportDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Reports
+     * Count returned ReportDIYHomes
     **/
-    _count?: true | ReportCountAggregateInputType
+    _count?: true | ReportDIYHomesCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: ReportMinAggregateInputType
+    _min?: ReportDIYHomesMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: ReportMaxAggregateInputType
+    _max?: ReportDIYHomesMaxAggregateInputType
   }
 
-  export type GetReportAggregateType<T extends ReportAggregateArgs> = {
-        [P in keyof T & keyof AggregateReport]: P extends '_count' | 'count'
+  export type GetReportDIYHomesAggregateType<T extends ReportDIYHomesAggregateArgs> = {
+        [P in keyof T & keyof AggregateReportDIYHomes]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateReport[P]>
-      : GetScalarType<T[P], AggregateReport[P]>
+        : GetScalarType<T[P], AggregateReportDIYHomes[P]>
+      : GetScalarType<T[P], AggregateReportDIYHomes[P]>
   }
 
 
 
 
-  export type ReportGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ReportWhereInput
-    orderBy?: ReportOrderByWithAggregationInput | ReportOrderByWithAggregationInput[]
-    by: ReportScalarFieldEnum[] | ReportScalarFieldEnum
-    having?: ReportScalarWhereWithAggregatesInput
+  export type ReportDIYHomesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportDIYHomesWhereInput
+    orderBy?: ReportDIYHomesOrderByWithAggregationInput | ReportDIYHomesOrderByWithAggregationInput[]
+    by: ReportDIYHomesScalarFieldEnum[] | ReportDIYHomesScalarFieldEnum
+    having?: ReportDIYHomesScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: ReportCountAggregateInputType | true
-    _min?: ReportMinAggregateInputType
-    _max?: ReportMaxAggregateInputType
+    _count?: ReportDIYHomesCountAggregateInputType | true
+    _min?: ReportDIYHomesMinAggregateInputType
+    _max?: ReportDIYHomesMaxAggregateInputType
   }
 
-  export type ReportGroupByOutputType = {
+  export type ReportDIYHomesGroupByOutputType = {
     id: string
     postId: string | null
     reviewId: string | null
     userId: string
     reason: string
     createdAt: Date
-    _count: ReportCountAggregateOutputType | null
-    _min: ReportMinAggregateOutputType | null
-    _max: ReportMaxAggregateOutputType | null
+    _count: ReportDIYHomesCountAggregateOutputType | null
+    _min: ReportDIYHomesMinAggregateOutputType | null
+    _max: ReportDIYHomesMaxAggregateOutputType | null
   }
 
-  type GetReportGroupByPayload<T extends ReportGroupByArgs> = Prisma.PrismaPromise<
+  type GetReportDIYHomesGroupByPayload<T extends ReportDIYHomesGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<ReportGroupByOutputType, T['by']> &
+      PickEnumerable<ReportDIYHomesGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof ReportGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof ReportDIYHomesGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], ReportGroupByOutputType[P]>
-            : GetScalarType<T[P], ReportGroupByOutputType[P]>
+              : GetScalarType<T[P], ReportDIYHomesGroupByOutputType[P]>
+            : GetScalarType<T[P], ReportDIYHomesGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type ReportSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type ReportDIYHomesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     reviewId?: boolean
@@ -7281,11 +7281,11 @@ export namespace Prisma {
     reason?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | Report$postArgs<ExtArgs>
-    review?: boolean | Report$reviewArgs<ExtArgs>
-  }, ExtArgs["result"]["report"]>
+    post?: boolean | ReportDIYHomes$postArgs<ExtArgs>
+    review?: boolean | ReportDIYHomes$reviewArgs<ExtArgs>
+  }, ExtArgs["result"]["reportDIYHomes"]>
 
-  export type ReportSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type ReportDIYHomesSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     reviewId?: boolean
@@ -7293,11 +7293,11 @@ export namespace Prisma {
     reason?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | Report$postArgs<ExtArgs>
-    review?: boolean | Report$reviewArgs<ExtArgs>
-  }, ExtArgs["result"]["report"]>
+    post?: boolean | ReportDIYHomes$postArgs<ExtArgs>
+    review?: boolean | ReportDIYHomes$reviewArgs<ExtArgs>
+  }, ExtArgs["result"]["reportDIYHomes"]>
 
-  export type ReportSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type ReportDIYHomesSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     postId?: boolean
     reviewId?: boolean
@@ -7305,11 +7305,11 @@ export namespace Prisma {
     reason?: boolean
     createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | Report$postArgs<ExtArgs>
-    review?: boolean | Report$reviewArgs<ExtArgs>
-  }, ExtArgs["result"]["report"]>
+    post?: boolean | ReportDIYHomes$postArgs<ExtArgs>
+    review?: boolean | ReportDIYHomes$reviewArgs<ExtArgs>
+  }, ExtArgs["result"]["reportDIYHomes"]>
 
-  export type ReportSelectScalar = {
+  export type ReportDIYHomesSelectScalar = {
     id?: boolean
     postId?: boolean
     reviewId?: boolean
@@ -7318,29 +7318,29 @@ export namespace Prisma {
     createdAt?: boolean
   }
 
-  export type ReportOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "postId" | "reviewId" | "userId" | "reason" | "createdAt", ExtArgs["result"]["report"]>
-  export type ReportInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "postId" | "reviewId" | "userId" | "reason" | "createdAt", ExtArgs["result"]["reportDIYHomes"]>
+  export type ReportDIYHomesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | Report$postArgs<ExtArgs>
-    review?: boolean | Report$reviewArgs<ExtArgs>
+    post?: boolean | ReportDIYHomes$postArgs<ExtArgs>
+    review?: boolean | ReportDIYHomes$reviewArgs<ExtArgs>
   }
-  export type ReportIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | Report$postArgs<ExtArgs>
-    review?: boolean | Report$reviewArgs<ExtArgs>
+    post?: boolean | ReportDIYHomes$postArgs<ExtArgs>
+    review?: boolean | ReportDIYHomes$reviewArgs<ExtArgs>
   }
-  export type ReportIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
-    post?: boolean | Report$postArgs<ExtArgs>
-    review?: boolean | Report$reviewArgs<ExtArgs>
+    post?: boolean | ReportDIYHomes$postArgs<ExtArgs>
+    review?: boolean | ReportDIYHomes$reviewArgs<ExtArgs>
   }
 
-  export type $ReportPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Report"
+  export type $ReportDIYHomesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ReportDIYHomes"
     objects: {
       user: Prisma.$UserPayload<ExtArgs>
-      post: Prisma.$PostPayload<ExtArgs> | null
-      review: Prisma.$ReviewPayload<ExtArgs> | null
+      post: Prisma.$PostDIYHomesPayload<ExtArgs> | null
+      review: Prisma.$ReviewDIYHomesPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -7349,136 +7349,136 @@ export namespace Prisma {
       userId: string
       reason: string
       createdAt: Date
-    }, ExtArgs["result"]["report"]>
+    }, ExtArgs["result"]["reportDIYHomes"]>
     composites: {}
   }
 
-  type ReportGetPayload<S extends boolean | null | undefined | ReportDefaultArgs> = $Result.GetResult<Prisma.$ReportPayload, S>
+  type ReportDIYHomesGetPayload<S extends boolean | null | undefined | ReportDIYHomesDefaultArgs> = $Result.GetResult<Prisma.$ReportDIYHomesPayload, S>
 
-  type ReportCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<ReportFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: ReportCountAggregateInputType | true
+  type ReportDIYHomesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ReportDIYHomesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ReportDIYHomesCountAggregateInputType | true
     }
 
-  export interface ReportDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Report'], meta: { name: 'Report' } }
+  export interface ReportDIYHomesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ReportDIYHomes'], meta: { name: 'ReportDIYHomes' } }
     /**
-     * Find zero or one Report that matches the filter.
-     * @param {ReportFindUniqueArgs} args - Arguments to find a Report
+     * Find zero or one ReportDIYHomes that matches the filter.
+     * @param {ReportDIYHomesFindUniqueArgs} args - Arguments to find a ReportDIYHomes
      * @example
-     * // Get one Report
-     * const report = await prisma.report.findUnique({
+     * // Get one ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends ReportFindUniqueArgs>(args: SelectSubset<T, ReportFindUniqueArgs<ExtArgs>>): Prisma__ReportClient<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends ReportDIYHomesFindUniqueArgs>(args: SelectSubset<T, ReportDIYHomesFindUniqueArgs<ExtArgs>>): Prisma__ReportDIYHomesClient<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Report that matches the filter or throw an error with `error.code='P2025'`
+     * Find one ReportDIYHomes that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {ReportFindUniqueOrThrowArgs} args - Arguments to find a Report
+     * @param {ReportDIYHomesFindUniqueOrThrowArgs} args - Arguments to find a ReportDIYHomes
      * @example
-     * // Get one Report
-     * const report = await prisma.report.findUniqueOrThrow({
+     * // Get one ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends ReportFindUniqueOrThrowArgs>(args: SelectSubset<T, ReportFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReportClient<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends ReportDIYHomesFindUniqueOrThrowArgs>(args: SelectSubset<T, ReportDIYHomesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReportDIYHomesClient<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Report that matches the filter.
+     * Find the first ReportDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReportFindFirstArgs} args - Arguments to find a Report
+     * @param {ReportDIYHomesFindFirstArgs} args - Arguments to find a ReportDIYHomes
      * @example
-     * // Get one Report
-     * const report = await prisma.report.findFirst({
+     * // Get one ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends ReportFindFirstArgs>(args?: SelectSubset<T, ReportFindFirstArgs<ExtArgs>>): Prisma__ReportClient<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends ReportDIYHomesFindFirstArgs>(args?: SelectSubset<T, ReportDIYHomesFindFirstArgs<ExtArgs>>): Prisma__ReportDIYHomesClient<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Report that matches the filter or
+     * Find the first ReportDIYHomes that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReportFindFirstOrThrowArgs} args - Arguments to find a Report
+     * @param {ReportDIYHomesFindFirstOrThrowArgs} args - Arguments to find a ReportDIYHomes
      * @example
-     * // Get one Report
-     * const report = await prisma.report.findFirstOrThrow({
+     * // Get one ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends ReportFindFirstOrThrowArgs>(args?: SelectSubset<T, ReportFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReportClient<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends ReportDIYHomesFindFirstOrThrowArgs>(args?: SelectSubset<T, ReportDIYHomesFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReportDIYHomesClient<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Reports that matches the filter.
+     * Find zero or more ReportDIYHomes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReportFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {ReportDIYHomesFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Reports
-     * const reports = await prisma.report.findMany()
+     * // Get all ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.findMany()
      * 
-     * // Get first 10 Reports
-     * const reports = await prisma.report.findMany({ take: 10 })
+     * // Get first 10 ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const reportWithIdOnly = await prisma.report.findMany({ select: { id: true } })
+     * const reportDIYHomesWithIdOnly = await prisma.reportDIYHomes.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends ReportFindManyArgs>(args?: SelectSubset<T, ReportFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends ReportDIYHomesFindManyArgs>(args?: SelectSubset<T, ReportDIYHomesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Report.
-     * @param {ReportCreateArgs} args - Arguments to create a Report.
+     * Create a ReportDIYHomes.
+     * @param {ReportDIYHomesCreateArgs} args - Arguments to create a ReportDIYHomes.
      * @example
-     * // Create one Report
-     * const Report = await prisma.report.create({
+     * // Create one ReportDIYHomes
+     * const ReportDIYHomes = await prisma.reportDIYHomes.create({
      *   data: {
-     *     // ... data to create a Report
+     *     // ... data to create a ReportDIYHomes
      *   }
      * })
      * 
      */
-    create<T extends ReportCreateArgs>(args: SelectSubset<T, ReportCreateArgs<ExtArgs>>): Prisma__ReportClient<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends ReportDIYHomesCreateArgs>(args: SelectSubset<T, ReportDIYHomesCreateArgs<ExtArgs>>): Prisma__ReportDIYHomesClient<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Reports.
-     * @param {ReportCreateManyArgs} args - Arguments to create many Reports.
+     * Create many ReportDIYHomes.
+     * @param {ReportDIYHomesCreateManyArgs} args - Arguments to create many ReportDIYHomes.
      * @example
-     * // Create many Reports
-     * const report = await prisma.report.createMany({
+     * // Create many ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends ReportCreateManyArgs>(args?: SelectSubset<T, ReportCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends ReportDIYHomesCreateManyArgs>(args?: SelectSubset<T, ReportDIYHomesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Reports and returns the data saved in the database.
-     * @param {ReportCreateManyAndReturnArgs} args - Arguments to create many Reports.
+     * Create many ReportDIYHomes and returns the data saved in the database.
+     * @param {ReportDIYHomesCreateManyAndReturnArgs} args - Arguments to create many ReportDIYHomes.
      * @example
-     * // Create many Reports
-     * const report = await prisma.report.createManyAndReturn({
+     * // Create many ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Reports and only return the `id`
-     * const reportWithIdOnly = await prisma.report.createManyAndReturn({
+     * // Create many ReportDIYHomes and only return the `id`
+     * const reportDIYHomesWithIdOnly = await prisma.reportDIYHomes.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -7488,28 +7488,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends ReportCreateManyAndReturnArgs>(args?: SelectSubset<T, ReportCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends ReportDIYHomesCreateManyAndReturnArgs>(args?: SelectSubset<T, ReportDIYHomesCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Report.
-     * @param {ReportDeleteArgs} args - Arguments to delete one Report.
+     * Delete a ReportDIYHomes.
+     * @param {ReportDIYHomesDeleteArgs} args - Arguments to delete one ReportDIYHomes.
      * @example
-     * // Delete one Report
-     * const Report = await prisma.report.delete({
+     * // Delete one ReportDIYHomes
+     * const ReportDIYHomes = await prisma.reportDIYHomes.delete({
      *   where: {
-     *     // ... filter to delete one Report
+     *     // ... filter to delete one ReportDIYHomes
      *   }
      * })
      * 
      */
-    delete<T extends ReportDeleteArgs>(args: SelectSubset<T, ReportDeleteArgs<ExtArgs>>): Prisma__ReportClient<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends ReportDIYHomesDeleteArgs>(args: SelectSubset<T, ReportDIYHomesDeleteArgs<ExtArgs>>): Prisma__ReportDIYHomesClient<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Report.
-     * @param {ReportUpdateArgs} args - Arguments to update one Report.
+     * Update one ReportDIYHomes.
+     * @param {ReportDIYHomesUpdateArgs} args - Arguments to update one ReportDIYHomes.
      * @example
-     * // Update one Report
-     * const report = await prisma.report.update({
+     * // Update one ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -7519,30 +7519,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends ReportUpdateArgs>(args: SelectSubset<T, ReportUpdateArgs<ExtArgs>>): Prisma__ReportClient<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends ReportDIYHomesUpdateArgs>(args: SelectSubset<T, ReportDIYHomesUpdateArgs<ExtArgs>>): Prisma__ReportDIYHomesClient<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Reports.
-     * @param {ReportDeleteManyArgs} args - Arguments to filter Reports to delete.
+     * Delete zero or more ReportDIYHomes.
+     * @param {ReportDIYHomesDeleteManyArgs} args - Arguments to filter ReportDIYHomes to delete.
      * @example
-     * // Delete a few Reports
-     * const { count } = await prisma.report.deleteMany({
+     * // Delete a few ReportDIYHomes
+     * const { count } = await prisma.reportDIYHomes.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends ReportDeleteManyArgs>(args?: SelectSubset<T, ReportDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends ReportDIYHomesDeleteManyArgs>(args?: SelectSubset<T, ReportDIYHomesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Reports.
+     * Update zero or more ReportDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReportUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {ReportDIYHomesUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Reports
-     * const report = await prisma.report.updateMany({
+     * // Update many ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -7552,14 +7552,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends ReportUpdateManyArgs>(args: SelectSubset<T, ReportUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends ReportDIYHomesUpdateManyArgs>(args: SelectSubset<T, ReportDIYHomesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Reports and returns the data updated in the database.
-     * @param {ReportUpdateManyAndReturnArgs} args - Arguments to update many Reports.
+     * Update zero or more ReportDIYHomes and returns the data updated in the database.
+     * @param {ReportDIYHomesUpdateManyAndReturnArgs} args - Arguments to update many ReportDIYHomes.
      * @example
-     * // Update many Reports
-     * const report = await prisma.report.updateManyAndReturn({
+     * // Update many ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -7568,8 +7568,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Reports and only return the `id`
-     * const reportWithIdOnly = await prisma.report.updateManyAndReturn({
+     * // Update zero or more ReportDIYHomes and only return the `id`
+     * const reportDIYHomesWithIdOnly = await prisma.reportDIYHomes.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -7582,56 +7582,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends ReportUpdateManyAndReturnArgs>(args: SelectSubset<T, ReportUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends ReportDIYHomesUpdateManyAndReturnArgs>(args: SelectSubset<T, ReportDIYHomesUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Report.
-     * @param {ReportUpsertArgs} args - Arguments to update or create a Report.
+     * Create or update one ReportDIYHomes.
+     * @param {ReportDIYHomesUpsertArgs} args - Arguments to update or create a ReportDIYHomes.
      * @example
-     * // Update or create a Report
-     * const report = await prisma.report.upsert({
+     * // Update or create a ReportDIYHomes
+     * const reportDIYHomes = await prisma.reportDIYHomes.upsert({
      *   create: {
-     *     // ... data to create a Report
+     *     // ... data to create a ReportDIYHomes
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Report we want to update
+     *     // ... the filter for the ReportDIYHomes we want to update
      *   }
      * })
      */
-    upsert<T extends ReportUpsertArgs>(args: SelectSubset<T, ReportUpsertArgs<ExtArgs>>): Prisma__ReportClient<$Result.GetResult<Prisma.$ReportPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends ReportDIYHomesUpsertArgs>(args: SelectSubset<T, ReportDIYHomesUpsertArgs<ExtArgs>>): Prisma__ReportDIYHomesClient<$Result.GetResult<Prisma.$ReportDIYHomesPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Reports.
+     * Count the number of ReportDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReportCountArgs} args - Arguments to filter Reports to count.
+     * @param {ReportDIYHomesCountArgs} args - Arguments to filter ReportDIYHomes to count.
      * @example
-     * // Count the number of Reports
-     * const count = await prisma.report.count({
+     * // Count the number of ReportDIYHomes
+     * const count = await prisma.reportDIYHomes.count({
      *   where: {
-     *     // ... the filter for the Reports we want to count
+     *     // ... the filter for the ReportDIYHomes we want to count
      *   }
      * })
     **/
-    count<T extends ReportCountArgs>(
-      args?: Subset<T, ReportCountArgs>,
+    count<T extends ReportDIYHomesCountArgs>(
+      args?: Subset<T, ReportDIYHomesCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], ReportCountAggregateOutputType>
+          : GetScalarType<T['select'], ReportDIYHomesCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Report.
+     * Allows you to perform aggregations operations on a ReportDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReportAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {ReportDIYHomesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -7651,13 +7651,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends ReportAggregateArgs>(args: Subset<T, ReportAggregateArgs>): Prisma.PrismaPromise<GetReportAggregateType<T>>
+    aggregate<T extends ReportDIYHomesAggregateArgs>(args: Subset<T, ReportDIYHomesAggregateArgs>): Prisma.PrismaPromise<GetReportDIYHomesAggregateType<T>>
 
     /**
-     * Group by Report.
+     * Group by ReportDIYHomes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ReportGroupByArgs} args - Group by arguments.
+     * @param {ReportDIYHomesGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -7672,14 +7672,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends ReportGroupByArgs,
+      T extends ReportDIYHomesGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: ReportGroupByArgs['orderBy'] }
-        : { orderBy?: ReportGroupByArgs['orderBy'] },
+        ? { orderBy: ReportDIYHomesGroupByArgs['orderBy'] }
+        : { orderBy?: ReportDIYHomesGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -7728,24 +7728,24 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, ReportGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReportGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, ReportDIYHomesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReportDIYHomesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Report model
+   * Fields of the ReportDIYHomes model
    */
-  readonly fields: ReportFieldRefs;
+  readonly fields: ReportDIYHomesFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Report.
+   * The delegate class that acts as a "Promise-like" for ReportDIYHomes.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__ReportClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__ReportDIYHomesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    post<T extends Report$postArgs<ExtArgs> = {}>(args?: Subset<T, Report$postArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-    review<T extends Report$reviewArgs<ExtArgs> = {}>(args?: Subset<T, Report$reviewArgs<ExtArgs>>): Prisma__ReviewClient<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    post<T extends ReportDIYHomes$postArgs<ExtArgs> = {}>(args?: Subset<T, ReportDIYHomes$postArgs<ExtArgs>>): Prisma__PostDIYHomesClient<$Result.GetResult<Prisma.$PostDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    review<T extends ReportDIYHomes$reviewArgs<ExtArgs> = {}>(args?: Subset<T, ReportDIYHomes$reviewArgs<ExtArgs>>): Prisma__ReviewDIYHomesClient<$Result.GetResult<Prisma.$ReviewDIYHomesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -7772,464 +7772,464 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Report model
+   * Fields of the ReportDIYHomes model
    */ 
-  interface ReportFieldRefs {
-    readonly id: FieldRef<"Report", 'String'>
-    readonly postId: FieldRef<"Report", 'String'>
-    readonly reviewId: FieldRef<"Report", 'String'>
-    readonly userId: FieldRef<"Report", 'String'>
-    readonly reason: FieldRef<"Report", 'String'>
-    readonly createdAt: FieldRef<"Report", 'DateTime'>
+  interface ReportDIYHomesFieldRefs {
+    readonly id: FieldRef<"ReportDIYHomes", 'String'>
+    readonly postId: FieldRef<"ReportDIYHomes", 'String'>
+    readonly reviewId: FieldRef<"ReportDIYHomes", 'String'>
+    readonly userId: FieldRef<"ReportDIYHomes", 'String'>
+    readonly reason: FieldRef<"ReportDIYHomes", 'String'>
+    readonly createdAt: FieldRef<"ReportDIYHomes", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Report findUnique
+   * ReportDIYHomes findUnique
    */
-  export type ReportFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Report to fetch.
+     * Filter, which ReportDIYHomes to fetch.
      */
-    where: ReportWhereUniqueInput
+    where: ReportDIYHomesWhereUniqueInput
   }
 
   /**
-   * Report findUniqueOrThrow
+   * ReportDIYHomes findUniqueOrThrow
    */
-  export type ReportFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Report to fetch.
+     * Filter, which ReportDIYHomes to fetch.
      */
-    where: ReportWhereUniqueInput
+    where: ReportDIYHomesWhereUniqueInput
   }
 
   /**
-   * Report findFirst
+   * ReportDIYHomes findFirst
    */
-  export type ReportFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Report to fetch.
+     * Filter, which ReportDIYHomes to fetch.
      */
-    where?: ReportWhereInput
+    where?: ReportDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Reports to fetch.
+     * Determine the order of ReportDIYHomes to fetch.
      */
-    orderBy?: ReportOrderByWithRelationInput | ReportOrderByWithRelationInput[]
+    orderBy?: ReportDIYHomesOrderByWithRelationInput | ReportDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Reports.
+     * Sets the position for searching for ReportDIYHomes.
      */
-    cursor?: ReportWhereUniqueInput
+    cursor?: ReportDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Reports from the position of the cursor.
+     * Take `±n` ReportDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Reports.
+     * Skip the first `n` ReportDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Reports.
+     * Filter by unique combinations of ReportDIYHomes.
      */
-    distinct?: ReportScalarFieldEnum | ReportScalarFieldEnum[]
+    distinct?: ReportDIYHomesScalarFieldEnum | ReportDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Report findFirstOrThrow
+   * ReportDIYHomes findFirstOrThrow
    */
-  export type ReportFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Report to fetch.
+     * Filter, which ReportDIYHomes to fetch.
      */
-    where?: ReportWhereInput
+    where?: ReportDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Reports to fetch.
+     * Determine the order of ReportDIYHomes to fetch.
      */
-    orderBy?: ReportOrderByWithRelationInput | ReportOrderByWithRelationInput[]
+    orderBy?: ReportDIYHomesOrderByWithRelationInput | ReportDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Reports.
+     * Sets the position for searching for ReportDIYHomes.
      */
-    cursor?: ReportWhereUniqueInput
+    cursor?: ReportDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Reports from the position of the cursor.
+     * Take `±n` ReportDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Reports.
+     * Skip the first `n` ReportDIYHomes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Reports.
+     * Filter by unique combinations of ReportDIYHomes.
      */
-    distinct?: ReportScalarFieldEnum | ReportScalarFieldEnum[]
+    distinct?: ReportDIYHomesScalarFieldEnum | ReportDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Report findMany
+   * ReportDIYHomes findMany
    */
-  export type ReportFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter, which Reports to fetch.
+     * Filter, which ReportDIYHomes to fetch.
      */
-    where?: ReportWhereInput
+    where?: ReportDIYHomesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Reports to fetch.
+     * Determine the order of ReportDIYHomes to fetch.
      */
-    orderBy?: ReportOrderByWithRelationInput | ReportOrderByWithRelationInput[]
+    orderBy?: ReportDIYHomesOrderByWithRelationInput | ReportDIYHomesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Reports.
+     * Sets the position for listing ReportDIYHomes.
      */
-    cursor?: ReportWhereUniqueInput
+    cursor?: ReportDIYHomesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Reports from the position of the cursor.
+     * Take `±n` ReportDIYHomes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Reports.
+     * Skip the first `n` ReportDIYHomes.
      */
     skip?: number
-    distinct?: ReportScalarFieldEnum | ReportScalarFieldEnum[]
+    distinct?: ReportDIYHomesScalarFieldEnum | ReportDIYHomesScalarFieldEnum[]
   }
 
   /**
-   * Report create
+   * ReportDIYHomes create
    */
-  export type ReportCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to create a Report.
+     * The data needed to create a ReportDIYHomes.
      */
-    data: XOR<ReportCreateInput, ReportUncheckedCreateInput>
+    data: XOR<ReportDIYHomesCreateInput, ReportDIYHomesUncheckedCreateInput>
   }
 
   /**
-   * Report createMany
+   * ReportDIYHomes createMany
    */
-  export type ReportCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Reports.
+     * The data used to create many ReportDIYHomes.
      */
-    data: ReportCreateManyInput | ReportCreateManyInput[]
+    data: ReportDIYHomesCreateManyInput | ReportDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Report createManyAndReturn
+   * ReportDIYHomes createManyAndReturn
    */
-  export type ReportCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelectCreateManyAndReturn<ExtArgs> | null
+    select?: ReportDIYHomesSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to create many Reports.
+     * The data used to create many ReportDIYHomes.
      */
-    data: ReportCreateManyInput | ReportCreateManyInput[]
+    data: ReportDIYHomesCreateManyInput | ReportDIYHomesCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: ReportDIYHomesIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Report update
+   * ReportDIYHomes update
    */
-  export type ReportUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
     /**
-     * The data needed to update a Report.
+     * The data needed to update a ReportDIYHomes.
      */
-    data: XOR<ReportUpdateInput, ReportUncheckedUpdateInput>
+    data: XOR<ReportDIYHomesUpdateInput, ReportDIYHomesUncheckedUpdateInput>
     /**
-     * Choose, which Report to update.
+     * Choose, which ReportDIYHomes to update.
      */
-    where: ReportWhereUniqueInput
+    where: ReportDIYHomesWhereUniqueInput
   }
 
   /**
-   * Report updateMany
+   * ReportDIYHomes updateMany
    */
-  export type ReportUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Reports.
+     * The data used to update ReportDIYHomes.
      */
-    data: XOR<ReportUpdateManyMutationInput, ReportUncheckedUpdateManyInput>
+    data: XOR<ReportDIYHomesUpdateManyMutationInput, ReportDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Reports to update
+     * Filter which ReportDIYHomes to update
      */
-    where?: ReportWhereInput
+    where?: ReportDIYHomesWhereInput
     /**
-     * Limit how many Reports to update.
+     * Limit how many ReportDIYHomes to update.
      */
     limit?: number
   }
 
   /**
-   * Report updateManyAndReturn
+   * ReportDIYHomes updateManyAndReturn
    */
-  export type ReportUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: ReportDIYHomesSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
-     * The data used to update Reports.
+     * The data used to update ReportDIYHomes.
      */
-    data: XOR<ReportUpdateManyMutationInput, ReportUncheckedUpdateManyInput>
+    data: XOR<ReportDIYHomesUpdateManyMutationInput, ReportDIYHomesUncheckedUpdateManyInput>
     /**
-     * Filter which Reports to update
+     * Filter which ReportDIYHomes to update
      */
-    where?: ReportWhereInput
+    where?: ReportDIYHomesWhereInput
     /**
-     * Limit how many Reports to update.
+     * Limit how many ReportDIYHomes to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: ReportDIYHomesIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Report upsert
+   * ReportDIYHomes upsert
    */
-  export type ReportUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
     /**
-     * The filter to search for the Report to update in case it exists.
+     * The filter to search for the ReportDIYHomes to update in case it exists.
      */
-    where: ReportWhereUniqueInput
+    where: ReportDIYHomesWhereUniqueInput
     /**
-     * In case the Report found by the `where` argument doesn't exist, create a new Report with this data.
+     * In case the ReportDIYHomes found by the `where` argument doesn't exist, create a new ReportDIYHomes with this data.
      */
-    create: XOR<ReportCreateInput, ReportUncheckedCreateInput>
+    create: XOR<ReportDIYHomesCreateInput, ReportDIYHomesUncheckedCreateInput>
     /**
-     * In case the Report was found with the provided `where` argument, update it with this data.
+     * In case the ReportDIYHomes was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<ReportUpdateInput, ReportUncheckedUpdateInput>
+    update: XOR<ReportDIYHomesUpdateInput, ReportDIYHomesUncheckedUpdateInput>
   }
 
   /**
-   * Report delete
+   * ReportDIYHomes delete
    */
-  export type ReportDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
     /**
-     * Filter which Report to delete.
+     * Filter which ReportDIYHomes to delete.
      */
-    where: ReportWhereUniqueInput
+    where: ReportDIYHomesWhereUniqueInput
   }
 
   /**
-   * Report deleteMany
+   * ReportDIYHomes deleteMany
    */
-  export type ReportDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Reports to delete
+     * Filter which ReportDIYHomes to delete
      */
-    where?: ReportWhereInput
+    where?: ReportDIYHomesWhereInput
     /**
-     * Limit how many Reports to delete.
+     * Limit how many ReportDIYHomes to delete.
      */
     limit?: number
   }
 
   /**
-   * Report.post
+   * ReportDIYHomes.post
    */
-  export type Report$postArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomes$postArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the PostDIYHomes
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: PostDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the PostDIYHomes
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: PostDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
-    where?: PostWhereInput
+    include?: PostDIYHomesInclude<ExtArgs> | null
+    where?: PostDIYHomesWhereInput
   }
 
   /**
-   * Report.review
+   * ReportDIYHomes.review
    */
-  export type Report$reviewArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomes$reviewArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Review
+     * Select specific fields to fetch from the ReviewDIYHomes
      */
-    select?: ReviewSelect<ExtArgs> | null
+    select?: ReviewDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Review
+     * Omit specific fields from the ReviewDIYHomes
      */
-    omit?: ReviewOmit<ExtArgs> | null
+    omit?: ReviewDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReviewInclude<ExtArgs> | null
-    where?: ReviewWhereInput
+    include?: ReviewDIYHomesInclude<ExtArgs> | null
+    where?: ReviewDIYHomesWhereInput
   }
 
   /**
-   * Report without action
+   * ReportDIYHomes without action
    */
-  export type ReportDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ReportDIYHomesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Report
+     * Select specific fields to fetch from the ReportDIYHomes
      */
-    select?: ReportSelect<ExtArgs> | null
+    select?: ReportDIYHomesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Report
+     * Omit specific fields from the ReportDIYHomes
      */
-    omit?: ReportOmit<ExtArgs> | null
+    omit?: ReportDIYHomesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: ReportInclude<ExtArgs> | null
+    include?: ReportDIYHomesInclude<ExtArgs> | null
   }
 
 
@@ -8259,7 +8259,7 @@ export namespace Prisma {
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
 
 
-  export const PostScalarFieldEnum: {
+  export const PostDIYHomesScalarFieldEnum: {
     id: 'id',
     title: 'title',
     content: 'content',
@@ -8268,10 +8268,10 @@ export namespace Prisma {
     createdAt: 'createdAt'
   };
 
-  export type PostScalarFieldEnum = (typeof PostScalarFieldEnum)[keyof typeof PostScalarFieldEnum]
+  export type PostDIYHomesScalarFieldEnum = (typeof PostDIYHomesScalarFieldEnum)[keyof typeof PostDIYHomesScalarFieldEnum]
 
 
-  export const ReviewScalarFieldEnum: {
+  export const ReviewDIYHomesScalarFieldEnum: {
     id: 'id',
     postId: 'postId',
     userId: 'userId',
@@ -8280,30 +8280,30 @@ export namespace Prisma {
     createdAt: 'createdAt'
   };
 
-  export type ReviewScalarFieldEnum = (typeof ReviewScalarFieldEnum)[keyof typeof ReviewScalarFieldEnum]
+  export type ReviewDIYHomesScalarFieldEnum = (typeof ReviewDIYHomesScalarFieldEnum)[keyof typeof ReviewDIYHomesScalarFieldEnum]
 
 
-  export const LikeScalarFieldEnum: {
+  export const LikeDIYHomesScalarFieldEnum: {
     id: 'id',
     postId: 'postId',
     userId: 'userId',
     createdAt: 'createdAt'
   };
 
-  export type LikeScalarFieldEnum = (typeof LikeScalarFieldEnum)[keyof typeof LikeScalarFieldEnum]
+  export type LikeDIYHomesScalarFieldEnum = (typeof LikeDIYHomesScalarFieldEnum)[keyof typeof LikeDIYHomesScalarFieldEnum]
 
 
-  export const BookmarkScalarFieldEnum: {
+  export const BookmarkDIYHomesScalarFieldEnum: {
     id: 'id',
     postId: 'postId',
     userId: 'userId',
     createdAt: 'createdAt'
   };
 
-  export type BookmarkScalarFieldEnum = (typeof BookmarkScalarFieldEnum)[keyof typeof BookmarkScalarFieldEnum]
+  export type BookmarkDIYHomesScalarFieldEnum = (typeof BookmarkDIYHomesScalarFieldEnum)[keyof typeof BookmarkDIYHomesScalarFieldEnum]
 
 
-  export const ReportScalarFieldEnum: {
+  export const ReportDIYHomesScalarFieldEnum: {
     id: 'id',
     postId: 'postId',
     reviewId: 'reviewId',
@@ -8312,7 +8312,7 @@ export namespace Prisma {
     createdAt: 'createdAt'
   };
 
-  export type ReportScalarFieldEnum = (typeof ReportScalarFieldEnum)[keyof typeof ReportScalarFieldEnum]
+  export type ReportDIYHomesScalarFieldEnum = (typeof ReportDIYHomesScalarFieldEnum)[keyof typeof ReportDIYHomesScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -8413,11 +8413,11 @@ export namespace Prisma {
     password?: StringFilter<"User"> | string
     group?: StringFilter<"User"> | string
     createdAt?: DateTimeFilter<"User"> | Date | string
-    posts?: PostListRelationFilter
-    reviews?: ReviewListRelationFilter
-    bookmarks?: BookmarkListRelationFilter
-    Like?: LikeListRelationFilter
-    Report?: ReportListRelationFilter
+    posts?: PostDIYHomesListRelationFilter
+    reviews?: ReviewDIYHomesListRelationFilter
+    bookmarks?: BookmarkDIYHomesListRelationFilter
+    Like?: LikeDIYHomesListRelationFilter
+    Report?: ReportDIYHomesListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -8427,11 +8427,11 @@ export namespace Prisma {
     password?: SortOrder
     group?: SortOrder
     createdAt?: SortOrder
-    posts?: PostOrderByRelationAggregateInput
-    reviews?: ReviewOrderByRelationAggregateInput
-    bookmarks?: BookmarkOrderByRelationAggregateInput
-    Like?: LikeOrderByRelationAggregateInput
-    Report?: ReportOrderByRelationAggregateInput
+    posts?: PostDIYHomesOrderByRelationAggregateInput
+    reviews?: ReviewDIYHomesOrderByRelationAggregateInput
+    bookmarks?: BookmarkDIYHomesOrderByRelationAggregateInput
+    Like?: LikeDIYHomesOrderByRelationAggregateInput
+    Report?: ReportDIYHomesOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -8444,11 +8444,11 @@ export namespace Prisma {
     password?: StringFilter<"User"> | string
     group?: StringFilter<"User"> | string
     createdAt?: DateTimeFilter<"User"> | Date | string
-    posts?: PostListRelationFilter
-    reviews?: ReviewListRelationFilter
-    bookmarks?: BookmarkListRelationFilter
-    Like?: LikeListRelationFilter
-    Report?: ReportListRelationFilter
+    posts?: PostDIYHomesListRelationFilter
+    reviews?: ReviewDIYHomesListRelationFilter
+    bookmarks?: BookmarkDIYHomesListRelationFilter
+    Like?: LikeDIYHomesListRelationFilter
+    Report?: ReportDIYHomesListRelationFilter
   }, "id" | "email">
 
   export type UserOrderByWithAggregationInput = {
@@ -8475,24 +8475,24 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
-  export type PostWhereInput = {
-    AND?: PostWhereInput | PostWhereInput[]
-    OR?: PostWhereInput[]
-    NOT?: PostWhereInput | PostWhereInput[]
-    id?: StringFilter<"Post"> | string
-    title?: StringFilter<"Post"> | string
-    content?: StringFilter<"Post"> | string
-    category?: StringFilter<"Post"> | string
-    userId?: StringFilter<"Post"> | string
-    createdAt?: DateTimeFilter<"Post"> | Date | string
+  export type PostDIYHomesWhereInput = {
+    AND?: PostDIYHomesWhereInput | PostDIYHomesWhereInput[]
+    OR?: PostDIYHomesWhereInput[]
+    NOT?: PostDIYHomesWhereInput | PostDIYHomesWhereInput[]
+    id?: StringFilter<"PostDIYHomes"> | string
+    title?: StringFilter<"PostDIYHomes"> | string
+    content?: StringFilter<"PostDIYHomes"> | string
+    category?: StringFilter<"PostDIYHomes"> | string
+    userId?: StringFilter<"PostDIYHomes"> | string
+    createdAt?: DateTimeFilter<"PostDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    reviews?: ReviewListRelationFilter
-    bookmarks?: BookmarkListRelationFilter
-    Like?: LikeListRelationFilter
-    Report?: ReportListRelationFilter
+    reviews?: ReviewDIYHomesListRelationFilter
+    bookmarks?: BookmarkDIYHomesListRelationFilter
+    Like?: LikeDIYHomesListRelationFilter
+    Report?: ReportDIYHomesListRelationFilter
   }
 
-  export type PostOrderByWithRelationInput = {
+  export type PostDIYHomesOrderByWithRelationInput = {
     id?: SortOrder
     title?: SortOrder
     content?: SortOrder
@@ -8500,69 +8500,69 @@ export namespace Prisma {
     userId?: SortOrder
     createdAt?: SortOrder
     user?: UserOrderByWithRelationInput
-    reviews?: ReviewOrderByRelationAggregateInput
-    bookmarks?: BookmarkOrderByRelationAggregateInput
-    Like?: LikeOrderByRelationAggregateInput
-    Report?: ReportOrderByRelationAggregateInput
+    reviews?: ReviewDIYHomesOrderByRelationAggregateInput
+    bookmarks?: BookmarkDIYHomesOrderByRelationAggregateInput
+    Like?: LikeDIYHomesOrderByRelationAggregateInput
+    Report?: ReportDIYHomesOrderByRelationAggregateInput
   }
 
-  export type PostWhereUniqueInput = Prisma.AtLeast<{
+  export type PostDIYHomesWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: PostWhereInput | PostWhereInput[]
-    OR?: PostWhereInput[]
-    NOT?: PostWhereInput | PostWhereInput[]
-    title?: StringFilter<"Post"> | string
-    content?: StringFilter<"Post"> | string
-    category?: StringFilter<"Post"> | string
-    userId?: StringFilter<"Post"> | string
-    createdAt?: DateTimeFilter<"Post"> | Date | string
+    AND?: PostDIYHomesWhereInput | PostDIYHomesWhereInput[]
+    OR?: PostDIYHomesWhereInput[]
+    NOT?: PostDIYHomesWhereInput | PostDIYHomesWhereInput[]
+    title?: StringFilter<"PostDIYHomes"> | string
+    content?: StringFilter<"PostDIYHomes"> | string
+    category?: StringFilter<"PostDIYHomes"> | string
+    userId?: StringFilter<"PostDIYHomes"> | string
+    createdAt?: DateTimeFilter<"PostDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    reviews?: ReviewListRelationFilter
-    bookmarks?: BookmarkListRelationFilter
-    Like?: LikeListRelationFilter
-    Report?: ReportListRelationFilter
+    reviews?: ReviewDIYHomesListRelationFilter
+    bookmarks?: BookmarkDIYHomesListRelationFilter
+    Like?: LikeDIYHomesListRelationFilter
+    Report?: ReportDIYHomesListRelationFilter
   }, "id">
 
-  export type PostOrderByWithAggregationInput = {
+  export type PostDIYHomesOrderByWithAggregationInput = {
     id?: SortOrder
     title?: SortOrder
     content?: SortOrder
     category?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
-    _count?: PostCountOrderByAggregateInput
-    _max?: PostMaxOrderByAggregateInput
-    _min?: PostMinOrderByAggregateInput
+    _count?: PostDIYHomesCountOrderByAggregateInput
+    _max?: PostDIYHomesMaxOrderByAggregateInput
+    _min?: PostDIYHomesMinOrderByAggregateInput
   }
 
-  export type PostScalarWhereWithAggregatesInput = {
-    AND?: PostScalarWhereWithAggregatesInput | PostScalarWhereWithAggregatesInput[]
-    OR?: PostScalarWhereWithAggregatesInput[]
-    NOT?: PostScalarWhereWithAggregatesInput | PostScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Post"> | string
-    title?: StringWithAggregatesFilter<"Post"> | string
-    content?: StringWithAggregatesFilter<"Post"> | string
-    category?: StringWithAggregatesFilter<"Post"> | string
-    userId?: StringWithAggregatesFilter<"Post"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Post"> | Date | string
+  export type PostDIYHomesScalarWhereWithAggregatesInput = {
+    AND?: PostDIYHomesScalarWhereWithAggregatesInput | PostDIYHomesScalarWhereWithAggregatesInput[]
+    OR?: PostDIYHomesScalarWhereWithAggregatesInput[]
+    NOT?: PostDIYHomesScalarWhereWithAggregatesInput | PostDIYHomesScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"PostDIYHomes"> | string
+    title?: StringWithAggregatesFilter<"PostDIYHomes"> | string
+    content?: StringWithAggregatesFilter<"PostDIYHomes"> | string
+    category?: StringWithAggregatesFilter<"PostDIYHomes"> | string
+    userId?: StringWithAggregatesFilter<"PostDIYHomes"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"PostDIYHomes"> | Date | string
   }
 
-  export type ReviewWhereInput = {
-    AND?: ReviewWhereInput | ReviewWhereInput[]
-    OR?: ReviewWhereInput[]
-    NOT?: ReviewWhereInput | ReviewWhereInput[]
-    id?: StringFilter<"Review"> | string
-    postId?: StringFilter<"Review"> | string
-    userId?: StringFilter<"Review"> | string
-    rating?: IntFilter<"Review"> | number
-    comment?: StringFilter<"Review"> | string
-    createdAt?: DateTimeFilter<"Review"> | Date | string
+  export type ReviewDIYHomesWhereInput = {
+    AND?: ReviewDIYHomesWhereInput | ReviewDIYHomesWhereInput[]
+    OR?: ReviewDIYHomesWhereInput[]
+    NOT?: ReviewDIYHomesWhereInput | ReviewDIYHomesWhereInput[]
+    id?: StringFilter<"ReviewDIYHomes"> | string
+    postId?: StringFilter<"ReviewDIYHomes"> | string
+    userId?: StringFilter<"ReviewDIYHomes"> | string
+    rating?: IntFilter<"ReviewDIYHomes"> | number
+    comment?: StringFilter<"ReviewDIYHomes"> | string
+    createdAt?: DateTimeFilter<"ReviewDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    post?: XOR<PostScalarRelationFilter, PostWhereInput>
-    Report?: ReportListRelationFilter
+    post?: XOR<PostDIYHomesScalarRelationFilter, PostDIYHomesWhereInput>
+    Report?: ReportDIYHomesListRelationFilter
   }
 
-  export type ReviewOrderByWithRelationInput = {
+  export type ReviewDIYHomesOrderByWithRelationInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
@@ -8570,175 +8570,175 @@ export namespace Prisma {
     comment?: SortOrder
     createdAt?: SortOrder
     user?: UserOrderByWithRelationInput
-    post?: PostOrderByWithRelationInput
-    Report?: ReportOrderByRelationAggregateInput
+    post?: PostDIYHomesOrderByWithRelationInput
+    Report?: ReportDIYHomesOrderByRelationAggregateInput
   }
 
-  export type ReviewWhereUniqueInput = Prisma.AtLeast<{
+  export type ReviewDIYHomesWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: ReviewWhereInput | ReviewWhereInput[]
-    OR?: ReviewWhereInput[]
-    NOT?: ReviewWhereInput | ReviewWhereInput[]
-    postId?: StringFilter<"Review"> | string
-    userId?: StringFilter<"Review"> | string
-    rating?: IntFilter<"Review"> | number
-    comment?: StringFilter<"Review"> | string
-    createdAt?: DateTimeFilter<"Review"> | Date | string
+    AND?: ReviewDIYHomesWhereInput | ReviewDIYHomesWhereInput[]
+    OR?: ReviewDIYHomesWhereInput[]
+    NOT?: ReviewDIYHomesWhereInput | ReviewDIYHomesWhereInput[]
+    postId?: StringFilter<"ReviewDIYHomes"> | string
+    userId?: StringFilter<"ReviewDIYHomes"> | string
+    rating?: IntFilter<"ReviewDIYHomes"> | number
+    comment?: StringFilter<"ReviewDIYHomes"> | string
+    createdAt?: DateTimeFilter<"ReviewDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    post?: XOR<PostScalarRelationFilter, PostWhereInput>
-    Report?: ReportListRelationFilter
+    post?: XOR<PostDIYHomesScalarRelationFilter, PostDIYHomesWhereInput>
+    Report?: ReportDIYHomesListRelationFilter
   }, "id">
 
-  export type ReviewOrderByWithAggregationInput = {
+  export type ReviewDIYHomesOrderByWithAggregationInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     rating?: SortOrder
     comment?: SortOrder
     createdAt?: SortOrder
-    _count?: ReviewCountOrderByAggregateInput
-    _avg?: ReviewAvgOrderByAggregateInput
-    _max?: ReviewMaxOrderByAggregateInput
-    _min?: ReviewMinOrderByAggregateInput
-    _sum?: ReviewSumOrderByAggregateInput
+    _count?: ReviewDIYHomesCountOrderByAggregateInput
+    _avg?: ReviewDIYHomesAvgOrderByAggregateInput
+    _max?: ReviewDIYHomesMaxOrderByAggregateInput
+    _min?: ReviewDIYHomesMinOrderByAggregateInput
+    _sum?: ReviewDIYHomesSumOrderByAggregateInput
   }
 
-  export type ReviewScalarWhereWithAggregatesInput = {
-    AND?: ReviewScalarWhereWithAggregatesInput | ReviewScalarWhereWithAggregatesInput[]
-    OR?: ReviewScalarWhereWithAggregatesInput[]
-    NOT?: ReviewScalarWhereWithAggregatesInput | ReviewScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Review"> | string
-    postId?: StringWithAggregatesFilter<"Review"> | string
-    userId?: StringWithAggregatesFilter<"Review"> | string
-    rating?: IntWithAggregatesFilter<"Review"> | number
-    comment?: StringWithAggregatesFilter<"Review"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Review"> | Date | string
+  export type ReviewDIYHomesScalarWhereWithAggregatesInput = {
+    AND?: ReviewDIYHomesScalarWhereWithAggregatesInput | ReviewDIYHomesScalarWhereWithAggregatesInput[]
+    OR?: ReviewDIYHomesScalarWhereWithAggregatesInput[]
+    NOT?: ReviewDIYHomesScalarWhereWithAggregatesInput | ReviewDIYHomesScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ReviewDIYHomes"> | string
+    postId?: StringWithAggregatesFilter<"ReviewDIYHomes"> | string
+    userId?: StringWithAggregatesFilter<"ReviewDIYHomes"> | string
+    rating?: IntWithAggregatesFilter<"ReviewDIYHomes"> | number
+    comment?: StringWithAggregatesFilter<"ReviewDIYHomes"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"ReviewDIYHomes"> | Date | string
   }
 
-  export type LikeWhereInput = {
-    AND?: LikeWhereInput | LikeWhereInput[]
-    OR?: LikeWhereInput[]
-    NOT?: LikeWhereInput | LikeWhereInput[]
-    id?: StringFilter<"Like"> | string
-    postId?: StringFilter<"Like"> | string
-    userId?: StringFilter<"Like"> | string
-    createdAt?: DateTimeFilter<"Like"> | Date | string
+  export type LikeDIYHomesWhereInput = {
+    AND?: LikeDIYHomesWhereInput | LikeDIYHomesWhereInput[]
+    OR?: LikeDIYHomesWhereInput[]
+    NOT?: LikeDIYHomesWhereInput | LikeDIYHomesWhereInput[]
+    id?: StringFilter<"LikeDIYHomes"> | string
+    postId?: StringFilter<"LikeDIYHomes"> | string
+    userId?: StringFilter<"LikeDIYHomes"> | string
+    createdAt?: DateTimeFilter<"LikeDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    post?: XOR<PostScalarRelationFilter, PostWhereInput>
+    post?: XOR<PostDIYHomesScalarRelationFilter, PostDIYHomesWhereInput>
   }
 
-  export type LikeOrderByWithRelationInput = {
+  export type LikeDIYHomesOrderByWithRelationInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
     user?: UserOrderByWithRelationInput
-    post?: PostOrderByWithRelationInput
+    post?: PostDIYHomesOrderByWithRelationInput
   }
 
-  export type LikeWhereUniqueInput = Prisma.AtLeast<{
+  export type LikeDIYHomesWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    postId_userId?: LikePostIdUserIdCompoundUniqueInput
-    AND?: LikeWhereInput | LikeWhereInput[]
-    OR?: LikeWhereInput[]
-    NOT?: LikeWhereInput | LikeWhereInput[]
-    postId?: StringFilter<"Like"> | string
-    userId?: StringFilter<"Like"> | string
-    createdAt?: DateTimeFilter<"Like"> | Date | string
+    postId_userId?: LikeDIYHomesPostIdUserIdCompoundUniqueInput
+    AND?: LikeDIYHomesWhereInput | LikeDIYHomesWhereInput[]
+    OR?: LikeDIYHomesWhereInput[]
+    NOT?: LikeDIYHomesWhereInput | LikeDIYHomesWhereInput[]
+    postId?: StringFilter<"LikeDIYHomes"> | string
+    userId?: StringFilter<"LikeDIYHomes"> | string
+    createdAt?: DateTimeFilter<"LikeDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    post?: XOR<PostScalarRelationFilter, PostWhereInput>
+    post?: XOR<PostDIYHomesScalarRelationFilter, PostDIYHomesWhereInput>
   }, "id" | "postId_userId">
 
-  export type LikeOrderByWithAggregationInput = {
+  export type LikeDIYHomesOrderByWithAggregationInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
-    _count?: LikeCountOrderByAggregateInput
-    _max?: LikeMaxOrderByAggregateInput
-    _min?: LikeMinOrderByAggregateInput
+    _count?: LikeDIYHomesCountOrderByAggregateInput
+    _max?: LikeDIYHomesMaxOrderByAggregateInput
+    _min?: LikeDIYHomesMinOrderByAggregateInput
   }
 
-  export type LikeScalarWhereWithAggregatesInput = {
-    AND?: LikeScalarWhereWithAggregatesInput | LikeScalarWhereWithAggregatesInput[]
-    OR?: LikeScalarWhereWithAggregatesInput[]
-    NOT?: LikeScalarWhereWithAggregatesInput | LikeScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Like"> | string
-    postId?: StringWithAggregatesFilter<"Like"> | string
-    userId?: StringWithAggregatesFilter<"Like"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Like"> | Date | string
+  export type LikeDIYHomesScalarWhereWithAggregatesInput = {
+    AND?: LikeDIYHomesScalarWhereWithAggregatesInput | LikeDIYHomesScalarWhereWithAggregatesInput[]
+    OR?: LikeDIYHomesScalarWhereWithAggregatesInput[]
+    NOT?: LikeDIYHomesScalarWhereWithAggregatesInput | LikeDIYHomesScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"LikeDIYHomes"> | string
+    postId?: StringWithAggregatesFilter<"LikeDIYHomes"> | string
+    userId?: StringWithAggregatesFilter<"LikeDIYHomes"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"LikeDIYHomes"> | Date | string
   }
 
-  export type BookmarkWhereInput = {
-    AND?: BookmarkWhereInput | BookmarkWhereInput[]
-    OR?: BookmarkWhereInput[]
-    NOT?: BookmarkWhereInput | BookmarkWhereInput[]
-    id?: StringFilter<"Bookmark"> | string
-    postId?: StringFilter<"Bookmark"> | string
-    userId?: StringFilter<"Bookmark"> | string
-    createdAt?: DateTimeFilter<"Bookmark"> | Date | string
+  export type BookmarkDIYHomesWhereInput = {
+    AND?: BookmarkDIYHomesWhereInput | BookmarkDIYHomesWhereInput[]
+    OR?: BookmarkDIYHomesWhereInput[]
+    NOT?: BookmarkDIYHomesWhereInput | BookmarkDIYHomesWhereInput[]
+    id?: StringFilter<"BookmarkDIYHomes"> | string
+    postId?: StringFilter<"BookmarkDIYHomes"> | string
+    userId?: StringFilter<"BookmarkDIYHomes"> | string
+    createdAt?: DateTimeFilter<"BookmarkDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    post?: XOR<PostScalarRelationFilter, PostWhereInput>
+    post?: XOR<PostDIYHomesScalarRelationFilter, PostDIYHomesWhereInput>
   }
 
-  export type BookmarkOrderByWithRelationInput = {
+  export type BookmarkDIYHomesOrderByWithRelationInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
     user?: UserOrderByWithRelationInput
-    post?: PostOrderByWithRelationInput
+    post?: PostDIYHomesOrderByWithRelationInput
   }
 
-  export type BookmarkWhereUniqueInput = Prisma.AtLeast<{
+  export type BookmarkDIYHomesWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    postId_userId?: BookmarkPostIdUserIdCompoundUniqueInput
-    AND?: BookmarkWhereInput | BookmarkWhereInput[]
-    OR?: BookmarkWhereInput[]
-    NOT?: BookmarkWhereInput | BookmarkWhereInput[]
-    postId?: StringFilter<"Bookmark"> | string
-    userId?: StringFilter<"Bookmark"> | string
-    createdAt?: DateTimeFilter<"Bookmark"> | Date | string
+    postId_userId?: BookmarkDIYHomesPostIdUserIdCompoundUniqueInput
+    AND?: BookmarkDIYHomesWhereInput | BookmarkDIYHomesWhereInput[]
+    OR?: BookmarkDIYHomesWhereInput[]
+    NOT?: BookmarkDIYHomesWhereInput | BookmarkDIYHomesWhereInput[]
+    postId?: StringFilter<"BookmarkDIYHomes"> | string
+    userId?: StringFilter<"BookmarkDIYHomes"> | string
+    createdAt?: DateTimeFilter<"BookmarkDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    post?: XOR<PostScalarRelationFilter, PostWhereInput>
+    post?: XOR<PostDIYHomesScalarRelationFilter, PostDIYHomesWhereInput>
   }, "id" | "postId_userId">
 
-  export type BookmarkOrderByWithAggregationInput = {
+  export type BookmarkDIYHomesOrderByWithAggregationInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
-    _count?: BookmarkCountOrderByAggregateInput
-    _max?: BookmarkMaxOrderByAggregateInput
-    _min?: BookmarkMinOrderByAggregateInput
+    _count?: BookmarkDIYHomesCountOrderByAggregateInput
+    _max?: BookmarkDIYHomesMaxOrderByAggregateInput
+    _min?: BookmarkDIYHomesMinOrderByAggregateInput
   }
 
-  export type BookmarkScalarWhereWithAggregatesInput = {
-    AND?: BookmarkScalarWhereWithAggregatesInput | BookmarkScalarWhereWithAggregatesInput[]
-    OR?: BookmarkScalarWhereWithAggregatesInput[]
-    NOT?: BookmarkScalarWhereWithAggregatesInput | BookmarkScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Bookmark"> | string
-    postId?: StringWithAggregatesFilter<"Bookmark"> | string
-    userId?: StringWithAggregatesFilter<"Bookmark"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Bookmark"> | Date | string
+  export type BookmarkDIYHomesScalarWhereWithAggregatesInput = {
+    AND?: BookmarkDIYHomesScalarWhereWithAggregatesInput | BookmarkDIYHomesScalarWhereWithAggregatesInput[]
+    OR?: BookmarkDIYHomesScalarWhereWithAggregatesInput[]
+    NOT?: BookmarkDIYHomesScalarWhereWithAggregatesInput | BookmarkDIYHomesScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"BookmarkDIYHomes"> | string
+    postId?: StringWithAggregatesFilter<"BookmarkDIYHomes"> | string
+    userId?: StringWithAggregatesFilter<"BookmarkDIYHomes"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"BookmarkDIYHomes"> | Date | string
   }
 
-  export type ReportWhereInput = {
-    AND?: ReportWhereInput | ReportWhereInput[]
-    OR?: ReportWhereInput[]
-    NOT?: ReportWhereInput | ReportWhereInput[]
-    id?: StringFilter<"Report"> | string
-    postId?: StringNullableFilter<"Report"> | string | null
-    reviewId?: StringNullableFilter<"Report"> | string | null
-    userId?: StringFilter<"Report"> | string
-    reason?: StringFilter<"Report"> | string
-    createdAt?: DateTimeFilter<"Report"> | Date | string
+  export type ReportDIYHomesWhereInput = {
+    AND?: ReportDIYHomesWhereInput | ReportDIYHomesWhereInput[]
+    OR?: ReportDIYHomesWhereInput[]
+    NOT?: ReportDIYHomesWhereInput | ReportDIYHomesWhereInput[]
+    id?: StringFilter<"ReportDIYHomes"> | string
+    postId?: StringNullableFilter<"ReportDIYHomes"> | string | null
+    reviewId?: StringNullableFilter<"ReportDIYHomes"> | string | null
+    userId?: StringFilter<"ReportDIYHomes"> | string
+    reason?: StringFilter<"ReportDIYHomes"> | string
+    createdAt?: DateTimeFilter<"ReportDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    post?: XOR<PostNullableScalarRelationFilter, PostWhereInput> | null
-    review?: XOR<ReviewNullableScalarRelationFilter, ReviewWhereInput> | null
+    post?: XOR<PostDIYHomesNullableScalarRelationFilter, PostDIYHomesWhereInput> | null
+    review?: XOR<ReviewDIYHomesNullableScalarRelationFilter, ReviewDIYHomesWhereInput> | null
   }
 
-  export type ReportOrderByWithRelationInput = {
+  export type ReportDIYHomesOrderByWithRelationInput = {
     id?: SortOrder
     postId?: SortOrderInput | SortOrder
     reviewId?: SortOrderInput | SortOrder
@@ -8746,47 +8746,47 @@ export namespace Prisma {
     reason?: SortOrder
     createdAt?: SortOrder
     user?: UserOrderByWithRelationInput
-    post?: PostOrderByWithRelationInput
-    review?: ReviewOrderByWithRelationInput
+    post?: PostDIYHomesOrderByWithRelationInput
+    review?: ReviewDIYHomesOrderByWithRelationInput
   }
 
-  export type ReportWhereUniqueInput = Prisma.AtLeast<{
+  export type ReportDIYHomesWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: ReportWhereInput | ReportWhereInput[]
-    OR?: ReportWhereInput[]
-    NOT?: ReportWhereInput | ReportWhereInput[]
-    postId?: StringNullableFilter<"Report"> | string | null
-    reviewId?: StringNullableFilter<"Report"> | string | null
-    userId?: StringFilter<"Report"> | string
-    reason?: StringFilter<"Report"> | string
-    createdAt?: DateTimeFilter<"Report"> | Date | string
+    AND?: ReportDIYHomesWhereInput | ReportDIYHomesWhereInput[]
+    OR?: ReportDIYHomesWhereInput[]
+    NOT?: ReportDIYHomesWhereInput | ReportDIYHomesWhereInput[]
+    postId?: StringNullableFilter<"ReportDIYHomes"> | string | null
+    reviewId?: StringNullableFilter<"ReportDIYHomes"> | string | null
+    userId?: StringFilter<"ReportDIYHomes"> | string
+    reason?: StringFilter<"ReportDIYHomes"> | string
+    createdAt?: DateTimeFilter<"ReportDIYHomes"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-    post?: XOR<PostNullableScalarRelationFilter, PostWhereInput> | null
-    review?: XOR<ReviewNullableScalarRelationFilter, ReviewWhereInput> | null
+    post?: XOR<PostDIYHomesNullableScalarRelationFilter, PostDIYHomesWhereInput> | null
+    review?: XOR<ReviewDIYHomesNullableScalarRelationFilter, ReviewDIYHomesWhereInput> | null
   }, "id">
 
-  export type ReportOrderByWithAggregationInput = {
+  export type ReportDIYHomesOrderByWithAggregationInput = {
     id?: SortOrder
     postId?: SortOrderInput | SortOrder
     reviewId?: SortOrderInput | SortOrder
     userId?: SortOrder
     reason?: SortOrder
     createdAt?: SortOrder
-    _count?: ReportCountOrderByAggregateInput
-    _max?: ReportMaxOrderByAggregateInput
-    _min?: ReportMinOrderByAggregateInput
+    _count?: ReportDIYHomesCountOrderByAggregateInput
+    _max?: ReportDIYHomesMaxOrderByAggregateInput
+    _min?: ReportDIYHomesMinOrderByAggregateInput
   }
 
-  export type ReportScalarWhereWithAggregatesInput = {
-    AND?: ReportScalarWhereWithAggregatesInput | ReportScalarWhereWithAggregatesInput[]
-    OR?: ReportScalarWhereWithAggregatesInput[]
-    NOT?: ReportScalarWhereWithAggregatesInput | ReportScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Report"> | string
-    postId?: StringNullableWithAggregatesFilter<"Report"> | string | null
-    reviewId?: StringNullableWithAggregatesFilter<"Report"> | string | null
-    userId?: StringWithAggregatesFilter<"Report"> | string
-    reason?: StringWithAggregatesFilter<"Report"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Report"> | Date | string
+  export type ReportDIYHomesScalarWhereWithAggregatesInput = {
+    AND?: ReportDIYHomesScalarWhereWithAggregatesInput | ReportDIYHomesScalarWhereWithAggregatesInput[]
+    OR?: ReportDIYHomesScalarWhereWithAggregatesInput[]
+    NOT?: ReportDIYHomesScalarWhereWithAggregatesInput | ReportDIYHomesScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ReportDIYHomes"> | string
+    postId?: StringNullableWithAggregatesFilter<"ReportDIYHomes"> | string | null
+    reviewId?: StringNullableWithAggregatesFilter<"ReportDIYHomes"> | string | null
+    userId?: StringWithAggregatesFilter<"ReportDIYHomes"> | string
+    reason?: StringWithAggregatesFilter<"ReportDIYHomes"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"ReportDIYHomes"> | Date | string
   }
 
   export type UserCreateInput = {
@@ -8796,11 +8796,11 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostCreateNestedManyWithoutUserInput
-    reviews?: ReviewCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkCreateNestedManyWithoutUserInput
-    Like?: LikeCreateNestedManyWithoutUserInput
-    Report?: ReportCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -8810,11 +8810,11 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostUncheckedCreateNestedManyWithoutUserInput
-    reviews?: ReviewUncheckedCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutUserInput
-    Like?: LikeUncheckedCreateNestedManyWithoutUserInput
-    Report?: ReportUncheckedCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
@@ -8824,11 +8824,11 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUpdateManyWithoutUserNestedInput
-    reviews?: ReviewUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutUserNestedInput
-    Like?: LikeUpdateManyWithoutUserNestedInput
-    Report?: ReportUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -8838,11 +8838,11 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUncheckedUpdateManyWithoutUserNestedInput
-    reviews?: ReviewUncheckedUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutUserNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutUserNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -8872,59 +8872,59 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type PostCreateInput = {
+  export type PostDIYHomesCreateInput = {
     id?: string
     title: string
     content: string
     category: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutPostsInput
-    reviews?: ReviewCreateNestedManyWithoutPostInput
-    bookmarks?: BookmarkCreateNestedManyWithoutPostInput
-    Like?: LikeCreateNestedManyWithoutPostInput
-    Report?: ReportCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutPostInput
   }
 
-  export type PostUncheckedCreateInput = {
+  export type PostDIYHomesUncheckedCreateInput = {
     id?: string
     title: string
     content: string
     category: string
     userId: string
     createdAt?: Date | string
-    reviews?: ReviewUncheckedCreateNestedManyWithoutPostInput
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutPostInput
-    Like?: LikeUncheckedCreateNestedManyWithoutPostInput
-    Report?: ReportUncheckedCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutPostInput
   }
 
-  export type PostUpdateInput = {
+  export type PostDIYHomesUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutPostsNestedInput
-    reviews?: ReviewUpdateManyWithoutPostNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutPostNestedInput
-    Like?: LikeUpdateManyWithoutPostNestedInput
-    Report?: ReportUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutPostNestedInput
   }
 
-  export type PostUncheckedUpdateInput = {
+  export type PostDIYHomesUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    reviews?: ReviewUncheckedUpdateManyWithoutPostNestedInput
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutPostNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutPostNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutPostNestedInput
   }
 
-  export type PostCreateManyInput = {
+  export type PostDIYHomesCreateManyInput = {
     id?: string
     title: string
     content: string
@@ -8933,7 +8933,7 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type PostUpdateManyMutationInput = {
+  export type PostDIYHomesUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
@@ -8941,7 +8941,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type PostUncheckedUpdateManyInput = {
+  export type PostDIYHomesUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
@@ -8950,47 +8950,47 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReviewCreateInput = {
+  export type ReviewDIYHomesCreateInput = {
     id?: string
     rating: number
     comment: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutReviewsInput
-    post: PostCreateNestedOneWithoutReviewsInput
-    Report?: ReportCreateNestedManyWithoutReviewInput
+    post: PostDIYHomesCreateNestedOneWithoutReviewsInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutReviewInput
   }
 
-  export type ReviewUncheckedCreateInput = {
+  export type ReviewDIYHomesUncheckedCreateInput = {
     id?: string
     postId: string
     userId: string
     rating: number
     comment: string
     createdAt?: Date | string
-    Report?: ReportUncheckedCreateNestedManyWithoutReviewInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutReviewInput
   }
 
-  export type ReviewUpdateInput = {
+  export type ReviewDIYHomesUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutReviewsNestedInput
-    post?: PostUpdateOneRequiredWithoutReviewsNestedInput
-    Report?: ReportUpdateManyWithoutReviewNestedInput
+    post?: PostDIYHomesUpdateOneRequiredWithoutReviewsNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutReviewNestedInput
   }
 
-  export type ReviewUncheckedUpdateInput = {
+  export type ReviewDIYHomesUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    Report?: ReportUncheckedUpdateManyWithoutReviewNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutReviewNestedInput
   }
 
-  export type ReviewCreateManyInput = {
+  export type ReviewDIYHomesCreateManyInput = {
     id?: string
     postId: string
     userId: string
@@ -8999,14 +8999,14 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReviewUpdateManyMutationInput = {
+  export type ReviewDIYHomesUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReviewUncheckedUpdateManyInput = {
+  export type ReviewDIYHomesUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
@@ -9015,110 +9015,110 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type LikeCreateInput = {
+  export type LikeDIYHomesCreateInput = {
     id?: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutLikeInput
-    post: PostCreateNestedOneWithoutLikeInput
+    post: PostDIYHomesCreateNestedOneWithoutLikeInput
   }
 
-  export type LikeUncheckedCreateInput = {
+  export type LikeDIYHomesUncheckedCreateInput = {
     id?: string
     postId: string
     userId: string
     createdAt?: Date | string
   }
 
-  export type LikeUpdateInput = {
+  export type LikeDIYHomesUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutLikeNestedInput
-    post?: PostUpdateOneRequiredWithoutLikeNestedInput
+    post?: PostDIYHomesUpdateOneRequiredWithoutLikeNestedInput
   }
 
-  export type LikeUncheckedUpdateInput = {
+  export type LikeDIYHomesUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type LikeCreateManyInput = {
+  export type LikeDIYHomesCreateManyInput = {
     id?: string
     postId: string
     userId: string
     createdAt?: Date | string
   }
 
-  export type LikeUpdateManyMutationInput = {
+  export type LikeDIYHomesUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type LikeUncheckedUpdateManyInput = {
+  export type LikeDIYHomesUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type BookmarkCreateInput = {
+  export type BookmarkDIYHomesCreateInput = {
     id?: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutBookmarksInput
-    post: PostCreateNestedOneWithoutBookmarksInput
+    post: PostDIYHomesCreateNestedOneWithoutBookmarksInput
   }
 
-  export type BookmarkUncheckedCreateInput = {
+  export type BookmarkDIYHomesUncheckedCreateInput = {
     id?: string
     postId: string
     userId: string
     createdAt?: Date | string
   }
 
-  export type BookmarkUpdateInput = {
+  export type BookmarkDIYHomesUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutBookmarksNestedInput
-    post?: PostUpdateOneRequiredWithoutBookmarksNestedInput
+    post?: PostDIYHomesUpdateOneRequiredWithoutBookmarksNestedInput
   }
 
-  export type BookmarkUncheckedUpdateInput = {
+  export type BookmarkDIYHomesUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type BookmarkCreateManyInput = {
+  export type BookmarkDIYHomesCreateManyInput = {
     id?: string
     postId: string
     userId: string
     createdAt?: Date | string
   }
 
-  export type BookmarkUpdateManyMutationInput = {
+  export type BookmarkDIYHomesUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type BookmarkUncheckedUpdateManyInput = {
+  export type BookmarkDIYHomesUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReportCreateInput = {
+  export type ReportDIYHomesCreateInput = {
     id?: string
     reason: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutReportInput
-    post?: PostCreateNestedOneWithoutReportInput
-    review?: ReviewCreateNestedOneWithoutReportInput
+    post?: PostDIYHomesCreateNestedOneWithoutReportInput
+    review?: ReviewDIYHomesCreateNestedOneWithoutReportInput
   }
 
-  export type ReportUncheckedCreateInput = {
+  export type ReportDIYHomesUncheckedCreateInput = {
     id?: string
     postId?: string | null
     reviewId?: string | null
@@ -9127,16 +9127,16 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReportUpdateInput = {
+  export type ReportDIYHomesUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     reason?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutReportNestedInput
-    post?: PostUpdateOneWithoutReportNestedInput
-    review?: ReviewUpdateOneWithoutReportNestedInput
+    post?: PostDIYHomesUpdateOneWithoutReportNestedInput
+    review?: ReviewDIYHomesUpdateOneWithoutReportNestedInput
   }
 
-  export type ReportUncheckedUpdateInput = {
+  export type ReportDIYHomesUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: NullableStringFieldUpdateOperationsInput | string | null
     reviewId?: NullableStringFieldUpdateOperationsInput | string | null
@@ -9145,7 +9145,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReportCreateManyInput = {
+  export type ReportDIYHomesCreateManyInput = {
     id?: string
     postId?: string | null
     reviewId?: string | null
@@ -9154,13 +9154,13 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReportUpdateManyMutationInput = {
+  export type ReportDIYHomesUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     reason?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReportUncheckedUpdateManyInput = {
+  export type ReportDIYHomesUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: NullableStringFieldUpdateOperationsInput | string | null
     reviewId?: NullableStringFieldUpdateOperationsInput | string | null
@@ -9195,53 +9195,53 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type PostListRelationFilter = {
-    every?: PostWhereInput
-    some?: PostWhereInput
-    none?: PostWhereInput
+  export type PostDIYHomesListRelationFilter = {
+    every?: PostDIYHomesWhereInput
+    some?: PostDIYHomesWhereInput
+    none?: PostDIYHomesWhereInput
   }
 
-  export type ReviewListRelationFilter = {
-    every?: ReviewWhereInput
-    some?: ReviewWhereInput
-    none?: ReviewWhereInput
+  export type ReviewDIYHomesListRelationFilter = {
+    every?: ReviewDIYHomesWhereInput
+    some?: ReviewDIYHomesWhereInput
+    none?: ReviewDIYHomesWhereInput
   }
 
-  export type BookmarkListRelationFilter = {
-    every?: BookmarkWhereInput
-    some?: BookmarkWhereInput
-    none?: BookmarkWhereInput
+  export type BookmarkDIYHomesListRelationFilter = {
+    every?: BookmarkDIYHomesWhereInput
+    some?: BookmarkDIYHomesWhereInput
+    none?: BookmarkDIYHomesWhereInput
   }
 
-  export type LikeListRelationFilter = {
-    every?: LikeWhereInput
-    some?: LikeWhereInput
-    none?: LikeWhereInput
+  export type LikeDIYHomesListRelationFilter = {
+    every?: LikeDIYHomesWhereInput
+    some?: LikeDIYHomesWhereInput
+    none?: LikeDIYHomesWhereInput
   }
 
-  export type ReportListRelationFilter = {
-    every?: ReportWhereInput
-    some?: ReportWhereInput
-    none?: ReportWhereInput
+  export type ReportDIYHomesListRelationFilter = {
+    every?: ReportDIYHomesWhereInput
+    some?: ReportDIYHomesWhereInput
+    none?: ReportDIYHomesWhereInput
   }
 
-  export type PostOrderByRelationAggregateInput = {
+  export type PostDIYHomesOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type ReviewOrderByRelationAggregateInput = {
+  export type ReviewDIYHomesOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type BookmarkOrderByRelationAggregateInput = {
+  export type BookmarkDIYHomesOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type LikeOrderByRelationAggregateInput = {
+  export type LikeDIYHomesOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type ReportOrderByRelationAggregateInput = {
+  export type ReportDIYHomesOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -9309,7 +9309,7 @@ export namespace Prisma {
     isNot?: UserWhereInput
   }
 
-  export type PostCountOrderByAggregateInput = {
+  export type PostDIYHomesCountOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
     content?: SortOrder
@@ -9318,7 +9318,7 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type PostMaxOrderByAggregateInput = {
+  export type PostDIYHomesMaxOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
     content?: SortOrder
@@ -9327,7 +9327,7 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type PostMinOrderByAggregateInput = {
+  export type PostDIYHomesMinOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
     content?: SortOrder
@@ -9347,12 +9347,12 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type PostScalarRelationFilter = {
-    is?: PostWhereInput
-    isNot?: PostWhereInput
+  export type PostDIYHomesScalarRelationFilter = {
+    is?: PostDIYHomesWhereInput
+    isNot?: PostDIYHomesWhereInput
   }
 
-  export type ReviewCountOrderByAggregateInput = {
+  export type ReviewDIYHomesCountOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
@@ -9361,11 +9361,11 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type ReviewAvgOrderByAggregateInput = {
+  export type ReviewDIYHomesAvgOrderByAggregateInput = {
     rating?: SortOrder
   }
 
-  export type ReviewMaxOrderByAggregateInput = {
+  export type ReviewDIYHomesMaxOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
@@ -9374,7 +9374,7 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type ReviewMinOrderByAggregateInput = {
+  export type ReviewDIYHomesMinOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
@@ -9383,7 +9383,7 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type ReviewSumOrderByAggregateInput = {
+  export type ReviewDIYHomesSumOrderByAggregateInput = {
     rating?: SortOrder
   }
 
@@ -9403,52 +9403,52 @@ export namespace Prisma {
     _max?: NestedIntFilter<$PrismaModel>
   }
 
-  export type LikePostIdUserIdCompoundUniqueInput = {
+  export type LikeDIYHomesPostIdUserIdCompoundUniqueInput = {
     postId: string
     userId: string
   }
 
-  export type LikeCountOrderByAggregateInput = {
+  export type LikeDIYHomesCountOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type LikeMaxOrderByAggregateInput = {
+  export type LikeDIYHomesMaxOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type LikeMinOrderByAggregateInput = {
+  export type LikeDIYHomesMinOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type BookmarkPostIdUserIdCompoundUniqueInput = {
+  export type BookmarkDIYHomesPostIdUserIdCompoundUniqueInput = {
     postId: string
     userId: string
   }
 
-  export type BookmarkCountOrderByAggregateInput = {
+  export type BookmarkDIYHomesCountOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type BookmarkMaxOrderByAggregateInput = {
+  export type BookmarkDIYHomesMaxOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type BookmarkMinOrderByAggregateInput = {
+  export type BookmarkDIYHomesMinOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     userId?: SortOrder
@@ -9470,14 +9470,14 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
-  export type PostNullableScalarRelationFilter = {
-    is?: PostWhereInput | null
-    isNot?: PostWhereInput | null
+  export type PostDIYHomesNullableScalarRelationFilter = {
+    is?: PostDIYHomesWhereInput | null
+    isNot?: PostDIYHomesWhereInput | null
   }
 
-  export type ReviewNullableScalarRelationFilter = {
-    is?: ReviewWhereInput | null
-    isNot?: ReviewWhereInput | null
+  export type ReviewDIYHomesNullableScalarRelationFilter = {
+    is?: ReviewDIYHomesWhereInput | null
+    isNot?: ReviewDIYHomesWhereInput | null
   }
 
   export type SortOrderInput = {
@@ -9485,7 +9485,7 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type ReportCountOrderByAggregateInput = {
+  export type ReportDIYHomesCountOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     reviewId?: SortOrder
@@ -9494,7 +9494,7 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type ReportMaxOrderByAggregateInput = {
+  export type ReportDIYHomesMaxOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     reviewId?: SortOrder
@@ -9503,7 +9503,7 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type ReportMinOrderByAggregateInput = {
+  export type ReportDIYHomesMinOrderByAggregateInput = {
     id?: SortOrder
     postId?: SortOrder
     reviewId?: SortOrder
@@ -9530,74 +9530,74 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
-  export type PostCreateNestedManyWithoutUserInput = {
-    create?: XOR<PostCreateWithoutUserInput, PostUncheckedCreateWithoutUserInput> | PostCreateWithoutUserInput[] | PostUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: PostCreateOrConnectWithoutUserInput | PostCreateOrConnectWithoutUserInput[]
-    createMany?: PostCreateManyUserInputEnvelope
-    connect?: PostWhereUniqueInput | PostWhereUniqueInput[]
+  export type PostDIYHomesCreateNestedManyWithoutUserInput = {
+    create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: PostDIYHomesCreateManyUserInputEnvelope
+    connect?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
   }
 
-  export type ReviewCreateNestedManyWithoutUserInput = {
-    create?: XOR<ReviewCreateWithoutUserInput, ReviewUncheckedCreateWithoutUserInput> | ReviewCreateWithoutUserInput[] | ReviewUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: ReviewCreateOrConnectWithoutUserInput | ReviewCreateOrConnectWithoutUserInput[]
-    createMany?: ReviewCreateManyUserInputEnvelope
-    connect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
+  export type ReviewDIYHomesCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutUserInput, ReviewDIYHomesUncheckedCreateWithoutUserInput> | ReviewDIYHomesCreateWithoutUserInput[] | ReviewDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutUserInput | ReviewDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewDIYHomesCreateManyUserInputEnvelope
+    connect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
   }
 
-  export type BookmarkCreateNestedManyWithoutUserInput = {
-    create?: XOR<BookmarkCreateWithoutUserInput, BookmarkUncheckedCreateWithoutUserInput> | BookmarkCreateWithoutUserInput[] | BookmarkUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: BookmarkCreateOrConnectWithoutUserInput | BookmarkCreateOrConnectWithoutUserInput[]
-    createMany?: BookmarkCreateManyUserInputEnvelope
-    connect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
+  export type BookmarkDIYHomesCreateNestedManyWithoutUserInput = {
+    create?: XOR<BookmarkDIYHomesCreateWithoutUserInput, BookmarkDIYHomesUncheckedCreateWithoutUserInput> | BookmarkDIYHomesCreateWithoutUserInput[] | BookmarkDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkDIYHomesCreateOrConnectWithoutUserInput | BookmarkDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: BookmarkDIYHomesCreateManyUserInputEnvelope
+    connect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
   }
 
-  export type LikeCreateNestedManyWithoutUserInput = {
-    create?: XOR<LikeCreateWithoutUserInput, LikeUncheckedCreateWithoutUserInput> | LikeCreateWithoutUserInput[] | LikeUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: LikeCreateOrConnectWithoutUserInput | LikeCreateOrConnectWithoutUserInput[]
-    createMany?: LikeCreateManyUserInputEnvelope
-    connect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
+  export type LikeDIYHomesCreateNestedManyWithoutUserInput = {
+    create?: XOR<LikeDIYHomesCreateWithoutUserInput, LikeDIYHomesUncheckedCreateWithoutUserInput> | LikeDIYHomesCreateWithoutUserInput[] | LikeDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeDIYHomesCreateOrConnectWithoutUserInput | LikeDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: LikeDIYHomesCreateManyUserInputEnvelope
+    connect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
   }
 
-  export type ReportCreateNestedManyWithoutUserInput = {
-    create?: XOR<ReportCreateWithoutUserInput, ReportUncheckedCreateWithoutUserInput> | ReportCreateWithoutUserInput[] | ReportUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutUserInput | ReportCreateOrConnectWithoutUserInput[]
-    createMany?: ReportCreateManyUserInputEnvelope
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
+  export type ReportDIYHomesCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutUserInput, ReportDIYHomesUncheckedCreateWithoutUserInput> | ReportDIYHomesCreateWithoutUserInput[] | ReportDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutUserInput | ReportDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: ReportDIYHomesCreateManyUserInputEnvelope
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
   }
 
-  export type PostUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<PostCreateWithoutUserInput, PostUncheckedCreateWithoutUserInput> | PostCreateWithoutUserInput[] | PostUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: PostCreateOrConnectWithoutUserInput | PostCreateOrConnectWithoutUserInput[]
-    createMany?: PostCreateManyUserInputEnvelope
-    connect?: PostWhereUniqueInput | PostWhereUniqueInput[]
+  export type PostDIYHomesUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: PostDIYHomesCreateManyUserInputEnvelope
+    connect?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
   }
 
-  export type ReviewUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<ReviewCreateWithoutUserInput, ReviewUncheckedCreateWithoutUserInput> | ReviewCreateWithoutUserInput[] | ReviewUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: ReviewCreateOrConnectWithoutUserInput | ReviewCreateOrConnectWithoutUserInput[]
-    createMany?: ReviewCreateManyUserInputEnvelope
-    connect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
+  export type ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutUserInput, ReviewDIYHomesUncheckedCreateWithoutUserInput> | ReviewDIYHomesCreateWithoutUserInput[] | ReviewDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutUserInput | ReviewDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewDIYHomesCreateManyUserInputEnvelope
+    connect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
   }
 
-  export type BookmarkUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<BookmarkCreateWithoutUserInput, BookmarkUncheckedCreateWithoutUserInput> | BookmarkCreateWithoutUserInput[] | BookmarkUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: BookmarkCreateOrConnectWithoutUserInput | BookmarkCreateOrConnectWithoutUserInput[]
-    createMany?: BookmarkCreateManyUserInputEnvelope
-    connect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
+  export type BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<BookmarkDIYHomesCreateWithoutUserInput, BookmarkDIYHomesUncheckedCreateWithoutUserInput> | BookmarkDIYHomesCreateWithoutUserInput[] | BookmarkDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkDIYHomesCreateOrConnectWithoutUserInput | BookmarkDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: BookmarkDIYHomesCreateManyUserInputEnvelope
+    connect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
   }
 
-  export type LikeUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<LikeCreateWithoutUserInput, LikeUncheckedCreateWithoutUserInput> | LikeCreateWithoutUserInput[] | LikeUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: LikeCreateOrConnectWithoutUserInput | LikeCreateOrConnectWithoutUserInput[]
-    createMany?: LikeCreateManyUserInputEnvelope
-    connect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
+  export type LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<LikeDIYHomesCreateWithoutUserInput, LikeDIYHomesUncheckedCreateWithoutUserInput> | LikeDIYHomesCreateWithoutUserInput[] | LikeDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeDIYHomesCreateOrConnectWithoutUserInput | LikeDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: LikeDIYHomesCreateManyUserInputEnvelope
+    connect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
   }
 
-  export type ReportUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<ReportCreateWithoutUserInput, ReportUncheckedCreateWithoutUserInput> | ReportCreateWithoutUserInput[] | ReportUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutUserInput | ReportCreateOrConnectWithoutUserInput[]
-    createMany?: ReportCreateManyUserInputEnvelope
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
+  export type ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutUserInput, ReportDIYHomesUncheckedCreateWithoutUserInput> | ReportDIYHomesCreateWithoutUserInput[] | ReportDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutUserInput | ReportDIYHomesCreateOrConnectWithoutUserInput[]
+    createMany?: ReportDIYHomesCreateManyUserInputEnvelope
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -9608,144 +9608,144 @@ export namespace Prisma {
     set?: Date | string
   }
 
-  export type PostUpdateManyWithoutUserNestedInput = {
-    create?: XOR<PostCreateWithoutUserInput, PostUncheckedCreateWithoutUserInput> | PostCreateWithoutUserInput[] | PostUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: PostCreateOrConnectWithoutUserInput | PostCreateOrConnectWithoutUserInput[]
-    upsert?: PostUpsertWithWhereUniqueWithoutUserInput | PostUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: PostCreateManyUserInputEnvelope
-    set?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    disconnect?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    delete?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    connect?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    update?: PostUpdateWithWhereUniqueWithoutUserInput | PostUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: PostUpdateManyWithWhereWithoutUserInput | PostUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: PostScalarWhereInput | PostScalarWhereInput[]
+  export type PostDIYHomesUpdateManyWithoutUserNestedInput = {
+    create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: PostDIYHomesUpsertWithWhereUniqueWithoutUserInput | PostDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: PostDIYHomesCreateManyUserInputEnvelope
+    set?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
+    disconnect?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
+    delete?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
+    connect?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
+    update?: PostDIYHomesUpdateWithWhereUniqueWithoutUserInput | PostDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: PostDIYHomesUpdateManyWithWhereWithoutUserInput | PostDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: PostDIYHomesScalarWhereInput | PostDIYHomesScalarWhereInput[]
   }
 
-  export type ReviewUpdateManyWithoutUserNestedInput = {
-    create?: XOR<ReviewCreateWithoutUserInput, ReviewUncheckedCreateWithoutUserInput> | ReviewCreateWithoutUserInput[] | ReviewUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: ReviewCreateOrConnectWithoutUserInput | ReviewCreateOrConnectWithoutUserInput[]
-    upsert?: ReviewUpsertWithWhereUniqueWithoutUserInput | ReviewUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: ReviewCreateManyUserInputEnvelope
-    set?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    disconnect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    delete?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    connect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    update?: ReviewUpdateWithWhereUniqueWithoutUserInput | ReviewUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: ReviewUpdateManyWithWhereWithoutUserInput | ReviewUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: ReviewScalarWhereInput | ReviewScalarWhereInput[]
+  export type ReviewDIYHomesUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutUserInput, ReviewDIYHomesUncheckedCreateWithoutUserInput> | ReviewDIYHomesCreateWithoutUserInput[] | ReviewDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutUserInput | ReviewDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewDIYHomesUpsertWithWhereUniqueWithoutUserInput | ReviewDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewDIYHomesCreateManyUserInputEnvelope
+    set?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    disconnect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    delete?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    connect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    update?: ReviewDIYHomesUpdateWithWhereUniqueWithoutUserInput | ReviewDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewDIYHomesUpdateManyWithWhereWithoutUserInput | ReviewDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewDIYHomesScalarWhereInput | ReviewDIYHomesScalarWhereInput[]
   }
 
-  export type BookmarkUpdateManyWithoutUserNestedInput = {
-    create?: XOR<BookmarkCreateWithoutUserInput, BookmarkUncheckedCreateWithoutUserInput> | BookmarkCreateWithoutUserInput[] | BookmarkUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: BookmarkCreateOrConnectWithoutUserInput | BookmarkCreateOrConnectWithoutUserInput[]
-    upsert?: BookmarkUpsertWithWhereUniqueWithoutUserInput | BookmarkUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: BookmarkCreateManyUserInputEnvelope
-    set?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    disconnect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    delete?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    connect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    update?: BookmarkUpdateWithWhereUniqueWithoutUserInput | BookmarkUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: BookmarkUpdateManyWithWhereWithoutUserInput | BookmarkUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: BookmarkScalarWhereInput | BookmarkScalarWhereInput[]
+  export type BookmarkDIYHomesUpdateManyWithoutUserNestedInput = {
+    create?: XOR<BookmarkDIYHomesCreateWithoutUserInput, BookmarkDIYHomesUncheckedCreateWithoutUserInput> | BookmarkDIYHomesCreateWithoutUserInput[] | BookmarkDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkDIYHomesCreateOrConnectWithoutUserInput | BookmarkDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: BookmarkDIYHomesUpsertWithWhereUniqueWithoutUserInput | BookmarkDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: BookmarkDIYHomesCreateManyUserInputEnvelope
+    set?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    disconnect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    delete?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    connect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    update?: BookmarkDIYHomesUpdateWithWhereUniqueWithoutUserInput | BookmarkDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: BookmarkDIYHomesUpdateManyWithWhereWithoutUserInput | BookmarkDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: BookmarkDIYHomesScalarWhereInput | BookmarkDIYHomesScalarWhereInput[]
   }
 
-  export type LikeUpdateManyWithoutUserNestedInput = {
-    create?: XOR<LikeCreateWithoutUserInput, LikeUncheckedCreateWithoutUserInput> | LikeCreateWithoutUserInput[] | LikeUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: LikeCreateOrConnectWithoutUserInput | LikeCreateOrConnectWithoutUserInput[]
-    upsert?: LikeUpsertWithWhereUniqueWithoutUserInput | LikeUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: LikeCreateManyUserInputEnvelope
-    set?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    disconnect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    delete?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    connect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    update?: LikeUpdateWithWhereUniqueWithoutUserInput | LikeUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: LikeUpdateManyWithWhereWithoutUserInput | LikeUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: LikeScalarWhereInput | LikeScalarWhereInput[]
+  export type LikeDIYHomesUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LikeDIYHomesCreateWithoutUserInput, LikeDIYHomesUncheckedCreateWithoutUserInput> | LikeDIYHomesCreateWithoutUserInput[] | LikeDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeDIYHomesCreateOrConnectWithoutUserInput | LikeDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: LikeDIYHomesUpsertWithWhereUniqueWithoutUserInput | LikeDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LikeDIYHomesCreateManyUserInputEnvelope
+    set?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    disconnect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    delete?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    connect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    update?: LikeDIYHomesUpdateWithWhereUniqueWithoutUserInput | LikeDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LikeDIYHomesUpdateManyWithWhereWithoutUserInput | LikeDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LikeDIYHomesScalarWhereInput | LikeDIYHomesScalarWhereInput[]
   }
 
-  export type ReportUpdateManyWithoutUserNestedInput = {
-    create?: XOR<ReportCreateWithoutUserInput, ReportUncheckedCreateWithoutUserInput> | ReportCreateWithoutUserInput[] | ReportUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutUserInput | ReportCreateOrConnectWithoutUserInput[]
-    upsert?: ReportUpsertWithWhereUniqueWithoutUserInput | ReportUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: ReportCreateManyUserInputEnvelope
-    set?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    disconnect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    delete?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    update?: ReportUpdateWithWhereUniqueWithoutUserInput | ReportUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: ReportUpdateManyWithWhereWithoutUserInput | ReportUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: ReportScalarWhereInput | ReportScalarWhereInput[]
+  export type ReportDIYHomesUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutUserInput, ReportDIYHomesUncheckedCreateWithoutUserInput> | ReportDIYHomesCreateWithoutUserInput[] | ReportDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutUserInput | ReportDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: ReportDIYHomesUpsertWithWhereUniqueWithoutUserInput | ReportDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReportDIYHomesCreateManyUserInputEnvelope
+    set?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    disconnect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    delete?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    update?: ReportDIYHomesUpdateWithWhereUniqueWithoutUserInput | ReportDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReportDIYHomesUpdateManyWithWhereWithoutUserInput | ReportDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
   }
 
-  export type PostUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: XOR<PostCreateWithoutUserInput, PostUncheckedCreateWithoutUserInput> | PostCreateWithoutUserInput[] | PostUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: PostCreateOrConnectWithoutUserInput | PostCreateOrConnectWithoutUserInput[]
-    upsert?: PostUpsertWithWhereUniqueWithoutUserInput | PostUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: PostCreateManyUserInputEnvelope
-    set?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    disconnect?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    delete?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    connect?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    update?: PostUpdateWithWhereUniqueWithoutUserInput | PostUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: PostUpdateManyWithWhereWithoutUserInput | PostUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: PostScalarWhereInput | PostScalarWhereInput[]
+  export type PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput> | PostDIYHomesCreateWithoutUserInput[] | PostDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutUserInput | PostDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: PostDIYHomesUpsertWithWhereUniqueWithoutUserInput | PostDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: PostDIYHomesCreateManyUserInputEnvelope
+    set?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
+    disconnect?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
+    delete?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
+    connect?: PostDIYHomesWhereUniqueInput | PostDIYHomesWhereUniqueInput[]
+    update?: PostDIYHomesUpdateWithWhereUniqueWithoutUserInput | PostDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: PostDIYHomesUpdateManyWithWhereWithoutUserInput | PostDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: PostDIYHomesScalarWhereInput | PostDIYHomesScalarWhereInput[]
   }
 
-  export type ReviewUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: XOR<ReviewCreateWithoutUserInput, ReviewUncheckedCreateWithoutUserInput> | ReviewCreateWithoutUserInput[] | ReviewUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: ReviewCreateOrConnectWithoutUserInput | ReviewCreateOrConnectWithoutUserInput[]
-    upsert?: ReviewUpsertWithWhereUniqueWithoutUserInput | ReviewUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: ReviewCreateManyUserInputEnvelope
-    set?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    disconnect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    delete?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    connect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    update?: ReviewUpdateWithWhereUniqueWithoutUserInput | ReviewUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: ReviewUpdateManyWithWhereWithoutUserInput | ReviewUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: ReviewScalarWhereInput | ReviewScalarWhereInput[]
+  export type ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutUserInput, ReviewDIYHomesUncheckedCreateWithoutUserInput> | ReviewDIYHomesCreateWithoutUserInput[] | ReviewDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutUserInput | ReviewDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewDIYHomesUpsertWithWhereUniqueWithoutUserInput | ReviewDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewDIYHomesCreateManyUserInputEnvelope
+    set?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    disconnect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    delete?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    connect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    update?: ReviewDIYHomesUpdateWithWhereUniqueWithoutUserInput | ReviewDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewDIYHomesUpdateManyWithWhereWithoutUserInput | ReviewDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewDIYHomesScalarWhereInput | ReviewDIYHomesScalarWhereInput[]
   }
 
-  export type BookmarkUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: XOR<BookmarkCreateWithoutUserInput, BookmarkUncheckedCreateWithoutUserInput> | BookmarkCreateWithoutUserInput[] | BookmarkUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: BookmarkCreateOrConnectWithoutUserInput | BookmarkCreateOrConnectWithoutUserInput[]
-    upsert?: BookmarkUpsertWithWhereUniqueWithoutUserInput | BookmarkUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: BookmarkCreateManyUserInputEnvelope
-    set?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    disconnect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    delete?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    connect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    update?: BookmarkUpdateWithWhereUniqueWithoutUserInput | BookmarkUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: BookmarkUpdateManyWithWhereWithoutUserInput | BookmarkUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: BookmarkScalarWhereInput | BookmarkScalarWhereInput[]
+  export type BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<BookmarkDIYHomesCreateWithoutUserInput, BookmarkDIYHomesUncheckedCreateWithoutUserInput> | BookmarkDIYHomesCreateWithoutUserInput[] | BookmarkDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkDIYHomesCreateOrConnectWithoutUserInput | BookmarkDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: BookmarkDIYHomesUpsertWithWhereUniqueWithoutUserInput | BookmarkDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: BookmarkDIYHomesCreateManyUserInputEnvelope
+    set?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    disconnect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    delete?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    connect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    update?: BookmarkDIYHomesUpdateWithWhereUniqueWithoutUserInput | BookmarkDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: BookmarkDIYHomesUpdateManyWithWhereWithoutUserInput | BookmarkDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: BookmarkDIYHomesScalarWhereInput | BookmarkDIYHomesScalarWhereInput[]
   }
 
-  export type LikeUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: XOR<LikeCreateWithoutUserInput, LikeUncheckedCreateWithoutUserInput> | LikeCreateWithoutUserInput[] | LikeUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: LikeCreateOrConnectWithoutUserInput | LikeCreateOrConnectWithoutUserInput[]
-    upsert?: LikeUpsertWithWhereUniqueWithoutUserInput | LikeUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: LikeCreateManyUserInputEnvelope
-    set?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    disconnect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    delete?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    connect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    update?: LikeUpdateWithWhereUniqueWithoutUserInput | LikeUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: LikeUpdateManyWithWhereWithoutUserInput | LikeUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: LikeScalarWhereInput | LikeScalarWhereInput[]
+  export type LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LikeDIYHomesCreateWithoutUserInput, LikeDIYHomesUncheckedCreateWithoutUserInput> | LikeDIYHomesCreateWithoutUserInput[] | LikeDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeDIYHomesCreateOrConnectWithoutUserInput | LikeDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: LikeDIYHomesUpsertWithWhereUniqueWithoutUserInput | LikeDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LikeDIYHomesCreateManyUserInputEnvelope
+    set?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    disconnect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    delete?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    connect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    update?: LikeDIYHomesUpdateWithWhereUniqueWithoutUserInput | LikeDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LikeDIYHomesUpdateManyWithWhereWithoutUserInput | LikeDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LikeDIYHomesScalarWhereInput | LikeDIYHomesScalarWhereInput[]
   }
 
-  export type ReportUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: XOR<ReportCreateWithoutUserInput, ReportUncheckedCreateWithoutUserInput> | ReportCreateWithoutUserInput[] | ReportUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutUserInput | ReportCreateOrConnectWithoutUserInput[]
-    upsert?: ReportUpsertWithWhereUniqueWithoutUserInput | ReportUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: ReportCreateManyUserInputEnvelope
-    set?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    disconnect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    delete?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    update?: ReportUpdateWithWhereUniqueWithoutUserInput | ReportUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: ReportUpdateManyWithWhereWithoutUserInput | ReportUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: ReportScalarWhereInput | ReportScalarWhereInput[]
+  export type ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutUserInput, ReportDIYHomesUncheckedCreateWithoutUserInput> | ReportDIYHomesCreateWithoutUserInput[] | ReportDIYHomesUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutUserInput | ReportDIYHomesCreateOrConnectWithoutUserInput[]
+    upsert?: ReportDIYHomesUpsertWithWhereUniqueWithoutUserInput | ReportDIYHomesUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReportDIYHomesCreateManyUserInputEnvelope
+    set?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    disconnect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    delete?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    update?: ReportDIYHomesUpdateWithWhereUniqueWithoutUserInput | ReportDIYHomesUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReportDIYHomesUpdateManyWithWhereWithoutUserInput | ReportDIYHomesUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutPostsInput = {
@@ -9754,60 +9754,60 @@ export namespace Prisma {
     connect?: UserWhereUniqueInput
   }
 
-  export type ReviewCreateNestedManyWithoutPostInput = {
-    create?: XOR<ReviewCreateWithoutPostInput, ReviewUncheckedCreateWithoutPostInput> | ReviewCreateWithoutPostInput[] | ReviewUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: ReviewCreateOrConnectWithoutPostInput | ReviewCreateOrConnectWithoutPostInput[]
-    createMany?: ReviewCreateManyPostInputEnvelope
-    connect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
+  export type ReviewDIYHomesCreateNestedManyWithoutPostInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutPostInput, ReviewDIYHomesUncheckedCreateWithoutPostInput> | ReviewDIYHomesCreateWithoutPostInput[] | ReviewDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutPostInput | ReviewDIYHomesCreateOrConnectWithoutPostInput[]
+    createMany?: ReviewDIYHomesCreateManyPostInputEnvelope
+    connect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
   }
 
-  export type BookmarkCreateNestedManyWithoutPostInput = {
-    create?: XOR<BookmarkCreateWithoutPostInput, BookmarkUncheckedCreateWithoutPostInput> | BookmarkCreateWithoutPostInput[] | BookmarkUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: BookmarkCreateOrConnectWithoutPostInput | BookmarkCreateOrConnectWithoutPostInput[]
-    createMany?: BookmarkCreateManyPostInputEnvelope
-    connect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
+  export type BookmarkDIYHomesCreateNestedManyWithoutPostInput = {
+    create?: XOR<BookmarkDIYHomesCreateWithoutPostInput, BookmarkDIYHomesUncheckedCreateWithoutPostInput> | BookmarkDIYHomesCreateWithoutPostInput[] | BookmarkDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: BookmarkDIYHomesCreateOrConnectWithoutPostInput | BookmarkDIYHomesCreateOrConnectWithoutPostInput[]
+    createMany?: BookmarkDIYHomesCreateManyPostInputEnvelope
+    connect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
   }
 
-  export type LikeCreateNestedManyWithoutPostInput = {
-    create?: XOR<LikeCreateWithoutPostInput, LikeUncheckedCreateWithoutPostInput> | LikeCreateWithoutPostInput[] | LikeUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: LikeCreateOrConnectWithoutPostInput | LikeCreateOrConnectWithoutPostInput[]
-    createMany?: LikeCreateManyPostInputEnvelope
-    connect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
+  export type LikeDIYHomesCreateNestedManyWithoutPostInput = {
+    create?: XOR<LikeDIYHomesCreateWithoutPostInput, LikeDIYHomesUncheckedCreateWithoutPostInput> | LikeDIYHomesCreateWithoutPostInput[] | LikeDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: LikeDIYHomesCreateOrConnectWithoutPostInput | LikeDIYHomesCreateOrConnectWithoutPostInput[]
+    createMany?: LikeDIYHomesCreateManyPostInputEnvelope
+    connect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
   }
 
-  export type ReportCreateNestedManyWithoutPostInput = {
-    create?: XOR<ReportCreateWithoutPostInput, ReportUncheckedCreateWithoutPostInput> | ReportCreateWithoutPostInput[] | ReportUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutPostInput | ReportCreateOrConnectWithoutPostInput[]
-    createMany?: ReportCreateManyPostInputEnvelope
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
+  export type ReportDIYHomesCreateNestedManyWithoutPostInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutPostInput, ReportDIYHomesUncheckedCreateWithoutPostInput> | ReportDIYHomesCreateWithoutPostInput[] | ReportDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutPostInput | ReportDIYHomesCreateOrConnectWithoutPostInput[]
+    createMany?: ReportDIYHomesCreateManyPostInputEnvelope
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
   }
 
-  export type ReviewUncheckedCreateNestedManyWithoutPostInput = {
-    create?: XOR<ReviewCreateWithoutPostInput, ReviewUncheckedCreateWithoutPostInput> | ReviewCreateWithoutPostInput[] | ReviewUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: ReviewCreateOrConnectWithoutPostInput | ReviewCreateOrConnectWithoutPostInput[]
-    createMany?: ReviewCreateManyPostInputEnvelope
-    connect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
+  export type ReviewDIYHomesUncheckedCreateNestedManyWithoutPostInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutPostInput, ReviewDIYHomesUncheckedCreateWithoutPostInput> | ReviewDIYHomesCreateWithoutPostInput[] | ReviewDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutPostInput | ReviewDIYHomesCreateOrConnectWithoutPostInput[]
+    createMany?: ReviewDIYHomesCreateManyPostInputEnvelope
+    connect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
   }
 
-  export type BookmarkUncheckedCreateNestedManyWithoutPostInput = {
-    create?: XOR<BookmarkCreateWithoutPostInput, BookmarkUncheckedCreateWithoutPostInput> | BookmarkCreateWithoutPostInput[] | BookmarkUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: BookmarkCreateOrConnectWithoutPostInput | BookmarkCreateOrConnectWithoutPostInput[]
-    createMany?: BookmarkCreateManyPostInputEnvelope
-    connect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
+  export type BookmarkDIYHomesUncheckedCreateNestedManyWithoutPostInput = {
+    create?: XOR<BookmarkDIYHomesCreateWithoutPostInput, BookmarkDIYHomesUncheckedCreateWithoutPostInput> | BookmarkDIYHomesCreateWithoutPostInput[] | BookmarkDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: BookmarkDIYHomesCreateOrConnectWithoutPostInput | BookmarkDIYHomesCreateOrConnectWithoutPostInput[]
+    createMany?: BookmarkDIYHomesCreateManyPostInputEnvelope
+    connect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
   }
 
-  export type LikeUncheckedCreateNestedManyWithoutPostInput = {
-    create?: XOR<LikeCreateWithoutPostInput, LikeUncheckedCreateWithoutPostInput> | LikeCreateWithoutPostInput[] | LikeUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: LikeCreateOrConnectWithoutPostInput | LikeCreateOrConnectWithoutPostInput[]
-    createMany?: LikeCreateManyPostInputEnvelope
-    connect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
+  export type LikeDIYHomesUncheckedCreateNestedManyWithoutPostInput = {
+    create?: XOR<LikeDIYHomesCreateWithoutPostInput, LikeDIYHomesUncheckedCreateWithoutPostInput> | LikeDIYHomesCreateWithoutPostInput[] | LikeDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: LikeDIYHomesCreateOrConnectWithoutPostInput | LikeDIYHomesCreateOrConnectWithoutPostInput[]
+    createMany?: LikeDIYHomesCreateManyPostInputEnvelope
+    connect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
   }
 
-  export type ReportUncheckedCreateNestedManyWithoutPostInput = {
-    create?: XOR<ReportCreateWithoutPostInput, ReportUncheckedCreateWithoutPostInput> | ReportCreateWithoutPostInput[] | ReportUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutPostInput | ReportCreateOrConnectWithoutPostInput[]
-    createMany?: ReportCreateManyPostInputEnvelope
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
+  export type ReportDIYHomesUncheckedCreateNestedManyWithoutPostInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutPostInput, ReportDIYHomesUncheckedCreateWithoutPostInput> | ReportDIYHomesCreateWithoutPostInput[] | ReportDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutPostInput | ReportDIYHomesCreateOrConnectWithoutPostInput[]
+    createMany?: ReportDIYHomesCreateManyPostInputEnvelope
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
   }
 
   export type UserUpdateOneRequiredWithoutPostsNestedInput = {
@@ -9818,116 +9818,116 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutPostsInput, UserUpdateWithoutPostsInput>, UserUncheckedUpdateWithoutPostsInput>
   }
 
-  export type ReviewUpdateManyWithoutPostNestedInput = {
-    create?: XOR<ReviewCreateWithoutPostInput, ReviewUncheckedCreateWithoutPostInput> | ReviewCreateWithoutPostInput[] | ReviewUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: ReviewCreateOrConnectWithoutPostInput | ReviewCreateOrConnectWithoutPostInput[]
-    upsert?: ReviewUpsertWithWhereUniqueWithoutPostInput | ReviewUpsertWithWhereUniqueWithoutPostInput[]
-    createMany?: ReviewCreateManyPostInputEnvelope
-    set?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    disconnect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    delete?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    connect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    update?: ReviewUpdateWithWhereUniqueWithoutPostInput | ReviewUpdateWithWhereUniqueWithoutPostInput[]
-    updateMany?: ReviewUpdateManyWithWhereWithoutPostInput | ReviewUpdateManyWithWhereWithoutPostInput[]
-    deleteMany?: ReviewScalarWhereInput | ReviewScalarWhereInput[]
+  export type ReviewDIYHomesUpdateManyWithoutPostNestedInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutPostInput, ReviewDIYHomesUncheckedCreateWithoutPostInput> | ReviewDIYHomesCreateWithoutPostInput[] | ReviewDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutPostInput | ReviewDIYHomesCreateOrConnectWithoutPostInput[]
+    upsert?: ReviewDIYHomesUpsertWithWhereUniqueWithoutPostInput | ReviewDIYHomesUpsertWithWhereUniqueWithoutPostInput[]
+    createMany?: ReviewDIYHomesCreateManyPostInputEnvelope
+    set?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    disconnect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    delete?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    connect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    update?: ReviewDIYHomesUpdateWithWhereUniqueWithoutPostInput | ReviewDIYHomesUpdateWithWhereUniqueWithoutPostInput[]
+    updateMany?: ReviewDIYHomesUpdateManyWithWhereWithoutPostInput | ReviewDIYHomesUpdateManyWithWhereWithoutPostInput[]
+    deleteMany?: ReviewDIYHomesScalarWhereInput | ReviewDIYHomesScalarWhereInput[]
   }
 
-  export type BookmarkUpdateManyWithoutPostNestedInput = {
-    create?: XOR<BookmarkCreateWithoutPostInput, BookmarkUncheckedCreateWithoutPostInput> | BookmarkCreateWithoutPostInput[] | BookmarkUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: BookmarkCreateOrConnectWithoutPostInput | BookmarkCreateOrConnectWithoutPostInput[]
-    upsert?: BookmarkUpsertWithWhereUniqueWithoutPostInput | BookmarkUpsertWithWhereUniqueWithoutPostInput[]
-    createMany?: BookmarkCreateManyPostInputEnvelope
-    set?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    disconnect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    delete?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    connect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    update?: BookmarkUpdateWithWhereUniqueWithoutPostInput | BookmarkUpdateWithWhereUniqueWithoutPostInput[]
-    updateMany?: BookmarkUpdateManyWithWhereWithoutPostInput | BookmarkUpdateManyWithWhereWithoutPostInput[]
-    deleteMany?: BookmarkScalarWhereInput | BookmarkScalarWhereInput[]
+  export type BookmarkDIYHomesUpdateManyWithoutPostNestedInput = {
+    create?: XOR<BookmarkDIYHomesCreateWithoutPostInput, BookmarkDIYHomesUncheckedCreateWithoutPostInput> | BookmarkDIYHomesCreateWithoutPostInput[] | BookmarkDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: BookmarkDIYHomesCreateOrConnectWithoutPostInput | BookmarkDIYHomesCreateOrConnectWithoutPostInput[]
+    upsert?: BookmarkDIYHomesUpsertWithWhereUniqueWithoutPostInput | BookmarkDIYHomesUpsertWithWhereUniqueWithoutPostInput[]
+    createMany?: BookmarkDIYHomesCreateManyPostInputEnvelope
+    set?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    disconnect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    delete?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    connect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    update?: BookmarkDIYHomesUpdateWithWhereUniqueWithoutPostInput | BookmarkDIYHomesUpdateWithWhereUniqueWithoutPostInput[]
+    updateMany?: BookmarkDIYHomesUpdateManyWithWhereWithoutPostInput | BookmarkDIYHomesUpdateManyWithWhereWithoutPostInput[]
+    deleteMany?: BookmarkDIYHomesScalarWhereInput | BookmarkDIYHomesScalarWhereInput[]
   }
 
-  export type LikeUpdateManyWithoutPostNestedInput = {
-    create?: XOR<LikeCreateWithoutPostInput, LikeUncheckedCreateWithoutPostInput> | LikeCreateWithoutPostInput[] | LikeUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: LikeCreateOrConnectWithoutPostInput | LikeCreateOrConnectWithoutPostInput[]
-    upsert?: LikeUpsertWithWhereUniqueWithoutPostInput | LikeUpsertWithWhereUniqueWithoutPostInput[]
-    createMany?: LikeCreateManyPostInputEnvelope
-    set?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    disconnect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    delete?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    connect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    update?: LikeUpdateWithWhereUniqueWithoutPostInput | LikeUpdateWithWhereUniqueWithoutPostInput[]
-    updateMany?: LikeUpdateManyWithWhereWithoutPostInput | LikeUpdateManyWithWhereWithoutPostInput[]
-    deleteMany?: LikeScalarWhereInput | LikeScalarWhereInput[]
+  export type LikeDIYHomesUpdateManyWithoutPostNestedInput = {
+    create?: XOR<LikeDIYHomesCreateWithoutPostInput, LikeDIYHomesUncheckedCreateWithoutPostInput> | LikeDIYHomesCreateWithoutPostInput[] | LikeDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: LikeDIYHomesCreateOrConnectWithoutPostInput | LikeDIYHomesCreateOrConnectWithoutPostInput[]
+    upsert?: LikeDIYHomesUpsertWithWhereUniqueWithoutPostInput | LikeDIYHomesUpsertWithWhereUniqueWithoutPostInput[]
+    createMany?: LikeDIYHomesCreateManyPostInputEnvelope
+    set?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    disconnect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    delete?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    connect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    update?: LikeDIYHomesUpdateWithWhereUniqueWithoutPostInput | LikeDIYHomesUpdateWithWhereUniqueWithoutPostInput[]
+    updateMany?: LikeDIYHomesUpdateManyWithWhereWithoutPostInput | LikeDIYHomesUpdateManyWithWhereWithoutPostInput[]
+    deleteMany?: LikeDIYHomesScalarWhereInput | LikeDIYHomesScalarWhereInput[]
   }
 
-  export type ReportUpdateManyWithoutPostNestedInput = {
-    create?: XOR<ReportCreateWithoutPostInput, ReportUncheckedCreateWithoutPostInput> | ReportCreateWithoutPostInput[] | ReportUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutPostInput | ReportCreateOrConnectWithoutPostInput[]
-    upsert?: ReportUpsertWithWhereUniqueWithoutPostInput | ReportUpsertWithWhereUniqueWithoutPostInput[]
-    createMany?: ReportCreateManyPostInputEnvelope
-    set?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    disconnect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    delete?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    update?: ReportUpdateWithWhereUniqueWithoutPostInput | ReportUpdateWithWhereUniqueWithoutPostInput[]
-    updateMany?: ReportUpdateManyWithWhereWithoutPostInput | ReportUpdateManyWithWhereWithoutPostInput[]
-    deleteMany?: ReportScalarWhereInput | ReportScalarWhereInput[]
+  export type ReportDIYHomesUpdateManyWithoutPostNestedInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutPostInput, ReportDIYHomesUncheckedCreateWithoutPostInput> | ReportDIYHomesCreateWithoutPostInput[] | ReportDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutPostInput | ReportDIYHomesCreateOrConnectWithoutPostInput[]
+    upsert?: ReportDIYHomesUpsertWithWhereUniqueWithoutPostInput | ReportDIYHomesUpsertWithWhereUniqueWithoutPostInput[]
+    createMany?: ReportDIYHomesCreateManyPostInputEnvelope
+    set?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    disconnect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    delete?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    update?: ReportDIYHomesUpdateWithWhereUniqueWithoutPostInput | ReportDIYHomesUpdateWithWhereUniqueWithoutPostInput[]
+    updateMany?: ReportDIYHomesUpdateManyWithWhereWithoutPostInput | ReportDIYHomesUpdateManyWithWhereWithoutPostInput[]
+    deleteMany?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
   }
 
-  export type ReviewUncheckedUpdateManyWithoutPostNestedInput = {
-    create?: XOR<ReviewCreateWithoutPostInput, ReviewUncheckedCreateWithoutPostInput> | ReviewCreateWithoutPostInput[] | ReviewUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: ReviewCreateOrConnectWithoutPostInput | ReviewCreateOrConnectWithoutPostInput[]
-    upsert?: ReviewUpsertWithWhereUniqueWithoutPostInput | ReviewUpsertWithWhereUniqueWithoutPostInput[]
-    createMany?: ReviewCreateManyPostInputEnvelope
-    set?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    disconnect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    delete?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    connect?: ReviewWhereUniqueInput | ReviewWhereUniqueInput[]
-    update?: ReviewUpdateWithWhereUniqueWithoutPostInput | ReviewUpdateWithWhereUniqueWithoutPostInput[]
-    updateMany?: ReviewUpdateManyWithWhereWithoutPostInput | ReviewUpdateManyWithWhereWithoutPostInput[]
-    deleteMany?: ReviewScalarWhereInput | ReviewScalarWhereInput[]
+  export type ReviewDIYHomesUncheckedUpdateManyWithoutPostNestedInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutPostInput, ReviewDIYHomesUncheckedCreateWithoutPostInput> | ReviewDIYHomesCreateWithoutPostInput[] | ReviewDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutPostInput | ReviewDIYHomesCreateOrConnectWithoutPostInput[]
+    upsert?: ReviewDIYHomesUpsertWithWhereUniqueWithoutPostInput | ReviewDIYHomesUpsertWithWhereUniqueWithoutPostInput[]
+    createMany?: ReviewDIYHomesCreateManyPostInputEnvelope
+    set?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    disconnect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    delete?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    connect?: ReviewDIYHomesWhereUniqueInput | ReviewDIYHomesWhereUniqueInput[]
+    update?: ReviewDIYHomesUpdateWithWhereUniqueWithoutPostInput | ReviewDIYHomesUpdateWithWhereUniqueWithoutPostInput[]
+    updateMany?: ReviewDIYHomesUpdateManyWithWhereWithoutPostInput | ReviewDIYHomesUpdateManyWithWhereWithoutPostInput[]
+    deleteMany?: ReviewDIYHomesScalarWhereInput | ReviewDIYHomesScalarWhereInput[]
   }
 
-  export type BookmarkUncheckedUpdateManyWithoutPostNestedInput = {
-    create?: XOR<BookmarkCreateWithoutPostInput, BookmarkUncheckedCreateWithoutPostInput> | BookmarkCreateWithoutPostInput[] | BookmarkUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: BookmarkCreateOrConnectWithoutPostInput | BookmarkCreateOrConnectWithoutPostInput[]
-    upsert?: BookmarkUpsertWithWhereUniqueWithoutPostInput | BookmarkUpsertWithWhereUniqueWithoutPostInput[]
-    createMany?: BookmarkCreateManyPostInputEnvelope
-    set?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    disconnect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    delete?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    connect?: BookmarkWhereUniqueInput | BookmarkWhereUniqueInput[]
-    update?: BookmarkUpdateWithWhereUniqueWithoutPostInput | BookmarkUpdateWithWhereUniqueWithoutPostInput[]
-    updateMany?: BookmarkUpdateManyWithWhereWithoutPostInput | BookmarkUpdateManyWithWhereWithoutPostInput[]
-    deleteMany?: BookmarkScalarWhereInput | BookmarkScalarWhereInput[]
+  export type BookmarkDIYHomesUncheckedUpdateManyWithoutPostNestedInput = {
+    create?: XOR<BookmarkDIYHomesCreateWithoutPostInput, BookmarkDIYHomesUncheckedCreateWithoutPostInput> | BookmarkDIYHomesCreateWithoutPostInput[] | BookmarkDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: BookmarkDIYHomesCreateOrConnectWithoutPostInput | BookmarkDIYHomesCreateOrConnectWithoutPostInput[]
+    upsert?: BookmarkDIYHomesUpsertWithWhereUniqueWithoutPostInput | BookmarkDIYHomesUpsertWithWhereUniqueWithoutPostInput[]
+    createMany?: BookmarkDIYHomesCreateManyPostInputEnvelope
+    set?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    disconnect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    delete?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    connect?: BookmarkDIYHomesWhereUniqueInput | BookmarkDIYHomesWhereUniqueInput[]
+    update?: BookmarkDIYHomesUpdateWithWhereUniqueWithoutPostInput | BookmarkDIYHomesUpdateWithWhereUniqueWithoutPostInput[]
+    updateMany?: BookmarkDIYHomesUpdateManyWithWhereWithoutPostInput | BookmarkDIYHomesUpdateManyWithWhereWithoutPostInput[]
+    deleteMany?: BookmarkDIYHomesScalarWhereInput | BookmarkDIYHomesScalarWhereInput[]
   }
 
-  export type LikeUncheckedUpdateManyWithoutPostNestedInput = {
-    create?: XOR<LikeCreateWithoutPostInput, LikeUncheckedCreateWithoutPostInput> | LikeCreateWithoutPostInput[] | LikeUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: LikeCreateOrConnectWithoutPostInput | LikeCreateOrConnectWithoutPostInput[]
-    upsert?: LikeUpsertWithWhereUniqueWithoutPostInput | LikeUpsertWithWhereUniqueWithoutPostInput[]
-    createMany?: LikeCreateManyPostInputEnvelope
-    set?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    disconnect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    delete?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    connect?: LikeWhereUniqueInput | LikeWhereUniqueInput[]
-    update?: LikeUpdateWithWhereUniqueWithoutPostInput | LikeUpdateWithWhereUniqueWithoutPostInput[]
-    updateMany?: LikeUpdateManyWithWhereWithoutPostInput | LikeUpdateManyWithWhereWithoutPostInput[]
-    deleteMany?: LikeScalarWhereInput | LikeScalarWhereInput[]
+  export type LikeDIYHomesUncheckedUpdateManyWithoutPostNestedInput = {
+    create?: XOR<LikeDIYHomesCreateWithoutPostInput, LikeDIYHomesUncheckedCreateWithoutPostInput> | LikeDIYHomesCreateWithoutPostInput[] | LikeDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: LikeDIYHomesCreateOrConnectWithoutPostInput | LikeDIYHomesCreateOrConnectWithoutPostInput[]
+    upsert?: LikeDIYHomesUpsertWithWhereUniqueWithoutPostInput | LikeDIYHomesUpsertWithWhereUniqueWithoutPostInput[]
+    createMany?: LikeDIYHomesCreateManyPostInputEnvelope
+    set?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    disconnect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    delete?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    connect?: LikeDIYHomesWhereUniqueInput | LikeDIYHomesWhereUniqueInput[]
+    update?: LikeDIYHomesUpdateWithWhereUniqueWithoutPostInput | LikeDIYHomesUpdateWithWhereUniqueWithoutPostInput[]
+    updateMany?: LikeDIYHomesUpdateManyWithWhereWithoutPostInput | LikeDIYHomesUpdateManyWithWhereWithoutPostInput[]
+    deleteMany?: LikeDIYHomesScalarWhereInput | LikeDIYHomesScalarWhereInput[]
   }
 
-  export type ReportUncheckedUpdateManyWithoutPostNestedInput = {
-    create?: XOR<ReportCreateWithoutPostInput, ReportUncheckedCreateWithoutPostInput> | ReportCreateWithoutPostInput[] | ReportUncheckedCreateWithoutPostInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutPostInput | ReportCreateOrConnectWithoutPostInput[]
-    upsert?: ReportUpsertWithWhereUniqueWithoutPostInput | ReportUpsertWithWhereUniqueWithoutPostInput[]
-    createMany?: ReportCreateManyPostInputEnvelope
-    set?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    disconnect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    delete?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    update?: ReportUpdateWithWhereUniqueWithoutPostInput | ReportUpdateWithWhereUniqueWithoutPostInput[]
-    updateMany?: ReportUpdateManyWithWhereWithoutPostInput | ReportUpdateManyWithWhereWithoutPostInput[]
-    deleteMany?: ReportScalarWhereInput | ReportScalarWhereInput[]
+  export type ReportDIYHomesUncheckedUpdateManyWithoutPostNestedInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutPostInput, ReportDIYHomesUncheckedCreateWithoutPostInput> | ReportDIYHomesCreateWithoutPostInput[] | ReportDIYHomesUncheckedCreateWithoutPostInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutPostInput | ReportDIYHomesCreateOrConnectWithoutPostInput[]
+    upsert?: ReportDIYHomesUpsertWithWhereUniqueWithoutPostInput | ReportDIYHomesUpsertWithWhereUniqueWithoutPostInput[]
+    createMany?: ReportDIYHomesCreateManyPostInputEnvelope
+    set?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    disconnect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    delete?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    update?: ReportDIYHomesUpdateWithWhereUniqueWithoutPostInput | ReportDIYHomesUpdateWithWhereUniqueWithoutPostInput[]
+    updateMany?: ReportDIYHomesUpdateManyWithWhereWithoutPostInput | ReportDIYHomesUpdateManyWithWhereWithoutPostInput[]
+    deleteMany?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutReviewsInput = {
@@ -9936,24 +9936,24 @@ export namespace Prisma {
     connect?: UserWhereUniqueInput
   }
 
-  export type PostCreateNestedOneWithoutReviewsInput = {
-    create?: XOR<PostCreateWithoutReviewsInput, PostUncheckedCreateWithoutReviewsInput>
-    connectOrCreate?: PostCreateOrConnectWithoutReviewsInput
-    connect?: PostWhereUniqueInput
+  export type PostDIYHomesCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<PostDIYHomesCreateWithoutReviewsInput, PostDIYHomesUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutReviewsInput
+    connect?: PostDIYHomesWhereUniqueInput
   }
 
-  export type ReportCreateNestedManyWithoutReviewInput = {
-    create?: XOR<ReportCreateWithoutReviewInput, ReportUncheckedCreateWithoutReviewInput> | ReportCreateWithoutReviewInput[] | ReportUncheckedCreateWithoutReviewInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutReviewInput | ReportCreateOrConnectWithoutReviewInput[]
-    createMany?: ReportCreateManyReviewInputEnvelope
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
+  export type ReportDIYHomesCreateNestedManyWithoutReviewInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutReviewInput, ReportDIYHomesUncheckedCreateWithoutReviewInput> | ReportDIYHomesCreateWithoutReviewInput[] | ReportDIYHomesUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutReviewInput | ReportDIYHomesCreateOrConnectWithoutReviewInput[]
+    createMany?: ReportDIYHomesCreateManyReviewInputEnvelope
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
   }
 
-  export type ReportUncheckedCreateNestedManyWithoutReviewInput = {
-    create?: XOR<ReportCreateWithoutReviewInput, ReportUncheckedCreateWithoutReviewInput> | ReportCreateWithoutReviewInput[] | ReportUncheckedCreateWithoutReviewInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutReviewInput | ReportCreateOrConnectWithoutReviewInput[]
-    createMany?: ReportCreateManyReviewInputEnvelope
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
+  export type ReportDIYHomesUncheckedCreateNestedManyWithoutReviewInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutReviewInput, ReportDIYHomesUncheckedCreateWithoutReviewInput> | ReportDIYHomesCreateWithoutReviewInput[] | ReportDIYHomesUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutReviewInput | ReportDIYHomesCreateOrConnectWithoutReviewInput[]
+    createMany?: ReportDIYHomesCreateManyReviewInputEnvelope
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -9972,40 +9972,40 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutReviewsInput, UserUpdateWithoutReviewsInput>, UserUncheckedUpdateWithoutReviewsInput>
   }
 
-  export type PostUpdateOneRequiredWithoutReviewsNestedInput = {
-    create?: XOR<PostCreateWithoutReviewsInput, PostUncheckedCreateWithoutReviewsInput>
-    connectOrCreate?: PostCreateOrConnectWithoutReviewsInput
-    upsert?: PostUpsertWithoutReviewsInput
-    connect?: PostWhereUniqueInput
-    update?: XOR<XOR<PostUpdateToOneWithWhereWithoutReviewsInput, PostUpdateWithoutReviewsInput>, PostUncheckedUpdateWithoutReviewsInput>
+  export type PostDIYHomesUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<PostDIYHomesCreateWithoutReviewsInput, PostDIYHomesUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutReviewsInput
+    upsert?: PostDIYHomesUpsertWithoutReviewsInput
+    connect?: PostDIYHomesWhereUniqueInput
+    update?: XOR<XOR<PostDIYHomesUpdateToOneWithWhereWithoutReviewsInput, PostDIYHomesUpdateWithoutReviewsInput>, PostDIYHomesUncheckedUpdateWithoutReviewsInput>
   }
 
-  export type ReportUpdateManyWithoutReviewNestedInput = {
-    create?: XOR<ReportCreateWithoutReviewInput, ReportUncheckedCreateWithoutReviewInput> | ReportCreateWithoutReviewInput[] | ReportUncheckedCreateWithoutReviewInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutReviewInput | ReportCreateOrConnectWithoutReviewInput[]
-    upsert?: ReportUpsertWithWhereUniqueWithoutReviewInput | ReportUpsertWithWhereUniqueWithoutReviewInput[]
-    createMany?: ReportCreateManyReviewInputEnvelope
-    set?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    disconnect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    delete?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    update?: ReportUpdateWithWhereUniqueWithoutReviewInput | ReportUpdateWithWhereUniqueWithoutReviewInput[]
-    updateMany?: ReportUpdateManyWithWhereWithoutReviewInput | ReportUpdateManyWithWhereWithoutReviewInput[]
-    deleteMany?: ReportScalarWhereInput | ReportScalarWhereInput[]
+  export type ReportDIYHomesUpdateManyWithoutReviewNestedInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutReviewInput, ReportDIYHomesUncheckedCreateWithoutReviewInput> | ReportDIYHomesCreateWithoutReviewInput[] | ReportDIYHomesUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutReviewInput | ReportDIYHomesCreateOrConnectWithoutReviewInput[]
+    upsert?: ReportDIYHomesUpsertWithWhereUniqueWithoutReviewInput | ReportDIYHomesUpsertWithWhereUniqueWithoutReviewInput[]
+    createMany?: ReportDIYHomesCreateManyReviewInputEnvelope
+    set?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    disconnect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    delete?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    update?: ReportDIYHomesUpdateWithWhereUniqueWithoutReviewInput | ReportDIYHomesUpdateWithWhereUniqueWithoutReviewInput[]
+    updateMany?: ReportDIYHomesUpdateManyWithWhereWithoutReviewInput | ReportDIYHomesUpdateManyWithWhereWithoutReviewInput[]
+    deleteMany?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
   }
 
-  export type ReportUncheckedUpdateManyWithoutReviewNestedInput = {
-    create?: XOR<ReportCreateWithoutReviewInput, ReportUncheckedCreateWithoutReviewInput> | ReportCreateWithoutReviewInput[] | ReportUncheckedCreateWithoutReviewInput[]
-    connectOrCreate?: ReportCreateOrConnectWithoutReviewInput | ReportCreateOrConnectWithoutReviewInput[]
-    upsert?: ReportUpsertWithWhereUniqueWithoutReviewInput | ReportUpsertWithWhereUniqueWithoutReviewInput[]
-    createMany?: ReportCreateManyReviewInputEnvelope
-    set?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    disconnect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    delete?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    connect?: ReportWhereUniqueInput | ReportWhereUniqueInput[]
-    update?: ReportUpdateWithWhereUniqueWithoutReviewInput | ReportUpdateWithWhereUniqueWithoutReviewInput[]
-    updateMany?: ReportUpdateManyWithWhereWithoutReviewInput | ReportUpdateManyWithWhereWithoutReviewInput[]
-    deleteMany?: ReportScalarWhereInput | ReportScalarWhereInput[]
+  export type ReportDIYHomesUncheckedUpdateManyWithoutReviewNestedInput = {
+    create?: XOR<ReportDIYHomesCreateWithoutReviewInput, ReportDIYHomesUncheckedCreateWithoutReviewInput> | ReportDIYHomesCreateWithoutReviewInput[] | ReportDIYHomesUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportDIYHomesCreateOrConnectWithoutReviewInput | ReportDIYHomesCreateOrConnectWithoutReviewInput[]
+    upsert?: ReportDIYHomesUpsertWithWhereUniqueWithoutReviewInput | ReportDIYHomesUpsertWithWhereUniqueWithoutReviewInput[]
+    createMany?: ReportDIYHomesCreateManyReviewInputEnvelope
+    set?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    disconnect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    delete?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    connect?: ReportDIYHomesWhereUniqueInput | ReportDIYHomesWhereUniqueInput[]
+    update?: ReportDIYHomesUpdateWithWhereUniqueWithoutReviewInput | ReportDIYHomesUpdateWithWhereUniqueWithoutReviewInput[]
+    updateMany?: ReportDIYHomesUpdateManyWithWhereWithoutReviewInput | ReportDIYHomesUpdateManyWithWhereWithoutReviewInput[]
+    deleteMany?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutLikeInput = {
@@ -10014,10 +10014,10 @@ export namespace Prisma {
     connect?: UserWhereUniqueInput
   }
 
-  export type PostCreateNestedOneWithoutLikeInput = {
-    create?: XOR<PostCreateWithoutLikeInput, PostUncheckedCreateWithoutLikeInput>
-    connectOrCreate?: PostCreateOrConnectWithoutLikeInput
-    connect?: PostWhereUniqueInput
+  export type PostDIYHomesCreateNestedOneWithoutLikeInput = {
+    create?: XOR<PostDIYHomesCreateWithoutLikeInput, PostDIYHomesUncheckedCreateWithoutLikeInput>
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutLikeInput
+    connect?: PostDIYHomesWhereUniqueInput
   }
 
   export type UserUpdateOneRequiredWithoutLikeNestedInput = {
@@ -10028,12 +10028,12 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutLikeInput, UserUpdateWithoutLikeInput>, UserUncheckedUpdateWithoutLikeInput>
   }
 
-  export type PostUpdateOneRequiredWithoutLikeNestedInput = {
-    create?: XOR<PostCreateWithoutLikeInput, PostUncheckedCreateWithoutLikeInput>
-    connectOrCreate?: PostCreateOrConnectWithoutLikeInput
-    upsert?: PostUpsertWithoutLikeInput
-    connect?: PostWhereUniqueInput
-    update?: XOR<XOR<PostUpdateToOneWithWhereWithoutLikeInput, PostUpdateWithoutLikeInput>, PostUncheckedUpdateWithoutLikeInput>
+  export type PostDIYHomesUpdateOneRequiredWithoutLikeNestedInput = {
+    create?: XOR<PostDIYHomesCreateWithoutLikeInput, PostDIYHomesUncheckedCreateWithoutLikeInput>
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutLikeInput
+    upsert?: PostDIYHomesUpsertWithoutLikeInput
+    connect?: PostDIYHomesWhereUniqueInput
+    update?: XOR<XOR<PostDIYHomesUpdateToOneWithWhereWithoutLikeInput, PostDIYHomesUpdateWithoutLikeInput>, PostDIYHomesUncheckedUpdateWithoutLikeInput>
   }
 
   export type UserCreateNestedOneWithoutBookmarksInput = {
@@ -10042,10 +10042,10 @@ export namespace Prisma {
     connect?: UserWhereUniqueInput
   }
 
-  export type PostCreateNestedOneWithoutBookmarksInput = {
-    create?: XOR<PostCreateWithoutBookmarksInput, PostUncheckedCreateWithoutBookmarksInput>
-    connectOrCreate?: PostCreateOrConnectWithoutBookmarksInput
-    connect?: PostWhereUniqueInput
+  export type PostDIYHomesCreateNestedOneWithoutBookmarksInput = {
+    create?: XOR<PostDIYHomesCreateWithoutBookmarksInput, PostDIYHomesUncheckedCreateWithoutBookmarksInput>
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutBookmarksInput
+    connect?: PostDIYHomesWhereUniqueInput
   }
 
   export type UserUpdateOneRequiredWithoutBookmarksNestedInput = {
@@ -10056,12 +10056,12 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutBookmarksInput, UserUpdateWithoutBookmarksInput>, UserUncheckedUpdateWithoutBookmarksInput>
   }
 
-  export type PostUpdateOneRequiredWithoutBookmarksNestedInput = {
-    create?: XOR<PostCreateWithoutBookmarksInput, PostUncheckedCreateWithoutBookmarksInput>
-    connectOrCreate?: PostCreateOrConnectWithoutBookmarksInput
-    upsert?: PostUpsertWithoutBookmarksInput
-    connect?: PostWhereUniqueInput
-    update?: XOR<XOR<PostUpdateToOneWithWhereWithoutBookmarksInput, PostUpdateWithoutBookmarksInput>, PostUncheckedUpdateWithoutBookmarksInput>
+  export type PostDIYHomesUpdateOneRequiredWithoutBookmarksNestedInput = {
+    create?: XOR<PostDIYHomesCreateWithoutBookmarksInput, PostDIYHomesUncheckedCreateWithoutBookmarksInput>
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutBookmarksInput
+    upsert?: PostDIYHomesUpsertWithoutBookmarksInput
+    connect?: PostDIYHomesWhereUniqueInput
+    update?: XOR<XOR<PostDIYHomesUpdateToOneWithWhereWithoutBookmarksInput, PostDIYHomesUpdateWithoutBookmarksInput>, PostDIYHomesUncheckedUpdateWithoutBookmarksInput>
   }
 
   export type UserCreateNestedOneWithoutReportInput = {
@@ -10070,16 +10070,16 @@ export namespace Prisma {
     connect?: UserWhereUniqueInput
   }
 
-  export type PostCreateNestedOneWithoutReportInput = {
-    create?: XOR<PostCreateWithoutReportInput, PostUncheckedCreateWithoutReportInput>
-    connectOrCreate?: PostCreateOrConnectWithoutReportInput
-    connect?: PostWhereUniqueInput
+  export type PostDIYHomesCreateNestedOneWithoutReportInput = {
+    create?: XOR<PostDIYHomesCreateWithoutReportInput, PostDIYHomesUncheckedCreateWithoutReportInput>
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutReportInput
+    connect?: PostDIYHomesWhereUniqueInput
   }
 
-  export type ReviewCreateNestedOneWithoutReportInput = {
-    create?: XOR<ReviewCreateWithoutReportInput, ReviewUncheckedCreateWithoutReportInput>
-    connectOrCreate?: ReviewCreateOrConnectWithoutReportInput
-    connect?: ReviewWhereUniqueInput
+  export type ReviewDIYHomesCreateNestedOneWithoutReportInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutReportInput, ReviewDIYHomesUncheckedCreateWithoutReportInput>
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutReportInput
+    connect?: ReviewDIYHomesWhereUniqueInput
   }
 
   export type UserUpdateOneRequiredWithoutReportNestedInput = {
@@ -10090,24 +10090,24 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutReportInput, UserUpdateWithoutReportInput>, UserUncheckedUpdateWithoutReportInput>
   }
 
-  export type PostUpdateOneWithoutReportNestedInput = {
-    create?: XOR<PostCreateWithoutReportInput, PostUncheckedCreateWithoutReportInput>
-    connectOrCreate?: PostCreateOrConnectWithoutReportInput
-    upsert?: PostUpsertWithoutReportInput
-    disconnect?: PostWhereInput | boolean
-    delete?: PostWhereInput | boolean
-    connect?: PostWhereUniqueInput
-    update?: XOR<XOR<PostUpdateToOneWithWhereWithoutReportInput, PostUpdateWithoutReportInput>, PostUncheckedUpdateWithoutReportInput>
+  export type PostDIYHomesUpdateOneWithoutReportNestedInput = {
+    create?: XOR<PostDIYHomesCreateWithoutReportInput, PostDIYHomesUncheckedCreateWithoutReportInput>
+    connectOrCreate?: PostDIYHomesCreateOrConnectWithoutReportInput
+    upsert?: PostDIYHomesUpsertWithoutReportInput
+    disconnect?: PostDIYHomesWhereInput | boolean
+    delete?: PostDIYHomesWhereInput | boolean
+    connect?: PostDIYHomesWhereUniqueInput
+    update?: XOR<XOR<PostDIYHomesUpdateToOneWithWhereWithoutReportInput, PostDIYHomesUpdateWithoutReportInput>, PostDIYHomesUncheckedUpdateWithoutReportInput>
   }
 
-  export type ReviewUpdateOneWithoutReportNestedInput = {
-    create?: XOR<ReviewCreateWithoutReportInput, ReviewUncheckedCreateWithoutReportInput>
-    connectOrCreate?: ReviewCreateOrConnectWithoutReportInput
-    upsert?: ReviewUpsertWithoutReportInput
-    disconnect?: ReviewWhereInput | boolean
-    delete?: ReviewWhereInput | boolean
-    connect?: ReviewWhereUniqueInput
-    update?: XOR<XOR<ReviewUpdateToOneWithWhereWithoutReportInput, ReviewUpdateWithoutReportInput>, ReviewUncheckedUpdateWithoutReportInput>
+  export type ReviewDIYHomesUpdateOneWithoutReportNestedInput = {
+    create?: XOR<ReviewDIYHomesCreateWithoutReportInput, ReviewDIYHomesUncheckedCreateWithoutReportInput>
+    connectOrCreate?: ReviewDIYHomesCreateOrConnectWithoutReportInput
+    upsert?: ReviewDIYHomesUpsertWithoutReportInput
+    disconnect?: ReviewDIYHomesWhereInput | boolean
+    delete?: ReviewDIYHomesWhereInput | boolean
+    connect?: ReviewDIYHomesWhereUniqueInput
+    update?: XOR<XOR<ReviewDIYHomesUpdateToOneWithWhereWithoutReportInput, ReviewDIYHomesUpdateWithoutReportInput>, ReviewDIYHomesUncheckedUpdateWithoutReportInput>
   }
 
   export type NullableStringFieldUpdateOperationsInput = {
@@ -10250,121 +10250,121 @@ export namespace Prisma {
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
-  export type PostCreateWithoutUserInput = {
+  export type PostDIYHomesCreateWithoutUserInput = {
     id?: string
     title: string
     content: string
     category: string
     createdAt?: Date | string
-    reviews?: ReviewCreateNestedManyWithoutPostInput
-    bookmarks?: BookmarkCreateNestedManyWithoutPostInput
-    Like?: LikeCreateNestedManyWithoutPostInput
-    Report?: ReportCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutPostInput
   }
 
-  export type PostUncheckedCreateWithoutUserInput = {
+  export type PostDIYHomesUncheckedCreateWithoutUserInput = {
     id?: string
     title: string
     content: string
     category: string
     createdAt?: Date | string
-    reviews?: ReviewUncheckedCreateNestedManyWithoutPostInput
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutPostInput
-    Like?: LikeUncheckedCreateNestedManyWithoutPostInput
-    Report?: ReportUncheckedCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutPostInput
   }
 
-  export type PostCreateOrConnectWithoutUserInput = {
-    where: PostWhereUniqueInput
-    create: XOR<PostCreateWithoutUserInput, PostUncheckedCreateWithoutUserInput>
+  export type PostDIYHomesCreateOrConnectWithoutUserInput = {
+    where: PostDIYHomesWhereUniqueInput
+    create: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type PostCreateManyUserInputEnvelope = {
-    data: PostCreateManyUserInput | PostCreateManyUserInput[]
+  export type PostDIYHomesCreateManyUserInputEnvelope = {
+    data: PostDIYHomesCreateManyUserInput | PostDIYHomesCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
-  export type ReviewCreateWithoutUserInput = {
+  export type ReviewDIYHomesCreateWithoutUserInput = {
     id?: string
     rating: number
     comment: string
     createdAt?: Date | string
-    post: PostCreateNestedOneWithoutReviewsInput
-    Report?: ReportCreateNestedManyWithoutReviewInput
+    post: PostDIYHomesCreateNestedOneWithoutReviewsInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutReviewInput
   }
 
-  export type ReviewUncheckedCreateWithoutUserInput = {
+  export type ReviewDIYHomesUncheckedCreateWithoutUserInput = {
     id?: string
     postId: string
     rating: number
     comment: string
     createdAt?: Date | string
-    Report?: ReportUncheckedCreateNestedManyWithoutReviewInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutReviewInput
   }
 
-  export type ReviewCreateOrConnectWithoutUserInput = {
-    where: ReviewWhereUniqueInput
-    create: XOR<ReviewCreateWithoutUserInput, ReviewUncheckedCreateWithoutUserInput>
+  export type ReviewDIYHomesCreateOrConnectWithoutUserInput = {
+    where: ReviewDIYHomesWhereUniqueInput
+    create: XOR<ReviewDIYHomesCreateWithoutUserInput, ReviewDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type ReviewCreateManyUserInputEnvelope = {
-    data: ReviewCreateManyUserInput | ReviewCreateManyUserInput[]
+  export type ReviewDIYHomesCreateManyUserInputEnvelope = {
+    data: ReviewDIYHomesCreateManyUserInput | ReviewDIYHomesCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
-  export type BookmarkCreateWithoutUserInput = {
+  export type BookmarkDIYHomesCreateWithoutUserInput = {
     id?: string
     createdAt?: Date | string
-    post: PostCreateNestedOneWithoutBookmarksInput
+    post: PostDIYHomesCreateNestedOneWithoutBookmarksInput
   }
 
-  export type BookmarkUncheckedCreateWithoutUserInput = {
+  export type BookmarkDIYHomesUncheckedCreateWithoutUserInput = {
     id?: string
     postId: string
     createdAt?: Date | string
   }
 
-  export type BookmarkCreateOrConnectWithoutUserInput = {
-    where: BookmarkWhereUniqueInput
-    create: XOR<BookmarkCreateWithoutUserInput, BookmarkUncheckedCreateWithoutUserInput>
+  export type BookmarkDIYHomesCreateOrConnectWithoutUserInput = {
+    where: BookmarkDIYHomesWhereUniqueInput
+    create: XOR<BookmarkDIYHomesCreateWithoutUserInput, BookmarkDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type BookmarkCreateManyUserInputEnvelope = {
-    data: BookmarkCreateManyUserInput | BookmarkCreateManyUserInput[]
+  export type BookmarkDIYHomesCreateManyUserInputEnvelope = {
+    data: BookmarkDIYHomesCreateManyUserInput | BookmarkDIYHomesCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
-  export type LikeCreateWithoutUserInput = {
+  export type LikeDIYHomesCreateWithoutUserInput = {
     id?: string
     createdAt?: Date | string
-    post: PostCreateNestedOneWithoutLikeInput
+    post: PostDIYHomesCreateNestedOneWithoutLikeInput
   }
 
-  export type LikeUncheckedCreateWithoutUserInput = {
+  export type LikeDIYHomesUncheckedCreateWithoutUserInput = {
     id?: string
     postId: string
     createdAt?: Date | string
   }
 
-  export type LikeCreateOrConnectWithoutUserInput = {
-    where: LikeWhereUniqueInput
-    create: XOR<LikeCreateWithoutUserInput, LikeUncheckedCreateWithoutUserInput>
+  export type LikeDIYHomesCreateOrConnectWithoutUserInput = {
+    where: LikeDIYHomesWhereUniqueInput
+    create: XOR<LikeDIYHomesCreateWithoutUserInput, LikeDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type LikeCreateManyUserInputEnvelope = {
-    data: LikeCreateManyUserInput | LikeCreateManyUserInput[]
+  export type LikeDIYHomesCreateManyUserInputEnvelope = {
+    data: LikeDIYHomesCreateManyUserInput | LikeDIYHomesCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
-  export type ReportCreateWithoutUserInput = {
+  export type ReportDIYHomesCreateWithoutUserInput = {
     id?: string
     reason: string
     createdAt?: Date | string
-    post?: PostCreateNestedOneWithoutReportInput
-    review?: ReviewCreateNestedOneWithoutReportInput
+    post?: PostDIYHomesCreateNestedOneWithoutReportInput
+    review?: ReviewDIYHomesCreateNestedOneWithoutReportInput
   }
 
-  export type ReportUncheckedCreateWithoutUserInput = {
+  export type ReportDIYHomesUncheckedCreateWithoutUserInput = {
     id?: string
     postId?: string | null
     reviewId?: string | null
@@ -10372,150 +10372,150 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReportCreateOrConnectWithoutUserInput = {
-    where: ReportWhereUniqueInput
-    create: XOR<ReportCreateWithoutUserInput, ReportUncheckedCreateWithoutUserInput>
+  export type ReportDIYHomesCreateOrConnectWithoutUserInput = {
+    where: ReportDIYHomesWhereUniqueInput
+    create: XOR<ReportDIYHomesCreateWithoutUserInput, ReportDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type ReportCreateManyUserInputEnvelope = {
-    data: ReportCreateManyUserInput | ReportCreateManyUserInput[]
+  export type ReportDIYHomesCreateManyUserInputEnvelope = {
+    data: ReportDIYHomesCreateManyUserInput | ReportDIYHomesCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
-  export type PostUpsertWithWhereUniqueWithoutUserInput = {
-    where: PostWhereUniqueInput
-    update: XOR<PostUpdateWithoutUserInput, PostUncheckedUpdateWithoutUserInput>
-    create: XOR<PostCreateWithoutUserInput, PostUncheckedCreateWithoutUserInput>
+  export type PostDIYHomesUpsertWithWhereUniqueWithoutUserInput = {
+    where: PostDIYHomesWhereUniqueInput
+    update: XOR<PostDIYHomesUpdateWithoutUserInput, PostDIYHomesUncheckedUpdateWithoutUserInput>
+    create: XOR<PostDIYHomesCreateWithoutUserInput, PostDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type PostUpdateWithWhereUniqueWithoutUserInput = {
-    where: PostWhereUniqueInput
-    data: XOR<PostUpdateWithoutUserInput, PostUncheckedUpdateWithoutUserInput>
+  export type PostDIYHomesUpdateWithWhereUniqueWithoutUserInput = {
+    where: PostDIYHomesWhereUniqueInput
+    data: XOR<PostDIYHomesUpdateWithoutUserInput, PostDIYHomesUncheckedUpdateWithoutUserInput>
   }
 
-  export type PostUpdateManyWithWhereWithoutUserInput = {
-    where: PostScalarWhereInput
-    data: XOR<PostUpdateManyMutationInput, PostUncheckedUpdateManyWithoutUserInput>
+  export type PostDIYHomesUpdateManyWithWhereWithoutUserInput = {
+    where: PostDIYHomesScalarWhereInput
+    data: XOR<PostDIYHomesUpdateManyMutationInput, PostDIYHomesUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type PostScalarWhereInput = {
-    AND?: PostScalarWhereInput | PostScalarWhereInput[]
-    OR?: PostScalarWhereInput[]
-    NOT?: PostScalarWhereInput | PostScalarWhereInput[]
-    id?: StringFilter<"Post"> | string
-    title?: StringFilter<"Post"> | string
-    content?: StringFilter<"Post"> | string
-    category?: StringFilter<"Post"> | string
-    userId?: StringFilter<"Post"> | string
-    createdAt?: DateTimeFilter<"Post"> | Date | string
+  export type PostDIYHomesScalarWhereInput = {
+    AND?: PostDIYHomesScalarWhereInput | PostDIYHomesScalarWhereInput[]
+    OR?: PostDIYHomesScalarWhereInput[]
+    NOT?: PostDIYHomesScalarWhereInput | PostDIYHomesScalarWhereInput[]
+    id?: StringFilter<"PostDIYHomes"> | string
+    title?: StringFilter<"PostDIYHomes"> | string
+    content?: StringFilter<"PostDIYHomes"> | string
+    category?: StringFilter<"PostDIYHomes"> | string
+    userId?: StringFilter<"PostDIYHomes"> | string
+    createdAt?: DateTimeFilter<"PostDIYHomes"> | Date | string
   }
 
-  export type ReviewUpsertWithWhereUniqueWithoutUserInput = {
-    where: ReviewWhereUniqueInput
-    update: XOR<ReviewUpdateWithoutUserInput, ReviewUncheckedUpdateWithoutUserInput>
-    create: XOR<ReviewCreateWithoutUserInput, ReviewUncheckedCreateWithoutUserInput>
+  export type ReviewDIYHomesUpsertWithWhereUniqueWithoutUserInput = {
+    where: ReviewDIYHomesWhereUniqueInput
+    update: XOR<ReviewDIYHomesUpdateWithoutUserInput, ReviewDIYHomesUncheckedUpdateWithoutUserInput>
+    create: XOR<ReviewDIYHomesCreateWithoutUserInput, ReviewDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type ReviewUpdateWithWhereUniqueWithoutUserInput = {
-    where: ReviewWhereUniqueInput
-    data: XOR<ReviewUpdateWithoutUserInput, ReviewUncheckedUpdateWithoutUserInput>
+  export type ReviewDIYHomesUpdateWithWhereUniqueWithoutUserInput = {
+    where: ReviewDIYHomesWhereUniqueInput
+    data: XOR<ReviewDIYHomesUpdateWithoutUserInput, ReviewDIYHomesUncheckedUpdateWithoutUserInput>
   }
 
-  export type ReviewUpdateManyWithWhereWithoutUserInput = {
-    where: ReviewScalarWhereInput
-    data: XOR<ReviewUpdateManyMutationInput, ReviewUncheckedUpdateManyWithoutUserInput>
+  export type ReviewDIYHomesUpdateManyWithWhereWithoutUserInput = {
+    where: ReviewDIYHomesScalarWhereInput
+    data: XOR<ReviewDIYHomesUpdateManyMutationInput, ReviewDIYHomesUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type ReviewScalarWhereInput = {
-    AND?: ReviewScalarWhereInput | ReviewScalarWhereInput[]
-    OR?: ReviewScalarWhereInput[]
-    NOT?: ReviewScalarWhereInput | ReviewScalarWhereInput[]
-    id?: StringFilter<"Review"> | string
-    postId?: StringFilter<"Review"> | string
-    userId?: StringFilter<"Review"> | string
-    rating?: IntFilter<"Review"> | number
-    comment?: StringFilter<"Review"> | string
-    createdAt?: DateTimeFilter<"Review"> | Date | string
+  export type ReviewDIYHomesScalarWhereInput = {
+    AND?: ReviewDIYHomesScalarWhereInput | ReviewDIYHomesScalarWhereInput[]
+    OR?: ReviewDIYHomesScalarWhereInput[]
+    NOT?: ReviewDIYHomesScalarWhereInput | ReviewDIYHomesScalarWhereInput[]
+    id?: StringFilter<"ReviewDIYHomes"> | string
+    postId?: StringFilter<"ReviewDIYHomes"> | string
+    userId?: StringFilter<"ReviewDIYHomes"> | string
+    rating?: IntFilter<"ReviewDIYHomes"> | number
+    comment?: StringFilter<"ReviewDIYHomes"> | string
+    createdAt?: DateTimeFilter<"ReviewDIYHomes"> | Date | string
   }
 
-  export type BookmarkUpsertWithWhereUniqueWithoutUserInput = {
-    where: BookmarkWhereUniqueInput
-    update: XOR<BookmarkUpdateWithoutUserInput, BookmarkUncheckedUpdateWithoutUserInput>
-    create: XOR<BookmarkCreateWithoutUserInput, BookmarkUncheckedCreateWithoutUserInput>
+  export type BookmarkDIYHomesUpsertWithWhereUniqueWithoutUserInput = {
+    where: BookmarkDIYHomesWhereUniqueInput
+    update: XOR<BookmarkDIYHomesUpdateWithoutUserInput, BookmarkDIYHomesUncheckedUpdateWithoutUserInput>
+    create: XOR<BookmarkDIYHomesCreateWithoutUserInput, BookmarkDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type BookmarkUpdateWithWhereUniqueWithoutUserInput = {
-    where: BookmarkWhereUniqueInput
-    data: XOR<BookmarkUpdateWithoutUserInput, BookmarkUncheckedUpdateWithoutUserInput>
+  export type BookmarkDIYHomesUpdateWithWhereUniqueWithoutUserInput = {
+    where: BookmarkDIYHomesWhereUniqueInput
+    data: XOR<BookmarkDIYHomesUpdateWithoutUserInput, BookmarkDIYHomesUncheckedUpdateWithoutUserInput>
   }
 
-  export type BookmarkUpdateManyWithWhereWithoutUserInput = {
-    where: BookmarkScalarWhereInput
-    data: XOR<BookmarkUpdateManyMutationInput, BookmarkUncheckedUpdateManyWithoutUserInput>
+  export type BookmarkDIYHomesUpdateManyWithWhereWithoutUserInput = {
+    where: BookmarkDIYHomesScalarWhereInput
+    data: XOR<BookmarkDIYHomesUpdateManyMutationInput, BookmarkDIYHomesUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type BookmarkScalarWhereInput = {
-    AND?: BookmarkScalarWhereInput | BookmarkScalarWhereInput[]
-    OR?: BookmarkScalarWhereInput[]
-    NOT?: BookmarkScalarWhereInput | BookmarkScalarWhereInput[]
-    id?: StringFilter<"Bookmark"> | string
-    postId?: StringFilter<"Bookmark"> | string
-    userId?: StringFilter<"Bookmark"> | string
-    createdAt?: DateTimeFilter<"Bookmark"> | Date | string
+  export type BookmarkDIYHomesScalarWhereInput = {
+    AND?: BookmarkDIYHomesScalarWhereInput | BookmarkDIYHomesScalarWhereInput[]
+    OR?: BookmarkDIYHomesScalarWhereInput[]
+    NOT?: BookmarkDIYHomesScalarWhereInput | BookmarkDIYHomesScalarWhereInput[]
+    id?: StringFilter<"BookmarkDIYHomes"> | string
+    postId?: StringFilter<"BookmarkDIYHomes"> | string
+    userId?: StringFilter<"BookmarkDIYHomes"> | string
+    createdAt?: DateTimeFilter<"BookmarkDIYHomes"> | Date | string
   }
 
-  export type LikeUpsertWithWhereUniqueWithoutUserInput = {
-    where: LikeWhereUniqueInput
-    update: XOR<LikeUpdateWithoutUserInput, LikeUncheckedUpdateWithoutUserInput>
-    create: XOR<LikeCreateWithoutUserInput, LikeUncheckedCreateWithoutUserInput>
+  export type LikeDIYHomesUpsertWithWhereUniqueWithoutUserInput = {
+    where: LikeDIYHomesWhereUniqueInput
+    update: XOR<LikeDIYHomesUpdateWithoutUserInput, LikeDIYHomesUncheckedUpdateWithoutUserInput>
+    create: XOR<LikeDIYHomesCreateWithoutUserInput, LikeDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type LikeUpdateWithWhereUniqueWithoutUserInput = {
-    where: LikeWhereUniqueInput
-    data: XOR<LikeUpdateWithoutUserInput, LikeUncheckedUpdateWithoutUserInput>
+  export type LikeDIYHomesUpdateWithWhereUniqueWithoutUserInput = {
+    where: LikeDIYHomesWhereUniqueInput
+    data: XOR<LikeDIYHomesUpdateWithoutUserInput, LikeDIYHomesUncheckedUpdateWithoutUserInput>
   }
 
-  export type LikeUpdateManyWithWhereWithoutUserInput = {
-    where: LikeScalarWhereInput
-    data: XOR<LikeUpdateManyMutationInput, LikeUncheckedUpdateManyWithoutUserInput>
+  export type LikeDIYHomesUpdateManyWithWhereWithoutUserInput = {
+    where: LikeDIYHomesScalarWhereInput
+    data: XOR<LikeDIYHomesUpdateManyMutationInput, LikeDIYHomesUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type LikeScalarWhereInput = {
-    AND?: LikeScalarWhereInput | LikeScalarWhereInput[]
-    OR?: LikeScalarWhereInput[]
-    NOT?: LikeScalarWhereInput | LikeScalarWhereInput[]
-    id?: StringFilter<"Like"> | string
-    postId?: StringFilter<"Like"> | string
-    userId?: StringFilter<"Like"> | string
-    createdAt?: DateTimeFilter<"Like"> | Date | string
+  export type LikeDIYHomesScalarWhereInput = {
+    AND?: LikeDIYHomesScalarWhereInput | LikeDIYHomesScalarWhereInput[]
+    OR?: LikeDIYHomesScalarWhereInput[]
+    NOT?: LikeDIYHomesScalarWhereInput | LikeDIYHomesScalarWhereInput[]
+    id?: StringFilter<"LikeDIYHomes"> | string
+    postId?: StringFilter<"LikeDIYHomes"> | string
+    userId?: StringFilter<"LikeDIYHomes"> | string
+    createdAt?: DateTimeFilter<"LikeDIYHomes"> | Date | string
   }
 
-  export type ReportUpsertWithWhereUniqueWithoutUserInput = {
-    where: ReportWhereUniqueInput
-    update: XOR<ReportUpdateWithoutUserInput, ReportUncheckedUpdateWithoutUserInput>
-    create: XOR<ReportCreateWithoutUserInput, ReportUncheckedCreateWithoutUserInput>
+  export type ReportDIYHomesUpsertWithWhereUniqueWithoutUserInput = {
+    where: ReportDIYHomesWhereUniqueInput
+    update: XOR<ReportDIYHomesUpdateWithoutUserInput, ReportDIYHomesUncheckedUpdateWithoutUserInput>
+    create: XOR<ReportDIYHomesCreateWithoutUserInput, ReportDIYHomesUncheckedCreateWithoutUserInput>
   }
 
-  export type ReportUpdateWithWhereUniqueWithoutUserInput = {
-    where: ReportWhereUniqueInput
-    data: XOR<ReportUpdateWithoutUserInput, ReportUncheckedUpdateWithoutUserInput>
+  export type ReportDIYHomesUpdateWithWhereUniqueWithoutUserInput = {
+    where: ReportDIYHomesWhereUniqueInput
+    data: XOR<ReportDIYHomesUpdateWithoutUserInput, ReportDIYHomesUncheckedUpdateWithoutUserInput>
   }
 
-  export type ReportUpdateManyWithWhereWithoutUserInput = {
-    where: ReportScalarWhereInput
-    data: XOR<ReportUpdateManyMutationInput, ReportUncheckedUpdateManyWithoutUserInput>
+  export type ReportDIYHomesUpdateManyWithWhereWithoutUserInput = {
+    where: ReportDIYHomesScalarWhereInput
+    data: XOR<ReportDIYHomesUpdateManyMutationInput, ReportDIYHomesUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type ReportScalarWhereInput = {
-    AND?: ReportScalarWhereInput | ReportScalarWhereInput[]
-    OR?: ReportScalarWhereInput[]
-    NOT?: ReportScalarWhereInput | ReportScalarWhereInput[]
-    id?: StringFilter<"Report"> | string
-    postId?: StringNullableFilter<"Report"> | string | null
-    reviewId?: StringNullableFilter<"Report"> | string | null
-    userId?: StringFilter<"Report"> | string
-    reason?: StringFilter<"Report"> | string
-    createdAt?: DateTimeFilter<"Report"> | Date | string
+  export type ReportDIYHomesScalarWhereInput = {
+    AND?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
+    OR?: ReportDIYHomesScalarWhereInput[]
+    NOT?: ReportDIYHomesScalarWhereInput | ReportDIYHomesScalarWhereInput[]
+    id?: StringFilter<"ReportDIYHomes"> | string
+    postId?: StringNullableFilter<"ReportDIYHomes"> | string | null
+    reviewId?: StringNullableFilter<"ReportDIYHomes"> | string | null
+    userId?: StringFilter<"ReportDIYHomes"> | string
+    reason?: StringFilter<"ReportDIYHomes"> | string
+    createdAt?: DateTimeFilter<"ReportDIYHomes"> | Date | string
   }
 
   export type UserCreateWithoutPostsInput = {
@@ -10525,10 +10525,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    reviews?: ReviewCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkCreateNestedManyWithoutUserInput
-    Like?: LikeCreateNestedManyWithoutUserInput
-    Report?: ReportCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutPostsInput = {
@@ -10538,10 +10538,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    reviews?: ReviewUncheckedCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutUserInput
-    Like?: LikeUncheckedCreateNestedManyWithoutUserInput
-    Report?: ReportUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutPostsInput = {
@@ -10549,87 +10549,87 @@ export namespace Prisma {
     create: XOR<UserCreateWithoutPostsInput, UserUncheckedCreateWithoutPostsInput>
   }
 
-  export type ReviewCreateWithoutPostInput = {
+  export type ReviewDIYHomesCreateWithoutPostInput = {
     id?: string
     rating: number
     comment: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutReviewsInput
-    Report?: ReportCreateNestedManyWithoutReviewInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutReviewInput
   }
 
-  export type ReviewUncheckedCreateWithoutPostInput = {
+  export type ReviewDIYHomesUncheckedCreateWithoutPostInput = {
     id?: string
     userId: string
     rating: number
     comment: string
     createdAt?: Date | string
-    Report?: ReportUncheckedCreateNestedManyWithoutReviewInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutReviewInput
   }
 
-  export type ReviewCreateOrConnectWithoutPostInput = {
-    where: ReviewWhereUniqueInput
-    create: XOR<ReviewCreateWithoutPostInput, ReviewUncheckedCreateWithoutPostInput>
+  export type ReviewDIYHomesCreateOrConnectWithoutPostInput = {
+    where: ReviewDIYHomesWhereUniqueInput
+    create: XOR<ReviewDIYHomesCreateWithoutPostInput, ReviewDIYHomesUncheckedCreateWithoutPostInput>
   }
 
-  export type ReviewCreateManyPostInputEnvelope = {
-    data: ReviewCreateManyPostInput | ReviewCreateManyPostInput[]
+  export type ReviewDIYHomesCreateManyPostInputEnvelope = {
+    data: ReviewDIYHomesCreateManyPostInput | ReviewDIYHomesCreateManyPostInput[]
     skipDuplicates?: boolean
   }
 
-  export type BookmarkCreateWithoutPostInput = {
+  export type BookmarkDIYHomesCreateWithoutPostInput = {
     id?: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutBookmarksInput
   }
 
-  export type BookmarkUncheckedCreateWithoutPostInput = {
+  export type BookmarkDIYHomesUncheckedCreateWithoutPostInput = {
     id?: string
     userId: string
     createdAt?: Date | string
   }
 
-  export type BookmarkCreateOrConnectWithoutPostInput = {
-    where: BookmarkWhereUniqueInput
-    create: XOR<BookmarkCreateWithoutPostInput, BookmarkUncheckedCreateWithoutPostInput>
+  export type BookmarkDIYHomesCreateOrConnectWithoutPostInput = {
+    where: BookmarkDIYHomesWhereUniqueInput
+    create: XOR<BookmarkDIYHomesCreateWithoutPostInput, BookmarkDIYHomesUncheckedCreateWithoutPostInput>
   }
 
-  export type BookmarkCreateManyPostInputEnvelope = {
-    data: BookmarkCreateManyPostInput | BookmarkCreateManyPostInput[]
+  export type BookmarkDIYHomesCreateManyPostInputEnvelope = {
+    data: BookmarkDIYHomesCreateManyPostInput | BookmarkDIYHomesCreateManyPostInput[]
     skipDuplicates?: boolean
   }
 
-  export type LikeCreateWithoutPostInput = {
+  export type LikeDIYHomesCreateWithoutPostInput = {
     id?: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutLikeInput
   }
 
-  export type LikeUncheckedCreateWithoutPostInput = {
+  export type LikeDIYHomesUncheckedCreateWithoutPostInput = {
     id?: string
     userId: string
     createdAt?: Date | string
   }
 
-  export type LikeCreateOrConnectWithoutPostInput = {
-    where: LikeWhereUniqueInput
-    create: XOR<LikeCreateWithoutPostInput, LikeUncheckedCreateWithoutPostInput>
+  export type LikeDIYHomesCreateOrConnectWithoutPostInput = {
+    where: LikeDIYHomesWhereUniqueInput
+    create: XOR<LikeDIYHomesCreateWithoutPostInput, LikeDIYHomesUncheckedCreateWithoutPostInput>
   }
 
-  export type LikeCreateManyPostInputEnvelope = {
-    data: LikeCreateManyPostInput | LikeCreateManyPostInput[]
+  export type LikeDIYHomesCreateManyPostInputEnvelope = {
+    data: LikeDIYHomesCreateManyPostInput | LikeDIYHomesCreateManyPostInput[]
     skipDuplicates?: boolean
   }
 
-  export type ReportCreateWithoutPostInput = {
+  export type ReportDIYHomesCreateWithoutPostInput = {
     id?: string
     reason: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutReportInput
-    review?: ReviewCreateNestedOneWithoutReportInput
+    review?: ReviewDIYHomesCreateNestedOneWithoutReportInput
   }
 
-  export type ReportUncheckedCreateWithoutPostInput = {
+  export type ReportDIYHomesUncheckedCreateWithoutPostInput = {
     id?: string
     reviewId?: string | null
     userId: string
@@ -10637,13 +10637,13 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReportCreateOrConnectWithoutPostInput = {
-    where: ReportWhereUniqueInput
-    create: XOR<ReportCreateWithoutPostInput, ReportUncheckedCreateWithoutPostInput>
+  export type ReportDIYHomesCreateOrConnectWithoutPostInput = {
+    where: ReportDIYHomesWhereUniqueInput
+    create: XOR<ReportDIYHomesCreateWithoutPostInput, ReportDIYHomesUncheckedCreateWithoutPostInput>
   }
 
-  export type ReportCreateManyPostInputEnvelope = {
-    data: ReportCreateManyPostInput | ReportCreateManyPostInput[]
+  export type ReportDIYHomesCreateManyPostInputEnvelope = {
+    data: ReportDIYHomesCreateManyPostInput | ReportDIYHomesCreateManyPostInput[]
     skipDuplicates?: boolean
   }
 
@@ -10665,10 +10665,10 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    reviews?: ReviewUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutUserNestedInput
-    Like?: LikeUpdateManyWithoutUserNestedInput
-    Report?: ReportUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutPostsInput = {
@@ -10678,74 +10678,74 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    reviews?: ReviewUncheckedUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutUserNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutUserNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
   }
 
-  export type ReviewUpsertWithWhereUniqueWithoutPostInput = {
-    where: ReviewWhereUniqueInput
-    update: XOR<ReviewUpdateWithoutPostInput, ReviewUncheckedUpdateWithoutPostInput>
-    create: XOR<ReviewCreateWithoutPostInput, ReviewUncheckedCreateWithoutPostInput>
+  export type ReviewDIYHomesUpsertWithWhereUniqueWithoutPostInput = {
+    where: ReviewDIYHomesWhereUniqueInput
+    update: XOR<ReviewDIYHomesUpdateWithoutPostInput, ReviewDIYHomesUncheckedUpdateWithoutPostInput>
+    create: XOR<ReviewDIYHomesCreateWithoutPostInput, ReviewDIYHomesUncheckedCreateWithoutPostInput>
   }
 
-  export type ReviewUpdateWithWhereUniqueWithoutPostInput = {
-    where: ReviewWhereUniqueInput
-    data: XOR<ReviewUpdateWithoutPostInput, ReviewUncheckedUpdateWithoutPostInput>
+  export type ReviewDIYHomesUpdateWithWhereUniqueWithoutPostInput = {
+    where: ReviewDIYHomesWhereUniqueInput
+    data: XOR<ReviewDIYHomesUpdateWithoutPostInput, ReviewDIYHomesUncheckedUpdateWithoutPostInput>
   }
 
-  export type ReviewUpdateManyWithWhereWithoutPostInput = {
-    where: ReviewScalarWhereInput
-    data: XOR<ReviewUpdateManyMutationInput, ReviewUncheckedUpdateManyWithoutPostInput>
+  export type ReviewDIYHomesUpdateManyWithWhereWithoutPostInput = {
+    where: ReviewDIYHomesScalarWhereInput
+    data: XOR<ReviewDIYHomesUpdateManyMutationInput, ReviewDIYHomesUncheckedUpdateManyWithoutPostInput>
   }
 
-  export type BookmarkUpsertWithWhereUniqueWithoutPostInput = {
-    where: BookmarkWhereUniqueInput
-    update: XOR<BookmarkUpdateWithoutPostInput, BookmarkUncheckedUpdateWithoutPostInput>
-    create: XOR<BookmarkCreateWithoutPostInput, BookmarkUncheckedCreateWithoutPostInput>
+  export type BookmarkDIYHomesUpsertWithWhereUniqueWithoutPostInput = {
+    where: BookmarkDIYHomesWhereUniqueInput
+    update: XOR<BookmarkDIYHomesUpdateWithoutPostInput, BookmarkDIYHomesUncheckedUpdateWithoutPostInput>
+    create: XOR<BookmarkDIYHomesCreateWithoutPostInput, BookmarkDIYHomesUncheckedCreateWithoutPostInput>
   }
 
-  export type BookmarkUpdateWithWhereUniqueWithoutPostInput = {
-    where: BookmarkWhereUniqueInput
-    data: XOR<BookmarkUpdateWithoutPostInput, BookmarkUncheckedUpdateWithoutPostInput>
+  export type BookmarkDIYHomesUpdateWithWhereUniqueWithoutPostInput = {
+    where: BookmarkDIYHomesWhereUniqueInput
+    data: XOR<BookmarkDIYHomesUpdateWithoutPostInput, BookmarkDIYHomesUncheckedUpdateWithoutPostInput>
   }
 
-  export type BookmarkUpdateManyWithWhereWithoutPostInput = {
-    where: BookmarkScalarWhereInput
-    data: XOR<BookmarkUpdateManyMutationInput, BookmarkUncheckedUpdateManyWithoutPostInput>
+  export type BookmarkDIYHomesUpdateManyWithWhereWithoutPostInput = {
+    where: BookmarkDIYHomesScalarWhereInput
+    data: XOR<BookmarkDIYHomesUpdateManyMutationInput, BookmarkDIYHomesUncheckedUpdateManyWithoutPostInput>
   }
 
-  export type LikeUpsertWithWhereUniqueWithoutPostInput = {
-    where: LikeWhereUniqueInput
-    update: XOR<LikeUpdateWithoutPostInput, LikeUncheckedUpdateWithoutPostInput>
-    create: XOR<LikeCreateWithoutPostInput, LikeUncheckedCreateWithoutPostInput>
+  export type LikeDIYHomesUpsertWithWhereUniqueWithoutPostInput = {
+    where: LikeDIYHomesWhereUniqueInput
+    update: XOR<LikeDIYHomesUpdateWithoutPostInput, LikeDIYHomesUncheckedUpdateWithoutPostInput>
+    create: XOR<LikeDIYHomesCreateWithoutPostInput, LikeDIYHomesUncheckedCreateWithoutPostInput>
   }
 
-  export type LikeUpdateWithWhereUniqueWithoutPostInput = {
-    where: LikeWhereUniqueInput
-    data: XOR<LikeUpdateWithoutPostInput, LikeUncheckedUpdateWithoutPostInput>
+  export type LikeDIYHomesUpdateWithWhereUniqueWithoutPostInput = {
+    where: LikeDIYHomesWhereUniqueInput
+    data: XOR<LikeDIYHomesUpdateWithoutPostInput, LikeDIYHomesUncheckedUpdateWithoutPostInput>
   }
 
-  export type LikeUpdateManyWithWhereWithoutPostInput = {
-    where: LikeScalarWhereInput
-    data: XOR<LikeUpdateManyMutationInput, LikeUncheckedUpdateManyWithoutPostInput>
+  export type LikeDIYHomesUpdateManyWithWhereWithoutPostInput = {
+    where: LikeDIYHomesScalarWhereInput
+    data: XOR<LikeDIYHomesUpdateManyMutationInput, LikeDIYHomesUncheckedUpdateManyWithoutPostInput>
   }
 
-  export type ReportUpsertWithWhereUniqueWithoutPostInput = {
-    where: ReportWhereUniqueInput
-    update: XOR<ReportUpdateWithoutPostInput, ReportUncheckedUpdateWithoutPostInput>
-    create: XOR<ReportCreateWithoutPostInput, ReportUncheckedCreateWithoutPostInput>
+  export type ReportDIYHomesUpsertWithWhereUniqueWithoutPostInput = {
+    where: ReportDIYHomesWhereUniqueInput
+    update: XOR<ReportDIYHomesUpdateWithoutPostInput, ReportDIYHomesUncheckedUpdateWithoutPostInput>
+    create: XOR<ReportDIYHomesCreateWithoutPostInput, ReportDIYHomesUncheckedCreateWithoutPostInput>
   }
 
-  export type ReportUpdateWithWhereUniqueWithoutPostInput = {
-    where: ReportWhereUniqueInput
-    data: XOR<ReportUpdateWithoutPostInput, ReportUncheckedUpdateWithoutPostInput>
+  export type ReportDIYHomesUpdateWithWhereUniqueWithoutPostInput = {
+    where: ReportDIYHomesWhereUniqueInput
+    data: XOR<ReportDIYHomesUpdateWithoutPostInput, ReportDIYHomesUncheckedUpdateWithoutPostInput>
   }
 
-  export type ReportUpdateManyWithWhereWithoutPostInput = {
-    where: ReportScalarWhereInput
-    data: XOR<ReportUpdateManyMutationInput, ReportUncheckedUpdateManyWithoutPostInput>
+  export type ReportDIYHomesUpdateManyWithWhereWithoutPostInput = {
+    where: ReportDIYHomesScalarWhereInput
+    data: XOR<ReportDIYHomesUpdateManyMutationInput, ReportDIYHomesUncheckedUpdateManyWithoutPostInput>
   }
 
   export type UserCreateWithoutReviewsInput = {
@@ -10755,10 +10755,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkCreateNestedManyWithoutUserInput
-    Like?: LikeCreateNestedManyWithoutUserInput
-    Report?: ReportCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReviewsInput = {
@@ -10768,10 +10768,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostUncheckedCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutUserInput
-    Like?: LikeUncheckedCreateNestedManyWithoutUserInput
-    Report?: ReportUncheckedCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReviewsInput = {
@@ -10779,44 +10779,44 @@ export namespace Prisma {
     create: XOR<UserCreateWithoutReviewsInput, UserUncheckedCreateWithoutReviewsInput>
   }
 
-  export type PostCreateWithoutReviewsInput = {
+  export type PostDIYHomesCreateWithoutReviewsInput = {
     id?: string
     title: string
     content: string
     category: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutPostsInput
-    bookmarks?: BookmarkCreateNestedManyWithoutPostInput
-    Like?: LikeCreateNestedManyWithoutPostInput
-    Report?: ReportCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutPostInput
   }
 
-  export type PostUncheckedCreateWithoutReviewsInput = {
+  export type PostDIYHomesUncheckedCreateWithoutReviewsInput = {
     id?: string
     title: string
     content: string
     category: string
     userId: string
     createdAt?: Date | string
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutPostInput
-    Like?: LikeUncheckedCreateNestedManyWithoutPostInput
-    Report?: ReportUncheckedCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutPostInput
   }
 
-  export type PostCreateOrConnectWithoutReviewsInput = {
-    where: PostWhereUniqueInput
-    create: XOR<PostCreateWithoutReviewsInput, PostUncheckedCreateWithoutReviewsInput>
+  export type PostDIYHomesCreateOrConnectWithoutReviewsInput = {
+    where: PostDIYHomesWhereUniqueInput
+    create: XOR<PostDIYHomesCreateWithoutReviewsInput, PostDIYHomesUncheckedCreateWithoutReviewsInput>
   }
 
-  export type ReportCreateWithoutReviewInput = {
+  export type ReportDIYHomesCreateWithoutReviewInput = {
     id?: string
     reason: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutReportInput
-    post?: PostCreateNestedOneWithoutReportInput
+    post?: PostDIYHomesCreateNestedOneWithoutReportInput
   }
 
-  export type ReportUncheckedCreateWithoutReviewInput = {
+  export type ReportDIYHomesUncheckedCreateWithoutReviewInput = {
     id?: string
     postId?: string | null
     userId: string
@@ -10824,13 +10824,13 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReportCreateOrConnectWithoutReviewInput = {
-    where: ReportWhereUniqueInput
-    create: XOR<ReportCreateWithoutReviewInput, ReportUncheckedCreateWithoutReviewInput>
+  export type ReportDIYHomesCreateOrConnectWithoutReviewInput = {
+    where: ReportDIYHomesWhereUniqueInput
+    create: XOR<ReportDIYHomesCreateWithoutReviewInput, ReportDIYHomesUncheckedCreateWithoutReviewInput>
   }
 
-  export type ReportCreateManyReviewInputEnvelope = {
-    data: ReportCreateManyReviewInput | ReportCreateManyReviewInput[]
+  export type ReportDIYHomesCreateManyReviewInputEnvelope = {
+    data: ReportDIYHomesCreateManyReviewInput | ReportDIYHomesCreateManyReviewInput[]
     skipDuplicates?: boolean
   }
 
@@ -10852,10 +10852,10 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutUserNestedInput
-    Like?: LikeUpdateManyWithoutUserNestedInput
-    Report?: ReportUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReviewsInput = {
@@ -10865,61 +10865,61 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUncheckedUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutUserNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutUserNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
   }
 
-  export type PostUpsertWithoutReviewsInput = {
-    update: XOR<PostUpdateWithoutReviewsInput, PostUncheckedUpdateWithoutReviewsInput>
-    create: XOR<PostCreateWithoutReviewsInput, PostUncheckedCreateWithoutReviewsInput>
-    where?: PostWhereInput
+  export type PostDIYHomesUpsertWithoutReviewsInput = {
+    update: XOR<PostDIYHomesUpdateWithoutReviewsInput, PostDIYHomesUncheckedUpdateWithoutReviewsInput>
+    create: XOR<PostDIYHomesCreateWithoutReviewsInput, PostDIYHomesUncheckedCreateWithoutReviewsInput>
+    where?: PostDIYHomesWhereInput
   }
 
-  export type PostUpdateToOneWithWhereWithoutReviewsInput = {
-    where?: PostWhereInput
-    data: XOR<PostUpdateWithoutReviewsInput, PostUncheckedUpdateWithoutReviewsInput>
+  export type PostDIYHomesUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: PostDIYHomesWhereInput
+    data: XOR<PostDIYHomesUpdateWithoutReviewsInput, PostDIYHomesUncheckedUpdateWithoutReviewsInput>
   }
 
-  export type PostUpdateWithoutReviewsInput = {
+  export type PostDIYHomesUpdateWithoutReviewsInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutPostsNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutPostNestedInput
-    Like?: LikeUpdateManyWithoutPostNestedInput
-    Report?: ReportUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutPostNestedInput
   }
 
-  export type PostUncheckedUpdateWithoutReviewsInput = {
+  export type PostDIYHomesUncheckedUpdateWithoutReviewsInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutPostNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutPostNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutPostNestedInput
   }
 
-  export type ReportUpsertWithWhereUniqueWithoutReviewInput = {
-    where: ReportWhereUniqueInput
-    update: XOR<ReportUpdateWithoutReviewInput, ReportUncheckedUpdateWithoutReviewInput>
-    create: XOR<ReportCreateWithoutReviewInput, ReportUncheckedCreateWithoutReviewInput>
+  export type ReportDIYHomesUpsertWithWhereUniqueWithoutReviewInput = {
+    where: ReportDIYHomesWhereUniqueInput
+    update: XOR<ReportDIYHomesUpdateWithoutReviewInput, ReportDIYHomesUncheckedUpdateWithoutReviewInput>
+    create: XOR<ReportDIYHomesCreateWithoutReviewInput, ReportDIYHomesUncheckedCreateWithoutReviewInput>
   }
 
-  export type ReportUpdateWithWhereUniqueWithoutReviewInput = {
-    where: ReportWhereUniqueInput
-    data: XOR<ReportUpdateWithoutReviewInput, ReportUncheckedUpdateWithoutReviewInput>
+  export type ReportDIYHomesUpdateWithWhereUniqueWithoutReviewInput = {
+    where: ReportDIYHomesWhereUniqueInput
+    data: XOR<ReportDIYHomesUpdateWithoutReviewInput, ReportDIYHomesUncheckedUpdateWithoutReviewInput>
   }
 
-  export type ReportUpdateManyWithWhereWithoutReviewInput = {
-    where: ReportScalarWhereInput
-    data: XOR<ReportUpdateManyMutationInput, ReportUncheckedUpdateManyWithoutReviewInput>
+  export type ReportDIYHomesUpdateManyWithWhereWithoutReviewInput = {
+    where: ReportDIYHomesScalarWhereInput
+    data: XOR<ReportDIYHomesUpdateManyMutationInput, ReportDIYHomesUncheckedUpdateManyWithoutReviewInput>
   }
 
   export type UserCreateWithoutLikeInput = {
@@ -10929,10 +10929,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostCreateNestedManyWithoutUserInput
-    reviews?: ReviewCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkCreateNestedManyWithoutUserInput
-    Report?: ReportCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutLikeInput = {
@@ -10942,10 +10942,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostUncheckedCreateNestedManyWithoutUserInput
-    reviews?: ReviewUncheckedCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutUserInput
-    Report?: ReportUncheckedCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutLikeInput = {
@@ -10953,33 +10953,33 @@ export namespace Prisma {
     create: XOR<UserCreateWithoutLikeInput, UserUncheckedCreateWithoutLikeInput>
   }
 
-  export type PostCreateWithoutLikeInput = {
+  export type PostDIYHomesCreateWithoutLikeInput = {
     id?: string
     title: string
     content: string
     category: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutPostsInput
-    reviews?: ReviewCreateNestedManyWithoutPostInput
-    bookmarks?: BookmarkCreateNestedManyWithoutPostInput
-    Report?: ReportCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutPostInput
   }
 
-  export type PostUncheckedCreateWithoutLikeInput = {
+  export type PostDIYHomesUncheckedCreateWithoutLikeInput = {
     id?: string
     title: string
     content: string
     category: string
     userId: string
     createdAt?: Date | string
-    reviews?: ReviewUncheckedCreateNestedManyWithoutPostInput
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutPostInput
-    Report?: ReportUncheckedCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutPostInput
   }
 
-  export type PostCreateOrConnectWithoutLikeInput = {
-    where: PostWhereUniqueInput
-    create: XOR<PostCreateWithoutLikeInput, PostUncheckedCreateWithoutLikeInput>
+  export type PostDIYHomesCreateOrConnectWithoutLikeInput = {
+    where: PostDIYHomesWhereUniqueInput
+    create: XOR<PostDIYHomesCreateWithoutLikeInput, PostDIYHomesUncheckedCreateWithoutLikeInput>
   }
 
   export type UserUpsertWithoutLikeInput = {
@@ -11000,10 +11000,10 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUpdateManyWithoutUserNestedInput
-    reviews?: ReviewUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutUserNestedInput
-    Report?: ReportUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLikeInput = {
@@ -11013,45 +11013,45 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUncheckedUpdateManyWithoutUserNestedInput
-    reviews?: ReviewUncheckedUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutUserNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
   }
 
-  export type PostUpsertWithoutLikeInput = {
-    update: XOR<PostUpdateWithoutLikeInput, PostUncheckedUpdateWithoutLikeInput>
-    create: XOR<PostCreateWithoutLikeInput, PostUncheckedCreateWithoutLikeInput>
-    where?: PostWhereInput
+  export type PostDIYHomesUpsertWithoutLikeInput = {
+    update: XOR<PostDIYHomesUpdateWithoutLikeInput, PostDIYHomesUncheckedUpdateWithoutLikeInput>
+    create: XOR<PostDIYHomesCreateWithoutLikeInput, PostDIYHomesUncheckedCreateWithoutLikeInput>
+    where?: PostDIYHomesWhereInput
   }
 
-  export type PostUpdateToOneWithWhereWithoutLikeInput = {
-    where?: PostWhereInput
-    data: XOR<PostUpdateWithoutLikeInput, PostUncheckedUpdateWithoutLikeInput>
+  export type PostDIYHomesUpdateToOneWithWhereWithoutLikeInput = {
+    where?: PostDIYHomesWhereInput
+    data: XOR<PostDIYHomesUpdateWithoutLikeInput, PostDIYHomesUncheckedUpdateWithoutLikeInput>
   }
 
-  export type PostUpdateWithoutLikeInput = {
+  export type PostDIYHomesUpdateWithoutLikeInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutPostsNestedInput
-    reviews?: ReviewUpdateManyWithoutPostNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutPostNestedInput
-    Report?: ReportUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutPostNestedInput
   }
 
-  export type PostUncheckedUpdateWithoutLikeInput = {
+  export type PostDIYHomesUncheckedUpdateWithoutLikeInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    reviews?: ReviewUncheckedUpdateManyWithoutPostNestedInput
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutPostNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutPostNestedInput
   }
 
   export type UserCreateWithoutBookmarksInput = {
@@ -11061,10 +11061,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostCreateNestedManyWithoutUserInput
-    reviews?: ReviewCreateNestedManyWithoutUserInput
-    Like?: LikeCreateNestedManyWithoutUserInput
-    Report?: ReportCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutBookmarksInput = {
@@ -11074,10 +11074,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostUncheckedCreateNestedManyWithoutUserInput
-    reviews?: ReviewUncheckedCreateNestedManyWithoutUserInput
-    Like?: LikeUncheckedCreateNestedManyWithoutUserInput
-    Report?: ReportUncheckedCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutBookmarksInput = {
@@ -11085,33 +11085,33 @@ export namespace Prisma {
     create: XOR<UserCreateWithoutBookmarksInput, UserUncheckedCreateWithoutBookmarksInput>
   }
 
-  export type PostCreateWithoutBookmarksInput = {
+  export type PostDIYHomesCreateWithoutBookmarksInput = {
     id?: string
     title: string
     content: string
     category: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutPostsInput
-    reviews?: ReviewCreateNestedManyWithoutPostInput
-    Like?: LikeCreateNestedManyWithoutPostInput
-    Report?: ReportCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesCreateNestedManyWithoutPostInput
   }
 
-  export type PostUncheckedCreateWithoutBookmarksInput = {
+  export type PostDIYHomesUncheckedCreateWithoutBookmarksInput = {
     id?: string
     title: string
     content: string
     category: string
     userId: string
     createdAt?: Date | string
-    reviews?: ReviewUncheckedCreateNestedManyWithoutPostInput
-    Like?: LikeUncheckedCreateNestedManyWithoutPostInput
-    Report?: ReportUncheckedCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Report?: ReportDIYHomesUncheckedCreateNestedManyWithoutPostInput
   }
 
-  export type PostCreateOrConnectWithoutBookmarksInput = {
-    where: PostWhereUniqueInput
-    create: XOR<PostCreateWithoutBookmarksInput, PostUncheckedCreateWithoutBookmarksInput>
+  export type PostDIYHomesCreateOrConnectWithoutBookmarksInput = {
+    where: PostDIYHomesWhereUniqueInput
+    create: XOR<PostDIYHomesCreateWithoutBookmarksInput, PostDIYHomesUncheckedCreateWithoutBookmarksInput>
   }
 
   export type UserUpsertWithoutBookmarksInput = {
@@ -11132,10 +11132,10 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUpdateManyWithoutUserNestedInput
-    reviews?: ReviewUpdateManyWithoutUserNestedInput
-    Like?: LikeUpdateManyWithoutUserNestedInput
-    Report?: ReportUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutBookmarksInput = {
@@ -11145,45 +11145,45 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUncheckedUpdateManyWithoutUserNestedInput
-    reviews?: ReviewUncheckedUpdateManyWithoutUserNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutUserNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutUserNestedInput
   }
 
-  export type PostUpsertWithoutBookmarksInput = {
-    update: XOR<PostUpdateWithoutBookmarksInput, PostUncheckedUpdateWithoutBookmarksInput>
-    create: XOR<PostCreateWithoutBookmarksInput, PostUncheckedCreateWithoutBookmarksInput>
-    where?: PostWhereInput
+  export type PostDIYHomesUpsertWithoutBookmarksInput = {
+    update: XOR<PostDIYHomesUpdateWithoutBookmarksInput, PostDIYHomesUncheckedUpdateWithoutBookmarksInput>
+    create: XOR<PostDIYHomesCreateWithoutBookmarksInput, PostDIYHomesUncheckedCreateWithoutBookmarksInput>
+    where?: PostDIYHomesWhereInput
   }
 
-  export type PostUpdateToOneWithWhereWithoutBookmarksInput = {
-    where?: PostWhereInput
-    data: XOR<PostUpdateWithoutBookmarksInput, PostUncheckedUpdateWithoutBookmarksInput>
+  export type PostDIYHomesUpdateToOneWithWhereWithoutBookmarksInput = {
+    where?: PostDIYHomesWhereInput
+    data: XOR<PostDIYHomesUpdateWithoutBookmarksInput, PostDIYHomesUncheckedUpdateWithoutBookmarksInput>
   }
 
-  export type PostUpdateWithoutBookmarksInput = {
+  export type PostDIYHomesUpdateWithoutBookmarksInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutPostsNestedInput
-    reviews?: ReviewUpdateManyWithoutPostNestedInput
-    Like?: LikeUpdateManyWithoutPostNestedInput
-    Report?: ReportUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutPostNestedInput
   }
 
-  export type PostUncheckedUpdateWithoutBookmarksInput = {
+  export type PostDIYHomesUncheckedUpdateWithoutBookmarksInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    reviews?: ReviewUncheckedUpdateManyWithoutPostNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutPostNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutPostNestedInput
   }
 
   export type UserCreateWithoutReportInput = {
@@ -11193,10 +11193,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostCreateNestedManyWithoutUserInput
-    reviews?: ReviewCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkCreateNestedManyWithoutUserInput
-    Like?: LikeCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutReportInput = {
@@ -11206,10 +11206,10 @@ export namespace Prisma {
     password: string
     group: string
     createdAt?: Date | string
-    posts?: PostUncheckedCreateNestedManyWithoutUserInput
-    reviews?: ReviewUncheckedCreateNestedManyWithoutUserInput
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutUserInput
-    Like?: LikeUncheckedCreateNestedManyWithoutUserInput
+    posts?: PostDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutUserInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutReportInput = {
@@ -11217,45 +11217,45 @@ export namespace Prisma {
     create: XOR<UserCreateWithoutReportInput, UserUncheckedCreateWithoutReportInput>
   }
 
-  export type PostCreateWithoutReportInput = {
+  export type PostDIYHomesCreateWithoutReportInput = {
     id?: string
     title: string
     content: string
     category: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutPostsInput
-    reviews?: ReviewCreateNestedManyWithoutPostInput
-    bookmarks?: BookmarkCreateNestedManyWithoutPostInput
-    Like?: LikeCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesCreateNestedManyWithoutPostInput
   }
 
-  export type PostUncheckedCreateWithoutReportInput = {
+  export type PostDIYHomesUncheckedCreateWithoutReportInput = {
     id?: string
     title: string
     content: string
     category: string
     userId: string
     createdAt?: Date | string
-    reviews?: ReviewUncheckedCreateNestedManyWithoutPostInput
-    bookmarks?: BookmarkUncheckedCreateNestedManyWithoutPostInput
-    Like?: LikeUncheckedCreateNestedManyWithoutPostInput
+    reviews?: ReviewDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    bookmarks?: BookmarkDIYHomesUncheckedCreateNestedManyWithoutPostInput
+    Like?: LikeDIYHomesUncheckedCreateNestedManyWithoutPostInput
   }
 
-  export type PostCreateOrConnectWithoutReportInput = {
-    where: PostWhereUniqueInput
-    create: XOR<PostCreateWithoutReportInput, PostUncheckedCreateWithoutReportInput>
+  export type PostDIYHomesCreateOrConnectWithoutReportInput = {
+    where: PostDIYHomesWhereUniqueInput
+    create: XOR<PostDIYHomesCreateWithoutReportInput, PostDIYHomesUncheckedCreateWithoutReportInput>
   }
 
-  export type ReviewCreateWithoutReportInput = {
+  export type ReviewDIYHomesCreateWithoutReportInput = {
     id?: string
     rating: number
     comment: string
     createdAt?: Date | string
     user: UserCreateNestedOneWithoutReviewsInput
-    post: PostCreateNestedOneWithoutReviewsInput
+    post: PostDIYHomesCreateNestedOneWithoutReviewsInput
   }
 
-  export type ReviewUncheckedCreateWithoutReportInput = {
+  export type ReviewDIYHomesUncheckedCreateWithoutReportInput = {
     id?: string
     postId: string
     userId: string
@@ -11264,9 +11264,9 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReviewCreateOrConnectWithoutReportInput = {
-    where: ReviewWhereUniqueInput
-    create: XOR<ReviewCreateWithoutReportInput, ReviewUncheckedCreateWithoutReportInput>
+  export type ReviewDIYHomesCreateOrConnectWithoutReportInput = {
+    where: ReviewDIYHomesWhereUniqueInput
+    create: XOR<ReviewDIYHomesCreateWithoutReportInput, ReviewDIYHomesUncheckedCreateWithoutReportInput>
   }
 
   export type UserUpsertWithoutReportInput = {
@@ -11287,10 +11287,10 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUpdateManyWithoutUserNestedInput
-    reviews?: ReviewUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutUserNestedInput
-    Like?: LikeUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutReportInput = {
@@ -11300,68 +11300,68 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     group?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    posts?: PostUncheckedUpdateManyWithoutUserNestedInput
-    reviews?: ReviewUncheckedUpdateManyWithoutUserNestedInput
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutUserNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutUserNestedInput
+    posts?: PostDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutUserNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutUserNestedInput
   }
 
-  export type PostUpsertWithoutReportInput = {
-    update: XOR<PostUpdateWithoutReportInput, PostUncheckedUpdateWithoutReportInput>
-    create: XOR<PostCreateWithoutReportInput, PostUncheckedCreateWithoutReportInput>
-    where?: PostWhereInput
+  export type PostDIYHomesUpsertWithoutReportInput = {
+    update: XOR<PostDIYHomesUpdateWithoutReportInput, PostDIYHomesUncheckedUpdateWithoutReportInput>
+    create: XOR<PostDIYHomesCreateWithoutReportInput, PostDIYHomesUncheckedCreateWithoutReportInput>
+    where?: PostDIYHomesWhereInput
   }
 
-  export type PostUpdateToOneWithWhereWithoutReportInput = {
-    where?: PostWhereInput
-    data: XOR<PostUpdateWithoutReportInput, PostUncheckedUpdateWithoutReportInput>
+  export type PostDIYHomesUpdateToOneWithWhereWithoutReportInput = {
+    where?: PostDIYHomesWhereInput
+    data: XOR<PostDIYHomesUpdateWithoutReportInput, PostDIYHomesUncheckedUpdateWithoutReportInput>
   }
 
-  export type PostUpdateWithoutReportInput = {
+  export type PostDIYHomesUpdateWithoutReportInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutPostsNestedInput
-    reviews?: ReviewUpdateManyWithoutPostNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutPostNestedInput
-    Like?: LikeUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutPostNestedInput
   }
 
-  export type PostUncheckedUpdateWithoutReportInput = {
+  export type PostDIYHomesUncheckedUpdateWithoutReportInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    reviews?: ReviewUncheckedUpdateManyWithoutPostNestedInput
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutPostNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutPostNestedInput
   }
 
-  export type ReviewUpsertWithoutReportInput = {
-    update: XOR<ReviewUpdateWithoutReportInput, ReviewUncheckedUpdateWithoutReportInput>
-    create: XOR<ReviewCreateWithoutReportInput, ReviewUncheckedCreateWithoutReportInput>
-    where?: ReviewWhereInput
+  export type ReviewDIYHomesUpsertWithoutReportInput = {
+    update: XOR<ReviewDIYHomesUpdateWithoutReportInput, ReviewDIYHomesUncheckedUpdateWithoutReportInput>
+    create: XOR<ReviewDIYHomesCreateWithoutReportInput, ReviewDIYHomesUncheckedCreateWithoutReportInput>
+    where?: ReviewDIYHomesWhereInput
   }
 
-  export type ReviewUpdateToOneWithWhereWithoutReportInput = {
-    where?: ReviewWhereInput
-    data: XOR<ReviewUpdateWithoutReportInput, ReviewUncheckedUpdateWithoutReportInput>
+  export type ReviewDIYHomesUpdateToOneWithWhereWithoutReportInput = {
+    where?: ReviewDIYHomesWhereInput
+    data: XOR<ReviewDIYHomesUpdateWithoutReportInput, ReviewDIYHomesUncheckedUpdateWithoutReportInput>
   }
 
-  export type ReviewUpdateWithoutReportInput = {
+  export type ReviewDIYHomesUpdateWithoutReportInput = {
     id?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutReviewsNestedInput
-    post?: PostUpdateOneRequiredWithoutReviewsNestedInput
+    post?: PostDIYHomesUpdateOneRequiredWithoutReviewsNestedInput
   }
 
-  export type ReviewUncheckedUpdateWithoutReportInput = {
+  export type ReviewDIYHomesUncheckedUpdateWithoutReportInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
@@ -11370,7 +11370,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type PostCreateManyUserInput = {
+  export type PostDIYHomesCreateManyUserInput = {
     id?: string
     title: string
     content: string
@@ -11378,7 +11378,7 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReviewCreateManyUserInput = {
+  export type ReviewDIYHomesCreateManyUserInput = {
     id?: string
     postId: string
     rating: number
@@ -11386,19 +11386,19 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type BookmarkCreateManyUserInput = {
+  export type BookmarkDIYHomesCreateManyUserInput = {
     id?: string
     postId: string
     createdAt?: Date | string
   }
 
-  export type LikeCreateManyUserInput = {
+  export type LikeDIYHomesCreateManyUserInput = {
     id?: string
     postId: string
     createdAt?: Date | string
   }
 
-  export type ReportCreateManyUserInput = {
+  export type ReportDIYHomesCreateManyUserInput = {
     id?: string
     postId?: string | null
     reviewId?: string | null
@@ -11406,31 +11406,31 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type PostUpdateWithoutUserInput = {
+  export type PostDIYHomesUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    reviews?: ReviewUpdateManyWithoutPostNestedInput
-    bookmarks?: BookmarkUpdateManyWithoutPostNestedInput
-    Like?: LikeUpdateManyWithoutPostNestedInput
-    Report?: ReportUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutPostNestedInput
   }
 
-  export type PostUncheckedUpdateWithoutUserInput = {
+  export type PostDIYHomesUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    reviews?: ReviewUncheckedUpdateManyWithoutPostNestedInput
-    bookmarks?: BookmarkUncheckedUpdateManyWithoutPostNestedInput
-    Like?: LikeUncheckedUpdateManyWithoutPostNestedInput
-    Report?: ReportUncheckedUpdateManyWithoutPostNestedInput
+    reviews?: ReviewDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    bookmarks?: BookmarkDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Like?: LikeDIYHomesUncheckedUpdateManyWithoutPostNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutPostNestedInput
   }
 
-  export type PostUncheckedUpdateManyWithoutUserInput = {
+  export type PostDIYHomesUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
@@ -11438,77 +11438,77 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReviewUpdateWithoutUserInput = {
+  export type ReviewDIYHomesUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    post?: PostUpdateOneRequiredWithoutReviewsNestedInput
-    Report?: ReportUpdateManyWithoutReviewNestedInput
+    post?: PostDIYHomesUpdateOneRequiredWithoutReviewsNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutReviewNestedInput
   }
 
-  export type ReviewUncheckedUpdateWithoutUserInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    postId?: StringFieldUpdateOperationsInput | string
-    rating?: IntFieldUpdateOperationsInput | number
-    comment?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    Report?: ReportUncheckedUpdateManyWithoutReviewNestedInput
-  }
-
-  export type ReviewUncheckedUpdateManyWithoutUserInput = {
+  export type ReviewDIYHomesUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutReviewNestedInput
   }
 
-  export type BookmarkUpdateWithoutUserInput = {
+  export type ReviewDIYHomesUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    postId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkDIYHomesUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    post?: PostUpdateOneRequiredWithoutBookmarksNestedInput
+    post?: PostDIYHomesUpdateOneRequiredWithoutBookmarksNestedInput
   }
 
-  export type BookmarkUncheckedUpdateWithoutUserInput = {
+  export type BookmarkDIYHomesUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type BookmarkUncheckedUpdateManyWithoutUserInput = {
+  export type BookmarkDIYHomesUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type LikeUpdateWithoutUserInput = {
+  export type LikeDIYHomesUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    post?: PostUpdateOneRequiredWithoutLikeNestedInput
+    post?: PostDIYHomesUpdateOneRequiredWithoutLikeNestedInput
   }
 
-  export type LikeUncheckedUpdateWithoutUserInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    postId?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-  }
-
-  export type LikeUncheckedUpdateManyWithoutUserInput = {
+  export type LikeDIYHomesUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReportUpdateWithoutUserInput = {
+  export type LikeDIYHomesUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    postId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportDIYHomesUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     reason?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    post?: PostUpdateOneWithoutReportNestedInput
-    review?: ReviewUpdateOneWithoutReportNestedInput
+    post?: PostDIYHomesUpdateOneWithoutReportNestedInput
+    review?: ReviewDIYHomesUpdateOneWithoutReportNestedInput
   }
 
-  export type ReportUncheckedUpdateWithoutUserInput = {
+  export type ReportDIYHomesUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: NullableStringFieldUpdateOperationsInput | string | null
     reviewId?: NullableStringFieldUpdateOperationsInput | string | null
@@ -11516,7 +11516,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReportUncheckedUpdateManyWithoutUserInput = {
+  export type ReportDIYHomesUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: NullableStringFieldUpdateOperationsInput | string | null
     reviewId?: NullableStringFieldUpdateOperationsInput | string | null
@@ -11524,7 +11524,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReviewCreateManyPostInput = {
+  export type ReviewDIYHomesCreateManyPostInput = {
     id?: string
     userId: string
     rating: number
@@ -11532,19 +11532,19 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type BookmarkCreateManyPostInput = {
+  export type BookmarkDIYHomesCreateManyPostInput = {
     id?: string
     userId: string
     createdAt?: Date | string
   }
 
-  export type LikeCreateManyPostInput = {
+  export type LikeDIYHomesCreateManyPostInput = {
     id?: string
     userId: string
     createdAt?: Date | string
   }
 
-  export type ReportCreateManyPostInput = {
+  export type ReportDIYHomesCreateManyPostInput = {
     id?: string
     reviewId?: string | null
     userId: string
@@ -11552,25 +11552,25 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReviewUpdateWithoutPostInput = {
+  export type ReviewDIYHomesUpdateWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutReviewsNestedInput
-    Report?: ReportUpdateManyWithoutReviewNestedInput
+    Report?: ReportDIYHomesUpdateManyWithoutReviewNestedInput
   }
 
-  export type ReviewUncheckedUpdateWithoutPostInput = {
+  export type ReviewDIYHomesUncheckedUpdateWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    Report?: ReportUncheckedUpdateManyWithoutReviewNestedInput
+    Report?: ReportDIYHomesUncheckedUpdateManyWithoutReviewNestedInput
   }
 
-  export type ReviewUncheckedUpdateManyWithoutPostInput = {
+  export type ReviewDIYHomesUncheckedUpdateManyWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
@@ -11578,51 +11578,51 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type BookmarkUpdateWithoutPostInput = {
+  export type BookmarkDIYHomesUpdateWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutBookmarksNestedInput
   }
 
-  export type BookmarkUncheckedUpdateWithoutPostInput = {
+  export type BookmarkDIYHomesUncheckedUpdateWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type BookmarkUncheckedUpdateManyWithoutPostInput = {
+  export type BookmarkDIYHomesUncheckedUpdateManyWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type LikeUpdateWithoutPostInput = {
+  export type LikeDIYHomesUpdateWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutLikeNestedInput
   }
 
-  export type LikeUncheckedUpdateWithoutPostInput = {
+  export type LikeDIYHomesUncheckedUpdateWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type LikeUncheckedUpdateManyWithoutPostInput = {
+  export type LikeDIYHomesUncheckedUpdateManyWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReportUpdateWithoutPostInput = {
+  export type ReportDIYHomesUpdateWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     reason?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutReportNestedInput
-    review?: ReviewUpdateOneWithoutReportNestedInput
+    review?: ReviewDIYHomesUpdateOneWithoutReportNestedInput
   }
 
-  export type ReportUncheckedUpdateWithoutPostInput = {
+  export type ReportDIYHomesUncheckedUpdateWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     reviewId?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
@@ -11630,7 +11630,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReportUncheckedUpdateManyWithoutPostInput = {
+  export type ReportDIYHomesUncheckedUpdateManyWithoutPostInput = {
     id?: StringFieldUpdateOperationsInput | string
     reviewId?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
@@ -11638,7 +11638,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReportCreateManyReviewInput = {
+  export type ReportDIYHomesCreateManyReviewInput = {
     id?: string
     postId?: string | null
     userId: string
@@ -11646,15 +11646,15 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type ReportUpdateWithoutReviewInput = {
+  export type ReportDIYHomesUpdateWithoutReviewInput = {
     id?: StringFieldUpdateOperationsInput | string
     reason?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutReportNestedInput
-    post?: PostUpdateOneWithoutReportNestedInput
+    post?: PostDIYHomesUpdateOneWithoutReportNestedInput
   }
 
-  export type ReportUncheckedUpdateWithoutReviewInput = {
+  export type ReportDIYHomesUncheckedUpdateWithoutReviewInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
@@ -11662,7 +11662,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ReportUncheckedUpdateManyWithoutReviewInput = {
+  export type ReportDIYHomesUncheckedUpdateManyWithoutReviewInput = {
     id?: StringFieldUpdateOperationsInput | string
     postId?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string

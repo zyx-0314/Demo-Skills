@@ -6,21 +6,33 @@ import { POST as createUser } from "@/app/api/users/route";
 import { POST as createPost } from "@/app/api/DIYHomes/posts/route";
 import { POST as createReport } from "@/app/api/DIYHomes/reports/route";
 
+import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
+
+const prisma = new PostgresqlClient();
+
 describe("Admin API Tests", () => {
   let testAdminId: string;
   let testUserId: string;
   let testPostId: string;
   let testReportId: string;
 
+  const group = "admin";
+  const testEmailAdmin = "testadmin@example.com";
+  const testEmailUser = "testUserAdmin@example.com";
+
   beforeAll(async () => {
+    // ✅ Cleanup user before running tests
+    await prisma.user.deleteMany({ where: { email: testEmailAdmin } });
+    await prisma.user.deleteMany({ where: { email: testEmailUser } });
+
     console.log("Creating test admin user...");
     const adminReq = new NextRequest("http://localhost:3000/api/users", {
       method: "POST",
       body: JSON.stringify({
-        email: "admin@example.com",
+        email: testEmailAdmin,
         name: "Admin User",
         password: "admin123",
-        group: "admin",
+        group: group,
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
@@ -34,10 +46,10 @@ describe("Admin API Tests", () => {
     const userReq = new NextRequest("http://localhost:3000/api/users", {
       method: "POST",
       body: JSON.stringify({
-        email: "user@example.com",
+        email: testEmailUser,
         name: "Test User",
         password: "password123",
-        group: "member",
+        group: group,
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });

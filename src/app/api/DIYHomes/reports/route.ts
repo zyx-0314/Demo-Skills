@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 
     console.log(`Creating report for postId: ${postId}, reviewId: ${reviewId}`);
 
-    const report = await prisma.report.create({
+    const report = await prisma.reportDIYHomes.create({
       data: { postId, reviewId, userId, reason },
     });
 
