@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { POST as createVaccination, GET as getVaccinations } from "@/app/api/PetLover/vaccinations/route";
 import { POST as createPet } from "@/app/api/PetLover/pets/route";
-import { POST as createUser } from "@/app/api/users/route"; // ✅ Import User API
+import { POST as createUser } from "@/app/api/PetLover/users/route"; // ✅ Import User API
 
 describe("PetLover Vaccination API Tests", () => {
   let testPetId: string;
@@ -16,7 +16,6 @@ describe("PetLover Vaccination API Tests", () => {
         email: testEmail,
         name: "Test User",
         password: "password123",
-        group: "member",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });

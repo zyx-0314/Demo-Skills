@@ -1,6 +1,6 @@
 import { POST as validatePlace } from "@/app/api/UrbanExplorer/admin/places/[id]/validate/route";
 import { POST as reportPlace, GET as getReports } from "@/app/api/UrbanExplorer/reports/route";
-import { POST as createUser } from "@/app/api/users/route"; // ✅ Import User API\
+import { POST as createUser } from "@/app/api/UrbanExplorer/users/route"; // ✅ Import User API\
 import { POST as createPlace } from "@/app/api/UrbanExplorer/places/route";
 import { NextRequest } from "next/server";
 
@@ -12,7 +12,7 @@ describe("UrbanExplorer - Place & User Validation API Tests", () => {
     // ✅ Ensure test user exists
     const userRes = await createUser(new NextRequest("http://localhost:3000/api/users", {
       method: "POST",
-      body: JSON.stringify({ email: "validation@example.com", name: "Validation User", password: "test123", group: "admin" }),
+      body: JSON.stringify({ email: "validation@example.com", name: "Validation User", password: "test123" }),
       headers: new Headers({ "Content-Type": "application/json" }),
     }));
     const user = await userRes.json();

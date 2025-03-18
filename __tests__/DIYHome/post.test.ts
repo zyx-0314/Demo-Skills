@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { POST as createPost, GET as getPosts } from "@/app/api/DIYHomes/posts/route";
 import { GET as getPostById, PUT as updatePost, DELETE as deletePost } from "@/app/api/DIYHomes/posts/[id]/route";
-import { POST as createUser } from "@/app/api/users/route"; // ✅ Import User API
+import { POST as createUser } from "@/app/api/DIYHomes/users/route"; // ✅ Import User API
 
 describe("DIYHome Post API Tests", () => {
   let testPostId: string;
@@ -11,13 +11,12 @@ describe("DIYHome Post API Tests", () => {
 
   // ✅ Create a user before running the tests
   beforeAll(async () => {
-    const req = new NextRequest("http://localhost:3000/api/users", {
+    const req = new NextRequest("http://localhost:3000/api/DIYHomes/users", {
       method: "POST",
       body: JSON.stringify({
         email: testEmail,
         name: "Test User",
         password: "password123",
-        group: "member",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
@@ -49,6 +48,18 @@ describe("DIYHome Post API Tests", () => {
 
   // ✅ Fetch all posts
   it("should fetch all posts", async () => {
+    const req = new NextRequest("http://localhost:3000/api/DIYHomes/posts", {
+      method: "POST",
+      body: JSON.stringify({
+        title: "DIY Table",
+        content: "How to make a DIY table",
+        category: "woodwork",
+        userId: testUserId, // ✅ Use valid user ID
+      }),
+      headers: new Headers({ "Content-Type": "application/json" }),
+    });
+
+
     const res = await getPosts();
     expect(res.status).toBe(200);
     const posts = await res.json();

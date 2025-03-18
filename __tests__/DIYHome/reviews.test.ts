@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { POST as createReview, GET as getReviews } from "@/app/api/DIYHomes/reviews/route";
 import { PUT as updateReview, DELETE as deleteReview } from "@/app/api/DIYHomes/reviews/[id]/route";
-import { POST as createUser } from "@/app/api/users/route";
+import { POST as createUser } from "@/app/api/DIYHomes/users/route";
 import { POST as createPost } from "@/app/api/DIYHomes/posts/route";
 
 describe("DIYHome Reviews API Tests", () => {
@@ -12,13 +12,12 @@ describe("DIYHome Reviews API Tests", () => {
   // ✅ Create a test user & post before running review tests
   beforeAll(async () => {
     console.log("Creating test user...");
-    const userReq = new NextRequest("http://localhost:3000/api/users", {
+    const userReq = new NextRequest("http://localhost:3000/api/DIYHomes/users", {
       method: "POST",
       body: JSON.stringify({
         email: "reviewuser@example.com",
         name: "Review User",
         password: "password123",
-        group: "member",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });

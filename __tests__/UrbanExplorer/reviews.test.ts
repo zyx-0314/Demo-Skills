@@ -1,6 +1,6 @@
 import { POST as createReview, GET as getReviews } from "@/app/api/UrbanExplorer/reviews/route";
 import { PUT as updateReview, DELETE as deleteReview } from "@/app/api/UrbanExplorer/reviews/[id]/route";
-import { POST as createUser } from "@/app/api/users/route"; // ✅ Import User API
+import { POST as createUser } from "@/app/api/UrbanExplorer/users/route"; // ✅ Import User API
 import { POST as createPlace } from "@/app/api/UrbanExplorer/places/route";
 import { NextRequest } from "next/server";
 
@@ -13,7 +13,7 @@ describe("UrbanExplorer - Reviews API Tests", () => {
     // ✅ Create a test user and place
     const userRes = await createUser(new NextRequest("http://localhost:3000/api/users", {
       method: "POST",
-      body: JSON.stringify({ email: "reviewer@example.com", name: "Reviewer User", password: "review123", group: "member" }),
+      body: JSON.stringify({ email: "reviewer@example.com", name: "Reviewer User", password: "review123" }),
       headers: new Headers({ "Content-Type": "application/json" }),
     }));
     const user = await userRes.json();

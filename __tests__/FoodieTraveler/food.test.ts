@@ -3,7 +3,7 @@ import { POST as createFood, GET as getFoods } from "@/app/api/FoodieTraveler/fo
 import { GET as getFoodById } from "@/app/api/FoodieTraveler/foods/[id]/route";
 import { PUT as updateFood, DELETE as deleteFood } from "@/app/api/FoodieTraveler/admin/foods/[id]/route";
 import { POST as submitLocation } from "@/app/api/FoodieTraveler/foods/[id]/locations/route";
-import { POST as createUser } from "@/app/api/users/route"; // ✅ Import User API
+import { POST as createUser } from "@/app/api/FoodieTraveler/users/route"; // ✅ Import User API
 
 describe("FoodieTraveler API Tests", () => {
   let testFoodId: string;
@@ -19,7 +19,6 @@ describe("FoodieTraveler API Tests", () => {
         email: testEmail,
         name: "Test User",
         password: "password123",
-        group: "member",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });

@@ -1,5 +1,5 @@
-import { POST as createUser, GET as getUsers } from "@/app/api/users/route";
-import { GET as getUserById, PUT as updateUser } from "@/app/api/users/[id]/route";
+import { POST as createUser, GET as getUsers } from "@/app/api/PetLover/users/route";
+import { GET as getUserById, PUT as updateUser } from "@/app/api/PetLover/users/[id]/route";
 import { NextRequest } from "next/server";
 import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
 
@@ -7,17 +7,16 @@ const prisma = new PostgresqlClient();
 
 describe("User Management API Tests", () => {
   let testUserId: string;
-  const group = "admin";
   const testEmail = "testuser@example.com";
 
   // ✅ Cleanup before running tests
   beforeAll(async () => {
-    await prisma.user.deleteMany({ where: { email: testEmail } });
+    await prisma.userPetLover.deleteMany({ where: { email: testEmail } });
   });
 
   // ✅ Cleanup after tests
   afterAll(async () => {
-    await prisma.user.deleteMany({ where: { email: testEmail } });
+    await prisma.userPetLover.deleteMany({ where: { email: testEmail } });
     await prisma.$disconnect();
   });
 
@@ -29,7 +28,6 @@ describe("User Management API Tests", () => {
         email: testEmail,
         name: "Test User",
         password: "password123",
-        group: group,
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
@@ -40,7 +38,6 @@ describe("User Management API Tests", () => {
 
     expect(user).toHaveProperty("id");
     expect(user.email).toBe(testEmail);
-    expect(user.group).toBe(group);
     testUserId = user.id;
   });
 
@@ -50,7 +47,7 @@ describe("User Management API Tests", () => {
     const res = await getUsers(req); // ✅ Pass req argument
 
     expect(res.status).toBe(200);
-    const users: { id: string; email: string; name: string; group: string }[] = await res.json(); // ✅ Fix Issue 2
+    const users: { id: string; email: string; name: string }[] = await res.json(); // ✅ Fix Issue 2
 
     expect(Array.isArray(users)).toBeTruthy();
     expect(users.length).toBeGreaterThan(0);
@@ -91,7 +88,6 @@ describe("User Management API Tests", () => {
         email: testEmail,
         name: "Duplicate User",
         password: "password123",
-        group: group,
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
@@ -107,12 +103,11 @@ describe("User Management API Tests", () => {
     const usersToCreate = [];
     for (let i = 0; i < 50; i++) {
       usersToCreate.push(
-        prisma.user.create({
+        prisma.userPetLover.create({
           data: {
             email: `user${i}@example.com`,
             name: `User ${i}`,
             password: "password123",
-            group: "testgroup",
           },
         })
       );
@@ -125,7 +120,6 @@ describe("User Management API Tests", () => {
         email: "exceeding@example.com",
         name: "Exceeding User",
         password: "password123",
-        group: "testgroup",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });

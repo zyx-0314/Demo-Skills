@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { GET as getUsers, DELETE as banUser } from "@/app/api/DIYHomes/admin/users/route";
 import { GET as getPosts, DELETE as deletePost } from "@/app/api/DIYHomes/admin/posts/route";
 import { GET as getReports, DELETE as deleteReport } from "@/app/api/DIYHomes/admin/reports/route";
-import { POST as createUser } from "@/app/api/users/route";
+import { POST as createUser } from "@/app/api/DIYHomes/users/route";
 import { POST as createPost } from "@/app/api/DIYHomes/posts/route";
 import { POST as createReport } from "@/app/api/DIYHomes/reports/route";
 
@@ -16,23 +16,21 @@ describe("Admin API Tests", () => {
   let testPostId: string;
   let testReportId: string;
 
-  const group = "admin";
   const testEmailAdmin = "testadmin@example.com";
   const testEmailUser = "testUserAdmin@example.com";
 
   beforeAll(async () => {
     // ✅ Cleanup user before running tests
-    await prisma.user.deleteMany({ where: { email: testEmailAdmin } });
-    await prisma.user.deleteMany({ where: { email: testEmailUser } });
+    await prisma.userDIYHomes.deleteMany({ where: { email: testEmailAdmin } });
+    await prisma.userDIYHomes.deleteMany({ where: { email: testEmailUser } });
 
     console.log("Creating test admin user...");
-    const adminReq = new NextRequest("http://localhost:3000/api/users", {
+    const adminReq = new NextRequest("http://localhost:3000/api/DIYHomes/users", {
       method: "POST",
       body: JSON.stringify({
         email: testEmailAdmin,
         name: "Admin User",
         password: "admin123",
-        group: group,
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
@@ -49,7 +47,6 @@ describe("Admin API Tests", () => {
         email: testEmailUser,
         name: "Test User",
         password: "password123",
-        group: group,
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });

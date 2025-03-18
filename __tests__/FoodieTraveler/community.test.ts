@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { POST as likeFood, DELETE as unlikeFood } from "@/app/api/FoodieTraveler/foods/[id]/like/route";
 import { GET as getLeaderboard } from "@/app/api/FoodieTraveler/foods/leaderboard/route";
 import { POST as createFood } from "@/app/api/FoodieTraveler/foods/route";
-import { POST as createUser } from "@/app/api/users/route"; // ✅ Import User API
+import { POST as createUser } from "@/app/api/FoodieTraveler/users/route"; // ✅ Import User API
 
 describe("Foodie Community Engagement API Tests", () => {
   let testFoodId: string;
@@ -18,7 +18,6 @@ describe("Foodie Community Engagement API Tests", () => {
         email: testEmail,
         name: "Test Community User",
         password: "password123",
-        group: "member",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });

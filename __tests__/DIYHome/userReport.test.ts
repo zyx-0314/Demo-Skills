@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { POST as createUser } from "@/app/api/users/route";
+import { POST as createUser } from "@/app/api/DIYHomes/users/route";
 import { POST as createPost } from "@/app/api/DIYHomes/posts/route";
 import { POST as createReport } from "@/app/api/DIYHomes/reports/route";
 
@@ -11,13 +11,12 @@ describe("User Report API Tests", () => {
   beforeAll(async () => {
     console.log("Setting up test user and post...");
     console.log("Creating test admin user...");
-    const adminReq = new NextRequest("http://localhost:3000/api/users", {
+    const adminReq = new NextRequest("http://localhost:3000/api/DIYHomes/users", {
       method: "POST",
       body: JSON.stringify({
         email: "userReportTest@example.com",
         name: "Admin User",
         password: "admin123",
-        group: "admin",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });

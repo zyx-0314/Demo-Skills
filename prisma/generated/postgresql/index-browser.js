@@ -117,12 +117,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.UserScalarFieldEnum = {
+exports.Prisma.UserDIYHomesScalarFieldEnum = {
   id: 'id',
   email: 'email',
   name: 'name',
   password: 'password',
-  group: 'group',
   createdAt: 'createdAt'
 };
 
@@ -164,6 +163,14 @@ exports.Prisma.ReportDIYHomesScalarFieldEnum = {
   reviewId: 'reviewId',
   userId: 'userId',
   reason: 'reason',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserUrbanExplorerScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
   createdAt: 'createdAt'
 };
 
@@ -210,6 +217,14 @@ exports.Prisma.ReportUrbanExplorerScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.UserFoodieScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.FoodieFoodScalarFieldEnum = {
   id: 'id',
   name: 'name',
@@ -244,6 +259,14 @@ exports.Prisma.FoodieLikeScalarFieldEnum = {
   id: 'id',
   foodId: 'foodId',
   userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserPetLoverScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
   createdAt: 'createdAt'
 };
 
@@ -290,6 +313,14 @@ exports.Prisma.StorePetLoverScalarFieldEnum = {
   name: 'name',
   address: 'address',
   phone: 'phone',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.UserElderlyCareCompanionScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
   createdAt: 'createdAt'
 };
 
@@ -346,26 +377,30 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  User: 'User',
+  UserDIYHomes: 'UserDIYHomes',
   PostDIYHomes: 'PostDIYHomes',
   ReviewDIYHomes: 'ReviewDIYHomes',
   LikeDIYHomes: 'LikeDIYHomes',
   BookmarkDIYHomes: 'BookmarkDIYHomes',
   ReportDIYHomes: 'ReportDIYHomes',
+  UserUrbanExplorer: 'UserUrbanExplorer',
   PlaceUrbanExplorer: 'PlaceUrbanExplorer',
   ReviewUrbanExplorer: 'ReviewUrbanExplorer',
   LikeUrbanExplorer: 'LikeUrbanExplorer',
   BookmarkUrbanExplorer: 'BookmarkUrbanExplorer',
   ReportUrbanExplorer: 'ReportUrbanExplorer',
+  UserFoodie: 'UserFoodie',
   FoodieFood: 'FoodieFood',
   FoodieLocation: 'FoodieLocation',
   FoodieReview: 'FoodieReview',
   FoodieLike: 'FoodieLike',
+  UserPetLover: 'UserPetLover',
   PetPetLover: 'PetPetLover',
   AppointmentPetLover: 'AppointmentPetLover',
   VaccinationPetLover: 'VaccinationPetLover',
   ClinicPetLover: 'ClinicPetLover',
   StorePetLover: 'StorePetLover',
+  UserElderlyCareCompanion: 'UserElderlyCareCompanion',
   ElderlyCareCompanionAppointment: 'ElderlyCareCompanionAppointment',
   ElderlyCareCompanionClinic: 'ElderlyCareCompanionClinic',
   ElderlyCareCompanionStore: 'ElderlyCareCompanionStore',

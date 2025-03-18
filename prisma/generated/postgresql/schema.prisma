@@ -9,32 +9,17 @@ datasource neon {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  name      String
-  password  String
-  group     String
-  createdAt DateTime @default(now())
-
-  posts                           PostDIYHomes[]
-  reviews                         ReviewDIYHomes[]
-  bookmarks                       BookmarkDIYHomes[]
-  Like                            LikeDIYHomes[]
-  Report                          ReportDIYHomes[]
-  PlaceUrbanExplorer              PlaceUrbanExplorer[]
-  ReviewUrbanExplorer             ReviewUrbanExplorer[]
-  LikeUrbanExplorer               LikeUrbanExplorer[]
-  BookmarkUrbanExplorer           BookmarkUrbanExplorer[]
-  ReportUrbanExplorer             ReportUrbanExplorer[]
-  FoodieFood                      FoodieFood[]
-  FoodieLocation                  FoodieLocation[]
-  FoodieReview                    FoodieReview[]
-  FoodieLike                      FoodieLike[]
-  PetPetLover                     PetPetLover[]
-  AppointmentPetLover             AppointmentPetLover[]
-  ElderlyCareCompanionAppointment ElderlyCareCompanionAppointment[]
-  ElderlyCareCompanionRecord      ElderlyCareCompanionRecord[]
+model UserDIYHomes {
+  id               String             @id @default(uuid())
+  email            String             @unique
+  name             String
+  password         String
+  createdAt        DateTime           @default(now())
+  PostDIYHomes     PostDIYHomes[]
+  ReviewDIYHomes   ReviewDIYHomes[]
+  LikeDIYHomes     LikeDIYHomes[]
+  BookmarkDIYHomes BookmarkDIYHomes[]
+  ReportDIYHomes   ReportDIYHomes[]
 }
 
 model PostDIYHomes {
@@ -45,7 +30,7 @@ model PostDIYHomes {
   userId    String
   createdAt DateTime @default(now())
 
-  user      User               @relation(fields: [userId], references: [id])
+  user      UserDIYHomes       @relation(fields: [userId], references: [id], onDelete: Cascade)
   reviews   ReviewDIYHomes[]
   bookmarks BookmarkDIYHomes[]
   Like      LikeDIYHomes[]
@@ -60,8 +45,8 @@ model ReviewDIYHomes {
   comment   String
   createdAt DateTime @default(now())
 
-  user   User             @relation(fields: [userId], references: [id])
-  post   PostDIYHomes     @relation(fields: [postId], references: [id])
+  user   UserDIYHomes     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  post   PostDIYHomes     @relation(fields: [postId], references: [id], onDelete: Cascade)
   Report ReportDIYHomes[]
 }
 
@@ -71,8 +56,8 @@ model LikeDIYHomes {
   userId    String
   createdAt DateTime @default(now())
 
-  user User         @relation(fields: [userId], references: [id])
-  post PostDIYHomes @relation(fields: [postId], references: [id])
+  user UserDIYHomes @relation(fields: [userId], references: [id], onDelete: Cascade)
+  post PostDIYHomes @relation(fields: [postId], references: [id], onDelete: Cascade)
 
   @@unique([postId, userId])
 }
@@ -83,8 +68,8 @@ model BookmarkDIYHomes {
   userId    String
   createdAt DateTime @default(now())
 
-  user User         @relation(fields: [userId], references: [id])
-  post PostDIYHomes @relation(fields: [postId], references: [id])
+  user UserDIYHomes @relation(fields: [userId], references: [id], onDelete: Cascade)
+  post PostDIYHomes @relation(fields: [postId], references: [id], onDelete: Cascade)
 
   @@unique([postId, userId])
 }
@@ -97,9 +82,22 @@ model ReportDIYHomes {
   reason    String
   createdAt DateTime @default(now())
 
-  user   User            @relation(fields: [userId], references: [id])
-  post   PostDIYHomes?   @relation(fields: [postId], references: [id])
-  review ReviewDIYHomes? @relation(fields: [reviewId], references: [id])
+  user   UserDIYHomes    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  post   PostDIYHomes?   @relation(fields: [postId], references: [id], onDelete: Cascade)
+  review ReviewDIYHomes? @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+}
+
+model UserUrbanExplorer {
+  id                    String                  @id @default(uuid())
+  email                 String                  @unique
+  name                  String
+  password              String
+  createdAt             DateTime                @default(now())
+  PlaceUrbanExplorer    PlaceUrbanExplorer[]
+  ReviewUrbanExplorer   ReviewUrbanExplorer[]
+  LikeUrbanExplorer     LikeUrbanExplorer[]
+  BookmarkUrbanExplorer BookmarkUrbanExplorer[]
+  ReportUrbanExplorer   ReportUrbanExplorer[]
 }
 
 model PlaceUrbanExplorer {
@@ -112,7 +110,7 @@ model PlaceUrbanExplorer {
   createdAt   DateTime @default(now())
   validated   Boolean  @default(false)
 
-  owner     User                    @relation(fields: [ownerId], references: [id])
+  owner     UserUrbanExplorer       @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   reviews   ReviewUrbanExplorer[]
   bookmarks BookmarkUrbanExplorer[]
   likes     LikeUrbanExplorer[]
@@ -127,8 +125,8 @@ model ReviewUrbanExplorer {
   comment   String
   createdAt DateTime @default(now())
 
-  user    User                  @relation(fields: [userId], references: [id])
-  place   PlaceUrbanExplorer    @relation(fields: [placeId], references: [id])
+  user    UserUrbanExplorer     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  place   PlaceUrbanExplorer    @relation(fields: [placeId], references: [id], onDelete: Cascade)
   reports ReportUrbanExplorer[]
 }
 
@@ -138,8 +136,8 @@ model LikeUrbanExplorer {
   userId    String
   createdAt DateTime @default(now())
 
-  user  User               @relation(fields: [userId], references: [id])
-  place PlaceUrbanExplorer @relation(fields: [placeId], references: [id])
+  user  UserUrbanExplorer  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  place PlaceUrbanExplorer @relation(fields: [placeId], references: [id], onDelete: Cascade)
 
   @@unique([placeId, userId])
 }
@@ -150,8 +148,8 @@ model BookmarkUrbanExplorer {
   userId    String
   createdAt DateTime @default(now())
 
-  user  User               @relation(fields: [userId], references: [id])
-  place PlaceUrbanExplorer @relation(fields: [placeId], references: [id])
+  user  UserUrbanExplorer  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  place PlaceUrbanExplorer @relation(fields: [placeId], references: [id], onDelete: Cascade)
 
   @@unique([placeId, userId])
 }
@@ -164,9 +162,21 @@ model ReportUrbanExplorer {
   reason    String
   createdAt DateTime @default(now())
 
-  user   User                 @relation(fields: [userId], references: [id])
-  place  PlaceUrbanExplorer?  @relation(fields: [placeId], references: [id])
-  review ReviewUrbanExplorer? @relation(fields: [reviewId], references: [id])
+  user   UserUrbanExplorer    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  place  PlaceUrbanExplorer?  @relation(fields: [placeId], references: [id], onDelete: Cascade)
+  review ReviewUrbanExplorer? @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+}
+
+model UserFoodie {
+  id             String           @id @default(uuid())
+  email          String           @unique
+  name           String
+  password       String
+  createdAt      DateTime         @default(now())
+  FoodieFood     FoodieFood[]
+  FoodieLocation FoodieLocation[]
+  FoodieReview   FoodieReview[]
+  FoodieLike     FoodieLike[]
 }
 
 model FoodieFood {
@@ -179,7 +189,7 @@ model FoodieFood {
   validated   Boolean  @default(false) // ✅ Added field for admin validation
   createdAt   DateTime @default(now())
 
-  user      User             @relation(fields: [submittedBy], references: [id])
+  user      UserFoodie       @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
   locations FoodieLocation[]
   reviews   FoodieReview[]
   likes     FoodieLike[]
@@ -193,8 +203,8 @@ model FoodieLocation {
   submittedBy  String
   createdAt    DateTime @default(now())
 
-  user User       @relation(fields: [submittedBy], references: [id])
-  food FoodieFood @relation(fields: [foodId], references: [id])
+  user UserFoodie @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
+  food FoodieFood @relation(fields: [foodId], references: [id], onDelete: Cascade)
 }
 
 model FoodieReview {
@@ -206,8 +216,8 @@ model FoodieReview {
   validated Boolean  @default(false) // ✅ Added field for admin validation
   createdAt DateTime @default(now())
 
-  user User       @relation(fields: [userId], references: [id])
-  food FoodieFood @relation(fields: [foodId], references: [id])
+  user UserFoodie @relation(fields: [userId], references: [id], onDelete: Cascade)
+  food FoodieFood @relation(fields: [foodId], references: [id], onDelete: Cascade)
 }
 
 model FoodieLike {
@@ -216,10 +226,20 @@ model FoodieLike {
   userId    String
   createdAt DateTime @default(now())
 
-  user User       @relation(fields: [userId], references: [id])
-  food FoodieFood @relation(fields: [foodId], references: [id])
+  user UserFoodie @relation(fields: [userId], references: [id], onDelete: Cascade)
+  food FoodieFood @relation(fields: [foodId], references: [id], onDelete: Cascade)
 
   @@unique([foodId, userId])
+}
+
+model UserPetLover {
+  id                  String                @id @default(uuid())
+  email               String                @unique
+  name                String
+  password            String
+  createdAt           DateTime              @default(now())
+  PetPetLover         PetPetLover[]
+  AppointmentPetLover AppointmentPetLover[]
 }
 
 model PetPetLover {
@@ -232,7 +252,7 @@ model PetPetLover {
   medicalHistory String?
   createdAt      DateTime @default(now())
 
-  user         User                  @relation(fields: [userId], references: [id])
+  user         UserPetLover          @relation(fields: [userId], references: [id], onDelete: Cascade)
   vaccinations VaccinationPetLover[]
   appointments AppointmentPetLover[]
 }
@@ -246,8 +266,8 @@ model AppointmentPetLover {
   location        String
   createdAt       DateTime @default(now())
 
-  user User        @relation(fields: [userId], references: [id])
-  pet  PetPetLover @relation(fields: [petId], references: [id])
+  user UserPetLover @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pet  PetPetLover  @relation(fields: [petId], references: [id], onDelete: Cascade)
 }
 
 model VaccinationPetLover {
@@ -258,7 +278,7 @@ model VaccinationPetLover {
   nextDueDate      DateTime?
   createdAt        DateTime  @default(now())
 
-  pet PetPetLover @relation(fields: [petId], references: [id])
+  pet PetPetLover @relation(fields: [petId], references: [id], onDelete: Cascade)
 }
 
 model ClinicPetLover {
@@ -277,6 +297,16 @@ model StorePetLover {
   createdAt DateTime @default(now())
 }
 
+model UserElderlyCareCompanion {
+  id                              String                            @id @default(uuid())
+  email                           String                            @unique
+  name                            String
+  password                        String
+  createdAt                       DateTime                          @default(now())
+  ElderlyCareCompanionAppointment ElderlyCareCompanionAppointment[]
+  ElderlyCareCompanionRecord      ElderlyCareCompanionRecord[]
+}
+
 model ElderlyCareCompanionAppointment {
   id                String   @id @default(uuid())
   userId            String
@@ -287,7 +317,7 @@ model ElderlyCareCompanionAppointment {
   medicationDetails String? // Only for medications
   createdAt         DateTime @default(now())
 
-  user User @relation(fields: [userId], references: [id])
+  user UserElderlyCareCompanion @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model ElderlyCareCompanionClinic {
@@ -314,5 +344,5 @@ model ElderlyCareCompanionRecord {
   date       DateTime
   createdAt  DateTime @default(now())
 
-  user User @relation(fields: [userId], references: [id])
+  user UserElderlyCareCompanion @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

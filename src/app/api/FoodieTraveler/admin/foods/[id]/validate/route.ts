@@ -9,10 +9,10 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     console.log("Admin validating food submission:", params.id);
 
     const body = await req.json();
-    const { validated } = body;
+    const { validated, id } = body;
 
     const updatedFood = await prisma.foodieFood.update({
-      where: { id: params.id },
+      where: { id: id },
       data: { validated: validated },
     });
 

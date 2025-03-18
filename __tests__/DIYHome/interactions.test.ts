@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { POST as likePost, DELETE as unlikePost } from "@/app/api/DIYHomes/interactions/likes/route";
-import { POST as createUser } from "@/app/api/users/route";
+import { POST as createUser } from "@/app/api/DIYHomes/users/route";
 import { POST as createPost } from "@/app/api/DIYHomes/posts/route";
 
 describe("DIYHome Likes & Bookmarks API Tests", () => {
@@ -8,13 +8,12 @@ describe("DIYHome Likes & Bookmarks API Tests", () => {
   let testPostId: string;
 
   beforeAll(async () => {
-    const userReq = new NextRequest("http://localhost:3000/api/users", {
+    const userReq = new NextRequest("http://localhost:3000/api/DIYHomes/users", {
       method: "POST",
       body: JSON.stringify({
         email: "interactionuser@example.com",
         name: "Interaction User",
         password: "password123",
-        group: "member",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });

@@ -6,8 +6,8 @@ const prisma = new PostgresqlClient();
 // ✅ Get all users (Admin only)
 export async function GET() {
   try {
-    const users = await prisma.user.findMany({
-      select: { id: true, email: true, name: true, group: true, createdAt: true },
+    const users = await prisma.userDIYHomes.findMany({
+      select: { id: true, email: true, name: true, createdAt: true },
     });
 
     return NextResponse.json(users, { status: 200 });
@@ -27,7 +27,7 @@ export async function DELETE(req: NextRequest) {
 
     console.log(`Banning user: ${userId}`);
 
-    const user = await prisma.user.findUnique({ where: { id: userId } });
+    const user = await prisma.userDIYHomes.findUnique({ where: { id: userId } });
     if (!user) {
       console.error("User not found");
       return NextResponse.json({ error: "User not found" }, { status: 404 });
@@ -44,7 +44,7 @@ export async function DELETE(req: NextRequest) {
     await prisma.reportDIYHomes.deleteMany({ where: { userId } });
 
     // ✅ Step 4: Finally delete the user
-    await prisma.user.delete({ where: { id: userId } });
+    await prisma.userDIYHomes.delete({ where: { id: userId } });
 
     console.log(`User ${userId} banned successfully`);
     return NextResponse.json({ message: "User banned successfully" }, { status: 200 });

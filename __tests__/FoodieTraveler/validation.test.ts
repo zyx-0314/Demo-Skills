@@ -3,7 +3,7 @@ import { POST as validateFood } from "@/app/api/FoodieTraveler/admin/foods/[id]/
 import { POST as validateReview } from "@/app/api/FoodieTraveler/admin/reviews/[id]/validate/route";
 import { POST as createFood } from "@/app/api/FoodieTraveler/foods/route";
 import { POST as createReview } from "@/app/api/FoodieTraveler/reviews/route";
-import { POST as createUser } from "@/app/api/users/route"; // ✅ Import User API
+import { POST as createUser } from "@/app/api/FoodieTraveler/users/route"; // ✅ Import User API
 
 describe("Admin Validation API Tests", () => {
   let testFoodId: string;
@@ -20,7 +20,6 @@ describe("Admin Validation API Tests", () => {
         email: testEmail,
         name: "Admin User",
         password: "adminpassword",
-        group: "admin",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
@@ -71,7 +70,7 @@ describe("Admin Validation API Tests", () => {
   it("should validate a food submission", async () => {
     const req = new NextRequest(`http://localhost:3000/api/FoodieTraveler/admin/foods/${testFoodId}/validate`, {
       method: "POST",
-      body: JSON.stringify({ validated: true }),
+      body: JSON.stringify({ validated: true, id: testFoodId }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
 

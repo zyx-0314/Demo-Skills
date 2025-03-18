@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql";
-import bcrypt from "bcryptjs";
 
 const prisma = new PostgresqlClient();
 
@@ -8,7 +7,7 @@ const prisma = new PostgresqlClient();
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   console.log("Start")
   try {
-    const user = await prisma.user.findUnique({ where: { id: params.id } });
+    const user = await prisma.userDIYHomes.findUnique({ where: { id: params.id } });
     if (!user) {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
@@ -27,7 +26,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
     const { name, password } = await req.json();
 
 
-    const updatedUser = await prisma.user.update({
+    const updatedUser = await prisma.userDIYHomes.update({
       where: { id: params.id },
       data: { name, password },
     });
@@ -41,10 +40,9 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
   }
 }
 
-// ✅ Delete User (DELETE)
 export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    await prisma.user.delete({ where: { id: params.id } });
+    await prisma.userDIYHomes.delete({ where: { id: params.id } });
 
     return NextResponse.json({ message: "User deleted successfully" }, { status: 200 });
   } catch (error) {

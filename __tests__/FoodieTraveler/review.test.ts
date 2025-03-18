@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { POST as createReview, GET as getReviews } from "@/app/api/FoodieTraveler/reviews/route";
 import { PUT as updateReview, DELETE as deleteReview } from "@/app/api/FoodieTraveler/reviews/[id]/route";
 import { POST as createFood } from "@/app/api/FoodieTraveler/foods/route";
-import { POST as createUser } from "@/app/api/users/route"; // ✅ Import User API
+import { POST as createUser } from "@/app/api/FoodieTraveler/users/route"; // ✅ Import User API
 
 describe("Reviews API Tests", () => {
   let testFoodId: string;
@@ -19,7 +19,6 @@ describe("Reviews API Tests", () => {
         email: testEmail,
         name: "Test Reviewer",
         password: "password123",
-        group: "member",
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
