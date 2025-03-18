@@ -10,7 +10,9 @@
     "tauri": "tauri",
     "next-start": "cross-env BROWSER=none next dev",
     "next-build": "next build",
-    "test": "jest --passWithNoTests"
+    "test:noTest": "jest --passWithNoTests",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@apollo/server": "^4.11.3",
