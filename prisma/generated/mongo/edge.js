@@ -124,7 +124,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "D:\\Codes\\Demo-Skills\\prisma\\generated\\mongo",
+      "value": "C:\\Users\\ramir\\OneDrive\\Code\\NextJS\\Demo-Skills\\prisma\\generated\\mongo",
       "fromEnvVar": null
     },
     "config": {
@@ -142,11 +142,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "D:\\Codes\\Demo-Skills\\prisma\\mongodb\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\ramir\\OneDrive\\Code\\NextJS\\Demo-Skills\\prisma\\mongodb\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../../mongodb",
