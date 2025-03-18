@@ -167,6 +167,49 @@ exports.Prisma.ReportDIYHomesScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.PlaceUrbanExplorerScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  category: 'category',
+  location: 'location',
+  description: 'description',
+  ownerId: 'ownerId',
+  createdAt: 'createdAt',
+  validated: 'validated'
+};
+
+exports.Prisma.ReviewUrbanExplorerScalarFieldEnum = {
+  id: 'id',
+  placeId: 'placeId',
+  userId: 'userId',
+  rating: 'rating',
+  comment: 'comment',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.LikeUrbanExplorerScalarFieldEnum = {
+  id: 'id',
+  placeId: 'placeId',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.BookmarkUrbanExplorerScalarFieldEnum = {
+  id: 'id',
+  placeId: 'placeId',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ReportUrbanExplorerScalarFieldEnum = {
+  id: 'id',
+  placeId: 'placeId',
+  reviewId: 'reviewId',
+  userId: 'userId',
+  reason: 'reason',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -189,7 +232,12 @@ exports.Prisma.ModelName = {
   ReviewDIYHomes: 'ReviewDIYHomes',
   LikeDIYHomes: 'LikeDIYHomes',
   BookmarkDIYHomes: 'BookmarkDIYHomes',
-  ReportDIYHomes: 'ReportDIYHomes'
+  ReportDIYHomes: 'ReportDIYHomes',
+  PlaceUrbanExplorer: 'PlaceUrbanExplorer',
+  ReviewUrbanExplorer: 'ReviewUrbanExplorer',
+  LikeUrbanExplorer: 'LikeUrbanExplorer',
+  BookmarkUrbanExplorer: 'BookmarkUrbanExplorer',
+  ReportUrbanExplorer: 'ReportUrbanExplorer'
 };
 
 /**
