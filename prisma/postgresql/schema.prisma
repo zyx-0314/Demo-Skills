@@ -298,13 +298,14 @@ model StorePetLover {
 }
 
 model UserElderlyCareCompanion {
-  id                              String                            @id @default(uuid())
-  email                           String                            @unique
-  name                            String
-  password                        String
-  createdAt                       DateTime                          @default(now())
-  ElderlyCareCompanionAppointment ElderlyCareCompanionAppointment[]
-  ElderlyCareCompanionRecord      ElderlyCareCompanionRecord[]
+  id                                     String                                   @id @default(uuid())
+  email                                  String                                   @unique
+  name                                   String
+  password                               String
+  createdAt                              DateTime                                 @default(now())
+  ElderlyCareCompanionAppointment        ElderlyCareCompanionAppointment[]
+  ElderlyCareCompanionRecord             ElderlyCareCompanionRecord[]
+  ElderlyCareCompanionMedicationTracking ElderlyCareCompanionMedicationTracking[]
 }
 
 model ElderlyCareCompanionAppointment {
@@ -317,7 +318,8 @@ model ElderlyCareCompanionAppointment {
   medicationDetails String? // Only for medications
   createdAt         DateTime @default(now())
 
-  user UserElderlyCareCompanion @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user           UserElderlyCareCompanion                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  medicationLogs ElderlyCareCompanionMedicationTracking[] // New relation
 }
 
 model ElderlyCareCompanionClinic {
@@ -345,6 +347,17 @@ model ElderlyCareCompanionRecord {
   createdAt  DateTime @default(now())
 
   user UserElderlyCareCompanion @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model ElderlyCareCompanionMedicationTracking {
+  id           String   @id @default(uuid())
+  userId       String
+  medicationId String
+  status       String // "taken" or "missed"
+  dateTime     DateTime @default(now())
+
+  user       UserElderlyCareCompanion        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  medication ElderlyCareCompanionAppointment @relation(fields: [medicationId], references: [id], onDelete: Cascade)
 }
 
 model EventOrganizerUser {

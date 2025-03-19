@@ -360,6 +360,14 @@ exports.Prisma.ElderlyCareCompanionRecordScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.ElderlyCareCompanionMedicationTrackingScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  medicationId: 'medicationId',
+  status: 'status',
+  dateTime: 'dateTime'
+};
+
 exports.Prisma.EventOrganizerUserScalarFieldEnum = {
   id: 'id',
   email: 'email',
@@ -453,6 +461,7 @@ exports.Prisma.ModelName = {
   ElderlyCareCompanionClinic: 'ElderlyCareCompanionClinic',
   ElderlyCareCompanionStore: 'ElderlyCareCompanionStore',
   ElderlyCareCompanionRecord: 'ElderlyCareCompanionRecord',
+  ElderlyCareCompanionMedicationTracking: 'ElderlyCareCompanionMedicationTracking',
   EventOrganizerUser: 'EventOrganizerUser',
   EventOrganizerTask: 'EventOrganizerTask',
   EventOrganizerGuest: 'EventOrganizerGuest',

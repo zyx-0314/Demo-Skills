@@ -1,19 +1,17 @@
-version: '3.7'
-
+version: '3.8'
 services:
-  postgresql:
-    image: postgres:latest
+  neon-db:
+    image: postgres:15
+    container_name: neon-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: neon
+      POSTGRES_PASSWORD: neonpassword
+      POSTGRES_DB: neondb
     ports:
       - "5432:5432"
     volumes:
-      - postgresql_data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: your_username
-      POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: your_database_name
-      POSTGRES_INITDB_DATABASE: your_database_name
-      POSTGRES_INITDB_USER: your_username
-      POSTGRES_INITDB_PASSWORD: your_password
+      - neon_data:/var/lib/postgresql/data
 
 volumes:
-  postgresql_data:
+  neon_data:
