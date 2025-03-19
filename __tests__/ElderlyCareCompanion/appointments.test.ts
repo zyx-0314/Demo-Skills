@@ -32,6 +32,9 @@ describe("Elderly Care Companion - Appointments API Tests", () => {
     expect(res.status).toBe(201);
     const user = await res.json();
     testUserId = user.id;
+
+    // delete all existing appointments for the user
+    await prisma.elderlyCareCompanionAppointment.deleteMany({ where: { userId: testUserId } });
   });
 
   // =========================
