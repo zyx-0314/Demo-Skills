@@ -9,21 +9,63 @@ datasource mongodb {
   url      = env("MONGODB_URL")
 }
 
-model Discussion {
-  id        String   @id @default(auto()) @map("_id") @mongodb.ObjectId
-  postId    String
-  userId    String
-  message   String
+model EventOrganizerUser {
+  id        String   @id @default(auto()) @map("_id") @mongodb.ObjectId // MongoDB uses auto-generated ObjectId
+  email     String   @unique
+  name      String
+  password  String
   createdAt DateTime @default(now())
 
-  replies Reply[]
+  tasks            EventOrganizerTask[]
+  guests           EventOrganizerGuest[]
+  venues           EventOrganizerVenue[]
+  serviceProviders EventOrganizerServiceProvider[]
 }
 
-model Reply {
-  id           String     @id @default(auto()) @map("_id") @mongodb.ObjectId
-  discussionId String     @mongodb.ObjectId
-  userId       String
-  message      String
-  createdAt    DateTime   @default(now())
-  Discussion   Discussion @relation(fields: [discussionId], references: [id])
+model EventOrganizerTask {
+  id          String   @id @default(auto()) @map("_id") @mongodb.ObjectId
+  title       String
+  description String
+  dueDate     DateTime
+  status      String
+  userId      String   @mongodb.ObjectId
+  createdAt   DateTime @default(now())
+
+  user EventOrganizerUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model EventOrganizerGuest {
+  id        String   @id @default(auto()) @map("_id") @mongodb.ObjectId
+  eventId   String
+  name      String
+  email     String
+  phone     String
+  status    String
+  userId    String   @mongodb.ObjectId
+  createdAt DateTime @default(now())
+
+  user EventOrganizerUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model EventOrganizerVenue {
+  id          String   @id @default(auto()) @map("_id") @mongodb.ObjectId
+  name        String
+  location    String
+  capacity    Int
+  amenities   String
+  submittedBy String   @mongodb.ObjectId
+  createdAt   DateTime @default(now())
+
+  user EventOrganizerUser @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
+}
+
+model EventOrganizerServiceProvider {
+  id          String   @id @default(auto()) @map("_id") @mongodb.ObjectId
+  name        String
+  serviceType String
+  contactInfo String
+  submittedBy String   @mongodb.ObjectId
+  createdAt   DateTime @default(now())
+
+  user EventOrganizerUser @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
 }
