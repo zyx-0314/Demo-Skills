@@ -154,6 +154,11 @@ export type ElderlyCareCompanionStore = $Result.DefaultSelection<Prisma.$Elderly
  */
 export type ElderlyCareCompanionRecord = $Result.DefaultSelection<Prisma.$ElderlyCareCompanionRecordPayload>
 /**
+ * Model ElderlyCareCompanionMedicationTracking
+ * 
+ */
+export type ElderlyCareCompanionMedicationTracking = $Result.DefaultSelection<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>
+/**
  * Model EventOrganizerUser
  * 
  */
@@ -583,6 +588,16 @@ export class PrismaClient<
     * ```
     */
   get elderlyCareCompanionRecord(): Prisma.ElderlyCareCompanionRecordDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.elderlyCareCompanionMedicationTracking`: Exposes CRUD operations for the **ElderlyCareCompanionMedicationTracking** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ElderlyCareCompanionMedicationTrackings
+    * const elderlyCareCompanionMedicationTrackings = await prisma.elderlyCareCompanionMedicationTracking.findMany()
+    * ```
+    */
+  get elderlyCareCompanionMedicationTracking(): Prisma.ElderlyCareCompanionMedicationTrackingDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.eventOrganizerUser`: Exposes CRUD operations for the **EventOrganizerUser** model.
@@ -1101,6 +1116,7 @@ export namespace Prisma {
     ElderlyCareCompanionClinic: 'ElderlyCareCompanionClinic',
     ElderlyCareCompanionStore: 'ElderlyCareCompanionStore',
     ElderlyCareCompanionRecord: 'ElderlyCareCompanionRecord',
+    ElderlyCareCompanionMedicationTracking: 'ElderlyCareCompanionMedicationTracking',
     EventOrganizerUser: 'EventOrganizerUser',
     EventOrganizerTask: 'EventOrganizerTask',
     EventOrganizerGuest: 'EventOrganizerGuest',
@@ -1124,7 +1140,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "userDIYHomes" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "userUrbanExplorer" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "userFoodie" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike" | "userPetLover" | "petPetLover" | "appointmentPetLover" | "vaccinationPetLover" | "clinicPetLover" | "storePetLover" | "userElderlyCareCompanion" | "elderlyCareCompanionAppointment" | "elderlyCareCompanionClinic" | "elderlyCareCompanionStore" | "elderlyCareCompanionRecord" | "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider"
+      modelProps: "userDIYHomes" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "userUrbanExplorer" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "userFoodie" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike" | "userPetLover" | "petPetLover" | "appointmentPetLover" | "vaccinationPetLover" | "clinicPetLover" | "storePetLover" | "userElderlyCareCompanion" | "elderlyCareCompanionAppointment" | "elderlyCareCompanionClinic" | "elderlyCareCompanionStore" | "elderlyCareCompanionRecord" | "elderlyCareCompanionMedicationTracking" | "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -3200,6 +3216,80 @@ export namespace Prisma {
           }
         }
       }
+      ElderlyCareCompanionMedicationTracking: {
+        payload: Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>
+        fields: Prisma.ElderlyCareCompanionMedicationTrackingFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>
+          }
+          findFirst: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>
+          }
+          findMany: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>[]
+          }
+          create: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>
+          }
+          createMany: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>[]
+          }
+          delete: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>
+          }
+          update: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>
+          }
+          deleteMany: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>[]
+          }
+          upsert: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>
+          }
+          aggregate: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateElderlyCareCompanionMedicationTracking>
+          }
+          groupBy: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ElderlyCareCompanionMedicationTrackingGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ElderlyCareCompanionMedicationTrackingCountArgs<ExtArgs>
+            result: $Utils.Optional<ElderlyCareCompanionMedicationTrackingCountAggregateOutputType> | number
+          }
+        }
+      }
       EventOrganizerUser: {
         payload: Prisma.$EventOrganizerUserPayload<ExtArgs>
         fields: Prisma.EventOrganizerUserFieldRefs
@@ -3682,6 +3772,7 @@ export namespace Prisma {
     elderlyCareCompanionClinic?: ElderlyCareCompanionClinicOmit
     elderlyCareCompanionStore?: ElderlyCareCompanionStoreOmit
     elderlyCareCompanionRecord?: ElderlyCareCompanionRecordOmit
+    elderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingOmit
     eventOrganizerUser?: EventOrganizerUserOmit
     eventOrganizerTask?: EventOrganizerTaskOmit
     eventOrganizerGuest?: EventOrganizerGuestOmit
@@ -4282,11 +4373,13 @@ export namespace Prisma {
   export type UserElderlyCareCompanionCountOutputType = {
     ElderlyCareCompanionAppointment: number
     ElderlyCareCompanionRecord: number
+    ElderlyCareCompanionMedicationTracking: number
   }
 
   export type UserElderlyCareCompanionCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     ElderlyCareCompanionAppointment?: boolean | UserElderlyCareCompanionCountOutputTypeCountElderlyCareCompanionAppointmentArgs
     ElderlyCareCompanionRecord?: boolean | UserElderlyCareCompanionCountOutputTypeCountElderlyCareCompanionRecordArgs
+    ElderlyCareCompanionMedicationTracking?: boolean | UserElderlyCareCompanionCountOutputTypeCountElderlyCareCompanionMedicationTrackingArgs
   }
 
   // Custom InputTypes
@@ -4312,6 +4405,44 @@ export namespace Prisma {
    */
   export type UserElderlyCareCompanionCountOutputTypeCountElderlyCareCompanionRecordArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ElderlyCareCompanionRecordWhereInput
+  }
+
+  /**
+   * UserElderlyCareCompanionCountOutputType without action
+   */
+  export type UserElderlyCareCompanionCountOutputTypeCountElderlyCareCompanionMedicationTrackingArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+  }
+
+
+  /**
+   * Count Type ElderlyCareCompanionAppointmentCountOutputType
+   */
+
+  export type ElderlyCareCompanionAppointmentCountOutputType = {
+    medicationLogs: number
+  }
+
+  export type ElderlyCareCompanionAppointmentCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    medicationLogs?: boolean | ElderlyCareCompanionAppointmentCountOutputTypeCountMedicationLogsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * ElderlyCareCompanionAppointmentCountOutputType without action
+   */
+  export type ElderlyCareCompanionAppointmentCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionAppointmentCountOutputType
+     */
+    select?: ElderlyCareCompanionAppointmentCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * ElderlyCareCompanionAppointmentCountOutputType without action
+   */
+  export type ElderlyCareCompanionAppointmentCountOutputTypeCountMedicationLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
   }
 
 
@@ -30086,6 +30217,7 @@ export namespace Prisma {
     createdAt?: boolean
     ElderlyCareCompanionAppointment?: boolean | UserElderlyCareCompanion$ElderlyCareCompanionAppointmentArgs<ExtArgs>
     ElderlyCareCompanionRecord?: boolean | UserElderlyCareCompanion$ElderlyCareCompanionRecordArgs<ExtArgs>
+    ElderlyCareCompanionMedicationTracking?: boolean | UserElderlyCareCompanion$ElderlyCareCompanionMedicationTrackingArgs<ExtArgs>
     _count?: boolean | UserElderlyCareCompanionCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["userElderlyCareCompanion"]>
 
@@ -30117,6 +30249,7 @@ export namespace Prisma {
   export type UserElderlyCareCompanionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     ElderlyCareCompanionAppointment?: boolean | UserElderlyCareCompanion$ElderlyCareCompanionAppointmentArgs<ExtArgs>
     ElderlyCareCompanionRecord?: boolean | UserElderlyCareCompanion$ElderlyCareCompanionRecordArgs<ExtArgs>
+    ElderlyCareCompanionMedicationTracking?: boolean | UserElderlyCareCompanion$ElderlyCareCompanionMedicationTrackingArgs<ExtArgs>
     _count?: boolean | UserElderlyCareCompanionCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserElderlyCareCompanionIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -30127,6 +30260,7 @@ export namespace Prisma {
     objects: {
       ElderlyCareCompanionAppointment: Prisma.$ElderlyCareCompanionAppointmentPayload<ExtArgs>[]
       ElderlyCareCompanionRecord: Prisma.$ElderlyCareCompanionRecordPayload<ExtArgs>[]
+      ElderlyCareCompanionMedicationTracking: Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -30530,6 +30664,7 @@ export namespace Prisma {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     ElderlyCareCompanionAppointment<T extends UserElderlyCareCompanion$ElderlyCareCompanionAppointmentArgs<ExtArgs> = {}>(args?: Subset<T, UserElderlyCareCompanion$ElderlyCareCompanionAppointmentArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ElderlyCareCompanionAppointmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     ElderlyCareCompanionRecord<T extends UserElderlyCareCompanion$ElderlyCareCompanionRecordArgs<ExtArgs> = {}>(args?: Subset<T, UserElderlyCareCompanion$ElderlyCareCompanionRecordArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ElderlyCareCompanionRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    ElderlyCareCompanionMedicationTracking<T extends UserElderlyCareCompanion$ElderlyCareCompanionMedicationTrackingArgs<ExtArgs> = {}>(args?: Subset<T, UserElderlyCareCompanion$ElderlyCareCompanionMedicationTrackingArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -31000,6 +31135,30 @@ export namespace Prisma {
   }
 
   /**
+   * UserElderlyCareCompanion.ElderlyCareCompanionMedicationTracking
+   */
+  export type UserElderlyCareCompanion$ElderlyCareCompanionMedicationTrackingArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    orderBy?: ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput | ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput[]
+    cursor?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ElderlyCareCompanionMedicationTrackingScalarFieldEnum | ElderlyCareCompanionMedicationTrackingScalarFieldEnum[]
+  }
+
+  /**
    * UserElderlyCareCompanion without action
    */
   export type UserElderlyCareCompanionDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -31207,6 +31366,8 @@ export namespace Prisma {
     medicationDetails?: boolean
     createdAt?: boolean
     user?: boolean | UserElderlyCareCompanionDefaultArgs<ExtArgs>
+    medicationLogs?: boolean | ElderlyCareCompanionAppointment$medicationLogsArgs<ExtArgs>
+    _count?: boolean | ElderlyCareCompanionAppointmentCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["elderlyCareCompanionAppointment"]>
 
   export type ElderlyCareCompanionAppointmentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -31247,6 +31408,8 @@ export namespace Prisma {
   export type ElderlyCareCompanionAppointmentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "type" | "title" | "dateTime" | "location" | "medicationDetails" | "createdAt", ExtArgs["result"]["elderlyCareCompanionAppointment"]>
   export type ElderlyCareCompanionAppointmentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserElderlyCareCompanionDefaultArgs<ExtArgs>
+    medicationLogs?: boolean | ElderlyCareCompanionAppointment$medicationLogsArgs<ExtArgs>
+    _count?: boolean | ElderlyCareCompanionAppointmentCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type ElderlyCareCompanionAppointmentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserElderlyCareCompanionDefaultArgs<ExtArgs>
@@ -31259,6 +31422,7 @@ export namespace Prisma {
     name: "ElderlyCareCompanionAppointment"
     objects: {
       user: Prisma.$UserElderlyCareCompanionPayload<ExtArgs>
+      medicationLogs: Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -31664,6 +31828,7 @@ export namespace Prisma {
   export interface Prisma__ElderlyCareCompanionAppointmentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     user<T extends UserElderlyCareCompanionDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserElderlyCareCompanionDefaultArgs<ExtArgs>>): Prisma__UserElderlyCareCompanionClient<$Result.GetResult<Prisma.$UserElderlyCareCompanionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    medicationLogs<T extends ElderlyCareCompanionAppointment$medicationLogsArgs<ExtArgs> = {}>(args?: Subset<T, ElderlyCareCompanionAppointment$medicationLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -32094,6 +32259,30 @@ export namespace Prisma {
      * Limit how many ElderlyCareCompanionAppointments to delete.
      */
     limit?: number
+  }
+
+  /**
+   * ElderlyCareCompanionAppointment.medicationLogs
+   */
+  export type ElderlyCareCompanionAppointment$medicationLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    orderBy?: ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput | ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput[]
+    cursor?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ElderlyCareCompanionMedicationTrackingScalarFieldEnum | ElderlyCareCompanionMedicationTrackingScalarFieldEnum[]
   }
 
   /**
@@ -35173,6 +35362,1072 @@ export namespace Prisma {
      * Choose, which related nodes to fetch as well
      */
     include?: ElderlyCareCompanionRecordInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ElderlyCareCompanionMedicationTracking
+   */
+
+  export type AggregateElderlyCareCompanionMedicationTracking = {
+    _count: ElderlyCareCompanionMedicationTrackingCountAggregateOutputType | null
+    _min: ElderlyCareCompanionMedicationTrackingMinAggregateOutputType | null
+    _max: ElderlyCareCompanionMedicationTrackingMaxAggregateOutputType | null
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    medicationId: string | null
+    status: string | null
+    dateTime: Date | null
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    medicationId: string | null
+    status: string | null
+    dateTime: Date | null
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCountAggregateOutputType = {
+    id: number
+    userId: number
+    medicationId: number
+    status: number
+    dateTime: number
+    _all: number
+  }
+
+
+  export type ElderlyCareCompanionMedicationTrackingMinAggregateInputType = {
+    id?: true
+    userId?: true
+    medicationId?: true
+    status?: true
+    dateTime?: true
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    medicationId?: true
+    status?: true
+    dateTime?: true
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCountAggregateInputType = {
+    id?: true
+    userId?: true
+    medicationId?: true
+    status?: true
+    dateTime?: true
+    _all?: true
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ElderlyCareCompanionMedicationTracking to aggregate.
+     */
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ElderlyCareCompanionMedicationTrackings to fetch.
+     */
+    orderBy?: ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput | ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ElderlyCareCompanionMedicationTrackings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ElderlyCareCompanionMedicationTrackings.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ElderlyCareCompanionMedicationTrackings
+    **/
+    _count?: true | ElderlyCareCompanionMedicationTrackingCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ElderlyCareCompanionMedicationTrackingMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ElderlyCareCompanionMedicationTrackingMaxAggregateInputType
+  }
+
+  export type GetElderlyCareCompanionMedicationTrackingAggregateType<T extends ElderlyCareCompanionMedicationTrackingAggregateArgs> = {
+        [P in keyof T & keyof AggregateElderlyCareCompanionMedicationTracking]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateElderlyCareCompanionMedicationTracking[P]>
+      : GetScalarType<T[P], AggregateElderlyCareCompanionMedicationTracking[P]>
+  }
+
+
+
+
+  export type ElderlyCareCompanionMedicationTrackingGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    orderBy?: ElderlyCareCompanionMedicationTrackingOrderByWithAggregationInput | ElderlyCareCompanionMedicationTrackingOrderByWithAggregationInput[]
+    by: ElderlyCareCompanionMedicationTrackingScalarFieldEnum[] | ElderlyCareCompanionMedicationTrackingScalarFieldEnum
+    having?: ElderlyCareCompanionMedicationTrackingScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ElderlyCareCompanionMedicationTrackingCountAggregateInputType | true
+    _min?: ElderlyCareCompanionMedicationTrackingMinAggregateInputType
+    _max?: ElderlyCareCompanionMedicationTrackingMaxAggregateInputType
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingGroupByOutputType = {
+    id: string
+    userId: string
+    medicationId: string
+    status: string
+    dateTime: Date
+    _count: ElderlyCareCompanionMedicationTrackingCountAggregateOutputType | null
+    _min: ElderlyCareCompanionMedicationTrackingMinAggregateOutputType | null
+    _max: ElderlyCareCompanionMedicationTrackingMaxAggregateOutputType | null
+  }
+
+  type GetElderlyCareCompanionMedicationTrackingGroupByPayload<T extends ElderlyCareCompanionMedicationTrackingGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ElderlyCareCompanionMedicationTrackingGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ElderlyCareCompanionMedicationTrackingGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ElderlyCareCompanionMedicationTrackingGroupByOutputType[P]>
+            : GetScalarType<T[P], ElderlyCareCompanionMedicationTrackingGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ElderlyCareCompanionMedicationTrackingSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    medicationId?: boolean
+    status?: boolean
+    dateTime?: boolean
+    user?: boolean | UserElderlyCareCompanionDefaultArgs<ExtArgs>
+    medication?: boolean | ElderlyCareCompanionAppointmentDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["elderlyCareCompanionMedicationTracking"]>
+
+  export type ElderlyCareCompanionMedicationTrackingSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    medicationId?: boolean
+    status?: boolean
+    dateTime?: boolean
+    user?: boolean | UserElderlyCareCompanionDefaultArgs<ExtArgs>
+    medication?: boolean | ElderlyCareCompanionAppointmentDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["elderlyCareCompanionMedicationTracking"]>
+
+  export type ElderlyCareCompanionMedicationTrackingSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    medicationId?: boolean
+    status?: boolean
+    dateTime?: boolean
+    user?: boolean | UserElderlyCareCompanionDefaultArgs<ExtArgs>
+    medication?: boolean | ElderlyCareCompanionAppointmentDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["elderlyCareCompanionMedicationTracking"]>
+
+  export type ElderlyCareCompanionMedicationTrackingSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    medicationId?: boolean
+    status?: boolean
+    dateTime?: boolean
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "medicationId" | "status" | "dateTime", ExtArgs["result"]["elderlyCareCompanionMedicationTracking"]>
+  export type ElderlyCareCompanionMedicationTrackingInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserElderlyCareCompanionDefaultArgs<ExtArgs>
+    medication?: boolean | ElderlyCareCompanionAppointmentDefaultArgs<ExtArgs>
+  }
+  export type ElderlyCareCompanionMedicationTrackingIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserElderlyCareCompanionDefaultArgs<ExtArgs>
+    medication?: boolean | ElderlyCareCompanionAppointmentDefaultArgs<ExtArgs>
+  }
+  export type ElderlyCareCompanionMedicationTrackingIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserElderlyCareCompanionDefaultArgs<ExtArgs>
+    medication?: boolean | ElderlyCareCompanionAppointmentDefaultArgs<ExtArgs>
+  }
+
+  export type $ElderlyCareCompanionMedicationTrackingPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ElderlyCareCompanionMedicationTracking"
+    objects: {
+      user: Prisma.$UserElderlyCareCompanionPayload<ExtArgs>
+      medication: Prisma.$ElderlyCareCompanionAppointmentPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      medicationId: string
+      status: string
+      dateTime: Date
+    }, ExtArgs["result"]["elderlyCareCompanionMedicationTracking"]>
+    composites: {}
+  }
+
+  type ElderlyCareCompanionMedicationTrackingGetPayload<S extends boolean | null | undefined | ElderlyCareCompanionMedicationTrackingDefaultArgs> = $Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload, S>
+
+  type ElderlyCareCompanionMedicationTrackingCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ElderlyCareCompanionMedicationTrackingFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ElderlyCareCompanionMedicationTrackingCountAggregateInputType | true
+    }
+
+  export interface ElderlyCareCompanionMedicationTrackingDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ElderlyCareCompanionMedicationTracking'], meta: { name: 'ElderlyCareCompanionMedicationTracking' } }
+    /**
+     * Find zero or one ElderlyCareCompanionMedicationTracking that matches the filter.
+     * @param {ElderlyCareCompanionMedicationTrackingFindUniqueArgs} args - Arguments to find a ElderlyCareCompanionMedicationTracking
+     * @example
+     * // Get one ElderlyCareCompanionMedicationTracking
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ElderlyCareCompanionMedicationTrackingFindUniqueArgs>(args: SelectSubset<T, ElderlyCareCompanionMedicationTrackingFindUniqueArgs<ExtArgs>>): Prisma__ElderlyCareCompanionMedicationTrackingClient<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ElderlyCareCompanionMedicationTracking that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ElderlyCareCompanionMedicationTrackingFindUniqueOrThrowArgs} args - Arguments to find a ElderlyCareCompanionMedicationTracking
+     * @example
+     * // Get one ElderlyCareCompanionMedicationTracking
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ElderlyCareCompanionMedicationTrackingFindUniqueOrThrowArgs>(args: SelectSubset<T, ElderlyCareCompanionMedicationTrackingFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ElderlyCareCompanionMedicationTrackingClient<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ElderlyCareCompanionMedicationTracking that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ElderlyCareCompanionMedicationTrackingFindFirstArgs} args - Arguments to find a ElderlyCareCompanionMedicationTracking
+     * @example
+     * // Get one ElderlyCareCompanionMedicationTracking
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ElderlyCareCompanionMedicationTrackingFindFirstArgs>(args?: SelectSubset<T, ElderlyCareCompanionMedicationTrackingFindFirstArgs<ExtArgs>>): Prisma__ElderlyCareCompanionMedicationTrackingClient<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ElderlyCareCompanionMedicationTracking that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ElderlyCareCompanionMedicationTrackingFindFirstOrThrowArgs} args - Arguments to find a ElderlyCareCompanionMedicationTracking
+     * @example
+     * // Get one ElderlyCareCompanionMedicationTracking
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ElderlyCareCompanionMedicationTrackingFindFirstOrThrowArgs>(args?: SelectSubset<T, ElderlyCareCompanionMedicationTrackingFindFirstOrThrowArgs<ExtArgs>>): Prisma__ElderlyCareCompanionMedicationTrackingClient<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ElderlyCareCompanionMedicationTrackings that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ElderlyCareCompanionMedicationTrackingFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ElderlyCareCompanionMedicationTrackings
+     * const elderlyCareCompanionMedicationTrackings = await prisma.elderlyCareCompanionMedicationTracking.findMany()
+     * 
+     * // Get first 10 ElderlyCareCompanionMedicationTrackings
+     * const elderlyCareCompanionMedicationTrackings = await prisma.elderlyCareCompanionMedicationTracking.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const elderlyCareCompanionMedicationTrackingWithIdOnly = await prisma.elderlyCareCompanionMedicationTracking.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ElderlyCareCompanionMedicationTrackingFindManyArgs>(args?: SelectSubset<T, ElderlyCareCompanionMedicationTrackingFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ElderlyCareCompanionMedicationTracking.
+     * @param {ElderlyCareCompanionMedicationTrackingCreateArgs} args - Arguments to create a ElderlyCareCompanionMedicationTracking.
+     * @example
+     * // Create one ElderlyCareCompanionMedicationTracking
+     * const ElderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.create({
+     *   data: {
+     *     // ... data to create a ElderlyCareCompanionMedicationTracking
+     *   }
+     * })
+     * 
+     */
+    create<T extends ElderlyCareCompanionMedicationTrackingCreateArgs>(args: SelectSubset<T, ElderlyCareCompanionMedicationTrackingCreateArgs<ExtArgs>>): Prisma__ElderlyCareCompanionMedicationTrackingClient<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ElderlyCareCompanionMedicationTrackings.
+     * @param {ElderlyCareCompanionMedicationTrackingCreateManyArgs} args - Arguments to create many ElderlyCareCompanionMedicationTrackings.
+     * @example
+     * // Create many ElderlyCareCompanionMedicationTrackings
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ElderlyCareCompanionMedicationTrackingCreateManyArgs>(args?: SelectSubset<T, ElderlyCareCompanionMedicationTrackingCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ElderlyCareCompanionMedicationTrackings and returns the data saved in the database.
+     * @param {ElderlyCareCompanionMedicationTrackingCreateManyAndReturnArgs} args - Arguments to create many ElderlyCareCompanionMedicationTrackings.
+     * @example
+     * // Create many ElderlyCareCompanionMedicationTrackings
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ElderlyCareCompanionMedicationTrackings and only return the `id`
+     * const elderlyCareCompanionMedicationTrackingWithIdOnly = await prisma.elderlyCareCompanionMedicationTracking.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ElderlyCareCompanionMedicationTrackingCreateManyAndReturnArgs>(args?: SelectSubset<T, ElderlyCareCompanionMedicationTrackingCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ElderlyCareCompanionMedicationTracking.
+     * @param {ElderlyCareCompanionMedicationTrackingDeleteArgs} args - Arguments to delete one ElderlyCareCompanionMedicationTracking.
+     * @example
+     * // Delete one ElderlyCareCompanionMedicationTracking
+     * const ElderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.delete({
+     *   where: {
+     *     // ... filter to delete one ElderlyCareCompanionMedicationTracking
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ElderlyCareCompanionMedicationTrackingDeleteArgs>(args: SelectSubset<T, ElderlyCareCompanionMedicationTrackingDeleteArgs<ExtArgs>>): Prisma__ElderlyCareCompanionMedicationTrackingClient<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ElderlyCareCompanionMedicationTracking.
+     * @param {ElderlyCareCompanionMedicationTrackingUpdateArgs} args - Arguments to update one ElderlyCareCompanionMedicationTracking.
+     * @example
+     * // Update one ElderlyCareCompanionMedicationTracking
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ElderlyCareCompanionMedicationTrackingUpdateArgs>(args: SelectSubset<T, ElderlyCareCompanionMedicationTrackingUpdateArgs<ExtArgs>>): Prisma__ElderlyCareCompanionMedicationTrackingClient<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ElderlyCareCompanionMedicationTrackings.
+     * @param {ElderlyCareCompanionMedicationTrackingDeleteManyArgs} args - Arguments to filter ElderlyCareCompanionMedicationTrackings to delete.
+     * @example
+     * // Delete a few ElderlyCareCompanionMedicationTrackings
+     * const { count } = await prisma.elderlyCareCompanionMedicationTracking.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ElderlyCareCompanionMedicationTrackingDeleteManyArgs>(args?: SelectSubset<T, ElderlyCareCompanionMedicationTrackingDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ElderlyCareCompanionMedicationTrackings.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ElderlyCareCompanionMedicationTrackingUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ElderlyCareCompanionMedicationTrackings
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ElderlyCareCompanionMedicationTrackingUpdateManyArgs>(args: SelectSubset<T, ElderlyCareCompanionMedicationTrackingUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ElderlyCareCompanionMedicationTrackings and returns the data updated in the database.
+     * @param {ElderlyCareCompanionMedicationTrackingUpdateManyAndReturnArgs} args - Arguments to update many ElderlyCareCompanionMedicationTrackings.
+     * @example
+     * // Update many ElderlyCareCompanionMedicationTrackings
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ElderlyCareCompanionMedicationTrackings and only return the `id`
+     * const elderlyCareCompanionMedicationTrackingWithIdOnly = await prisma.elderlyCareCompanionMedicationTracking.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ElderlyCareCompanionMedicationTrackingUpdateManyAndReturnArgs>(args: SelectSubset<T, ElderlyCareCompanionMedicationTrackingUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ElderlyCareCompanionMedicationTracking.
+     * @param {ElderlyCareCompanionMedicationTrackingUpsertArgs} args - Arguments to update or create a ElderlyCareCompanionMedicationTracking.
+     * @example
+     * // Update or create a ElderlyCareCompanionMedicationTracking
+     * const elderlyCareCompanionMedicationTracking = await prisma.elderlyCareCompanionMedicationTracking.upsert({
+     *   create: {
+     *     // ... data to create a ElderlyCareCompanionMedicationTracking
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ElderlyCareCompanionMedicationTracking we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ElderlyCareCompanionMedicationTrackingUpsertArgs>(args: SelectSubset<T, ElderlyCareCompanionMedicationTrackingUpsertArgs<ExtArgs>>): Prisma__ElderlyCareCompanionMedicationTrackingClient<$Result.GetResult<Prisma.$ElderlyCareCompanionMedicationTrackingPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ElderlyCareCompanionMedicationTrackings.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ElderlyCareCompanionMedicationTrackingCountArgs} args - Arguments to filter ElderlyCareCompanionMedicationTrackings to count.
+     * @example
+     * // Count the number of ElderlyCareCompanionMedicationTrackings
+     * const count = await prisma.elderlyCareCompanionMedicationTracking.count({
+     *   where: {
+     *     // ... the filter for the ElderlyCareCompanionMedicationTrackings we want to count
+     *   }
+     * })
+    **/
+    count<T extends ElderlyCareCompanionMedicationTrackingCountArgs>(
+      args?: Subset<T, ElderlyCareCompanionMedicationTrackingCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ElderlyCareCompanionMedicationTrackingCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ElderlyCareCompanionMedicationTracking.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ElderlyCareCompanionMedicationTrackingAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ElderlyCareCompanionMedicationTrackingAggregateArgs>(args: Subset<T, ElderlyCareCompanionMedicationTrackingAggregateArgs>): Prisma.PrismaPromise<GetElderlyCareCompanionMedicationTrackingAggregateType<T>>
+
+    /**
+     * Group by ElderlyCareCompanionMedicationTracking.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ElderlyCareCompanionMedicationTrackingGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ElderlyCareCompanionMedicationTrackingGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ElderlyCareCompanionMedicationTrackingGroupByArgs['orderBy'] }
+        : { orderBy?: ElderlyCareCompanionMedicationTrackingGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ElderlyCareCompanionMedicationTrackingGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetElderlyCareCompanionMedicationTrackingGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ElderlyCareCompanionMedicationTracking model
+   */
+  readonly fields: ElderlyCareCompanionMedicationTrackingFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ElderlyCareCompanionMedicationTracking.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ElderlyCareCompanionMedicationTrackingClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserElderlyCareCompanionDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserElderlyCareCompanionDefaultArgs<ExtArgs>>): Prisma__UserElderlyCareCompanionClient<$Result.GetResult<Prisma.$UserElderlyCareCompanionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    medication<T extends ElderlyCareCompanionAppointmentDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ElderlyCareCompanionAppointmentDefaultArgs<ExtArgs>>): Prisma__ElderlyCareCompanionAppointmentClient<$Result.GetResult<Prisma.$ElderlyCareCompanionAppointmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ElderlyCareCompanionMedicationTracking model
+   */ 
+  interface ElderlyCareCompanionMedicationTrackingFieldRefs {
+    readonly id: FieldRef<"ElderlyCareCompanionMedicationTracking", 'String'>
+    readonly userId: FieldRef<"ElderlyCareCompanionMedicationTracking", 'String'>
+    readonly medicationId: FieldRef<"ElderlyCareCompanionMedicationTracking", 'String'>
+    readonly status: FieldRef<"ElderlyCareCompanionMedicationTracking", 'String'>
+    readonly dateTime: FieldRef<"ElderlyCareCompanionMedicationTracking", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ElderlyCareCompanionMedicationTracking findUnique
+   */
+  export type ElderlyCareCompanionMedicationTrackingFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    /**
+     * Filter, which ElderlyCareCompanionMedicationTracking to fetch.
+     */
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking findUniqueOrThrow
+   */
+  export type ElderlyCareCompanionMedicationTrackingFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    /**
+     * Filter, which ElderlyCareCompanionMedicationTracking to fetch.
+     */
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking findFirst
+   */
+  export type ElderlyCareCompanionMedicationTrackingFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    /**
+     * Filter, which ElderlyCareCompanionMedicationTracking to fetch.
+     */
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ElderlyCareCompanionMedicationTrackings to fetch.
+     */
+    orderBy?: ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput | ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ElderlyCareCompanionMedicationTrackings.
+     */
+    cursor?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ElderlyCareCompanionMedicationTrackings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ElderlyCareCompanionMedicationTrackings.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ElderlyCareCompanionMedicationTrackings.
+     */
+    distinct?: ElderlyCareCompanionMedicationTrackingScalarFieldEnum | ElderlyCareCompanionMedicationTrackingScalarFieldEnum[]
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking findFirstOrThrow
+   */
+  export type ElderlyCareCompanionMedicationTrackingFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    /**
+     * Filter, which ElderlyCareCompanionMedicationTracking to fetch.
+     */
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ElderlyCareCompanionMedicationTrackings to fetch.
+     */
+    orderBy?: ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput | ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ElderlyCareCompanionMedicationTrackings.
+     */
+    cursor?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ElderlyCareCompanionMedicationTrackings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ElderlyCareCompanionMedicationTrackings.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ElderlyCareCompanionMedicationTrackings.
+     */
+    distinct?: ElderlyCareCompanionMedicationTrackingScalarFieldEnum | ElderlyCareCompanionMedicationTrackingScalarFieldEnum[]
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking findMany
+   */
+  export type ElderlyCareCompanionMedicationTrackingFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    /**
+     * Filter, which ElderlyCareCompanionMedicationTrackings to fetch.
+     */
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ElderlyCareCompanionMedicationTrackings to fetch.
+     */
+    orderBy?: ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput | ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ElderlyCareCompanionMedicationTrackings.
+     */
+    cursor?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ElderlyCareCompanionMedicationTrackings from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ElderlyCareCompanionMedicationTrackings.
+     */
+    skip?: number
+    distinct?: ElderlyCareCompanionMedicationTrackingScalarFieldEnum | ElderlyCareCompanionMedicationTrackingScalarFieldEnum[]
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking create
+   */
+  export type ElderlyCareCompanionMedicationTrackingCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ElderlyCareCompanionMedicationTracking.
+     */
+    data: XOR<ElderlyCareCompanionMedicationTrackingCreateInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateInput>
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking createMany
+   */
+  export type ElderlyCareCompanionMedicationTrackingCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ElderlyCareCompanionMedicationTrackings.
+     */
+    data: ElderlyCareCompanionMedicationTrackingCreateManyInput | ElderlyCareCompanionMedicationTrackingCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking createManyAndReturn
+   */
+  export type ElderlyCareCompanionMedicationTrackingCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * The data used to create many ElderlyCareCompanionMedicationTrackings.
+     */
+    data: ElderlyCareCompanionMedicationTrackingCreateManyInput | ElderlyCareCompanionMedicationTrackingCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking update
+   */
+  export type ElderlyCareCompanionMedicationTrackingUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ElderlyCareCompanionMedicationTracking.
+     */
+    data: XOR<ElderlyCareCompanionMedicationTrackingUpdateInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateInput>
+    /**
+     * Choose, which ElderlyCareCompanionMedicationTracking to update.
+     */
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking updateMany
+   */
+  export type ElderlyCareCompanionMedicationTrackingUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ElderlyCareCompanionMedicationTrackings.
+     */
+    data: XOR<ElderlyCareCompanionMedicationTrackingUpdateManyMutationInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyInput>
+    /**
+     * Filter which ElderlyCareCompanionMedicationTrackings to update
+     */
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    /**
+     * Limit how many ElderlyCareCompanionMedicationTrackings to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking updateManyAndReturn
+   */
+  export type ElderlyCareCompanionMedicationTrackingUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * The data used to update ElderlyCareCompanionMedicationTrackings.
+     */
+    data: XOR<ElderlyCareCompanionMedicationTrackingUpdateManyMutationInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyInput>
+    /**
+     * Filter which ElderlyCareCompanionMedicationTrackings to update
+     */
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    /**
+     * Limit how many ElderlyCareCompanionMedicationTrackings to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking upsert
+   */
+  export type ElderlyCareCompanionMedicationTrackingUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ElderlyCareCompanionMedicationTracking to update in case it exists.
+     */
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    /**
+     * In case the ElderlyCareCompanionMedicationTracking found by the `where` argument doesn't exist, create a new ElderlyCareCompanionMedicationTracking with this data.
+     */
+    create: XOR<ElderlyCareCompanionMedicationTrackingCreateInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateInput>
+    /**
+     * In case the ElderlyCareCompanionMedicationTracking was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ElderlyCareCompanionMedicationTrackingUpdateInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateInput>
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking delete
+   */
+  export type ElderlyCareCompanionMedicationTrackingDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
+    /**
+     * Filter which ElderlyCareCompanionMedicationTracking to delete.
+     */
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking deleteMany
+   */
+  export type ElderlyCareCompanionMedicationTrackingDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ElderlyCareCompanionMedicationTrackings to delete
+     */
+    where?: ElderlyCareCompanionMedicationTrackingWhereInput
+    /**
+     * Limit how many ElderlyCareCompanionMedicationTrackings to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ElderlyCareCompanionMedicationTracking without action
+   */
+  export type ElderlyCareCompanionMedicationTrackingDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ElderlyCareCompanionMedicationTracking
+     */
+    select?: ElderlyCareCompanionMedicationTrackingSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ElderlyCareCompanionMedicationTracking
+     */
+    omit?: ElderlyCareCompanionMedicationTrackingOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ElderlyCareCompanionMedicationTrackingInclude<ExtArgs> | null
   }
 
 
@@ -41041,6 +42296,17 @@ export namespace Prisma {
   export type ElderlyCareCompanionRecordScalarFieldEnum = (typeof ElderlyCareCompanionRecordScalarFieldEnum)[keyof typeof ElderlyCareCompanionRecordScalarFieldEnum]
 
 
+  export const ElderlyCareCompanionMedicationTrackingScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    medicationId: 'medicationId',
+    status: 'status',
+    dateTime: 'dateTime'
+  };
+
+  export type ElderlyCareCompanionMedicationTrackingScalarFieldEnum = (typeof ElderlyCareCompanionMedicationTrackingScalarFieldEnum)[keyof typeof ElderlyCareCompanionMedicationTrackingScalarFieldEnum]
+
+
   export const EventOrganizerUserScalarFieldEnum: {
     id: 'id',
     email: 'email',
@@ -42680,6 +43946,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"UserElderlyCareCompanion"> | Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentListRelationFilter
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordListRelationFilter
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingListRelationFilter
   }
 
   export type UserElderlyCareCompanionOrderByWithRelationInput = {
@@ -42690,6 +43957,7 @@ export namespace Prisma {
     createdAt?: SortOrder
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentOrderByRelationAggregateInput
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordOrderByRelationAggregateInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingOrderByRelationAggregateInput
   }
 
   export type UserElderlyCareCompanionWhereUniqueInput = Prisma.AtLeast<{
@@ -42703,6 +43971,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"UserElderlyCareCompanion"> | Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentListRelationFilter
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordListRelationFilter
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingListRelationFilter
   }, "id" | "email">
 
   export type UserElderlyCareCompanionOrderByWithAggregationInput = {
@@ -42740,6 +44009,7 @@ export namespace Prisma {
     medicationDetails?: StringNullableFilter<"ElderlyCareCompanionAppointment"> | string | null
     createdAt?: DateTimeFilter<"ElderlyCareCompanionAppointment"> | Date | string
     user?: XOR<UserElderlyCareCompanionScalarRelationFilter, UserElderlyCareCompanionWhereInput>
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingListRelationFilter
   }
 
   export type ElderlyCareCompanionAppointmentOrderByWithRelationInput = {
@@ -42752,6 +44022,7 @@ export namespace Prisma {
     medicationDetails?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     user?: UserElderlyCareCompanionOrderByWithRelationInput
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingOrderByRelationAggregateInput
   }
 
   export type ElderlyCareCompanionAppointmentWhereUniqueInput = Prisma.AtLeast<{
@@ -42767,6 +44038,7 @@ export namespace Prisma {
     medicationDetails?: StringNullableFilter<"ElderlyCareCompanionAppointment"> | string | null
     createdAt?: DateTimeFilter<"ElderlyCareCompanionAppointment"> | Date | string
     user?: XOR<UserElderlyCareCompanionScalarRelationFilter, UserElderlyCareCompanionWhereInput>
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingListRelationFilter
   }, "id">
 
   export type ElderlyCareCompanionAppointmentOrderByWithAggregationInput = {
@@ -42959,6 +44231,64 @@ export namespace Prisma {
     details?: StringWithAggregatesFilter<"ElderlyCareCompanionRecord"> | string
     date?: DateTimeWithAggregatesFilter<"ElderlyCareCompanionRecord"> | Date | string
     createdAt?: DateTimeWithAggregatesFilter<"ElderlyCareCompanionRecord"> | Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingWhereInput = {
+    AND?: ElderlyCareCompanionMedicationTrackingWhereInput | ElderlyCareCompanionMedicationTrackingWhereInput[]
+    OR?: ElderlyCareCompanionMedicationTrackingWhereInput[]
+    NOT?: ElderlyCareCompanionMedicationTrackingWhereInput | ElderlyCareCompanionMedicationTrackingWhereInput[]
+    id?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    userId?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    medicationId?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    status?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    dateTime?: DateTimeFilter<"ElderlyCareCompanionMedicationTracking"> | Date | string
+    user?: XOR<UserElderlyCareCompanionScalarRelationFilter, UserElderlyCareCompanionWhereInput>
+    medication?: XOR<ElderlyCareCompanionAppointmentScalarRelationFilter, ElderlyCareCompanionAppointmentWhereInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    medicationId?: SortOrder
+    status?: SortOrder
+    dateTime?: SortOrder
+    user?: UserElderlyCareCompanionOrderByWithRelationInput
+    medication?: ElderlyCareCompanionAppointmentOrderByWithRelationInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ElderlyCareCompanionMedicationTrackingWhereInput | ElderlyCareCompanionMedicationTrackingWhereInput[]
+    OR?: ElderlyCareCompanionMedicationTrackingWhereInput[]
+    NOT?: ElderlyCareCompanionMedicationTrackingWhereInput | ElderlyCareCompanionMedicationTrackingWhereInput[]
+    userId?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    medicationId?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    status?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    dateTime?: DateTimeFilter<"ElderlyCareCompanionMedicationTracking"> | Date | string
+    user?: XOR<UserElderlyCareCompanionScalarRelationFilter, UserElderlyCareCompanionWhereInput>
+    medication?: XOR<ElderlyCareCompanionAppointmentScalarRelationFilter, ElderlyCareCompanionAppointmentWhereInput>
+  }, "id">
+
+  export type ElderlyCareCompanionMedicationTrackingOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    medicationId?: SortOrder
+    status?: SortOrder
+    dateTime?: SortOrder
+    _count?: ElderlyCareCompanionMedicationTrackingCountOrderByAggregateInput
+    _max?: ElderlyCareCompanionMedicationTrackingMaxOrderByAggregateInput
+    _min?: ElderlyCareCompanionMedicationTrackingMinOrderByAggregateInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingScalarWhereWithAggregatesInput = {
+    AND?: ElderlyCareCompanionMedicationTrackingScalarWhereWithAggregatesInput | ElderlyCareCompanionMedicationTrackingScalarWhereWithAggregatesInput[]
+    OR?: ElderlyCareCompanionMedicationTrackingScalarWhereWithAggregatesInput[]
+    NOT?: ElderlyCareCompanionMedicationTrackingScalarWhereWithAggregatesInput | ElderlyCareCompanionMedicationTrackingScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    userId?: StringWithAggregatesFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    medicationId?: StringWithAggregatesFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    status?: StringWithAggregatesFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    dateTime?: DateTimeWithAggregatesFilter<"ElderlyCareCompanionMedicationTracking"> | Date | string
   }
 
   export type EventOrganizerUserWhereInput = {
@@ -44781,6 +46111,7 @@ export namespace Prisma {
     createdAt?: Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentCreateNestedManyWithoutUserInput
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordCreateNestedManyWithoutUserInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingCreateNestedManyWithoutUserInput
   }
 
   export type UserElderlyCareCompanionUncheckedCreateInput = {
@@ -44791,6 +46122,7 @@ export namespace Prisma {
     createdAt?: Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentUncheckedCreateNestedManyWithoutUserInput
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordUncheckedCreateNestedManyWithoutUserInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserElderlyCareCompanionUpdateInput = {
@@ -44801,6 +46133,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentUpdateManyWithoutUserNestedInput
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordUpdateManyWithoutUserNestedInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingUpdateManyWithoutUserNestedInput
   }
 
   export type UserElderlyCareCompanionUncheckedUpdateInput = {
@@ -44811,6 +46144,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentUncheckedUpdateManyWithoutUserNestedInput
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordUncheckedUpdateManyWithoutUserNestedInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserElderlyCareCompanionCreateManyInput = {
@@ -44846,6 +46180,7 @@ export namespace Prisma {
     medicationDetails?: string | null
     createdAt?: Date | string
     user: UserElderlyCareCompanionCreateNestedOneWithoutElderlyCareCompanionAppointmentInput
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingCreateNestedManyWithoutMedicationInput
   }
 
   export type ElderlyCareCompanionAppointmentUncheckedCreateInput = {
@@ -44857,6 +46192,7 @@ export namespace Prisma {
     location?: string | null
     medicationDetails?: string | null
     createdAt?: Date | string
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingUncheckedCreateNestedManyWithoutMedicationInput
   }
 
   export type ElderlyCareCompanionAppointmentUpdateInput = {
@@ -44868,6 +46204,7 @@ export namespace Prisma {
     medicationDetails?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserElderlyCareCompanionUpdateOneRequiredWithoutElderlyCareCompanionAppointmentNestedInput
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingUpdateManyWithoutMedicationNestedInput
   }
 
   export type ElderlyCareCompanionAppointmentUncheckedUpdateInput = {
@@ -44879,6 +46216,7 @@ export namespace Prisma {
     location?: NullableStringFieldUpdateOperationsInput | string | null
     medicationDetails?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutMedicationNestedInput
   }
 
   export type ElderlyCareCompanionAppointmentCreateManyInput = {
@@ -45085,6 +46423,60 @@ export namespace Prisma {
     details?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateInput = {
+    id?: string
+    status: string
+    dateTime?: Date | string
+    user: UserElderlyCareCompanionCreateNestedOneWithoutElderlyCareCompanionMedicationTrackingInput
+    medication: ElderlyCareCompanionAppointmentCreateNestedOneWithoutMedicationLogsInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedCreateInput = {
+    id?: string
+    userId: string
+    medicationId: string
+    status: string
+    dateTime?: Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserElderlyCareCompanionUpdateOneRequiredWithoutElderlyCareCompanionMedicationTrackingNestedInput
+    medication?: ElderlyCareCompanionAppointmentUpdateOneRequiredWithoutMedicationLogsNestedInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    medicationId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateManyInput = {
+    id?: string
+    userId: string
+    medicationId: string
+    status: string
+    dateTime?: Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    medicationId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventOrganizerUserCreateInput = {
@@ -46492,11 +47884,21 @@ export namespace Prisma {
     none?: ElderlyCareCompanionRecordWhereInput
   }
 
+  export type ElderlyCareCompanionMedicationTrackingListRelationFilter = {
+    every?: ElderlyCareCompanionMedicationTrackingWhereInput
+    some?: ElderlyCareCompanionMedicationTrackingWhereInput
+    none?: ElderlyCareCompanionMedicationTrackingWhereInput
+  }
+
   export type ElderlyCareCompanionAppointmentOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
   export type ElderlyCareCompanionRecordOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -46635,6 +48037,35 @@ export namespace Prisma {
     details?: SortOrder
     date?: SortOrder
     createdAt?: SortOrder
+  }
+
+  export type ElderlyCareCompanionAppointmentScalarRelationFilter = {
+    is?: ElderlyCareCompanionAppointmentWhereInput
+    isNot?: ElderlyCareCompanionAppointmentWhereInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    medicationId?: SortOrder
+    status?: SortOrder
+    dateTime?: SortOrder
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    medicationId?: SortOrder
+    status?: SortOrder
+    dateTime?: SortOrder
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    medicationId?: SortOrder
+    status?: SortOrder
+    dateTime?: SortOrder
   }
 
   export type EventOrganizerTaskListRelationFilter = {
@@ -48620,6 +50051,13 @@ export namespace Prisma {
     connect?: ElderlyCareCompanionRecordWhereUniqueInput | ElderlyCareCompanionRecordWhereUniqueInput[]
   }
 
+  export type ElderlyCareCompanionMedicationTrackingCreateNestedManyWithoutUserInput = {
+    create?: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput> | ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput[] | ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutUserInput | ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutUserInput[]
+    createMany?: ElderlyCareCompanionMedicationTrackingCreateManyUserInputEnvelope
+    connect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+  }
+
   export type ElderlyCareCompanionAppointmentUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<ElderlyCareCompanionAppointmentCreateWithoutUserInput, ElderlyCareCompanionAppointmentUncheckedCreateWithoutUserInput> | ElderlyCareCompanionAppointmentCreateWithoutUserInput[] | ElderlyCareCompanionAppointmentUncheckedCreateWithoutUserInput[]
     connectOrCreate?: ElderlyCareCompanionAppointmentCreateOrConnectWithoutUserInput | ElderlyCareCompanionAppointmentCreateOrConnectWithoutUserInput[]
@@ -48632,6 +50070,13 @@ export namespace Prisma {
     connectOrCreate?: ElderlyCareCompanionRecordCreateOrConnectWithoutUserInput | ElderlyCareCompanionRecordCreateOrConnectWithoutUserInput[]
     createMany?: ElderlyCareCompanionRecordCreateManyUserInputEnvelope
     connect?: ElderlyCareCompanionRecordWhereUniqueInput | ElderlyCareCompanionRecordWhereUniqueInput[]
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput> | ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput[] | ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutUserInput | ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutUserInput[]
+    createMany?: ElderlyCareCompanionMedicationTrackingCreateManyUserInputEnvelope
+    connect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
   }
 
   export type ElderlyCareCompanionAppointmentUpdateManyWithoutUserNestedInput = {
@@ -48662,6 +50107,20 @@ export namespace Prisma {
     deleteMany?: ElderlyCareCompanionRecordScalarWhereInput | ElderlyCareCompanionRecordScalarWhereInput[]
   }
 
+  export type ElderlyCareCompanionMedicationTrackingUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput> | ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput[] | ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutUserInput | ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutUserInput[]
+    upsert?: ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutUserInput | ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ElderlyCareCompanionMedicationTrackingCreateManyUserInputEnvelope
+    set?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    disconnect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    delete?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    connect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    update?: ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutUserInput | ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutUserInput | ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ElderlyCareCompanionMedicationTrackingScalarWhereInput | ElderlyCareCompanionMedicationTrackingScalarWhereInput[]
+  }
+
   export type ElderlyCareCompanionAppointmentUncheckedUpdateManyWithoutUserNestedInput = {
     create?: XOR<ElderlyCareCompanionAppointmentCreateWithoutUserInput, ElderlyCareCompanionAppointmentUncheckedCreateWithoutUserInput> | ElderlyCareCompanionAppointmentCreateWithoutUserInput[] | ElderlyCareCompanionAppointmentUncheckedCreateWithoutUserInput[]
     connectOrCreate?: ElderlyCareCompanionAppointmentCreateOrConnectWithoutUserInput | ElderlyCareCompanionAppointmentCreateOrConnectWithoutUserInput[]
@@ -48690,10 +50149,38 @@ export namespace Prisma {
     deleteMany?: ElderlyCareCompanionRecordScalarWhereInput | ElderlyCareCompanionRecordScalarWhereInput[]
   }
 
+  export type ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput> | ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput[] | ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutUserInput | ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutUserInput[]
+    upsert?: ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutUserInput | ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ElderlyCareCompanionMedicationTrackingCreateManyUserInputEnvelope
+    set?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    disconnect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    delete?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    connect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    update?: ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutUserInput | ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutUserInput | ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ElderlyCareCompanionMedicationTrackingScalarWhereInput | ElderlyCareCompanionMedicationTrackingScalarWhereInput[]
+  }
+
   export type UserElderlyCareCompanionCreateNestedOneWithoutElderlyCareCompanionAppointmentInput = {
     create?: XOR<UserElderlyCareCompanionCreateWithoutElderlyCareCompanionAppointmentInput, UserElderlyCareCompanionUncheckedCreateWithoutElderlyCareCompanionAppointmentInput>
     connectOrCreate?: UserElderlyCareCompanionCreateOrConnectWithoutElderlyCareCompanionAppointmentInput
     connect?: UserElderlyCareCompanionWhereUniqueInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateNestedManyWithoutMedicationInput = {
+    create?: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput> | ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput[] | ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput[]
+    connectOrCreate?: ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutMedicationInput[]
+    createMany?: ElderlyCareCompanionMedicationTrackingCreateManyMedicationInputEnvelope
+    connect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedCreateNestedManyWithoutMedicationInput = {
+    create?: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput> | ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput[] | ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput[]
+    connectOrCreate?: ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutMedicationInput[]
+    createMany?: ElderlyCareCompanionMedicationTrackingCreateManyMedicationInputEnvelope
+    connect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
   }
 
   export type UserElderlyCareCompanionUpdateOneRequiredWithoutElderlyCareCompanionAppointmentNestedInput = {
@@ -48702,6 +50189,34 @@ export namespace Prisma {
     upsert?: UserElderlyCareCompanionUpsertWithoutElderlyCareCompanionAppointmentInput
     connect?: UserElderlyCareCompanionWhereUniqueInput
     update?: XOR<XOR<UserElderlyCareCompanionUpdateToOneWithWhereWithoutElderlyCareCompanionAppointmentInput, UserElderlyCareCompanionUpdateWithoutElderlyCareCompanionAppointmentInput>, UserElderlyCareCompanionUncheckedUpdateWithoutElderlyCareCompanionAppointmentInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpdateManyWithoutMedicationNestedInput = {
+    create?: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput> | ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput[] | ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput[]
+    connectOrCreate?: ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutMedicationInput[]
+    upsert?: ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutMedicationInput[]
+    createMany?: ElderlyCareCompanionMedicationTrackingCreateManyMedicationInputEnvelope
+    set?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    disconnect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    delete?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    connect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    update?: ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutMedicationInput[]
+    updateMany?: ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutMedicationInput[]
+    deleteMany?: ElderlyCareCompanionMedicationTrackingScalarWhereInput | ElderlyCareCompanionMedicationTrackingScalarWhereInput[]
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutMedicationNestedInput = {
+    create?: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput> | ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput[] | ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput[]
+    connectOrCreate?: ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutMedicationInput[]
+    upsert?: ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutMedicationInput[]
+    createMany?: ElderlyCareCompanionMedicationTrackingCreateManyMedicationInputEnvelope
+    set?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    disconnect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    delete?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    connect?: ElderlyCareCompanionMedicationTrackingWhereUniqueInput | ElderlyCareCompanionMedicationTrackingWhereUniqueInput[]
+    update?: ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutMedicationInput[]
+    updateMany?: ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutMedicationInput | ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutMedicationInput[]
+    deleteMany?: ElderlyCareCompanionMedicationTrackingScalarWhereInput | ElderlyCareCompanionMedicationTrackingScalarWhereInput[]
   }
 
   export type UserElderlyCareCompanionCreateNestedOneWithoutElderlyCareCompanionRecordInput = {
@@ -48716,6 +50231,34 @@ export namespace Prisma {
     upsert?: UserElderlyCareCompanionUpsertWithoutElderlyCareCompanionRecordInput
     connect?: UserElderlyCareCompanionWhereUniqueInput
     update?: XOR<XOR<UserElderlyCareCompanionUpdateToOneWithWhereWithoutElderlyCareCompanionRecordInput, UserElderlyCareCompanionUpdateWithoutElderlyCareCompanionRecordInput>, UserElderlyCareCompanionUncheckedUpdateWithoutElderlyCareCompanionRecordInput>
+  }
+
+  export type UserElderlyCareCompanionCreateNestedOneWithoutElderlyCareCompanionMedicationTrackingInput = {
+    create?: XOR<UserElderlyCareCompanionCreateWithoutElderlyCareCompanionMedicationTrackingInput, UserElderlyCareCompanionUncheckedCreateWithoutElderlyCareCompanionMedicationTrackingInput>
+    connectOrCreate?: UserElderlyCareCompanionCreateOrConnectWithoutElderlyCareCompanionMedicationTrackingInput
+    connect?: UserElderlyCareCompanionWhereUniqueInput
+  }
+
+  export type ElderlyCareCompanionAppointmentCreateNestedOneWithoutMedicationLogsInput = {
+    create?: XOR<ElderlyCareCompanionAppointmentCreateWithoutMedicationLogsInput, ElderlyCareCompanionAppointmentUncheckedCreateWithoutMedicationLogsInput>
+    connectOrCreate?: ElderlyCareCompanionAppointmentCreateOrConnectWithoutMedicationLogsInput
+    connect?: ElderlyCareCompanionAppointmentWhereUniqueInput
+  }
+
+  export type UserElderlyCareCompanionUpdateOneRequiredWithoutElderlyCareCompanionMedicationTrackingNestedInput = {
+    create?: XOR<UserElderlyCareCompanionCreateWithoutElderlyCareCompanionMedicationTrackingInput, UserElderlyCareCompanionUncheckedCreateWithoutElderlyCareCompanionMedicationTrackingInput>
+    connectOrCreate?: UserElderlyCareCompanionCreateOrConnectWithoutElderlyCareCompanionMedicationTrackingInput
+    upsert?: UserElderlyCareCompanionUpsertWithoutElderlyCareCompanionMedicationTrackingInput
+    connect?: UserElderlyCareCompanionWhereUniqueInput
+    update?: XOR<XOR<UserElderlyCareCompanionUpdateToOneWithWhereWithoutElderlyCareCompanionMedicationTrackingInput, UserElderlyCareCompanionUpdateWithoutElderlyCareCompanionMedicationTrackingInput>, UserElderlyCareCompanionUncheckedUpdateWithoutElderlyCareCompanionMedicationTrackingInput>
+  }
+
+  export type ElderlyCareCompanionAppointmentUpdateOneRequiredWithoutMedicationLogsNestedInput = {
+    create?: XOR<ElderlyCareCompanionAppointmentCreateWithoutMedicationLogsInput, ElderlyCareCompanionAppointmentUncheckedCreateWithoutMedicationLogsInput>
+    connectOrCreate?: ElderlyCareCompanionAppointmentCreateOrConnectWithoutMedicationLogsInput
+    upsert?: ElderlyCareCompanionAppointmentUpsertWithoutMedicationLogsInput
+    connect?: ElderlyCareCompanionAppointmentWhereUniqueInput
+    update?: XOR<XOR<ElderlyCareCompanionAppointmentUpdateToOneWithWhereWithoutMedicationLogsInput, ElderlyCareCompanionAppointmentUpdateWithoutMedicationLogsInput>, ElderlyCareCompanionAppointmentUncheckedUpdateWithoutMedicationLogsInput>
   }
 
   export type EventOrganizerTaskCreateNestedManyWithoutUserInput = {
@@ -52606,6 +54149,7 @@ export namespace Prisma {
     location?: string | null
     medicationDetails?: string | null
     createdAt?: Date | string
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingCreateNestedManyWithoutMedicationInput
   }
 
   export type ElderlyCareCompanionAppointmentUncheckedCreateWithoutUserInput = {
@@ -52616,6 +54160,7 @@ export namespace Prisma {
     location?: string | null
     medicationDetails?: string | null
     createdAt?: Date | string
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingUncheckedCreateNestedManyWithoutMedicationInput
   }
 
   export type ElderlyCareCompanionAppointmentCreateOrConnectWithoutUserInput = {
@@ -52651,6 +54196,30 @@ export namespace Prisma {
 
   export type ElderlyCareCompanionRecordCreateManyUserInputEnvelope = {
     data: ElderlyCareCompanionRecordCreateManyUserInput | ElderlyCareCompanionRecordCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput = {
+    id?: string
+    status: string
+    dateTime?: Date | string
+    medication: ElderlyCareCompanionAppointmentCreateNestedOneWithoutMedicationLogsInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput = {
+    id?: string
+    medicationId: string
+    status: string
+    dateTime?: Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutUserInput = {
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    create: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateManyUserInputEnvelope = {
+    data: ElderlyCareCompanionMedicationTrackingCreateManyUserInput | ElderlyCareCompanionMedicationTrackingCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
@@ -52712,6 +54281,33 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"ElderlyCareCompanionRecord"> | Date | string
   }
 
+  export type ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutUserInput = {
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    update: XOR<ElderlyCareCompanionMedicationTrackingUpdateWithoutUserInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateWithoutUserInput>
+    create: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutUserInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutUserInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutUserInput = {
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    data: XOR<ElderlyCareCompanionMedicationTrackingUpdateWithoutUserInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutUserInput = {
+    where: ElderlyCareCompanionMedicationTrackingScalarWhereInput
+    data: XOR<ElderlyCareCompanionMedicationTrackingUpdateManyMutationInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingScalarWhereInput = {
+    AND?: ElderlyCareCompanionMedicationTrackingScalarWhereInput | ElderlyCareCompanionMedicationTrackingScalarWhereInput[]
+    OR?: ElderlyCareCompanionMedicationTrackingScalarWhereInput[]
+    NOT?: ElderlyCareCompanionMedicationTrackingScalarWhereInput | ElderlyCareCompanionMedicationTrackingScalarWhereInput[]
+    id?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    userId?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    medicationId?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    status?: StringFilter<"ElderlyCareCompanionMedicationTracking"> | string
+    dateTime?: DateTimeFilter<"ElderlyCareCompanionMedicationTracking"> | Date | string
+  }
+
   export type UserElderlyCareCompanionCreateWithoutElderlyCareCompanionAppointmentInput = {
     id?: string
     email: string
@@ -52719,6 +54315,7 @@ export namespace Prisma {
     password: string
     createdAt?: Date | string
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordCreateNestedManyWithoutUserInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingCreateNestedManyWithoutUserInput
   }
 
   export type UserElderlyCareCompanionUncheckedCreateWithoutElderlyCareCompanionAppointmentInput = {
@@ -52728,11 +54325,36 @@ export namespace Prisma {
     password: string
     createdAt?: Date | string
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordUncheckedCreateNestedManyWithoutUserInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserElderlyCareCompanionCreateOrConnectWithoutElderlyCareCompanionAppointmentInput = {
     where: UserElderlyCareCompanionWhereUniqueInput
     create: XOR<UserElderlyCareCompanionCreateWithoutElderlyCareCompanionAppointmentInput, UserElderlyCareCompanionUncheckedCreateWithoutElderlyCareCompanionAppointmentInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput = {
+    id?: string
+    status: string
+    dateTime?: Date | string
+    user: UserElderlyCareCompanionCreateNestedOneWithoutElderlyCareCompanionMedicationTrackingInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput = {
+    id?: string
+    userId: string
+    status: string
+    dateTime?: Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateOrConnectWithoutMedicationInput = {
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    create: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateManyMedicationInputEnvelope = {
+    data: ElderlyCareCompanionMedicationTrackingCreateManyMedicationInput | ElderlyCareCompanionMedicationTrackingCreateManyMedicationInput[]
+    skipDuplicates?: boolean
   }
 
   export type UserElderlyCareCompanionUpsertWithoutElderlyCareCompanionAppointmentInput = {
@@ -52753,6 +54375,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordUpdateManyWithoutUserNestedInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingUpdateManyWithoutUserNestedInput
   }
 
   export type UserElderlyCareCompanionUncheckedUpdateWithoutElderlyCareCompanionAppointmentInput = {
@@ -52762,6 +54385,23 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordUncheckedUpdateManyWithoutUserNestedInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpsertWithWhereUniqueWithoutMedicationInput = {
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    update: XOR<ElderlyCareCompanionMedicationTrackingUpdateWithoutMedicationInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateWithoutMedicationInput>
+    create: XOR<ElderlyCareCompanionMedicationTrackingCreateWithoutMedicationInput, ElderlyCareCompanionMedicationTrackingUncheckedCreateWithoutMedicationInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpdateWithWhereUniqueWithoutMedicationInput = {
+    where: ElderlyCareCompanionMedicationTrackingWhereUniqueInput
+    data: XOR<ElderlyCareCompanionMedicationTrackingUpdateWithoutMedicationInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateWithoutMedicationInput>
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpdateManyWithWhereWithoutMedicationInput = {
+    where: ElderlyCareCompanionMedicationTrackingScalarWhereInput
+    data: XOR<ElderlyCareCompanionMedicationTrackingUpdateManyMutationInput, ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutMedicationInput>
   }
 
   export type UserElderlyCareCompanionCreateWithoutElderlyCareCompanionRecordInput = {
@@ -52771,6 +54411,7 @@ export namespace Prisma {
     password: string
     createdAt?: Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentCreateNestedManyWithoutUserInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingCreateNestedManyWithoutUserInput
   }
 
   export type UserElderlyCareCompanionUncheckedCreateWithoutElderlyCareCompanionRecordInput = {
@@ -52780,6 +54421,7 @@ export namespace Prisma {
     password: string
     createdAt?: Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentUncheckedCreateNestedManyWithoutUserInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserElderlyCareCompanionCreateOrConnectWithoutElderlyCareCompanionRecordInput = {
@@ -52805,6 +54447,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentUpdateManyWithoutUserNestedInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingUpdateManyWithoutUserNestedInput
   }
 
   export type UserElderlyCareCompanionUncheckedUpdateWithoutElderlyCareCompanionRecordInput = {
@@ -52814,6 +54457,123 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentUncheckedUpdateManyWithoutUserNestedInput
+    ElderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserElderlyCareCompanionCreateWithoutElderlyCareCompanionMedicationTrackingInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentCreateNestedManyWithoutUserInput
+    ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordCreateNestedManyWithoutUserInput
+  }
+
+  export type UserElderlyCareCompanionUncheckedCreateWithoutElderlyCareCompanionMedicationTrackingInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentUncheckedCreateNestedManyWithoutUserInput
+    ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserElderlyCareCompanionCreateOrConnectWithoutElderlyCareCompanionMedicationTrackingInput = {
+    where: UserElderlyCareCompanionWhereUniqueInput
+    create: XOR<UserElderlyCareCompanionCreateWithoutElderlyCareCompanionMedicationTrackingInput, UserElderlyCareCompanionUncheckedCreateWithoutElderlyCareCompanionMedicationTrackingInput>
+  }
+
+  export type ElderlyCareCompanionAppointmentCreateWithoutMedicationLogsInput = {
+    id?: string
+    type: string
+    title: string
+    dateTime: Date | string
+    location?: string | null
+    medicationDetails?: string | null
+    createdAt?: Date | string
+    user: UserElderlyCareCompanionCreateNestedOneWithoutElderlyCareCompanionAppointmentInput
+  }
+
+  export type ElderlyCareCompanionAppointmentUncheckedCreateWithoutMedicationLogsInput = {
+    id?: string
+    userId: string
+    type: string
+    title: string
+    dateTime: Date | string
+    location?: string | null
+    medicationDetails?: string | null
+    createdAt?: Date | string
+  }
+
+  export type ElderlyCareCompanionAppointmentCreateOrConnectWithoutMedicationLogsInput = {
+    where: ElderlyCareCompanionAppointmentWhereUniqueInput
+    create: XOR<ElderlyCareCompanionAppointmentCreateWithoutMedicationLogsInput, ElderlyCareCompanionAppointmentUncheckedCreateWithoutMedicationLogsInput>
+  }
+
+  export type UserElderlyCareCompanionUpsertWithoutElderlyCareCompanionMedicationTrackingInput = {
+    update: XOR<UserElderlyCareCompanionUpdateWithoutElderlyCareCompanionMedicationTrackingInput, UserElderlyCareCompanionUncheckedUpdateWithoutElderlyCareCompanionMedicationTrackingInput>
+    create: XOR<UserElderlyCareCompanionCreateWithoutElderlyCareCompanionMedicationTrackingInput, UserElderlyCareCompanionUncheckedCreateWithoutElderlyCareCompanionMedicationTrackingInput>
+    where?: UserElderlyCareCompanionWhereInput
+  }
+
+  export type UserElderlyCareCompanionUpdateToOneWithWhereWithoutElderlyCareCompanionMedicationTrackingInput = {
+    where?: UserElderlyCareCompanionWhereInput
+    data: XOR<UserElderlyCareCompanionUpdateWithoutElderlyCareCompanionMedicationTrackingInput, UserElderlyCareCompanionUncheckedUpdateWithoutElderlyCareCompanionMedicationTrackingInput>
+  }
+
+  export type UserElderlyCareCompanionUpdateWithoutElderlyCareCompanionMedicationTrackingInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentUpdateManyWithoutUserNestedInput
+    ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserElderlyCareCompanionUncheckedUpdateWithoutElderlyCareCompanionMedicationTrackingInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ElderlyCareCompanionAppointment?: ElderlyCareCompanionAppointmentUncheckedUpdateManyWithoutUserNestedInput
+    ElderlyCareCompanionRecord?: ElderlyCareCompanionRecordUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ElderlyCareCompanionAppointmentUpsertWithoutMedicationLogsInput = {
+    update: XOR<ElderlyCareCompanionAppointmentUpdateWithoutMedicationLogsInput, ElderlyCareCompanionAppointmentUncheckedUpdateWithoutMedicationLogsInput>
+    create: XOR<ElderlyCareCompanionAppointmentCreateWithoutMedicationLogsInput, ElderlyCareCompanionAppointmentUncheckedCreateWithoutMedicationLogsInput>
+    where?: ElderlyCareCompanionAppointmentWhereInput
+  }
+
+  export type ElderlyCareCompanionAppointmentUpdateToOneWithWhereWithoutMedicationLogsInput = {
+    where?: ElderlyCareCompanionAppointmentWhereInput
+    data: XOR<ElderlyCareCompanionAppointmentUpdateWithoutMedicationLogsInput, ElderlyCareCompanionAppointmentUncheckedUpdateWithoutMedicationLogsInput>
+  }
+
+  export type ElderlyCareCompanionAppointmentUpdateWithoutMedicationLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: NullableStringFieldUpdateOperationsInput | string | null
+    medicationDetails?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserElderlyCareCompanionUpdateOneRequiredWithoutElderlyCareCompanionAppointmentNestedInput
+  }
+
+  export type ElderlyCareCompanionAppointmentUncheckedUpdateWithoutMedicationLogsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: NullableStringFieldUpdateOperationsInput | string | null
+    medicationDetails?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventOrganizerTaskCreateWithoutUserInput = {
@@ -54288,6 +56048,13 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
+  export type ElderlyCareCompanionMedicationTrackingCreateManyUserInput = {
+    id?: string
+    medicationId: string
+    status: string
+    dateTime?: Date | string
+  }
+
   export type ElderlyCareCompanionAppointmentUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
@@ -54296,6 +56063,7 @@ export namespace Prisma {
     location?: NullableStringFieldUpdateOperationsInput | string | null
     medicationDetails?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingUpdateManyWithoutMedicationNestedInput
   }
 
   export type ElderlyCareCompanionAppointmentUncheckedUpdateWithoutUserInput = {
@@ -54306,6 +56074,7 @@ export namespace Prisma {
     location?: NullableStringFieldUpdateOperationsInput | string | null
     medicationDetails?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    medicationLogs?: ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutMedicationNestedInput
   }
 
   export type ElderlyCareCompanionAppointmentUncheckedUpdateManyWithoutUserInput = {
@@ -54340,6 +56109,55 @@ export namespace Prisma {
     details?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    medication?: ElderlyCareCompanionAppointmentUpdateOneRequiredWithoutMedicationLogsNestedInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    medicationId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    medicationId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingCreateManyMedicationInput = {
+    id?: string
+    userId: string
+    status: string
+    dateTime?: Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUpdateWithoutMedicationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserElderlyCareCompanionUpdateOneRequiredWithoutElderlyCareCompanionMedicationTrackingNestedInput
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedUpdateWithoutMedicationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ElderlyCareCompanionMedicationTrackingUncheckedUpdateManyWithoutMedicationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventOrganizerTaskCreateManyUserInput = {
