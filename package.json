@@ -15,7 +15,10 @@
     "test:watch": "jest --watch",
     "dbReset": "prisma migrate reset --schema=./prisma/postgresql/schema.prisma --force",
     "fullTest": "npm run dbReset && npm run test:coverage",
-    "dbGM": "prisma generate --schema=./prisma/postgresql/schema.prisma && prisma migrate dev --schema=./prisma/postgresql/schema.prisma",
+    "dbGM1": "prisma generate --schema=./prisma/postgresql/schema.prisma && prisma migrate dev --schema=./prisma/postgresql/schema.prisma",
+    "dbGM2": "prisma generate --schema=./prisma/postgresql2/schema.prisma && prisma migrate dev --schema=./prisma/postgresql2/schema.prisma",
+    "dbG": "prisma generate --schema=./prisma/mongodb/schema.prisma",
+    "dbAllGM": "npm run dbGM1 && npm run dbGM2 && npm run dbG",
     "test:silent": "npm run dbReset && jest --runInBand --silent --reporters=default"
   },
   "dependencies": {
