@@ -1,0 +1,71 @@
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../generated/postgresql2"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource mongodb {
+  provider = "postgresql"
+  url      = env("DATABASE_URL_2")
+}
+
+model EventOrganizerUser {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+
+  tasks            EventOrganizerTask[]
+  guests           EventOrganizerGuest[]
+  venues           EventOrganizerVenue[]
+  serviceProviders EventOrganizerServiceProvider[]
+}
+
+model EventOrganizerTask {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  dueDate     DateTime
+  status      String
+  userId      String
+  createdAt   DateTime @default(now())
+
+  user EventOrganizerUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model EventOrganizerGuest {
+  id        String   @id @default(uuid())
+  eventId   String
+  name      String
+  email     String
+  phone     String
+  status    String
+  userId    String
+  createdAt DateTime @default(now())
+
+  user EventOrganizerUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model EventOrganizerVenue {
+  id          String   @id @default(uuid())
+  name        String
+  location    String
+  capacity    Int
+  amenities   String
+  submittedBy String
+  createdAt   DateTime @default(now())
+
+  user EventOrganizerUser @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
+}
+
+model EventOrganizerServiceProvider {
+  id          String   @id @default(uuid())
+  name        String
+  serviceType String
+  contactInfo String
+  submittedBy String
+  createdAt   DateTime @default(now())
+
+  user EventOrganizerUser @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
+}
