@@ -69,3 +69,71 @@ model EventOrganizerServiceProvider {
 
   user EventOrganizerUser @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
 }
+
+model LanguageLearnerUser {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      String   @default("learner") // "learner", "owner", "admin", "banned"
+  createdAt DateTime @default(now())
+
+  ownedPlatforms LanguageLearnerPlatform[] // Platforms owned by user
+  reviews        LanguageLearnerReview[]
+  votesGiven     LanguageLearnerUserVote[]   @relation("VotesGiven")
+  votesReceived  LanguageLearnerUserVote[]   @relation("VotesReceived")
+  likes          LanguageLearnerReviewLike[]
+}
+
+model LanguageLearnerPlatform {
+  id               String   @id @default(uuid())
+  name             String
+  website          String
+  languagesOffered String
+  description      String
+  ownerId          String // User ID reference for ownership
+  status           String   @default("pending") // "pending", "approved", "rejected"
+  createdAt        DateTime @default(now())
+
+  owner   LanguageLearnerUser     @relation(fields: [ownerId], references: [id])
+  reviews LanguageLearnerReview[]
+}
+
+model LanguageLearnerReview {
+  id         String   @id @default(uuid())
+  platformId String
+  userId     String
+  rating     Int
+  comment    String
+  status     String   @default("pending") // "pending", "approved", "rejected"
+  createdAt  DateTime @default(now())
+
+  platform LanguageLearnerPlatform     @relation(fields: [platformId], references: [id])
+  user     LanguageLearnerUser         @relation(fields: [userId], references: [id])
+  likes    LanguageLearnerReviewLike[]
+}
+
+model LanguageLearnerReviewLike {
+  id        String   @id @default(uuid())
+  userId    String
+  reviewId  String
+  createdAt DateTime @default(now())
+
+  user   LanguageLearnerUser   @relation(fields: [userId], references: [id])
+  review LanguageLearnerReview @relation(fields: [reviewId], references: [id])
+
+  @@unique([userId, reviewId]) // Prevents duplicate likes per user
+}
+
+model LanguageLearnerUserVote {
+  id        String   @id @default(uuid())
+  userId    String
+  voterId   String
+  voteType  String // "upvote" or "downvote"
+  createdAt DateTime @default(now())
+
+  user  LanguageLearnerUser @relation(fields: [userId], references: [id], name: "VotesReceived")
+  voter LanguageLearnerUser @relation(fields: [voterId], references: [id], name: "VotesGiven")
+
+  @@unique([userId, voterId]) // Prevents multiple votes per user
+}
