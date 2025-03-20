@@ -11,8 +11,9 @@ let testUserId: string; // Replace with a valid test user ID
 const testEmail = "healthRecordECC@gmail.com";
 
 describe("Elderly Care Companion - Health Records API Tests", () => {
-
+  // =========================
   // ✅ Cleanup before running tests
+  // =========================
   beforeAll(async () => {
     // delete existing user with the same email
     await prisma.userElderlyCareCompanion.deleteMany({ where: { email: testEmail } });
@@ -116,7 +117,9 @@ describe("Elderly Care Companion - Health Records API Tests", () => {
     expect(data.message).toBe("Health record deleted successfully");
   });
 
+  // =========================
   // ✅ Cleanup remaining test data after tests
+  // =========================
   afterAll(async () => {
     await prisma.elderlyCareCompanionRecord.deleteMany({ where: { userId: testUserId } });
     await prisma.userElderlyCareCompanion.deleteMany({ where: { email: testEmail } });

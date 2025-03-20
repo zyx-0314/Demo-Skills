@@ -8,7 +8,9 @@ let testClinicId: string;
 
 describe("Elderly Care Companion - Clinics API Tests", () => {
 
+  // =========================
   // ✅ Cleanup before running tests
+  // =========================
   beforeAll(async () => {
     await prisma.elderlyCareCompanionClinic.deleteMany();
   });
@@ -91,7 +93,9 @@ describe("Elderly Care Companion - Clinics API Tests", () => {
     expect(data.message).toBe("Clinic deleted successfully");
   });
 
+  // =========================
   // ✅ Cleanup remaining test data after tests
+  // =========================
   afterAll(async () => {
     await prisma.elderlyCareCompanionClinic.deleteMany();
     await prisma.$disconnect();
