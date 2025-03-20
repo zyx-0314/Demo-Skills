@@ -9,7 +9,10 @@ export async function GET(req: NextRequest) {
     const posts = await prisma.postDIYHomes.findMany();
     return NextResponse.json(posts, { status: 200 });
   } catch (error) {
-    console.error("Error fetching posts:", error);
-    return NextResponse.json({ error: "Failed to fetch posts" }, { status: 500 });
+    let errorMessage = "Failed to fetch posts";
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
