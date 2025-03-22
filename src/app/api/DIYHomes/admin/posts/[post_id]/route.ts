@@ -9,7 +9,10 @@ export async function DELETE(req: NextRequest, { params }: { params: { post_id: 
     await prisma.postDIYHomes.delete({ where: { id: params.post_id } });
     return NextResponse.json({ message: "Post deleted successfully" }, { status: 200 });
   } catch (error) {
-    console.error("Error deleting post:", error);
-    return NextResponse.json({ error: "Failed to delete post" }, { status: 500 });
+    let errorMessage = "Failed to delete post";
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

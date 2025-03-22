@@ -165,6 +165,51 @@ exports.Prisma.EventOrganizerServiceProviderScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.LanguageLearnerUserScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  role: 'role',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.LanguageLearnerPlatformScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  website: 'website',
+  languagesOffered: 'languagesOffered',
+  description: 'description',
+  ownerId: 'ownerId',
+  status: 'status',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.LanguageLearnerReviewScalarFieldEnum = {
+  id: 'id',
+  platformId: 'platformId',
+  userId: 'userId',
+  rating: 'rating',
+  comment: 'comment',
+  status: 'status',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.LanguageLearnerReviewLikeScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  reviewId: 'reviewId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.LanguageLearnerUserVoteScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  voterId: 'voterId',
+  voteType: 'voteType',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -181,7 +226,12 @@ exports.Prisma.ModelName = {
   EventOrganizerTask: 'EventOrganizerTask',
   EventOrganizerGuest: 'EventOrganizerGuest',
   EventOrganizerVenue: 'EventOrganizerVenue',
-  EventOrganizerServiceProvider: 'EventOrganizerServiceProvider'
+  EventOrganizerServiceProvider: 'EventOrganizerServiceProvider',
+  LanguageLearnerUser: 'LanguageLearnerUser',
+  LanguageLearnerPlatform: 'LanguageLearnerPlatform',
+  LanguageLearnerReview: 'LanguageLearnerReview',
+  LanguageLearnerReviewLike: 'LanguageLearnerReviewLike',
+  LanguageLearnerUserVote: 'LanguageLearnerUserVote'
 };
 
 /**

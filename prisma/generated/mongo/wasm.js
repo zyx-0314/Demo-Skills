@@ -110,20 +110,10 @@ Prisma.NullTypes = {
  * Enums
  */
 
-exports.Prisma.DiscussionScalarFieldEnum = {
+exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
-  postId: 'postId',
-  userId: 'userId',
-  message: 'message',
-  createdAt: 'createdAt'
-};
-
-exports.Prisma.ReplyScalarFieldEnum = {
-  id: 'id',
-  discussionId: 'discussionId',
-  userId: 'userId',
-  message: 'message',
-  createdAt: 'createdAt'
+  email: 'email',
+  name: 'name'
 };
 
 exports.Prisma.SortOrder = {
@@ -138,8 +128,7 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  Discussion: 'Discussion',
-  Reply: 'Reply'
+  User: 'User'
 };
 
 /**

@@ -38,6 +38,31 @@ export type EventOrganizerVenue = $Result.DefaultSelection<Prisma.$EventOrganize
  * 
  */
 export type EventOrganizerServiceProvider = $Result.DefaultSelection<Prisma.$EventOrganizerServiceProviderPayload>
+/**
+ * Model LanguageLearnerUser
+ * 
+ */
+export type LanguageLearnerUser = $Result.DefaultSelection<Prisma.$LanguageLearnerUserPayload>
+/**
+ * Model LanguageLearnerPlatform
+ * 
+ */
+export type LanguageLearnerPlatform = $Result.DefaultSelection<Prisma.$LanguageLearnerPlatformPayload>
+/**
+ * Model LanguageLearnerReview
+ * 
+ */
+export type LanguageLearnerReview = $Result.DefaultSelection<Prisma.$LanguageLearnerReviewPayload>
+/**
+ * Model LanguageLearnerReviewLike
+ * 
+ */
+export type LanguageLearnerReviewLike = $Result.DefaultSelection<Prisma.$LanguageLearnerReviewLikePayload>
+/**
+ * Model LanguageLearnerUserVote
+ * 
+ */
+export type LanguageLearnerUserVote = $Result.DefaultSelection<Prisma.$LanguageLearnerUserVotePayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -213,6 +238,56 @@ export class PrismaClient<
     * ```
     */
   get eventOrganizerServiceProvider(): Prisma.EventOrganizerServiceProviderDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.languageLearnerUser`: Exposes CRUD operations for the **LanguageLearnerUser** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more LanguageLearnerUsers
+    * const languageLearnerUsers = await prisma.languageLearnerUser.findMany()
+    * ```
+    */
+  get languageLearnerUser(): Prisma.LanguageLearnerUserDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.languageLearnerPlatform`: Exposes CRUD operations for the **LanguageLearnerPlatform** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more LanguageLearnerPlatforms
+    * const languageLearnerPlatforms = await prisma.languageLearnerPlatform.findMany()
+    * ```
+    */
+  get languageLearnerPlatform(): Prisma.LanguageLearnerPlatformDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.languageLearnerReview`: Exposes CRUD operations for the **LanguageLearnerReview** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more LanguageLearnerReviews
+    * const languageLearnerReviews = await prisma.languageLearnerReview.findMany()
+    * ```
+    */
+  get languageLearnerReview(): Prisma.LanguageLearnerReviewDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.languageLearnerReviewLike`: Exposes CRUD operations for the **LanguageLearnerReviewLike** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more LanguageLearnerReviewLikes
+    * const languageLearnerReviewLikes = await prisma.languageLearnerReviewLike.findMany()
+    * ```
+    */
+  get languageLearnerReviewLike(): Prisma.LanguageLearnerReviewLikeDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.languageLearnerUserVote`: Exposes CRUD operations for the **LanguageLearnerUserVote** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more LanguageLearnerUserVotes
+    * const languageLearnerUserVotes = await prisma.languageLearnerUserVote.findMany()
+    * ```
+    */
+  get languageLearnerUserVote(): Prisma.LanguageLearnerUserVoteDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -657,14 +732,19 @@ export namespace Prisma {
     EventOrganizerTask: 'EventOrganizerTask',
     EventOrganizerGuest: 'EventOrganizerGuest',
     EventOrganizerVenue: 'EventOrganizerVenue',
-    EventOrganizerServiceProvider: 'EventOrganizerServiceProvider'
+    EventOrganizerServiceProvider: 'EventOrganizerServiceProvider',
+    LanguageLearnerUser: 'LanguageLearnerUser',
+    LanguageLearnerPlatform: 'LanguageLearnerPlatform',
+    LanguageLearnerReview: 'LanguageLearnerReview',
+    LanguageLearnerReviewLike: 'LanguageLearnerReviewLike',
+    LanguageLearnerUserVote: 'LanguageLearnerUserVote'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
 
 
   export type Datasources = {
-    mongodb?: Datasource
+    neon2?: Datasource
   }
 
   interface TypeMapCb<ClientOptions = {}> extends $Utils.Fn<{extArgs: $Extensions.InternalArgs }, $Utils.Record<string, any>> {
@@ -676,7 +756,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider"
+      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider" | "languageLearnerUser" | "languageLearnerPlatform" | "languageLearnerReview" | "languageLearnerReviewLike" | "languageLearnerUserVote"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1050,6 +1130,376 @@ export namespace Prisma {
           }
         }
       }
+      LanguageLearnerUser: {
+        payload: Prisma.$LanguageLearnerUserPayload<ExtArgs>
+        fields: Prisma.LanguageLearnerUserFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.LanguageLearnerUserFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.LanguageLearnerUserFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload>
+          }
+          findFirst: {
+            args: Prisma.LanguageLearnerUserFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.LanguageLearnerUserFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload>
+          }
+          findMany: {
+            args: Prisma.LanguageLearnerUserFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload>[]
+          }
+          create: {
+            args: Prisma.LanguageLearnerUserCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload>
+          }
+          createMany: {
+            args: Prisma.LanguageLearnerUserCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.LanguageLearnerUserCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload>[]
+          }
+          delete: {
+            args: Prisma.LanguageLearnerUserDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload>
+          }
+          update: {
+            args: Prisma.LanguageLearnerUserUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload>
+          }
+          deleteMany: {
+            args: Prisma.LanguageLearnerUserDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.LanguageLearnerUserUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.LanguageLearnerUserUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload>[]
+          }
+          upsert: {
+            args: Prisma.LanguageLearnerUserUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserPayload>
+          }
+          aggregate: {
+            args: Prisma.LanguageLearnerUserAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLanguageLearnerUser>
+          }
+          groupBy: {
+            args: Prisma.LanguageLearnerUserGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerUserGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.LanguageLearnerUserCountArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerUserCountAggregateOutputType> | number
+          }
+        }
+      }
+      LanguageLearnerPlatform: {
+        payload: Prisma.$LanguageLearnerPlatformPayload<ExtArgs>
+        fields: Prisma.LanguageLearnerPlatformFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.LanguageLearnerPlatformFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.LanguageLearnerPlatformFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload>
+          }
+          findFirst: {
+            args: Prisma.LanguageLearnerPlatformFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.LanguageLearnerPlatformFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload>
+          }
+          findMany: {
+            args: Prisma.LanguageLearnerPlatformFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload>[]
+          }
+          create: {
+            args: Prisma.LanguageLearnerPlatformCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload>
+          }
+          createMany: {
+            args: Prisma.LanguageLearnerPlatformCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.LanguageLearnerPlatformCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload>[]
+          }
+          delete: {
+            args: Prisma.LanguageLearnerPlatformDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload>
+          }
+          update: {
+            args: Prisma.LanguageLearnerPlatformUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload>
+          }
+          deleteMany: {
+            args: Prisma.LanguageLearnerPlatformDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.LanguageLearnerPlatformUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.LanguageLearnerPlatformUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload>[]
+          }
+          upsert: {
+            args: Prisma.LanguageLearnerPlatformUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerPlatformPayload>
+          }
+          aggregate: {
+            args: Prisma.LanguageLearnerPlatformAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLanguageLearnerPlatform>
+          }
+          groupBy: {
+            args: Prisma.LanguageLearnerPlatformGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerPlatformGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.LanguageLearnerPlatformCountArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerPlatformCountAggregateOutputType> | number
+          }
+        }
+      }
+      LanguageLearnerReview: {
+        payload: Prisma.$LanguageLearnerReviewPayload<ExtArgs>
+        fields: Prisma.LanguageLearnerReviewFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.LanguageLearnerReviewFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.LanguageLearnerReviewFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload>
+          }
+          findFirst: {
+            args: Prisma.LanguageLearnerReviewFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.LanguageLearnerReviewFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload>
+          }
+          findMany: {
+            args: Prisma.LanguageLearnerReviewFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload>[]
+          }
+          create: {
+            args: Prisma.LanguageLearnerReviewCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload>
+          }
+          createMany: {
+            args: Prisma.LanguageLearnerReviewCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.LanguageLearnerReviewCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload>[]
+          }
+          delete: {
+            args: Prisma.LanguageLearnerReviewDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload>
+          }
+          update: {
+            args: Prisma.LanguageLearnerReviewUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload>
+          }
+          deleteMany: {
+            args: Prisma.LanguageLearnerReviewDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.LanguageLearnerReviewUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.LanguageLearnerReviewUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload>[]
+          }
+          upsert: {
+            args: Prisma.LanguageLearnerReviewUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewPayload>
+          }
+          aggregate: {
+            args: Prisma.LanguageLearnerReviewAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLanguageLearnerReview>
+          }
+          groupBy: {
+            args: Prisma.LanguageLearnerReviewGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerReviewGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.LanguageLearnerReviewCountArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerReviewCountAggregateOutputType> | number
+          }
+        }
+      }
+      LanguageLearnerReviewLike: {
+        payload: Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>
+        fields: Prisma.LanguageLearnerReviewLikeFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.LanguageLearnerReviewLikeFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.LanguageLearnerReviewLikeFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload>
+          }
+          findFirst: {
+            args: Prisma.LanguageLearnerReviewLikeFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.LanguageLearnerReviewLikeFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload>
+          }
+          findMany: {
+            args: Prisma.LanguageLearnerReviewLikeFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload>[]
+          }
+          create: {
+            args: Prisma.LanguageLearnerReviewLikeCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload>
+          }
+          createMany: {
+            args: Prisma.LanguageLearnerReviewLikeCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.LanguageLearnerReviewLikeCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload>[]
+          }
+          delete: {
+            args: Prisma.LanguageLearnerReviewLikeDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload>
+          }
+          update: {
+            args: Prisma.LanguageLearnerReviewLikeUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload>
+          }
+          deleteMany: {
+            args: Prisma.LanguageLearnerReviewLikeDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.LanguageLearnerReviewLikeUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.LanguageLearnerReviewLikeUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload>[]
+          }
+          upsert: {
+            args: Prisma.LanguageLearnerReviewLikeUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerReviewLikePayload>
+          }
+          aggregate: {
+            args: Prisma.LanguageLearnerReviewLikeAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLanguageLearnerReviewLike>
+          }
+          groupBy: {
+            args: Prisma.LanguageLearnerReviewLikeGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerReviewLikeGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.LanguageLearnerReviewLikeCountArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerReviewLikeCountAggregateOutputType> | number
+          }
+        }
+      }
+      LanguageLearnerUserVote: {
+        payload: Prisma.$LanguageLearnerUserVotePayload<ExtArgs>
+        fields: Prisma.LanguageLearnerUserVoteFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.LanguageLearnerUserVoteFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.LanguageLearnerUserVoteFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload>
+          }
+          findFirst: {
+            args: Prisma.LanguageLearnerUserVoteFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.LanguageLearnerUserVoteFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload>
+          }
+          findMany: {
+            args: Prisma.LanguageLearnerUserVoteFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload>[]
+          }
+          create: {
+            args: Prisma.LanguageLearnerUserVoteCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload>
+          }
+          createMany: {
+            args: Prisma.LanguageLearnerUserVoteCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.LanguageLearnerUserVoteCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload>[]
+          }
+          delete: {
+            args: Prisma.LanguageLearnerUserVoteDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload>
+          }
+          update: {
+            args: Prisma.LanguageLearnerUserVoteUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload>
+          }
+          deleteMany: {
+            args: Prisma.LanguageLearnerUserVoteDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.LanguageLearnerUserVoteUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.LanguageLearnerUserVoteUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload>[]
+          }
+          upsert: {
+            args: Prisma.LanguageLearnerUserVoteUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LanguageLearnerUserVotePayload>
+          }
+          aggregate: {
+            args: Prisma.LanguageLearnerUserVoteAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLanguageLearnerUserVote>
+          }
+          groupBy: {
+            args: Prisma.LanguageLearnerUserVoteGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerUserVoteGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.LanguageLearnerUserVoteCountArgs<ExtArgs>
+            result: $Utils.Optional<LanguageLearnerUserVoteCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -1139,6 +1589,11 @@ export namespace Prisma {
     eventOrganizerGuest?: EventOrganizerGuestOmit
     eventOrganizerVenue?: EventOrganizerVenueOmit
     eventOrganizerServiceProvider?: EventOrganizerServiceProviderOmit
+    languageLearnerUser?: LanguageLearnerUserOmit
+    languageLearnerPlatform?: LanguageLearnerPlatformOmit
+    languageLearnerReview?: LanguageLearnerReviewOmit
+    languageLearnerReviewLike?: LanguageLearnerReviewLikeOmit
+    languageLearnerUserVote?: LanguageLearnerUserVoteOmit
   }
 
   /* Types for Logging */
@@ -1283,6 +1738,135 @@ export namespace Prisma {
    */
   export type EventOrganizerUserCountOutputTypeCountServiceProvidersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: EventOrganizerServiceProviderWhereInput
+  }
+
+
+  /**
+   * Count Type LanguageLearnerUserCountOutputType
+   */
+
+  export type LanguageLearnerUserCountOutputType = {
+    ownedPlatforms: number
+    reviews: number
+    votesGiven: number
+    votesReceived: number
+    likes: number
+  }
+
+  export type LanguageLearnerUserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    ownedPlatforms?: boolean | LanguageLearnerUserCountOutputTypeCountOwnedPlatformsArgs
+    reviews?: boolean | LanguageLearnerUserCountOutputTypeCountReviewsArgs
+    votesGiven?: boolean | LanguageLearnerUserCountOutputTypeCountVotesGivenArgs
+    votesReceived?: boolean | LanguageLearnerUserCountOutputTypeCountVotesReceivedArgs
+    likes?: boolean | LanguageLearnerUserCountOutputTypeCountLikesArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * LanguageLearnerUserCountOutputType without action
+   */
+  export type LanguageLearnerUserCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserCountOutputType
+     */
+    select?: LanguageLearnerUserCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerUserCountOutputType without action
+   */
+  export type LanguageLearnerUserCountOutputTypeCountOwnedPlatformsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerPlatformWhereInput
+  }
+
+  /**
+   * LanguageLearnerUserCountOutputType without action
+   */
+  export type LanguageLearnerUserCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerReviewWhereInput
+  }
+
+  /**
+   * LanguageLearnerUserCountOutputType without action
+   */
+  export type LanguageLearnerUserCountOutputTypeCountVotesGivenArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerUserVoteWhereInput
+  }
+
+  /**
+   * LanguageLearnerUserCountOutputType without action
+   */
+  export type LanguageLearnerUserCountOutputTypeCountVotesReceivedArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerUserVoteWhereInput
+  }
+
+  /**
+   * LanguageLearnerUserCountOutputType without action
+   */
+  export type LanguageLearnerUserCountOutputTypeCountLikesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerReviewLikeWhereInput
+  }
+
+
+  /**
+   * Count Type LanguageLearnerPlatformCountOutputType
+   */
+
+  export type LanguageLearnerPlatformCountOutputType = {
+    reviews: number
+  }
+
+  export type LanguageLearnerPlatformCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reviews?: boolean | LanguageLearnerPlatformCountOutputTypeCountReviewsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * LanguageLearnerPlatformCountOutputType without action
+   */
+  export type LanguageLearnerPlatformCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatformCountOutputType
+     */
+    select?: LanguageLearnerPlatformCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerPlatformCountOutputType without action
+   */
+  export type LanguageLearnerPlatformCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerReviewWhereInput
+  }
+
+
+  /**
+   * Count Type LanguageLearnerReviewCountOutputType
+   */
+
+  export type LanguageLearnerReviewCountOutputType = {
+    likes: number
+  }
+
+  export type LanguageLearnerReviewCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    likes?: boolean | LanguageLearnerReviewCountOutputTypeCountLikesArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * LanguageLearnerReviewCountOutputType without action
+   */
+  export type LanguageLearnerReviewCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewCountOutputType
+     */
+    select?: LanguageLearnerReviewCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerReviewCountOutputType without action
+   */
+  export type LanguageLearnerReviewCountOutputTypeCountLikesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerReviewLikeWhereInput
   }
 
 
@@ -6815,6 +7399,5603 @@ export namespace Prisma {
 
 
   /**
+   * Model LanguageLearnerUser
+   */
+
+  export type AggregateLanguageLearnerUser = {
+    _count: LanguageLearnerUserCountAggregateOutputType | null
+    _min: LanguageLearnerUserMinAggregateOutputType | null
+    _max: LanguageLearnerUserMaxAggregateOutputType | null
+  }
+
+  export type LanguageLearnerUserMinAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    role: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerUserMaxAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    role: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerUserCountAggregateOutputType = {
+    id: number
+    email: number
+    name: number
+    password: number
+    role: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type LanguageLearnerUserMinAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    role?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerUserMaxAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    role?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerUserCountAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    role?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type LanguageLearnerUserAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerUser to aggregate.
+     */
+    where?: LanguageLearnerUserWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerUsers to fetch.
+     */
+    orderBy?: LanguageLearnerUserOrderByWithRelationInput | LanguageLearnerUserOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: LanguageLearnerUserWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerUsers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerUsers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned LanguageLearnerUsers
+    **/
+    _count?: true | LanguageLearnerUserCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: LanguageLearnerUserMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: LanguageLearnerUserMaxAggregateInputType
+  }
+
+  export type GetLanguageLearnerUserAggregateType<T extends LanguageLearnerUserAggregateArgs> = {
+        [P in keyof T & keyof AggregateLanguageLearnerUser]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateLanguageLearnerUser[P]>
+      : GetScalarType<T[P], AggregateLanguageLearnerUser[P]>
+  }
+
+
+
+
+  export type LanguageLearnerUserGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerUserWhereInput
+    orderBy?: LanguageLearnerUserOrderByWithAggregationInput | LanguageLearnerUserOrderByWithAggregationInput[]
+    by: LanguageLearnerUserScalarFieldEnum[] | LanguageLearnerUserScalarFieldEnum
+    having?: LanguageLearnerUserScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: LanguageLearnerUserCountAggregateInputType | true
+    _min?: LanguageLearnerUserMinAggregateInputType
+    _max?: LanguageLearnerUserMaxAggregateInputType
+  }
+
+  export type LanguageLearnerUserGroupByOutputType = {
+    id: string
+    email: string
+    name: string
+    password: string
+    role: string
+    createdAt: Date
+    _count: LanguageLearnerUserCountAggregateOutputType | null
+    _min: LanguageLearnerUserMinAggregateOutputType | null
+    _max: LanguageLearnerUserMaxAggregateOutputType | null
+  }
+
+  type GetLanguageLearnerUserGroupByPayload<T extends LanguageLearnerUserGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<LanguageLearnerUserGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof LanguageLearnerUserGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], LanguageLearnerUserGroupByOutputType[P]>
+            : GetScalarType<T[P], LanguageLearnerUserGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type LanguageLearnerUserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    role?: boolean
+    createdAt?: boolean
+    ownedPlatforms?: boolean | LanguageLearnerUser$ownedPlatformsArgs<ExtArgs>
+    reviews?: boolean | LanguageLearnerUser$reviewsArgs<ExtArgs>
+    votesGiven?: boolean | LanguageLearnerUser$votesGivenArgs<ExtArgs>
+    votesReceived?: boolean | LanguageLearnerUser$votesReceivedArgs<ExtArgs>
+    likes?: boolean | LanguageLearnerUser$likesArgs<ExtArgs>
+    _count?: boolean | LanguageLearnerUserCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerUser"]>
+
+  export type LanguageLearnerUserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    role?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["languageLearnerUser"]>
+
+  export type LanguageLearnerUserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    role?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["languageLearnerUser"]>
+
+  export type LanguageLearnerUserSelectScalar = {
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    role?: boolean
+    createdAt?: boolean
+  }
+
+  export type LanguageLearnerUserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "role" | "createdAt", ExtArgs["result"]["languageLearnerUser"]>
+  export type LanguageLearnerUserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    ownedPlatforms?: boolean | LanguageLearnerUser$ownedPlatformsArgs<ExtArgs>
+    reviews?: boolean | LanguageLearnerUser$reviewsArgs<ExtArgs>
+    votesGiven?: boolean | LanguageLearnerUser$votesGivenArgs<ExtArgs>
+    votesReceived?: boolean | LanguageLearnerUser$votesReceivedArgs<ExtArgs>
+    likes?: boolean | LanguageLearnerUser$likesArgs<ExtArgs>
+    _count?: boolean | LanguageLearnerUserCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type LanguageLearnerUserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type LanguageLearnerUserIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $LanguageLearnerUserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "LanguageLearnerUser"
+    objects: {
+      ownedPlatforms: Prisma.$LanguageLearnerPlatformPayload<ExtArgs>[]
+      reviews: Prisma.$LanguageLearnerReviewPayload<ExtArgs>[]
+      votesGiven: Prisma.$LanguageLearnerUserVotePayload<ExtArgs>[]
+      votesReceived: Prisma.$LanguageLearnerUserVotePayload<ExtArgs>[]
+      likes: Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      email: string
+      name: string
+      password: string
+      role: string
+      createdAt: Date
+    }, ExtArgs["result"]["languageLearnerUser"]>
+    composites: {}
+  }
+
+  type LanguageLearnerUserGetPayload<S extends boolean | null | undefined | LanguageLearnerUserDefaultArgs> = $Result.GetResult<Prisma.$LanguageLearnerUserPayload, S>
+
+  type LanguageLearnerUserCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LanguageLearnerUserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LanguageLearnerUserCountAggregateInputType | true
+    }
+
+  export interface LanguageLearnerUserDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['LanguageLearnerUser'], meta: { name: 'LanguageLearnerUser' } }
+    /**
+     * Find zero or one LanguageLearnerUser that matches the filter.
+     * @param {LanguageLearnerUserFindUniqueArgs} args - Arguments to find a LanguageLearnerUser
+     * @example
+     * // Get one LanguageLearnerUser
+     * const languageLearnerUser = await prisma.languageLearnerUser.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends LanguageLearnerUserFindUniqueArgs>(args: SelectSubset<T, LanguageLearnerUserFindUniqueArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one LanguageLearnerUser that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {LanguageLearnerUserFindUniqueOrThrowArgs} args - Arguments to find a LanguageLearnerUser
+     * @example
+     * // Get one LanguageLearnerUser
+     * const languageLearnerUser = await prisma.languageLearnerUser.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends LanguageLearnerUserFindUniqueOrThrowArgs>(args: SelectSubset<T, LanguageLearnerUserFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerUser that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserFindFirstArgs} args - Arguments to find a LanguageLearnerUser
+     * @example
+     * // Get one LanguageLearnerUser
+     * const languageLearnerUser = await prisma.languageLearnerUser.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends LanguageLearnerUserFindFirstArgs>(args?: SelectSubset<T, LanguageLearnerUserFindFirstArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerUser that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserFindFirstOrThrowArgs} args - Arguments to find a LanguageLearnerUser
+     * @example
+     * // Get one LanguageLearnerUser
+     * const languageLearnerUser = await prisma.languageLearnerUser.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends LanguageLearnerUserFindFirstOrThrowArgs>(args?: SelectSubset<T, LanguageLearnerUserFindFirstOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more LanguageLearnerUsers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all LanguageLearnerUsers
+     * const languageLearnerUsers = await prisma.languageLearnerUser.findMany()
+     * 
+     * // Get first 10 LanguageLearnerUsers
+     * const languageLearnerUsers = await prisma.languageLearnerUser.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const languageLearnerUserWithIdOnly = await prisma.languageLearnerUser.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends LanguageLearnerUserFindManyArgs>(args?: SelectSubset<T, LanguageLearnerUserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a LanguageLearnerUser.
+     * @param {LanguageLearnerUserCreateArgs} args - Arguments to create a LanguageLearnerUser.
+     * @example
+     * // Create one LanguageLearnerUser
+     * const LanguageLearnerUser = await prisma.languageLearnerUser.create({
+     *   data: {
+     *     // ... data to create a LanguageLearnerUser
+     *   }
+     * })
+     * 
+     */
+    create<T extends LanguageLearnerUserCreateArgs>(args: SelectSubset<T, LanguageLearnerUserCreateArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many LanguageLearnerUsers.
+     * @param {LanguageLearnerUserCreateManyArgs} args - Arguments to create many LanguageLearnerUsers.
+     * @example
+     * // Create many LanguageLearnerUsers
+     * const languageLearnerUser = await prisma.languageLearnerUser.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends LanguageLearnerUserCreateManyArgs>(args?: SelectSubset<T, LanguageLearnerUserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many LanguageLearnerUsers and returns the data saved in the database.
+     * @param {LanguageLearnerUserCreateManyAndReturnArgs} args - Arguments to create many LanguageLearnerUsers.
+     * @example
+     * // Create many LanguageLearnerUsers
+     * const languageLearnerUser = await prisma.languageLearnerUser.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many LanguageLearnerUsers and only return the `id`
+     * const languageLearnerUserWithIdOnly = await prisma.languageLearnerUser.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends LanguageLearnerUserCreateManyAndReturnArgs>(args?: SelectSubset<T, LanguageLearnerUserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a LanguageLearnerUser.
+     * @param {LanguageLearnerUserDeleteArgs} args - Arguments to delete one LanguageLearnerUser.
+     * @example
+     * // Delete one LanguageLearnerUser
+     * const LanguageLearnerUser = await prisma.languageLearnerUser.delete({
+     *   where: {
+     *     // ... filter to delete one LanguageLearnerUser
+     *   }
+     * })
+     * 
+     */
+    delete<T extends LanguageLearnerUserDeleteArgs>(args: SelectSubset<T, LanguageLearnerUserDeleteArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one LanguageLearnerUser.
+     * @param {LanguageLearnerUserUpdateArgs} args - Arguments to update one LanguageLearnerUser.
+     * @example
+     * // Update one LanguageLearnerUser
+     * const languageLearnerUser = await prisma.languageLearnerUser.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends LanguageLearnerUserUpdateArgs>(args: SelectSubset<T, LanguageLearnerUserUpdateArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more LanguageLearnerUsers.
+     * @param {LanguageLearnerUserDeleteManyArgs} args - Arguments to filter LanguageLearnerUsers to delete.
+     * @example
+     * // Delete a few LanguageLearnerUsers
+     * const { count } = await prisma.languageLearnerUser.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends LanguageLearnerUserDeleteManyArgs>(args?: SelectSubset<T, LanguageLearnerUserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerUsers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many LanguageLearnerUsers
+     * const languageLearnerUser = await prisma.languageLearnerUser.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends LanguageLearnerUserUpdateManyArgs>(args: SelectSubset<T, LanguageLearnerUserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerUsers and returns the data updated in the database.
+     * @param {LanguageLearnerUserUpdateManyAndReturnArgs} args - Arguments to update many LanguageLearnerUsers.
+     * @example
+     * // Update many LanguageLearnerUsers
+     * const languageLearnerUser = await prisma.languageLearnerUser.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more LanguageLearnerUsers and only return the `id`
+     * const languageLearnerUserWithIdOnly = await prisma.languageLearnerUser.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends LanguageLearnerUserUpdateManyAndReturnArgs>(args: SelectSubset<T, LanguageLearnerUserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one LanguageLearnerUser.
+     * @param {LanguageLearnerUserUpsertArgs} args - Arguments to update or create a LanguageLearnerUser.
+     * @example
+     * // Update or create a LanguageLearnerUser
+     * const languageLearnerUser = await prisma.languageLearnerUser.upsert({
+     *   create: {
+     *     // ... data to create a LanguageLearnerUser
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the LanguageLearnerUser we want to update
+     *   }
+     * })
+     */
+    upsert<T extends LanguageLearnerUserUpsertArgs>(args: SelectSubset<T, LanguageLearnerUserUpsertArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of LanguageLearnerUsers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserCountArgs} args - Arguments to filter LanguageLearnerUsers to count.
+     * @example
+     * // Count the number of LanguageLearnerUsers
+     * const count = await prisma.languageLearnerUser.count({
+     *   where: {
+     *     // ... the filter for the LanguageLearnerUsers we want to count
+     *   }
+     * })
+    **/
+    count<T extends LanguageLearnerUserCountArgs>(
+      args?: Subset<T, LanguageLearnerUserCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], LanguageLearnerUserCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a LanguageLearnerUser.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends LanguageLearnerUserAggregateArgs>(args: Subset<T, LanguageLearnerUserAggregateArgs>): Prisma.PrismaPromise<GetLanguageLearnerUserAggregateType<T>>
+
+    /**
+     * Group by LanguageLearnerUser.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends LanguageLearnerUserGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: LanguageLearnerUserGroupByArgs['orderBy'] }
+        : { orderBy?: LanguageLearnerUserGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, LanguageLearnerUserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLanguageLearnerUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the LanguageLearnerUser model
+   */
+  readonly fields: LanguageLearnerUserFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for LanguageLearnerUser.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__LanguageLearnerUserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    ownedPlatforms<T extends LanguageLearnerUser$ownedPlatformsArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUser$ownedPlatformsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reviews<T extends LanguageLearnerUser$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUser$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    votesGiven<T extends LanguageLearnerUser$votesGivenArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUser$votesGivenArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    votesReceived<T extends LanguageLearnerUser$votesReceivedArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUser$votesReceivedArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    likes<T extends LanguageLearnerUser$likesArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUser$likesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the LanguageLearnerUser model
+   */ 
+  interface LanguageLearnerUserFieldRefs {
+    readonly id: FieldRef<"LanguageLearnerUser", 'String'>
+    readonly email: FieldRef<"LanguageLearnerUser", 'String'>
+    readonly name: FieldRef<"LanguageLearnerUser", 'String'>
+    readonly password: FieldRef<"LanguageLearnerUser", 'String'>
+    readonly role: FieldRef<"LanguageLearnerUser", 'String'>
+    readonly createdAt: FieldRef<"LanguageLearnerUser", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * LanguageLearnerUser findUnique
+   */
+  export type LanguageLearnerUserFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUser to fetch.
+     */
+    where: LanguageLearnerUserWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerUser findUniqueOrThrow
+   */
+  export type LanguageLearnerUserFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUser to fetch.
+     */
+    where: LanguageLearnerUserWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerUser findFirst
+   */
+  export type LanguageLearnerUserFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUser to fetch.
+     */
+    where?: LanguageLearnerUserWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerUsers to fetch.
+     */
+    orderBy?: LanguageLearnerUserOrderByWithRelationInput | LanguageLearnerUserOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerUsers.
+     */
+    cursor?: LanguageLearnerUserWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerUsers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerUsers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerUsers.
+     */
+    distinct?: LanguageLearnerUserScalarFieldEnum | LanguageLearnerUserScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUser findFirstOrThrow
+   */
+  export type LanguageLearnerUserFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUser to fetch.
+     */
+    where?: LanguageLearnerUserWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerUsers to fetch.
+     */
+    orderBy?: LanguageLearnerUserOrderByWithRelationInput | LanguageLearnerUserOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerUsers.
+     */
+    cursor?: LanguageLearnerUserWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerUsers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerUsers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerUsers.
+     */
+    distinct?: LanguageLearnerUserScalarFieldEnum | LanguageLearnerUserScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUser findMany
+   */
+  export type LanguageLearnerUserFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUsers to fetch.
+     */
+    where?: LanguageLearnerUserWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerUsers to fetch.
+     */
+    orderBy?: LanguageLearnerUserOrderByWithRelationInput | LanguageLearnerUserOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing LanguageLearnerUsers.
+     */
+    cursor?: LanguageLearnerUserWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerUsers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerUsers.
+     */
+    skip?: number
+    distinct?: LanguageLearnerUserScalarFieldEnum | LanguageLearnerUserScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUser create
+   */
+  export type LanguageLearnerUserCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+    /**
+     * The data needed to create a LanguageLearnerUser.
+     */
+    data: XOR<LanguageLearnerUserCreateInput, LanguageLearnerUserUncheckedCreateInput>
+  }
+
+  /**
+   * LanguageLearnerUser createMany
+   */
+  export type LanguageLearnerUserCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many LanguageLearnerUsers.
+     */
+    data: LanguageLearnerUserCreateManyInput | LanguageLearnerUserCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * LanguageLearnerUser createManyAndReturn
+   */
+  export type LanguageLearnerUserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * The data used to create many LanguageLearnerUsers.
+     */
+    data: LanguageLearnerUserCreateManyInput | LanguageLearnerUserCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * LanguageLearnerUser update
+   */
+  export type LanguageLearnerUserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+    /**
+     * The data needed to update a LanguageLearnerUser.
+     */
+    data: XOR<LanguageLearnerUserUpdateInput, LanguageLearnerUserUncheckedUpdateInput>
+    /**
+     * Choose, which LanguageLearnerUser to update.
+     */
+    where: LanguageLearnerUserWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerUser updateMany
+   */
+  export type LanguageLearnerUserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update LanguageLearnerUsers.
+     */
+    data: XOR<LanguageLearnerUserUpdateManyMutationInput, LanguageLearnerUserUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerUsers to update
+     */
+    where?: LanguageLearnerUserWhereInput
+    /**
+     * Limit how many LanguageLearnerUsers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerUser updateManyAndReturn
+   */
+  export type LanguageLearnerUserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * The data used to update LanguageLearnerUsers.
+     */
+    data: XOR<LanguageLearnerUserUpdateManyMutationInput, LanguageLearnerUserUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerUsers to update
+     */
+    where?: LanguageLearnerUserWhereInput
+    /**
+     * Limit how many LanguageLearnerUsers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerUser upsert
+   */
+  export type LanguageLearnerUserUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+    /**
+     * The filter to search for the LanguageLearnerUser to update in case it exists.
+     */
+    where: LanguageLearnerUserWhereUniqueInput
+    /**
+     * In case the LanguageLearnerUser found by the `where` argument doesn't exist, create a new LanguageLearnerUser with this data.
+     */
+    create: XOR<LanguageLearnerUserCreateInput, LanguageLearnerUserUncheckedCreateInput>
+    /**
+     * In case the LanguageLearnerUser was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<LanguageLearnerUserUpdateInput, LanguageLearnerUserUncheckedUpdateInput>
+  }
+
+  /**
+   * LanguageLearnerUser delete
+   */
+  export type LanguageLearnerUserDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+    /**
+     * Filter which LanguageLearnerUser to delete.
+     */
+    where: LanguageLearnerUserWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerUser deleteMany
+   */
+  export type LanguageLearnerUserDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerUsers to delete
+     */
+    where?: LanguageLearnerUserWhereInput
+    /**
+     * Limit how many LanguageLearnerUsers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerUser.ownedPlatforms
+   */
+  export type LanguageLearnerUser$ownedPlatformsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    where?: LanguageLearnerPlatformWhereInput
+    orderBy?: LanguageLearnerPlatformOrderByWithRelationInput | LanguageLearnerPlatformOrderByWithRelationInput[]
+    cursor?: LanguageLearnerPlatformWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LanguageLearnerPlatformScalarFieldEnum | LanguageLearnerPlatformScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUser.reviews
+   */
+  export type LanguageLearnerUser$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    where?: LanguageLearnerReviewWhereInput
+    orderBy?: LanguageLearnerReviewOrderByWithRelationInput | LanguageLearnerReviewOrderByWithRelationInput[]
+    cursor?: LanguageLearnerReviewWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LanguageLearnerReviewScalarFieldEnum | LanguageLearnerReviewScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUser.votesGiven
+   */
+  export type LanguageLearnerUser$votesGivenArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    where?: LanguageLearnerUserVoteWhereInput
+    orderBy?: LanguageLearnerUserVoteOrderByWithRelationInput | LanguageLearnerUserVoteOrderByWithRelationInput[]
+    cursor?: LanguageLearnerUserVoteWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LanguageLearnerUserVoteScalarFieldEnum | LanguageLearnerUserVoteScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUser.votesReceived
+   */
+  export type LanguageLearnerUser$votesReceivedArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    where?: LanguageLearnerUserVoteWhereInput
+    orderBy?: LanguageLearnerUserVoteOrderByWithRelationInput | LanguageLearnerUserVoteOrderByWithRelationInput[]
+    cursor?: LanguageLearnerUserVoteWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LanguageLearnerUserVoteScalarFieldEnum | LanguageLearnerUserVoteScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUser.likes
+   */
+  export type LanguageLearnerUser$likesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    where?: LanguageLearnerReviewLikeWhereInput
+    orderBy?: LanguageLearnerReviewLikeOrderByWithRelationInput | LanguageLearnerReviewLikeOrderByWithRelationInput[]
+    cursor?: LanguageLearnerReviewLikeWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LanguageLearnerReviewLikeScalarFieldEnum | LanguageLearnerReviewLikeScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUser without action
+   */
+  export type LanguageLearnerUserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUser
+     */
+    select?: LanguageLearnerUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUser
+     */
+    omit?: LanguageLearnerUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model LanguageLearnerPlatform
+   */
+
+  export type AggregateLanguageLearnerPlatform = {
+    _count: LanguageLearnerPlatformCountAggregateOutputType | null
+    _min: LanguageLearnerPlatformMinAggregateOutputType | null
+    _max: LanguageLearnerPlatformMaxAggregateOutputType | null
+  }
+
+  export type LanguageLearnerPlatformMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    website: string | null
+    languagesOffered: string | null
+    description: string | null
+    ownerId: string | null
+    status: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerPlatformMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    website: string | null
+    languagesOffered: string | null
+    description: string | null
+    ownerId: string | null
+    status: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerPlatformCountAggregateOutputType = {
+    id: number
+    name: number
+    website: number
+    languagesOffered: number
+    description: number
+    ownerId: number
+    status: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type LanguageLearnerPlatformMinAggregateInputType = {
+    id?: true
+    name?: true
+    website?: true
+    languagesOffered?: true
+    description?: true
+    ownerId?: true
+    status?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerPlatformMaxAggregateInputType = {
+    id?: true
+    name?: true
+    website?: true
+    languagesOffered?: true
+    description?: true
+    ownerId?: true
+    status?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerPlatformCountAggregateInputType = {
+    id?: true
+    name?: true
+    website?: true
+    languagesOffered?: true
+    description?: true
+    ownerId?: true
+    status?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type LanguageLearnerPlatformAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerPlatform to aggregate.
+     */
+    where?: LanguageLearnerPlatformWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerPlatforms to fetch.
+     */
+    orderBy?: LanguageLearnerPlatformOrderByWithRelationInput | LanguageLearnerPlatformOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: LanguageLearnerPlatformWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerPlatforms from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerPlatforms.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned LanguageLearnerPlatforms
+    **/
+    _count?: true | LanguageLearnerPlatformCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: LanguageLearnerPlatformMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: LanguageLearnerPlatformMaxAggregateInputType
+  }
+
+  export type GetLanguageLearnerPlatformAggregateType<T extends LanguageLearnerPlatformAggregateArgs> = {
+        [P in keyof T & keyof AggregateLanguageLearnerPlatform]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateLanguageLearnerPlatform[P]>
+      : GetScalarType<T[P], AggregateLanguageLearnerPlatform[P]>
+  }
+
+
+
+
+  export type LanguageLearnerPlatformGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerPlatformWhereInput
+    orderBy?: LanguageLearnerPlatformOrderByWithAggregationInput | LanguageLearnerPlatformOrderByWithAggregationInput[]
+    by: LanguageLearnerPlatformScalarFieldEnum[] | LanguageLearnerPlatformScalarFieldEnum
+    having?: LanguageLearnerPlatformScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: LanguageLearnerPlatformCountAggregateInputType | true
+    _min?: LanguageLearnerPlatformMinAggregateInputType
+    _max?: LanguageLearnerPlatformMaxAggregateInputType
+  }
+
+  export type LanguageLearnerPlatformGroupByOutputType = {
+    id: string
+    name: string
+    website: string
+    languagesOffered: string
+    description: string
+    ownerId: string
+    status: string
+    createdAt: Date
+    _count: LanguageLearnerPlatformCountAggregateOutputType | null
+    _min: LanguageLearnerPlatformMinAggregateOutputType | null
+    _max: LanguageLearnerPlatformMaxAggregateOutputType | null
+  }
+
+  type GetLanguageLearnerPlatformGroupByPayload<T extends LanguageLearnerPlatformGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<LanguageLearnerPlatformGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof LanguageLearnerPlatformGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], LanguageLearnerPlatformGroupByOutputType[P]>
+            : GetScalarType<T[P], LanguageLearnerPlatformGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type LanguageLearnerPlatformSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    website?: boolean
+    languagesOffered?: boolean
+    description?: boolean
+    ownerId?: boolean
+    status?: boolean
+    createdAt?: boolean
+    owner?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    reviews?: boolean | LanguageLearnerPlatform$reviewsArgs<ExtArgs>
+    _count?: boolean | LanguageLearnerPlatformCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerPlatform"]>
+
+  export type LanguageLearnerPlatformSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    website?: boolean
+    languagesOffered?: boolean
+    description?: boolean
+    ownerId?: boolean
+    status?: boolean
+    createdAt?: boolean
+    owner?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerPlatform"]>
+
+  export type LanguageLearnerPlatformSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    website?: boolean
+    languagesOffered?: boolean
+    description?: boolean
+    ownerId?: boolean
+    status?: boolean
+    createdAt?: boolean
+    owner?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerPlatform"]>
+
+  export type LanguageLearnerPlatformSelectScalar = {
+    id?: boolean
+    name?: boolean
+    website?: boolean
+    languagesOffered?: boolean
+    description?: boolean
+    ownerId?: boolean
+    status?: boolean
+    createdAt?: boolean
+  }
+
+  export type LanguageLearnerPlatformOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "website" | "languagesOffered" | "description" | "ownerId" | "status" | "createdAt", ExtArgs["result"]["languageLearnerPlatform"]>
+  export type LanguageLearnerPlatformInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    owner?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    reviews?: boolean | LanguageLearnerPlatform$reviewsArgs<ExtArgs>
+    _count?: boolean | LanguageLearnerPlatformCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type LanguageLearnerPlatformIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    owner?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }
+  export type LanguageLearnerPlatformIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    owner?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }
+
+  export type $LanguageLearnerPlatformPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "LanguageLearnerPlatform"
+    objects: {
+      owner: Prisma.$LanguageLearnerUserPayload<ExtArgs>
+      reviews: Prisma.$LanguageLearnerReviewPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      website: string
+      languagesOffered: string
+      description: string
+      ownerId: string
+      status: string
+      createdAt: Date
+    }, ExtArgs["result"]["languageLearnerPlatform"]>
+    composites: {}
+  }
+
+  type LanguageLearnerPlatformGetPayload<S extends boolean | null | undefined | LanguageLearnerPlatformDefaultArgs> = $Result.GetResult<Prisma.$LanguageLearnerPlatformPayload, S>
+
+  type LanguageLearnerPlatformCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LanguageLearnerPlatformFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LanguageLearnerPlatformCountAggregateInputType | true
+    }
+
+  export interface LanguageLearnerPlatformDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['LanguageLearnerPlatform'], meta: { name: 'LanguageLearnerPlatform' } }
+    /**
+     * Find zero or one LanguageLearnerPlatform that matches the filter.
+     * @param {LanguageLearnerPlatformFindUniqueArgs} args - Arguments to find a LanguageLearnerPlatform
+     * @example
+     * // Get one LanguageLearnerPlatform
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends LanguageLearnerPlatformFindUniqueArgs>(args: SelectSubset<T, LanguageLearnerPlatformFindUniqueArgs<ExtArgs>>): Prisma__LanguageLearnerPlatformClient<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one LanguageLearnerPlatform that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {LanguageLearnerPlatformFindUniqueOrThrowArgs} args - Arguments to find a LanguageLearnerPlatform
+     * @example
+     * // Get one LanguageLearnerPlatform
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends LanguageLearnerPlatformFindUniqueOrThrowArgs>(args: SelectSubset<T, LanguageLearnerPlatformFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerPlatformClient<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerPlatform that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerPlatformFindFirstArgs} args - Arguments to find a LanguageLearnerPlatform
+     * @example
+     * // Get one LanguageLearnerPlatform
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends LanguageLearnerPlatformFindFirstArgs>(args?: SelectSubset<T, LanguageLearnerPlatformFindFirstArgs<ExtArgs>>): Prisma__LanguageLearnerPlatformClient<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerPlatform that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerPlatformFindFirstOrThrowArgs} args - Arguments to find a LanguageLearnerPlatform
+     * @example
+     * // Get one LanguageLearnerPlatform
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends LanguageLearnerPlatformFindFirstOrThrowArgs>(args?: SelectSubset<T, LanguageLearnerPlatformFindFirstOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerPlatformClient<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more LanguageLearnerPlatforms that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerPlatformFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all LanguageLearnerPlatforms
+     * const languageLearnerPlatforms = await prisma.languageLearnerPlatform.findMany()
+     * 
+     * // Get first 10 LanguageLearnerPlatforms
+     * const languageLearnerPlatforms = await prisma.languageLearnerPlatform.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const languageLearnerPlatformWithIdOnly = await prisma.languageLearnerPlatform.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends LanguageLearnerPlatformFindManyArgs>(args?: SelectSubset<T, LanguageLearnerPlatformFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a LanguageLearnerPlatform.
+     * @param {LanguageLearnerPlatformCreateArgs} args - Arguments to create a LanguageLearnerPlatform.
+     * @example
+     * // Create one LanguageLearnerPlatform
+     * const LanguageLearnerPlatform = await prisma.languageLearnerPlatform.create({
+     *   data: {
+     *     // ... data to create a LanguageLearnerPlatform
+     *   }
+     * })
+     * 
+     */
+    create<T extends LanguageLearnerPlatformCreateArgs>(args: SelectSubset<T, LanguageLearnerPlatformCreateArgs<ExtArgs>>): Prisma__LanguageLearnerPlatformClient<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many LanguageLearnerPlatforms.
+     * @param {LanguageLearnerPlatformCreateManyArgs} args - Arguments to create many LanguageLearnerPlatforms.
+     * @example
+     * // Create many LanguageLearnerPlatforms
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends LanguageLearnerPlatformCreateManyArgs>(args?: SelectSubset<T, LanguageLearnerPlatformCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many LanguageLearnerPlatforms and returns the data saved in the database.
+     * @param {LanguageLearnerPlatformCreateManyAndReturnArgs} args - Arguments to create many LanguageLearnerPlatforms.
+     * @example
+     * // Create many LanguageLearnerPlatforms
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many LanguageLearnerPlatforms and only return the `id`
+     * const languageLearnerPlatformWithIdOnly = await prisma.languageLearnerPlatform.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends LanguageLearnerPlatformCreateManyAndReturnArgs>(args?: SelectSubset<T, LanguageLearnerPlatformCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a LanguageLearnerPlatform.
+     * @param {LanguageLearnerPlatformDeleteArgs} args - Arguments to delete one LanguageLearnerPlatform.
+     * @example
+     * // Delete one LanguageLearnerPlatform
+     * const LanguageLearnerPlatform = await prisma.languageLearnerPlatform.delete({
+     *   where: {
+     *     // ... filter to delete one LanguageLearnerPlatform
+     *   }
+     * })
+     * 
+     */
+    delete<T extends LanguageLearnerPlatformDeleteArgs>(args: SelectSubset<T, LanguageLearnerPlatformDeleteArgs<ExtArgs>>): Prisma__LanguageLearnerPlatformClient<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one LanguageLearnerPlatform.
+     * @param {LanguageLearnerPlatformUpdateArgs} args - Arguments to update one LanguageLearnerPlatform.
+     * @example
+     * // Update one LanguageLearnerPlatform
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends LanguageLearnerPlatformUpdateArgs>(args: SelectSubset<T, LanguageLearnerPlatformUpdateArgs<ExtArgs>>): Prisma__LanguageLearnerPlatformClient<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more LanguageLearnerPlatforms.
+     * @param {LanguageLearnerPlatformDeleteManyArgs} args - Arguments to filter LanguageLearnerPlatforms to delete.
+     * @example
+     * // Delete a few LanguageLearnerPlatforms
+     * const { count } = await prisma.languageLearnerPlatform.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends LanguageLearnerPlatformDeleteManyArgs>(args?: SelectSubset<T, LanguageLearnerPlatformDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerPlatforms.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerPlatformUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many LanguageLearnerPlatforms
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends LanguageLearnerPlatformUpdateManyArgs>(args: SelectSubset<T, LanguageLearnerPlatformUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerPlatforms and returns the data updated in the database.
+     * @param {LanguageLearnerPlatformUpdateManyAndReturnArgs} args - Arguments to update many LanguageLearnerPlatforms.
+     * @example
+     * // Update many LanguageLearnerPlatforms
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more LanguageLearnerPlatforms and only return the `id`
+     * const languageLearnerPlatformWithIdOnly = await prisma.languageLearnerPlatform.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends LanguageLearnerPlatformUpdateManyAndReturnArgs>(args: SelectSubset<T, LanguageLearnerPlatformUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one LanguageLearnerPlatform.
+     * @param {LanguageLearnerPlatformUpsertArgs} args - Arguments to update or create a LanguageLearnerPlatform.
+     * @example
+     * // Update or create a LanguageLearnerPlatform
+     * const languageLearnerPlatform = await prisma.languageLearnerPlatform.upsert({
+     *   create: {
+     *     // ... data to create a LanguageLearnerPlatform
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the LanguageLearnerPlatform we want to update
+     *   }
+     * })
+     */
+    upsert<T extends LanguageLearnerPlatformUpsertArgs>(args: SelectSubset<T, LanguageLearnerPlatformUpsertArgs<ExtArgs>>): Prisma__LanguageLearnerPlatformClient<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of LanguageLearnerPlatforms.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerPlatformCountArgs} args - Arguments to filter LanguageLearnerPlatforms to count.
+     * @example
+     * // Count the number of LanguageLearnerPlatforms
+     * const count = await prisma.languageLearnerPlatform.count({
+     *   where: {
+     *     // ... the filter for the LanguageLearnerPlatforms we want to count
+     *   }
+     * })
+    **/
+    count<T extends LanguageLearnerPlatformCountArgs>(
+      args?: Subset<T, LanguageLearnerPlatformCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], LanguageLearnerPlatformCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a LanguageLearnerPlatform.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerPlatformAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends LanguageLearnerPlatformAggregateArgs>(args: Subset<T, LanguageLearnerPlatformAggregateArgs>): Prisma.PrismaPromise<GetLanguageLearnerPlatformAggregateType<T>>
+
+    /**
+     * Group by LanguageLearnerPlatform.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerPlatformGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends LanguageLearnerPlatformGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: LanguageLearnerPlatformGroupByArgs['orderBy'] }
+        : { orderBy?: LanguageLearnerPlatformGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, LanguageLearnerPlatformGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLanguageLearnerPlatformGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the LanguageLearnerPlatform model
+   */
+  readonly fields: LanguageLearnerPlatformFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for LanguageLearnerPlatform.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__LanguageLearnerPlatformClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    owner<T extends LanguageLearnerUserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUserDefaultArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    reviews<T extends LanguageLearnerPlatform$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerPlatform$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the LanguageLearnerPlatform model
+   */ 
+  interface LanguageLearnerPlatformFieldRefs {
+    readonly id: FieldRef<"LanguageLearnerPlatform", 'String'>
+    readonly name: FieldRef<"LanguageLearnerPlatform", 'String'>
+    readonly website: FieldRef<"LanguageLearnerPlatform", 'String'>
+    readonly languagesOffered: FieldRef<"LanguageLearnerPlatform", 'String'>
+    readonly description: FieldRef<"LanguageLearnerPlatform", 'String'>
+    readonly ownerId: FieldRef<"LanguageLearnerPlatform", 'String'>
+    readonly status: FieldRef<"LanguageLearnerPlatform", 'String'>
+    readonly createdAt: FieldRef<"LanguageLearnerPlatform", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * LanguageLearnerPlatform findUnique
+   */
+  export type LanguageLearnerPlatformFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerPlatform to fetch.
+     */
+    where: LanguageLearnerPlatformWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerPlatform findUniqueOrThrow
+   */
+  export type LanguageLearnerPlatformFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerPlatform to fetch.
+     */
+    where: LanguageLearnerPlatformWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerPlatform findFirst
+   */
+  export type LanguageLearnerPlatformFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerPlatform to fetch.
+     */
+    where?: LanguageLearnerPlatformWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerPlatforms to fetch.
+     */
+    orderBy?: LanguageLearnerPlatformOrderByWithRelationInput | LanguageLearnerPlatformOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerPlatforms.
+     */
+    cursor?: LanguageLearnerPlatformWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerPlatforms from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerPlatforms.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerPlatforms.
+     */
+    distinct?: LanguageLearnerPlatformScalarFieldEnum | LanguageLearnerPlatformScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerPlatform findFirstOrThrow
+   */
+  export type LanguageLearnerPlatformFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerPlatform to fetch.
+     */
+    where?: LanguageLearnerPlatformWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerPlatforms to fetch.
+     */
+    orderBy?: LanguageLearnerPlatformOrderByWithRelationInput | LanguageLearnerPlatformOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerPlatforms.
+     */
+    cursor?: LanguageLearnerPlatformWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerPlatforms from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerPlatforms.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerPlatforms.
+     */
+    distinct?: LanguageLearnerPlatformScalarFieldEnum | LanguageLearnerPlatformScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerPlatform findMany
+   */
+  export type LanguageLearnerPlatformFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerPlatforms to fetch.
+     */
+    where?: LanguageLearnerPlatformWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerPlatforms to fetch.
+     */
+    orderBy?: LanguageLearnerPlatformOrderByWithRelationInput | LanguageLearnerPlatformOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing LanguageLearnerPlatforms.
+     */
+    cursor?: LanguageLearnerPlatformWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerPlatforms from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerPlatforms.
+     */
+    skip?: number
+    distinct?: LanguageLearnerPlatformScalarFieldEnum | LanguageLearnerPlatformScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerPlatform create
+   */
+  export type LanguageLearnerPlatformCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    /**
+     * The data needed to create a LanguageLearnerPlatform.
+     */
+    data: XOR<LanguageLearnerPlatformCreateInput, LanguageLearnerPlatformUncheckedCreateInput>
+  }
+
+  /**
+   * LanguageLearnerPlatform createMany
+   */
+  export type LanguageLearnerPlatformCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many LanguageLearnerPlatforms.
+     */
+    data: LanguageLearnerPlatformCreateManyInput | LanguageLearnerPlatformCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * LanguageLearnerPlatform createManyAndReturn
+   */
+  export type LanguageLearnerPlatformCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * The data used to create many LanguageLearnerPlatforms.
+     */
+    data: LanguageLearnerPlatformCreateManyInput | LanguageLearnerPlatformCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerPlatform update
+   */
+  export type LanguageLearnerPlatformUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    /**
+     * The data needed to update a LanguageLearnerPlatform.
+     */
+    data: XOR<LanguageLearnerPlatformUpdateInput, LanguageLearnerPlatformUncheckedUpdateInput>
+    /**
+     * Choose, which LanguageLearnerPlatform to update.
+     */
+    where: LanguageLearnerPlatformWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerPlatform updateMany
+   */
+  export type LanguageLearnerPlatformUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update LanguageLearnerPlatforms.
+     */
+    data: XOR<LanguageLearnerPlatformUpdateManyMutationInput, LanguageLearnerPlatformUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerPlatforms to update
+     */
+    where?: LanguageLearnerPlatformWhereInput
+    /**
+     * Limit how many LanguageLearnerPlatforms to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerPlatform updateManyAndReturn
+   */
+  export type LanguageLearnerPlatformUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * The data used to update LanguageLearnerPlatforms.
+     */
+    data: XOR<LanguageLearnerPlatformUpdateManyMutationInput, LanguageLearnerPlatformUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerPlatforms to update
+     */
+    where?: LanguageLearnerPlatformWhereInput
+    /**
+     * Limit how many LanguageLearnerPlatforms to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerPlatform upsert
+   */
+  export type LanguageLearnerPlatformUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    /**
+     * The filter to search for the LanguageLearnerPlatform to update in case it exists.
+     */
+    where: LanguageLearnerPlatformWhereUniqueInput
+    /**
+     * In case the LanguageLearnerPlatform found by the `where` argument doesn't exist, create a new LanguageLearnerPlatform with this data.
+     */
+    create: XOR<LanguageLearnerPlatformCreateInput, LanguageLearnerPlatformUncheckedCreateInput>
+    /**
+     * In case the LanguageLearnerPlatform was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<LanguageLearnerPlatformUpdateInput, LanguageLearnerPlatformUncheckedUpdateInput>
+  }
+
+  /**
+   * LanguageLearnerPlatform delete
+   */
+  export type LanguageLearnerPlatformDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+    /**
+     * Filter which LanguageLearnerPlatform to delete.
+     */
+    where: LanguageLearnerPlatformWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerPlatform deleteMany
+   */
+  export type LanguageLearnerPlatformDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerPlatforms to delete
+     */
+    where?: LanguageLearnerPlatformWhereInput
+    /**
+     * Limit how many LanguageLearnerPlatforms to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerPlatform.reviews
+   */
+  export type LanguageLearnerPlatform$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    where?: LanguageLearnerReviewWhereInput
+    orderBy?: LanguageLearnerReviewOrderByWithRelationInput | LanguageLearnerReviewOrderByWithRelationInput[]
+    cursor?: LanguageLearnerReviewWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LanguageLearnerReviewScalarFieldEnum | LanguageLearnerReviewScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerPlatform without action
+   */
+  export type LanguageLearnerPlatformDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerPlatform
+     */
+    select?: LanguageLearnerPlatformSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerPlatform
+     */
+    omit?: LanguageLearnerPlatformOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerPlatformInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model LanguageLearnerReview
+   */
+
+  export type AggregateLanguageLearnerReview = {
+    _count: LanguageLearnerReviewCountAggregateOutputType | null
+    _avg: LanguageLearnerReviewAvgAggregateOutputType | null
+    _sum: LanguageLearnerReviewSumAggregateOutputType | null
+    _min: LanguageLearnerReviewMinAggregateOutputType | null
+    _max: LanguageLearnerReviewMaxAggregateOutputType | null
+  }
+
+  export type LanguageLearnerReviewAvgAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type LanguageLearnerReviewSumAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type LanguageLearnerReviewMinAggregateOutputType = {
+    id: string | null
+    platformId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    status: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerReviewMaxAggregateOutputType = {
+    id: string | null
+    platformId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    status: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerReviewCountAggregateOutputType = {
+    id: number
+    platformId: number
+    userId: number
+    rating: number
+    comment: number
+    status: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type LanguageLearnerReviewAvgAggregateInputType = {
+    rating?: true
+  }
+
+  export type LanguageLearnerReviewSumAggregateInputType = {
+    rating?: true
+  }
+
+  export type LanguageLearnerReviewMinAggregateInputType = {
+    id?: true
+    platformId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    status?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerReviewMaxAggregateInputType = {
+    id?: true
+    platformId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    status?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerReviewCountAggregateInputType = {
+    id?: true
+    platformId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    status?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type LanguageLearnerReviewAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerReview to aggregate.
+     */
+    where?: LanguageLearnerReviewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerReviews to fetch.
+     */
+    orderBy?: LanguageLearnerReviewOrderByWithRelationInput | LanguageLearnerReviewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: LanguageLearnerReviewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerReviews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerReviews.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned LanguageLearnerReviews
+    **/
+    _count?: true | LanguageLearnerReviewCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: LanguageLearnerReviewAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: LanguageLearnerReviewSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: LanguageLearnerReviewMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: LanguageLearnerReviewMaxAggregateInputType
+  }
+
+  export type GetLanguageLearnerReviewAggregateType<T extends LanguageLearnerReviewAggregateArgs> = {
+        [P in keyof T & keyof AggregateLanguageLearnerReview]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateLanguageLearnerReview[P]>
+      : GetScalarType<T[P], AggregateLanguageLearnerReview[P]>
+  }
+
+
+
+
+  export type LanguageLearnerReviewGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerReviewWhereInput
+    orderBy?: LanguageLearnerReviewOrderByWithAggregationInput | LanguageLearnerReviewOrderByWithAggregationInput[]
+    by: LanguageLearnerReviewScalarFieldEnum[] | LanguageLearnerReviewScalarFieldEnum
+    having?: LanguageLearnerReviewScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: LanguageLearnerReviewCountAggregateInputType | true
+    _avg?: LanguageLearnerReviewAvgAggregateInputType
+    _sum?: LanguageLearnerReviewSumAggregateInputType
+    _min?: LanguageLearnerReviewMinAggregateInputType
+    _max?: LanguageLearnerReviewMaxAggregateInputType
+  }
+
+  export type LanguageLearnerReviewGroupByOutputType = {
+    id: string
+    platformId: string
+    userId: string
+    rating: number
+    comment: string
+    status: string
+    createdAt: Date
+    _count: LanguageLearnerReviewCountAggregateOutputType | null
+    _avg: LanguageLearnerReviewAvgAggregateOutputType | null
+    _sum: LanguageLearnerReviewSumAggregateOutputType | null
+    _min: LanguageLearnerReviewMinAggregateOutputType | null
+    _max: LanguageLearnerReviewMaxAggregateOutputType | null
+  }
+
+  type GetLanguageLearnerReviewGroupByPayload<T extends LanguageLearnerReviewGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<LanguageLearnerReviewGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof LanguageLearnerReviewGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], LanguageLearnerReviewGroupByOutputType[P]>
+            : GetScalarType<T[P], LanguageLearnerReviewGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type LanguageLearnerReviewSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    platformId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    status?: boolean
+    createdAt?: boolean
+    platform?: boolean | LanguageLearnerPlatformDefaultArgs<ExtArgs>
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    likes?: boolean | LanguageLearnerReview$likesArgs<ExtArgs>
+    _count?: boolean | LanguageLearnerReviewCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerReview"]>
+
+  export type LanguageLearnerReviewSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    platformId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    status?: boolean
+    createdAt?: boolean
+    platform?: boolean | LanguageLearnerPlatformDefaultArgs<ExtArgs>
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerReview"]>
+
+  export type LanguageLearnerReviewSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    platformId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    status?: boolean
+    createdAt?: boolean
+    platform?: boolean | LanguageLearnerPlatformDefaultArgs<ExtArgs>
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerReview"]>
+
+  export type LanguageLearnerReviewSelectScalar = {
+    id?: boolean
+    platformId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    status?: boolean
+    createdAt?: boolean
+  }
+
+  export type LanguageLearnerReviewOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "platformId" | "userId" | "rating" | "comment" | "status" | "createdAt", ExtArgs["result"]["languageLearnerReview"]>
+  export type LanguageLearnerReviewInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    platform?: boolean | LanguageLearnerPlatformDefaultArgs<ExtArgs>
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    likes?: boolean | LanguageLearnerReview$likesArgs<ExtArgs>
+    _count?: boolean | LanguageLearnerReviewCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type LanguageLearnerReviewIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    platform?: boolean | LanguageLearnerPlatformDefaultArgs<ExtArgs>
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }
+  export type LanguageLearnerReviewIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    platform?: boolean | LanguageLearnerPlatformDefaultArgs<ExtArgs>
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }
+
+  export type $LanguageLearnerReviewPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "LanguageLearnerReview"
+    objects: {
+      platform: Prisma.$LanguageLearnerPlatformPayload<ExtArgs>
+      user: Prisma.$LanguageLearnerUserPayload<ExtArgs>
+      likes: Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      platformId: string
+      userId: string
+      rating: number
+      comment: string
+      status: string
+      createdAt: Date
+    }, ExtArgs["result"]["languageLearnerReview"]>
+    composites: {}
+  }
+
+  type LanguageLearnerReviewGetPayload<S extends boolean | null | undefined | LanguageLearnerReviewDefaultArgs> = $Result.GetResult<Prisma.$LanguageLearnerReviewPayload, S>
+
+  type LanguageLearnerReviewCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LanguageLearnerReviewFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LanguageLearnerReviewCountAggregateInputType | true
+    }
+
+  export interface LanguageLearnerReviewDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['LanguageLearnerReview'], meta: { name: 'LanguageLearnerReview' } }
+    /**
+     * Find zero or one LanguageLearnerReview that matches the filter.
+     * @param {LanguageLearnerReviewFindUniqueArgs} args - Arguments to find a LanguageLearnerReview
+     * @example
+     * // Get one LanguageLearnerReview
+     * const languageLearnerReview = await prisma.languageLearnerReview.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends LanguageLearnerReviewFindUniqueArgs>(args: SelectSubset<T, LanguageLearnerReviewFindUniqueArgs<ExtArgs>>): Prisma__LanguageLearnerReviewClient<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one LanguageLearnerReview that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {LanguageLearnerReviewFindUniqueOrThrowArgs} args - Arguments to find a LanguageLearnerReview
+     * @example
+     * // Get one LanguageLearnerReview
+     * const languageLearnerReview = await prisma.languageLearnerReview.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends LanguageLearnerReviewFindUniqueOrThrowArgs>(args: SelectSubset<T, LanguageLearnerReviewFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerReviewClient<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerReview that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewFindFirstArgs} args - Arguments to find a LanguageLearnerReview
+     * @example
+     * // Get one LanguageLearnerReview
+     * const languageLearnerReview = await prisma.languageLearnerReview.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends LanguageLearnerReviewFindFirstArgs>(args?: SelectSubset<T, LanguageLearnerReviewFindFirstArgs<ExtArgs>>): Prisma__LanguageLearnerReviewClient<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerReview that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewFindFirstOrThrowArgs} args - Arguments to find a LanguageLearnerReview
+     * @example
+     * // Get one LanguageLearnerReview
+     * const languageLearnerReview = await prisma.languageLearnerReview.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends LanguageLearnerReviewFindFirstOrThrowArgs>(args?: SelectSubset<T, LanguageLearnerReviewFindFirstOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerReviewClient<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more LanguageLearnerReviews that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all LanguageLearnerReviews
+     * const languageLearnerReviews = await prisma.languageLearnerReview.findMany()
+     * 
+     * // Get first 10 LanguageLearnerReviews
+     * const languageLearnerReviews = await prisma.languageLearnerReview.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const languageLearnerReviewWithIdOnly = await prisma.languageLearnerReview.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends LanguageLearnerReviewFindManyArgs>(args?: SelectSubset<T, LanguageLearnerReviewFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a LanguageLearnerReview.
+     * @param {LanguageLearnerReviewCreateArgs} args - Arguments to create a LanguageLearnerReview.
+     * @example
+     * // Create one LanguageLearnerReview
+     * const LanguageLearnerReview = await prisma.languageLearnerReview.create({
+     *   data: {
+     *     // ... data to create a LanguageLearnerReview
+     *   }
+     * })
+     * 
+     */
+    create<T extends LanguageLearnerReviewCreateArgs>(args: SelectSubset<T, LanguageLearnerReviewCreateArgs<ExtArgs>>): Prisma__LanguageLearnerReviewClient<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many LanguageLearnerReviews.
+     * @param {LanguageLearnerReviewCreateManyArgs} args - Arguments to create many LanguageLearnerReviews.
+     * @example
+     * // Create many LanguageLearnerReviews
+     * const languageLearnerReview = await prisma.languageLearnerReview.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends LanguageLearnerReviewCreateManyArgs>(args?: SelectSubset<T, LanguageLearnerReviewCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many LanguageLearnerReviews and returns the data saved in the database.
+     * @param {LanguageLearnerReviewCreateManyAndReturnArgs} args - Arguments to create many LanguageLearnerReviews.
+     * @example
+     * // Create many LanguageLearnerReviews
+     * const languageLearnerReview = await prisma.languageLearnerReview.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many LanguageLearnerReviews and only return the `id`
+     * const languageLearnerReviewWithIdOnly = await prisma.languageLearnerReview.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends LanguageLearnerReviewCreateManyAndReturnArgs>(args?: SelectSubset<T, LanguageLearnerReviewCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a LanguageLearnerReview.
+     * @param {LanguageLearnerReviewDeleteArgs} args - Arguments to delete one LanguageLearnerReview.
+     * @example
+     * // Delete one LanguageLearnerReview
+     * const LanguageLearnerReview = await prisma.languageLearnerReview.delete({
+     *   where: {
+     *     // ... filter to delete one LanguageLearnerReview
+     *   }
+     * })
+     * 
+     */
+    delete<T extends LanguageLearnerReviewDeleteArgs>(args: SelectSubset<T, LanguageLearnerReviewDeleteArgs<ExtArgs>>): Prisma__LanguageLearnerReviewClient<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one LanguageLearnerReview.
+     * @param {LanguageLearnerReviewUpdateArgs} args - Arguments to update one LanguageLearnerReview.
+     * @example
+     * // Update one LanguageLearnerReview
+     * const languageLearnerReview = await prisma.languageLearnerReview.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends LanguageLearnerReviewUpdateArgs>(args: SelectSubset<T, LanguageLearnerReviewUpdateArgs<ExtArgs>>): Prisma__LanguageLearnerReviewClient<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more LanguageLearnerReviews.
+     * @param {LanguageLearnerReviewDeleteManyArgs} args - Arguments to filter LanguageLearnerReviews to delete.
+     * @example
+     * // Delete a few LanguageLearnerReviews
+     * const { count } = await prisma.languageLearnerReview.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends LanguageLearnerReviewDeleteManyArgs>(args?: SelectSubset<T, LanguageLearnerReviewDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerReviews.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many LanguageLearnerReviews
+     * const languageLearnerReview = await prisma.languageLearnerReview.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends LanguageLearnerReviewUpdateManyArgs>(args: SelectSubset<T, LanguageLearnerReviewUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerReviews and returns the data updated in the database.
+     * @param {LanguageLearnerReviewUpdateManyAndReturnArgs} args - Arguments to update many LanguageLearnerReviews.
+     * @example
+     * // Update many LanguageLearnerReviews
+     * const languageLearnerReview = await prisma.languageLearnerReview.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more LanguageLearnerReviews and only return the `id`
+     * const languageLearnerReviewWithIdOnly = await prisma.languageLearnerReview.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends LanguageLearnerReviewUpdateManyAndReturnArgs>(args: SelectSubset<T, LanguageLearnerReviewUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one LanguageLearnerReview.
+     * @param {LanguageLearnerReviewUpsertArgs} args - Arguments to update or create a LanguageLearnerReview.
+     * @example
+     * // Update or create a LanguageLearnerReview
+     * const languageLearnerReview = await prisma.languageLearnerReview.upsert({
+     *   create: {
+     *     // ... data to create a LanguageLearnerReview
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the LanguageLearnerReview we want to update
+     *   }
+     * })
+     */
+    upsert<T extends LanguageLearnerReviewUpsertArgs>(args: SelectSubset<T, LanguageLearnerReviewUpsertArgs<ExtArgs>>): Prisma__LanguageLearnerReviewClient<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of LanguageLearnerReviews.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewCountArgs} args - Arguments to filter LanguageLearnerReviews to count.
+     * @example
+     * // Count the number of LanguageLearnerReviews
+     * const count = await prisma.languageLearnerReview.count({
+     *   where: {
+     *     // ... the filter for the LanguageLearnerReviews we want to count
+     *   }
+     * })
+    **/
+    count<T extends LanguageLearnerReviewCountArgs>(
+      args?: Subset<T, LanguageLearnerReviewCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], LanguageLearnerReviewCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a LanguageLearnerReview.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends LanguageLearnerReviewAggregateArgs>(args: Subset<T, LanguageLearnerReviewAggregateArgs>): Prisma.PrismaPromise<GetLanguageLearnerReviewAggregateType<T>>
+
+    /**
+     * Group by LanguageLearnerReview.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends LanguageLearnerReviewGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: LanguageLearnerReviewGroupByArgs['orderBy'] }
+        : { orderBy?: LanguageLearnerReviewGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, LanguageLearnerReviewGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLanguageLearnerReviewGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the LanguageLearnerReview model
+   */
+  readonly fields: LanguageLearnerReviewFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for LanguageLearnerReview.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__LanguageLearnerReviewClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    platform<T extends LanguageLearnerPlatformDefaultArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerPlatformDefaultArgs<ExtArgs>>): Prisma__LanguageLearnerPlatformClient<$Result.GetResult<Prisma.$LanguageLearnerPlatformPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    user<T extends LanguageLearnerUserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUserDefaultArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    likes<T extends LanguageLearnerReview$likesArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerReview$likesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the LanguageLearnerReview model
+   */ 
+  interface LanguageLearnerReviewFieldRefs {
+    readonly id: FieldRef<"LanguageLearnerReview", 'String'>
+    readonly platformId: FieldRef<"LanguageLearnerReview", 'String'>
+    readonly userId: FieldRef<"LanguageLearnerReview", 'String'>
+    readonly rating: FieldRef<"LanguageLearnerReview", 'Int'>
+    readonly comment: FieldRef<"LanguageLearnerReview", 'String'>
+    readonly status: FieldRef<"LanguageLearnerReview", 'String'>
+    readonly createdAt: FieldRef<"LanguageLearnerReview", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * LanguageLearnerReview findUnique
+   */
+  export type LanguageLearnerReviewFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReview to fetch.
+     */
+    where: LanguageLearnerReviewWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerReview findUniqueOrThrow
+   */
+  export type LanguageLearnerReviewFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReview to fetch.
+     */
+    where: LanguageLearnerReviewWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerReview findFirst
+   */
+  export type LanguageLearnerReviewFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReview to fetch.
+     */
+    where?: LanguageLearnerReviewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerReviews to fetch.
+     */
+    orderBy?: LanguageLearnerReviewOrderByWithRelationInput | LanguageLearnerReviewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerReviews.
+     */
+    cursor?: LanguageLearnerReviewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerReviews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerReviews.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerReviews.
+     */
+    distinct?: LanguageLearnerReviewScalarFieldEnum | LanguageLearnerReviewScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerReview findFirstOrThrow
+   */
+  export type LanguageLearnerReviewFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReview to fetch.
+     */
+    where?: LanguageLearnerReviewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerReviews to fetch.
+     */
+    orderBy?: LanguageLearnerReviewOrderByWithRelationInput | LanguageLearnerReviewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerReviews.
+     */
+    cursor?: LanguageLearnerReviewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerReviews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerReviews.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerReviews.
+     */
+    distinct?: LanguageLearnerReviewScalarFieldEnum | LanguageLearnerReviewScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerReview findMany
+   */
+  export type LanguageLearnerReviewFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReviews to fetch.
+     */
+    where?: LanguageLearnerReviewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerReviews to fetch.
+     */
+    orderBy?: LanguageLearnerReviewOrderByWithRelationInput | LanguageLearnerReviewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing LanguageLearnerReviews.
+     */
+    cursor?: LanguageLearnerReviewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerReviews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerReviews.
+     */
+    skip?: number
+    distinct?: LanguageLearnerReviewScalarFieldEnum | LanguageLearnerReviewScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerReview create
+   */
+  export type LanguageLearnerReviewCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    /**
+     * The data needed to create a LanguageLearnerReview.
+     */
+    data: XOR<LanguageLearnerReviewCreateInput, LanguageLearnerReviewUncheckedCreateInput>
+  }
+
+  /**
+   * LanguageLearnerReview createMany
+   */
+  export type LanguageLearnerReviewCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many LanguageLearnerReviews.
+     */
+    data: LanguageLearnerReviewCreateManyInput | LanguageLearnerReviewCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * LanguageLearnerReview createManyAndReturn
+   */
+  export type LanguageLearnerReviewCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * The data used to create many LanguageLearnerReviews.
+     */
+    data: LanguageLearnerReviewCreateManyInput | LanguageLearnerReviewCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerReview update
+   */
+  export type LanguageLearnerReviewUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    /**
+     * The data needed to update a LanguageLearnerReview.
+     */
+    data: XOR<LanguageLearnerReviewUpdateInput, LanguageLearnerReviewUncheckedUpdateInput>
+    /**
+     * Choose, which LanguageLearnerReview to update.
+     */
+    where: LanguageLearnerReviewWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerReview updateMany
+   */
+  export type LanguageLearnerReviewUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update LanguageLearnerReviews.
+     */
+    data: XOR<LanguageLearnerReviewUpdateManyMutationInput, LanguageLearnerReviewUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerReviews to update
+     */
+    where?: LanguageLearnerReviewWhereInput
+    /**
+     * Limit how many LanguageLearnerReviews to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerReview updateManyAndReturn
+   */
+  export type LanguageLearnerReviewUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * The data used to update LanguageLearnerReviews.
+     */
+    data: XOR<LanguageLearnerReviewUpdateManyMutationInput, LanguageLearnerReviewUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerReviews to update
+     */
+    where?: LanguageLearnerReviewWhereInput
+    /**
+     * Limit how many LanguageLearnerReviews to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerReview upsert
+   */
+  export type LanguageLearnerReviewUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    /**
+     * The filter to search for the LanguageLearnerReview to update in case it exists.
+     */
+    where: LanguageLearnerReviewWhereUniqueInput
+    /**
+     * In case the LanguageLearnerReview found by the `where` argument doesn't exist, create a new LanguageLearnerReview with this data.
+     */
+    create: XOR<LanguageLearnerReviewCreateInput, LanguageLearnerReviewUncheckedCreateInput>
+    /**
+     * In case the LanguageLearnerReview was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<LanguageLearnerReviewUpdateInput, LanguageLearnerReviewUncheckedUpdateInput>
+  }
+
+  /**
+   * LanguageLearnerReview delete
+   */
+  export type LanguageLearnerReviewDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+    /**
+     * Filter which LanguageLearnerReview to delete.
+     */
+    where: LanguageLearnerReviewWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerReview deleteMany
+   */
+  export type LanguageLearnerReviewDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerReviews to delete
+     */
+    where?: LanguageLearnerReviewWhereInput
+    /**
+     * Limit how many LanguageLearnerReviews to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerReview.likes
+   */
+  export type LanguageLearnerReview$likesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    where?: LanguageLearnerReviewLikeWhereInput
+    orderBy?: LanguageLearnerReviewLikeOrderByWithRelationInput | LanguageLearnerReviewLikeOrderByWithRelationInput[]
+    cursor?: LanguageLearnerReviewLikeWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LanguageLearnerReviewLikeScalarFieldEnum | LanguageLearnerReviewLikeScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerReview without action
+   */
+  export type LanguageLearnerReviewDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReview
+     */
+    select?: LanguageLearnerReviewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReview
+     */
+    omit?: LanguageLearnerReviewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model LanguageLearnerReviewLike
+   */
+
+  export type AggregateLanguageLearnerReviewLike = {
+    _count: LanguageLearnerReviewLikeCountAggregateOutputType | null
+    _min: LanguageLearnerReviewLikeMinAggregateOutputType | null
+    _max: LanguageLearnerReviewLikeMaxAggregateOutputType | null
+  }
+
+  export type LanguageLearnerReviewLikeMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    reviewId: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerReviewLikeMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    reviewId: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerReviewLikeCountAggregateOutputType = {
+    id: number
+    userId: number
+    reviewId: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type LanguageLearnerReviewLikeMinAggregateInputType = {
+    id?: true
+    userId?: true
+    reviewId?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerReviewLikeMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    reviewId?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerReviewLikeCountAggregateInputType = {
+    id?: true
+    userId?: true
+    reviewId?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type LanguageLearnerReviewLikeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerReviewLike to aggregate.
+     */
+    where?: LanguageLearnerReviewLikeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerReviewLikes to fetch.
+     */
+    orderBy?: LanguageLearnerReviewLikeOrderByWithRelationInput | LanguageLearnerReviewLikeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: LanguageLearnerReviewLikeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerReviewLikes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerReviewLikes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned LanguageLearnerReviewLikes
+    **/
+    _count?: true | LanguageLearnerReviewLikeCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: LanguageLearnerReviewLikeMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: LanguageLearnerReviewLikeMaxAggregateInputType
+  }
+
+  export type GetLanguageLearnerReviewLikeAggregateType<T extends LanguageLearnerReviewLikeAggregateArgs> = {
+        [P in keyof T & keyof AggregateLanguageLearnerReviewLike]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateLanguageLearnerReviewLike[P]>
+      : GetScalarType<T[P], AggregateLanguageLearnerReviewLike[P]>
+  }
+
+
+
+
+  export type LanguageLearnerReviewLikeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerReviewLikeWhereInput
+    orderBy?: LanguageLearnerReviewLikeOrderByWithAggregationInput | LanguageLearnerReviewLikeOrderByWithAggregationInput[]
+    by: LanguageLearnerReviewLikeScalarFieldEnum[] | LanguageLearnerReviewLikeScalarFieldEnum
+    having?: LanguageLearnerReviewLikeScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: LanguageLearnerReviewLikeCountAggregateInputType | true
+    _min?: LanguageLearnerReviewLikeMinAggregateInputType
+    _max?: LanguageLearnerReviewLikeMaxAggregateInputType
+  }
+
+  export type LanguageLearnerReviewLikeGroupByOutputType = {
+    id: string
+    userId: string
+    reviewId: string
+    createdAt: Date
+    _count: LanguageLearnerReviewLikeCountAggregateOutputType | null
+    _min: LanguageLearnerReviewLikeMinAggregateOutputType | null
+    _max: LanguageLearnerReviewLikeMaxAggregateOutputType | null
+  }
+
+  type GetLanguageLearnerReviewLikeGroupByPayload<T extends LanguageLearnerReviewLikeGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<LanguageLearnerReviewLikeGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof LanguageLearnerReviewLikeGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], LanguageLearnerReviewLikeGroupByOutputType[P]>
+            : GetScalarType<T[P], LanguageLearnerReviewLikeGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type LanguageLearnerReviewLikeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    reviewId?: boolean
+    createdAt?: boolean
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    review?: boolean | LanguageLearnerReviewDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerReviewLike"]>
+
+  export type LanguageLearnerReviewLikeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    reviewId?: boolean
+    createdAt?: boolean
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    review?: boolean | LanguageLearnerReviewDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerReviewLike"]>
+
+  export type LanguageLearnerReviewLikeSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    reviewId?: boolean
+    createdAt?: boolean
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    review?: boolean | LanguageLearnerReviewDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerReviewLike"]>
+
+  export type LanguageLearnerReviewLikeSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    reviewId?: boolean
+    createdAt?: boolean
+  }
+
+  export type LanguageLearnerReviewLikeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "reviewId" | "createdAt", ExtArgs["result"]["languageLearnerReviewLike"]>
+  export type LanguageLearnerReviewLikeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    review?: boolean | LanguageLearnerReviewDefaultArgs<ExtArgs>
+  }
+  export type LanguageLearnerReviewLikeIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    review?: boolean | LanguageLearnerReviewDefaultArgs<ExtArgs>
+  }
+  export type LanguageLearnerReviewLikeIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    review?: boolean | LanguageLearnerReviewDefaultArgs<ExtArgs>
+  }
+
+  export type $LanguageLearnerReviewLikePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "LanguageLearnerReviewLike"
+    objects: {
+      user: Prisma.$LanguageLearnerUserPayload<ExtArgs>
+      review: Prisma.$LanguageLearnerReviewPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      reviewId: string
+      createdAt: Date
+    }, ExtArgs["result"]["languageLearnerReviewLike"]>
+    composites: {}
+  }
+
+  type LanguageLearnerReviewLikeGetPayload<S extends boolean | null | undefined | LanguageLearnerReviewLikeDefaultArgs> = $Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload, S>
+
+  type LanguageLearnerReviewLikeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LanguageLearnerReviewLikeFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LanguageLearnerReviewLikeCountAggregateInputType | true
+    }
+
+  export interface LanguageLearnerReviewLikeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['LanguageLearnerReviewLike'], meta: { name: 'LanguageLearnerReviewLike' } }
+    /**
+     * Find zero or one LanguageLearnerReviewLike that matches the filter.
+     * @param {LanguageLearnerReviewLikeFindUniqueArgs} args - Arguments to find a LanguageLearnerReviewLike
+     * @example
+     * // Get one LanguageLearnerReviewLike
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends LanguageLearnerReviewLikeFindUniqueArgs>(args: SelectSubset<T, LanguageLearnerReviewLikeFindUniqueArgs<ExtArgs>>): Prisma__LanguageLearnerReviewLikeClient<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one LanguageLearnerReviewLike that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {LanguageLearnerReviewLikeFindUniqueOrThrowArgs} args - Arguments to find a LanguageLearnerReviewLike
+     * @example
+     * // Get one LanguageLearnerReviewLike
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends LanguageLearnerReviewLikeFindUniqueOrThrowArgs>(args: SelectSubset<T, LanguageLearnerReviewLikeFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerReviewLikeClient<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerReviewLike that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewLikeFindFirstArgs} args - Arguments to find a LanguageLearnerReviewLike
+     * @example
+     * // Get one LanguageLearnerReviewLike
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends LanguageLearnerReviewLikeFindFirstArgs>(args?: SelectSubset<T, LanguageLearnerReviewLikeFindFirstArgs<ExtArgs>>): Prisma__LanguageLearnerReviewLikeClient<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerReviewLike that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewLikeFindFirstOrThrowArgs} args - Arguments to find a LanguageLearnerReviewLike
+     * @example
+     * // Get one LanguageLearnerReviewLike
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends LanguageLearnerReviewLikeFindFirstOrThrowArgs>(args?: SelectSubset<T, LanguageLearnerReviewLikeFindFirstOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerReviewLikeClient<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more LanguageLearnerReviewLikes that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewLikeFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all LanguageLearnerReviewLikes
+     * const languageLearnerReviewLikes = await prisma.languageLearnerReviewLike.findMany()
+     * 
+     * // Get first 10 LanguageLearnerReviewLikes
+     * const languageLearnerReviewLikes = await prisma.languageLearnerReviewLike.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const languageLearnerReviewLikeWithIdOnly = await prisma.languageLearnerReviewLike.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends LanguageLearnerReviewLikeFindManyArgs>(args?: SelectSubset<T, LanguageLearnerReviewLikeFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a LanguageLearnerReviewLike.
+     * @param {LanguageLearnerReviewLikeCreateArgs} args - Arguments to create a LanguageLearnerReviewLike.
+     * @example
+     * // Create one LanguageLearnerReviewLike
+     * const LanguageLearnerReviewLike = await prisma.languageLearnerReviewLike.create({
+     *   data: {
+     *     // ... data to create a LanguageLearnerReviewLike
+     *   }
+     * })
+     * 
+     */
+    create<T extends LanguageLearnerReviewLikeCreateArgs>(args: SelectSubset<T, LanguageLearnerReviewLikeCreateArgs<ExtArgs>>): Prisma__LanguageLearnerReviewLikeClient<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many LanguageLearnerReviewLikes.
+     * @param {LanguageLearnerReviewLikeCreateManyArgs} args - Arguments to create many LanguageLearnerReviewLikes.
+     * @example
+     * // Create many LanguageLearnerReviewLikes
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends LanguageLearnerReviewLikeCreateManyArgs>(args?: SelectSubset<T, LanguageLearnerReviewLikeCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many LanguageLearnerReviewLikes and returns the data saved in the database.
+     * @param {LanguageLearnerReviewLikeCreateManyAndReturnArgs} args - Arguments to create many LanguageLearnerReviewLikes.
+     * @example
+     * // Create many LanguageLearnerReviewLikes
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many LanguageLearnerReviewLikes and only return the `id`
+     * const languageLearnerReviewLikeWithIdOnly = await prisma.languageLearnerReviewLike.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends LanguageLearnerReviewLikeCreateManyAndReturnArgs>(args?: SelectSubset<T, LanguageLearnerReviewLikeCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a LanguageLearnerReviewLike.
+     * @param {LanguageLearnerReviewLikeDeleteArgs} args - Arguments to delete one LanguageLearnerReviewLike.
+     * @example
+     * // Delete one LanguageLearnerReviewLike
+     * const LanguageLearnerReviewLike = await prisma.languageLearnerReviewLike.delete({
+     *   where: {
+     *     // ... filter to delete one LanguageLearnerReviewLike
+     *   }
+     * })
+     * 
+     */
+    delete<T extends LanguageLearnerReviewLikeDeleteArgs>(args: SelectSubset<T, LanguageLearnerReviewLikeDeleteArgs<ExtArgs>>): Prisma__LanguageLearnerReviewLikeClient<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one LanguageLearnerReviewLike.
+     * @param {LanguageLearnerReviewLikeUpdateArgs} args - Arguments to update one LanguageLearnerReviewLike.
+     * @example
+     * // Update one LanguageLearnerReviewLike
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends LanguageLearnerReviewLikeUpdateArgs>(args: SelectSubset<T, LanguageLearnerReviewLikeUpdateArgs<ExtArgs>>): Prisma__LanguageLearnerReviewLikeClient<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more LanguageLearnerReviewLikes.
+     * @param {LanguageLearnerReviewLikeDeleteManyArgs} args - Arguments to filter LanguageLearnerReviewLikes to delete.
+     * @example
+     * // Delete a few LanguageLearnerReviewLikes
+     * const { count } = await prisma.languageLearnerReviewLike.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends LanguageLearnerReviewLikeDeleteManyArgs>(args?: SelectSubset<T, LanguageLearnerReviewLikeDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerReviewLikes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewLikeUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many LanguageLearnerReviewLikes
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends LanguageLearnerReviewLikeUpdateManyArgs>(args: SelectSubset<T, LanguageLearnerReviewLikeUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerReviewLikes and returns the data updated in the database.
+     * @param {LanguageLearnerReviewLikeUpdateManyAndReturnArgs} args - Arguments to update many LanguageLearnerReviewLikes.
+     * @example
+     * // Update many LanguageLearnerReviewLikes
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more LanguageLearnerReviewLikes and only return the `id`
+     * const languageLearnerReviewLikeWithIdOnly = await prisma.languageLearnerReviewLike.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends LanguageLearnerReviewLikeUpdateManyAndReturnArgs>(args: SelectSubset<T, LanguageLearnerReviewLikeUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one LanguageLearnerReviewLike.
+     * @param {LanguageLearnerReviewLikeUpsertArgs} args - Arguments to update or create a LanguageLearnerReviewLike.
+     * @example
+     * // Update or create a LanguageLearnerReviewLike
+     * const languageLearnerReviewLike = await prisma.languageLearnerReviewLike.upsert({
+     *   create: {
+     *     // ... data to create a LanguageLearnerReviewLike
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the LanguageLearnerReviewLike we want to update
+     *   }
+     * })
+     */
+    upsert<T extends LanguageLearnerReviewLikeUpsertArgs>(args: SelectSubset<T, LanguageLearnerReviewLikeUpsertArgs<ExtArgs>>): Prisma__LanguageLearnerReviewLikeClient<$Result.GetResult<Prisma.$LanguageLearnerReviewLikePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of LanguageLearnerReviewLikes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewLikeCountArgs} args - Arguments to filter LanguageLearnerReviewLikes to count.
+     * @example
+     * // Count the number of LanguageLearnerReviewLikes
+     * const count = await prisma.languageLearnerReviewLike.count({
+     *   where: {
+     *     // ... the filter for the LanguageLearnerReviewLikes we want to count
+     *   }
+     * })
+    **/
+    count<T extends LanguageLearnerReviewLikeCountArgs>(
+      args?: Subset<T, LanguageLearnerReviewLikeCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], LanguageLearnerReviewLikeCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a LanguageLearnerReviewLike.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewLikeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends LanguageLearnerReviewLikeAggregateArgs>(args: Subset<T, LanguageLearnerReviewLikeAggregateArgs>): Prisma.PrismaPromise<GetLanguageLearnerReviewLikeAggregateType<T>>
+
+    /**
+     * Group by LanguageLearnerReviewLike.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerReviewLikeGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends LanguageLearnerReviewLikeGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: LanguageLearnerReviewLikeGroupByArgs['orderBy'] }
+        : { orderBy?: LanguageLearnerReviewLikeGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, LanguageLearnerReviewLikeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLanguageLearnerReviewLikeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the LanguageLearnerReviewLike model
+   */
+  readonly fields: LanguageLearnerReviewLikeFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for LanguageLearnerReviewLike.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__LanguageLearnerReviewLikeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends LanguageLearnerUserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUserDefaultArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    review<T extends LanguageLearnerReviewDefaultArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerReviewDefaultArgs<ExtArgs>>): Prisma__LanguageLearnerReviewClient<$Result.GetResult<Prisma.$LanguageLearnerReviewPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the LanguageLearnerReviewLike model
+   */ 
+  interface LanguageLearnerReviewLikeFieldRefs {
+    readonly id: FieldRef<"LanguageLearnerReviewLike", 'String'>
+    readonly userId: FieldRef<"LanguageLearnerReviewLike", 'String'>
+    readonly reviewId: FieldRef<"LanguageLearnerReviewLike", 'String'>
+    readonly createdAt: FieldRef<"LanguageLearnerReviewLike", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * LanguageLearnerReviewLike findUnique
+   */
+  export type LanguageLearnerReviewLikeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReviewLike to fetch.
+     */
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerReviewLike findUniqueOrThrow
+   */
+  export type LanguageLearnerReviewLikeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReviewLike to fetch.
+     */
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerReviewLike findFirst
+   */
+  export type LanguageLearnerReviewLikeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReviewLike to fetch.
+     */
+    where?: LanguageLearnerReviewLikeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerReviewLikes to fetch.
+     */
+    orderBy?: LanguageLearnerReviewLikeOrderByWithRelationInput | LanguageLearnerReviewLikeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerReviewLikes.
+     */
+    cursor?: LanguageLearnerReviewLikeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerReviewLikes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerReviewLikes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerReviewLikes.
+     */
+    distinct?: LanguageLearnerReviewLikeScalarFieldEnum | LanguageLearnerReviewLikeScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerReviewLike findFirstOrThrow
+   */
+  export type LanguageLearnerReviewLikeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReviewLike to fetch.
+     */
+    where?: LanguageLearnerReviewLikeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerReviewLikes to fetch.
+     */
+    orderBy?: LanguageLearnerReviewLikeOrderByWithRelationInput | LanguageLearnerReviewLikeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerReviewLikes.
+     */
+    cursor?: LanguageLearnerReviewLikeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerReviewLikes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerReviewLikes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerReviewLikes.
+     */
+    distinct?: LanguageLearnerReviewLikeScalarFieldEnum | LanguageLearnerReviewLikeScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerReviewLike findMany
+   */
+  export type LanguageLearnerReviewLikeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerReviewLikes to fetch.
+     */
+    where?: LanguageLearnerReviewLikeWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerReviewLikes to fetch.
+     */
+    orderBy?: LanguageLearnerReviewLikeOrderByWithRelationInput | LanguageLearnerReviewLikeOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing LanguageLearnerReviewLikes.
+     */
+    cursor?: LanguageLearnerReviewLikeWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerReviewLikes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerReviewLikes.
+     */
+    skip?: number
+    distinct?: LanguageLearnerReviewLikeScalarFieldEnum | LanguageLearnerReviewLikeScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerReviewLike create
+   */
+  export type LanguageLearnerReviewLikeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    /**
+     * The data needed to create a LanguageLearnerReviewLike.
+     */
+    data: XOR<LanguageLearnerReviewLikeCreateInput, LanguageLearnerReviewLikeUncheckedCreateInput>
+  }
+
+  /**
+   * LanguageLearnerReviewLike createMany
+   */
+  export type LanguageLearnerReviewLikeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many LanguageLearnerReviewLikes.
+     */
+    data: LanguageLearnerReviewLikeCreateManyInput | LanguageLearnerReviewLikeCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * LanguageLearnerReviewLike createManyAndReturn
+   */
+  export type LanguageLearnerReviewLikeCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * The data used to create many LanguageLearnerReviewLikes.
+     */
+    data: LanguageLearnerReviewLikeCreateManyInput | LanguageLearnerReviewLikeCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerReviewLike update
+   */
+  export type LanguageLearnerReviewLikeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    /**
+     * The data needed to update a LanguageLearnerReviewLike.
+     */
+    data: XOR<LanguageLearnerReviewLikeUpdateInput, LanguageLearnerReviewLikeUncheckedUpdateInput>
+    /**
+     * Choose, which LanguageLearnerReviewLike to update.
+     */
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerReviewLike updateMany
+   */
+  export type LanguageLearnerReviewLikeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update LanguageLearnerReviewLikes.
+     */
+    data: XOR<LanguageLearnerReviewLikeUpdateManyMutationInput, LanguageLearnerReviewLikeUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerReviewLikes to update
+     */
+    where?: LanguageLearnerReviewLikeWhereInput
+    /**
+     * Limit how many LanguageLearnerReviewLikes to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerReviewLike updateManyAndReturn
+   */
+  export type LanguageLearnerReviewLikeUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * The data used to update LanguageLearnerReviewLikes.
+     */
+    data: XOR<LanguageLearnerReviewLikeUpdateManyMutationInput, LanguageLearnerReviewLikeUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerReviewLikes to update
+     */
+    where?: LanguageLearnerReviewLikeWhereInput
+    /**
+     * Limit how many LanguageLearnerReviewLikes to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerReviewLike upsert
+   */
+  export type LanguageLearnerReviewLikeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    /**
+     * The filter to search for the LanguageLearnerReviewLike to update in case it exists.
+     */
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+    /**
+     * In case the LanguageLearnerReviewLike found by the `where` argument doesn't exist, create a new LanguageLearnerReviewLike with this data.
+     */
+    create: XOR<LanguageLearnerReviewLikeCreateInput, LanguageLearnerReviewLikeUncheckedCreateInput>
+    /**
+     * In case the LanguageLearnerReviewLike was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<LanguageLearnerReviewLikeUpdateInput, LanguageLearnerReviewLikeUncheckedUpdateInput>
+  }
+
+  /**
+   * LanguageLearnerReviewLike delete
+   */
+  export type LanguageLearnerReviewLikeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+    /**
+     * Filter which LanguageLearnerReviewLike to delete.
+     */
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerReviewLike deleteMany
+   */
+  export type LanguageLearnerReviewLikeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerReviewLikes to delete
+     */
+    where?: LanguageLearnerReviewLikeWhereInput
+    /**
+     * Limit how many LanguageLearnerReviewLikes to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerReviewLike without action
+   */
+  export type LanguageLearnerReviewLikeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerReviewLike
+     */
+    select?: LanguageLearnerReviewLikeSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerReviewLike
+     */
+    omit?: LanguageLearnerReviewLikeOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerReviewLikeInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model LanguageLearnerUserVote
+   */
+
+  export type AggregateLanguageLearnerUserVote = {
+    _count: LanguageLearnerUserVoteCountAggregateOutputType | null
+    _min: LanguageLearnerUserVoteMinAggregateOutputType | null
+    _max: LanguageLearnerUserVoteMaxAggregateOutputType | null
+  }
+
+  export type LanguageLearnerUserVoteMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    voterId: string | null
+    voteType: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerUserVoteMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    voterId: string | null
+    voteType: string | null
+    createdAt: Date | null
+  }
+
+  export type LanguageLearnerUserVoteCountAggregateOutputType = {
+    id: number
+    userId: number
+    voterId: number
+    voteType: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type LanguageLearnerUserVoteMinAggregateInputType = {
+    id?: true
+    userId?: true
+    voterId?: true
+    voteType?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerUserVoteMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    voterId?: true
+    voteType?: true
+    createdAt?: true
+  }
+
+  export type LanguageLearnerUserVoteCountAggregateInputType = {
+    id?: true
+    userId?: true
+    voterId?: true
+    voteType?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type LanguageLearnerUserVoteAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerUserVote to aggregate.
+     */
+    where?: LanguageLearnerUserVoteWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerUserVotes to fetch.
+     */
+    orderBy?: LanguageLearnerUserVoteOrderByWithRelationInput | LanguageLearnerUserVoteOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: LanguageLearnerUserVoteWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerUserVotes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerUserVotes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned LanguageLearnerUserVotes
+    **/
+    _count?: true | LanguageLearnerUserVoteCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: LanguageLearnerUserVoteMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: LanguageLearnerUserVoteMaxAggregateInputType
+  }
+
+  export type GetLanguageLearnerUserVoteAggregateType<T extends LanguageLearnerUserVoteAggregateArgs> = {
+        [P in keyof T & keyof AggregateLanguageLearnerUserVote]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateLanguageLearnerUserVote[P]>
+      : GetScalarType<T[P], AggregateLanguageLearnerUserVote[P]>
+  }
+
+
+
+
+  export type LanguageLearnerUserVoteGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LanguageLearnerUserVoteWhereInput
+    orderBy?: LanguageLearnerUserVoteOrderByWithAggregationInput | LanguageLearnerUserVoteOrderByWithAggregationInput[]
+    by: LanguageLearnerUserVoteScalarFieldEnum[] | LanguageLearnerUserVoteScalarFieldEnum
+    having?: LanguageLearnerUserVoteScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: LanguageLearnerUserVoteCountAggregateInputType | true
+    _min?: LanguageLearnerUserVoteMinAggregateInputType
+    _max?: LanguageLearnerUserVoteMaxAggregateInputType
+  }
+
+  export type LanguageLearnerUserVoteGroupByOutputType = {
+    id: string
+    userId: string
+    voterId: string
+    voteType: string
+    createdAt: Date
+    _count: LanguageLearnerUserVoteCountAggregateOutputType | null
+    _min: LanguageLearnerUserVoteMinAggregateOutputType | null
+    _max: LanguageLearnerUserVoteMaxAggregateOutputType | null
+  }
+
+  type GetLanguageLearnerUserVoteGroupByPayload<T extends LanguageLearnerUserVoteGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<LanguageLearnerUserVoteGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof LanguageLearnerUserVoteGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], LanguageLearnerUserVoteGroupByOutputType[P]>
+            : GetScalarType<T[P], LanguageLearnerUserVoteGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type LanguageLearnerUserVoteSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    voterId?: boolean
+    voteType?: boolean
+    createdAt?: boolean
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    voter?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerUserVote"]>
+
+  export type LanguageLearnerUserVoteSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    voterId?: boolean
+    voteType?: boolean
+    createdAt?: boolean
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    voter?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerUserVote"]>
+
+  export type LanguageLearnerUserVoteSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    voterId?: boolean
+    voteType?: boolean
+    createdAt?: boolean
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    voter?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languageLearnerUserVote"]>
+
+  export type LanguageLearnerUserVoteSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    voterId?: boolean
+    voteType?: boolean
+    createdAt?: boolean
+  }
+
+  export type LanguageLearnerUserVoteOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "voterId" | "voteType" | "createdAt", ExtArgs["result"]["languageLearnerUserVote"]>
+  export type LanguageLearnerUserVoteInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    voter?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }
+  export type LanguageLearnerUserVoteIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    voter?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }
+  export type LanguageLearnerUserVoteIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+    voter?: boolean | LanguageLearnerUserDefaultArgs<ExtArgs>
+  }
+
+  export type $LanguageLearnerUserVotePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "LanguageLearnerUserVote"
+    objects: {
+      user: Prisma.$LanguageLearnerUserPayload<ExtArgs>
+      voter: Prisma.$LanguageLearnerUserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      voterId: string
+      voteType: string
+      createdAt: Date
+    }, ExtArgs["result"]["languageLearnerUserVote"]>
+    composites: {}
+  }
+
+  type LanguageLearnerUserVoteGetPayload<S extends boolean | null | undefined | LanguageLearnerUserVoteDefaultArgs> = $Result.GetResult<Prisma.$LanguageLearnerUserVotePayload, S>
+
+  type LanguageLearnerUserVoteCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LanguageLearnerUserVoteFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LanguageLearnerUserVoteCountAggregateInputType | true
+    }
+
+  export interface LanguageLearnerUserVoteDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['LanguageLearnerUserVote'], meta: { name: 'LanguageLearnerUserVote' } }
+    /**
+     * Find zero or one LanguageLearnerUserVote that matches the filter.
+     * @param {LanguageLearnerUserVoteFindUniqueArgs} args - Arguments to find a LanguageLearnerUserVote
+     * @example
+     * // Get one LanguageLearnerUserVote
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends LanguageLearnerUserVoteFindUniqueArgs>(args: SelectSubset<T, LanguageLearnerUserVoteFindUniqueArgs<ExtArgs>>): Prisma__LanguageLearnerUserVoteClient<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one LanguageLearnerUserVote that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {LanguageLearnerUserVoteFindUniqueOrThrowArgs} args - Arguments to find a LanguageLearnerUserVote
+     * @example
+     * // Get one LanguageLearnerUserVote
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends LanguageLearnerUserVoteFindUniqueOrThrowArgs>(args: SelectSubset<T, LanguageLearnerUserVoteFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerUserVoteClient<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerUserVote that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserVoteFindFirstArgs} args - Arguments to find a LanguageLearnerUserVote
+     * @example
+     * // Get one LanguageLearnerUserVote
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends LanguageLearnerUserVoteFindFirstArgs>(args?: SelectSubset<T, LanguageLearnerUserVoteFindFirstArgs<ExtArgs>>): Prisma__LanguageLearnerUserVoteClient<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LanguageLearnerUserVote that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserVoteFindFirstOrThrowArgs} args - Arguments to find a LanguageLearnerUserVote
+     * @example
+     * // Get one LanguageLearnerUserVote
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends LanguageLearnerUserVoteFindFirstOrThrowArgs>(args?: SelectSubset<T, LanguageLearnerUserVoteFindFirstOrThrowArgs<ExtArgs>>): Prisma__LanguageLearnerUserVoteClient<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more LanguageLearnerUserVotes that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserVoteFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all LanguageLearnerUserVotes
+     * const languageLearnerUserVotes = await prisma.languageLearnerUserVote.findMany()
+     * 
+     * // Get first 10 LanguageLearnerUserVotes
+     * const languageLearnerUserVotes = await prisma.languageLearnerUserVote.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const languageLearnerUserVoteWithIdOnly = await prisma.languageLearnerUserVote.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends LanguageLearnerUserVoteFindManyArgs>(args?: SelectSubset<T, LanguageLearnerUserVoteFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a LanguageLearnerUserVote.
+     * @param {LanguageLearnerUserVoteCreateArgs} args - Arguments to create a LanguageLearnerUserVote.
+     * @example
+     * // Create one LanguageLearnerUserVote
+     * const LanguageLearnerUserVote = await prisma.languageLearnerUserVote.create({
+     *   data: {
+     *     // ... data to create a LanguageLearnerUserVote
+     *   }
+     * })
+     * 
+     */
+    create<T extends LanguageLearnerUserVoteCreateArgs>(args: SelectSubset<T, LanguageLearnerUserVoteCreateArgs<ExtArgs>>): Prisma__LanguageLearnerUserVoteClient<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many LanguageLearnerUserVotes.
+     * @param {LanguageLearnerUserVoteCreateManyArgs} args - Arguments to create many LanguageLearnerUserVotes.
+     * @example
+     * // Create many LanguageLearnerUserVotes
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends LanguageLearnerUserVoteCreateManyArgs>(args?: SelectSubset<T, LanguageLearnerUserVoteCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many LanguageLearnerUserVotes and returns the data saved in the database.
+     * @param {LanguageLearnerUserVoteCreateManyAndReturnArgs} args - Arguments to create many LanguageLearnerUserVotes.
+     * @example
+     * // Create many LanguageLearnerUserVotes
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many LanguageLearnerUserVotes and only return the `id`
+     * const languageLearnerUserVoteWithIdOnly = await prisma.languageLearnerUserVote.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends LanguageLearnerUserVoteCreateManyAndReturnArgs>(args?: SelectSubset<T, LanguageLearnerUserVoteCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a LanguageLearnerUserVote.
+     * @param {LanguageLearnerUserVoteDeleteArgs} args - Arguments to delete one LanguageLearnerUserVote.
+     * @example
+     * // Delete one LanguageLearnerUserVote
+     * const LanguageLearnerUserVote = await prisma.languageLearnerUserVote.delete({
+     *   where: {
+     *     // ... filter to delete one LanguageLearnerUserVote
+     *   }
+     * })
+     * 
+     */
+    delete<T extends LanguageLearnerUserVoteDeleteArgs>(args: SelectSubset<T, LanguageLearnerUserVoteDeleteArgs<ExtArgs>>): Prisma__LanguageLearnerUserVoteClient<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one LanguageLearnerUserVote.
+     * @param {LanguageLearnerUserVoteUpdateArgs} args - Arguments to update one LanguageLearnerUserVote.
+     * @example
+     * // Update one LanguageLearnerUserVote
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends LanguageLearnerUserVoteUpdateArgs>(args: SelectSubset<T, LanguageLearnerUserVoteUpdateArgs<ExtArgs>>): Prisma__LanguageLearnerUserVoteClient<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more LanguageLearnerUserVotes.
+     * @param {LanguageLearnerUserVoteDeleteManyArgs} args - Arguments to filter LanguageLearnerUserVotes to delete.
+     * @example
+     * // Delete a few LanguageLearnerUserVotes
+     * const { count } = await prisma.languageLearnerUserVote.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends LanguageLearnerUserVoteDeleteManyArgs>(args?: SelectSubset<T, LanguageLearnerUserVoteDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerUserVotes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserVoteUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many LanguageLearnerUserVotes
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends LanguageLearnerUserVoteUpdateManyArgs>(args: SelectSubset<T, LanguageLearnerUserVoteUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LanguageLearnerUserVotes and returns the data updated in the database.
+     * @param {LanguageLearnerUserVoteUpdateManyAndReturnArgs} args - Arguments to update many LanguageLearnerUserVotes.
+     * @example
+     * // Update many LanguageLearnerUserVotes
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more LanguageLearnerUserVotes and only return the `id`
+     * const languageLearnerUserVoteWithIdOnly = await prisma.languageLearnerUserVote.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends LanguageLearnerUserVoteUpdateManyAndReturnArgs>(args: SelectSubset<T, LanguageLearnerUserVoteUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one LanguageLearnerUserVote.
+     * @param {LanguageLearnerUserVoteUpsertArgs} args - Arguments to update or create a LanguageLearnerUserVote.
+     * @example
+     * // Update or create a LanguageLearnerUserVote
+     * const languageLearnerUserVote = await prisma.languageLearnerUserVote.upsert({
+     *   create: {
+     *     // ... data to create a LanguageLearnerUserVote
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the LanguageLearnerUserVote we want to update
+     *   }
+     * })
+     */
+    upsert<T extends LanguageLearnerUserVoteUpsertArgs>(args: SelectSubset<T, LanguageLearnerUserVoteUpsertArgs<ExtArgs>>): Prisma__LanguageLearnerUserVoteClient<$Result.GetResult<Prisma.$LanguageLearnerUserVotePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of LanguageLearnerUserVotes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserVoteCountArgs} args - Arguments to filter LanguageLearnerUserVotes to count.
+     * @example
+     * // Count the number of LanguageLearnerUserVotes
+     * const count = await prisma.languageLearnerUserVote.count({
+     *   where: {
+     *     // ... the filter for the LanguageLearnerUserVotes we want to count
+     *   }
+     * })
+    **/
+    count<T extends LanguageLearnerUserVoteCountArgs>(
+      args?: Subset<T, LanguageLearnerUserVoteCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], LanguageLearnerUserVoteCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a LanguageLearnerUserVote.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserVoteAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends LanguageLearnerUserVoteAggregateArgs>(args: Subset<T, LanguageLearnerUserVoteAggregateArgs>): Prisma.PrismaPromise<GetLanguageLearnerUserVoteAggregateType<T>>
+
+    /**
+     * Group by LanguageLearnerUserVote.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LanguageLearnerUserVoteGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends LanguageLearnerUserVoteGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: LanguageLearnerUserVoteGroupByArgs['orderBy'] }
+        : { orderBy?: LanguageLearnerUserVoteGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, LanguageLearnerUserVoteGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLanguageLearnerUserVoteGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the LanguageLearnerUserVote model
+   */
+  readonly fields: LanguageLearnerUserVoteFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for LanguageLearnerUserVote.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__LanguageLearnerUserVoteClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends LanguageLearnerUserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUserDefaultArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    voter<T extends LanguageLearnerUserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, LanguageLearnerUserDefaultArgs<ExtArgs>>): Prisma__LanguageLearnerUserClient<$Result.GetResult<Prisma.$LanguageLearnerUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the LanguageLearnerUserVote model
+   */ 
+  interface LanguageLearnerUserVoteFieldRefs {
+    readonly id: FieldRef<"LanguageLearnerUserVote", 'String'>
+    readonly userId: FieldRef<"LanguageLearnerUserVote", 'String'>
+    readonly voterId: FieldRef<"LanguageLearnerUserVote", 'String'>
+    readonly voteType: FieldRef<"LanguageLearnerUserVote", 'String'>
+    readonly createdAt: FieldRef<"LanguageLearnerUserVote", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * LanguageLearnerUserVote findUnique
+   */
+  export type LanguageLearnerUserVoteFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUserVote to fetch.
+     */
+    where: LanguageLearnerUserVoteWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerUserVote findUniqueOrThrow
+   */
+  export type LanguageLearnerUserVoteFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUserVote to fetch.
+     */
+    where: LanguageLearnerUserVoteWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerUserVote findFirst
+   */
+  export type LanguageLearnerUserVoteFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUserVote to fetch.
+     */
+    where?: LanguageLearnerUserVoteWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerUserVotes to fetch.
+     */
+    orderBy?: LanguageLearnerUserVoteOrderByWithRelationInput | LanguageLearnerUserVoteOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerUserVotes.
+     */
+    cursor?: LanguageLearnerUserVoteWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerUserVotes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerUserVotes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerUserVotes.
+     */
+    distinct?: LanguageLearnerUserVoteScalarFieldEnum | LanguageLearnerUserVoteScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUserVote findFirstOrThrow
+   */
+  export type LanguageLearnerUserVoteFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUserVote to fetch.
+     */
+    where?: LanguageLearnerUserVoteWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerUserVotes to fetch.
+     */
+    orderBy?: LanguageLearnerUserVoteOrderByWithRelationInput | LanguageLearnerUserVoteOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LanguageLearnerUserVotes.
+     */
+    cursor?: LanguageLearnerUserVoteWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerUserVotes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerUserVotes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LanguageLearnerUserVotes.
+     */
+    distinct?: LanguageLearnerUserVoteScalarFieldEnum | LanguageLearnerUserVoteScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUserVote findMany
+   */
+  export type LanguageLearnerUserVoteFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    /**
+     * Filter, which LanguageLearnerUserVotes to fetch.
+     */
+    where?: LanguageLearnerUserVoteWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LanguageLearnerUserVotes to fetch.
+     */
+    orderBy?: LanguageLearnerUserVoteOrderByWithRelationInput | LanguageLearnerUserVoteOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing LanguageLearnerUserVotes.
+     */
+    cursor?: LanguageLearnerUserVoteWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LanguageLearnerUserVotes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LanguageLearnerUserVotes.
+     */
+    skip?: number
+    distinct?: LanguageLearnerUserVoteScalarFieldEnum | LanguageLearnerUserVoteScalarFieldEnum[]
+  }
+
+  /**
+   * LanguageLearnerUserVote create
+   */
+  export type LanguageLearnerUserVoteCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    /**
+     * The data needed to create a LanguageLearnerUserVote.
+     */
+    data: XOR<LanguageLearnerUserVoteCreateInput, LanguageLearnerUserVoteUncheckedCreateInput>
+  }
+
+  /**
+   * LanguageLearnerUserVote createMany
+   */
+  export type LanguageLearnerUserVoteCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many LanguageLearnerUserVotes.
+     */
+    data: LanguageLearnerUserVoteCreateManyInput | LanguageLearnerUserVoteCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * LanguageLearnerUserVote createManyAndReturn
+   */
+  export type LanguageLearnerUserVoteCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * The data used to create many LanguageLearnerUserVotes.
+     */
+    data: LanguageLearnerUserVoteCreateManyInput | LanguageLearnerUserVoteCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerUserVote update
+   */
+  export type LanguageLearnerUserVoteUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    /**
+     * The data needed to update a LanguageLearnerUserVote.
+     */
+    data: XOR<LanguageLearnerUserVoteUpdateInput, LanguageLearnerUserVoteUncheckedUpdateInput>
+    /**
+     * Choose, which LanguageLearnerUserVote to update.
+     */
+    where: LanguageLearnerUserVoteWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerUserVote updateMany
+   */
+  export type LanguageLearnerUserVoteUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update LanguageLearnerUserVotes.
+     */
+    data: XOR<LanguageLearnerUserVoteUpdateManyMutationInput, LanguageLearnerUserVoteUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerUserVotes to update
+     */
+    where?: LanguageLearnerUserVoteWhereInput
+    /**
+     * Limit how many LanguageLearnerUserVotes to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerUserVote updateManyAndReturn
+   */
+  export type LanguageLearnerUserVoteUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * The data used to update LanguageLearnerUserVotes.
+     */
+    data: XOR<LanguageLearnerUserVoteUpdateManyMutationInput, LanguageLearnerUserVoteUncheckedUpdateManyInput>
+    /**
+     * Filter which LanguageLearnerUserVotes to update
+     */
+    where?: LanguageLearnerUserVoteWhereInput
+    /**
+     * Limit how many LanguageLearnerUserVotes to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LanguageLearnerUserVote upsert
+   */
+  export type LanguageLearnerUserVoteUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    /**
+     * The filter to search for the LanguageLearnerUserVote to update in case it exists.
+     */
+    where: LanguageLearnerUserVoteWhereUniqueInput
+    /**
+     * In case the LanguageLearnerUserVote found by the `where` argument doesn't exist, create a new LanguageLearnerUserVote with this data.
+     */
+    create: XOR<LanguageLearnerUserVoteCreateInput, LanguageLearnerUserVoteUncheckedCreateInput>
+    /**
+     * In case the LanguageLearnerUserVote was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<LanguageLearnerUserVoteUpdateInput, LanguageLearnerUserVoteUncheckedUpdateInput>
+  }
+
+  /**
+   * LanguageLearnerUserVote delete
+   */
+  export type LanguageLearnerUserVoteDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+    /**
+     * Filter which LanguageLearnerUserVote to delete.
+     */
+    where: LanguageLearnerUserVoteWhereUniqueInput
+  }
+
+  /**
+   * LanguageLearnerUserVote deleteMany
+   */
+  export type LanguageLearnerUserVoteDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LanguageLearnerUserVotes to delete
+     */
+    where?: LanguageLearnerUserVoteWhereInput
+    /**
+     * Limit how many LanguageLearnerUserVotes to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * LanguageLearnerUserVote without action
+   */
+  export type LanguageLearnerUserVoteDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LanguageLearnerUserVote
+     */
+    select?: LanguageLearnerUserVoteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LanguageLearnerUserVote
+     */
+    omit?: LanguageLearnerUserVoteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LanguageLearnerUserVoteInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -6889,6 +13070,66 @@ export namespace Prisma {
   };
 
   export type EventOrganizerServiceProviderScalarFieldEnum = (typeof EventOrganizerServiceProviderScalarFieldEnum)[keyof typeof EventOrganizerServiceProviderScalarFieldEnum]
+
+
+  export const LanguageLearnerUserScalarFieldEnum: {
+    id: 'id',
+    email: 'email',
+    name: 'name',
+    password: 'password',
+    role: 'role',
+    createdAt: 'createdAt'
+  };
+
+  export type LanguageLearnerUserScalarFieldEnum = (typeof LanguageLearnerUserScalarFieldEnum)[keyof typeof LanguageLearnerUserScalarFieldEnum]
+
+
+  export const LanguageLearnerPlatformScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    website: 'website',
+    languagesOffered: 'languagesOffered',
+    description: 'description',
+    ownerId: 'ownerId',
+    status: 'status',
+    createdAt: 'createdAt'
+  };
+
+  export type LanguageLearnerPlatformScalarFieldEnum = (typeof LanguageLearnerPlatformScalarFieldEnum)[keyof typeof LanguageLearnerPlatformScalarFieldEnum]
+
+
+  export const LanguageLearnerReviewScalarFieldEnum: {
+    id: 'id',
+    platformId: 'platformId',
+    userId: 'userId',
+    rating: 'rating',
+    comment: 'comment',
+    status: 'status',
+    createdAt: 'createdAt'
+  };
+
+  export type LanguageLearnerReviewScalarFieldEnum = (typeof LanguageLearnerReviewScalarFieldEnum)[keyof typeof LanguageLearnerReviewScalarFieldEnum]
+
+
+  export const LanguageLearnerReviewLikeScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    reviewId: 'reviewId',
+    createdAt: 'createdAt'
+  };
+
+  export type LanguageLearnerReviewLikeScalarFieldEnum = (typeof LanguageLearnerReviewLikeScalarFieldEnum)[keyof typeof LanguageLearnerReviewLikeScalarFieldEnum]
+
+
+  export const LanguageLearnerUserVoteScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    voterId: 'voterId',
+    voteType: 'voteType',
+    createdAt: 'createdAt'
+  };
+
+  export type LanguageLearnerUserVoteScalarFieldEnum = (typeof LanguageLearnerUserVoteScalarFieldEnum)[keyof typeof LanguageLearnerUserVoteScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -7297,6 +13538,337 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"EventOrganizerServiceProvider"> | Date | string
   }
 
+  export type LanguageLearnerUserWhereInput = {
+    AND?: LanguageLearnerUserWhereInput | LanguageLearnerUserWhereInput[]
+    OR?: LanguageLearnerUserWhereInput[]
+    NOT?: LanguageLearnerUserWhereInput | LanguageLearnerUserWhereInput[]
+    id?: StringFilter<"LanguageLearnerUser"> | string
+    email?: StringFilter<"LanguageLearnerUser"> | string
+    name?: StringFilter<"LanguageLearnerUser"> | string
+    password?: StringFilter<"LanguageLearnerUser"> | string
+    role?: StringFilter<"LanguageLearnerUser"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerUser"> | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformListRelationFilter
+    reviews?: LanguageLearnerReviewListRelationFilter
+    votesGiven?: LanguageLearnerUserVoteListRelationFilter
+    votesReceived?: LanguageLearnerUserVoteListRelationFilter
+    likes?: LanguageLearnerReviewLikeListRelationFilter
+  }
+
+  export type LanguageLearnerUserOrderByWithRelationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    createdAt?: SortOrder
+    ownedPlatforms?: LanguageLearnerPlatformOrderByRelationAggregateInput
+    reviews?: LanguageLearnerReviewOrderByRelationAggregateInput
+    votesGiven?: LanguageLearnerUserVoteOrderByRelationAggregateInput
+    votesReceived?: LanguageLearnerUserVoteOrderByRelationAggregateInput
+    likes?: LanguageLearnerReviewLikeOrderByRelationAggregateInput
+  }
+
+  export type LanguageLearnerUserWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    email?: string
+    AND?: LanguageLearnerUserWhereInput | LanguageLearnerUserWhereInput[]
+    OR?: LanguageLearnerUserWhereInput[]
+    NOT?: LanguageLearnerUserWhereInput | LanguageLearnerUserWhereInput[]
+    name?: StringFilter<"LanguageLearnerUser"> | string
+    password?: StringFilter<"LanguageLearnerUser"> | string
+    role?: StringFilter<"LanguageLearnerUser"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerUser"> | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformListRelationFilter
+    reviews?: LanguageLearnerReviewListRelationFilter
+    votesGiven?: LanguageLearnerUserVoteListRelationFilter
+    votesReceived?: LanguageLearnerUserVoteListRelationFilter
+    likes?: LanguageLearnerReviewLikeListRelationFilter
+  }, "id" | "email">
+
+  export type LanguageLearnerUserOrderByWithAggregationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    createdAt?: SortOrder
+    _count?: LanguageLearnerUserCountOrderByAggregateInput
+    _max?: LanguageLearnerUserMaxOrderByAggregateInput
+    _min?: LanguageLearnerUserMinOrderByAggregateInput
+  }
+
+  export type LanguageLearnerUserScalarWhereWithAggregatesInput = {
+    AND?: LanguageLearnerUserScalarWhereWithAggregatesInput | LanguageLearnerUserScalarWhereWithAggregatesInput[]
+    OR?: LanguageLearnerUserScalarWhereWithAggregatesInput[]
+    NOT?: LanguageLearnerUserScalarWhereWithAggregatesInput | LanguageLearnerUserScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"LanguageLearnerUser"> | string
+    email?: StringWithAggregatesFilter<"LanguageLearnerUser"> | string
+    name?: StringWithAggregatesFilter<"LanguageLearnerUser"> | string
+    password?: StringWithAggregatesFilter<"LanguageLearnerUser"> | string
+    role?: StringWithAggregatesFilter<"LanguageLearnerUser"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"LanguageLearnerUser"> | Date | string
+  }
+
+  export type LanguageLearnerPlatformWhereInput = {
+    AND?: LanguageLearnerPlatformWhereInput | LanguageLearnerPlatformWhereInput[]
+    OR?: LanguageLearnerPlatformWhereInput[]
+    NOT?: LanguageLearnerPlatformWhereInput | LanguageLearnerPlatformWhereInput[]
+    id?: StringFilter<"LanguageLearnerPlatform"> | string
+    name?: StringFilter<"LanguageLearnerPlatform"> | string
+    website?: StringFilter<"LanguageLearnerPlatform"> | string
+    languagesOffered?: StringFilter<"LanguageLearnerPlatform"> | string
+    description?: StringFilter<"LanguageLearnerPlatform"> | string
+    ownerId?: StringFilter<"LanguageLearnerPlatform"> | string
+    status?: StringFilter<"LanguageLearnerPlatform"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerPlatform"> | Date | string
+    owner?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+    reviews?: LanguageLearnerReviewListRelationFilter
+  }
+
+  export type LanguageLearnerPlatformOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    website?: SortOrder
+    languagesOffered?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+    owner?: LanguageLearnerUserOrderByWithRelationInput
+    reviews?: LanguageLearnerReviewOrderByRelationAggregateInput
+  }
+
+  export type LanguageLearnerPlatformWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: LanguageLearnerPlatformWhereInput | LanguageLearnerPlatformWhereInput[]
+    OR?: LanguageLearnerPlatformWhereInput[]
+    NOT?: LanguageLearnerPlatformWhereInput | LanguageLearnerPlatformWhereInput[]
+    name?: StringFilter<"LanguageLearnerPlatform"> | string
+    website?: StringFilter<"LanguageLearnerPlatform"> | string
+    languagesOffered?: StringFilter<"LanguageLearnerPlatform"> | string
+    description?: StringFilter<"LanguageLearnerPlatform"> | string
+    ownerId?: StringFilter<"LanguageLearnerPlatform"> | string
+    status?: StringFilter<"LanguageLearnerPlatform"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerPlatform"> | Date | string
+    owner?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+    reviews?: LanguageLearnerReviewListRelationFilter
+  }, "id">
+
+  export type LanguageLearnerPlatformOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    website?: SortOrder
+    languagesOffered?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+    _count?: LanguageLearnerPlatformCountOrderByAggregateInput
+    _max?: LanguageLearnerPlatformMaxOrderByAggregateInput
+    _min?: LanguageLearnerPlatformMinOrderByAggregateInput
+  }
+
+  export type LanguageLearnerPlatformScalarWhereWithAggregatesInput = {
+    AND?: LanguageLearnerPlatformScalarWhereWithAggregatesInput | LanguageLearnerPlatformScalarWhereWithAggregatesInput[]
+    OR?: LanguageLearnerPlatformScalarWhereWithAggregatesInput[]
+    NOT?: LanguageLearnerPlatformScalarWhereWithAggregatesInput | LanguageLearnerPlatformScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"LanguageLearnerPlatform"> | string
+    name?: StringWithAggregatesFilter<"LanguageLearnerPlatform"> | string
+    website?: StringWithAggregatesFilter<"LanguageLearnerPlatform"> | string
+    languagesOffered?: StringWithAggregatesFilter<"LanguageLearnerPlatform"> | string
+    description?: StringWithAggregatesFilter<"LanguageLearnerPlatform"> | string
+    ownerId?: StringWithAggregatesFilter<"LanguageLearnerPlatform"> | string
+    status?: StringWithAggregatesFilter<"LanguageLearnerPlatform"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"LanguageLearnerPlatform"> | Date | string
+  }
+
+  export type LanguageLearnerReviewWhereInput = {
+    AND?: LanguageLearnerReviewWhereInput | LanguageLearnerReviewWhereInput[]
+    OR?: LanguageLearnerReviewWhereInput[]
+    NOT?: LanguageLearnerReviewWhereInput | LanguageLearnerReviewWhereInput[]
+    id?: StringFilter<"LanguageLearnerReview"> | string
+    platformId?: StringFilter<"LanguageLearnerReview"> | string
+    userId?: StringFilter<"LanguageLearnerReview"> | string
+    rating?: IntFilter<"LanguageLearnerReview"> | number
+    comment?: StringFilter<"LanguageLearnerReview"> | string
+    status?: StringFilter<"LanguageLearnerReview"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerReview"> | Date | string
+    platform?: XOR<LanguageLearnerPlatformScalarRelationFilter, LanguageLearnerPlatformWhereInput>
+    user?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+    likes?: LanguageLearnerReviewLikeListRelationFilter
+  }
+
+  export type LanguageLearnerReviewOrderByWithRelationInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+    platform?: LanguageLearnerPlatformOrderByWithRelationInput
+    user?: LanguageLearnerUserOrderByWithRelationInput
+    likes?: LanguageLearnerReviewLikeOrderByRelationAggregateInput
+  }
+
+  export type LanguageLearnerReviewWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: LanguageLearnerReviewWhereInput | LanguageLearnerReviewWhereInput[]
+    OR?: LanguageLearnerReviewWhereInput[]
+    NOT?: LanguageLearnerReviewWhereInput | LanguageLearnerReviewWhereInput[]
+    platformId?: StringFilter<"LanguageLearnerReview"> | string
+    userId?: StringFilter<"LanguageLearnerReview"> | string
+    rating?: IntFilter<"LanguageLearnerReview"> | number
+    comment?: StringFilter<"LanguageLearnerReview"> | string
+    status?: StringFilter<"LanguageLearnerReview"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerReview"> | Date | string
+    platform?: XOR<LanguageLearnerPlatformScalarRelationFilter, LanguageLearnerPlatformWhereInput>
+    user?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+    likes?: LanguageLearnerReviewLikeListRelationFilter
+  }, "id">
+
+  export type LanguageLearnerReviewOrderByWithAggregationInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+    _count?: LanguageLearnerReviewCountOrderByAggregateInput
+    _avg?: LanguageLearnerReviewAvgOrderByAggregateInput
+    _max?: LanguageLearnerReviewMaxOrderByAggregateInput
+    _min?: LanguageLearnerReviewMinOrderByAggregateInput
+    _sum?: LanguageLearnerReviewSumOrderByAggregateInput
+  }
+
+  export type LanguageLearnerReviewScalarWhereWithAggregatesInput = {
+    AND?: LanguageLearnerReviewScalarWhereWithAggregatesInput | LanguageLearnerReviewScalarWhereWithAggregatesInput[]
+    OR?: LanguageLearnerReviewScalarWhereWithAggregatesInput[]
+    NOT?: LanguageLearnerReviewScalarWhereWithAggregatesInput | LanguageLearnerReviewScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"LanguageLearnerReview"> | string
+    platformId?: StringWithAggregatesFilter<"LanguageLearnerReview"> | string
+    userId?: StringWithAggregatesFilter<"LanguageLearnerReview"> | string
+    rating?: IntWithAggregatesFilter<"LanguageLearnerReview"> | number
+    comment?: StringWithAggregatesFilter<"LanguageLearnerReview"> | string
+    status?: StringWithAggregatesFilter<"LanguageLearnerReview"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"LanguageLearnerReview"> | Date | string
+  }
+
+  export type LanguageLearnerReviewLikeWhereInput = {
+    AND?: LanguageLearnerReviewLikeWhereInput | LanguageLearnerReviewLikeWhereInput[]
+    OR?: LanguageLearnerReviewLikeWhereInput[]
+    NOT?: LanguageLearnerReviewLikeWhereInput | LanguageLearnerReviewLikeWhereInput[]
+    id?: StringFilter<"LanguageLearnerReviewLike"> | string
+    userId?: StringFilter<"LanguageLearnerReviewLike"> | string
+    reviewId?: StringFilter<"LanguageLearnerReviewLike"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerReviewLike"> | Date | string
+    user?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+    review?: XOR<LanguageLearnerReviewScalarRelationFilter, LanguageLearnerReviewWhereInput>
+  }
+
+  export type LanguageLearnerReviewLikeOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    reviewId?: SortOrder
+    createdAt?: SortOrder
+    user?: LanguageLearnerUserOrderByWithRelationInput
+    review?: LanguageLearnerReviewOrderByWithRelationInput
+  }
+
+  export type LanguageLearnerReviewLikeWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId_reviewId?: LanguageLearnerReviewLikeUserIdReviewIdCompoundUniqueInput
+    AND?: LanguageLearnerReviewLikeWhereInput | LanguageLearnerReviewLikeWhereInput[]
+    OR?: LanguageLearnerReviewLikeWhereInput[]
+    NOT?: LanguageLearnerReviewLikeWhereInput | LanguageLearnerReviewLikeWhereInput[]
+    userId?: StringFilter<"LanguageLearnerReviewLike"> | string
+    reviewId?: StringFilter<"LanguageLearnerReviewLike"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerReviewLike"> | Date | string
+    user?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+    review?: XOR<LanguageLearnerReviewScalarRelationFilter, LanguageLearnerReviewWhereInput>
+  }, "id" | "userId_reviewId">
+
+  export type LanguageLearnerReviewLikeOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    reviewId?: SortOrder
+    createdAt?: SortOrder
+    _count?: LanguageLearnerReviewLikeCountOrderByAggregateInput
+    _max?: LanguageLearnerReviewLikeMaxOrderByAggregateInput
+    _min?: LanguageLearnerReviewLikeMinOrderByAggregateInput
+  }
+
+  export type LanguageLearnerReviewLikeScalarWhereWithAggregatesInput = {
+    AND?: LanguageLearnerReviewLikeScalarWhereWithAggregatesInput | LanguageLearnerReviewLikeScalarWhereWithAggregatesInput[]
+    OR?: LanguageLearnerReviewLikeScalarWhereWithAggregatesInput[]
+    NOT?: LanguageLearnerReviewLikeScalarWhereWithAggregatesInput | LanguageLearnerReviewLikeScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"LanguageLearnerReviewLike"> | string
+    userId?: StringWithAggregatesFilter<"LanguageLearnerReviewLike"> | string
+    reviewId?: StringWithAggregatesFilter<"LanguageLearnerReviewLike"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"LanguageLearnerReviewLike"> | Date | string
+  }
+
+  export type LanguageLearnerUserVoteWhereInput = {
+    AND?: LanguageLearnerUserVoteWhereInput | LanguageLearnerUserVoteWhereInput[]
+    OR?: LanguageLearnerUserVoteWhereInput[]
+    NOT?: LanguageLearnerUserVoteWhereInput | LanguageLearnerUserVoteWhereInput[]
+    id?: StringFilter<"LanguageLearnerUserVote"> | string
+    userId?: StringFilter<"LanguageLearnerUserVote"> | string
+    voterId?: StringFilter<"LanguageLearnerUserVote"> | string
+    voteType?: StringFilter<"LanguageLearnerUserVote"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerUserVote"> | Date | string
+    user?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+    voter?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+  }
+
+  export type LanguageLearnerUserVoteOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    voterId?: SortOrder
+    voteType?: SortOrder
+    createdAt?: SortOrder
+    user?: LanguageLearnerUserOrderByWithRelationInput
+    voter?: LanguageLearnerUserOrderByWithRelationInput
+  }
+
+  export type LanguageLearnerUserVoteWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId_voterId?: LanguageLearnerUserVoteUserIdVoterIdCompoundUniqueInput
+    AND?: LanguageLearnerUserVoteWhereInput | LanguageLearnerUserVoteWhereInput[]
+    OR?: LanguageLearnerUserVoteWhereInput[]
+    NOT?: LanguageLearnerUserVoteWhereInput | LanguageLearnerUserVoteWhereInput[]
+    userId?: StringFilter<"LanguageLearnerUserVote"> | string
+    voterId?: StringFilter<"LanguageLearnerUserVote"> | string
+    voteType?: StringFilter<"LanguageLearnerUserVote"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerUserVote"> | Date | string
+    user?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+    voter?: XOR<LanguageLearnerUserScalarRelationFilter, LanguageLearnerUserWhereInput>
+  }, "id" | "userId_voterId">
+
+  export type LanguageLearnerUserVoteOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    voterId?: SortOrder
+    voteType?: SortOrder
+    createdAt?: SortOrder
+    _count?: LanguageLearnerUserVoteCountOrderByAggregateInput
+    _max?: LanguageLearnerUserVoteMaxOrderByAggregateInput
+    _min?: LanguageLearnerUserVoteMinOrderByAggregateInput
+  }
+
+  export type LanguageLearnerUserVoteScalarWhereWithAggregatesInput = {
+    AND?: LanguageLearnerUserVoteScalarWhereWithAggregatesInput | LanguageLearnerUserVoteScalarWhereWithAggregatesInput[]
+    OR?: LanguageLearnerUserVoteScalarWhereWithAggregatesInput[]
+    NOT?: LanguageLearnerUserVoteScalarWhereWithAggregatesInput | LanguageLearnerUserVoteScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"LanguageLearnerUserVote"> | string
+    userId?: StringWithAggregatesFilter<"LanguageLearnerUserVote"> | string
+    voterId?: StringWithAggregatesFilter<"LanguageLearnerUserVote"> | string
+    voteType?: StringWithAggregatesFilter<"LanguageLearnerUserVote"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"LanguageLearnerUserVote"> | Date | string
+  }
+
   export type EventOrganizerUserCreateInput = {
     id?: string
     email: string
@@ -7645,6 +14217,342 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type LanguageLearnerUserCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformCreateNestedManyWithoutOwnerInput
+    reviews?: LanguageLearnerReviewCreateNestedManyWithoutUserInput
+    votesGiven?: LanguageLearnerUserVoteCreateNestedManyWithoutVoterInput
+    votesReceived?: LanguageLearnerUserVoteCreateNestedManyWithoutUserInput
+    likes?: LanguageLearnerReviewLikeCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserUncheckedCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedCreateNestedManyWithoutOwnerInput
+    reviews?: LanguageLearnerReviewUncheckedCreateNestedManyWithoutUserInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutVoterInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutUserInput
+    likes?: LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUpdateManyWithoutOwnerNestedInput
+    reviews?: LanguageLearnerReviewUpdateManyWithoutUserNestedInput
+    votesGiven?: LanguageLearnerUserVoteUpdateManyWithoutVoterNestedInput
+    votesReceived?: LanguageLearnerUserVoteUpdateManyWithoutUserNestedInput
+    likes?: LanguageLearnerReviewLikeUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerUserUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedUpdateManyWithoutOwnerNestedInput
+    reviews?: LanguageLearnerReviewUncheckedUpdateManyWithoutUserNestedInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutVoterNestedInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutUserNestedInput
+    likes?: LanguageLearnerReviewLikeUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerUserCreateManyInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerUserUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerPlatformCreateInput = {
+    id?: string
+    name: string
+    website: string
+    languagesOffered: string
+    description: string
+    status?: string
+    createdAt?: Date | string
+    owner: LanguageLearnerUserCreateNestedOneWithoutOwnedPlatformsInput
+    reviews?: LanguageLearnerReviewCreateNestedManyWithoutPlatformInput
+  }
+
+  export type LanguageLearnerPlatformUncheckedCreateInput = {
+    id?: string
+    name: string
+    website: string
+    languagesOffered: string
+    description: string
+    ownerId: string
+    status?: string
+    createdAt?: Date | string
+    reviews?: LanguageLearnerReviewUncheckedCreateNestedManyWithoutPlatformInput
+  }
+
+  export type LanguageLearnerPlatformUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    website?: StringFieldUpdateOperationsInput | string
+    languagesOffered?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    owner?: LanguageLearnerUserUpdateOneRequiredWithoutOwnedPlatformsNestedInput
+    reviews?: LanguageLearnerReviewUpdateManyWithoutPlatformNestedInput
+  }
+
+  export type LanguageLearnerPlatformUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    website?: StringFieldUpdateOperationsInput | string
+    languagesOffered?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    ownerId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: LanguageLearnerReviewUncheckedUpdateManyWithoutPlatformNestedInput
+  }
+
+  export type LanguageLearnerPlatformCreateManyInput = {
+    id?: string
+    name: string
+    website: string
+    languagesOffered: string
+    description: string
+    ownerId: string
+    status?: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerPlatformUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    website?: StringFieldUpdateOperationsInput | string
+    languagesOffered?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerPlatformUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    website?: StringFieldUpdateOperationsInput | string
+    languagesOffered?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    ownerId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewCreateInput = {
+    id?: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+    platform: LanguageLearnerPlatformCreateNestedOneWithoutReviewsInput
+    user: LanguageLearnerUserCreateNestedOneWithoutReviewsInput
+    likes?: LanguageLearnerReviewLikeCreateNestedManyWithoutReviewInput
+  }
+
+  export type LanguageLearnerReviewUncheckedCreateInput = {
+    id?: string
+    platformId: string
+    userId: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+    likes?: LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutReviewInput
+  }
+
+  export type LanguageLearnerReviewUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    platform?: LanguageLearnerPlatformUpdateOneRequiredWithoutReviewsNestedInput
+    user?: LanguageLearnerUserUpdateOneRequiredWithoutReviewsNestedInput
+    likes?: LanguageLearnerReviewLikeUpdateManyWithoutReviewNestedInput
+  }
+
+  export type LanguageLearnerReviewUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platformId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    likes?: LanguageLearnerReviewLikeUncheckedUpdateManyWithoutReviewNestedInput
+  }
+
+  export type LanguageLearnerReviewCreateManyInput = {
+    id?: string
+    platformId: string
+    userId: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platformId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewLikeCreateInput = {
+    id?: string
+    createdAt?: Date | string
+    user: LanguageLearnerUserCreateNestedOneWithoutLikesInput
+    review: LanguageLearnerReviewCreateNestedOneWithoutLikesInput
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedCreateInput = {
+    id?: string
+    userId: string
+    reviewId: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewLikeUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: LanguageLearnerUserUpdateOneRequiredWithoutLikesNestedInput
+    review?: LanguageLearnerReviewUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    reviewId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewLikeCreateManyInput = {
+    id?: string
+    userId: string
+    reviewId: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewLikeUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    reviewId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserVoteCreateInput = {
+    id?: string
+    voteType: string
+    createdAt?: Date | string
+    user: LanguageLearnerUserCreateNestedOneWithoutVotesReceivedInput
+    voter: LanguageLearnerUserCreateNestedOneWithoutVotesGivenInput
+  }
+
+  export type LanguageLearnerUserVoteUncheckedCreateInput = {
+    id?: string
+    userId: string
+    voterId: string
+    voteType: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerUserVoteUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: LanguageLearnerUserUpdateOneRequiredWithoutVotesReceivedNestedInput
+    voter?: LanguageLearnerUserUpdateOneRequiredWithoutVotesGivenNestedInput
+  }
+
+  export type LanguageLearnerUserVoteUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    voterId?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserVoteCreateManyInput = {
+    id?: string
+    userId: string
+    voterId: string
+    voteType: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerUserVoteUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserVoteUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    voterId?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -7927,6 +14835,214 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
+  export type LanguageLearnerPlatformListRelationFilter = {
+    every?: LanguageLearnerPlatformWhereInput
+    some?: LanguageLearnerPlatformWhereInput
+    none?: LanguageLearnerPlatformWhereInput
+  }
+
+  export type LanguageLearnerReviewListRelationFilter = {
+    every?: LanguageLearnerReviewWhereInput
+    some?: LanguageLearnerReviewWhereInput
+    none?: LanguageLearnerReviewWhereInput
+  }
+
+  export type LanguageLearnerUserVoteListRelationFilter = {
+    every?: LanguageLearnerUserVoteWhereInput
+    some?: LanguageLearnerUserVoteWhereInput
+    none?: LanguageLearnerUserVoteWhereInput
+  }
+
+  export type LanguageLearnerReviewLikeListRelationFilter = {
+    every?: LanguageLearnerReviewLikeWhereInput
+    some?: LanguageLearnerReviewLikeWhereInput
+    none?: LanguageLearnerReviewLikeWhereInput
+  }
+
+  export type LanguageLearnerPlatformOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type LanguageLearnerReviewOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type LanguageLearnerUserVoteOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type LanguageLearnerReviewLikeOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type LanguageLearnerUserCountOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerUserMaxOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerUserMinOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerUserScalarRelationFilter = {
+    is?: LanguageLearnerUserWhereInput
+    isNot?: LanguageLearnerUserWhereInput
+  }
+
+  export type LanguageLearnerPlatformCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    website?: SortOrder
+    languagesOffered?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerPlatformMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    website?: SortOrder
+    languagesOffered?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerPlatformMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    website?: SortOrder
+    languagesOffered?: SortOrder
+    description?: SortOrder
+    ownerId?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerPlatformScalarRelationFilter = {
+    is?: LanguageLearnerPlatformWhereInput
+    isNot?: LanguageLearnerPlatformWhereInput
+  }
+
+  export type LanguageLearnerReviewCountOrderByAggregateInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerReviewAvgOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type LanguageLearnerReviewMaxOrderByAggregateInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerReviewMinOrderByAggregateInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerReviewSumOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type LanguageLearnerReviewScalarRelationFilter = {
+    is?: LanguageLearnerReviewWhereInput
+    isNot?: LanguageLearnerReviewWhereInput
+  }
+
+  export type LanguageLearnerReviewLikeUserIdReviewIdCompoundUniqueInput = {
+    userId: string
+    reviewId: string
+  }
+
+  export type LanguageLearnerReviewLikeCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    reviewId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerReviewLikeMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    reviewId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerReviewLikeMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    reviewId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerUserVoteUserIdVoterIdCompoundUniqueInput = {
+    userId: string
+    voterId: string
+  }
+
+  export type LanguageLearnerUserVoteCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    voterId?: SortOrder
+    voteType?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerUserVoteMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    voterId?: SortOrder
+    voteType?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LanguageLearnerUserVoteMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    voterId?: SortOrder
+    voteType?: SortOrder
+    createdAt?: SortOrder
+  }
+
   export type EventOrganizerTaskCreateNestedManyWithoutUserInput = {
     create?: XOR<EventOrganizerTaskCreateWithoutUserInput, EventOrganizerTaskUncheckedCreateWithoutUserInput> | EventOrganizerTaskCreateWithoutUserInput[] | EventOrganizerTaskUncheckedCreateWithoutUserInput[]
     connectOrCreate?: EventOrganizerTaskCreateOrConnectWithoutUserInput | EventOrganizerTaskCreateOrConnectWithoutUserInput[]
@@ -8165,6 +15281,398 @@ export namespace Prisma {
     upsert?: EventOrganizerUserUpsertWithoutServiceProvidersInput
     connect?: EventOrganizerUserWhereUniqueInput
     update?: XOR<XOR<EventOrganizerUserUpdateToOneWithWhereWithoutServiceProvidersInput, EventOrganizerUserUpdateWithoutServiceProvidersInput>, EventOrganizerUserUncheckedUpdateWithoutServiceProvidersInput>
+  }
+
+  export type LanguageLearnerPlatformCreateNestedManyWithoutOwnerInput = {
+    create?: XOR<LanguageLearnerPlatformCreateWithoutOwnerInput, LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput> | LanguageLearnerPlatformCreateWithoutOwnerInput[] | LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: LanguageLearnerPlatformCreateOrConnectWithoutOwnerInput | LanguageLearnerPlatformCreateOrConnectWithoutOwnerInput[]
+    createMany?: LanguageLearnerPlatformCreateManyOwnerInputEnvelope
+    connect?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerReviewCreateNestedManyWithoutUserInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutUserInput, LanguageLearnerReviewUncheckedCreateWithoutUserInput> | LanguageLearnerReviewCreateWithoutUserInput[] | LanguageLearnerReviewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutUserInput | LanguageLearnerReviewCreateOrConnectWithoutUserInput[]
+    createMany?: LanguageLearnerReviewCreateManyUserInputEnvelope
+    connect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerUserVoteCreateNestedManyWithoutVoterInput = {
+    create?: XOR<LanguageLearnerUserVoteCreateWithoutVoterInput, LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput> | LanguageLearnerUserVoteCreateWithoutVoterInput[] | LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput[]
+    connectOrCreate?: LanguageLearnerUserVoteCreateOrConnectWithoutVoterInput | LanguageLearnerUserVoteCreateOrConnectWithoutVoterInput[]
+    createMany?: LanguageLearnerUserVoteCreateManyVoterInputEnvelope
+    connect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerUserVoteCreateNestedManyWithoutUserInput = {
+    create?: XOR<LanguageLearnerUserVoteCreateWithoutUserInput, LanguageLearnerUserVoteUncheckedCreateWithoutUserInput> | LanguageLearnerUserVoteCreateWithoutUserInput[] | LanguageLearnerUserVoteUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerUserVoteCreateOrConnectWithoutUserInput | LanguageLearnerUserVoteCreateOrConnectWithoutUserInput[]
+    createMany?: LanguageLearnerUserVoteCreateManyUserInputEnvelope
+    connect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerReviewLikeCreateNestedManyWithoutUserInput = {
+    create?: XOR<LanguageLearnerReviewLikeCreateWithoutUserInput, LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput> | LanguageLearnerReviewLikeCreateWithoutUserInput[] | LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerReviewLikeCreateOrConnectWithoutUserInput | LanguageLearnerReviewLikeCreateOrConnectWithoutUserInput[]
+    createMany?: LanguageLearnerReviewLikeCreateManyUserInputEnvelope
+    connect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerPlatformUncheckedCreateNestedManyWithoutOwnerInput = {
+    create?: XOR<LanguageLearnerPlatformCreateWithoutOwnerInput, LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput> | LanguageLearnerPlatformCreateWithoutOwnerInput[] | LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: LanguageLearnerPlatformCreateOrConnectWithoutOwnerInput | LanguageLearnerPlatformCreateOrConnectWithoutOwnerInput[]
+    createMany?: LanguageLearnerPlatformCreateManyOwnerInputEnvelope
+    connect?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerReviewUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutUserInput, LanguageLearnerReviewUncheckedCreateWithoutUserInput> | LanguageLearnerReviewCreateWithoutUserInput[] | LanguageLearnerReviewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutUserInput | LanguageLearnerReviewCreateOrConnectWithoutUserInput[]
+    createMany?: LanguageLearnerReviewCreateManyUserInputEnvelope
+    connect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutVoterInput = {
+    create?: XOR<LanguageLearnerUserVoteCreateWithoutVoterInput, LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput> | LanguageLearnerUserVoteCreateWithoutVoterInput[] | LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput[]
+    connectOrCreate?: LanguageLearnerUserVoteCreateOrConnectWithoutVoterInput | LanguageLearnerUserVoteCreateOrConnectWithoutVoterInput[]
+    createMany?: LanguageLearnerUserVoteCreateManyVoterInputEnvelope
+    connect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<LanguageLearnerUserVoteCreateWithoutUserInput, LanguageLearnerUserVoteUncheckedCreateWithoutUserInput> | LanguageLearnerUserVoteCreateWithoutUserInput[] | LanguageLearnerUserVoteUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerUserVoteCreateOrConnectWithoutUserInput | LanguageLearnerUserVoteCreateOrConnectWithoutUserInput[]
+    createMany?: LanguageLearnerUserVoteCreateManyUserInputEnvelope
+    connect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<LanguageLearnerReviewLikeCreateWithoutUserInput, LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput> | LanguageLearnerReviewLikeCreateWithoutUserInput[] | LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerReviewLikeCreateOrConnectWithoutUserInput | LanguageLearnerReviewLikeCreateOrConnectWithoutUserInput[]
+    createMany?: LanguageLearnerReviewLikeCreateManyUserInputEnvelope
+    connect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerPlatformUpdateManyWithoutOwnerNestedInput = {
+    create?: XOR<LanguageLearnerPlatformCreateWithoutOwnerInput, LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput> | LanguageLearnerPlatformCreateWithoutOwnerInput[] | LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: LanguageLearnerPlatformCreateOrConnectWithoutOwnerInput | LanguageLearnerPlatformCreateOrConnectWithoutOwnerInput[]
+    upsert?: LanguageLearnerPlatformUpsertWithWhereUniqueWithoutOwnerInput | LanguageLearnerPlatformUpsertWithWhereUniqueWithoutOwnerInput[]
+    createMany?: LanguageLearnerPlatformCreateManyOwnerInputEnvelope
+    set?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+    disconnect?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+    delete?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+    connect?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+    update?: LanguageLearnerPlatformUpdateWithWhereUniqueWithoutOwnerInput | LanguageLearnerPlatformUpdateWithWhereUniqueWithoutOwnerInput[]
+    updateMany?: LanguageLearnerPlatformUpdateManyWithWhereWithoutOwnerInput | LanguageLearnerPlatformUpdateManyWithWhereWithoutOwnerInput[]
+    deleteMany?: LanguageLearnerPlatformScalarWhereInput | LanguageLearnerPlatformScalarWhereInput[]
+  }
+
+  export type LanguageLearnerReviewUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutUserInput, LanguageLearnerReviewUncheckedCreateWithoutUserInput> | LanguageLearnerReviewCreateWithoutUserInput[] | LanguageLearnerReviewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutUserInput | LanguageLearnerReviewCreateOrConnectWithoutUserInput[]
+    upsert?: LanguageLearnerReviewUpsertWithWhereUniqueWithoutUserInput | LanguageLearnerReviewUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LanguageLearnerReviewCreateManyUserInputEnvelope
+    set?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    disconnect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    delete?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    connect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    update?: LanguageLearnerReviewUpdateWithWhereUniqueWithoutUserInput | LanguageLearnerReviewUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LanguageLearnerReviewUpdateManyWithWhereWithoutUserInput | LanguageLearnerReviewUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LanguageLearnerReviewScalarWhereInput | LanguageLearnerReviewScalarWhereInput[]
+  }
+
+  export type LanguageLearnerUserVoteUpdateManyWithoutVoterNestedInput = {
+    create?: XOR<LanguageLearnerUserVoteCreateWithoutVoterInput, LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput> | LanguageLearnerUserVoteCreateWithoutVoterInput[] | LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput[]
+    connectOrCreate?: LanguageLearnerUserVoteCreateOrConnectWithoutVoterInput | LanguageLearnerUserVoteCreateOrConnectWithoutVoterInput[]
+    upsert?: LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutVoterInput | LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutVoterInput[]
+    createMany?: LanguageLearnerUserVoteCreateManyVoterInputEnvelope
+    set?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    disconnect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    delete?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    connect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    update?: LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutVoterInput | LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutVoterInput[]
+    updateMany?: LanguageLearnerUserVoteUpdateManyWithWhereWithoutVoterInput | LanguageLearnerUserVoteUpdateManyWithWhereWithoutVoterInput[]
+    deleteMany?: LanguageLearnerUserVoteScalarWhereInput | LanguageLearnerUserVoteScalarWhereInput[]
+  }
+
+  export type LanguageLearnerUserVoteUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LanguageLearnerUserVoteCreateWithoutUserInput, LanguageLearnerUserVoteUncheckedCreateWithoutUserInput> | LanguageLearnerUserVoteCreateWithoutUserInput[] | LanguageLearnerUserVoteUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerUserVoteCreateOrConnectWithoutUserInput | LanguageLearnerUserVoteCreateOrConnectWithoutUserInput[]
+    upsert?: LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutUserInput | LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LanguageLearnerUserVoteCreateManyUserInputEnvelope
+    set?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    disconnect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    delete?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    connect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    update?: LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutUserInput | LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LanguageLearnerUserVoteUpdateManyWithWhereWithoutUserInput | LanguageLearnerUserVoteUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LanguageLearnerUserVoteScalarWhereInput | LanguageLearnerUserVoteScalarWhereInput[]
+  }
+
+  export type LanguageLearnerReviewLikeUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LanguageLearnerReviewLikeCreateWithoutUserInput, LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput> | LanguageLearnerReviewLikeCreateWithoutUserInput[] | LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerReviewLikeCreateOrConnectWithoutUserInput | LanguageLearnerReviewLikeCreateOrConnectWithoutUserInput[]
+    upsert?: LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutUserInput | LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LanguageLearnerReviewLikeCreateManyUserInputEnvelope
+    set?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    disconnect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    delete?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    connect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    update?: LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutUserInput | LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LanguageLearnerReviewLikeUpdateManyWithWhereWithoutUserInput | LanguageLearnerReviewLikeUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LanguageLearnerReviewLikeScalarWhereInput | LanguageLearnerReviewLikeScalarWhereInput[]
+  }
+
+  export type LanguageLearnerPlatformUncheckedUpdateManyWithoutOwnerNestedInput = {
+    create?: XOR<LanguageLearnerPlatformCreateWithoutOwnerInput, LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput> | LanguageLearnerPlatformCreateWithoutOwnerInput[] | LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: LanguageLearnerPlatformCreateOrConnectWithoutOwnerInput | LanguageLearnerPlatformCreateOrConnectWithoutOwnerInput[]
+    upsert?: LanguageLearnerPlatformUpsertWithWhereUniqueWithoutOwnerInput | LanguageLearnerPlatformUpsertWithWhereUniqueWithoutOwnerInput[]
+    createMany?: LanguageLearnerPlatformCreateManyOwnerInputEnvelope
+    set?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+    disconnect?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+    delete?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+    connect?: LanguageLearnerPlatformWhereUniqueInput | LanguageLearnerPlatformWhereUniqueInput[]
+    update?: LanguageLearnerPlatformUpdateWithWhereUniqueWithoutOwnerInput | LanguageLearnerPlatformUpdateWithWhereUniqueWithoutOwnerInput[]
+    updateMany?: LanguageLearnerPlatformUpdateManyWithWhereWithoutOwnerInput | LanguageLearnerPlatformUpdateManyWithWhereWithoutOwnerInput[]
+    deleteMany?: LanguageLearnerPlatformScalarWhereInput | LanguageLearnerPlatformScalarWhereInput[]
+  }
+
+  export type LanguageLearnerReviewUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutUserInput, LanguageLearnerReviewUncheckedCreateWithoutUserInput> | LanguageLearnerReviewCreateWithoutUserInput[] | LanguageLearnerReviewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutUserInput | LanguageLearnerReviewCreateOrConnectWithoutUserInput[]
+    upsert?: LanguageLearnerReviewUpsertWithWhereUniqueWithoutUserInput | LanguageLearnerReviewUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LanguageLearnerReviewCreateManyUserInputEnvelope
+    set?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    disconnect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    delete?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    connect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    update?: LanguageLearnerReviewUpdateWithWhereUniqueWithoutUserInput | LanguageLearnerReviewUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LanguageLearnerReviewUpdateManyWithWhereWithoutUserInput | LanguageLearnerReviewUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LanguageLearnerReviewScalarWhereInput | LanguageLearnerReviewScalarWhereInput[]
+  }
+
+  export type LanguageLearnerUserVoteUncheckedUpdateManyWithoutVoterNestedInput = {
+    create?: XOR<LanguageLearnerUserVoteCreateWithoutVoterInput, LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput> | LanguageLearnerUserVoteCreateWithoutVoterInput[] | LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput[]
+    connectOrCreate?: LanguageLearnerUserVoteCreateOrConnectWithoutVoterInput | LanguageLearnerUserVoteCreateOrConnectWithoutVoterInput[]
+    upsert?: LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutVoterInput | LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutVoterInput[]
+    createMany?: LanguageLearnerUserVoteCreateManyVoterInputEnvelope
+    set?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    disconnect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    delete?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    connect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    update?: LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutVoterInput | LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutVoterInput[]
+    updateMany?: LanguageLearnerUserVoteUpdateManyWithWhereWithoutVoterInput | LanguageLearnerUserVoteUpdateManyWithWhereWithoutVoterInput[]
+    deleteMany?: LanguageLearnerUserVoteScalarWhereInput | LanguageLearnerUserVoteScalarWhereInput[]
+  }
+
+  export type LanguageLearnerUserVoteUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LanguageLearnerUserVoteCreateWithoutUserInput, LanguageLearnerUserVoteUncheckedCreateWithoutUserInput> | LanguageLearnerUserVoteCreateWithoutUserInput[] | LanguageLearnerUserVoteUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerUserVoteCreateOrConnectWithoutUserInput | LanguageLearnerUserVoteCreateOrConnectWithoutUserInput[]
+    upsert?: LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutUserInput | LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LanguageLearnerUserVoteCreateManyUserInputEnvelope
+    set?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    disconnect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    delete?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    connect?: LanguageLearnerUserVoteWhereUniqueInput | LanguageLearnerUserVoteWhereUniqueInput[]
+    update?: LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutUserInput | LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LanguageLearnerUserVoteUpdateManyWithWhereWithoutUserInput | LanguageLearnerUserVoteUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LanguageLearnerUserVoteScalarWhereInput | LanguageLearnerUserVoteScalarWhereInput[]
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LanguageLearnerReviewLikeCreateWithoutUserInput, LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput> | LanguageLearnerReviewLikeCreateWithoutUserInput[] | LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LanguageLearnerReviewLikeCreateOrConnectWithoutUserInput | LanguageLearnerReviewLikeCreateOrConnectWithoutUserInput[]
+    upsert?: LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutUserInput | LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LanguageLearnerReviewLikeCreateManyUserInputEnvelope
+    set?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    disconnect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    delete?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    connect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    update?: LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutUserInput | LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LanguageLearnerReviewLikeUpdateManyWithWhereWithoutUserInput | LanguageLearnerReviewLikeUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LanguageLearnerReviewLikeScalarWhereInput | LanguageLearnerReviewLikeScalarWhereInput[]
+  }
+
+  export type LanguageLearnerUserCreateNestedOneWithoutOwnedPlatformsInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutOwnedPlatformsInput, LanguageLearnerUserUncheckedCreateWithoutOwnedPlatformsInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutOwnedPlatformsInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+  }
+
+  export type LanguageLearnerReviewCreateNestedManyWithoutPlatformInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutPlatformInput, LanguageLearnerReviewUncheckedCreateWithoutPlatformInput> | LanguageLearnerReviewCreateWithoutPlatformInput[] | LanguageLearnerReviewUncheckedCreateWithoutPlatformInput[]
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutPlatformInput | LanguageLearnerReviewCreateOrConnectWithoutPlatformInput[]
+    createMany?: LanguageLearnerReviewCreateManyPlatformInputEnvelope
+    connect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerReviewUncheckedCreateNestedManyWithoutPlatformInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutPlatformInput, LanguageLearnerReviewUncheckedCreateWithoutPlatformInput> | LanguageLearnerReviewCreateWithoutPlatformInput[] | LanguageLearnerReviewUncheckedCreateWithoutPlatformInput[]
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutPlatformInput | LanguageLearnerReviewCreateOrConnectWithoutPlatformInput[]
+    createMany?: LanguageLearnerReviewCreateManyPlatformInputEnvelope
+    connect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerUserUpdateOneRequiredWithoutOwnedPlatformsNestedInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutOwnedPlatformsInput, LanguageLearnerUserUncheckedCreateWithoutOwnedPlatformsInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutOwnedPlatformsInput
+    upsert?: LanguageLearnerUserUpsertWithoutOwnedPlatformsInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+    update?: XOR<XOR<LanguageLearnerUserUpdateToOneWithWhereWithoutOwnedPlatformsInput, LanguageLearnerUserUpdateWithoutOwnedPlatformsInput>, LanguageLearnerUserUncheckedUpdateWithoutOwnedPlatformsInput>
+  }
+
+  export type LanguageLearnerReviewUpdateManyWithoutPlatformNestedInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutPlatformInput, LanguageLearnerReviewUncheckedCreateWithoutPlatformInput> | LanguageLearnerReviewCreateWithoutPlatformInput[] | LanguageLearnerReviewUncheckedCreateWithoutPlatformInput[]
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutPlatformInput | LanguageLearnerReviewCreateOrConnectWithoutPlatformInput[]
+    upsert?: LanguageLearnerReviewUpsertWithWhereUniqueWithoutPlatformInput | LanguageLearnerReviewUpsertWithWhereUniqueWithoutPlatformInput[]
+    createMany?: LanguageLearnerReviewCreateManyPlatformInputEnvelope
+    set?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    disconnect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    delete?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    connect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    update?: LanguageLearnerReviewUpdateWithWhereUniqueWithoutPlatformInput | LanguageLearnerReviewUpdateWithWhereUniqueWithoutPlatformInput[]
+    updateMany?: LanguageLearnerReviewUpdateManyWithWhereWithoutPlatformInput | LanguageLearnerReviewUpdateManyWithWhereWithoutPlatformInput[]
+    deleteMany?: LanguageLearnerReviewScalarWhereInput | LanguageLearnerReviewScalarWhereInput[]
+  }
+
+  export type LanguageLearnerReviewUncheckedUpdateManyWithoutPlatformNestedInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutPlatformInput, LanguageLearnerReviewUncheckedCreateWithoutPlatformInput> | LanguageLearnerReviewCreateWithoutPlatformInput[] | LanguageLearnerReviewUncheckedCreateWithoutPlatformInput[]
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutPlatformInput | LanguageLearnerReviewCreateOrConnectWithoutPlatformInput[]
+    upsert?: LanguageLearnerReviewUpsertWithWhereUniqueWithoutPlatformInput | LanguageLearnerReviewUpsertWithWhereUniqueWithoutPlatformInput[]
+    createMany?: LanguageLearnerReviewCreateManyPlatformInputEnvelope
+    set?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    disconnect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    delete?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    connect?: LanguageLearnerReviewWhereUniqueInput | LanguageLearnerReviewWhereUniqueInput[]
+    update?: LanguageLearnerReviewUpdateWithWhereUniqueWithoutPlatformInput | LanguageLearnerReviewUpdateWithWhereUniqueWithoutPlatformInput[]
+    updateMany?: LanguageLearnerReviewUpdateManyWithWhereWithoutPlatformInput | LanguageLearnerReviewUpdateManyWithWhereWithoutPlatformInput[]
+    deleteMany?: LanguageLearnerReviewScalarWhereInput | LanguageLearnerReviewScalarWhereInput[]
+  }
+
+  export type LanguageLearnerPlatformCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<LanguageLearnerPlatformCreateWithoutReviewsInput, LanguageLearnerPlatformUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: LanguageLearnerPlatformCreateOrConnectWithoutReviewsInput
+    connect?: LanguageLearnerPlatformWhereUniqueInput
+  }
+
+  export type LanguageLearnerUserCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutReviewsInput, LanguageLearnerUserUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutReviewsInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+  }
+
+  export type LanguageLearnerReviewLikeCreateNestedManyWithoutReviewInput = {
+    create?: XOR<LanguageLearnerReviewLikeCreateWithoutReviewInput, LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput> | LanguageLearnerReviewLikeCreateWithoutReviewInput[] | LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: LanguageLearnerReviewLikeCreateOrConnectWithoutReviewInput | LanguageLearnerReviewLikeCreateOrConnectWithoutReviewInput[]
+    createMany?: LanguageLearnerReviewLikeCreateManyReviewInputEnvelope
+    connect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutReviewInput = {
+    create?: XOR<LanguageLearnerReviewLikeCreateWithoutReviewInput, LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput> | LanguageLearnerReviewLikeCreateWithoutReviewInput[] | LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: LanguageLearnerReviewLikeCreateOrConnectWithoutReviewInput | LanguageLearnerReviewLikeCreateOrConnectWithoutReviewInput[]
+    createMany?: LanguageLearnerReviewLikeCreateManyReviewInputEnvelope
+    connect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+  }
+
+  export type LanguageLearnerPlatformUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<LanguageLearnerPlatformCreateWithoutReviewsInput, LanguageLearnerPlatformUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: LanguageLearnerPlatformCreateOrConnectWithoutReviewsInput
+    upsert?: LanguageLearnerPlatformUpsertWithoutReviewsInput
+    connect?: LanguageLearnerPlatformWhereUniqueInput
+    update?: XOR<XOR<LanguageLearnerPlatformUpdateToOneWithWhereWithoutReviewsInput, LanguageLearnerPlatformUpdateWithoutReviewsInput>, LanguageLearnerPlatformUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type LanguageLearnerUserUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutReviewsInput, LanguageLearnerUserUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutReviewsInput
+    upsert?: LanguageLearnerUserUpsertWithoutReviewsInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+    update?: XOR<XOR<LanguageLearnerUserUpdateToOneWithWhereWithoutReviewsInput, LanguageLearnerUserUpdateWithoutReviewsInput>, LanguageLearnerUserUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type LanguageLearnerReviewLikeUpdateManyWithoutReviewNestedInput = {
+    create?: XOR<LanguageLearnerReviewLikeCreateWithoutReviewInput, LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput> | LanguageLearnerReviewLikeCreateWithoutReviewInput[] | LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: LanguageLearnerReviewLikeCreateOrConnectWithoutReviewInput | LanguageLearnerReviewLikeCreateOrConnectWithoutReviewInput[]
+    upsert?: LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutReviewInput | LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutReviewInput[]
+    createMany?: LanguageLearnerReviewLikeCreateManyReviewInputEnvelope
+    set?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    disconnect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    delete?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    connect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    update?: LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutReviewInput | LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutReviewInput[]
+    updateMany?: LanguageLearnerReviewLikeUpdateManyWithWhereWithoutReviewInput | LanguageLearnerReviewLikeUpdateManyWithWhereWithoutReviewInput[]
+    deleteMany?: LanguageLearnerReviewLikeScalarWhereInput | LanguageLearnerReviewLikeScalarWhereInput[]
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedUpdateManyWithoutReviewNestedInput = {
+    create?: XOR<LanguageLearnerReviewLikeCreateWithoutReviewInput, LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput> | LanguageLearnerReviewLikeCreateWithoutReviewInput[] | LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: LanguageLearnerReviewLikeCreateOrConnectWithoutReviewInput | LanguageLearnerReviewLikeCreateOrConnectWithoutReviewInput[]
+    upsert?: LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutReviewInput | LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutReviewInput[]
+    createMany?: LanguageLearnerReviewLikeCreateManyReviewInputEnvelope
+    set?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    disconnect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    delete?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    connect?: LanguageLearnerReviewLikeWhereUniqueInput | LanguageLearnerReviewLikeWhereUniqueInput[]
+    update?: LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutReviewInput | LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutReviewInput[]
+    updateMany?: LanguageLearnerReviewLikeUpdateManyWithWhereWithoutReviewInput | LanguageLearnerReviewLikeUpdateManyWithWhereWithoutReviewInput[]
+    deleteMany?: LanguageLearnerReviewLikeScalarWhereInput | LanguageLearnerReviewLikeScalarWhereInput[]
+  }
+
+  export type LanguageLearnerUserCreateNestedOneWithoutLikesInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutLikesInput, LanguageLearnerUserUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutLikesInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+  }
+
+  export type LanguageLearnerReviewCreateNestedOneWithoutLikesInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutLikesInput, LanguageLearnerReviewUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutLikesInput
+    connect?: LanguageLearnerReviewWhereUniqueInput
+  }
+
+  export type LanguageLearnerUserUpdateOneRequiredWithoutLikesNestedInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutLikesInput, LanguageLearnerUserUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutLikesInput
+    upsert?: LanguageLearnerUserUpsertWithoutLikesInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+    update?: XOR<XOR<LanguageLearnerUserUpdateToOneWithWhereWithoutLikesInput, LanguageLearnerUserUpdateWithoutLikesInput>, LanguageLearnerUserUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type LanguageLearnerReviewUpdateOneRequiredWithoutLikesNestedInput = {
+    create?: XOR<LanguageLearnerReviewCreateWithoutLikesInput, LanguageLearnerReviewUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: LanguageLearnerReviewCreateOrConnectWithoutLikesInput
+    upsert?: LanguageLearnerReviewUpsertWithoutLikesInput
+    connect?: LanguageLearnerReviewWhereUniqueInput
+    update?: XOR<XOR<LanguageLearnerReviewUpdateToOneWithWhereWithoutLikesInput, LanguageLearnerReviewUpdateWithoutLikesInput>, LanguageLearnerReviewUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type LanguageLearnerUserCreateNestedOneWithoutVotesReceivedInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutVotesReceivedInput, LanguageLearnerUserUncheckedCreateWithoutVotesReceivedInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutVotesReceivedInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+  }
+
+  export type LanguageLearnerUserCreateNestedOneWithoutVotesGivenInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutVotesGivenInput, LanguageLearnerUserUncheckedCreateWithoutVotesGivenInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutVotesGivenInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+  }
+
+  export type LanguageLearnerUserUpdateOneRequiredWithoutVotesReceivedNestedInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutVotesReceivedInput, LanguageLearnerUserUncheckedCreateWithoutVotesReceivedInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutVotesReceivedInput
+    upsert?: LanguageLearnerUserUpsertWithoutVotesReceivedInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+    update?: XOR<XOR<LanguageLearnerUserUpdateToOneWithWhereWithoutVotesReceivedInput, LanguageLearnerUserUpdateWithoutVotesReceivedInput>, LanguageLearnerUserUncheckedUpdateWithoutVotesReceivedInput>
+  }
+
+  export type LanguageLearnerUserUpdateOneRequiredWithoutVotesGivenNestedInput = {
+    create?: XOR<LanguageLearnerUserCreateWithoutVotesGivenInput, LanguageLearnerUserUncheckedCreateWithoutVotesGivenInput>
+    connectOrCreate?: LanguageLearnerUserCreateOrConnectWithoutVotesGivenInput
+    upsert?: LanguageLearnerUserUpsertWithoutVotesGivenInput
+    connect?: LanguageLearnerUserWhereUniqueInput
+    update?: XOR<XOR<LanguageLearnerUserUpdateToOneWithWhereWithoutVotesGivenInput, LanguageLearnerUserUpdateWithoutVotesGivenInput>, LanguageLearnerUserUncheckedUpdateWithoutVotesGivenInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -8729,6 +16237,806 @@ export namespace Prisma {
     venues?: EventOrganizerVenueUncheckedUpdateManyWithoutUserNestedInput
   }
 
+  export type LanguageLearnerPlatformCreateWithoutOwnerInput = {
+    id?: string
+    name: string
+    website: string
+    languagesOffered: string
+    description: string
+    status?: string
+    createdAt?: Date | string
+    reviews?: LanguageLearnerReviewCreateNestedManyWithoutPlatformInput
+  }
+
+  export type LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput = {
+    id?: string
+    name: string
+    website: string
+    languagesOffered: string
+    description: string
+    status?: string
+    createdAt?: Date | string
+    reviews?: LanguageLearnerReviewUncheckedCreateNestedManyWithoutPlatformInput
+  }
+
+  export type LanguageLearnerPlatformCreateOrConnectWithoutOwnerInput = {
+    where: LanguageLearnerPlatformWhereUniqueInput
+    create: XOR<LanguageLearnerPlatformCreateWithoutOwnerInput, LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput>
+  }
+
+  export type LanguageLearnerPlatformCreateManyOwnerInputEnvelope = {
+    data: LanguageLearnerPlatformCreateManyOwnerInput | LanguageLearnerPlatformCreateManyOwnerInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LanguageLearnerReviewCreateWithoutUserInput = {
+    id?: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+    platform: LanguageLearnerPlatformCreateNestedOneWithoutReviewsInput
+    likes?: LanguageLearnerReviewLikeCreateNestedManyWithoutReviewInput
+  }
+
+  export type LanguageLearnerReviewUncheckedCreateWithoutUserInput = {
+    id?: string
+    platformId: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+    likes?: LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutReviewInput
+  }
+
+  export type LanguageLearnerReviewCreateOrConnectWithoutUserInput = {
+    where: LanguageLearnerReviewWhereUniqueInput
+    create: XOR<LanguageLearnerReviewCreateWithoutUserInput, LanguageLearnerReviewUncheckedCreateWithoutUserInput>
+  }
+
+  export type LanguageLearnerReviewCreateManyUserInputEnvelope = {
+    data: LanguageLearnerReviewCreateManyUserInput | LanguageLearnerReviewCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LanguageLearnerUserVoteCreateWithoutVoterInput = {
+    id?: string
+    voteType: string
+    createdAt?: Date | string
+    user: LanguageLearnerUserCreateNestedOneWithoutVotesReceivedInput
+  }
+
+  export type LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput = {
+    id?: string
+    userId: string
+    voteType: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerUserVoteCreateOrConnectWithoutVoterInput = {
+    where: LanguageLearnerUserVoteWhereUniqueInput
+    create: XOR<LanguageLearnerUserVoteCreateWithoutVoterInput, LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput>
+  }
+
+  export type LanguageLearnerUserVoteCreateManyVoterInputEnvelope = {
+    data: LanguageLearnerUserVoteCreateManyVoterInput | LanguageLearnerUserVoteCreateManyVoterInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LanguageLearnerUserVoteCreateWithoutUserInput = {
+    id?: string
+    voteType: string
+    createdAt?: Date | string
+    voter: LanguageLearnerUserCreateNestedOneWithoutVotesGivenInput
+  }
+
+  export type LanguageLearnerUserVoteUncheckedCreateWithoutUserInput = {
+    id?: string
+    voterId: string
+    voteType: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerUserVoteCreateOrConnectWithoutUserInput = {
+    where: LanguageLearnerUserVoteWhereUniqueInput
+    create: XOR<LanguageLearnerUserVoteCreateWithoutUserInput, LanguageLearnerUserVoteUncheckedCreateWithoutUserInput>
+  }
+
+  export type LanguageLearnerUserVoteCreateManyUserInputEnvelope = {
+    data: LanguageLearnerUserVoteCreateManyUserInput | LanguageLearnerUserVoteCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LanguageLearnerReviewLikeCreateWithoutUserInput = {
+    id?: string
+    createdAt?: Date | string
+    review: LanguageLearnerReviewCreateNestedOneWithoutLikesInput
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput = {
+    id?: string
+    reviewId: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewLikeCreateOrConnectWithoutUserInput = {
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+    create: XOR<LanguageLearnerReviewLikeCreateWithoutUserInput, LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput>
+  }
+
+  export type LanguageLearnerReviewLikeCreateManyUserInputEnvelope = {
+    data: LanguageLearnerReviewLikeCreateManyUserInput | LanguageLearnerReviewLikeCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LanguageLearnerPlatformUpsertWithWhereUniqueWithoutOwnerInput = {
+    where: LanguageLearnerPlatformWhereUniqueInput
+    update: XOR<LanguageLearnerPlatformUpdateWithoutOwnerInput, LanguageLearnerPlatformUncheckedUpdateWithoutOwnerInput>
+    create: XOR<LanguageLearnerPlatformCreateWithoutOwnerInput, LanguageLearnerPlatformUncheckedCreateWithoutOwnerInput>
+  }
+
+  export type LanguageLearnerPlatformUpdateWithWhereUniqueWithoutOwnerInput = {
+    where: LanguageLearnerPlatformWhereUniqueInput
+    data: XOR<LanguageLearnerPlatformUpdateWithoutOwnerInput, LanguageLearnerPlatformUncheckedUpdateWithoutOwnerInput>
+  }
+
+  export type LanguageLearnerPlatformUpdateManyWithWhereWithoutOwnerInput = {
+    where: LanguageLearnerPlatformScalarWhereInput
+    data: XOR<LanguageLearnerPlatformUpdateManyMutationInput, LanguageLearnerPlatformUncheckedUpdateManyWithoutOwnerInput>
+  }
+
+  export type LanguageLearnerPlatformScalarWhereInput = {
+    AND?: LanguageLearnerPlatformScalarWhereInput | LanguageLearnerPlatformScalarWhereInput[]
+    OR?: LanguageLearnerPlatformScalarWhereInput[]
+    NOT?: LanguageLearnerPlatformScalarWhereInput | LanguageLearnerPlatformScalarWhereInput[]
+    id?: StringFilter<"LanguageLearnerPlatform"> | string
+    name?: StringFilter<"LanguageLearnerPlatform"> | string
+    website?: StringFilter<"LanguageLearnerPlatform"> | string
+    languagesOffered?: StringFilter<"LanguageLearnerPlatform"> | string
+    description?: StringFilter<"LanguageLearnerPlatform"> | string
+    ownerId?: StringFilter<"LanguageLearnerPlatform"> | string
+    status?: StringFilter<"LanguageLearnerPlatform"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerPlatform"> | Date | string
+  }
+
+  export type LanguageLearnerReviewUpsertWithWhereUniqueWithoutUserInput = {
+    where: LanguageLearnerReviewWhereUniqueInput
+    update: XOR<LanguageLearnerReviewUpdateWithoutUserInput, LanguageLearnerReviewUncheckedUpdateWithoutUserInput>
+    create: XOR<LanguageLearnerReviewCreateWithoutUserInput, LanguageLearnerReviewUncheckedCreateWithoutUserInput>
+  }
+
+  export type LanguageLearnerReviewUpdateWithWhereUniqueWithoutUserInput = {
+    where: LanguageLearnerReviewWhereUniqueInput
+    data: XOR<LanguageLearnerReviewUpdateWithoutUserInput, LanguageLearnerReviewUncheckedUpdateWithoutUserInput>
+  }
+
+  export type LanguageLearnerReviewUpdateManyWithWhereWithoutUserInput = {
+    where: LanguageLearnerReviewScalarWhereInput
+    data: XOR<LanguageLearnerReviewUpdateManyMutationInput, LanguageLearnerReviewUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type LanguageLearnerReviewScalarWhereInput = {
+    AND?: LanguageLearnerReviewScalarWhereInput | LanguageLearnerReviewScalarWhereInput[]
+    OR?: LanguageLearnerReviewScalarWhereInput[]
+    NOT?: LanguageLearnerReviewScalarWhereInput | LanguageLearnerReviewScalarWhereInput[]
+    id?: StringFilter<"LanguageLearnerReview"> | string
+    platformId?: StringFilter<"LanguageLearnerReview"> | string
+    userId?: StringFilter<"LanguageLearnerReview"> | string
+    rating?: IntFilter<"LanguageLearnerReview"> | number
+    comment?: StringFilter<"LanguageLearnerReview"> | string
+    status?: StringFilter<"LanguageLearnerReview"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerReview"> | Date | string
+  }
+
+  export type LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutVoterInput = {
+    where: LanguageLearnerUserVoteWhereUniqueInput
+    update: XOR<LanguageLearnerUserVoteUpdateWithoutVoterInput, LanguageLearnerUserVoteUncheckedUpdateWithoutVoterInput>
+    create: XOR<LanguageLearnerUserVoteCreateWithoutVoterInput, LanguageLearnerUserVoteUncheckedCreateWithoutVoterInput>
+  }
+
+  export type LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutVoterInput = {
+    where: LanguageLearnerUserVoteWhereUniqueInput
+    data: XOR<LanguageLearnerUserVoteUpdateWithoutVoterInput, LanguageLearnerUserVoteUncheckedUpdateWithoutVoterInput>
+  }
+
+  export type LanguageLearnerUserVoteUpdateManyWithWhereWithoutVoterInput = {
+    where: LanguageLearnerUserVoteScalarWhereInput
+    data: XOR<LanguageLearnerUserVoteUpdateManyMutationInput, LanguageLearnerUserVoteUncheckedUpdateManyWithoutVoterInput>
+  }
+
+  export type LanguageLearnerUserVoteScalarWhereInput = {
+    AND?: LanguageLearnerUserVoteScalarWhereInput | LanguageLearnerUserVoteScalarWhereInput[]
+    OR?: LanguageLearnerUserVoteScalarWhereInput[]
+    NOT?: LanguageLearnerUserVoteScalarWhereInput | LanguageLearnerUserVoteScalarWhereInput[]
+    id?: StringFilter<"LanguageLearnerUserVote"> | string
+    userId?: StringFilter<"LanguageLearnerUserVote"> | string
+    voterId?: StringFilter<"LanguageLearnerUserVote"> | string
+    voteType?: StringFilter<"LanguageLearnerUserVote"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerUserVote"> | Date | string
+  }
+
+  export type LanguageLearnerUserVoteUpsertWithWhereUniqueWithoutUserInput = {
+    where: LanguageLearnerUserVoteWhereUniqueInput
+    update: XOR<LanguageLearnerUserVoteUpdateWithoutUserInput, LanguageLearnerUserVoteUncheckedUpdateWithoutUserInput>
+    create: XOR<LanguageLearnerUserVoteCreateWithoutUserInput, LanguageLearnerUserVoteUncheckedCreateWithoutUserInput>
+  }
+
+  export type LanguageLearnerUserVoteUpdateWithWhereUniqueWithoutUserInput = {
+    where: LanguageLearnerUserVoteWhereUniqueInput
+    data: XOR<LanguageLearnerUserVoteUpdateWithoutUserInput, LanguageLearnerUserVoteUncheckedUpdateWithoutUserInput>
+  }
+
+  export type LanguageLearnerUserVoteUpdateManyWithWhereWithoutUserInput = {
+    where: LanguageLearnerUserVoteScalarWhereInput
+    data: XOR<LanguageLearnerUserVoteUpdateManyMutationInput, LanguageLearnerUserVoteUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutUserInput = {
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+    update: XOR<LanguageLearnerReviewLikeUpdateWithoutUserInput, LanguageLearnerReviewLikeUncheckedUpdateWithoutUserInput>
+    create: XOR<LanguageLearnerReviewLikeCreateWithoutUserInput, LanguageLearnerReviewLikeUncheckedCreateWithoutUserInput>
+  }
+
+  export type LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutUserInput = {
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+    data: XOR<LanguageLearnerReviewLikeUpdateWithoutUserInput, LanguageLearnerReviewLikeUncheckedUpdateWithoutUserInput>
+  }
+
+  export type LanguageLearnerReviewLikeUpdateManyWithWhereWithoutUserInput = {
+    where: LanguageLearnerReviewLikeScalarWhereInput
+    data: XOR<LanguageLearnerReviewLikeUpdateManyMutationInput, LanguageLearnerReviewLikeUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type LanguageLearnerReviewLikeScalarWhereInput = {
+    AND?: LanguageLearnerReviewLikeScalarWhereInput | LanguageLearnerReviewLikeScalarWhereInput[]
+    OR?: LanguageLearnerReviewLikeScalarWhereInput[]
+    NOT?: LanguageLearnerReviewLikeScalarWhereInput | LanguageLearnerReviewLikeScalarWhereInput[]
+    id?: StringFilter<"LanguageLearnerReviewLike"> | string
+    userId?: StringFilter<"LanguageLearnerReviewLike"> | string
+    reviewId?: StringFilter<"LanguageLearnerReviewLike"> | string
+    createdAt?: DateTimeFilter<"LanguageLearnerReviewLike"> | Date | string
+  }
+
+  export type LanguageLearnerUserCreateWithoutOwnedPlatformsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    reviews?: LanguageLearnerReviewCreateNestedManyWithoutUserInput
+    votesGiven?: LanguageLearnerUserVoteCreateNestedManyWithoutVoterInput
+    votesReceived?: LanguageLearnerUserVoteCreateNestedManyWithoutUserInput
+    likes?: LanguageLearnerReviewLikeCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserUncheckedCreateWithoutOwnedPlatformsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    reviews?: LanguageLearnerReviewUncheckedCreateNestedManyWithoutUserInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutVoterInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutUserInput
+    likes?: LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserCreateOrConnectWithoutOwnedPlatformsInput = {
+    where: LanguageLearnerUserWhereUniqueInput
+    create: XOR<LanguageLearnerUserCreateWithoutOwnedPlatformsInput, LanguageLearnerUserUncheckedCreateWithoutOwnedPlatformsInput>
+  }
+
+  export type LanguageLearnerReviewCreateWithoutPlatformInput = {
+    id?: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+    user: LanguageLearnerUserCreateNestedOneWithoutReviewsInput
+    likes?: LanguageLearnerReviewLikeCreateNestedManyWithoutReviewInput
+  }
+
+  export type LanguageLearnerReviewUncheckedCreateWithoutPlatformInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+    likes?: LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutReviewInput
+  }
+
+  export type LanguageLearnerReviewCreateOrConnectWithoutPlatformInput = {
+    where: LanguageLearnerReviewWhereUniqueInput
+    create: XOR<LanguageLearnerReviewCreateWithoutPlatformInput, LanguageLearnerReviewUncheckedCreateWithoutPlatformInput>
+  }
+
+  export type LanguageLearnerReviewCreateManyPlatformInputEnvelope = {
+    data: LanguageLearnerReviewCreateManyPlatformInput | LanguageLearnerReviewCreateManyPlatformInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LanguageLearnerUserUpsertWithoutOwnedPlatformsInput = {
+    update: XOR<LanguageLearnerUserUpdateWithoutOwnedPlatformsInput, LanguageLearnerUserUncheckedUpdateWithoutOwnedPlatformsInput>
+    create: XOR<LanguageLearnerUserCreateWithoutOwnedPlatformsInput, LanguageLearnerUserUncheckedCreateWithoutOwnedPlatformsInput>
+    where?: LanguageLearnerUserWhereInput
+  }
+
+  export type LanguageLearnerUserUpdateToOneWithWhereWithoutOwnedPlatformsInput = {
+    where?: LanguageLearnerUserWhereInput
+    data: XOR<LanguageLearnerUserUpdateWithoutOwnedPlatformsInput, LanguageLearnerUserUncheckedUpdateWithoutOwnedPlatformsInput>
+  }
+
+  export type LanguageLearnerUserUpdateWithoutOwnedPlatformsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: LanguageLearnerReviewUpdateManyWithoutUserNestedInput
+    votesGiven?: LanguageLearnerUserVoteUpdateManyWithoutVoterNestedInput
+    votesReceived?: LanguageLearnerUserVoteUpdateManyWithoutUserNestedInput
+    likes?: LanguageLearnerReviewLikeUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerUserUncheckedUpdateWithoutOwnedPlatformsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: LanguageLearnerReviewUncheckedUpdateManyWithoutUserNestedInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutVoterNestedInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutUserNestedInput
+    likes?: LanguageLearnerReviewLikeUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerReviewUpsertWithWhereUniqueWithoutPlatformInput = {
+    where: LanguageLearnerReviewWhereUniqueInput
+    update: XOR<LanguageLearnerReviewUpdateWithoutPlatformInput, LanguageLearnerReviewUncheckedUpdateWithoutPlatformInput>
+    create: XOR<LanguageLearnerReviewCreateWithoutPlatformInput, LanguageLearnerReviewUncheckedCreateWithoutPlatformInput>
+  }
+
+  export type LanguageLearnerReviewUpdateWithWhereUniqueWithoutPlatformInput = {
+    where: LanguageLearnerReviewWhereUniqueInput
+    data: XOR<LanguageLearnerReviewUpdateWithoutPlatformInput, LanguageLearnerReviewUncheckedUpdateWithoutPlatformInput>
+  }
+
+  export type LanguageLearnerReviewUpdateManyWithWhereWithoutPlatformInput = {
+    where: LanguageLearnerReviewScalarWhereInput
+    data: XOR<LanguageLearnerReviewUpdateManyMutationInput, LanguageLearnerReviewUncheckedUpdateManyWithoutPlatformInput>
+  }
+
+  export type LanguageLearnerPlatformCreateWithoutReviewsInput = {
+    id?: string
+    name: string
+    website: string
+    languagesOffered: string
+    description: string
+    status?: string
+    createdAt?: Date | string
+    owner: LanguageLearnerUserCreateNestedOneWithoutOwnedPlatformsInput
+  }
+
+  export type LanguageLearnerPlatformUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    name: string
+    website: string
+    languagesOffered: string
+    description: string
+    ownerId: string
+    status?: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerPlatformCreateOrConnectWithoutReviewsInput = {
+    where: LanguageLearnerPlatformWhereUniqueInput
+    create: XOR<LanguageLearnerPlatformCreateWithoutReviewsInput, LanguageLearnerPlatformUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type LanguageLearnerUserCreateWithoutReviewsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformCreateNestedManyWithoutOwnerInput
+    votesGiven?: LanguageLearnerUserVoteCreateNestedManyWithoutVoterInput
+    votesReceived?: LanguageLearnerUserVoteCreateNestedManyWithoutUserInput
+    likes?: LanguageLearnerReviewLikeCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedCreateNestedManyWithoutOwnerInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutVoterInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutUserInput
+    likes?: LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserCreateOrConnectWithoutReviewsInput = {
+    where: LanguageLearnerUserWhereUniqueInput
+    create: XOR<LanguageLearnerUserCreateWithoutReviewsInput, LanguageLearnerUserUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type LanguageLearnerReviewLikeCreateWithoutReviewInput = {
+    id?: string
+    createdAt?: Date | string
+    user: LanguageLearnerUserCreateNestedOneWithoutLikesInput
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewLikeCreateOrConnectWithoutReviewInput = {
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+    create: XOR<LanguageLearnerReviewLikeCreateWithoutReviewInput, LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput>
+  }
+
+  export type LanguageLearnerReviewLikeCreateManyReviewInputEnvelope = {
+    data: LanguageLearnerReviewLikeCreateManyReviewInput | LanguageLearnerReviewLikeCreateManyReviewInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LanguageLearnerPlatformUpsertWithoutReviewsInput = {
+    update: XOR<LanguageLearnerPlatformUpdateWithoutReviewsInput, LanguageLearnerPlatformUncheckedUpdateWithoutReviewsInput>
+    create: XOR<LanguageLearnerPlatformCreateWithoutReviewsInput, LanguageLearnerPlatformUncheckedCreateWithoutReviewsInput>
+    where?: LanguageLearnerPlatformWhereInput
+  }
+
+  export type LanguageLearnerPlatformUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: LanguageLearnerPlatformWhereInput
+    data: XOR<LanguageLearnerPlatformUpdateWithoutReviewsInput, LanguageLearnerPlatformUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type LanguageLearnerPlatformUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    website?: StringFieldUpdateOperationsInput | string
+    languagesOffered?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    owner?: LanguageLearnerUserUpdateOneRequiredWithoutOwnedPlatformsNestedInput
+  }
+
+  export type LanguageLearnerPlatformUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    website?: StringFieldUpdateOperationsInput | string
+    languagesOffered?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    ownerId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserUpsertWithoutReviewsInput = {
+    update: XOR<LanguageLearnerUserUpdateWithoutReviewsInput, LanguageLearnerUserUncheckedUpdateWithoutReviewsInput>
+    create: XOR<LanguageLearnerUserCreateWithoutReviewsInput, LanguageLearnerUserUncheckedCreateWithoutReviewsInput>
+    where?: LanguageLearnerUserWhereInput
+  }
+
+  export type LanguageLearnerUserUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: LanguageLearnerUserWhereInput
+    data: XOR<LanguageLearnerUserUpdateWithoutReviewsInput, LanguageLearnerUserUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type LanguageLearnerUserUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUpdateManyWithoutOwnerNestedInput
+    votesGiven?: LanguageLearnerUserVoteUpdateManyWithoutVoterNestedInput
+    votesReceived?: LanguageLearnerUserVoteUpdateManyWithoutUserNestedInput
+    likes?: LanguageLearnerReviewLikeUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerUserUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedUpdateManyWithoutOwnerNestedInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutVoterNestedInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutUserNestedInput
+    likes?: LanguageLearnerReviewLikeUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerReviewLikeUpsertWithWhereUniqueWithoutReviewInput = {
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+    update: XOR<LanguageLearnerReviewLikeUpdateWithoutReviewInput, LanguageLearnerReviewLikeUncheckedUpdateWithoutReviewInput>
+    create: XOR<LanguageLearnerReviewLikeCreateWithoutReviewInput, LanguageLearnerReviewLikeUncheckedCreateWithoutReviewInput>
+  }
+
+  export type LanguageLearnerReviewLikeUpdateWithWhereUniqueWithoutReviewInput = {
+    where: LanguageLearnerReviewLikeWhereUniqueInput
+    data: XOR<LanguageLearnerReviewLikeUpdateWithoutReviewInput, LanguageLearnerReviewLikeUncheckedUpdateWithoutReviewInput>
+  }
+
+  export type LanguageLearnerReviewLikeUpdateManyWithWhereWithoutReviewInput = {
+    where: LanguageLearnerReviewLikeScalarWhereInput
+    data: XOR<LanguageLearnerReviewLikeUpdateManyMutationInput, LanguageLearnerReviewLikeUncheckedUpdateManyWithoutReviewInput>
+  }
+
+  export type LanguageLearnerUserCreateWithoutLikesInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformCreateNestedManyWithoutOwnerInput
+    reviews?: LanguageLearnerReviewCreateNestedManyWithoutUserInput
+    votesGiven?: LanguageLearnerUserVoteCreateNestedManyWithoutVoterInput
+    votesReceived?: LanguageLearnerUserVoteCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserUncheckedCreateWithoutLikesInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedCreateNestedManyWithoutOwnerInput
+    reviews?: LanguageLearnerReviewUncheckedCreateNestedManyWithoutUserInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutVoterInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserCreateOrConnectWithoutLikesInput = {
+    where: LanguageLearnerUserWhereUniqueInput
+    create: XOR<LanguageLearnerUserCreateWithoutLikesInput, LanguageLearnerUserUncheckedCreateWithoutLikesInput>
+  }
+
+  export type LanguageLearnerReviewCreateWithoutLikesInput = {
+    id?: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+    platform: LanguageLearnerPlatformCreateNestedOneWithoutReviewsInput
+    user: LanguageLearnerUserCreateNestedOneWithoutReviewsInput
+  }
+
+  export type LanguageLearnerReviewUncheckedCreateWithoutLikesInput = {
+    id?: string
+    platformId: string
+    userId: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewCreateOrConnectWithoutLikesInput = {
+    where: LanguageLearnerReviewWhereUniqueInput
+    create: XOR<LanguageLearnerReviewCreateWithoutLikesInput, LanguageLearnerReviewUncheckedCreateWithoutLikesInput>
+  }
+
+  export type LanguageLearnerUserUpsertWithoutLikesInput = {
+    update: XOR<LanguageLearnerUserUpdateWithoutLikesInput, LanguageLearnerUserUncheckedUpdateWithoutLikesInput>
+    create: XOR<LanguageLearnerUserCreateWithoutLikesInput, LanguageLearnerUserUncheckedCreateWithoutLikesInput>
+    where?: LanguageLearnerUserWhereInput
+  }
+
+  export type LanguageLearnerUserUpdateToOneWithWhereWithoutLikesInput = {
+    where?: LanguageLearnerUserWhereInput
+    data: XOR<LanguageLearnerUserUpdateWithoutLikesInput, LanguageLearnerUserUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type LanguageLearnerUserUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUpdateManyWithoutOwnerNestedInput
+    reviews?: LanguageLearnerReviewUpdateManyWithoutUserNestedInput
+    votesGiven?: LanguageLearnerUserVoteUpdateManyWithoutVoterNestedInput
+    votesReceived?: LanguageLearnerUserVoteUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerUserUncheckedUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedUpdateManyWithoutOwnerNestedInput
+    reviews?: LanguageLearnerReviewUncheckedUpdateManyWithoutUserNestedInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutVoterNestedInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerReviewUpsertWithoutLikesInput = {
+    update: XOR<LanguageLearnerReviewUpdateWithoutLikesInput, LanguageLearnerReviewUncheckedUpdateWithoutLikesInput>
+    create: XOR<LanguageLearnerReviewCreateWithoutLikesInput, LanguageLearnerReviewUncheckedCreateWithoutLikesInput>
+    where?: LanguageLearnerReviewWhereInput
+  }
+
+  export type LanguageLearnerReviewUpdateToOneWithWhereWithoutLikesInput = {
+    where?: LanguageLearnerReviewWhereInput
+    data: XOR<LanguageLearnerReviewUpdateWithoutLikesInput, LanguageLearnerReviewUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type LanguageLearnerReviewUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    platform?: LanguageLearnerPlatformUpdateOneRequiredWithoutReviewsNestedInput
+    user?: LanguageLearnerUserUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type LanguageLearnerReviewUncheckedUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platformId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserCreateWithoutVotesReceivedInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformCreateNestedManyWithoutOwnerInput
+    reviews?: LanguageLearnerReviewCreateNestedManyWithoutUserInput
+    votesGiven?: LanguageLearnerUserVoteCreateNestedManyWithoutVoterInput
+    likes?: LanguageLearnerReviewLikeCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserUncheckedCreateWithoutVotesReceivedInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedCreateNestedManyWithoutOwnerInput
+    reviews?: LanguageLearnerReviewUncheckedCreateNestedManyWithoutUserInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutVoterInput
+    likes?: LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserCreateOrConnectWithoutVotesReceivedInput = {
+    where: LanguageLearnerUserWhereUniqueInput
+    create: XOR<LanguageLearnerUserCreateWithoutVotesReceivedInput, LanguageLearnerUserUncheckedCreateWithoutVotesReceivedInput>
+  }
+
+  export type LanguageLearnerUserCreateWithoutVotesGivenInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformCreateNestedManyWithoutOwnerInput
+    reviews?: LanguageLearnerReviewCreateNestedManyWithoutUserInput
+    votesReceived?: LanguageLearnerUserVoteCreateNestedManyWithoutUserInput
+    likes?: LanguageLearnerReviewLikeCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserUncheckedCreateWithoutVotesGivenInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    createdAt?: Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedCreateNestedManyWithoutOwnerInput
+    reviews?: LanguageLearnerReviewUncheckedCreateNestedManyWithoutUserInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedCreateNestedManyWithoutUserInput
+    likes?: LanguageLearnerReviewLikeUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type LanguageLearnerUserCreateOrConnectWithoutVotesGivenInput = {
+    where: LanguageLearnerUserWhereUniqueInput
+    create: XOR<LanguageLearnerUserCreateWithoutVotesGivenInput, LanguageLearnerUserUncheckedCreateWithoutVotesGivenInput>
+  }
+
+  export type LanguageLearnerUserUpsertWithoutVotesReceivedInput = {
+    update: XOR<LanguageLearnerUserUpdateWithoutVotesReceivedInput, LanguageLearnerUserUncheckedUpdateWithoutVotesReceivedInput>
+    create: XOR<LanguageLearnerUserCreateWithoutVotesReceivedInput, LanguageLearnerUserUncheckedCreateWithoutVotesReceivedInput>
+    where?: LanguageLearnerUserWhereInput
+  }
+
+  export type LanguageLearnerUserUpdateToOneWithWhereWithoutVotesReceivedInput = {
+    where?: LanguageLearnerUserWhereInput
+    data: XOR<LanguageLearnerUserUpdateWithoutVotesReceivedInput, LanguageLearnerUserUncheckedUpdateWithoutVotesReceivedInput>
+  }
+
+  export type LanguageLearnerUserUpdateWithoutVotesReceivedInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUpdateManyWithoutOwnerNestedInput
+    reviews?: LanguageLearnerReviewUpdateManyWithoutUserNestedInput
+    votesGiven?: LanguageLearnerUserVoteUpdateManyWithoutVoterNestedInput
+    likes?: LanguageLearnerReviewLikeUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerUserUncheckedUpdateWithoutVotesReceivedInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedUpdateManyWithoutOwnerNestedInput
+    reviews?: LanguageLearnerReviewUncheckedUpdateManyWithoutUserNestedInput
+    votesGiven?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutVoterNestedInput
+    likes?: LanguageLearnerReviewLikeUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerUserUpsertWithoutVotesGivenInput = {
+    update: XOR<LanguageLearnerUserUpdateWithoutVotesGivenInput, LanguageLearnerUserUncheckedUpdateWithoutVotesGivenInput>
+    create: XOR<LanguageLearnerUserCreateWithoutVotesGivenInput, LanguageLearnerUserUncheckedCreateWithoutVotesGivenInput>
+    where?: LanguageLearnerUserWhereInput
+  }
+
+  export type LanguageLearnerUserUpdateToOneWithWhereWithoutVotesGivenInput = {
+    where?: LanguageLearnerUserWhereInput
+    data: XOR<LanguageLearnerUserUpdateWithoutVotesGivenInput, LanguageLearnerUserUncheckedUpdateWithoutVotesGivenInput>
+  }
+
+  export type LanguageLearnerUserUpdateWithoutVotesGivenInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUpdateManyWithoutOwnerNestedInput
+    reviews?: LanguageLearnerReviewUpdateManyWithoutUserNestedInput
+    votesReceived?: LanguageLearnerUserVoteUpdateManyWithoutUserNestedInput
+    likes?: LanguageLearnerReviewLikeUpdateManyWithoutUserNestedInput
+  }
+
+  export type LanguageLearnerUserUncheckedUpdateWithoutVotesGivenInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    ownedPlatforms?: LanguageLearnerPlatformUncheckedUpdateManyWithoutOwnerNestedInput
+    reviews?: LanguageLearnerReviewUncheckedUpdateManyWithoutUserNestedInput
+    votesReceived?: LanguageLearnerUserVoteUncheckedUpdateManyWithoutUserNestedInput
+    likes?: LanguageLearnerReviewLikeUncheckedUpdateManyWithoutUserNestedInput
+  }
+
   export type EventOrganizerTaskCreateManyUserInput = {
     id?: string
     title: string
@@ -8870,6 +17178,228 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     serviceType?: StringFieldUpdateOperationsInput | string
     contactInfo?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerPlatformCreateManyOwnerInput = {
+    id?: string
+    name: string
+    website: string
+    languagesOffered: string
+    description: string
+    status?: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewCreateManyUserInput = {
+    id?: string
+    platformId: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerUserVoteCreateManyVoterInput = {
+    id?: string
+    userId: string
+    voteType: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerUserVoteCreateManyUserInput = {
+    id?: string
+    voterId: string
+    voteType: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewLikeCreateManyUserInput = {
+    id?: string
+    reviewId: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerPlatformUpdateWithoutOwnerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    website?: StringFieldUpdateOperationsInput | string
+    languagesOffered?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: LanguageLearnerReviewUpdateManyWithoutPlatformNestedInput
+  }
+
+  export type LanguageLearnerPlatformUncheckedUpdateWithoutOwnerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    website?: StringFieldUpdateOperationsInput | string
+    languagesOffered?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: LanguageLearnerReviewUncheckedUpdateManyWithoutPlatformNestedInput
+  }
+
+  export type LanguageLearnerPlatformUncheckedUpdateManyWithoutOwnerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    website?: StringFieldUpdateOperationsInput | string
+    languagesOffered?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    platform?: LanguageLearnerPlatformUpdateOneRequiredWithoutReviewsNestedInput
+    likes?: LanguageLearnerReviewLikeUpdateManyWithoutReviewNestedInput
+  }
+
+  export type LanguageLearnerReviewUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platformId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    likes?: LanguageLearnerReviewLikeUncheckedUpdateManyWithoutReviewNestedInput
+  }
+
+  export type LanguageLearnerReviewUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platformId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserVoteUpdateWithoutVoterInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: LanguageLearnerUserUpdateOneRequiredWithoutVotesReceivedNestedInput
+  }
+
+  export type LanguageLearnerUserVoteUncheckedUpdateWithoutVoterInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserVoteUncheckedUpdateManyWithoutVoterInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserVoteUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    voter?: LanguageLearnerUserUpdateOneRequiredWithoutVotesGivenNestedInput
+  }
+
+  export type LanguageLearnerUserVoteUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    voterId?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerUserVoteUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    voterId?: StringFieldUpdateOperationsInput | string
+    voteType?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewLikeUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    review?: LanguageLearnerReviewUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reviewId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reviewId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewCreateManyPlatformInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    status?: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewUpdateWithoutPlatformInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: LanguageLearnerUserUpdateOneRequiredWithoutReviewsNestedInput
+    likes?: LanguageLearnerReviewLikeUpdateManyWithoutReviewNestedInput
+  }
+
+  export type LanguageLearnerReviewUncheckedUpdateWithoutPlatformInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    likes?: LanguageLearnerReviewLikeUncheckedUpdateManyWithoutReviewNestedInput
+  }
+
+  export type LanguageLearnerReviewUncheckedUpdateManyWithoutPlatformInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewLikeCreateManyReviewInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LanguageLearnerReviewLikeUpdateWithoutReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: LanguageLearnerUserUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedUpdateWithoutReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LanguageLearnerReviewLikeUncheckedUpdateManyWithoutReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 

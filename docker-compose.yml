@@ -1,8 +1,8 @@
 version: '3.8'
 services:
-  neon-db:
+  neon-db1:
     image: postgres:15
-    container_name: neon-postgres
+    container_name: neon-postgres-1
     restart: always
     environment:
       POSTGRES_USER: neon
@@ -11,7 +11,20 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - neon_data:/var/lib/postgresql/data
+      - neon_data1:/var/lib/postgresql/data
+  neon-db2:
+    image: postgres:15
+    container_name: neon-postgres-2
+    restart: always
+    environment:
+      POSTGRES_USER: neon
+      POSTGRES_PASSWORD: neonpassword
+      POSTGRES_DB: neondb
+    ports:
+      - "5433:5432"
+    volumes:
+      - neon_data2:/var/lib/postgresql/data
 
 volumes:
-  neon_data:
+  neon_data1:
+  neon_data2:

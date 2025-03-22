@@ -15,7 +15,9 @@ const testEmail = "medicationtrackingECC@gmail.com";
 
 describe("Elderly Care Companion - Medication Tracking API Tests", () => {
 
+  // =========================
   // ✅ Cleanup before running tests
+  // =========================
   beforeAll(async () => {
     // delete existing user with the same email
     await prisma.userElderlyCareCompanion.deleteMany({ where: { email: testEmail } });
@@ -97,7 +99,9 @@ describe("Elderly Care Companion - Medication Tracking API Tests", () => {
     expect(logs.length).toBeGreaterThan(0);
   });
 
+  // =========================
   // ✅ Cleanup remaining test data after tests
+  // =========================
   afterAll(async () => {
     await prisma.elderlyCareCompanionMedicationTracking.deleteMany({ where: { userId: testUserId } });
     await prisma.elderlyCareCompanionAppointment.deleteMany({ where: { userId: testUserId } });

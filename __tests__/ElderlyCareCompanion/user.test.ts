@@ -9,7 +9,10 @@ const testEmail = "elderlycare_test@example.com";
 
 describe("Elderly Care Companion - Users API Tests", () => {
 
+  // =========================
   // ✅ Cleanup before running tests
+  // =========================
+
   beforeAll(async () => {
     await prisma.userElderlyCareCompanion.deleteMany({ where: { email: testEmail } });
   });
@@ -93,7 +96,9 @@ describe("Elderly Care Companion - Users API Tests", () => {
     expect(data.message).toBe("User deleted successfully");
   });
 
+  // =========================
   // ✅ Cleanup remaining test data after tests
+  // =========================
   afterAll(async () => {
     await prisma.userElderlyCareCompanion.deleteMany({ where: { email: testEmail } });
     await prisma.$disconnect();

@@ -8,7 +8,9 @@ let testStoreId: string;
 
 describe("Elderly Care Companion - Stores API Tests", () => {
 
+  // =========================
   // ✅ Cleanup before running tests
+  // =========================
   beforeAll(async () => {
     await prisma.elderlyCareCompanionStore.deleteMany();
   });
@@ -91,7 +93,9 @@ describe("Elderly Care Companion - Stores API Tests", () => {
     expect(data.message).toBe("Store deleted successfully");
   });
 
+  // =========================
   // ✅ Cleanup remaining test data after tests
+  // =========================
   afterAll(async () => {
     await prisma.elderlyCareCompanionStore.deleteMany();
     await prisma.$disconnect();
