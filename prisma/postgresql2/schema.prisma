@@ -4,7 +4,7 @@ generator client {
   binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
-datasource mongodb {
+datasource neon2 {
   provider = "postgresql"
   url      = env("DATABASE_URL_2")
 }

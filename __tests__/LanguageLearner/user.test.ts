@@ -58,10 +58,14 @@ describe("Language Learner - User API Tests", () => {
   // ✅ Create Methods (C)
   // =========================
   it("should create a new user", async () => {
+    const sampleEmail = "newUserECC@gmail.com";
+
+    await prisma.languageLearnerUser.deleteMany({ where: { email: sampleEmail } });
+
     const req = new NextRequest("http://localhost:3000/api/LanguageLearner/users", {
       method: "POST",
       body: JSON.stringify({
-        email: "newUserECC@gmail.com",
+        email: sampleEmail,
         name: "New Test User",
         password: "password123",
       }),
@@ -73,7 +77,7 @@ describe("Language Learner - User API Tests", () => {
     const user = await res.json();
 
     expect(user).toHaveProperty("id");
-    expect(user.email).toBe("newUserECC@gmail.com");
+    expect(user.email).toBe(sampleEmail);
   });
 
   // =========================

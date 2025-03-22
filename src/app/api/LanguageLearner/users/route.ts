@@ -24,8 +24,11 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(user, { status: 201 });
   } catch (error) {
-    console.error("Error creating user:", error);
-    return NextResponse.json({ error: "Failed to create user" }, { status: 500 });
+    let errorMessage = "Failed to create user";
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
 
@@ -37,7 +40,10 @@ export async function GET() {
     });
     return NextResponse.json(users, { status: 200 });
   } catch (error) {
-    console.error("Error fetching users:", error);
-    return NextResponse.json({ error: "Failed to fetch users" }, { status: 500 });
+    let errorMessage = "Failed to fetch users";
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

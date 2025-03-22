@@ -21,9 +21,9 @@
     "dbG": "prisma generate --schema=./prisma/mongodb/schema.prisma",
     "dbAllGM": "npm run dbGM1 && npm run dbGM2 && npm run dbG",
     "test:silent": "npm run dbReset1 && npm run dbReset2 && jest --runInBand --silent --reporters=default",
-    "dbPush1": "prisma migrate push --schema=./prisma/postgresql/schema.prisma --force",
-    "dbPush2": "prisma migrate push --schema=./prisma/postgresql2/schema.prisma --force",
-    "dbPush3": "prisma migrate push --schema=./prisma/mongodb/schema.prisma --force",
+    "dbPush1": "prisma migrate push db --schema=./prisma/postgresql/schema.prisma",
+    "dbPush2": "prisma migrate push db --schema=./prisma/postgresql2/schema.prisma",
+    "dbPush3": "prisma migrate push db --schema=./prisma/mongodb/schema.prisma",
     "dbPushAll": "npm run dbPush1 && npm run dbPush2 && npm run dbPush3"
   },
   "dependencies": {

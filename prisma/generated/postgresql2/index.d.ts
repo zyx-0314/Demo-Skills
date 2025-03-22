@@ -744,7 +744,7 @@ export namespace Prisma {
 
 
   export type Datasources = {
-    mongodb?: Datasource
+    neon2?: Datasource
   }
 
   interface TypeMapCb<ClientOptions = {}> extends $Utils.Fn<{extArgs: $Extensions.InternalArgs }, $Utils.Record<string, any>> {

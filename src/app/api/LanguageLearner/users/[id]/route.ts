@@ -17,8 +17,11 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 
     return NextResponse.json(user, { status: 200 });
   } catch (error) {
-    console.error("Error fetching user:", error);
-    return NextResponse.json({ error: "Failed to fetch user" }, { status: 500 });
+    let errorMessage = "Failed to fetch user";
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
 
@@ -34,8 +37,11 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
 
     return NextResponse.json(updatedUser, { status: 200 });
   } catch (error) {
-    console.error("Error updating user:", error);
-    return NextResponse.json({ error: "Failed to update user" }, { status: 500 });
+    let errorMessage = "Failed to update user";
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
 
@@ -48,7 +54,10 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
 
     return NextResponse.json({ message: "Your account has been deleted successfully." }, { status: 200 });
   } catch (error) {
-    console.error("Error deleting account:", error);
-    return NextResponse.json({ error: "Failed to delete account" }, { status: 500 });
+    let errorMessage = "Failed to delete user";
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
