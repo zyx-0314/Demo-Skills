@@ -91,14 +91,3 @@
 * **Delete a Review** → DELETE /api/MusicLover/reviews/{review_id}  
   + **Required:** review_id  
   + **Response:** 200 OK with success message
-
----
-
-### 5️⃣ Concert Discovery & Filtering
-
-* **Search or Filter Concerts** → GET /api/MusicLover/concerts/search  
-  + **Query Params:** genre, date, location, artist  
-  + **Response:** 200 OK with filtered concert list
-
-* **Get Upcoming Featured Concerts** → GET /api/MusicLover/concerts/featured  
-  + **Response:** 200 OK with featured events list
