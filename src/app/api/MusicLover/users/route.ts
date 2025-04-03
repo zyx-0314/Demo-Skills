@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql2";
-import bcrypt from "bcryptjs";
-
 const prisma = new PostgresqlClient();
 
 // ✅ Create a New MusicLover User (POST)
@@ -17,9 +15,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "User already exists" }, { status: 409 });
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = await prisma.userMusicLover.create({
-      data: { email, name, password: hashedPassword },
+      data: { email, name, password },
     });
 
     return NextResponse.json(newUser, { status: 201 });
