@@ -65,7 +65,7 @@
   + **Response:** 200 OK with validation status
 
 * **Submit Concert Review** → POST /api/MusicLover/reviews  
-  + **Required:** concert_id, userId, rating, comment  
+  + **Required:** concertId, userId, rating, comment  
   + **Response:** 201 Created with review object
 
 * **Validate Review (Admin Only)** → POST /api/MusicLover/admin/reviews/{id}/validate  
