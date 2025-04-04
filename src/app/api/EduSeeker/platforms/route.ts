@@ -18,8 +18,13 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(platform, { status: 201 });
   } catch (error) {
-    console.error("Error creating platform:", error);
-    return NextResponse.json({ error: "Failed to create platform" }, { status: 500 });
+    let errorMessage = "Failed to create platform";
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    } else if (typeof error === "string") {
+      errorMessage = error;
+    }
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
 
