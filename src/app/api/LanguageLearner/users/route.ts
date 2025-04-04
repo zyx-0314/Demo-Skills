@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql2";
-import bcrypt from "bcryptjs";
 
 const prisma = new PostgresqlClient();
 
@@ -17,9 +16,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "User already exists" }, { status: 409 });
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
     const user = await prisma.languageLearnerUser.create({
-      data: { email, name, password: hashedPassword, role: role || "learner" },
+      data: { email, name, password, role: role || "learner" },
     });
 
     return NextResponse.json(user, { status: 201 });
@@ -36,7 +34,6 @@ export async function POST(req: NextRequest) {
 export async function GET() {
   try {
     const users = await prisma.languageLearnerUser.findMany({
-      select: { id: true, email: true, name: true, role: true },
     });
     return NextResponse.json(users, { status: 200 });
   } catch (error) {
