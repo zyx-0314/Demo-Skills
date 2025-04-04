@@ -5,7 +5,7 @@ const prisma = new PostgresqlClient()
 
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const adminId = req.headers.get('adminId')
+    const adminId = await req.json().then((data) => data.adminId)
     if (!adminId) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
