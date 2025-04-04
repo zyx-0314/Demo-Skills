@@ -9,7 +9,7 @@
 #### `POST /api/ElderlyCareCompanion/users`
 
 **Description:** Creates a new user.
-* **Required:** `email`,              `name`,              `password`
+* **Required:** `email`,               `name`,               `password`
 * **Response:** `201 Created` with user object
 
 #### `GET /api/ElderlyCareCompanion/users`
@@ -42,10 +42,10 @@
 #### `POST /api/ElderlyCareCompanion/appointments`
 
 **Description:** Creates a new health appointment or medication reminder.  
-* **Required:** `userId`,  `type` (`appointment` or `medication`),                `title`,                `dateTime`,  `location` (for appointments),  `medicationDetails` (for medication)  
+* **Required:** `userId`,  `type` (`appointment` or `medication`),                 `title`,                 `dateTime`,  `location` (for appointments),  `medicationDetails` (for medication)  
 * **Response:** `201 Created` with appointment or medication reminder object  
 
-#### `GET /api/ElderlyCareCompanion/users/appointments/{userId}`
+#### `GET /api/ElderlyCareCompanion/users/{userId}/appointments`
 
 **Description:** Fetches all scheduled appointments and medication reminders for a user.  
 * **Required:** `userId`  
@@ -60,7 +60,7 @@
 #### `PUT /api/ElderlyCareCompanion/appointments/{id}`
 
 **Description:** Updates an appointment or medication reminder.  
-* **Required:** `type`,                `title`,                `dateTime`,  `location` (for appointments),  `medicationDetails` (for medication)  
+* **Required:** `type`,                 `title`,                 `dateTime`,  `location` (for appointments),  `medicationDetails` (for medication)  
 * **Response:** `200 OK` with updated object  
 
 #### `DELETE /api/ElderlyCareCompanion/appointments/{id}`
@@ -90,7 +90,7 @@
 #### `POST /api/ElderlyCareCompanion/records`
 
 **Description:** Adds a personal health record.  
-* **Required:** `userId`,  `recordType` (`medicalHistory`,                `prescriptions`,                `labResults`),                `details`,  `date`  
+* **Required:** `userId`,  `recordType` (`medicalHistory`,                 `prescriptions`,                 `labResults`),                 `details`,  `date`  
 * **Response:** `201 Created` with health record object  
 
 #### `GET /api/ElderlyCareCompanion/records/{id}`
@@ -102,7 +102,7 @@
 #### `PUT /api/ElderlyCareCompanion/records/{id}`
 
 **Description:** Updates a personal health record.  
-* **Required:** `recordType`,                `details`,  `date`  
+* **Required:** `recordType`,                 `details`,  `date`  
 * **Response:** `200 OK` with updated health record object  
 
 #### `DELETE /api/ElderlyCareCompanion/records/{id}`
