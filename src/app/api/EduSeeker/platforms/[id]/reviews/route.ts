@@ -4,10 +4,10 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 const prisma = new PostgresqlClient();
 
 // ✅ Create or Get Reviews for Platform
-export async function GET(req: NextRequest, { params }: { params: { platformId: string } }) {
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const reviews = await prisma.reviewEduSeeker.findMany({
-      where: { platformId: params.platformId },
+      where: { platformId: params.id },
       select: {
         id: true,
         userId: true,
