@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import bcrypt from "bcryptjs";
 import { PrismaClient } from "@/../prisma/generated/postgresql";
 
 const prisma = new PrismaClient();
@@ -21,11 +20,10 @@ export async function POST(req: NextRequest) {
     }
 
     // Hash password before storing
-    const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create new user
     const user = await prisma.userFoodie.create({
-      data: { email, name, password: hashedPassword },
+      data: { email, name, password },
     });
 
     return NextResponse.json(
@@ -42,9 +40,7 @@ export async function POST(req: NextRequest) {
 // ✅ Get All Users (GET)
 export async function GET(req: NextRequest) {
   try {
-    const users = await prisma.userFoodie.findMany({
-      select: { id: true, email: true, name: true, createdAt: true },
-    });
+    const users = await prisma.userFoodie.findMany();
 
     return NextResponse.json(users, { status: 200 });
 
